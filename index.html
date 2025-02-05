@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Dawa</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <main class="container py-5">
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="mb-4">Get Started</h2>
+                <div class="d-flex mb-4">
+                    <button class="btn btn-primary me-2">Browse Categories</button>
+                    <button class="btn btn-outline-secondary">Explore Services</button>
+                </div>
+                <!-- Categories Slider -->
+                <div class="owl-carousel owl-theme">
+                    <!-- Card 1 -->
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="assets/images/product-category/cat1.png" class="card-img-top" alt="Health Conditions">
+                        <div class="card-body">
+                            <p class="card-text">Health Conditions</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="assets/images/product-category/cat2.png" class="card-img-top" alt="Sexual Wellness">
+                        <div class="card-body">
+                            <p class="card-text">Sexual Wellness</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="assets/images/product-category/cat3.png" class="card-img-top" alt="Vitamins & Supplements">
+                        <div class="card-body">
+                            <p class="card-text">Vitamins & Supplements</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="assets/images/product-category/cat4.png" class="card-img-top" alt="Beauty & Personal Care">
+                        <div class="card-body">
+                            <p class="card-text">Beauty & Personal Care</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="assets/images/product-category/cat5.png" class="card-img-top" alt="Medical Devices">
+                        <div class="card-body">
+                            <p class="card-text">Medical Devices</p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="assets/images/product-category/cat6.png" class="card-img-top" alt="Mother & Baby Care">
+                        <div class="card-body">
+                            <p class="card-text">Mother & Baby Care</p>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="card border-0 shadow-sm text-center">
+                        <img src="assets/images/product-category/cat7.png" class="card-img-top" alt="Snacks & Drinks">
+                        <div class="card-body">
+                            <p class="card-text">Snacks & Drinks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+
+    <script>
+        // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // Load Footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script src="assets/vendor/jquery-3.6.4.min.js"></script>
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/owl.carousel.min.js"></script>
+    <script src="assets/vendor/themescripts.js"></script>
+</body>
+
+</html>
