@@ -37,7 +37,8 @@ img {
 .container-main {
     background: rgba($white, 1);
     width: 100%;
-    max-width: 1280px;
+    // max-width: 1280px;
+    max-width: 1320px;
     min-height: 100%;
     margin: 0 auto;
     @include border-radius(12px);
@@ -50,18 +51,36 @@ img {
 .navigation {
     background: #F6F6FF;
     @include flexbox();
+    @media screen and (max-width: 1100px) {
+        display: none;
+    }
     ul {
         @extend %listing;
         @include flexbox();
         font-size: 14px;
-        color: #373434;
+        padding-left: 48px;
+        li:nth-child(4) {
+            margin-left: 28px;
+            padding-left: 28px;
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: "";
+                background: #E6E6EE;
+                width: 1px;
+                position: absolute;
+                left: 0;
+                top: 10px;
+                bottom: 10px;
+            }
+        }
         a {
             @include flexbox();
             @include justify-content(center);
             @include align-items(center);
-            padding: 12px 20px;
+            padding: 12px;
             text-decoration: none;
-            color: #373434;
+            color: rgba($black, 1);
         }
         img {
             max-width: 100%;
@@ -183,17 +202,25 @@ img {
     @include flexbox();
     @include justify-content(center);
     @include align-items(center);
+    @media screen and (max-width: 991px) {
+        width: 178px;
+        height: 44px;
+    }
     .icon {
         min-width: 20px;
         width: 20px;
         height: 24px;
-        margin-right: 8px;
+        margin-right: 12px;
+        margin-top: -2px;
     }
     .icon-text {
         font-size: 12px;
+        color: #373434;
         line-height: 16px;
-        strong {
+        font-weight: 300;
+        .text-bold {
             font-size: 14px;
+            font-weight: 500;
         }
     }
 }
@@ -204,6 +231,9 @@ img {
 .logo {
     width: 145px;
     display: block;
+    @media screen and (max-width: 1100px) {
+        width: 92px;
+    }
     img {
         max-width: 100%;
     }
@@ -214,12 +244,27 @@ img {
     @include justify-content(space-between);
     @include align-items(center);
     padding: 20px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .top-left {
     @include flexbox();
     @include align-items(center);
     gap: 24px;
+}
+
+.top-left-box {
+    @include flexbox();
+    @include align-items(center);
+    .ham {
+        min-width: 20px;
+        margin-right: 12px;
+        display: none;
+        @media screen and (max-width: 1100px) {
+            display: block;
+        }
+    }
 }
 
 .top-right {
@@ -236,22 +281,40 @@ img {
     height: 52px;
     background: #fff;
     border-radius: 25px;
-    padding: 10px;
+    padding: 10px 16px;
     border: 1px solid #D4DEE5;
+    @media screen and (max-width: 1100px) {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 84px;
+    }
+    input {
+        width: calc(100% - 20px);
+        flex: 1;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    img {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
 }
 
-.search-container input {
-    width: calc(100% - 20px);
-    flex: 1;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 16px;
-    padding-left: 10px;
+.notification-icon {
+    display: none;
+    @media screen and (max-width: 1100px) {
+        display: block;
+    }
 }
 
-.search-container img {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+.icons-top {
+    @media screen and (max-width: 1100px) {
+        display: none;
+    }
 }
