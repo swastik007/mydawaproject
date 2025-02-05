@@ -207,4 +207,179 @@ body {
     transform: translateX(-100%);
   }
 }
+
+.banner-section {
+  position: relative;
+  color: #fff;
+  min-height: 400px;
+  /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-section .text-content {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner-section h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #d3f9d8;
+}
+
+.banner-section h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.product-promotions {
+  background-color: #f8f9fa;
+  /* Overall background for the section */
+}
+
+.promotion-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.promotion-text {
+  z-index: 2;
+}
+
+.promotion-text h5 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.promotion-text p {
+  font-size: 0.95rem;
+}
+
+.promotion-text button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.promotion-image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.circle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Semi-transparent circle */
+  z-index: 1;
+}
+
+.product-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.symptoms .badge {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.symptoms .step-circle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.symptoms .symptom-card {
+  cursor: pointer;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.symptoms .symptom-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.symptoms .symptom-card:hover {
+  transform: scale(1.05);
+  border-color: #adb5bd;
+}
+
+.symptoms .symptom-card.selected {
+  border-color: #66bb6a;
+  background-color: #e6f4ea;
+}
+
+.symptoms .symptom-card.selected img {
+  opacity: 0.8;
+}
+
+.symptoms .text-center p {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.results .card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.results .card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.results .card .badge {
+  background-color: #e91e63;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  border-radius: 0 0 5px 0;
+}
+
+.results .card .btn {
+  border-radius: 20px;
+}
+
+.results .pagination .page-link {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results .pagination .page-item.active .page-link {
+  background-color: #66bb6a;
+  color: white;
+  border-color: #66bb6a;
+}
 /*# sourceMappingURL=theme.css.map */

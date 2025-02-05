@@ -1,0 +1,34 @@
+.results {
+    .card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+    .card .badge {
+        background-color: #e91e63;
+        color: white;
+        padding: 5px 10px;
+        font-size: 0.85rem;
+        border-radius: 0 0 5px 0;
+    }
+    .card .btn {
+        border-radius: 20px;
+    }
+    .pagination .page-link {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pagination .page-item.active .page-link {
+        background-color: #66bb6a;
+        color: white;
+        border-color: #66bb6a;
+    }
+}

@@ -90,20 +90,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Load Header
     if (document.getElementById("header")) {
-        fetch("header.html")
+        fetch("components/header.html")
             .then(response => response.text())
             .then(data => document.getElementById("header").innerHTML = data);
     }
 
     // Load Footer
     if (document.getElementById("footer")) {
-        fetch("footer.html")
+        fetch("components/footer.html")
             .then(response => response.text())
             .then(data => document.getElementById("footer").innerHTML = data);
     }
     // Home Slider Section
     if (document.getElementById("homeslider")) {
-        fetch("home-slider.html")
+        fetch("components/home-slider.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("homeslider").innerHTML = data;
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Category Slider Section
     if (document.getElementById("cat-slider")) {
-        fetch("category-section.html")
+        fetch("components/category-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("cat-slider").innerHTML = data;
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Load Offer Section
     if (document.getElementById("offersection")) {
-        fetch("offer-section.html")
+        fetch("components/offer-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("offersection").innerHTML = data;
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // New product Section
     if (document.getElementById("newproduct")) {
-        fetch("newproduct-section.html")
+        fetch("components/newproduct-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("newproduct").innerHTML = data;
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // New product Section
     if (document.getElementById("popularproducts")) {
-        fetch("popularproduct-section.html")
+        fetch("components/popularproduct-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("popularproducts").innerHTML = data;
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // New product Section
     if (document.getElementById("featuresection")) {
-        fetch("feature-section.html")
+        fetch("components/feature-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("featuresection").innerHTML = data;
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Promotional Section
     if (document.getElementById("promotionsection")) {
-        fetch("promotion-section.html")
+        fetch("components/promotion-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("promotionsection").innerHTML = data;
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Load Blog Section
     if (document.getElementById("blogsection")) {
-        fetch("blog-section.html")
+        fetch("components/blog-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("blogsection").innerHTML = data;
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Load Symptoms Section
     if (document.getElementById("symptomsection")) {
-        fetch("symptoms-section.html")
+        fetch("components/symptoms-section.html")
             .then(response => response.text())
             .then(data => document.getElementById("symptomsection").innerHTML = data);
     }
