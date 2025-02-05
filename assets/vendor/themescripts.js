@@ -57,6 +57,21 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
+        // Popular Products Carousel
+        if ($('#popular-carousel').length) {
+            $('#popular-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 4 }
+                }
+            });
+        }
+
         // New Product Carousel
         if ($('#newproduct-carousel').length) {
             $('#newproduct-carousel').owlCarousel({
@@ -116,12 +131,33 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    // Load Offer Section
+    // New product Section
     if (document.getElementById("newproduct")) {
         fetch("newproduct-section.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("newproduct").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+    // New product Section
+    if (document.getElementById("popularproducts")) {
+        fetch("popularproduct-section.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("popularproducts").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+
+    // New product Section
+    if (document.getElementById("featuresection")) {
+        fetch("feature-section.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("featuresection").innerHTML = data;
                 initializeCarousels(); // Initialize carousel after loading
             });
     }
