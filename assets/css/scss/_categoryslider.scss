@@ -1,0 +1,15 @@
+.category-slider {
+    .card img {
+        border-radius: 12px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .card-body {
+        padding-top: 10px;
+    }
+    .card-text {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #333;
+    }
+}

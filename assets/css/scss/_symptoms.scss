@@ -1,0 +1,43 @@
+.symptoms {
+    .badge {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+    .step-circle {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight: bold;
+    }
+    .symptom-card {
+        cursor: pointer;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 10px;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+    .symptom-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .symptom-card:hover {
+        transform: scale(1.05);
+        border-color: #adb5bd;
+    }
+    .symptom-card.selected {
+        border-color: #66bb6a;
+        background-color: #e6f4ea;
+    }
+    .symptom-card.selected img {
+        opacity: 0.8;
+    }
+    .text-center p {
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+}

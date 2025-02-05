@@ -1,19 +1,155 @@
-$(document).ready(function() {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 3
-            },
-            1024: {
-                items: 5
-            }
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to initialize carousels
+    function initializeCarousels() {
+        // Hompage Carousel
+        if ($('#homepage-carousel').length) {
+            $('#homepage-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                items: 1,
+            });
         }
-    });
+
+        // Category Carousel
+        if ($('#category-carousel').length) {
+            $('#category-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 3 },
+                    1024: { items: 5 }
+                }
+            });
+        }
+
+        // Blog Carousel
+        if ($('#blog-carousel').length) {
+            $('#blog-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 4 }
+                }
+            });
+        }
+
+        // Offers Carousel
+        if ($('#offer-carousel').length) {
+            $('#offer-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 4 }
+                }
+            });
+        }
+
+        // New Product Carousel
+        if ($('#newproduct-carousel').length) {
+            $('#newproduct-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 4 }
+                }
+            });
+        }
+    }
+
+    // Load Header
+    if (document.getElementById("header")) {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    }
+
+    // Load Footer
+    if (document.getElementById("footer")) {
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    }
+    // Home Slider Section
+    if (document.getElementById("homeslider")) {
+        fetch("home-slider.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("homeslider").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+    // Category Slider Section
+    if (document.getElementById("cat-slider")) {
+        fetch("category-section.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("cat-slider").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+    // Load Offer Section
+    if (document.getElementById("offersection")) {
+        fetch("offer-section.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("offersection").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+    // Load Offer Section
+    if (document.getElementById("newproduct")) {
+        fetch("newproduct-section.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("newproduct").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+    // Promotional Section
+    if (document.getElementById("promotionsection")) {
+        fetch("promotion-section.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("promotionsection").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+    // Load Blog Section
+    if (document.getElementById("blogsection")) {
+        fetch("blog-section.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("blogsection").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
+
+    // Load Symptoms Section
+    if (document.getElementById("symptomsection")) {
+        fetch("symptoms-section.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("symptomsection").innerHTML = data);
+    }
 });

@@ -1,0 +1,29 @@
+.new-products {
+    background-color: #EFF2F9;
+    .deal-banner {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .scrolling-text {
+        display: inline-flex;
+        animation: scroll 15s linear infinite;
+    }
+    .scrolling-text p {
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .scrolling-text i {
+        font-size: 1.2rem;
+        color: white;
+    }
+    /* Scrolling Animation */
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}

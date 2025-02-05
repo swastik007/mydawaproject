@@ -1,0 +1,59 @@
+.product-promotions {
+    background-color: #f8f9fa;
+    /* Overall background for the section */
+}
+
+.promotion-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.promotion-text {
+    z-index: 2;
+}
+
+.promotion-text h5 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.promotion-text p {
+    font-size: 0.95rem;
+}
+
+.promotion-text button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.promotion-image {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.circle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Semi-transparent circle */
+    z-index: 1;
+}
+
+.product-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
