@@ -1,20 +1,18 @@
 body {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 .footer {
-  background-color: #e61b77;
+  background-color: rgb(230, 27, 119);
   /* Pink Background */
   padding: 10px 0;
 }
-
 .footer a {
   color: white;
   text-decoration: none;
   font-size: 14px;
   margin: 0 15px;
 }
-
 .footer a:hover, .footer a:focus {
   text-decoration: underline;
 }
@@ -62,12 +60,11 @@ body {
 }
 
 .btn-primary {
-  background-color: #e61b77;
-  border-color: #e61b77;
+  background-color: rgb(230, 27, 119);
+  border-color: rgb(230, 27, 119);
   border-radius: 20px;
   padding: 10px 20px;
 }
-
 .btn-primary:hover, .btn-primary:focus {
   background-color: #d81b60;
   border-color: #d81b60;
@@ -79,19 +76,17 @@ body {
   border-radius: 20px;
   padding: 10px 20px;
 }
-
 .btn-outline-light:hover, .btn-outline-light:focus {
   background-color: #ffffff;
   color: #66bb6a;
 }
 
 .btn-dark {
-  background-color: #373434;
-  border-color: #373434;
+  background-color: rgb(55, 52, 52);
+  border-color: rgb(55, 52, 52);
   border-radius: 20px;
   padding: 10px 20px;
 }
-
 .btn-dark:hover, .btn-dark:focus {
   background-color: #555;
   color: #fff;
@@ -102,9 +97,8 @@ body {
   border-color: #fff;
   border-radius: 20px;
   padding: 10px 20px;
-  color: #e61b77;
+  color: rgb(230, 27, 119);
 }
-
 .btn-white:hover, .btn-white:focus {
   background-color: #f2f2f2;
   color: #444;
@@ -120,18 +114,15 @@ body {
   justify-content: center;
   text-align: center;
 }
-
 .homepage-slider .slide-item .text-content {
   padding: 20px;
   border-radius: 10px;
 }
-
 .homepage-slider .slide-item h5 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: #d3f9d8;
 }
-
 .homepage-slider .slide-item h2 {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -141,13 +132,12 @@ body {
 .category-slider .card img {
   border-radius: 12px;
   height: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 .category-slider .card-body {
   padding-top: 10px;
 }
-
 .category-slider .card-text {
   font-size: 0.9rem;
   font-weight: 500;
@@ -161,12 +151,10 @@ body {
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .feature-item .icon h5 {
   margin-top: 10px;
   color: #333333;
 }
-
 .feature-item .icon p {
   margin-top: 5px;
   font-size: 0.9rem;
@@ -177,28 +165,23 @@ body {
   background-color: #EFF2F9;
   /* Scrolling Animation */
 }
-
 .new-products .deal-banner {
   overflow: hidden;
   white-space: nowrap;
 }
-
 .new-products .scrolling-text {
   display: inline-flex;
   animation: scroll 15s linear infinite;
 }
-
 .new-products .scrolling-text p {
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .new-products .scrolling-text i {
   font-size: 1.2rem;
   color: white;
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(100%);
@@ -218,18 +201,15 @@ body {
   justify-content: center;
   text-align: center;
 }
-
 .banner-section .text-content {
   padding: 20px;
   border-radius: 10px;
 }
-
 .banner-section h5 {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: #d3f9d8;
 }
-
 .banner-section h2 {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -293,7 +273,8 @@ body {
   z-index: 2;
   width: 100px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .symptoms .badge {
@@ -301,7 +282,6 @@ body {
   padding: 5px 10px;
   border-radius: 20px;
 }
-
 .symptoms .step-circle {
   width: 30px;
   height: 30px;
@@ -311,7 +291,6 @@ body {
   border-radius: 50%;
   font-weight: bold;
 }
-
 .symptoms .symptom-card {
   cursor: pointer;
   border: 2px solid #e9ecef;
@@ -319,27 +298,22 @@ body {
   padding: 10px;
   transition: transform 0.2s, border-color 0.2s;
 }
-
 .symptoms .symptom-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
-
 .symptoms .symptom-card:hover {
   transform: scale(1.05);
   border-color: #adb5bd;
 }
-
 .symptoms .symptom-card.selected {
   border-color: #66bb6a;
   background-color: #e6f4ea;
 }
-
 .symptoms .symptom-card.selected img {
   opacity: 0.8;
 }
-
 .symptoms .text-center p {
   font-size: 0.85rem;
   font-weight: bold;
@@ -350,12 +324,11 @@ body {
   border-radius: 12px;
   overflow: hidden;
 }
-
 .results .card img {
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 .results .card .badge {
   background-color: #e91e63;
   color: white;
@@ -363,11 +336,9 @@ body {
   font-size: 0.85rem;
   border-radius: 0 0 5px 0;
 }
-
 .results .card .btn {
   border-radius: 20px;
 }
-
 .results .pagination .page-link {
   border-radius: 50%;
   width: 40px;
@@ -376,10 +347,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .results .pagination .page-item.active .page-link {
   background-color: #66bb6a;
   color: white;
   border-color: #66bb6a;
-}
-/*# sourceMappingURL=theme.css.map */
+}/*# sourceMappingURL=theme.css.map */
