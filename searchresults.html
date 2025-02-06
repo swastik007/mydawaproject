@@ -23,177 +23,125 @@
         <div id="header"></div>
         <main class="container py-5">
             <section class="results py-5 bg-light">
-                <div class="container">
-                    <!-- Heading -->
-                    <div class="row mb-4">
-                        <div class="col">
-                            <h2 class="fw-bold">Showing Results for <span class="text-danger">“Family Planning”</span></h2>
-                            <p class="text-muted">Showing 1-15 of 150 results</p>
-                        </div>
-                        <div class="col text-end">
-                            <a href="#" class="btn btn-link text-decoration-none">Modify Search</a>
-                        </div>
+                <div class="container my-4">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Search Results For "Family Planning"</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Heading Section -->
+                    <div class="text-center py-4">
+                        <h2 class="fw-bold">Showing results for "Family Planning"</h2>
+                        <p class="text-muted">Need Help? Chat with us | Get Expert Guidance | Send Us Email | Call Us</p>
                     </div>
 
-                    <!-- Filter and Product Section -->
-                    <div class="row">
-                        <!-- Filters -->
-                        <aside class="col-md-3">
-                            <div class="mb-4">
+                    <!-- Filters and Sorting -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <!-- Filters -->
+                            <div class="border p-3 rounded">
                                 <h5 class="fw-bold">Category</h5>
                                 <ul class="list-unstyled">
-                                    <li><input type="checkbox" id="condoms"> <label for="condoms">Condoms</label></li>
-                                    <li><input type="checkbox" id="lubricants"> <label for="lubricants">Lubricants</label></li>
-                                    <li><input type="checkbox" id="contraceptives"> <label for="contraceptives">Contraceptive</label></li>
-                                    <li><input type="checkbox" id="toys"> <label for="toys">Adult Toys</label></li>
+                                    <li><input type="checkbox" id="condoms" /> <label for="condoms">Condoms</label></li>
+                                    <li><input type="checkbox" id="lubricants" /> <label for="lubricants">Lubricants</label></li>
+                                    <li><input type="checkbox" id="contraceptive" /> <label for="contraceptive">Contraceptive</label></li>
+                                    <li><input type="checkbox" id="adult-toys" /> <label for="adult-toys">Adult Toys</label></li>
+                                    <li><input type="checkbox" id="performance-enhancers" /> <label for="performance-enhancers">Performance Enhancers</label></li>
                                 </ul>
-                            </div>
-                            <div class="mb-4">
-                                <h5 class="fw-bold">Brand</h5>
-                                <select class="form-select">
-                                <option selected>All Brands</option>
-                                <option>Durex</option>
-                                <option>Contempo</option>
-                            </select>
-                            </div>
-                            <div class="mb-4">
-                                <h5 class="fw-bold">Price</h5>
-                                <input type="range" class="form-range" min="0" max="5000" step="10">
-                            </div>
-                        </aside>
 
-                        <!-- Product Cards -->
+                                <h5 class="fw-bold mt-4">Brand</h5>
+                                <!-- Add brand filters dynamically -->
+
+                                <h5 class="fw-bold mt-4">Price</h5>
+                                <!-- Add price slider -->
+
+                                <h5 class="fw-bold mt-4">Discount</h5>
+                                <!-- Add discount filters -->
+                            </div>
+                        </div>
                         <div class="col-md-9">
-                            <div class="row g-3">
-                                <!-- Product Card 1 -->
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product3.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
+                            <!-- Sorting and Display Controls -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <label for="display-items">Display: </label>
+                                    <select id="display-items" class="form-select d-inline-block w-auto">
+                              <option>15 per page</option>
+                              <option>30 per page</option>
+                            </select>
                                 </div>
-                                <!-- Add more cards here -->
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product1.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
+                                <div>
+                                    <label for="sort-by">Sort by: </label>
+                                    <select id="sort-by" class="form-select d-inline-block w-auto">
+                              <option>Recommended</option>
+                              <option>Price: Low to High</option>
+                            </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product2.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product3.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product4.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product5.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product2.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product4.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card border-0 shadow-sm">
-                                        <span class="badge bg-danger position-absolute top-0 start-0">Flat 5% Off</span>
-                                        <img src="assets/images/product-images/product5.png" alt="Product 1" class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="text-muted small">Condoms</p>
-                                            <h5 class="card-title">Contempo Condom Bare Back 3's</h5>
-                                            <p class="text-muted text-decoration-line-through">KES 500</p>
-                                            <p class="text-success fw-bold">KES 465</p>
-                                            <button class="btn btn-success w-100">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
 
+                            <!-- Products Grid -->
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img src="assets/images/product-images/product1.png" class="card-img-top" alt="Product 1">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Contempo Condom Bare Back 3's</h6>
+                                            <p class="text-muted">KES 500 <span class="text-danger">KES 465</span></p>
+                                            <button class="btn btn-success w-100">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Repeat for other products -->
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img src="assets/images/product-images/product2.png" class="card-img-top" alt="Product 1">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Contempo Condom Bare Back 3's</h6>
+                                            <p class="text-muted">KES 500 <span class="text-danger">KES 465</span></p>
+                                            <button class="btn btn-success w-100">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img src="assets/images/product-images/product3.png" class="card-img-top" alt="Product 1">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Contempo Condom Bare Back 3's</h6>
+                                            <p class="text-muted">KES 500 <span class="text-danger">KES 465</span></p>
+                                            <button class="btn btn-success w-100">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img src="assets/images/product-images/product4.png" class="card-img-top" alt="Product 1">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Contempo Condom Bare Back 3's</h6>
+                                            <p class="text-muted">KES 500 <span class="text-danger">KES 465</span></p>
+                                            <button class="btn btn-success w-100">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <img src="assets/images/product-images/product5.png" class="card-img-top" alt="Product 1">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Contempo Condom Bare Back 3's</h6>
+                                            <p class="text-muted">KES 500 <span class="text-danger">KES 465</span></p>
+                                            <button class="btn btn-success w-100">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Pagination -->
-                            <nav class="mt-4">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item disabled"><a class="page-link">Prev</a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center mt-4">
+                                    <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
                                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
                                 </ul>
                             </nav>

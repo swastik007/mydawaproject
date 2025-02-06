@@ -188,4 +188,21 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.text())
             .then(data => document.getElementById("symptomsection").innerHTML = data);
     }
+
+    // Header Searchbar result
+    if (document.getElementById("headersearchpopup")) {
+        fetch("components/headersearch.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("headersearchpopup").innerHTML = data);
+    }
+
+    // Header searchbar suggestion
+    if (document.getElementById("headersearchsuggest")) {
+        fetch("components/headersearchsuggestion.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("headersearchsuggest").innerHTML = data);
+    }
+
+
+
 });
