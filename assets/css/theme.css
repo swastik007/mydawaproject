@@ -529,4 +529,176 @@ body {
     /* Below the overlay */
   }
 }
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.step-navigation .steps .step {
+  display: flex;
+  align-items: center;
+}
+
+.step-navigation .steps .step .step-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ccc;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.step-navigation .steps .step.active .step-circle {
+  background: #007bff;
+  color: #fff;
+}
+
+.upload-section .upload-box {
+  background: #fff;
+  color: #333;
+}
+
+.upload-section .upload-box .icon {
+  font-size: 48px;
+}
+
+.upload-section .upload-box p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.upload-section .upload-box small {
+  font-size: 12px;
+  color: #888;
+}
+
+.uploaded-file-section .file-item {
+  background: #fff;
+  color: #333;
+}
+
+.uploaded-file-section .file-item .file-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.uploaded-file-section .file-item .file-info {
+  flex: 1;
+}
+
+.uploaded-file-section .file-item .file-info .file-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.uploaded-file-section .file-item .file-info small {
+  font-size: 12px;
+  color: #888;
+}
+
+.uploaded-file-section .file-item button {
+  color: #dc3545;
+}
+
+.uploaded-file-section .file-item button:hover {
+  color: #b02a37;
+}
+
+.payment-section h5 {
+  font-size: 18px;
+}
+
+.payment-section .form-check-label {
+  font-size: 16px;
+  color: #fff;
+}
+
+.payment-section .form-check-input:checked {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.actions-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.actions-section button.btn-outline-dark {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.actions-section button.btn-outline-dark:hover {
+  background-color: #333;
+}
+
+.actions-section button.btn-success {
+  background-color: #198754;
+  border: none;
+}
+
+.actions-section button.btn-success:hover {
+  background-color: #157347;
+}
+
+@media (max-width: 768px) {
+  .actions-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .actions-section button {
+    width: 100%;
+  }
+}
+
+.recipient-form .form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.recipient-form .form-control,
+.recipient-form .form-select {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.recipient-form .form-control:focus,
+.recipient-form .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.recipient-form textarea {
+  resize: none;
+}
+
+.recipient-form .form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007bff'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+}
+
+.recipient-selection .form-check-input:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.recipient-selection .form-check-label {
+  font-size: 16px;
+  color: #fff;
+}
 /*# sourceMappingURL=theme.css.map */

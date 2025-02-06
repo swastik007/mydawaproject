@@ -1,0 +1,173 @@
+// General Styles
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+// Step Navigation
+.step-navigation {
+    .steps {
+        .step {
+            display: flex;
+            align-items: center;
+            .step-circle {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #ccc;
+                color: #000;
+                font-size: 12px;
+                font-weight: 600;
+                margin-right: 5px;
+            }
+            &.active .step-circle {
+                background: #007bff;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// Upload Section
+.upload-section {
+    .upload-box {
+        background: #fff;
+        color: #333;
+        .icon {
+            font-size: 48px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        small {
+            font-size: 12px;
+            color: #888;
+        }
+    }
+}
+
+// Uploaded File Section
+.uploaded-file-section {
+    .file-item {
+        background: #fff;
+        color: #333;
+        .file-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        .file-info {
+            flex: 1;
+            .file-name {
+                font-size: 14px;
+                font-weight: 600;
+            }
+            small {
+                font-size: 12px;
+                color: #888;
+            }
+        }
+        button {
+            color: #dc3545;
+            &:hover {
+                color: #b02a37;
+            }
+        }
+    }
+}
+
+// Payment Section
+.payment-section {
+    h5 {
+        font-size: 18px;
+    }
+    .form-check-label {
+        font-size: 16px;
+        color: #fff;
+    }
+    .form-check-input:checked {
+        background-color: #198754;
+        border-color: #198754;
+    }
+}
+
+// Actions Section
+.actions-section {
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        &.btn-outline-dark {
+            border: 2px solid #fff;
+            color: #fff;
+            &:hover {
+                background-color: #333;
+            }
+        }
+        &.btn-success {
+            background-color: #198754;
+            border: none;
+            &:hover {
+                background-color: #157347;
+            }
+        }
+    }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+    .actions-section {
+        flex-direction: column;
+        gap: 10px;
+        button {
+            width: 100%;
+        }
+    }
+}
+
+// Form Styles
+.recipient-form {
+    .form-label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .form-control,
+    .form-select {
+        background: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        &:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    }
+    textarea {
+        resize: none;
+    }
+    .form-select {
+        appearance: none; // For consistent dropdown across browsers
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007bff'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 16px;
+    }
+}
+
+// Recipient Selection
+.recipient-selection {
+    .form-check-input:checked {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    .form-check-label {
+        font-size: 16px;
+        color: #fff;
+    }
+}
