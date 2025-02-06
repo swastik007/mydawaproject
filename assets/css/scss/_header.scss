@@ -1,0 +1,68 @@
+.category-dropdown {
+    position: relative;
+    .dropdown-toggle {
+        text-decoration: none;
+        color: #333;
+        &:hover {
+            color: #007bff;
+        }
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        border-radius: 8px;
+        padding: 15px;
+        width: 100%;
+        max-width: 600px;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .category-list {
+            li {
+                padding: 10px 0;
+                a {
+                    color: #333;
+                    text-decoration: none;
+                    font-size: 14px;
+                    span {
+                        font-size: 12px;
+                        color: #999;
+                        margin-left: 5px;
+                    }
+                    &:hover {
+                        color: #007bff;
+                    }
+                }
+            }
+        }
+        .category-highlight {
+            img {
+                max-width: 150px;
+                margin: 0 auto;
+            }
+            p {
+                font-size: 14px;
+                &.text-primary {
+                    font-weight: bold;
+                    color: #007bff;
+                }
+            }
+        }
+    }
+}
+
+// Hover Effect for Large Screens
+@media (min-width: 992px) {
+    .category-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+    .dropdown-menu {
+        max-width: 100%;
+    }
+}

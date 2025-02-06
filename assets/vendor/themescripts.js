@@ -206,3 +206,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
+$(document).ready(function() {
+    // Open the dropdown menu on click
+    $('.category-dropdown .dropdown-toggle').on('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        e.stopPropagation(); // Prevent the click from propagating to the document
+        const dropdownMenu = $(this).siblings('.dropdown-menu');
+
+        // Close other dropdowns and toggle the current one
+        $('.dropdown-menu').not(dropdownMenu).slideUp();
+        dropdownMenu.stop(true, true).slideToggle();
+    });
+
+    // Close the dropdown menu when clicking outside
+    $(document).on('click', function() {
+        $('.dropdown-menu').slideUp();
+    });
+
+    // Optional: Close the dropdown menu on the ESC key press
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') {
+            $('.dropdown-menu').slideUp();
+        }
+    });
+});
