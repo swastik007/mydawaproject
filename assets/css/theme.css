@@ -25,8 +25,12 @@ body {
   }
 }
 
+.category-dropdown .category-menu {
+  display: hidden;
+}
+
 .category-menu {
-  display: none;
+  display: block;
   /* Hidden by default */
   position: absolute;
   top: 100%;
@@ -162,81 +166,51 @@ body {
   margin-top: 20px;
 }
 
-.category-dropdown {
+.delivery-wrap {
   position: relative;
 }
 
-.category-dropdown .dropdown-toggle {
-  text-decoration: none;
-  color: #333;
-}
-
-.category-dropdown .dropdown-toggle:hover {
-  color: #007bff;
-}
-
-.category-dropdown .dropdown-menu {
-  display: none;
+.delivery-wrap .delivery-dropdown {
+  display: block;
+  /* Hidden by default */
   position: absolute;
   top: 100%;
-  left: 0;
-  z-index: 1000;
+  left: 10px;
+  /* Centers the dropdown */
+  width: 300px;
+  /* Set desired width */
   background: white;
-  width: 250px;
+  z-index: 99999;
   border: 1px solid #ddd;
   border-radius: 5px;
+  border: 1px solid #E7ECF4;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.category-dropdown .dropdown-menu .category-list {
+.delivery-wrap .delivery-dropdown .dropdown-header {
+  color: #373434;
+  padding: 10px;
+}
+
+.delivery-wrap .delivery-dropdown .dropdown-header h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delivery-wrap .delivery-dropdown .dropdown-header p {
+  max-width: 200px;
+}
+
+.delivery-wrap .delivery-dropdown .dropdown-wrap {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
-.category-dropdown .dropdown-menu .category-list li {
-  padding: 10px 0;
-}
-
-.category-dropdown .dropdown-menu .category-list li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.category-dropdown .dropdown-menu .category-list li a span {
-  font-size: 12px;
-  color: #999;
-  margin-left: 5px;
-}
-
-.category-dropdown .dropdown-menu .category-list li a:hover {
-  color: #007bff;
-}
-
-.category-dropdown .dropdown-menu .category-highlight img {
-  max-width: 150px;
-  margin: 0 auto;
-}
-
-.category-dropdown .dropdown-menu .category-highlight p {
-  font-size: 14px;
-}
-
-.category-dropdown .dropdown-menu .category-highlight p.text-primary {
-  font-weight: bold;
-  color: #007bff;
-}
-
-@media (min-width: 992px) {
-  .category-dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .dropdown-menu {
-    max-width: 100%;
-  }
+.delivery-wrap .delivery-dropdown .zip-code {
+  margin-top: 7px;
+  padding-top: 10px;
+  border-top: 1px solid #E7ECF4;
 }
 
 .footer {
@@ -624,23 +598,68 @@ body {
   }
 }
 
-.feature-item .icon {
-  display: inline-block;
-  background-color: #ffffff;
-  padding: 10px;
+.feature-section {
+  background-color: #F1F3FB;
+  padding: 50px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .feature-section {
+    padding: 60px 80px 20px 80px;
+  }
+}
+
+.feature-section .feature-item {
+  display: flex;
+}
+
+@media only screen and (min-width: 1440px) {
+  .feature-section .feature-item {
+    margin: 0 20px;
+  }
+}
+
+.feature-section .feature-item .icon {
+  background-color: #fff;
+  padding: 25px;
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
 }
 
-.feature-item .icon h5 {
-  margin-top: 10px;
-  color: #333333;
+.feature-section .feature-item h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #373434;
 }
 
-.feature-item .icon p {
-  margin-top: 5px;
-  font-size: 0.9rem;
-  color: #666666;
+@media only screen and (min-width: 1440px) {
+  .feature-section .feature-item h5 {
+    font-size: 20px;
+  }
+}
+
+.feature-section .feature-item p {
+  font-size: 18px;
+  color: #787878;
+  line-height: 150%;
+  font-weight: 400;
+  max-width: 300px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .feature-section .feature-item p {
+    font-size: 20px;
+  }
+}
+
+.popular-products {
+  margin: 10px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .popular-products {
+    margin: 45px 60px 60px 60px;
+  }
 }
 
 .new-products {
@@ -811,70 +830,6 @@ body {
 
 .product-promotions .promotion-text .btn-grey {
   margin-top: 20px;
-}
-
-.popular-products {
-  margin: 10px;
-}
-
-@media only screen and (min-width: 1440px) {
-  .popular-products {
-    margin: 45px 60px 60px 60px;
-  }
-}
-
-.feature-section {
-  background-color: #F1F3FB;
-  padding: 50px;
-}
-
-@media only screen and (min-width: 1440px) {
-  .feature-section {
-    padding: 60px 80px 20px 80px;
-  }
-}
-
-.feature-section .feature-item {
-  display: flex;
-}
-
-@media only screen and (min-width: 1440px) {
-  .feature-section .feature-item {
-    margin: 0 20px;
-  }
-}
-
-.feature-section .feature-item .icon {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.feature-section .feature-item h5 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #373434;
-}
-
-@media only screen and (min-width: 1440px) {
-  .feature-section .feature-item h5 {
-    font-size: 20px;
-  }
-}
-
-.feature-section .feature-item p {
-  font-size: 18px;
-  color: #787878;
-  line-height: 150%;
-  font-weight: 400;
-  max-width: 300px;
-}
-
-@media only screen and (min-width: 1440px) {
-  .feature-section .feature-item p {
-    font-size: 20px;
-  }
 }
 
 .symptoms-section {
@@ -1127,55 +1082,6 @@ body {
   .blog-section .blog-card .blog-title {
     font-size: 18px;
   }
-}
-
-.symptoms .badge {
-  font-size: 0.9rem;
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-.symptoms .step-circle {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-weight: bold;
-}
-
-.symptoms .symptom-card {
-  cursor: pointer;
-  border: 2px solid #e9ecef;
-  border-radius: 8px;
-  padding: 10px;
-  transition: transform 0.2s, border-color 0.2s;
-}
-
-.symptoms .symptom-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.symptoms .symptom-card:hover {
-  transform: scale(1.05);
-  border-color: #adb5bd;
-}
-
-.symptoms .symptom-card.selected {
-  border-color: #66bb6a;
-  background-color: #e6f4ea;
-}
-
-.symptoms .symptom-card.selected img {
-  opacity: 0.8;
-}
-
-.symptoms .text-center p {
-  font-size: 0.85rem;
-  font-weight: bold;
 }
 
 .results .breadcrumb {

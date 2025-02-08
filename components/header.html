@@ -16,15 +16,54 @@
                 </div>
             </div>
             <div class="top-right">
-                <div class="delivery-info">
-                    <span class="icon">
-                        <img src="img/icon-flash.svg" alt="Icon">
-                    </span>
-                    <div class="icon-text">Express delivery to <br><span class="text-bold">80100, Mombasa</span></div>
-                    <span class="icon-down">
-                        <img src="img/caret-down-orange.svg" alt="Icon">
-                    </span>
+                <div class="delivery-wrap">
+                    <div class="delivery-info">
+                        <span class="icon">
+                            <img src="img/icon-flash.svg" alt="Icon">
+                        </span>
+                        <div class="icon-text">Express delivery to <br><span class="text-bold">80100, Mombasa</span></div>
+                        <span class="icon-down">
+                            <img src="img/caret-down-orange.svg" alt="Icon">
+                        </span>
+                    </div>
+                    <div class="delivery-dropdown">
+                        <div class="dropdown-header">
+                            <h4>Choose Your Location</h4>
+                            <p class="text-muted">Delivery options and speeds may differ depending on your location</p>
+                        </div>
+                        <div class="dropdown-wrap">
+                            <button class="btn-primary">
+                                Sign in to see your address
+                            </button>
+                            <div class="zip-code d-flex gap-2 mt-2">
+                                <input type="text" placeholder="Enter Your Zip Code" class="form-control">
+                                <button class="btn btn-dark">Check</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-body">
+                            <div class="delivery-options">
+                                <button class="btn btn-pink">Delivery</button>
+                                <button class="btn btn-outline-dark">Pickup</button>
+                            </div>
+                            <div class="address-list">
+                                <label class="radio-container">
+                                    <input type="radio" name="address" checked>
+                                    <span class="address">John Doe<br>House no. 12, Links Road, 80100, Mombasa, Kenya</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="address">
+                                    <span class="address">John Doe<br>House no. 14, Links Road, 80100, Mombasa, Kenya</span>
+                                </label>
+                                <a href="#" class="manage-addresses">Manage Addresses</a>
+                            </div>
+                            <div class="zip-code d-flex gap-2 mt-2">
+                                <input type="text" placeholder="Enter Your Zip Code" class="form-control">
+                                <button class="btn btn-dark">Check</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <ul class="btn-circle-wrap">
                     <li class="notification-icon">
                         <a href="" class="btn-circle"><img src="img/icon-notification.svg" alt="notification"></a>

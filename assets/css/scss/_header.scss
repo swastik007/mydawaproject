@@ -1,5 +1,11 @@
+.category-dropdown {
+    .category-menu {
+        display: hidden;
+    }
+}
+
 .category-menu {
-    display: none;
+    display: block;
     /* Hidden by default */
     position: absolute;
     top: 100%;
@@ -118,72 +124,45 @@
     }
 }
 
-.category-dropdown {
+.delivery-wrap {
     position: relative;
-    .dropdown-toggle {
-        text-decoration: none;
-        color: #333;
-        &:hover {
-            color: #007bff;
-        }
-    }
-    .dropdown-menu {
-        display: none;
+    .delivery-dropdown {
+        display: block;
+        /* Hidden by default */
         position: absolute;
         top: 100%;
-        left: 0;
-        z-index: 1000;
+        left: 10px;
+        // transform: translateX(-50%);
+        /* Centers the dropdown */
+        width: 300px;
+        /* Set desired width */
         background: white;
-        width: 250px;
+        z-index: 99999;
         border: 1px solid #ddd;
         border-radius: 5px;
+        border: 1px solid #E7ECF4;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        .category-list {
-            display: flex;
-            flex-direction: column;
-            li {
-                padding: 10px 0;
-                a {
-                    color: #333;
-                    text-decoration: none;
-                    font-size: 14px;
-                    span {
-                        font-size: 12px;
-                        color: #999;
-                        margin-left: 5px;
-                    }
-                    &:hover {
-                        color: #007bff;
-                    }
-                }
-            }
-        }
-        .category-highlight {
-            img {
-                max-width: 150px;
-                margin: 0 auto;
+        .dropdown-header {
+            color: $black;
+            padding: 10px;
+            h4 {
+                font-size: 16px;
+                font-weight: bold;
             }
             p {
-                font-size: 14px;
-                &.text-primary {
-                    font-weight: bold;
-                    color: #007bff;
-                }
+                max-width: 200px;
             }
         }
-    }
-}
-
-// Hover Effect for Large Screens
-@media (min-width: 992px) {
-    .category-dropdown:hover .dropdown-menu {
-        display: block;
-    }
-}
-
-// Responsive Styles
-@media (max-width: 768px) {
-    .dropdown-menu {
-        max-width: 100%;
+        .dropdown-wrap {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .zip-code {
+            margin-top: 7px;
+            padding-top: 10px;
+            border-top: 1px solid #E7ECF4;
+            @media only screen and (min-width: 1440px) {}
+        }
     }
 }
