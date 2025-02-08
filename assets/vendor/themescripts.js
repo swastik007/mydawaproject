@@ -1,4 +1,49 @@
+$(document).ready(function() {
+    // Toggle dropdown when clicking "Shop by Category"
+    $('.category-toggle').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation(); // Prevents click from bubbling to document
+
+        let dropdownMenu = $(this).siblings('.category-menu');
+
+        console.log("Dropdown Clicked"); // Debugging
+
+        // Close other dropdowns before opening the current one
+        $('.category-menu').not(dropdownMenu).removeClass('show-menu');
+
+        // Toggle class to show/hide the dropdown
+        if (dropdownMenu.hasClass('show-menu')) {
+            console.log("Hiding dropdown");
+            dropdownMenu.removeClass('show-menu');
+            $(this).attr('aria-expanded', 'false');
+        } else {
+            console.log("Showing dropdown");
+            dropdownMenu.addClass('show-menu');
+            $(this).attr('aria-expanded', 'true');
+        }
+    });
+
+    // Close dropdown when clicking outside (Use `mousedown` instead of `click`)
+    $(document).on('mousedown', function(e) {
+        if (!$(e.target).closest('.category-dropdown').length) {
+            console.log("Clicked outside, closing dropdown");
+            $('.category-menu').removeClass('show-menu');
+            $('.category-toggle').attr('aria-expanded', 'false');
+        }
+    });
+
+    // Close dropdown on ESC key press
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') {
+            console.log("ESC pressed, closing dropdown");
+            $('.category-menu').removeClass('show-menu');
+            $('.category-toggle').attr('aria-expanded', 'false');
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
+
     // Function to initialize carousels
     function initializeCarousels() {
         // Hompage Carousel
@@ -209,26 +254,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(document).ready(function() {
-    // Open the dropdown menu on click
-    $('.category-dropdown .dropdown-toggle').on('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
-        e.stopPropagation(); // Prevent the click from propagating to the document
-        const dropdownMenu = $(this).siblings('.dropdown-menu');
 
-        // Close other dropdowns and toggle the current one
-        $('.dropdown-menu').not(dropdownMenu).slideUp();
-        dropdownMenu.stop(true, true).slideToggle();
-    });
-
-    // Close the dropdown menu when clicking outside
-    $(document).on('click', function() {
-        $('.dropdown-menu').slideUp();
-    });
-
-    // Optional: Close the dropdown menu on the ESC key press
-    $(document).on('keydown', function(e) {
-        if (e.key === 'Escape') {
-            $('.dropdown-menu').slideUp();
-        }
-    });
 });
