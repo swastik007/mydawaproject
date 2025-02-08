@@ -1,0 +1,45 @@
+.offer-section {
+    margin: 10px;
+    @media only screen and (min-width: 1440px) {
+        margin: 45px 60px 60px 60px;
+    }
+    .product-category {
+        color: #8A8A8A;
+        font-weight: light;
+        font-size: 14px;
+        line-height: 20px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    .product-title {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        color: $black;
+        @media only screen and (min-width: 1440px) {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+    .product-price-old {
+        color: #b2b2b2;
+        text-decoration: line-through;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .product-price {
+        font-size: 16px;
+        color: $black;
+        font-weight: 500;
+    }
+    .btn-cart {
+        background-color: $green;
+        border-radius: 25px;
+        color: white;
+        padding: 10px 15px;
+        height: fit-content;
+    }
+}

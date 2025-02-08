@@ -1,8 +1,9 @@
 .btn-primary {
     background-color: $primary;
     border-color: $primary;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-radius: 10px;
+    padding: 10px 40px;
+    font-weight: 600;
     &:hover,
     &:focus {
         background-color: #d81b60;
@@ -11,14 +12,17 @@
 }
 
 .btn-outline-light {
+    background-color: #f3f3f3;
+    font-weight: 400;
     border-color: #ffffff;
-    color: #ffffff;
-    border-radius: 20px;
-    padding: 10px 20px;
+    color: $black;
+    border-radius: 10px;
+    padding: 10px 40px;
     &:hover,
     &:focus {
         background-color: #ffffff;
-        color: #66bb6a;
+        border-color: #eee;
+        color: $primary;
     }
 }
 

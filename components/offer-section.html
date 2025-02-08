@@ -1,6 +1,6 @@
-<section class="py-5">
-    <div class="container">
-        <h2 class="fw-bold mb-4">Offers Of The Day</h2>
+<section class="offer-section">
+    <div class="container-fluid">
+        <h2 class="section-heading mb-4">Offers Of The Day</h2>
         <div class="position-relative">
             <!-- Carousel -->
             <div id="offer-carousel" class="owl-carousel owl-theme">
@@ -12,11 +12,21 @@
                     </button>
                     <img src="assets/images/product-images/product1.png" alt="Product 1" class="card-img-top">
                     <div class="card-body text-center">
-                        <p class="text-muted mb-1">Snacks</p>
-                        <h5 class="card-title mb-2">Naara Chocolate Cookies 250gms</h5>
-                        <p class="text-muted text-decoration-line-through">KES 400</p>
-                        <p class="text-success fw-bold">KES 380</p>
-                        <button class="btn btn-success w-100">Add To Cart</button>
+                        <p class="product-category">Snacks</p>
+                        <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                        <div class="d-flex">
+                            <div class="d-flex flex-column">
+                                <p class="product-price-old">KES 400</p>
+                                <p class="product-price">KES 380</p>
+                            </div>
+
+                            <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
+                        </div>
+
+
                     </div>
                 </div>
 
