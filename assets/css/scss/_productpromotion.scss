@@ -140,7 +140,21 @@
             padding: 80px;
         }
         .steps {
+            display: flex;
+            flex-direction: row;
+            @media only screen and (min-width: 1440px) {
+                flex-direction: column;
+            }
             .step {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                align-items: center;
+                border-radius: 12px;
+                @media only screen and (min-width: 1440px) {
+                    flex-direction: row;
+                    padding: 10px;
+                }
                 .step-circle {
                     border-radius: 50%;
                     border: 1px solid #D4D7E0;
@@ -168,11 +182,18 @@
                     font-weight: 500;
                     line-height: 22px;
                     color: $black;
+                    margin-bottom: 0;
+                    @media only screen and (min-width: 1440px) {
+                        margin-left: 15px;
+                        font-size: 18px;
+                        font-weight: 800;
+                    }
                 }
                 &.selected {
+                    background-color: #F6F7FB;
                     .step-circle {
                         border-radius: 50%;
-                        border: 1px solid #D4D7E0;
+                        border: 2px solid $primary;
                     }
                     p {
                         font-weight: bold;
@@ -238,6 +259,41 @@
                 font-weight: 400;
                 text-align: center;
                 margin-top: 10px;
+            }
+        }
+    }
+    .btn-grey {
+        border-radius: 25px;
+    }
+}
+
+.blog-section {
+    margin: 10px;
+    @media only screen and (min-width: 1440px) {
+        margin: 45px 60px 60px 60px;
+    }
+    .blog-card {
+        .card-body {
+            padding: 10px;
+            @media only screen and (min-width: 1440px) {
+                padding: 20px;
+            }
+        }
+        .blog-category {
+            font-size: 12px;
+            font-weight: 400;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            @media only screen and (min-width: 1440px) {
+                font-size: 14px;
+            }
+        }
+        .blog-title {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 150%;
+            @media only screen and (min-width: 1440px) {
+                font-size: 18px;
             }
         }
     }

@@ -780,6 +780,32 @@ body {
   }
 }
 
+.symptoms-section .symptoms-wrap .steps {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 1440px) {
+  .symptoms-section .symptoms-wrap .steps {
+    flex-direction: column;
+  }
+}
+
+.symptoms-section .symptoms-wrap .steps .step {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  border-radius: 12px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .symptoms-section .symptoms-wrap .steps .step {
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+
 .symptoms-section .symptoms-wrap .steps .step .step-circle {
   border-radius: 50%;
   border: 1px solid #D4D7E0;
@@ -815,11 +841,24 @@ body {
   font-weight: 500;
   line-height: 22px;
   color: #373434;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1440px) {
+  .symptoms-section .symptoms-wrap .steps .step p {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 800;
+  }
+}
+
+.symptoms-section .symptoms-wrap .steps .step.selected {
+  background-color: #F6F7FB;
 }
 
 .symptoms-section .symptoms-wrap .steps .step.selected .step-circle {
   border-radius: 50%;
-  border: 1px solid #D4D7E0;
+  border: 2px solid #e61b77;
 }
 
 .symptoms-section .symptoms-wrap .steps .step.selected p {
@@ -897,6 +936,55 @@ body {
     font-weight: 400;
     text-align: center;
     margin-top: 10px;
+  }
+}
+
+.symptoms-section .btn-grey {
+  border-radius: 25px;
+}
+
+.blog-section {
+  margin: 10px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .blog-section {
+    margin: 45px 60px 60px 60px;
+  }
+}
+
+.blog-section .blog-card .card-body {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .blog-section .blog-card .card-body {
+    padding: 20px;
+  }
+}
+
+.blog-section .blog-card .blog-category {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1440px) {
+  .blog-section .blog-card .blog-category {
+    font-size: 14px;
+  }
+}
+
+.blog-section .blog-card .blog-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+@media only screen and (min-width: 1440px) {
+  .blog-section .blog-card .blog-title {
+    font-size: 18px;
   }
 }
 
