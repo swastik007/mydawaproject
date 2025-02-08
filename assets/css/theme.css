@@ -26,7 +26,7 @@ body {
 }
 
 .category-menu {
-  display: block;
+  display: none;
   /* Hidden by default */
   position: absolute;
   top: 100%;

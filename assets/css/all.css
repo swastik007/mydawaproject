@@ -46,6 +46,7 @@ img {
 .inner-container {
   padding: 0 28px;
 }
+
 @media screen and (max-width: 768px) {
   .inner-container {
     padding: 0 16px;
@@ -327,6 +328,7 @@ img {
   font-size: 14px;
   font-weight: 500;
 }
+
 .delivery-info .icon-down {
   min-width: 10px;
   width: 10px;
@@ -429,6 +431,7 @@ img {
   align-items: center;
   gap: 24px;
 }
+
 @media screen and (max-width: 768px) {
   .top-right {
     gap: 8px;
