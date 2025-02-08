@@ -1,21 +1,27 @@
 .new-products {
     background-color: #EFF2F9;
-    .deal-banner {
-        overflow: hidden;
-        white-space: nowrap;
+    padding: 10px;
+    @media only screen and (min-width: 1440px) {
+        padding: 45px 60px 60px 60px;
     }
+}
+
+.deal-banner {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #e3ecf8;
+    color: #73b7f1;
+    padding: 8px 0;
     .scrolling-text {
         display: inline-flex;
         animation: scroll 15s linear infinite;
     }
     .scrolling-text p {
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
     }
-    .scrolling-text i {
-        font-size: 1.2rem;
-        color: white;
+    .scrolling-text img {
+        // margin: 0 10px;
     }
     /* Scrolling Animation */
     @keyframes scroll {

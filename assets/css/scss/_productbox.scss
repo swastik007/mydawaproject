@@ -1,0 +1,122 @@
+.product-card {
+    padding: 7px;
+    border: 1px solid #D4DEE5;
+    border-radius: 12px;
+    position: relative;
+    @media only screen and (min-width: 1440px) {
+        padding: 15px;
+    }
+    .sale-badge {
+        background-color: $primary;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 3px 8px;
+        border-radius: 0 0 7px 7px;
+    }
+    .btn-wishlist {
+        border-radius: 50%;
+        border: 1px solid $primary;
+        color: $primary;
+        padding: 7px;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            width: 16px;
+            height: 11px;
+            fill: none;
+        }
+        &:hover,
+        &:focus {
+            background-color: #FFD4E8;
+            border: 1px solid #FFD4E8;
+            svg {
+                width: 13px;
+                height: 11px;
+                fill: $primary;
+            }
+        }
+    }
+    .img-box {
+        margin: 50px 30px;
+        position: relative;
+        .product-img {
+            object-fit: contain;
+            width: auto;
+            height: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-weight {
+            position: absolute;
+            right: -60px;
+            top: 50px;
+            background-color: #F6F6FF;
+            color: $black;
+            border-radius: 20px;
+            padding: 5px 20px;
+            rotate: -90deg;
+        }
+    }
+    .product-category {
+        color: #8A8A8A;
+        font-weight: light;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+        margin-bottom: 2px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    .product-title {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        color: $black;
+        text-align: left;
+        max-width: 220px;
+        @media only screen and (min-width: 1440px) {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+    .product-price-old {
+        color: #b2b2b2;
+        text-decoration: line-through;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .product-price {
+        font-size: 16px;
+        color: $black;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .btn-cart {
+        font-family: "Outfit", serif;
+        background-color: $green;
+        font-size: 15px;
+        border-radius: 25px;
+        color: white;
+        padding: 10px 15px;
+        height: fit-content;
+        @media only screen and (min-width: 1440px) {
+            font-size: 18px;
+        }
+    }
+}

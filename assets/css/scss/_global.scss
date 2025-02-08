@@ -1,3 +1,23 @@
 body {
     font-family: 'Figtree', sans-serif;
 }
+
+.container-main {
+    max-width: 100%!important;
+    border-radius: 0!important;
+}
+
+body {
+    padding: 0!important;
+}
+
+.section-heading {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 36px;
+    color: $black;
+    @media only screen and (min-width: 1440px) {
+        font-size: 40px;
+        font-weight: 900;
+    }
+}

@@ -1,15 +1,28 @@
 .category-slider {
+    margin-top: 20px;
+    @media only screen and (min-width: 1440px) {
+        margin: 45px 60px 60px 60px;
+    }
     .card img {
         border-radius: 12px;
         height: 150px;
         object-fit: cover;
+        @media only screen and (min-width: 1440px) {
+            height: 280px;
+        }
     }
     .card-body {
         padding-top: 10px;
     }
     .card-text {
-        font-size: 0.9rem;
+        font-size: 16px;
         font-weight: 500;
-        color: #333;
+        line-height: 24px;
+        color: $black;
+        padding: 5px 15px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 }

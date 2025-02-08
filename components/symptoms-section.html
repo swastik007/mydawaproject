@@ -1,89 +1,115 @@
-<section class="py-5 bg-light symptoms">
-    <div class="container">
-        <div class="row">
-            <!-- Left Section -->
-            <div class="col-md-6 mb-4">
-                <div class="badge bg-warning text-dark mb-3">Symptom Checker</div>
-                <h1 class="fw-bold">
-                    Feeling <span class="text-danger">Unwell?</span>
-                </h1>
-                <p class="text-muted">
-                    Take our symptom-checker quiz to find the right products for you
-                </p>
-                <div class="steps mt-4">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="step-circle bg-primary text-white">1</div>
-                        <p class="ms-3 mb-0 fw-bold">Tell us your symptoms</p>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="step-circle bg-light text-dark">2</div>
-                        <p class="ms-3 mb-0">Analyze the factors</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="step-circle bg-light text-dark">3</div>
-                        <p class="ms-3 mb-0">Get expert recommendations</p>
-                    </div>
-                </div>
-            </div>
+<section class="symptoms-section">
+    <div class="container-fluid">
+        <div class="symptoms-wrap p-relative">
+            <div class="symptoms-badge">Symptom Checker</div>
+            <div class="row">
+                <!-- Left Section -->
+                <div class="col-md-4 mb-4">
 
-            <!-- Right Section -->
-            <div class="col-md-6">
-                <h5 class="fw-bold mb-4">Select symptoms that are troubling you the most</h5>
-                <div class="row g-3">
-                    <!-- Symptom Cards -->
-                    <div class="col-4">
-                        <div class="symptom-card">
-                            <img src="assets/images/symptoms/symp1.png" alt="Headache" class="img-fluid rounded">
-                            <p class="text-center mt-2">Headache</p>
+                    <h1 class="symptom-heading">
+                        Feeling <span>Unwell?</span>
+                    </h1>
+                    <p class="symptom-subheading">
+                        Take our symptom-checker quiz to find the right products for you
+                    </p>
+                    <div class="steps mt-4">
+                        <div class="step selected mb-3">
+                            <div class="step-circle ">
+                                <span>1</span>
+                            </div>
+                            <p class="">Tell us your symptoms</p>
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="symptom-card selected">
-                            <img src="assets/images/symptoms/symp2.png" alt="Sore Throat" class="img-fluid rounded">
-                            <p class="text-center mt-2">Sore Throat</p>
+                        <div class="step mb-3">
+                            <div class="step-circle ">
+                                <span>2</span>
+                            </div>
+                            <p class="">Analyze the factors</p>
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="symptom-card">
-                            <img src="assets/images/symptoms/symp3.png" alt="Fever" class="img-fluid rounded">
-                            <p class="text-center mt-2">Fever</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="symptom-card">
-                            <img src="assets/images/symptoms/symp4.png" alt="Cough" class="img-fluid rounded">
-                            <p class="text-center mt-2">Cough</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="symptom-card selected">
-                            <img src="assets/images/symptoms/symp5.png" alt="Runny Nose" class="img-fluid rounded">
-                            <p class="text-center mt-2">Runny Nose</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="symptom-card">
-                            <img src="assets/images/symptoms/symp6.png" alt="Heartburn" class="img-fluid rounded">
-                            <p class="text-center mt-2">Heartburn</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="symptom-card">
-                            <img src="assets/images/symptoms/symp7.png" alt="Vomiting" class="img-fluid rounded">
-                            <p class="text-center mt-2">Vomiting</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="symptom-card">
-                            <img src="assets/images/symptoms/symp8.png" alt="Back Ache" class="img-fluid rounded">
-                            <p class="text-center mt-2">Back Ache</p>
+                        <div class="step">
+                            <div class="step-circle ">
+                                <span>3</span>
+                            </div>
+                            <p class="">Get expert recommendations</p>
                         </div>
                     </div>
                 </div>
-                <div class="text-end mt-4">
-                    <button class="btn btn-dark px-4 py-2">Continue</button>
+
+                <!-- Right Section -->
+                <div class="col-md-8">
+                    <h5 class="right-heading">Select symptoms that are troubling you the most</h5>
+                    <div class="row g-3">
+                        <!-- Symptom Cards -->
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp1-grey.png" alt="Headache" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Headache</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card selected">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp2.png" alt="Sore Throat" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Sore Throat</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp3-grey.png" alt="Fever" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Fever</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp4-grey.png" alt="Cough" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Cough</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card selected">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp5.png" alt="Runny Nose" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Runny Nose</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp6-grey.png" alt="Heartburn" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Heartburn</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp7-grey.png" alt="Vomiting" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Vomiting</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="symptom-card">
+                                <div class="image-bg">
+                                    <img src="assets/images/symptoms/symp8-grey.png" alt="Back Ache" class="img-fluid rounded">
+                                </div>
+                                <p class="symptom-name">Back Ache</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-end mt-4">
+                        <button class="btn-grey">Continue</button>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
