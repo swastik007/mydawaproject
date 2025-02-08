@@ -1,59 +1,244 @@
 .product-promotions {
-    background-color: #f8f9fa;
-    /* Overall background for the section */
+    margin: 10px;
+    @media only screen and (min-width: 1440px) {
+        margin: 45px 60px 60px 60px;
+    }
+    .promotion-card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        @media only screen and (min-width: 1440px) {
+            min-height: 400px;
+        }
+        &.card-pink {
+            background-color: #FFE4E9;
+            .promotion-image {
+                background-image: url('../images/product-showcase/pink-mask.png');
+                background-size: contain;
+            }
+        }
+        &.card-purple {
+            background-color: #E4EBFF;
+            .promotion-image {
+                background-image: url('../images/product-showcase/purple-mask.png');
+                background-size: contain;
+            }
+        }
+    }
+    .promotion-image {
+        background-size: contain;
+        width: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+        .product-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            // width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    .promotion-text {
+        z-index: 2;
+        .heading {
+            font-size: 20px;
+            font-weight: 400;
+            @media only screen and (min-width: 1440px) {
+                font-size: 24px;
+            }
+        }
+        .promo-text {
+            font-size: 28px;
+            font-weight: 800;
+            @media only screen and (min-width: 1440px) {
+                font-size: 32px;
+            }
+        }
+        .btn-grey {
+            margin-top: 20px;
+        }
+    }
 }
 
-.promotion-card {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.popular-products {
+    margin: 10px;
+    @media only screen and (min-width: 1440px) {
+        margin: 45px 60px 60px 60px;
+    }
 }
 
-.promotion-text {
-    z-index: 2;
+.feature-section {
+    background-color: #F1F3FB;
+    padding: 50px;
+    @media only screen and (min-width: 1440px) {
+        padding: 60px 80px 20px 80px;
+    }
+    .feature-item {
+        display: flex;
+        @media only screen and (min-width: 1440px) {
+            margin: 0 20px;
+        }
+        .icon {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            color: $black;
+            @media only screen and (min-width: 1440px) {
+                font-size: 20px;
+            }
+        }
+        p {
+            font-size: 18px;
+            color: #787878;
+            line-height: 150%;
+            font-weight: 400;
+            max-width: 300px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 20px;
+            }
+        }
+    }
 }
 
-.promotion-text h5 {
-    color: #333;
-    font-size: 1.5rem;
-}
-
-.promotion-text p {
-    font-size: 0.95rem;
-}
-
-.promotion-text button {
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-}
-
-.promotion-image {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    flex-shrink: 0;
-}
-
-.circle-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120px;
-    height: 120px;
-    background-color: rgba(255, 255, 255, 0.3);
-    /* Semi-transparent circle */
-    z-index: 1;
-}
-
-.product-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 100px;
-    height: auto;
-    object-fit: contain;
+.symptoms-section {
+    margin: 10px;
+    @media only screen and (min-width: 1440px) {
+        margin: 45px 60px 60px 60px;
+    }
+    .symptoms-badge {
+        background-color: #FFECD6;
+        color: #FAA138;
+        position: absolute;
+        top: 0;
+        left: 30px;
+        border-radius: 0 0 10px 10px;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 7px 15px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 18px;
+            left: 80px;
+        }
+    }
+    .symptoms-wrap {
+        border-top: 1px solid #D4DEE5;
+        position: relative;
+        padding: 20px;
+        @media only screen and (min-width: 1440px) {
+            border-radius: 12px;
+            border: 1px solid #D4DEE5;
+            padding: 80px;
+        }
+        .steps {
+            .step {
+                .step-circle {
+                    border-radius: 50%;
+                    border: 1px solid #D4D7E0;
+                    padding: 5px;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @media only screen and (min-width: 1440px) {
+                        width: 36px;
+                        height: 36px;
+                    }
+                    span {
+                        font-weight: 16px;
+                        font-weight: 500;
+                        @media only screen and (min-width: 1440px) {
+                            font-size: 18px;
+                            font-weight: 800;
+                        }
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    color: $black;
+                }
+                &.selected {
+                    .step-circle {
+                        border-radius: 50%;
+                        border: 1px solid #D4D7E0;
+                    }
+                    p {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .symptom-heading {
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 36px;
+        color: $black;
+        @media only screen and (min-width: 1440px) {
+            font-size: 40px;
+        }
+        span {
+            color: $primary;
+        }
+    }
+    .symptom-subheading {
+        font-size: 16px;
+        line-height: 24px;
+        @media only screen and (min-width: 1440px) {
+            font-size: 18px;
+        }
+    }
+    .right-heading {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .symptom-card {
+        .image-bg {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            img.greyscale {
+                display: block;
+            }
+            img.color {
+                display: none;
+            }
+        }
+        &.selected {
+            .image-bg {
+                img.greyscale {
+                    display: none;
+                }
+                img.color {
+                    display: block;
+                }
+            }
+        }
+        .symptom-name {
+            font-size: 16px;
+            font-weight: bold;
+            @media only screen and (min-width: 1440px) {
+                font-size: 16px;
+                font-weight: 400;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
 }
