@@ -3292,4 +3292,287 @@ body {
 .saved-for-later-page .empty-state .btn.btn-dark:hover {
   background: #555;
 }
+
+.wishlist-products {
+  padding: 2rem;
+}
+
+.wishlist-products header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.wishlist-products header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.wishlist-products header .header-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.wishlist-products header .header-controls .delete-list {
+  background-color: #f54242;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-products header .header-controls .delete-list:hover {
+  background-color: #d13333;
+}
+
+.wishlist-products header .header-controls .dropdown-controls {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.wishlist-products header .header-controls .dropdown-controls span {
+  cursor: pointer;
+}
+
+.wishlist-products header .header-controls .dropdown-controls span:hover {
+  text-decoration: underline;
+}
+
+.wishlist-products header .item-count {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.wishlist-products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.wishlist-products .product-grid .product-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+}
+
+.wishlist-products .product-grid .product-card .product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff5c5c;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+}
+
+.wishlist-products .product-grid .product-card .product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.wishlist-products .product-grid .product-card .product-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.wishlist-products .product-grid .product-card .product-info .product-category {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.wishlist-products .product-grid .product-card .product-info .product-price {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.wishlist-products .product-grid .product-card .product-info .move-to-cart {
+  background-color: #38a169;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-products .product-grid .product-card .product-info .move-to-cart:hover {
+  background-color: #2f855a;
+}
+
+.wishlist-products .product-grid .product-card .delete-product {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.wishlist-products .product-grid .product-card .delete-product:hover {
+  color: #333;
+}
+
+.wishlist-products footer.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.wishlist-products footer.pagination .page-btn {
+  background-color: #eee;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-products footer.pagination .page-btn.prev, .wishlist-products footer.pagination .page-btn.next {
+  font-weight: 700;
+}
+
+.wishlist-products footer.pagination .page-btn:hover {
+  background-color: #ddd;
+}
+
+.health-center .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.health-center .hero-section .hero-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.health-center .hero-section .hero-content h2 {
+  font-size: 2rem;
+  color: #555;
+}
+
+.health-center .hero-section .hero-content p {
+  margin-top: 1rem;
+  color: #666;
+}
+
+.health-center .hero-section .hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.health-center .intro-section {
+  display: flex;
+  padding: 2rem;
+}
+
+.health-center .intro-section .intro-image {
+  flex: 1;
+}
+
+.health-center .intro-section .intro-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.health-center .intro-section .intro-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.health-center .intro-section .intro-content h3 {
+  margin-bottom: 1rem;
+}
+
+.health-center .intro-section .intro-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.health-center .intro-section .intro-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.health-center .steps-section {
+  padding: 2rem;
+}
+
+.health-center .steps-section .steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.health-center .steps-section .steps .step {
+  flex: 1;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.health-center .steps-section .steps .step h4 {
+  margin-bottom: 0.5rem;
+}
+
+.health-center .faq-section {
+  padding: 2rem;
+}
+
+.health-center .faq-section .faq .question {
+  margin-bottom: 1rem;
+}
+
+.health-center .faq-section .faq .question h4 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.health-center .categories-section {
+  padding: 2rem;
+}
+
+.health-center .categories-section .categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.health-center .categories-section .categories .category {
+  flex: 1 1 20%;
+  margin: 0.5rem;
+  padding: 1rem;
+  background: #f8f8f8;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.health-center .cta-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.health-center .cta-section .cta-btn {
+  padding: 0.5rem 1.5rem;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.health-center .cta-section .cta-btn:hover {
+  background: #d81b60;
+}
 /*# sourceMappingURL=theme.css.map */
