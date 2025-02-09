@@ -148,6 +148,55 @@ document.addEventListener("DOMContentLoaded", function() {
                 offerCarousel.trigger('next.owl.carousel');
             });
         }
+
+        // New Products Carousel
+        if ($('#newproduct-carousel').length) {
+            $('#newproduct-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: true,
+                dots: false,
+                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 4 }
+                }
+            });
+
+            // Custom navigation functionality
+            $('.prev-btn').click(function() {
+                offerCarousel.trigger('prev.owl.carousel');
+            });
+
+            $('.next-btn').click(function() {
+                offerCarousel.trigger('next.owl.carousel');
+            });
+        }
+        // Popular product by category Carousel
+        if ($('#popularproductbycat-carousel').length) {
+            $('#popularproductbycat-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: true,
+                dots: false,
+                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 4 }
+                }
+            });
+
+            // Custom navigation functionality
+            $('.prev-btn').click(function() {
+                offerCarousel.trigger('prev.owl.carousel');
+            });
+
+            $('.next-btn').click(function() {
+                offerCarousel.trigger('next.owl.carousel');
+            });
+        }
     }
 
     // Load Header
@@ -194,11 +243,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // New product Section
-    if (document.getElementById("newproduct")) {
+    if (document.getElementById("new-product")) {
         fetch("components/newproduct-section.html")
             .then(response => response.text())
             .then(data => {
-                document.getElementById("newproduct").innerHTML = data;
+                document.getElementById("new-product").innerHTML = data;
                 initializeCarousels(); // Initialize carousel after loading
             });
     }
@@ -265,7 +314,15 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => document.getElementById("headersearchsuggest").innerHTML = data);
     }
 
-
+    // New product Section
+    if (document.getElementById("popularproductbycat")) {
+        fetch("components/popularproductbycat.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("popularproductbycat").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
 
 });
 
