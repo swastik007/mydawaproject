@@ -624,3 +624,24 @@ img {
         }
     }
 }
+
+.feature-section {
+    margin: 0 -16px;
+    padding-bottom: 0;
+    padding: 42px 32px 0;
+    @media only screen and (min-width: 1440px) {
+        padding: 42px 80px 0;
+    }
+    .feature-item {
+        .icon {
+            min-width: 100px;
+            width: 100px;
+            height: 100px;
+            @media screen and (max-width: 991px) {
+                min-width: 88px;
+                width: 88px;
+                height: 88px;
+            }
+        }
+    }
+}
