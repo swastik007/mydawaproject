@@ -1,46 +1,46 @@
-$(document).ready(function() {
-    // Toggle dropdown when clicking "Shop by Category"
-    $('.category-toggle').on('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation(); // Prevents click from bubbling to document
+// $(document).ready(function() {
+//     // Toggle dropdown when clicking "Shop by Category"
+//     $('.category-toggle').on('click', function(e) {
+//         e.preventDefault();
+//         e.stopPropagation(); // Prevents click from bubbling to document
 
-        let dropdownMenu = $(this).siblings('.category-menu');
+//         let dropdownMenu = $(this).siblings('.category-menu');
 
-        console.log("Dropdown Clicked"); // Debugging
+//         console.log("Dropdown Clicked"); // Debugging
 
-        // Close other dropdowns before opening the current one
-        $('.category-menu').not(dropdownMenu).removeClass('show-menu');
+//         // Close other dropdowns before opening the current one
+//         $('.category-menu').not(dropdownMenu).removeClass('show-menu');
 
-        // Toggle class to show/hide the dropdown
-        if (dropdownMenu.hasClass('show-menu')) {
-            console.log("Hiding dropdown");
-            dropdownMenu.removeClass('show-menu');
-            $(this).attr('aria-expanded', 'false');
-        } else {
-            console.log("Showing dropdown");
-            dropdownMenu.addClass('show-menu');
-            $(this).attr('aria-expanded', 'true');
-        }
-    });
+//         // Toggle class to show/hide the dropdown
+//         if (dropdownMenu.hasClass('show-menu')) {
+//             console.log("Hiding dropdown");
+//             dropdownMenu.removeClass('show-menu');
+//             $(this).attr('aria-expanded', 'false');
+//         } else {
+//             console.log("Showing dropdown");
+//             dropdownMenu.addClass('show-menu');
+//             $(this).attr('aria-expanded', 'true');
+//         }
+//     });
 
-    // Close dropdown when clicking outside (Use `mousedown` instead of `click`)
-    $(document).on('mousedown', function(e) {
-        if (!$(e.target).closest('.category-dropdown').length) {
-            console.log("Clicked outside, closing dropdown");
-            $('.category-menu').removeClass('show-menu');
-            $('.category-toggle').attr('aria-expanded', 'false');
-        }
-    });
+//     // Close dropdown when clicking outside (Use `mousedown` instead of `click`)
+//     $(document).on('mousedown', function(e) {
+//         if (!$(e.target).closest('.category-dropdown').length) {
+//             console.log("Clicked outside, closing dropdown");
+//             $('.category-menu').removeClass('show-menu');
+//             $('.category-toggle').attr('aria-expanded', 'false');
+//         }
+//     });
 
-    // Close dropdown on ESC key press
-    $(document).on('keydown', function(e) {
-        if (e.key === 'Escape') {
-            console.log("ESC pressed, closing dropdown");
-            $('.category-menu').removeClass('show-menu');
-            $('.category-toggle').attr('aria-expanded', 'false');
-        }
-    });
-});
+//     // Close dropdown on ESC key press
+//     $(document).on('keydown', function(e) {
+//         if (e.key === 'Escape') {
+//             console.log("ESC pressed, closing dropdown");
+//             $('.category-menu').removeClass('show-menu');
+//             $('.category-toggle').attr('aria-expanded', 'false');
+//         }
+//     });
+// });
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
             $('#category-carousel').owlCarousel({
                 loop: true,
                 margin: 10,
-                nav: true,
-                dots: true,
+                nav: false,
+                dots: false,
                 responsive: {
                     0: { items: 1 },
                     768: { items: 3 },
@@ -78,58 +78,74 @@ document.addEventListener("DOMContentLoaded", function() {
             $('#blog-carousel').owlCarousel({
                 loop: true,
                 margin: 15,
-                nav: false,
-                dots: true,
+                nav: true,
+                dots: false,
+                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
                 responsive: {
                     0: { items: 1 },
                     768: { items: 2 },
                     1024: { items: 4 }
                 }
+            });
+
+            // Custom navigation functionality
+            $('.prev-btn').click(function() {
+                offerCarousel.trigger('prev.owl.carousel');
+            });
+
+            $('.next-btn').click(function() {
+                offerCarousel.trigger('next.owl.carousel');
             });
         }
 
         // Offers Carousel
         if ($('#offer-carousel').length) {
-            $('#offer-carousel').owlCarousel({
+            var offerCarousel = $('#offer-carousel').owlCarousel({
                 loop: true,
                 margin: 15,
-                nav: false,
+                nav: true,
                 dots: false,
+                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
                 responsive: {
                     0: { items: 1 },
                     768: { items: 2 },
                     1024: { items: 4 }
                 }
             });
+
+            // Custom navigation functionality
+            $('.prev-btn').click(function() {
+                offerCarousel.trigger('prev.owl.carousel');
+            });
+
+            $('.next-btn').click(function() {
+                offerCarousel.trigger('next.owl.carousel');
+            });
         }
+
 
         // Popular Products Carousel
         if ($('#popular-carousel').length) {
             $('#popular-carousel').owlCarousel({
                 loop: true,
                 margin: 15,
-                nav: false,
+                nav: true,
                 dots: false,
+                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
                 responsive: {
                     0: { items: 1 },
                     768: { items: 2 },
                     1024: { items: 4 }
                 }
             });
-        }
 
-        // New Product Carousel
-        if ($('#newproduct-carousel').length) {
-            $('#newproduct-carousel').owlCarousel({
-                loop: true,
-                margin: 15,
-                nav: false,
-                dots: false,
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
-                    1024: { items: 4 }
-                }
+            // Custom navigation functionality
+            $('.prev-btn').click(function() {
+                offerCarousel.trigger('prev.owl.carousel');
+            });
+
+            $('.next-btn').click(function() {
+                offerCarousel.trigger('next.owl.carousel');
             });
         }
     }

@@ -25,12 +25,113 @@ body {
   }
 }
 
+.offer-section,
+.popular-products,
+.blog-section {
+  /* Style for the custom navigation container */
+  /* Parent container for navigation buttons */
+  /* Navigation buttons */
+  /* Hover effect for buttons */
+  /* Default icon styles */
+  /* Hover effect for icons */
+  /* Hide disabled buttons */
+}
+
+.offer-section .owl-nav,
+.popular-products .owl-nav,
+.blog-section .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+  /* Prevent blocking content interaction */
+}
+
+.offer-section .owl-prev,
+.offer-section .owl-next,
+.popular-products .owl-prev,
+.popular-products .owl-next,
+.blog-section .owl-prev,
+.blog-section .owl-next {
+  background-color: #ffffff !important;
+  /* White background */
+  border: 1px solid #D4DEE5 !important;
+  /* Light border */
+  border-radius: 50% !important;
+  /* Circular buttons */
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Subtle shadow */
+  pointer-events: auto;
+  /* Enable clicking */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.offer-section .owl-prev:hover,
+.offer-section .owl-next:hover,
+.popular-products .owl-prev:hover,
+.popular-products .owl-next:hover,
+.blog-section .owl-prev:hover,
+.blog-section .owl-next:hover {
+  background-color: #e61b77 !important;
+  /* Theme color on hover */
+  border-color: #e61b77 !important;
+  color: #ffffff;
+  /* White icon color */
+}
+
+.offer-section .owl-prev span,
+.offer-section .owl-next span,
+.popular-products .owl-prev span,
+.popular-products .owl-next span,
+.blog-section .owl-prev span,
+.blog-section .owl-next span {
+  color: #373434;
+  /* Icon color */
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-section .owl-prev span i,
+.offer-section .owl-next span i,
+.popular-products .owl-prev span i,
+.popular-products .owl-next span i,
+.blog-section .owl-prev span i,
+.blog-section .owl-next span i {
+  font-size: 18px;
+}
+
+.offer-section .owl-prev:hover span,
+.offer-section .owl-next:hover span,
+.popular-products .owl-prev:hover span,
+.popular-products .owl-next:hover span,
+.blog-section .owl-prev:hover span,
+.blog-section .owl-next:hover span {
+  color: #ffffff;
+  /* Icon color changes to white */
+}
+
 .category-dropdown .category-menu {
-  display: hidden;
+  display: none;
+}
+
+.category-dropdown:hover .category-menu, .category-dropdown:focus .category-menu {
+  display: block;
 }
 
 .category-menu {
-  display: block;
   /* Hidden by default */
   position: absolute;
   top: 100%;
@@ -168,37 +269,55 @@ body {
 
 .delivery-wrap {
   position: relative;
+  z-index: 10000;
+  cursor: pointer;
+  /* Ensure parent has a high z-index */
 }
 
 .delivery-wrap .delivery-dropdown {
+  display: none;
+}
+
+.delivery-wrap:hover .delivery-dropdown, .delivery-wrap:focus .delivery-dropdown {
   display: block;
+}
+
+.delivery-wrap .delivery-dropdown {
   /* Hidden by default */
   position: absolute;
-  top: 100%;
+  top: 60px;
   left: 10px;
   /* Centers the dropdown */
-  width: 300px;
+  width: 324px;
   /* Set desired width */
   background: white;
-  z-index: 99999;
+  z-index: 10500;
+  /* Ensure dropdown is above other elements */
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 12px;
   border: 1px solid #E7ECF4;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Outline and border color when input is clicked (focused) */
+  /* Hide default radio button */
+  /* Inner grey circle when unselected */
+  /* When checked, change border and inner circle */
+  /* Inner pink circle when checked */
 }
 
 .delivery-wrap .delivery-dropdown .dropdown-header {
   color: #373434;
-  padding: 10px;
+  padding: 20px 20px 0 20px;
 }
 
 .delivery-wrap .delivery-dropdown .dropdown-header h4 {
   font-size: 16px;
   font-weight: bold;
+  line-height: 24px;
 }
 
 .delivery-wrap .delivery-dropdown .dropdown-header p {
-  max-width: 200px;
+  text-wrap: auto;
+  margin-bottom: 0;
 }
 
 .delivery-wrap .delivery-dropdown .dropdown-wrap {
@@ -209,8 +328,357 @@ body {
 
 .delivery-wrap .delivery-dropdown .zip-code {
   margin-top: 7px;
-  padding-top: 10px;
+  padding: 20px 0 0 0;
   border-top: 1px solid #E7ECF4;
+}
+
+.delivery-wrap .delivery-dropdown .btn-rounded {
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.delivery-wrap .delivery-dropdown input {
+  border-radius: 40px;
+  /* Change this value for more/less rounded corners */
+  border: 1px solid #ccc;
+  /* Default border */
+  padding: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.delivery-wrap .delivery-dropdown input:focus {
+  border-color: #E61B77;
+  /* Border color when focused */
+  outline: 3px solid rgba(230, 27, 119, 0.3);
+  /* Light pinkish outline */
+  box-shadow: 0 0 5px rgba(230, 27, 119, 0.5);
+  /* Optional shadow for effect */
+}
+
+.delivery-wrap .delivery-dropdown .address-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-wrap .delivery-dropdown .address-list .radio-container {
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 1px solid #E6EBF3;
+  margin-bottom: 10px;
+}
+
+.delivery-wrap .delivery-dropdown .address-list .radio-container .name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delivery-wrap .delivery-dropdown .address-list .radio-container .address {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.delivery-wrap .delivery-dropdown .address-list .manage-link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #373434;
+  border-bottom: 2px dashed #373434;
+  /* Dotted border with pink color */
+  padding: 5px 0px;
+  /* Adds some space inside */
+  text-decoration: none;
+  /* Removes default underline */
+  display: block;
+  /* Ensures the border wraps around content properly */
+  width: fit-content;
+}
+
+.delivery-wrap .delivery-dropdown .delivery-options {
+  display: flex;
+}
+
+.delivery-wrap .delivery-dropdown .delivery-options .btn-primary {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 25px;
+  margin-right: 7px;
+}
+
+.delivery-wrap .delivery-dropdown .delivery-options .btn-outline-light {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 20px;
+}
+
+.delivery-wrap .delivery-dropdown input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaa;
+  /* Default border */
+  border-radius: 50%;
+  /* Circular shape */
+  background-color: white;
+  /* White space inside */
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.delivery-wrap .delivery-dropdown input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  /* Inner grey circle */
+  height: 10px;
+  background-color: #bbb;
+  /* Grey inner color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.delivery-wrap .delivery-dropdown input[type="radio"]:checked {
+  border-color: #516BF1;
+  /* Outer border color when checked */
+}
+
+.delivery-wrap .delivery-dropdown input[type="radio"]:checked::before {
+  background-color: #516BF1;
+  /* Inner circle when checked */
+}
+
+.services-dropdown {
+  position: relative;
+  position: relative;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.services-dropdown .services-menu {
+  display: none;
+}
+
+.services-dropdown:hover .services-menu, .services-dropdown:focus .services-menu {
+  display: block;
+}
+
+.services-dropdown .services-menu {
+  /* Hidden by default */
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  /* Centers the dropdown */
+  width: 235px;
+  /* Set desired width */
+  background: white;
+  z-index: 10500;
+  /* Ensure dropdown is above other elements */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  border: 1px solid #E7ECF4;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 5px;
+}
+
+.services-dropdown .services-menu a {
+  width: 100%;
+  font-size: 14px;
+  color: #373434;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.services-dropdown .services-menu a span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services-dropdown .services-menu a i {
+  color: #B1B1C3;
+  font-size: 20px;
+}
+
+.services-dropdown .services-menu a:hover, .services-dropdown .services-menu a:focus {
+  background-color: #F8F8FC;
+}
+
+header {
+  z-index: 2;
+  position: relative;
+}
+
+.inner-container {
+  overflow: visible !important;
+}
+
+.top-header {
+  overflow: visible !important;
+}
+
+.search-wrap {
+  position: relative;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.search-wrap .search-results {
+  display: none;
+}
+
+.search-wrap:hover .search-results, .search-wrap:focus .search-results {
+  display: block;
+}
+
+.search-wrap .search-results {
+  /* Hidden by default */
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  /* Centers the dropdown */
+  width: 432px;
+  /* Set desired width */
+  background: white;
+  z-index: 20000;
+  /* Ensure dropdown is above other elements */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  border: 1px solid #E7ECF4;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.search-wrap h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #373434;
+  width: 100%;
+  display: block;
+}
+
+.search-wrap .recent-search .recent-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+
+.search-wrap .recent-search .recent-list li {
+  margin: 0 7px 7px 0;
+}
+
+.search-wrap .recent-search a {
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+  color: #373434;
+  background-color: #F6F6F7;
+  border-radius: 12px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search-wrap .recent-search a i {
+  color: #B1B1C3;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.search-wrap .trending-search .trending-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+
+.search-wrap .trending-search li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-wrap .trending-search li span {
+  color: #B1B1C3;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.search-wrap .trending-search a {
+  text-decoration: none;
+  padding: 5px 7px;
+  display: flex;
+  color: #373434;
+  border-radius: 12px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search-wrap .trending-search a i {
+  color: #B1B1C3;
+  font-size: 20px;
+  margin-right: 5px;
+  rotate: 45deg;
+}
+
+.search-wrap .featured-search .product-list .product-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-wrap .featured-search .product-list .product-item img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.search-wrap .featured-search .product-list .product-item .product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-wrap .featured-search .product-list .product-item .product-info .product-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #373434;
+  margin-bottom: 0;
+}
+
+.search-wrap .featured-search .product-list .product-item .product-info .product-price {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #373434;
+  margin-bottom: 0;
+}
+
+.search-wrap .featured-search .product-list .product-item .product-info .product-note {
+  color: #B1B1C3;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
 }
 
 .footer {
@@ -274,10 +742,11 @@ body {
 
 .btn-primary {
   background-color: #e61b77;
-  border-color: #e61b77;
+  border: none;
   border-radius: 10px;
   padding: 10px 40px;
   font-weight: 600;
+  color: white;
 }
 
 .btn-primary:hover, .btn-primary:focus {
@@ -288,7 +757,7 @@ body {
 .btn-outline-light {
   background-color: #f3f3f3;
   font-weight: 400;
-  border-color: #ffffff;
+  border: none;
   color: #373434;
   border-radius: 10px;
   padding: 10px 40px;
@@ -303,7 +772,7 @@ body {
 .btn-grey {
   background-color: #373434;
   font-weight: 400;
-  border-color: #373434;
+  border: none;
   color: white;
   border-radius: 10px;
   padding: 10px 40px;
@@ -317,7 +786,7 @@ body {
 
 .btn-dark {
   background-color: #373434;
-  border-color: #373434;
+  border: none;
   border-radius: 20px;
   padding: 10px 20px;
 }
@@ -329,7 +798,7 @@ body {
 
 .btn-white {
   background-color: #fff;
-  border-color: #fff;
+  border: none;
   border-radius: 20px;
   padding: 10px 20px;
   color: #e61b77;
@@ -338,6 +807,18 @@ body {
 .btn-white:hover, .btn-white:focus {
   background-color: #f2f2f2;
   color: #444;
+}
+
+.btn-rounded {
+  border-radius: 30px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-rounded i {
+  font-size: 20px;
+  margin-left: 5px;
 }
 
 .product-card {
@@ -535,16 +1016,6 @@ body {
     line-height: 111%;
     margin-bottom: 20px;
   }
-}
-
-.homepage-slider .slide-item .btn-primary {
-  border-radius: 30px;
-  padding: 15px 30px;
-}
-
-.homepage-slider .slide-item .btn-outline-light {
-  border-radius: 30px;
-  padding: 15px 30px;
 }
 
 .category-slider {

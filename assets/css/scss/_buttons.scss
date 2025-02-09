@@ -1,9 +1,10 @@
 .btn-primary {
     background-color: $primary;
-    border-color: $primary;
+    border: none;
     border-radius: 10px;
     padding: 10px 40px;
     font-weight: 600;
+    color: white;
     &:hover,
     &:focus {
         background-color: #d81b60;
@@ -14,7 +15,7 @@
 .btn-outline-light {
     background-color: #f3f3f3;
     font-weight: 400;
-    border-color: #ffffff;
+    border: none;
     color: $black;
     border-radius: 10px;
     padding: 10px 40px;
@@ -29,7 +30,7 @@
 .btn-grey {
     background-color: $black;
     font-weight: 400;
-    border-color: $black;
+    border: none;
     color: white;
     border-radius: 10px;
     padding: 10px 40px;
@@ -43,7 +44,7 @@
 
 .btn-dark {
     background-color: $black;
-    border-color: $black;
+    border: none;
     border-radius: 20px;
     padding: 10px 20px;
     &:hover,
@@ -55,7 +56,7 @@
 
 .btn-white {
     background-color: #fff;
-    border-color: #fff;
+    border: none;
     border-radius: 20px;
     padding: 10px 20px;
     color: $primary;
@@ -63,5 +64,16 @@
     &:focus {
         background-color: #f2f2f2;
         color: #444;
+    }
+}
+
+.btn-rounded {
+    border-radius: 30px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    i {
+        font-size: 20px;
+        margin-left: 5px;
     }
 }

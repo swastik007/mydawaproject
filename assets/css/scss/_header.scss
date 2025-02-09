@@ -1,11 +1,16 @@
 .category-dropdown {
     .category-menu {
-        display: hidden;
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        .category-menu {
+            display: block;
+        }
     }
 }
 
 .category-menu {
-    display: block;
     /* Hidden by default */
     position: absolute;
     top: 100%;
@@ -126,31 +131,45 @@
 
 .delivery-wrap {
     position: relative;
+    z-index: 10000;
+    cursor: pointer;
     .delivery-dropdown {
-        display: block;
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        .delivery-dropdown {
+            display: block;
+        }
+    }
+    /* Ensure parent has a high z-index */
+    .delivery-dropdown {
         /* Hidden by default */
         position: absolute;
-        top: 100%;
+        top: 60px;
         left: 10px;
         // transform: translateX(-50%);
         /* Centers the dropdown */
-        width: 300px;
+        width: 324px;
         /* Set desired width */
         background: white;
-        z-index: 99999;
+        z-index: 10500;
+        /* Ensure dropdown is above other elements */
         border: 1px solid #ddd;
-        border-radius: 5px;
+        border-radius: 12px;
         border: 1px solid #E7ECF4;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         .dropdown-header {
             color: $black;
-            padding: 10px;
+            padding: 20px 20px 0 20px;
             h4 {
                 font-size: 16px;
                 font-weight: bold;
+                line-height: 24px;
             }
             p {
-                max-width: 200px;
+                text-wrap: auto;
+                margin-bottom: 0;
             }
         }
         .dropdown-wrap {
@@ -160,9 +179,339 @@
         }
         .zip-code {
             margin-top: 7px;
-            padding-top: 10px;
+            padding: 20px 0 0 0;
             border-top: 1px solid #E7ECF4;
             @media only screen and (min-width: 1440px) {}
+        }
+        .btn-rounded {
+            padding: 10px 10px;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+        }
+        input {
+            border-radius: 40px;
+            /* Change this value for more/less rounded corners */
+            border: 1px solid #ccc;
+            /* Default border */
+            padding: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+        /* Outline and border color when input is clicked (focused) */
+        input:focus {
+            border-color: #E61B77;
+            /* Border color when focused */
+            outline: 3px solid rgba(230, 27, 119, 0.3);
+            /* Light pinkish outline */
+            box-shadow: 0 0 5px rgba(230, 27, 119, 0.5);
+            /* Optional shadow for effect */
+        }
+        .address-list {
+            display: flex;
+            flex-direction: column;
+            .radio-container {
+                padding: 10px;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                border: 1px solid #E6EBF3;
+                margin-bottom: 10px;
+                .name {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .address {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                }
+            }
+            .manage-link {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                color: $black;
+                border-bottom: 2px dashed $black;
+                /* Dotted border with pink color */
+                padding: 5px 0px;
+                /* Adds some space inside */
+                text-decoration: none;
+                /* Removes default underline */
+                display: block;
+                /* Ensures the border wraps around content properly */
+                width: fit-content;
+            }
+        }
+        .delivery-options {
+            display: flex;
+            .btn-primary {
+                font-size: 16px;
+                font-weight: 600;
+                padding: 10px 25px;
+                margin-right: 7px;
+            }
+            .btn-outline-light {
+                font-size: 16px;
+                font-weight: 600;
+                padding: 7px 20px;
+            }
+        }
+        /* Hide default radio button */
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #aaa;
+            /* Default border */
+            border-radius: 50%;
+            /* Circular shape */
+            background-color: white;
+            /* White space inside */
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        /* Inner grey circle when unselected */
+        input[type="radio"]::before {
+            content: "";
+            width: 10px;
+            /* Inner grey circle */
+            height: 10px;
+            background-color: #bbb;
+            /* Grey inner color */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-in-out;
+        }
+        /* When checked, change border and inner circle */
+        input[type="radio"]:checked {
+            border-color: #516BF1;
+            /* Outer border color when checked */
+        }
+        /* Inner pink circle when checked */
+        input[type="radio"]:checked::before {
+            background-color: #516BF1;
+            /* Inner circle when checked */
+        }
+    }
+}
+
+.services-dropdown {
+    position: relative;
+    position: relative;
+    z-index: 10000;
+    cursor: pointer;
+    .services-menu {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        .services-menu {
+            display: block;
+        }
+    }
+    .services-menu {
+        /* Hidden by default */
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        // transform: translateX(-50%);
+        /* Centers the dropdown */
+        width: 235px;
+        /* Set desired width */
+        background: white;
+        z-index: 10500;
+        /* Ensure dropdown is above other elements */
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        border: 1px solid #E7ECF4;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 5px;
+        a {
+            width: 100%;
+            font-size: 14px;
+            color: $black;
+            font-weight: 600;
+            border-radius: 8px;
+            span {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            i {
+                color: #B1B1C3;
+                font-size: 20px;
+            }
+            &:hover,
+            &:focus {
+                background-color: #F8F8FC;
+            }
+        }
+    }
+}
+
+header {
+    z-index: 2;
+    position: relative;
+}
+
+.inner-container {
+    overflow: visible !important;
+}
+
+.top-header {
+    overflow: visible !important;
+}
+
+.search-wrap {
+    position: relative;
+    z-index: 10000;
+    cursor: pointer;
+    .search-results {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        .search-results {
+            display: block;
+        }
+    }
+    .search-results {
+        /* Hidden by default */
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        // transform: translateX(-50%);
+        /* Centers the dropdown */
+        width: 432px;
+        /* Set desired width */
+        background: white;
+        z-index: 20000;
+        /* Ensure dropdown is above other elements */
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        border: 1px solid #E7ECF4;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    h5 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        width: 100%;
+        display: block;
+    }
+    .recent-search {
+        .recent-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            list-style: none;
+            padding-left: 0;
+            li {
+                margin: 0 7px 7px 0;
+            }
+        }
+        a {
+            text-decoration: none;
+            padding: 10px;
+            display: flex;
+            color: $black;
+            background-color: #F6F6F7;
+            border-radius: 12px;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            i {
+                color: #B1B1C3;
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .trending-search {
+        .trending-list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+                color: #B1B1C3;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 500;
+            }
+        }
+        a {
+            text-decoration: none;
+            padding: 5px 7px;
+            display: flex;
+            color: $black;
+            border-radius: 12px;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            i {
+                color: #B1B1C3;
+                font-size: 20px;
+                margin-right: 5px;
+                rotate: 45deg;
+            }
+        }
+    }
+    .featured-search {
+        .product-list {
+            .product-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                img {
+                    width: 65px;
+                    height: 65px;
+                    object-fit: contain;
+                }
+                .product-info {
+                    display: flex;
+                    flex-direction: column;
+                    .product-name {
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 20px;
+                        color: $black;
+                        margin-bottom: 0;
+                    }
+                    .product-price {
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: 16px;
+                        color: $black;
+                        margin-bottom: 0;
+                    }
+                    .product-note {
+                        color: #B1B1C3;
+                        font-size: 12px;
+                        line-height: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }

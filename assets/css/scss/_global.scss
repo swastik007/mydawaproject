@@ -21,3 +21,75 @@ body {
         font-weight: 900;
     }
 }
+
+.offer-section,
+.popular-products,
+.blog-section {
+    /* Style for the custom navigation container */
+    /* Parent container for navigation buttons */
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex!important;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(-50%);
+        z-index: 10;
+        pointer-events: none;
+        /* Prevent blocking content interaction */
+    }
+    /* Navigation buttons */
+    .owl-prev,
+    .owl-next {
+        background-color: #ffffff!important;
+        /* White background */
+        border: 1px solid #D4DEE5!important;
+        /* Light border */
+        border-radius: 50%!important;
+        /* Circular buttons */
+        width: 52px;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Subtle shadow */
+        pointer-events: auto;
+        /* Enable clicking */
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    /* Hover effect for buttons */
+    .owl-prev:hover,
+    .owl-next:hover {
+        background-color: $primary!important;
+        /* Theme color on hover */
+        border-color: $primary!important;
+        color: #ffffff;
+        /* White icon color */
+    }
+    /* Default icon styles */
+    .owl-prev span,
+    .owl-next span {
+        color: $black;
+        /* Icon color */
+        transition: color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 18px;
+        }
+    }
+    /* Hover effect for icons */
+    .owl-prev:hover span,
+    .owl-next:hover span {
+        color: #ffffff;
+        /* Icon color changes to white */
+    }
+    /* Hide disabled buttons */
+    // .owl-nav.disabled {
+    //     display: none;
+    // }
+}

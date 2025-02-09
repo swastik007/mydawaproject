@@ -10,10 +10,77 @@
                         <img src="img/logo-dawa.png" alt="Mydawa Logo">
                     </a>
                 </div>
-                <div class="search-container">
-                    <input type="search" placeholder="Search For Medicines & Health Products">
-                    <img src="img/icon-search.svg" alt="Search">
+                <div class="search-wrap">
+                    <div class="search-container">
+                        <input type="search" placeholder="Search For Medicines & Health Products">
+                        <img src="img/icon-search.svg" alt="Search">
+                    </div>
+                    <!-- Search Results -->
+                    <div class="search-results">
+                        <!-- Recent Search -->
+                        <div class="recent-search">
+                            <h5>Recent Search</h5>
+                            <ul class="recent-list">
+                                <li>
+                                    <a href="#"><i class='bx bx-history' ></i>Femiplan pills</a>
+                                </li>
+                                <li><a href="#"><i class='bx bx-history' ></i>family planning set</a></li>
+                                <li><a href="#"><i class='bx bx-history' ></i>contraceptives</a></li>
+                            </ul>
+                        </div>
+                        <!-- Search Trending -->
+                        <div class="trending-search">
+                            <h5>Trending Search</h5>
+                            <ul class="trending-list">
+                                <li>
+                                    <a href="#"><i class='bx bx-up-arrow-alt'></i>Oral Contraceptive</a>
+                                    <span>100+ people searched</span>
+                                </li>
+                                <li><a href="#"><i class='bx bx-up-arrow-alt'></i>Cough Syrup</a></li>
+                                <li><a href="#"><i class='bx bx-up-arrow-alt'></i>Face Wash For Men</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Products Section -->
+                        <div class="featured-search">
+                            <h5>Products</h5>
+                            <div class="product-list">
+                                <!-- Product Item -->
+                                <div class="product-item">
+                                    <img src="assets/images/product-images/product2.png" alt="Durex Condoms Featherlite 12's" class="product-image">
+                                    <div class="product-info">
+                                        <p class="product-name">Durex Condoms Featherlite 12's</p>
+                                        <p class="product-price">KES 1375</p>
+                                        <small class="product-note">200+ people bought today</small>
+                                    </div>
+                                </div>
+                                <!-- Other Product Items -->
+                                <div class="product-item">
+                                    <img src="assets/images/product-images/product2.png" alt="Durex Condoms Extra Safe 3's" class="product-image">
+                                    <div class="product-info">
+                                        <p class="product-name">Durex Condoms Extra Safe 3's</p>
+                                        <p class="product-price">KES 475</p>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <img src="assets/images/product-images/product2.png" alt="Durex Extra Thin Wild Strawberry Flavored" class="product-image">
+                                    <div class="product-info">
+                                        <p class="product-name">Durex Extra Thin Wild Strawberry Flavored</p>
+                                        <p class="product-price">KES 2235</p>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <img src="assets/images/product-images/product2.png" alt="Durex Condoms Pleasure Me 3's" class="product-image">
+                                    <div class="product-info">
+                                        <p class="product-name">Durex Condoms Pleasure Me 3's</p>
+                                        <p class="product-price">KES 525</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div class="top-right">
                 <div class="delivery-wrap">
@@ -32,35 +99,41 @@
                             <p class="text-muted">Delivery options and speeds may differ depending on your location</p>
                         </div>
                         <div class="dropdown-wrap">
-                            <button class="btn-primary">
+                            <button class="btn-primary btn-rounded">
                                 Sign in to see your address
+                                <i class='bx bx-right-arrow-alt'></i>
                             </button>
+                            <div class="dropdown-body">
+                                <div class="delivery-options my-2">
+                                    <button class="btn-primary">Delivery</button>
+                                    <button class="btn-outline-light">Pickup</button>
+                                </div>
+                                <div class="address-list">
+                                    <label class="radio-container">
+                                        <input type="radio" name="address" checked>
+                                        <div class="d-flex flex-column ms-1">
+                                            <span class="name">John Doe</span>
+                                            <span class="address">House no. 14, Links Road, 80100, Mombasa, Kenya</span>
+                                        </div>
+                                    </label>
+                                    <label class="radio-container">
+                                        <input type="radio" name="address">
+                                        <div class="d-flex flex-column  ms-2">
+                                            <span class="name">John Doe</span>
+                                            <span class="address">House no. 14, Links Road, 80100, Mombasa, Kenya</span>
+                                        </div>
+                                        
+                                    </label>
+                                    <a href="#" class="manage-link">Manage Addresses</a>
+                                </div>
+
+                            </div>
                             <div class="zip-code d-flex gap-2 mt-2">
                                 <input type="text" placeholder="Enter Your Zip Code" class="form-control">
-                                <button class="btn btn-dark">Check</button>
+                                <button class="btn-grey btn-rounded">Check</button>
                             </div>
                         </div>
-                        <div class="dropdown-body">
-                            <div class="delivery-options">
-                                <button class="btn btn-pink">Delivery</button>
-                                <button class="btn btn-outline-dark">Pickup</button>
-                            </div>
-                            <div class="address-list">
-                                <label class="radio-container">
-                                    <input type="radio" name="address" checked>
-                                    <span class="address">John Doe<br>House no. 12, Links Road, 80100, Mombasa, Kenya</span>
-                                </label>
-                                <label class="radio-container">
-                                    <input type="radio" name="address">
-                                    <span class="address">John Doe<br>House no. 14, Links Road, 80100, Mombasa, Kenya</span>
-                                </label>
-                                <a href="#" class="manage-addresses">Manage Addresses</a>
-                            </div>
-                            <div class="zip-code d-flex gap-2 mt-2">
-                                <input type="text" placeholder="Enter Your Zip Code" class="form-control">
-                                <button class="btn btn-dark">Check</button>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -177,10 +250,32 @@
                     <img src="img/iconz-star.svg" alt="Icon" class="left-icon">Shop by Brand <img src="img/caret-down.svg" alt="Icon" class="icon-caret">
                 </a>
             </li>
-            <li>
+            <li class="position-relative services-dropdown">
                 <a href="">
                     Services<img src="img/caret-down.svg" alt="Icon" class="icon-caret">
                 </a>
+                <!-- Dropdown Menu -->
+                <div class="services-menu shadow-lg">
+                    <ul class="list-unstyled category-list">
+                        <li>
+                            <a href="#">
+                                <span>Submit a prescription<i class='bx bx-chevron-right'></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Upload a HIV Test Results<i class='bx bx-chevron-right'></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Book A Consultation<i class='bx bx-chevron-right'></i></span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
             </li>
             <li>
                 <a href="">
