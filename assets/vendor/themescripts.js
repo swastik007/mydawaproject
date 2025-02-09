@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 items: 1,
             });
         }
-
         // Category Carousel
         if ($('#category-carousel').length) {
             $('#category-carousel').owlCarousel({
@@ -123,7 +122,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
-
         // Popular Products Carousel
         if ($('#popular-carousel').length) {
             $('#popular-carousel').owlCarousel({
@@ -173,30 +171,43 @@ document.addEventListener("DOMContentLoaded", function() {
                 offerCarousel.trigger('next.owl.carousel');
             });
         }
-        // Popular product by category Carousel
-        if ($('#popularproductbycat-carousel').length) {
-            $('#popularproductbycat-carousel').owlCarousel({
-                loop: true,
-                margin: 15,
-                nav: true,
-                dots: false,
-                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
-                    1024: { items: 4 }
-                }
-            });
 
-            // Custom navigation functionality
-            $('.prev-btn').click(function() {
-                offerCarousel.trigger('prev.owl.carousel');
-            });
 
-            $('.next-btn').click(function() {
-                offerCarousel.trigger('next.owl.carousel');
-            });
-        }
+    }
+    /* wishlist page carousel */
+    if ($('#wishlist-carousel').length) {
+        console.log('hello 202');
+        $("#wishlist-carousel").owlCarousel({
+            loop: false,
+            margin: 20,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 3 },
+            },
+            navText: [
+                "<i class='bi bi-chevron-left'></i>",
+                "<i class='bi bi-chevron-right'></i>",
+            ],
+        });
+    }
+    // Popular product by category Carousel
+    if ($('#popularproductbycat-carousel').length) {
+        $('#popularproductbycat-carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            dots: false,
+            navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 4 }
+            }
+        });
+
     }
 
     // Load Header
@@ -326,6 +337,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-$(document).ready(function() {
 
+$(document).ready(function() {
+    console.log('wishlistpopup');
+    const $privateWishlistBtn = $("#private-wishlist-btn");
+    const $privateWishlistPopup = $("#private-wishlist-popup");
+    const $closePopupBtn = $("#close-popup-btn");
+    const $pinBoxes = $(".pin-box");
+
+    // Show the popup
+    $privateWishlistBtn.on("click", function() {
+        $privateWishlistPopup.removeClass("hidden"); // Show popup
+    });
+
+    // Hide the popup
+    $closePopupBtn.on("click", function() {
+        $privateWishlistPopup.addClass("hidden"); // Hide popup
+    });
+
+    // Close popup when clicking outside the content
+    $privateWishlistPopup.on("click", function(e) {
+        if ($(e.target).is($privateWishlistPopup)) {
+            $privateWishlistPopup.addClass("hidden"); // Hide popup
+        }
+    });
+
+    // Handle auto-focus for PIN input fields
+    $pinBoxes.on("input", function() {
+        const currentIndex = $pinBoxes.index(this);
+        if ($(this).val() && currentIndex < $pinBoxes.length - 1) {
+            $pinBoxes.eq(currentIndex + 1).focus();
+        }
+    });
+
+    $pinBoxes.on("keydown", function(e) {
+        const currentIndex = $pinBoxes.index(this);
+        if (e.key === "Backspace" && !$(this).val() && currentIndex > 0) {
+            $pinBoxes.eq(currentIndex - 1).focus();
+        }
+    });
 });
