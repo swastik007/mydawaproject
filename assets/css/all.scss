@@ -48,13 +48,12 @@ img {
     @include border-radius(12px);
 }
 
-.inner-container {
-    padding: 0 28px;
-    @media screen and (max-width: 768px) {
-        padding: 0 16px;
-    }
-}
-
+// .inner-container {
+//     padding: 0 28px;
+//     @media screen and (max-width: 768px) {
+//         padding: 0 16px;
+//     }
+// }
 .navigation {
     background: #F6F6FF;
     @include flexbox();
@@ -525,3 +524,185 @@ img {
     padding-left: 24px;
     @include border-radius(100px);
 }
+
+.homepage-slider {
+    padding: 40px 0 0;
+    position: relative;
+    z-index: 1;
+    @media only screen and (max-width: 1100px) {
+        padding: 60px 0 0;
+    }
+    .slide-item {
+        position: relative;
+        color: #fff;
+        /* Adjust height as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        min-height: 380px;
+        @media only screen and (min-width: 1440px) {
+            min-height: 480px!important;
+        }
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+        .text-content {
+            padding: 20px;
+            border-radius: 10px;
+            @media screen and (max-width: 768px) {
+                padding: 10px;
+            }
+        }
+        h5 {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 22px;
+            }
+        }
+        h2 {
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 42px;
+            margin-bottom: 25px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 42px;
+                line-height: 111%;
+                margin-bottom: 20px;
+            }
+        }
+        .btn-primary {
+            border-radius: 30px;
+            padding: 15px 30px;
+            @media screen and (max-width: 768px) {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+        .btn-outline-light {
+            border-radius: 30px;
+            padding: 15px 30px;
+            @media screen and (max-width: 768px) {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    }
+    .up-chat {
+        position: absolute;
+        right: -12px;
+        bottom: 28px;
+        z-index: 2;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        ul {
+            @extend %listing;
+            li {
+                margin-bottom: 4px;
+                a {
+                    background: #fff;
+                    font-size: 13px;
+                    color: rgba($black, 1);
+                    font-weight: 700;
+                    display: block;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    @include border-radius(12px 0 0 12px);
+                    @include box-shadow( 0,
+                    4px,
+                    4px,
+                    rgba($black, .1));
+                }
+            }
+        }
+        img {
+            margin-right: 8px;
+        }
+    }
+}
+
+.feature-section {
+    margin: 0 -16px;
+    padding-bottom: 0;
+    padding: 42px 32px 0;
+    @media only screen and (min-width: 1440px) {
+        padding: 42px 80px 0;
+    }
+    .feature-item {
+        .icon {
+            min-width: 100px;
+            width: 100px;
+            height: 100px;
+            @media screen and (max-width: 991px) {
+                min-width: 88px;
+                width: 88px;
+                height: 88px;
+            }
+        }
+    }
+}
+
+.symptoms-section {
+    .right-heading {
+        color: rgba($black, 1);
+        margin-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .symptoms-section .symptoms-wrap .steps .step .step-circle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.symptom-card {
+    position: relative;
+    z-index: 1;
+    .icon-checked {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        z-index: 1;
+    }
+}
+
+.symptoms-section .symptoms-wrap .steps .step.selected .step-circle {
+    border-width: 3px;
+}
+
+@media only screen and (min-width: 1440px) {
+    .symptoms-section .symptoms-wrap {
+        padding: 80px 60px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .symptoms-section .symptoms-wrap .steps .step p {
+        font-weight: 500;
+    }
+}
+
+// @media only screen and (min-width: 1440px) {
+//     .step-circle {
+//         position: relative;
+//         z-index: 2;
+//         &::before {
+//             content: "";
+//             background: #D4D7E0;
+//             width: 2px;
+//             height: 100%;
+//             position: absolute;
+//             left: 12px;
+//             top: 20px;
+//             bottom: 20px;
+//             z-index: -1;
+//         }
+//     }
+// }
