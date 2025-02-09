@@ -123,6 +123,63 @@ body {
   /* Icon color changes to white */
 }
 
+.page-content {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .page-content {
+    padding: 25px 60px 60px 60px;
+  }
+}
+
+/* Hide default radio button */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaa;
+  /* Default border */
+  border-radius: 50%;
+  /* Circular shape */
+  background-color: white;
+  /* White space inside */
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Inner grey circle when unselected */
+input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  /* Inner grey circle */
+  height: 10px;
+  background-color: #bbb;
+  /* Grey inner color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* When checked, change border and inner circle */
+input[type="radio"]:checked {
+  border-color: #516BF1;
+  /* Outer border color when checked */
+}
+
+/* Inner pink circle when checked */
+input[type="radio"]:checked::before {
+  background-color: #516BF1;
+  /* Inner circle when checked */
+}
+
 .category-dropdown .category-menu {
   display: none;
 }
@@ -298,10 +355,6 @@ body {
   border: 1px solid #E7ECF4;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   /* Outline and border color when input is clicked (focused) */
-  /* Hide default radio button */
-  /* Inner grey circle when unselected */
-  /* When checked, change border and inner circle */
-  /* Inner pink circle when checked */
 }
 
 .delivery-wrap .delivery-dropdown .dropdown-header {
@@ -416,49 +469,6 @@ body {
   font-size: 16px;
   font-weight: 600;
   padding: 7px 20px;
-}
-
-.delivery-wrap .delivery-dropdown input[type="radio"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #aaa;
-  /* Default border */
-  border-radius: 50%;
-  /* Circular shape */
-  background-color: white;
-  /* White space inside */
-  display: inline-block;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.delivery-wrap .delivery-dropdown input[type="radio"]::before {
-  content: "";
-  width: 10px;
-  /* Inner grey circle */
-  height: 10px;
-  background-color: #bbb;
-  /* Grey inner color */
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease-in-out;
-}
-
-.delivery-wrap .delivery-dropdown input[type="radio"]:checked {
-  border-color: #516BF1;
-  /* Outer border color when checked */
-}
-
-.delivery-wrap .delivery-dropdown input[type="radio"]:checked::before {
-  background-color: #516BF1;
-  /* Inner circle when checked */
 }
 
 .services-dropdown {
@@ -1740,10 +1750,46 @@ body {
   }
 }
 
-body {
-  font-family: 'Figtree', sans-serif;
-  background-color: #000;
-  color: #fff;
+.breadcrumb-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-container .breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.breadcrumb-container .breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-container .breadcrumb li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-container .breadcrumb li a:hover {
+  color: #E61B77;
+}
+
+.breadcrumb-container .breadcrumb li a.active {
+  font-weight: bold;
+  color: #555;
+}
+
+.breadcrumb-container .breadcrumb li .divider {
+  margin: 0 8px;
+  color: #000;
 }
 
 .step-navigation .steps .step {
@@ -1770,104 +1816,142 @@ body {
   color: #fff;
 }
 
-.upload-section .upload-box {
-  background: #fff;
-  color: #333;
+.prescription-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  /* Uploaded File Section */
+  /* Payment Section */
+  /* Actions Section */
 }
 
-.upload-section .upload-box .icon {
-  font-size: 48px;
+.prescription-wrap .prescription-heading {
+  text-align: left;
 }
 
-.upload-section .upload-box p {
-  font-size: 16px;
-  font-weight: 500;
+.prescription-wrap .prescription-heading h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #373434;
+  margin-bottom: 0;
 }
 
-.upload-section .upload-box small {
-  font-size: 12px;
-  color: #888;
+.prescription-wrap .prescription-heading p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
-.uploaded-file-section .file-item {
-  background: #fff;
-  color: #333;
+.prescription-wrap .upload-section {
+  margin-top: 10px;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px dashed #C7CDD2;
 }
 
-.uploaded-file-section .file-item .file-image {
+.prescription-wrap .upload-section .upload-box .icon {
+  background-color: #F1F1F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.prescription-wrap .upload-section .upload-box .icon .file-upload-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.prescription-wrap .uploaded-file-section {
+  margin-bottom: 20px;
+}
+
+.prescription-wrap .uploaded-file-section .file-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  gap: 15px;
+}
+
+.prescription-wrap .uploaded-file-section .file-image {
   width: 50px;
   height: 50px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
-.uploaded-file-section .file-item .file-info {
-  flex: 1;
+.prescription-wrap .uploaded-file-section .file-info {
+  flex-grow: 1;
 }
 
-.uploaded-file-section .file-item .file-info .file-name {
+.prescription-wrap .uploaded-file-section .file-name {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+.prescription-wrap .uploaded-file-section .file-details {
   font-size: 14px;
-  font-weight: 600;
-}
-
-.uploaded-file-section .file-item .file-info small {
-  font-size: 12px;
   color: #888;
 }
 
-.uploaded-file-section .file-item button {
-  color: #dc3545;
-}
-
-.uploaded-file-section .file-item button:hover {
-  color: #b02a37;
-}
-
-.payment-section h5 {
-  font-size: 18px;
-}
-
-.payment-section .form-check-label {
-  font-size: 16px;
-  color: #fff;
-}
-
-.payment-section .form-check-input:checked {
-  background-color: #198754;
-  border-color: #198754;
-}
-
-.actions-section button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-}
-
-.actions-section button.btn-outline-dark {
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.actions-section button.btn-outline-dark:hover {
-  background-color: #333;
-}
-
-.actions-section button.btn-success {
-  background-color: #198754;
+.prescription-wrap .uploaded-file-section .delete-button {
+  background: none;
   border: none;
+  color: #e61b77;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
 }
 
-.actions-section button.btn-success:hover {
-  background-color: #157347;
+.prescription-wrap .uploaded-file-section .delete-button:hover {
+  color: #ff4081;
 }
 
-@media (max-width: 768px) {
-  .actions-section {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .actions-section button {
-    width: 100%;
-  }
+.prescription-wrap .payment-section {
+  margin-bottom: 20px;
+}
+
+.prescription-wrap .payment-section .payment-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.prescription-wrap .payment-section .radio-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.prescription-wrap .payment-section .radio-item input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #e61b77;
+  cursor: pointer;
+}
+
+.prescription-wrap .payment-section .radio-item label {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+.prescription-wrap .actions-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .recipient-form .form-label {

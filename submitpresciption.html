@@ -21,12 +21,22 @@
 <body>
     <div class="container-main">
         <div id="header"></div>
-        <main class="container py-5">
-            <div class="container my-5">
+        <main class="container-fluid">
+            <div class="page-content">
+                <!-- Breadcrumb section -->
+                <nav class="breadcrumb-container">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#">Services</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#" class="active">Submit a Prescription</a></li>
+                    </ul>
+                </nav>
                 <!-- Step Navigation -->
                 <div class="step-navigation mb-4">
-                    <div class="d-flex align-items-center">
-                        <h4 class="fw-bold me-3">Step 1</h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h4 class="section-heading">Step 1</h4>
                         <ul class="steps list-inline d-flex align-items-center gap-3">
                             <li class="list-inline-item step active">
                                 <span class="step-circle">1</span> Upload Your Attachments
@@ -40,56 +50,59 @@
                         </ul>
                     </div>
                 </div>
+                <div class="prescription-wrap">
+                    <!-- Title Section -->
+                    <div class="prescription-heading">
+                        <h3>Upload Your Prescription</h3>
+                        <p>Your prescription is required for us to verify and proceed to the next step.</p>
+                    </div>
 
-                <!-- Title Section -->
-                <div class="text-center mb-4">
-                    <h3 class="fw-bold">Upload Your Prescription</h3>
-                    <p class="text-muted">Your prescription is required for us to verify and proceed to the next step.</p>
-                </div>
-
-                <!-- Upload Section -->
-                <div class="upload-section text-center mb-4">
-                    <div class="upload-box border rounded p-5">
-                        <div class="icon mb-3">
-                            <i class="bi bi-arrow-repeat fs-1 text-muted"></i>
+                    <!-- Upload Section -->
+                    <div class="upload-section text-center mb-4">
+                        <div class="upload-box">
+                            <div class="icon">
+                                <img src="assets/images/icons/file-upload.png" class="file-upload-icon">
+                            </div>
+                            <p>Drag and drop your image or choose a PDF from your device to get started!</p>
+                            <small>Image or PDF file size must be under 250 MB.</small>
                         </div>
-                        <p class="mb-2 fw-bold">Drag and drop your image or choose a PDF from your device to get started!</p>
-                        <small class="text-muted">Image or PDF file size must be under 250 MB.</small>
                     </div>
-                </div>
 
-                <!-- Uploaded File Section -->
-                <div class="uploaded-file-section mb-4">
-                    <div class="file-item border rounded d-flex align-items-center p-3">
-                        <img src="img/prescription-placeholder.jpg" alt="Prescription File" class="file-image me-3 rounded" />
-                        <div class="file-info">
-                            <p class="file-name mb-0 fw-bold">Prescription_File_Name</p>
-                            <small class="text-muted">JPEG . 12 MB</small>
+                    <!-- Uploaded File Section -->
+                    <div class="uploaded-file-section">
+                        <div class="file-item">
+                            <img src="img/prescription-placeholder.jpg" alt="Prescription File" class="file-image" />
+                            <div class="file-info">
+                                <p class="file-name">Prescription_File_Name</p>
+                                <small class="file-details">JPEG . 12 MB</small>
+                            </div>
+                            <button class="delete-button">
+            <i class="icon-trash"></i>
+        </button>
                         </div>
-                        <button class="btn btn-link text-danger ms-auto">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
                     </div>
+
+                    <!-- Payment Section -->
+                    <div class="payment-section">
+                        <h5 class="payment-heading">Payment Method</h5>
+                        <div class="radio-item">
+                            <input type="radio" name="paymentMethod" id="selfPay" checked>
+                            <label for="selfPay">Self Pay</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="paymentMethod" id="insurance">
+                            <label for="insurance">Insurance</label>
+                        </div>
+                    </div>
+
+                    <!-- Actions Section -->
+                    <div class="actions-section">
+                        <button class="talk-button">Talk to a doctor</button>
+                        <button class="continue-button">Continue</button>
+                    </div>
+
                 </div>
 
-                <!-- Payment Section -->
-                <div class="payment-section mb-4">
-                    <h5 class="fw-bold">Payment Method</h5>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paymentMethod" id="selfPay" checked>
-                        <label class="form-check-label" for="selfPay">Self Pay</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paymentMethod" id="insurance">
-                        <label class="form-check-label" for="insurance">Insurance</label>
-                    </div>
-                </div>
-
-                <!-- Actions Section -->
-                <div class="actions-section d-flex justify-content-between align-items-center">
-                    <button class="btn btn-outline-dark">Talk to a doctor</button>
-                    <button class="btn btn-success">Continue</button>
-                </div>
             </div>
 
             <!-- Feature section -->
