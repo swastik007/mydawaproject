@@ -21,3 +21,137 @@ body {
         font-weight: 900;
     }
 }
+
+.offer-section,
+.popular-products,
+.blog-section {
+    /* Style for the custom navigation container */
+    /* Parent container for navigation buttons */
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex!important;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(-50%);
+        z-index: 10;
+        pointer-events: none;
+        /* Prevent blocking content interaction */
+    }
+    /* Navigation buttons */
+    .owl-prev,
+    .owl-next {
+        background-color: #ffffff!important;
+        /* White background */
+        border: 1px solid #D4DEE5!important;
+        /* Light border */
+        border-radius: 50%!important;
+        /* Circular buttons */
+        width: 52px;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Subtle shadow */
+        pointer-events: auto;
+        /* Enable clicking */
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    /* Hover effect for buttons */
+    .owl-prev:hover,
+    .owl-next:hover {
+        background-color: $primary!important;
+        /* Theme color on hover */
+        border-color: $primary!important;
+        color: #ffffff;
+        /* White icon color */
+    }
+    /* Default icon styles */
+    .owl-prev span,
+    .owl-next span {
+        color: $black;
+        /* Icon color */
+        transition: color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 18px;
+        }
+    }
+    /* Hover effect for icons */
+    .owl-prev:hover span,
+    .owl-next:hover span {
+        color: #ffffff;
+        /* Icon color changes to white */
+    }
+    /* Hide disabled buttons */
+    // .owl-nav.disabled {
+    //     display: none;
+    // }
+}
+
+.page-content {
+    padding: 10px;
+    @media only screen and (min-width: 1440px) {
+        padding: 25px 60px 60px 60px;
+    }
+}
+
+
+/* Hide default radio button */
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #aaa;
+    /* Default border */
+    border-radius: 50%;
+    /* Circular shape */
+    background-color: white;
+    /* White space inside */
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* Inner grey circle when unselected */
+
+input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    /* Inner grey circle */
+    height: 10px;
+    background-color: #bbb;
+    /* Grey inner color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* When checked, change border and inner circle */
+
+input[type="radio"]:checked {
+    border-color: #516BF1;
+    /* Outer border color when checked */
+}
+
+
+/* Inner pink circle when checked */
+
+input[type="radio"]:checked::before {
+    background-color: #516BF1;
+    /* Inner circle when checked */
+}
