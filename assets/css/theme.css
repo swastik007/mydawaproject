@@ -920,7 +920,6 @@ body {
 }
 
 .product-card .img-box {
-  margin: 50px 30px;
   position: relative;
 }
 
@@ -1172,13 +1171,15 @@ body {
   }
 }
 
-.new-products {
+.new-products,
+.popularproductbycat {
   background-color: #EFF2F9;
   padding: 10px;
 }
 
 @media only screen and (min-width: 1440px) {
-  .new-products {
+  .new-products,
+  .popularproductbycat {
     padding: 45px 60px 60px 60px;
   }
 }
@@ -2156,5 +2157,314 @@ body {
 .actions-section button i {
   font-size: 18px;
   margin-right: 7px;
+}
+
+.wellness-banner-section {
+  background-color: #ffe6ec;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+  .wellness-banner-section {
+    padding: 20px 10px;
+  }
+}
+
+.wellness-banner-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .wellness-banner-section .container {
+    flex-direction: column;
+  }
+}
+
+.wellness-banner-section .content {
+  flex: 1;
+  max-width: 60%;
+}
+
+@media (max-width: 1024px) {
+  .wellness-banner-section .content {
+    max-width: 100%;
+  }
+}
+
+.wellness-banner-section .image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 40%;
+}
+
+@media (max-width: 1024px) {
+  .wellness-banner-section .image-wrapper {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.wellness-banner-section .wellness-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.wellness-banner-section .title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .wellness-banner-section .title {
+    font-size: 24px;
+  }
+}
+
+.wellness-banner-section .description {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 20px;
+}
+
+@media (max-width: 768px) {
+  .wellness-banner-section .description {
+    font-size: 14px;
+  }
+}
+
+.wellness-banner-section .learn-more {
+  margin-top: 20px;
+}
+
+.wellness-banner-section .learn-more-label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+  color: #000;
+}
+
+.wellness-banner-section .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.wellness-banner-section .btn {
+  background-color: #e61b77;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wellness-banner-section .btn:hover {
+  background-color: #d2166c;
+}
+
+@media (max-width: 768px) {
+  .wellness-banner-section .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+.wellness-banner-section .help-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 15px 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .wellness-banner-section .help-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.wellness-banner-section .help-item {
+  font-size: 14px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .wellness-banner-section .help-item {
+    font-size: 12px;
+  }
+}
+
+.category-banner-section {
+  position: relative;
+  color: #fff;
+  min-height: 400px;
+  /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("../images/category-banner.png");
+  background-size: cover;
+  background-position: right;
+  margin: 10px 0;
+  border-radius: 12px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .category-banner-section {
+    height: 400px;
+    background-position: initial;
+  }
+}
+
+.category-banner-section h2 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+
+.category-banner-section h5 {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 500px;
+  line-height: 28px;
+}
+
+.category-banner-section .text-content {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.category-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .category-page {
+    flex-direction: column;
+  }
+}
+
+.category-page .category-sidebar {
+  flex: 1;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .category-page .category-sidebar {
+    display: none;
+    /* Hide filter on smaller screens */
+  }
+}
+
+.category-page .category-sidebar h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.category-page .category-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category-page .category-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.category-page .category-sidebar ul li input {
+  margin-right: 10px;
+}
+
+.category-page .category-sidebar ul li label {
+  font-size: 14px;
+  color: #333;
+}
+
+.category-page .category-sidebar .price-range {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.category-page .category-section {
+  flex: 3;
+}
+
+.category-page .category-section .category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.category-page .category-section .category-header p {
+  font-size: 14px;
+  color: #555;
+}
+
+.category-page .category-section .category-header .category-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.category-page .category-section .category-header .category-actions button {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.category-page .category-section .category-header .category-actions button:hover {
+  background: #e61b77;
+  color: #fff;
+}
+
+.category-page .category-section .category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .category-page .category-section .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .category-page .category-section .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category-page .category-section .category-grid .product-card {
+  height: fit-content;
 }
 /*# sourceMappingURL=theme.css.map */
