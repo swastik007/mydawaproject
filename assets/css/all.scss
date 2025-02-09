@@ -645,3 +645,64 @@ img {
         }
     }
 }
+
+.symptoms-section {
+    .right-heading {
+        color: rgba($black, 1);
+        margin-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .symptoms-section .symptoms-wrap .steps .step .step-circle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.symptom-card {
+    position: relative;
+    z-index: 1;
+    .icon-checked {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        z-index: 1;
+    }
+}
+
+.symptoms-section .symptoms-wrap .steps .step.selected .step-circle {
+    border-width: 3px;
+}
+
+@media only screen and (min-width: 1440px) {
+    .symptoms-section .symptoms-wrap {
+        padding: 80px 60px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .symptoms-section .symptoms-wrap .steps .step p {
+        font-weight: 500;
+    }
+}
+
+// @media only screen and (min-width: 1440px) {
+//     .step-circle {
+//         position: relative;
+//         z-index: 2;
+//         &::before {
+//             content: "";
+//             background: #D4D7E0;
+//             width: 2px;
+//             height: 100%;
+//             position: absolute;
+//             left: 12px;
+//             top: 20px;
+//             bottom: 20px;
+//             z-index: -1;
+//         }
+//     }
+// }
