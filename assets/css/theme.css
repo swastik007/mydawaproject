@@ -180,6 +180,19 @@ input[type="radio"]:checked::before {
   /* Inner circle when checked */
 }
 
+@media screen and (max-width: 1100px) {
+  .search-wrap {
+    width: 100%;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 84px;
+  }
+  .search-wrap .search-container {
+    position: static;
+  }
+}
+
 .category-dropdown .category-menu {
   display: none;
 }
