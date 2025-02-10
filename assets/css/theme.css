@@ -129,7 +129,7 @@ body {
 
 @media only screen and (min-width: 1440px) {
   .page-content {
-    padding: 25px 60px 60px 60px;
+    padding: 25px 60px 30px 60px;
   }
 }
 
@@ -1743,6 +1743,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .breadcrumb-container {
+    margin-top: 10px;
+  }
 }
 
 .breadcrumb-container .breadcrumb {
@@ -1750,7 +1757,6 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: 'Arial', sans-serif;
 }
 
 .breadcrumb-container .breadcrumb li {
@@ -1760,24 +1766,24 @@ body {
 
 .breadcrumb-container .breadcrumb li a {
   text-decoration: none;
-  color: #000;
+  color: #373434;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .breadcrumb-container .breadcrumb li a:hover {
-  color: #E61B77;
+  color: #e61b77;
 }
 
 .breadcrumb-container .breadcrumb li a.active {
-  font-weight: bold;
-  color: #555;
+  font-weight: 700;
+  color: #373434;
 }
 
 .breadcrumb-container .breadcrumb li .divider {
   margin: 0 8px;
-  color: #000;
+  color: #373434;
 }
 
 .step-navigation .steps .step {
@@ -2597,41 +2603,48 @@ body {
 }
 
 .faq-page {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  margin: 30px 10px;
   /* Sidebar Navigation */
   /* FAQ Content */
 }
 
-.faq-page .faq-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #000;
+@media (min-width: 1200px) {
+  .faq-page {
+    margin: 30px 30px 50px 30px;
+  }
+}
+
+.faq-page .section-heading {
+  max-width: 221px;
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .faq-page .section-heading {
+    max-width: 336px;
+  }
 }
 
 .faq-page .faq-container {
   display: flex;
   gap: 20px;
+  flex-direction: column;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1200px) {
   .faq-page .faq-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
 .faq-page .faq-sidebar {
   flex: 1;
-  background: #f8f8f8;
-  border-radius: 8px;
-  padding: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1200px) {
   .faq-page .faq-sidebar {
-    display: none;
-    /* Hide on smaller screens */
+    max-width: 288px;
+    margin-right: 20px;
   }
 }
 
@@ -2639,31 +2652,87 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #F8F8F8;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  /* Optional: show position indicator in red */
+}
+
+@media (min-width: 1200px) {
+  .faq-page .faq-sidebar .faq-menu {
+    flex-direction: column;
+  }
 }
 
 .faq-page .faq-sidebar .faq-menu .faq-menu-item {
-  padding: 10px 15px;
-  margin-bottom: 10px;
   cursor: pointer;
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #000;
+  font-size: 18px;
+  color: #808080;
+  font-weight: 500;
+  padding: 7px 10px;
+  text-wrap: nowrap;
+}
+
+@media (min-width: 1200px) {
+  .faq-page .faq-sidebar .faq-menu .faq-menu-item {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+  }
 }
 
 .faq-page .faq-sidebar .faq-menu .faq-menu-item.active {
-  background: #e61b77;
-  color: #fff;
+  background-color: transparent;
+  color: #373434;
+  border-bottom: 2px solid #373434;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  .faq-page .faq-sidebar .faq-menu .faq-menu-item.active {
+    background-color: #F9F9F9;
+    border-bottom: transparent;
+  }
 }
 
 .faq-page .faq-sidebar .faq-menu .faq-menu-item:hover {
-  background: #e61b77;
-  color: #fff;
+  border-bottom: 1px solid #373434;
+  color: #373434;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  .faq-page .faq-sidebar .faq-menu .faq-menu-item:hover {
+    background-color: #F9F9F9;
+    border-bottom: transparent;
+  }
+}
+
+.faq-page .faq-sidebar .faq-menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .faq-page .faq-content {
   flex: 3;
+  border: 1px solid #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+@media (min-width: 1200px) {
+  .faq-page .faq-content {
+    padding: 10px 20px;
+  }
 }
 
 .faq-page .faq-content .faq-section {
@@ -2671,150 +2740,275 @@ body {
 }
 
 .faq-page .faq-content .faq-section .faq-heading {
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #373434;
+  line-height: 28px;
+}
+
+@media (min-width: 1200px) {
+  .faq-page .faq-content .faq-section .faq-heading {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 .faq-page .faq-content .faq-section .faq-item {
-  margin-bottom: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #F8F8F8;
 }
 
-.faq-page .faq-content .faq-section .faq-item details {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px 15px;
+.faq-page .faq-content .faq-section .faq-item:first-of-type {
+  border-top: none;
 }
 
-.faq-page .faq-content .faq-section .faq-item details summary {
+.faq-page .faq-content .faq-section .faq-item .faq-question {
+  background: transparent;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
+  color: #373434;
 }
 
-.faq-page .faq-content .faq-section .faq-item details summary:hover {
-  color: #e61b77;
+@media (min-width: 1200px) {
+  .faq-page .faq-content .faq-section .faq-item .faq-question {
+    font-size: 14px;
+  }
 }
 
-.faq-page .faq-content .faq-section .faq-item details p {
-  font-size: 14px;
-  color: #555;
-  margin-top: 10px;
-  line-height: 1.5;
+.faq-page .faq-content .faq-section .faq-item .faq-answer {
+  background: #fff;
+  padding: 15px 0;
+  display: block;
+  font-size: 16px;
+  color: #8D8D92;
 }
 
-.shipping-policy-page {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+@media (min-width: 1200px) {
+  .faq-page .faq-content .faq-section .faq-item .faq-answer {
+    font-size: 14px;
+  }
 }
 
-.shipping-policy-page .policy-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #000;
+.faq-page .faq-content .faq-section .faq-item .faq-answer.hidden {
+  display: none;
 }
 
-.shipping-policy-page .policy-container {
+.faq-page .faq-content .faq-section.hidden {
+  display: none;
+}
+
+.shipping-policy-page .policy-item .policy-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: #373434;
+  line-height: 28px;
+}
+
+@media (min-width: 1200px) {
+  .shipping-policy-page .policy-item .policy-question {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.shipping-policy-page .policy-item .policy-answer {
+  padding: 15px 0;
+  display: block;
+  font-size: 16px;
+  color: #8D8D92;
+}
+
+@media (min-width: 1200px) {
+  .shipping-policy-page .policy-item .policy-answer {
+    font-size: 14px;
+  }
+}
+
+.shipping-policy-page .policy-item .policy-answer p {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .shipping-policy-page .policy-item .policy-answer p {
+    font-size: 14px;
+  }
+}
+
+.shipping-policy-page .policy-item .policy-answer ul li {
+  padding: 3px 0;
+  font-size: 15px;
+}
+
+@media (min-width: 1200px) {
+  .shipping-policy-page .policy-item .policy-answer ul li {
+    font-size: 14px;
+  }
+}
+
+.shipping-policy-page .policy-item .note {
+  background-color: #F6F6F8;
+  color: #373434;
+  padding: 10px 20px;
   display: flex;
-  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-@media (max-width: 1024px) {
-  .shipping-policy-page .policy-container {
-    flex-direction: column;
+.shipping-policy-page .policy-item .note span {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 7px;
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .shipping-policy-page .policy-item .note span {
+    font-size: 12px;
   }
 }
 
-.shipping-policy-page .policy-sidebar {
-  flex: 1;
-  background: #f8f8f8;
-  border-radius: 8px;
+.shipping-policy-page .policy-item strong {
+  color: #373434;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  .shipping-policy-page .policy-item strong {
+    line-height: 1.5;
+    font-size: 14px;
+  }
+}
+
+.cant-find-section {
+  background-color: #F1F3FB;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
   padding: 20px;
 }
 
-@media (max-width: 1024px) {
-  .shipping-policy-page .policy-sidebar {
-    display: none;
-    /* Hide on smaller screens */
+@media (min-width: 1200px) {
+  .cant-find-section {
+    padding: 42px 34px;
+    margin: 50px 0 0 0;
   }
 }
 
-.shipping-policy-page .policy-sidebar .policy-menu {
-  list-style: none;
-  padding: 0;
+.cant-find-section .cant-find-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .cant-find-section .cant-find-container {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.cant-find-section .cant-find-container .cant-find-text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+@media (min-width: 1200px) {
+  .cant-find-section .cant-find-container .cant-find-text {
+    align-items: center;
+  }
+}
+
+.cant-find-section .cant-find-container .cant-find-text .cant-find-icon {
+  position: absolute;
+}
+
+@media (min-width: 1200px) {
+  .cant-find-section .cant-find-container .cant-find-text .cant-find-icon {
+    position: static;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+}
+
+.cant-find-section .cant-find-container .cant-find-text .cant-find-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.cant-find-section .cant-find-container .cant-find-text h2 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #373434;
   margin: 0;
 }
 
-.shipping-policy-page .policy-sidebar .policy-menu .policy-menu-item {
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #000;
+@media (min-width: 1200px) {
+  .cant-find-section .cant-find-container .cant-find-text h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 
-.shipping-policy-page .policy-sidebar .policy-menu .policy-menu-item.active {
-  background: #e61b77;
-  color: #fff;
+.cant-find-section .cant-find-container .cant-find-text h3 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #373434;
 }
 
-.shipping-policy-page .policy-sidebar .policy-menu .policy-menu-item:hover {
-  background: #e61b77;
-  color: #fff;
+@media (min-width: 1200px) {
+  .cant-find-section .cant-find-container .cant-find-text h3 {
+    font-size: 32px;
+  }
 }
 
-.shipping-policy-page .policy-content {
-  flex: 3;
+.cant-find-section .cant-find-container .cant-find-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.shipping-policy-page .policy-content .policy-section {
-  margin-bottom: 20px;
-}
-
-.shipping-policy-page .policy-content .policy-section .policy-heading {
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 15px;
-}
-
-.shipping-policy-page .policy-content .policy-section p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.shipping-policy-page .policy-content .policy-section ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
-
-.shipping-policy-page .policy-content .policy-section ul li {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.shipping-policy-page .policy-content .policy-section .note {
-  background: #f8f8f8;
-  border: 1px solid #ddd;
+.cant-find-section .cant-find-container .cant-find-actions .cant-find-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border: 1px solid #e1e1e5;
   border-radius: 8px;
   padding: 10px 15px;
-  font-size: 14px;
-  color: #555;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2e2e2e;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.shipping-policy-page .policy-content .policy-section .note i.icon-info {
-  margin-right: 10px;
-  color: #e61b77;
+.cant-find-section .cant-find-container .cant-find-actions .cant-find-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.cant-find-section .cant-find-container .cant-find-actions .cant-find-button:hover {
+  background-color: #e5f0ff;
+  border-color: #bcd4fc;
+  color: #1a73e8;
 }
 
 .wishlist-page {

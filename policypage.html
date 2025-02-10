@@ -33,111 +33,177 @@
                         <li><a href="#" class="active">Submit a Prescription</a></li>
                     </ul>
                 </nav>
-                <!-- Faq Page-->
-                <div class="shipping-policy-page">
-                    <h1 class="policy-title">Shipping Policy</h1>
-                    <div class="policy-container">
+                <!-- Shipping Policy Page -->
+
+                <div class="faq-page shipping-policy-page">
+                    <h2 class="section-heading mb-4">Shipping Policy</h2>
+                    <div class="faq-container">
                         <!-- Sidebar Navigation -->
-                        <aside class="policy-sidebar">
-                            <ul class="policy-menu">
-                                <li class="policy-menu-item active">Delivery Times</li>
-                                <li class="policy-menu-item">Payment</li>
-                                <li class="policy-menu-item">Prescription & Insurance Orders</li>
-                                <li class="policy-menu-item">Shipping Rates</li>
-                                <li class="policy-menu-item">Discreet Shipping</li>
-                                <li class="policy-menu-item">Order Tracking</li>
-                                <li class="policy-menu-item">International Shipping</li>
-                                <li class="policy-menu-item">Returns Policy</li>
+                        <aside class="faq-sidebar">
+                            <ul class="faq-menu" id="faqMenu">
+                                <li class="faq-menu-item active" data-target="delivery-times">Delivery Times</li>
+                                <li class="faq-menu-item" data-target="payment">Payment</li>
+                                <li class="faq-menu-item" data-target="prescription-insurance">Prescription & Insurance Orders</li>
+                                <li class="faq-menu-item" data-target="shipping-rates">Shipping Rates</li>
+                                <li class="faq-menu-item" data-target="discreet-shipping">Discreet Shipping</li>
+                                <li class="faq-menu-item" data-target="order-tracking">Order Tracking</li>
+                                <li class="faq-menu-item" data-target="international-shipping">International Shipping</li>
+                                <li class="faq-menu-item" data-target="returns-policy">Returns Policy</li>
                             </ul>
                         </aside>
 
                         <!-- Policy Content -->
-                        <main class="policy-content">
-                            <section class="policy-section">
-                                <h2 class="policy-heading">When can you expect your delivery?</h2>
-                                <p>Orders made 8:00 am - 8:00 pm:</p>
-                                <ul>
-                                    <li>Nairobi County: Delivered within 4 hours.</li>
-                                    <li>Greater Nairobi: Delivered within 6 hours (orders after 6:00 pm by the next day, midday).</li>
-                                    <li>Rest of Kenya: Delivered within 24 hours.</li>
-                                </ul>
-                                <p>Orders made after 8:00 pm:</p>
-                                <ul>
-                                    <li>Nairobi County: By 10:00 am next day.</li>
-                                    <li>Greater Nairobi: By midday next day.</li>
-                                    <li>Rest of Kenya: Within 36 hours.</li>
-                                </ul>
-                                <div class="note">
-                                    <p>
-                                        <i class="icon-info"></i> You will receive an order confirmation on your mobile phone with the order number. If you do not receive the order number, then your order has not been confirmed by our system.
-                                    </p>
+                        <main class="faq-content">
+                            <section class="faq-section" id="delivery-times">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">When can you expect your delivery?</div>
+                                    <div class="policy-answer">
+                                        <p>Orders made 8:00 am - 8:00 pm:</p>
+                                        <ul>
+                                            <li>Nairobi County: Delivered within 4 hours.</li>
+                                            <li>Greater Nairobi: Delivered within 6 hours (orders after 6:00 pm by the next day, midday).</li>
+                                            <li>Rest of Kenya: Delivered within 24 hours.</li>
+                                        </ul>
+                                        <p>Orders made after 8:00 pm:</p>
+                                        <ul>
+                                            <li>Nairobi County: By 10:00 am next day.</li>
+                                            <li>Greater Nairobi: By midday next day.</li>
+                                            <li>Rest of Kenya: Within 36 hours.</li>
+                                        </ul>
+                                        <div class="note">
+                                            <i class="bi bi-exclamation-circle"></i>
+                                            <span>
+                                                You will receive an order confirmation on your mobile phone with the order number. If you do not receive the order number, then your order has not been confirmed by our system.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </section>
+
+                            <section class="faq-section hidden" id="payment">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">When can you expect your delivery?</div>
+                                    <div class="policy-answer">
+                                        <p>Orders made 8:00 am - 8:00 pm:</p>
+                                        <ul>
+                                            <li>Pay via M-Pesa after reviewing your order.</li>
+                                            <li>Ensure you load your M-Pesa wallet before delivery.</li>
+                                        </ul>
+
+                                        <div class="note">
+                                            <i class="bi bi-exclamation-circle"></i>
+                                            <span>
+                                                Pay-on-delivery is only available for Nairobi orders.
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </section>
 
-                            <section class="policy-section">
-                                <h2 class="policy-heading">Seamless Pay-On-Delivery Process</h2>
-                                <ul>
-                                    <li>Pay via M-Pesa after reviewing your order.</li>
-                                    <li>Ensure you load your M-Pesa wallet before delivery.</li>
-                                </ul>
-                                <div class="note">
-                                    <p>
-                                        <i class="icon-info"></i> Pay-on-delivery is only available for Nairobi orders.
-                                    </p>
+                            <section class="faq-section hidden" id="prescription-insurance">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">Guidelines for Prescription & Insurance Orders</div>
+                                    <div class="policy-answer">
+                                        <p>Prescription Orders</p>
+                                        <ul>
+                                            <li>Ensure you’re present to receive the order and hand over the original prescription to the rider.</li>
+
+                                        </ul>
+                                        <p>Insurance Orders</p>
+                                        <ul>
+                                            <li>Provide your biometrics, original prescription, and Claim Form to ensure successful processing.</li>
+                                        </ul>
+
+                                    </div>
                                 </div>
+
                             </section>
 
-                            <section class="policy-section">
-                                <h2 class="policy-heading">Guidelines for Prescription & Insurance Orders</h2>
-                                <p><strong>Prescription Orders</strong></p>
-                                <ul>
-                                    <li>Ensure you’re present to receive the order and hand over the original prescription to the rider.</li>
-                                </ul>
-                                <p><strong>Insurance Orders</strong></p>
-                                <ul>
-                                    <li>Provide your biometrics, original prescription, and Claim Form to ensure successful processing.</li>
-                                </ul>
-                            </section>
+                            <section class="faq-section hidden" id="shipping-rates">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">Transparent Shipping Costs</div>
+                                    <div class="policy-answer">
 
-                            <section class="policy-section">
-                                <h2 class="policy-heading">Transparent Shipping Costs</h2>
-                                <p><strong>Nairobi County</strong></p>
-                                <ul>
-                                    <li>Orders below Kes 2,500: Kes 149.</li>
-                                    <li>Orders above Kes 2,500: Free.</li>
-                                    <li>Health Insurance Orders: Free.</li>
-                                </ul>
-                                <p><strong>Rest of Kenya</strong></p>
-                                <ul>
-                                    <li>Rates displayed at checkout.</li>
-                                </ul>
-                            </section>
+                                        <p>Nairobi County</p>
+                                        <ul>
+                                            <li>Orders below Kes 2,500: Kes 149.</li>
+                                            <li>Orders above Kes 2,500: Free.</li>
+                                            <li>Health Insurance Orders: Free.</li>
+                                        </ul>
+                                        <p>Rest of Kenya</p>
+                                        <ul>
+                                            <li>Rates displayed at checkout.</li>
+                                        </ul>
 
-                            <section class="policy-section">
-                                <h2 class="policy-heading">Discreet Shipping for Sensitive Products</h2>
-                                <p>All orders for sensitive items, such as sexual wellness products (e.g., contraceptives, STI/UTI medication), are shipped in plain, unmarked packaging to protect your privacy.</p>
-                                <p>Delivery agents will ensure utmost discretion during handover.</p>
-                            </section>
+                                    </div>
+                                </div>
 
-                            <section class="policy-section">
-                                <h2 class="policy-heading">Stay Updated on Your Order</h2>
-                                <ul>
-                                    <li>Receive order confirmation via SMS or email with your tracking number.</li>
-                                    <li>Notifications at each stage: Order Accepted, Dispatched, Out for Delivery.</li>
-                                    <li>Easily track your order in the "Your Orders" section.</li>
-                                </ul>
                             </section>
+                            <section class="faq-section hidden" id="discreet-shipping">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">Discreet Shipping for Sensitive Products</div>
+                                    <div class="policy-answer">
 
-                            <section class="policy-section">
-                                <h2 class="policy-heading">International Shipping</h2>
-                                <p>Currently Serving Kenya Only</p>
-                                <ul>
-                                    <li>We do not currently ship outside Kenya but are exploring expansion options for the future.</li>
-                                </ul>
+
+                                        <ul>
+                                            <li>All orders for sensitive items, such as sexual wellness products (e.g., contraceptives, STI/UTI medication), are shipped in plain, unmarked packaging to protect your privacy.
+                                            </li>
+
+                                        </ul>
+                                        <span>Delivery agents will ensure utmost discretion during handover.</span>
+
+                                    </div>
+                                </div>
+
+                            </section>
+                            <section class="faq-section hidden" id="order-tracking">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">Damages & Support</div>
+                                    <div class="policy-answer">
+
+                                        <p>Confirm your order upon receipt. Report any damages directly to the delivery agent.</p>
+                                        <span>Contact support for further assistance:</span>
+
+                                        <ul>
+                                            <li>All orders for sensitive items, such as sexual wellness products (e.g., contraceptives, STI/UTI medication), are shipped in plain, unmarked packaging to protect your privacy.
+                                            </li>
+
+                                        </ul>
+                                        <span>Delivery agents will ensure utmost discretion during handover.</span>
+
+                                    </div>
+                                </div>
+
+                            </section>
+                            <section class="faq-section hidden" id="international-shipping">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">International Shipping</div>
+                                    <div class="policy-answer">
+                                        <strong>Currently Serving Kenya Only</strong>
+                                        <ul>
+                                            <li>We do not currently ship outside Kenya but are exploring expansion options for the future. </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </section>
+                            <section class="faq-section hidden" id="returns-policy">
+                                <div class="faq-item policy-item">
+                                    <div class="policy-question">Returns Policy</div>
+                                    <div class="policy-answer">
+                                        <strong>Refer to our Returns Policy to get detailed information about options and procedures for returning your order.</strong>
+                                    </div>
+                                </div>
+
                             </section>
                         </main>
                     </div>
                 </div>
+
 
 
 
