@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
                 responsive: {
                     0: { items: 1 },
+                    400: { items: 2.1 },
                     768: { items: 2 },
                     1024: { items: 4 }
                 }

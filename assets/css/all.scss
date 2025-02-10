@@ -756,3 +756,46 @@ img {
 .product-card .img-box .product-img {
     padding: 24px;
 }
+
+@media (max-width: 768px) {
+    .homebanner-section {
+        margin: 48px 0;
+    }
+    .homebanner-section .homebanner-text {
+        max-width: 90%;
+    }
+    .mix-btn {
+        width: 215px;
+    }
+    .mix-btn .btn {
+        width: 100%;
+        text-align: center;
+        @include justify-content(center);
+    }
+    .product-promotions {
+        margin: 48px -12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .homebanner-section .homebanner-text {
+        left: 56px;
+        transform: translate(0, -50%);
+        text-align: left;
+    }
+}
+
+.btn-rounded {
+    margin-bottom: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+.new-products {
+    margin: 0 -14px;
+    padding: 24px 12px;
+}
+
+.deal-banner {
+    margin: 0 -14px;
+}
