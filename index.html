@@ -33,18 +33,25 @@
             <!-- Offers Section -->
             <div id="offersection"></div>
             <!-- banner section -->
-            <div class="banner-section">
-                <div class="container-fluid h-100 d-flex align-items-center">
-                    <div class="text-content text-start ms-5 mr-auto">
-                        <h2 class="text-white text-start">Plan your family, your way.</h2>
-                        <h5 class="text-white text-start">Whether you need expert advice or prefer to explore on your own, we’ve got you covered. Start your journey to confident family planning with personalized guidance or empowering resources.</h5>
-                        <div class="mt-4">
-                            <button class="btn btn-grey me-3">Talk to a specialist</button>
-                            <button class="btn btn-outline-light">Learn More</button>
-                        </div>
+            <div class="homebanner-section">
+                <picture>
+                    <!-- Image for larger screens -->
+                    <source srcset="assets/images/health-img/telehealth-lg.png" media="(min-width: 1200px)" />
+                    <!-- Image for smaller screens -->
+                    <source srcset="assets/images/health-img/telehealth.png" media="(max-width: 767px)" />
+                    <!-- Fallback image -->
+                    <img src="assets/images/health-img/telehealth.png" alt="MyDawa Telehealth" />
+                </picture>
+                <div class="homebanner-text">
+                    <h4>Plan your family, your way.</h4>
+                    <p>Whether you need expert advice or prefer to explore on your own, we’ve got you covered. Start your journey to confident family planning with personalized guidance or empowering resources.</p>
+                    <div class="mt-4">
+                        <button class="btn btn-grey me-3">Talk to a specialist</button>
+                        <button class="btn btn-outline-light">Learn More</button>
                     </div>
                 </div>
             </div>
+
             <div id="new-product"></div>
             <!-- Scrolling Deal Banner -->
             <div class="deal-banner">

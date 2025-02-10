@@ -1,36 +1,109 @@
-.banner-section {
+// .banner-section {
+//     position: relative;
+//     color: #fff;
+//     min-height: 400px;
+//     /* Adjust height as needed */
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     background-image: url('../images/home-banner.png');
+//     background-size: cover;
+//     background-position: right;
+//     margin: 10px;
+//     border-radius: 12px;
+//     @media only screen and (min-width: 1440px) {
+//         margin: 45px 70px 70px 70px;
+//         height: 400px;
+//         background-position: initial;
+//     }
+//     h2 {
+//         font-weight: 900;
+//         font-size: 40px;
+//         line-height: 48px;
+//         margin-bottom: 20px;
+//     }
+//     h5 {
+//         font-size: 18px;
+//         font-weight: 400;
+//         max-width: 500px;
+//         line-height: 28px;
+//     }
+//     .text-content {
+//         padding: 20px;
+//         border-radius: 10px;
+//     }
+// }
+.homebanner-section {
     position: relative;
-    color: #fff;
-    min-height: 400px;
-    /* Adjust height as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-image: url('../images/home-banner.png');
-    background-size: cover;
-    background-position: right;
-    margin: 10px;
+    width: 100%;
+    /* Ensure full width */
+    overflow: hidden;
+    /* Prevent overflow from the image */
     border-radius: 12px;
-    @media only screen and (min-width: 1440px) {
-        margin: 45px 70px 70px 70px;
-        height: 400px;
-        background-position: initial;
+    height: 424px;
+    @media (min-width: 1200px) {
+        height: 380px;
     }
-    h2 {
-        font-weight: 900;
-        font-size: 40px;
-        line-height: 48px;
-        margin-bottom: 20px;
+    picture,
+    img {
+        display: block;
+        /* Remove default inline behavior of images */
+        width: 100%;
+        /* Ensure full width of the viewport */
+        height: 100%;
+        /* Ensure it spans full height */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the entire container */
     }
-    h5 {
-        font-size: 18px;
-        font-weight: 400;
-        max-width: 500px;
-        line-height: 28px;
-    }
-    .text-content {
-        padding: 20px;
-        border-radius: 10px;
+    .homebanner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 2;
+        /* Styles for larger screens (above 1200px) */
+        @media (min-width: 1200px) {
+            top: 50%;
+            left: 100px;
+            /* Align to the left */
+            transform: translate(0, -50%);
+            /* Vertically centered, horizontally left */
+            text-align: left;
+        }
+        /* Styles for smaller screens (below 768px) */
+        @media (max-width: 767px) {
+            top: 20px;
+            /* Move to the top */
+            left: 20px;
+            /* Align to the left */
+            transform: none;
+            /* No centering transformation */
+            text-align: left;
+            /* Left-align the text */
+            max-width: 250px;
+        }
+        h4 {
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 20px;
+            @media (min-width: 1200px) {
+                font-size: 40px;
+                line-height: 48px;
+            }
+        }
+        p {
+            font-weight: 400;
+            max-width: 500px;
+            font-size: 15px;
+            line-height: 24px;
+            @media (min-width: 1200px) {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
     }
 }
