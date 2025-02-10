@@ -600,6 +600,11 @@ img {
     padding: 60px 0 0;
   }
 }
+@media only screen and (max-width: 768px) {
+  .homepage-slider {
+    margin-bottom: 42px;
+  }
+}
 .homepage-slider .slide-item {
   position: relative;
   color: #fff;
@@ -764,4 +769,66 @@ img {
   .symptoms-section .symptoms-wrap .steps .step p {
     font-weight: 500;
   }
+}
+.product-card .img-box .product-weight {
+  right: -33px;
+  top: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .category-slider {
+    margin: 0 -12px 24px;
+  }
+  .category-slider .card-body {
+    padding: 10px 0;
+  }
+  .category-slider .card-text {
+    padding: 0;
+  }
+  .category-slider .btn {
+    font-size: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .category-slider .btn-primary {
+    background: #373434;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .product-card .img-box .product-weight {
+    right: -27px;
+    top: 80px;
+  }
+}
+
+.offer-section .owl-prev {
+  background: #fff url("../images/left-arrow.png") no-repeat 50% 50% !important;
+}
+
+.offer-section .owl-next {
+  background: #fff url("../images/right-arrow.png") no-repeat 50% 50% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .offer-section {
+    margin: 0 -12px;
+  }
+  .offer-section .card-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .offer-section .owl-item.active {
+    margin-right: 12px !important;
+  }
+  .banner-section {
+    background-image: url("../images/home-banner-sm.png");
+    margin: 24px 0 64px;
+  }
+  .banner-section h5 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+.product-card .img-box .product-img {
+  padding: 24px;
 }/*# sourceMappingURL=all.css.map */
