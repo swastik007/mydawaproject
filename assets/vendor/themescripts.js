@@ -417,3 +417,118 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+$(document).ready(function() {
+    const $carousel = $(".healthsteps-container");
+
+    // Initialize Owl Carousel for mobile screens
+    function checkCarousel() {
+        if ($(window).width() < 1200) {
+            if (!$carousel.hasClass("owl-loaded")) {
+                $carousel.owlCarousel({
+                    items: 1,
+                    margin: 15,
+                    loop: true,
+                    nav: true,
+                    dots: false,
+                    navText: [
+                        '<i class="bi bi-chevron-left"></i>',
+                        '<i class="bi bi-chevron-right"></i>',
+                    ],
+                });
+            }
+        } else {
+            // Destroy Owl Carousel for desktop
+            if ($carousel.hasClass("owl-loaded")) {
+                $carousel.trigger("destroy.owl.carousel").removeClass("owl-loaded");
+                $carousel.find(".owl-stage-outer").children().unwrap();
+            }
+        }
+    }
+
+    // Run on load
+    checkCarousel();
+
+    // Run on window resize
+    $(window).resize(function() {
+        checkCarousel();
+    });
+});
+
+$(document).ready(function() {
+    const $carousel = $(".features-list");
+
+    function initializeCarousel() {
+        if ($(window).width() < 1200) {
+            if (!$carousel.hasClass("owl-loaded")) {
+                $carousel.owlCarousel({
+                    margin: 15,
+                    loop: true,
+                    nav: true,
+                    dots: false,
+                    responsive: {
+                        0: { items: 1 },
+                        768: { items: 2 },
+                        1024: { items: 4 }
+                    },
+                    navText: [
+                        '<i class="bi bi-chevron-left"></i>',
+                        '<i class="bi bi-chevron-right"></i>',
+                    ],
+                });
+            }
+        } else {
+            if ($carousel.hasClass("owl-loaded")) {
+                $carousel.trigger("destroy.owl.carousel").removeClass("owl-loaded");
+                $carousel.find(".owl-stage-outer").children().unwrap();
+            }
+        }
+    }
+
+    // Initialize on page load
+    initializeCarousel();
+
+    // Reinitialize on window resize
+    $(window).resize(function() {
+        initializeCarousel();
+    });
+});
+
+$(document).ready(function() {
+    const $carousel = $(".healthjourney-container");
+
+    function initializeCarousel() {
+        if ($(window).width() < 1200) {
+            if (!$carousel.hasClass("owl-loaded")) {
+                $carousel.owlCarousel({
+                    items: 1,
+                    margin: 15,
+                    loop: true,
+                    nav: true,
+                    dots: false,
+                    responsive: {
+                        0: { items: 1 },
+                        768: { items: 2 }
+                    },
+                    navText: [
+                        '<i class="bi bi-chevron-left"></i>',
+                        '<i class="bi bi-chevron-right"></i>',
+                    ],
+                });
+            }
+        } else {
+            if ($carousel.hasClass("owl-loaded")) {
+                $carousel.trigger("destroy.owl.carousel").removeClass("owl-loaded");
+                $carousel.find(".owl-stage-outer").children().unwrap();
+            }
+        }
+    }
+
+    // Initialize on page load
+    initializeCarousel();
+
+    // Reinitialize on window resize
+    $(window).resize(function() {
+        initializeCarousel();
+    });
+});
