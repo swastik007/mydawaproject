@@ -1,3 +1,16 @@
+@media screen and (max-width: 1100px) {
+    .search-wrap {
+        width: 100%;
+        position: absolute!important;
+        left: 0;
+        right: 0;
+        top: 84px;
+        .search-container {
+            position: static;
+        }
+    }
+}
+
 .category-dropdown {
     .category-menu {
         display: none;
@@ -25,13 +38,6 @@
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-}
-
-
-/* Show menu when class is added */
-
-.category-menu.show-menu {
-    display: block !important;
 }
 
 .category-list {

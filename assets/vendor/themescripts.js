@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 items: 1,
             });
         }
-
         // Category Carousel
         if ($('#category-carousel').length) {
             $('#category-carousel').owlCarousel({
@@ -125,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
-
         // Popular Products Carousel
         if ($('#popular-carousel').length) {
             $('#popular-carousel').owlCarousel({
@@ -175,30 +173,43 @@ document.addEventListener("DOMContentLoaded", function() {
                 offerCarousel.trigger('next.owl.carousel');
             });
         }
-        // Popular product by category Carousel
-        if ($('#popularproductbycat-carousel').length) {
-            $('#popularproductbycat-carousel').owlCarousel({
-                loop: true,
-                margin: 15,
-                nav: true,
-                dots: false,
-                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
-                    1024: { items: 4 }
-                }
-            });
 
-            // Custom navigation functionality
-            $('.prev-btn').click(function() {
-                offerCarousel.trigger('prev.owl.carousel');
-            });
 
-            $('.next-btn').click(function() {
-                offerCarousel.trigger('next.owl.carousel');
-            });
-        }
+    }
+    /* wishlist page carousel */
+    if ($('#wishlist-carousel').length) {
+        console.log('hello 202');
+        $("#wishlist-carousel").owlCarousel({
+            loop: false,
+            margin: 20,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 3 },
+            },
+            navText: [
+                "<i class='bi bi-chevron-left'></i>",
+                "<i class='bi bi-chevron-right'></i>",
+            ],
+        });
+    }
+    // Popular product by category Carousel
+    if ($('#popularproductbycat-carousel').length) {
+        $('#popularproductbycat-carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            dots: false,
+            navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 4 }
+            }
+        });
+
     }
 
     // Load Header
@@ -328,6 +339,198 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-$(document).ready(function() {
 
+$(document).ready(function() {
+    console.log('wishlistpopup');
+    const $privateWishlistBtn = $("#private-wishlist-btn");
+    const $privateWishlistPopup = $("#private-wishlist-popup");
+    const $closePopupBtn = $("#close-popup-btn");
+    const $pinBoxes = $(".pin-box");
+
+    // Show the popup
+    $privateWishlistBtn.on("click", function() {
+        $privateWishlistPopup.removeClass("hidden"); // Show popup
+    });
+
+    // Hide the popup
+    $closePopupBtn.on("click", function() {
+        $privateWishlistPopup.addClass("hidden"); // Hide popup
+    });
+
+    // Close popup when clicking outside the content
+    $privateWishlistPopup.on("click", function(e) {
+        if ($(e.target).is($privateWishlistPopup)) {
+            $privateWishlistPopup.addClass("hidden"); // Hide popup
+        }
+    });
+
+    // Handle auto-focus for PIN input fields
+    $pinBoxes.on("input", function() {
+        const currentIndex = $pinBoxes.index(this);
+        if ($(this).val() && currentIndex < $pinBoxes.length - 1) {
+            $pinBoxes.eq(currentIndex + 1).focus();
+        }
+    });
+
+    $pinBoxes.on("keydown", function(e) {
+        const currentIndex = $pinBoxes.index(this);
+        if (e.key === "Backspace" && !$(this).val() && currentIndex > 0) {
+            $pinBoxes.eq(currentIndex - 1).focus();
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll(".faq-menu-item");
+    const sections = document.querySelectorAll(".faq-section");
+
+    menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            // Remove active class from all menu items
+            menuItems.forEach((menu) => menu.classList.remove("active"));
+            // Hide all sections
+            sections.forEach((section) => section.classList.add("hidden"));
+
+            // Activate the clicked menu item
+            item.classList.add("active");
+            // Show the corresponding section
+            const target = item.getAttribute("data-target");
+            document.getElementById(target).classList.remove("hidden");
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach((question) => {
+        question.addEventListener("click", () => {
+            const answerId = question.getAttribute("data-toggle");
+            const answer = document.getElementById(answerId);
+
+            // Toggle the visibility of the answer
+            if (answer.classList.contains("hidden")) {
+                answer.classList.remove("hidden");
+                question.classList.add("open");
+            } else {
+                answer.classList.add("hidden");
+                question.classList.remove("open");
+            }
+        });
+    });
+});
+
+$(document).ready(function() {
+    const $carousel = $(".healthsteps-container");
+
+    // Initialize Owl Carousel for mobile screens
+    function checkCarousel() {
+        if ($(window).width() < 1200) {
+            if (!$carousel.hasClass("owl-loaded")) {
+                $carousel.owlCarousel({
+                    items: 1,
+                    margin: 15,
+                    loop: true,
+                    nav: true,
+                    dots: false,
+                    navText: [
+                        '<i class="bi bi-chevron-left"></i>',
+                        '<i class="bi bi-chevron-right"></i>',
+                    ],
+                });
+            }
+        } else {
+            // Destroy Owl Carousel for desktop
+            if ($carousel.hasClass("owl-loaded")) {
+                $carousel.trigger("destroy.owl.carousel").removeClass("owl-loaded");
+                $carousel.find(".owl-stage-outer").children().unwrap();
+            }
+        }
+    }
+
+    // Run on load
+    checkCarousel();
+
+    // Run on window resize
+    $(window).resize(function() {
+        checkCarousel();
+    });
+});
+
+$(document).ready(function() {
+    const $carousel = $(".features-list");
+
+    function initializeCarousel() {
+        if ($(window).width() < 1200) {
+            if (!$carousel.hasClass("owl-loaded")) {
+                $carousel.owlCarousel({
+                    margin: 15,
+                    loop: true,
+                    nav: true,
+                    dots: false,
+                    responsive: {
+                        0: { items: 1 },
+                        768: { items: 2 },
+                        1024: { items: 4 }
+                    },
+                    navText: [
+                        '<i class="bi bi-chevron-left"></i>',
+                        '<i class="bi bi-chevron-right"></i>',
+                    ],
+                });
+            }
+        } else {
+            if ($carousel.hasClass("owl-loaded")) {
+                $carousel.trigger("destroy.owl.carousel").removeClass("owl-loaded");
+                $carousel.find(".owl-stage-outer").children().unwrap();
+            }
+        }
+    }
+
+    // Initialize on page load
+    initializeCarousel();
+
+    // Reinitialize on window resize
+    $(window).resize(function() {
+        initializeCarousel();
+    });
+});
+
+$(document).ready(function() {
+    const $carousel = $(".healthjourney-container");
+
+    function initializeCarousel() {
+        if ($(window).width() < 1200) {
+            if (!$carousel.hasClass("owl-loaded")) {
+                $carousel.owlCarousel({
+                    items: 1,
+                    margin: 15,
+                    loop: true,
+                    nav: true,
+                    dots: false,
+                    responsive: {
+                        0: { items: 1 },
+                        768: { items: 2 }
+                    },
+                    navText: [
+                        '<i class="bi bi-chevron-left"></i>',
+                        '<i class="bi bi-chevron-right"></i>',
+                    ],
+                });
+            }
+        } else {
+            if ($carousel.hasClass("owl-loaded")) {
+                $carousel.trigger("destroy.owl.carousel").removeClass("owl-loaded");
+                $carousel.find(".owl-stage-outer").children().unwrap();
+            }
+        }
+    }
+
+    // Initialize on page load
+    initializeCarousel();
+
+    // Reinitialize on window resize
+    $(window).resize(function() {
+        initializeCarousel();
+    });
 });

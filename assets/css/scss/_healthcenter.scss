@@ -1,0 +1,461 @@
+.health-center {
+    margin: 10px 0;
+    @media (min-width: 1200px) {
+        margin: 30px 0;
+    }
+    .health-banner {
+        position: relative;
+        width: 100%;
+        /* Ensure full width */
+        overflow: hidden;
+        /* Prevent overflow from the image */
+        picture,
+        img {
+            display: block;
+            /* Remove default inline behavior of images */
+            width: 100%;
+            /* Ensure full width of the viewport */
+            height: 100%;
+            /* Ensure it spans full height */
+            object-fit: cover;
+            /* Maintain aspect ratio and cover the entire container */
+        }
+        .health-banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+            /* Styles for larger screens (above 1200px) */
+            @media (min-width: 1200px) {
+                top: 50%;
+                left: 100px;
+                /* Align to the left */
+                transform: translate(0, -50%);
+                /* Vertically centered, horizontally left */
+                text-align: left;
+            }
+            /* Styles for smaller screens (below 768px) */
+            @media (max-width: 767px) {
+                top: 20px;
+                /* Move to the top */
+                left: 20px;
+                /* Align to the left */
+                transform: none;
+                /* No centering transformation */
+                text-align: left;
+                /* Left-align the text */
+                max-width: 250px;
+            }
+            h2 {
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 300;
+                margin-bottom: 7px;
+                text-align: left;
+                @media (min-width: 1200px) {
+                    font-size: 22px;
+                    margin-bottom: 12px;
+                }
+            }
+            h1 {
+                font-size: 36px;
+                line-height: 40px;
+                font-weight: 800;
+                margin: 0;
+                text-align: left;
+                @media (min-width: 1200px) {
+                    font-size: 52px;
+                    line-height: 1.2;
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+    .healthintro-section {
+        display: flex;
+        padding: 20px 0;
+        position: relative;
+        flex-direction: column;
+        .healthintro-img {
+            flex: 1;
+            width: 100%;
+            padding: 10px;
+            @media (min-width: 1200px) {
+                position: absolute;
+                left: 50px;
+                width: 400px;
+                height: 400px;
+                object-fit: contain;
+            }
+        }
+        .healthintro-heading {
+            @media (min-width: 1200px) {
+                margin-left: 600px;
+            }
+            h3 {
+                font-size: 28px;
+                line-height: 36px;
+                font-weight: 800;
+                color: $black;
+                @media (min-width: 1200px) {
+                    font-size: 40px;
+                    line-height: 1.2;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 30px;
+                color: $black;
+                @media (min-width: 1200px) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .healthintro-content {
+            flex: 1;
+            margin-top: 30px;
+            @media (min-width: 1200px) {
+                margin-left: 600px;
+            }
+            ul.features-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                @media (min-width: 1200px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                    .owl-stage {
+                        display: unset;
+                        /* Ensure Owl Carousel doesn't interfere */
+                    }
+                }
+                @media (max-width: 1199px) {
+                    display: block;
+                    .owl-carousel .owl-stage {
+                        display: flex;
+                        gap: 15px;
+                    }
+                    .owl-carousel .owl-item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                li {
+                    margin-bottom: 0.5rem;
+                    border: 1px solid #d4dee5;
+                    border-radius: 12px;
+                    padding: 20px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    @media (min-width: 1200px) {
+                        font-size: 13px;
+                        line-height: 1.6;
+                        flex-direction: row;
+                        flex: 1 1 calc(50% - 15px);
+                        /* Three items per row with gaps */
+                        border: none;
+                        padding: 20px 20px 20px 10px;
+                    }
+                    span {
+                        font-weight: 700;
+                        color: #000;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    .list-icon {
+                        background-color: #f1f3fb;
+                        padding: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: fit-content;
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                        object-fit: contain;
+                        margin-right: 10px;
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .healthsteps-section {
+        background-color: #fff;
+        .healthsteps-heading {
+            text-align: left;
+            font-size: 28px;
+            font-weight: 700;
+            color: #2e2e2e;
+            margin-bottom: 40px;
+            max-width: 330px;
+            @media (min-width: 1200px) {
+                font-size: 40px;
+                max-width: 100%;
+            }
+        }
+        .healthsteps-container {
+            @media (min-width: 1200px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                .owl-stage {
+                    display: unset;
+                    /* Prevent Owl Carousel interference */
+                }
+            }
+            @media (max-width: 1199px) {
+                display: block;
+                .owl-carousel .owl-stage {
+                    display: flex;
+                    gap: 15px;
+                }
+                .owl-carousel .owl-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .healthstep-card {
+            background-color: #ffce73;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .healthstep-title {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            .healthstep-subtitle {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+            .healthstep-description {
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+                display: none;
+            }
+            .healthstep-button {
+                display: none;
+                padding: 10px 20px;
+                background-color: #000;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: none;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+                &:hover {
+                    background-color: #444;
+                }
+            }
+            &:hover,
+            &:focus {
+                background-color: #FDF8EE;
+                color: $black;
+                .healthstep-description {
+                    display: block;
+                }
+                .healthstep-button {
+                    display: block;
+                }
+                &.step-1,
+                &.step-2,
+                &.step-3,
+                &.step-4 {
+                    background-image: none;
+                }
+            }
+            &.step-1 {
+                background-image: url(../images/health-img/step1-bg.png);
+                background-repeat: no-repeat;
+                background-position: bottom right;
+            }
+            &.step-2 {}
+            &.step-3 {
+                background-image: url(../images/health-img/step3-bg.png);
+                background-repeat: no-repeat;
+                background-position: bottom right;
+            }
+            &.step-4 {
+                background-image: url(../images/health-img/step4-bg.png);
+                background-repeat: no-repeat;
+                background-position: bottom right;
+            }
+        }
+    }
+    .healthjourney-section {
+        margin: 20px 0;
+        @media (min-width: 1200px) {
+            margin: 30px 0;
+        }
+        .healthjourney-heading {
+            text-align: left;
+            font-size: 28px;
+            font-weight: 700;
+            color: #2e2e2e;
+            margin-bottom: 0px;
+            max-width: 288px;
+            @media (min-width: 1200px) {
+                font-size: 32px;
+                max-width: 500px;
+            }
+        }
+        .healthjourney-subheading {
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 400;
+            max-width: 270px;
+            @media (min-width: 1200px) {
+                max-width: 670px;
+            }
+        }
+        .healthjourney-container {
+            margin: 50px 0;
+            @media (min-width: 1200px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin: 50px 0;
+                .owl-stage {
+                    display: unset;
+                    /* Prevent interference from Owl Carousel */
+                }
+            }
+            @media (max-width: 1199px) {
+                display: block;
+                .owl-carousel .owl-stage {
+                    display: flex;
+                    gap: 15px;
+                }
+                .owl-carousel .owl-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .healthjourney-card {
+            border-radius: 12px;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 15px;
+                @media (min-width: 768px) {
+                    height: 280px;
+                }
+                @media (min-width: 1200px) {
+                    height: 260px;
+                }
+            }
+            h4 {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 7px;
+                color: $black;
+                line-height: 28px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                @media (min-width: 1200px) {
+                    top: 30px;
+                    left: 30px;
+                }
+            }
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: $black;
+                font-weight: 400;
+                position: absolute;
+                top: 40px;
+                left: 10px;
+                text-align: left;
+                max-width: 270px;
+                @media (min-width: 1200px) {
+                    top: 65px;
+                    left: 30px;
+                    line-height: 1.3;
+                }
+            }
+            .arrow-link {
+                font-size: 14px;
+                font-weight: 500;
+                color: #007bff;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .faq-section {
+        padding: 2rem;
+        .faq {
+            .question {
+                margin-bottom: 1rem;
+                h4 {
+                    margin-bottom: 0.5rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .categories-section {
+        padding: 2rem;
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            .category {
+                flex: 1 1 20%;
+                margin: 0.5rem;
+                padding: 1rem;
+                background: #f8f8f8;
+                text-align: center;
+                border-radius: 8px;
+            }
+        }
+    }
+    .cta-section {
+        padding: 2rem;
+        text-align: center;
+        .cta-btn {
+            padding: 0.5rem 1.5rem;
+            background: #e91e63;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover {
+                background: #d81b60;
+            }
+        }
+    }
+}

@@ -33,30 +33,21 @@
             <!-- Offers Section -->
             <div id="offersection"></div>
             <!-- banner section -->
-            <div class="banner-section">
-                <div class="container-fluid h-100 d-flex align-items-center">
-                    <div class="text-content text-start ms-0 ms-md-5 mr-auto">
-                        <h2 class="text-white text-start">
-                            Plan your family, your way
-                        </h2>
-                        <h5 class="text-white text-start">Whether you need expert advice or prefer to explore on your own, we’ve got you covered. Start your journey to confident family planning with personalized guidance or empowering resources.</h5>
-                        <div class="mt-4">
-                            <button class="btn btn-rounded btn-grey me-3 mb-1">
-                                Talk to a specialist
-                                <svg class="ms-2" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_50_592)">
-                                    <path d="M0.75 5.625H11.2461" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M6.00391 0.75L11.252 5.625L6.00391 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_50_592">
-                                    <rect width="12" height="12" fill="white"></rect>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                            </button>
-                            <button class="btn btn-rounded btn-outline-light mb-1">Learn More</button>
-                        </div>
+            <div class="homebanner-section">
+                <picture>
+                    <!-- Image for larger screens -->
+                    <source srcset="assets/images/home-banner-lg.png" media="(min-width: 1200px)" />
+                    <!-- Image for smaller screens -->
+                    <source srcset="assets/images/home-banner.png" media="(max-width: 767px)" />
+                    <!-- Fallback image -->
+                    <img src="assets/images/home-banner.png" alt="MyDawa Telehealth" />
+                </picture>
+                <div class="homebanner-text">
+                    <h4>Plan your family, your way.</h4>
+                    <p>Whether you need expert advice or prefer to explore on your own, we’ve got you covered. Start your journey to confident family planning with personalized guidance or empowering resources.</p>
+                    <div class="mt-4">
+                        <button class="btn btn-grey me-3">Talk to a specialist</button>
+                        <button class="btn btn-outline-light">Learn More</button>
                     </div>
                 </div>
             </div>
