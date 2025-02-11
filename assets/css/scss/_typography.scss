@@ -1,27 +1,37 @@
 // _mixins.scss
 @mixin respond-to($breakpoint) {
+    @if $breakpoint==xxs {
+        @media (min-width: 320px) {
+            @content;
+        }
+    }
     @if $breakpoint==xs {
-        @media (max-width: 576px) {
+        @media (min-width: 440px) {
             @content;
         }
     }
     @else if $breakpoint==sm {
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             @content;
         }
     }
     @else if $breakpoint==md {
-        @media (max-width: 992px) {
+        @media (min-width: 992px) {
             @content;
         }
     }
     @else if $breakpoint==lg {
-        @media (max-width: 1200px) {
+        @media (min-width: 1200px) {
             @content;
         }
     }
     @else if $breakpoint==xl {
-        @media (max-width: 1400px) {
+        @media (min-width: 1600px) {
+            @content;
+        }
+    }
+    @else if $breakpoint==xxl {
+        @media (min-width: 1800px) {
             @content;
         }
     }

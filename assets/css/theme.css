@@ -13,15 +13,27 @@ body {
 
 .section-heading {
   font-weight: 800;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 1.3;
   color: #373434;
 }
 
-@media only screen and (min-width: 1440px) {
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
   .section-heading {
     font-size: 40px;
     font-weight: 900;
+  }
+}
+
+@media (min-width: 1800px) {
+  .section-heading {
+    font-size: 64px;
   }
 }
 
@@ -765,6 +777,14 @@ body {
   padding: 10px 40px;
   font-weight: 600;
   color: white;
+  font-size: 18px;
+}
+
+@media (min-width: 1800px) {
+  .btn-primary {
+    padding: 16px 64px;
+    font-size: 28px;
+  }
 }
 
 .btn-primary:hover, .btn-primary:focus {
@@ -779,6 +799,14 @@ body {
   color: #373434;
   border-radius: 10px;
   padding: 10px 40px;
+  font-size: 18px;
+}
+
+@media (min-width: 1800px) {
+  .btn-outline-light {
+    padding: 16px 64px;
+    font-size: 28px;
+  }
 }
 
 .btn-outline-light:hover, .btn-outline-light:focus {
@@ -954,32 +982,42 @@ body {
   color: #8A8A8A;
   font-weight: light;
   font-size: 14px;
-  line-height: 20px;
   text-align: left;
   margin-bottom: 2px;
+  line-height: 1.5;
 }
 
-@media only screen and (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product-card .product-category {
     font-size: 16px;
-    line-height: 22px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .product-card .product-category {
+    font-size: 25px;
   }
 }
 
 .product-card .product-title {
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 22px;
   color: #373434;
   text-align: left;
   max-width: 220px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-@media only screen and (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product-card .product-title {
     font-weight: 800;
     font-size: 18px;
-    line-height: 24px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .product-card .product-title {
+    font-size: 24px;
   }
 }
 
@@ -991,11 +1029,23 @@ body {
   margin-bottom: 0;
 }
 
+@media (min-width: 1800px) {
+  .product-card .product-price-old {
+    font-size: 24px;
+  }
+}
+
 .product-card .product-price {
   font-size: 16px;
   color: #373434;
   font-weight: 500;
   margin-bottom: 0;
+}
+
+@media (min-width: 1800px) {
+  .product-card .product-price {
+    font-size: 24px;
+  }
 }
 
 .product-card .btn-cart {
@@ -1008,9 +1058,17 @@ body {
   height: fit-content;
 }
 
-@media only screen and (min-width: 1440px) {
+@media (min-width: 1200px) {
   .product-card .btn-cart {
-    font-size: 18px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .product-card .btn-cart {
+    font-size: 24px;
+    padding: 14px 20px;
+    border-radius: 32px;
   }
 }
 
@@ -1180,9 +1238,21 @@ body {
   height: 424px;
 }
 
+@media (min-width: 992px) {
+  .homebanner-section {
+    height: 500px;
+  }
+}
+
 @media (min-width: 1200px) {
   .homebanner-section {
     height: 380px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .homebanner-section {
+    height: 600px;
   }
 }
 
@@ -1206,22 +1276,9 @@ body {
   text-align: center;
   color: white;
   z-index: 2;
-  /* Styles for larger screens (above 1200px) */
-  /* Styles for smaller screens (below 768px) */
 }
 
-@media (min-width: 1200px) {
-  .homebanner-section .homebanner-text {
-    top: 50%;
-    left: 100px;
-    /* Align to the left */
-    transform: translate(0, -50%);
-    /* Vertically centered, horizontally left */
-    text-align: left;
-  }
-}
-
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .homebanner-section .homebanner-text {
     top: 20px;
     /* Move to the top */
@@ -1232,6 +1289,18 @@ body {
     text-align: left;
     /* Left-align the text */
     max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homebanner-section .homebanner-text {
+    top: 50%;
+    left: 100px;
+    /* Align to the left */
+    transform: translate(0, -50%);
+    /* Vertically centered, horizontally left */
+    text-align: left;
+    max-width: 800px;
   }
 }
 
@@ -1246,6 +1315,14 @@ body {
   .homebanner-section .homebanner-text h4 {
     font-size: 40px;
     line-height: 48px;
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .homebanner-section .homebanner-text h4 {
+    font-size: 64px;
+    line-height: 72px;
   }
 }
 
@@ -1253,13 +1330,18 @@ body {
   font-weight: 400;
   max-width: 500px;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 1.3;
 }
 
 @media (min-width: 1200px) {
   .homebanner-section .homebanner-text p {
     font-size: 18px;
-    line-height: 28px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .homebanner-section .homebanner-text p {
+    font-size: 26px;
   }
 }
 
