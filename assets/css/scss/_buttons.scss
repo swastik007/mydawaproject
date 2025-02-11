@@ -5,6 +5,11 @@
     padding: 10px 40px;
     font-weight: 600;
     color: white;
+    font-size: 18px;
+    @include respond-to(xxl) {
+        padding: 16px 64px;
+        font-size: 28px;
+    }
     &:hover,
     &:focus {
         background-color: #d81b60;
@@ -19,6 +24,11 @@
     color: $black;
     border-radius: 10px;
     padding: 10px 40px;
+    font-size: 18px;
+    @include respond-to(xxl) {
+        padding: 16px 64px;
+        font-size: 28px;
+    }
     &:hover,
     &:focus {
         background-color: #ffffff;

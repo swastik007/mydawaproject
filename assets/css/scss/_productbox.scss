@@ -73,25 +73,29 @@
         color: #8A8A8A;
         font-weight: light;
         font-size: 14px;
-        line-height: 20px;
         text-align: left;
         margin-bottom: 2px;
-        @media only screen and (min-width: 1440px) {
+        line-height: 1.5;
+        @include respond-to(lg) {
             font-size: 16px;
-            line-height: 22px;
+        }
+        @include respond-to(xl) {
+            font-size: 25px;
         }
     }
     .product-title {
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 22px;
         color: $black;
         text-align: left;
         max-width: 220px;
-        @media only screen and (min-width: 1440px) {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1.6;
+        @include respond-to(lg) {
             font-weight: 800;
             font-size: 18px;
-            line-height: 24px;
+        }
+        @include respond-to(xxl) {
+            font-size: 24px;
         }
     }
     .product-price-old {
@@ -100,12 +104,18 @@
         font-size: 15px;
         font-weight: 500;
         margin-bottom: 0;
+        @include respond-to(xxl) {
+            font-size: 24px;
+        }
     }
     .product-price {
         font-size: 16px;
         color: $black;
         font-weight: 500;
         margin-bottom: 0;
+        @include respond-to(xxl) {
+            font-size: 24px;
+        }
     }
     .btn-cart {
         font-family: "Outfit", serif;
@@ -115,8 +125,13 @@
         color: white;
         padding: 10px 15px;
         height: fit-content;
-        @media only screen and (min-width: 1440px) {
-            font-size: 18px;
+        @include respond-to(lg) {
+            font-size: 20px;
+        }
+        @include respond-to(xxl) {
+            font-size: 24px;
+            padding: 14px 20px;
+            border-radius: 32px;
         }
     }
 }

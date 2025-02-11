@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 dots: false,
                 responsive: {
                     0: { items: 1 },
+                    400: { items: 2.8 },
                     768: { items: 3 },
                     1024: { items: 5 },
                     1920: { items: 7 },
@@ -107,7 +108,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
                 responsive: {
                     0: { items: 1 },
-                    768: { items: 2 },
+                    400: { items: 2 },
+                    768: { items: 3 },
                     1024: { items: 4 }
                 }
             });
@@ -157,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
                 responsive: {
                     0: { items: 1 },
+                    400: { items: 2.1 },
                     768: { items: 2 },
                     1024: { items: 4 }
                 }
@@ -531,4 +534,20 @@ $(document).ready(function() {
     $(window).resize(function() {
         initializeCarousel();
     });
+
+    // Health Category Carousel
+    if ($('#healthcategory-carousel').length) {
+        $('#healthcategory-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 3 },
+                1024: { items: 5 },
+                1920: { items: 7 },
+            }
+        });
+    }
 });
