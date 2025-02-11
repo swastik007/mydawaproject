@@ -416,8 +416,43 @@
             }
         }
     }
-    .faq-section {
+    .health-category-slider {
+        margin-top: 20px;
+        @media only screen and (min-width: 1440px) {
+            margin: 45px 60px 60px 60px;
+        }
+        .card img {
+            border-radius: 12px;
+            height: 150px;
+            object-fit: cover;
+            @media only screen and (min-width: 1440px) {
+                height: 280px;
+            }
+        }
+        .card-body {
+            padding-top: 10px;
+        }
+        .card-text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: $black;
+            padding: 5px 15px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+    .faq101-section {
         padding: 2rem;
+        background-color: #FFF9F9;
+        h4 {
+            color: $primary;
+        }
+        h3 {
+            color: $black;
+        }
         .faq {
             .question {
                 margin-bottom: 1rem;
@@ -425,21 +460,6 @@
                     margin-bottom: 0.5rem;
                     font-weight: bold;
                 }
-            }
-        }
-    }
-    .categories-section {
-        padding: 2rem;
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            .category {
-                flex: 1 1 20%;
-                margin: 0.5rem;
-                padding: 1rem;
-                background: #f8f8f8;
-                text-align: center;
-                border-radius: 8px;
             }
         }
     }

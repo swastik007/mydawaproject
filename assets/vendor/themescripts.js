@@ -531,4 +531,20 @@ $(document).ready(function() {
     $(window).resize(function() {
         initializeCarousel();
     });
+
+    // Health Category Carousel
+    if ($('#healthcategory-carousel').length) {
+        $('#healthcategory-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: { items: 1 },
+                768: { items: 3 },
+                1024: { items: 5 },
+                1920: { items: 7 },
+            }
+        });
+    }
 });

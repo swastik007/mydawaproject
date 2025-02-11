@@ -4232,35 +4232,67 @@ body {
   text-decoration: underline;
 }
 
-.health-center .faq-section {
-  padding: 2rem;
+.health-center .health-category-slider {
+  margin-top: 20px;
 }
 
-.health-center .faq-section .faq .question {
+@media only screen and (min-width: 1440px) {
+  .health-center .health-category-slider {
+    margin: 45px 60px 60px 60px;
+  }
+}
+
+.health-center .health-category-slider .card img {
+  border-radius: 12px;
+  height: 150px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 1440px) {
+  .health-center .health-category-slider .card img {
+    height: 280px;
+  }
+}
+
+.health-center .health-category-slider .card-body {
+  padding-top: 10px;
+}
+
+.health-center .health-category-slider .card-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #373434;
+  padding: 5px 15px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .health-center .health-category-slider .card-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.health-center .faq101-section {
+  padding: 2rem;
+  background-color: #FFF9F9;
+}
+
+.health-center .faq101-section h4 {
+  color: #e61b77;
+}
+
+.health-center .faq101-section h3 {
+  color: #373434;
+}
+
+.health-center .faq101-section .faq .question {
   margin-bottom: 1rem;
 }
 
-.health-center .faq-section .faq .question h4 {
+.health-center .faq101-section .faq .question h4 {
   margin-bottom: 0.5rem;
   font-weight: bold;
-}
-
-.health-center .categories-section {
-  padding: 2rem;
-}
-
-.health-center .categories-section .categories {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.health-center .categories-section .categories .category {
-  flex: 1 1 20%;
-  margin: 0.5rem;
-  padding: 1rem;
-  background: #f8f8f8;
-  text-align: center;
-  border-radius: 8px;
 }
 
 .health-center .cta-section {
