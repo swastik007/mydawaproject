@@ -922,6 +922,14 @@ body {
   border-radius: 0 0 7px 7px;
 }
 
+@media (min-width: 1800px) {
+  .product-card .sale-badge {
+    font-size: 20px;
+    padding: 5px 12px;
+    left: 30px;
+  }
+}
+
 .product-card .btn-wishlist {
   border-radius: 50%;
   border: 1px solid #e61b77;
@@ -938,10 +946,26 @@ body {
   align-items: center;
 }
 
+@media (min-width: 1800px) {
+  .product-card .btn-wishlist {
+    right: 25px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .product-card .btn-wishlist svg {
   width: 16px;
   height: 11px;
   fill: none;
+}
+
+@media (min-width: 1800px) {
+  .product-card .btn-wishlist svg {
+    width: 24px;
+    height: 17px;
+  }
 }
 
 .product-card .btn-wishlist:hover, .product-card .btn-wishlist:focus {
@@ -967,6 +991,12 @@ body {
   padding: 20px;
 }
 
+@media (min-width: 1800px) {
+  .product-card .img-box .product-img {
+    height: 400px;
+  }
+}
+
 .product-card .img-box .product-weight {
   position: absolute;
   right: -60px;
@@ -976,6 +1006,13 @@ body {
   border-radius: 20px;
   padding: 5px 20px;
   rotate: -90deg;
+}
+
+@media (min-width: 1800px) {
+  .product-card .img-box .product-weight {
+    padding: 8px 32px;
+    top: 120px !important;
+  }
 }
 
 .product-card .product-category {
@@ -1238,24 +1275,6 @@ body {
   height: 424px;
 }
 
-@media (min-width: 992px) {
-  .homebanner-section {
-    height: 500px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .homebanner-section {
-    height: 380px;
-  }
-}
-
-@media (min-width: 1800px) {
-  .homebanner-section {
-    height: 600px;
-  }
-}
-
 .homebanner-section picture,
 .homebanner-section img {
   display: block;
@@ -1292,7 +1311,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .homebanner-section .homebanner-text {
     top: 50%;
     left: 100px;
@@ -1328,7 +1347,6 @@ body {
 
 .homebanner-section .homebanner-text p {
   font-weight: 400;
-  max-width: 500px;
   font-size: 15px;
   line-height: 1.3;
 }

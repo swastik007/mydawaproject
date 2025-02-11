@@ -42,15 +42,6 @@
     /* Prevent overflow from the image */
     border-radius: 12px;
     height: 424px;
-    @include respond-to(md) {
-        height: 500px;
-    }
-    @include respond-to(lg) {
-        height: 380px;
-    }
-    @include respond-to(xxl) {
-        height: 600px;
-    }
     picture,
     img {
         display: block;
@@ -81,7 +72,7 @@
             /* Left-align the text */
             max-width: 250px;
         }
-        @include respond-to(lg) {
+        @include respond-to(md) {
             top: 50%;
             left: 100px;
             /* Align to the left */
@@ -107,7 +98,6 @@
         }
         p {
             font-weight: 400;
-            max-width: 500px;
             font-size: 15px;
             line-height: 1.3;
             @include respond-to(lg) {
