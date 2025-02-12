@@ -1,11 +1,17 @@
 .health-center {
-    margin: 10px 0;
-    @media (min-width: 1200px) {
-        margin: 30px 0;
-    }
     .health-banner {
         position: relative;
         width: 100%;
+        border-radius: 12px;
+        @include respond-to(md) {
+            height: 300px;
+        }
+        @include respond-to(lg) {
+            height: 360px;
+        }
+        @include respond-to(xxl) {
+            height: 400px;
+        }
         /* Ensure full width */
         overflow: hidden;
         /* Prevent overflow from the image */
@@ -28,17 +34,8 @@
             text-align: center;
             color: white;
             z-index: 2;
-            /* Styles for larger screens (above 1200px) */
-            @media (min-width: 1200px) {
-                top: 50%;
-                left: 100px;
-                /* Align to the left */
-                transform: translate(0, -50%);
-                /* Vertically centered, horizontally left */
-                text-align: left;
-            }
             /* Styles for smaller screens (below 768px) */
-            @media (max-width: 767px) {
+            @include respond-to(md) {
                 top: 20px;
                 /* Move to the top */
                 left: 20px;
@@ -49,83 +46,128 @@
                 /* Left-align the text */
                 max-width: 250px;
             }
+            /* Styles for larger screens (above 1200px) */
+            @include respond-to(lg) {
+                top: 50%;
+                left: 100px;
+                /* Align to the left */
+                transform: translate(0, -50%);
+                /* Vertically centered, horizontally left */
+                text-align: left;
+                max-width: 500px;
+            }
+            @include respond-to(xxl) {
+                left: 150px;
+                max-width: 700px;
+            }
             h2 {
                 font-size: 20px;
-                line-height: 24px;
+                line-height: 1.2;
                 font-weight: 300;
                 margin-bottom: 7px;
                 text-align: left;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 22px;
                     margin-bottom: 12px;
+                }
+                @include respond-to(lg) {
+                    font-size: 32px;
+                    margin-bottom: 16px;
                 }
             }
             h1 {
                 font-size: 36px;
-                line-height: 40px;
+                line-height: 1.2;
                 font-weight: 800;
                 margin: 0;
                 text-align: left;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 52px;
-                    line-height: 1.2;
-                    max-width: 400px;
+                    max-width: 500px;
+                }
+                @include respond-to(lg) {
+                    font-size: 70px;
+                    max-width: 700px;
                 }
             }
         }
     }
+    .health-banner.health-banner-footer {
+        margin: 30px 0;
+        height: 550px;
+        border-radius: 20px;
+        @include respond-to(lg) {
+            height: 420px;
+            margin: 60px 0;
+        }
+        @include respond-to(xxl) {
+            height: 550px;
+            margin: 100px 0;
+        }
+    }
     .healthintro-section {
         display: flex;
-        padding: 20px 0;
+        margin: 20px 0;
         position: relative;
         flex-direction: column;
+        @include respond-to(lg) {
+            margin: 60px 0;
+        }
+        @include respond-to(xxl) {
+            margin: 100px 0;
+        }
         .healthintro-img {
             flex: 1;
             width: 100%;
             padding: 10px;
-            @media (min-width: 1200px) {
-                position: absolute;
-                left: 50px;
+            @include respond-to(lg) {
                 width: 400px;
                 height: 400px;
                 object-fit: contain;
             }
+            @include respond-to(xxl) {
+                width: 650px;
+                height: 650px;
+            }
         }
         .healthintro-heading {
-            @media (min-width: 1200px) {
-                margin-left: 600px;
+            @include respond-to(lg) {
+                margin-top: 70px;
             }
             h3 {
                 font-size: 28px;
-                line-height: 36px;
+                line-height: 1.3;
                 font-weight: 800;
                 color: $black;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 40px;
-                    line-height: 1.2;
+                }
+                @include respond-to(xxl) {
+                    font-size: 64px;
                 }
             }
             p {
                 font-size: 18px;
-                line-height: 30px;
+                line-height: 1.5px;
                 color: $black;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 16px;
-                    line-height: 24px;
+                    line-height: 1.3;
+                }
+                @include respond-to(xxl) {
+                    font-size: 22px;
                 }
             }
         }
         .healthintro-content {
             flex: 1;
             margin-top: 30px;
-            @media (min-width: 1200px) {
-                margin-left: 600px;
-            }
+            @include respond-to(lg) {}
             ul.features-list {
                 list-style: none;
                 margin: 0;
                 padding: 0;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     display: flex;
                     flex-wrap: wrap;
                     margin-bottom: 20px;
@@ -156,7 +198,7 @@
                     line-height: 20px;
                     display: flex;
                     flex-direction: column;
-                    @media (min-width: 1200px) {
+                    @include respond-to(lg) {
                         font-size: 13px;
                         line-height: 1.6;
                         flex-direction: row;
@@ -198,35 +240,37 @@
         .healthsteps-heading {
             text-align: left;
             font-size: 28px;
-            font-weight: 700;
-            color: #2e2e2e;
+            font-weight: 800;
+            color: $black;
             margin-bottom: 40px;
             max-width: 330px;
-            @media (min-width: 1200px) {
-                font-size: 40px;
-                max-width: 100%;
+            @include respond-to(lg) {
+                font-size: 32px;
+                max-width: 600px;
+            }
+            @include respond-to(lg) {
+                font-size: 55px;
+                max-width: 1200px;
             }
         }
         .healthsteps-container {
-            @media (min-width: 1200px) {
+            display: block;
+            .owl-carousel .owl-stage {
+                display: flex;
+                gap: 15px;
+            }
+            .owl-carousel .owl-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @include respond-to(lg) {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 20px;
                 .owl-stage {
                     display: unset;
                     /* Prevent Owl Carousel interference */
-                }
-            }
-            @media (max-width: 1199px) {
-                display: block;
-                .owl-carousel .owl-stage {
-                    display: flex;
-                    gap: 15px;
-                }
-                .owl-carousel .owl-item {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                 }
             }
         }
@@ -308,7 +352,7 @@
     }
     .healthjourney-section {
         margin: 20px 0;
-        @media (min-width: 1200px) {
+        @include respond-to(lg) {
             margin: 30px 0;
         }
         .healthjourney-heading {
@@ -318,7 +362,7 @@
             color: #2e2e2e;
             margin-bottom: 0px;
             max-width: 288px;
-            @media (min-width: 1200px) {
+            @include respond-to(lg) {
                 font-size: 32px;
                 max-width: 500px;
             }
@@ -328,13 +372,13 @@
             line-height: 30px;
             font-weight: 400;
             max-width: 270px;
-            @media (min-width: 1200px) {
+            @include respond-to(lg) {
                 max-width: 670px;
             }
         }
         .healthjourney-container {
             margin: 50px 0;
-            @media (min-width: 1200px) {
+            @include respond-to(lg) {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 20px;
@@ -371,7 +415,7 @@
                 @media (min-width: 768px) {
                     height: 280px;
                 }
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     height: 260px;
                 }
             }
@@ -384,7 +428,7 @@
                 position: absolute;
                 top: 10px;
                 left: 10px;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     top: 30px;
                     left: 30px;
                 }
@@ -399,7 +443,7 @@
                 left: 10px;
                 text-align: left;
                 max-width: 270px;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     top: 65px;
                     left: 30px;
                     line-height: 1.3;

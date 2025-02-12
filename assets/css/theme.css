@@ -4581,22 +4581,31 @@ body {
   background-color: #ddd;
 }
 
-.health-center {
-  margin: 10px 0;
-}
-
-@media (min-width: 1200px) {
-  .health-center {
-    margin: 30px 0;
-  }
-}
-
 .health-center .health-banner {
   position: relative;
   width: 100%;
+  border-radius: 12px;
   /* Ensure full width */
   overflow: hidden;
   /* Prevent overflow from the image */
+}
+
+@media (min-width: 992px) {
+  .health-center .health-banner {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .health-center .health-banner {
+    height: 360px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .health-center .health-banner {
+    height: 400px;
+  }
 }
 
 .health-center .health-banner picture,
@@ -4619,22 +4628,11 @@ body {
   text-align: center;
   color: white;
   z-index: 2;
-  /* Styles for larger screens (above 1200px) */
   /* Styles for smaller screens (below 768px) */
+  /* Styles for larger screens (above 1200px) */
 }
 
-@media (min-width: 1200px) {
-  .health-center .health-banner .health-banner-text {
-    top: 50%;
-    left: 100px;
-    /* Align to the left */
-    transform: translate(0, -50%);
-    /* Vertically centered, horizontally left */
-    text-align: left;
-  }
-}
-
-@media (max-width: 767px) {
+@media (min-width: 992px) {
   .health-center .health-banner .health-banner-text {
     top: 20px;
     /* Move to the top */
@@ -4648,9 +4646,28 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .health-center .health-banner .health-banner-text {
+    top: 50%;
+    left: 100px;
+    /* Align to the left */
+    transform: translate(0, -50%);
+    /* Vertically centered, horizontally left */
+    text-align: left;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .health-center .health-banner .health-banner-text {
+    left: 150px;
+    max-width: 700px;
+  }
+}
+
 .health-center .health-banner .health-banner-text h2 {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
   font-weight: 300;
   margin-bottom: 7px;
   text-align: left;
@@ -4663,9 +4680,16 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .health-center .health-banner .health-banner-text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+
 .health-center .health-banner .health-banner-text h1 {
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.2;
   font-weight: 800;
   margin: 0;
   text-align: left;
@@ -4674,16 +4698,54 @@ body {
 @media (min-width: 1200px) {
   .health-center .health-banner .health-banner-text h1 {
     font-size: 52px;
-    line-height: 1.2;
-    max-width: 400px;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .health-center .health-banner .health-banner-text h1 {
+    font-size: 70px;
+    max-width: 700px;
+  }
+}
+
+.health-center .health-banner.health-banner-footer {
+  margin: 30px 0;
+  height: 550px;
+  border-radius: 20px;
+}
+
+@media (min-width: 1200px) {
+  .health-center .health-banner.health-banner-footer {
+    height: 420px;
+    margin: 60px 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .health-center .health-banner.health-banner-footer {
+    height: 550px;
+    margin: 100px 0;
   }
 }
 
 .health-center .healthintro-section {
   display: flex;
-  padding: 20px 0;
+  margin: 20px 0;
   position: relative;
   flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .health-center .healthintro-section {
+    margin: 60px 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .health-center .healthintro-section {
+    margin: 100px 0;
+  }
 }
 
 .health-center .healthintro-section .healthintro-img {
@@ -4694,23 +4756,28 @@ body {
 
 @media (min-width: 1200px) {
   .health-center .healthintro-section .healthintro-img {
-    position: absolute;
-    left: 50px;
     width: 400px;
     height: 400px;
     object-fit: contain;
   }
 }
 
+@media (min-width: 1800px) {
+  .health-center .healthintro-section .healthintro-img {
+    width: 650px;
+    height: 650px;
+  }
+}
+
 @media (min-width: 1200px) {
   .health-center .healthintro-section .healthintro-heading {
-    margin-left: 600px;
+    margin-top: 70px;
   }
 }
 
 .health-center .healthintro-section .healthintro-heading h3 {
   font-size: 28px;
-  line-height: 36px;
+  line-height: 1.3;
   font-weight: 800;
   color: #373434;
 }
@@ -4718,32 +4785,37 @@ body {
 @media (min-width: 1200px) {
   .health-center .healthintro-section .healthintro-heading h3 {
     font-size: 40px;
-    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1800px) {
+  .health-center .healthintro-section .healthintro-heading h3 {
+    font-size: 64px;
   }
 }
 
 .health-center .healthintro-section .healthintro-heading p {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.5px;
   color: #373434;
 }
 
 @media (min-width: 1200px) {
   .health-center .healthintro-section .healthintro-heading p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 1800px) {
+  .health-center .healthintro-section .healthintro-heading p {
+    font-size: 22px;
   }
 }
 
 .health-center .healthintro-section .healthintro-content {
   flex: 1;
   margin-top: 30px;
-}
-
-@media (min-width: 1200px) {
-  .health-center .healthintro-section .healthintro-content {
-    margin-left: 600px;
-  }
 }
 
 .health-center .healthintro-section .healthintro-content ul.features-list {
@@ -4837,17 +4909,39 @@ body {
 .health-center .healthsteps-section .healthsteps-heading {
   text-align: left;
   font-size: 28px;
-  font-weight: 700;
-  color: #2e2e2e;
+  font-weight: 800;
+  color: #373434;
   margin-bottom: 40px;
   max-width: 330px;
 }
 
 @media (min-width: 1200px) {
   .health-center .healthsteps-section .healthsteps-heading {
-    font-size: 40px;
-    max-width: 100%;
+    font-size: 32px;
+    max-width: 600px;
   }
+}
+
+@media (min-width: 1200px) {
+  .health-center .healthsteps-section .healthsteps-heading {
+    font-size: 55px;
+    max-width: 1200px;
+  }
+}
+
+.health-center .healthsteps-section .healthsteps-container {
+  display: block;
+}
+
+.health-center .healthsteps-section .healthsteps-container .owl-carousel .owl-stage {
+  display: flex;
+  gap: 15px;
+}
+
+.health-center .healthsteps-section .healthsteps-container .owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 1200px) {
@@ -4859,21 +4953,6 @@ body {
   .health-center .healthsteps-section .healthsteps-container .owl-stage {
     display: unset;
     /* Prevent Owl Carousel interference */
-  }
-}
-
-@media (max-width: 1199px) {
-  .health-center .healthsteps-section .healthsteps-container {
-    display: block;
-  }
-  .health-center .healthsteps-section .healthsteps-container .owl-carousel .owl-stage {
-    display: flex;
-    gap: 15px;
-  }
-  .health-center .healthsteps-section .healthsteps-container .owl-carousel .owl-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
