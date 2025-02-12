@@ -1999,7 +1999,24 @@ body {
   color: #373434;
 }
 
-.step-navigation .steps .step {
+.submit-prescription {
+  margin-bottom: 30px;
+  /* Actions Section */
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription {
+    margin-bottom: 80px;
+  }
+}
+
+.submit-prescription .step-navigation .steps .step {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -2007,11 +2024,11 @@ body {
   font-weight: 500;
 }
 
-.step-navigation .steps .step.active {
+.submit-prescription .step-navigation .steps .step.active {
   font-weight: 600;
 }
 
-.step-navigation .steps .step .step-circle {
+.submit-prescription .step-navigation .steps .step .step-circle {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -2025,46 +2042,46 @@ body {
   margin-right: 5px;
 }
 
-.step-navigation .steps .step.complete .step-circle {
+.submit-prescription .step-navigation .steps .step.complete .step-circle {
   background: #45a85c;
   color: #fff;
 }
 
-.step-navigation .steps .step.complete .step-circle i {
+.submit-prescription .step-navigation .steps .step.complete .step-circle i {
   color: #fff;
   font-size: 18px;
 }
 
-.step-navigation .steps .step.active .step-circle {
+.submit-prescription .step-navigation .steps .step.active .step-circle {
   background: #516bf1;
   color: #fff;
 }
 
-.prescription-wrap {
+.submit-prescription .prescription-wrap {
   max-width: 600px;
   margin: 0 auto;
   /* Uploaded File Section */
   /* Payment Section */
 }
 
-.prescription-wrap .prescription-heading {
+.submit-prescription .prescription-wrap .prescription-heading {
   text-align: left;
 }
 
-.prescription-wrap .prescription-heading h3 {
+.submit-prescription .prescription-wrap .prescription-heading h3 {
   font-size: 20px;
   font-weight: 600;
   color: #373434;
   margin-bottom: 0;
 }
 
-.prescription-wrap .prescription-heading p {
+.submit-prescription .prescription-wrap .prescription-heading p {
   font-weight: 300;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.prescription-wrap .upload-section {
+.submit-prescription .prescription-wrap .upload-section {
   margin-top: 10px;
   padding: 30px;
   border-radius: 12px;
@@ -2072,7 +2089,7 @@ body {
   text-align: center;
 }
 
-.prescription-wrap .upload-section .upload-box .icon {
+.submit-prescription .prescription-wrap .upload-section .upload-box .icon {
   background-color: #f1f1f5;
   display: flex;
   justify-content: center;
@@ -2083,20 +2100,20 @@ body {
   border-radius: 50%;
 }
 
-.prescription-wrap .upload-section .upload-box .icon .file-upload-icon {
+.submit-prescription .prescription-wrap .upload-section .upload-box .icon .file-upload-icon {
   width: 28px;
   height: 28px;
   object-fit: contain;
 }
 
-.prescription-wrap .upload-section .upload-box p {
+.submit-prescription .prescription-wrap .upload-section .upload-box p {
   color: #000;
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
 }
 
-.prescription-wrap .upload-notice {
+.submit-prescription .prescription-wrap .upload-notice {
   background-color: #f6f6f8;
   display: flex;
   justify-content: flex-start;
@@ -2106,22 +2123,22 @@ body {
   border-radius: 12px;
 }
 
-.prescription-wrap .upload-notice i {
+.submit-prescription .prescription-wrap .upload-notice i {
   margin-right: 7px;
 }
 
-.prescription-wrap .upload-notice span {
+.submit-prescription .prescription-wrap .upload-notice span {
   color: #373434;
   font-size: 14px;
   font-weight: 500;
   display: block;
 }
 
-.prescription-wrap .uploaded-file-section {
+.submit-prescription .prescription-wrap .uploaded-file-section {
   margin-bottom: 20px;
 }
 
-.prescription-wrap .uploaded-file-section .file-item {
+.submit-prescription .prescription-wrap .uploaded-file-section .file-item {
   display: flex;
   align-items: center;
   border: 1px solid #ddd;
@@ -2131,30 +2148,30 @@ body {
   gap: 15px;
 }
 
-.prescription-wrap .uploaded-file-section .file-image {
+.submit-prescription .prescription-wrap .uploaded-file-section .file-image {
   width: 50px;
   height: 50px;
   border-radius: 8px;
   object-fit: cover;
 }
 
-.prescription-wrap .uploaded-file-section .file-info {
+.submit-prescription .prescription-wrap .uploaded-file-section .file-info {
   flex-grow: 1;
 }
 
-.prescription-wrap .uploaded-file-section .file-name {
+.submit-prescription .prescription-wrap .uploaded-file-section .file-name {
   margin: 0;
   font-weight: bold;
   font-size: 16px;
   color: #000;
 }
 
-.prescription-wrap .uploaded-file-section .file-details {
+.submit-prescription .prescription-wrap .uploaded-file-section .file-details {
   font-size: 14px;
   color: #888;
 }
 
-.prescription-wrap .uploaded-file-section .delete-button {
+.submit-prescription .prescription-wrap .uploaded-file-section .delete-button {
   background: none;
   border: none;
   color: #e61b77;
@@ -2164,107 +2181,107 @@ body {
   margin-left: auto;
 }
 
-.prescription-wrap .uploaded-file-section .delete-button:hover {
+.submit-prescription .prescription-wrap .uploaded-file-section .delete-button:hover {
   color: #ff4081;
 }
 
-.prescription-wrap .payment-section {
+.submit-prescription .prescription-wrap .payment-section {
   margin-bottom: 20px;
 }
 
-.prescription-wrap .payment-section .payment-heading {
+.submit-prescription .prescription-wrap .payment-section .payment-heading {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
   color: #373434;
 }
 
-.prescription-wrap .payment-section .radio-wrap {
+.submit-prescription .prescription-wrap .payment-section .radio-wrap {
   display: flex;
   justify-content: flex-start;
 }
 
-.prescription-wrap .payment-section .radio-item {
+.submit-prescription .prescription-wrap .payment-section .radio-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   margin-right: 10px;
 }
 
-.prescription-wrap .payment-section .radio-item input[type="radio"] {
+.submit-prescription .prescription-wrap .payment-section .radio-item input[type="radio"] {
   width: 16px;
   height: 16px;
   accent-color: #e61b77;
   cursor: pointer;
 }
 
-.prescription-wrap .payment-section .radio-item label {
+.submit-prescription .prescription-wrap .payment-section .radio-item label {
   font-size: 16px;
   color: #373434;
   cursor: pointer;
   margin-left: 7px;
 }
 
-.recipient-form {
+.submit-prescription .recipient-form {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.recipient-form .form-title {
+.submit-prescription .recipient-form .form-title {
   font-size: 24px;
   font-weight: bold;
   color: #000;
   margin-bottom: 5px;
 }
 
-.recipient-form .form-subtitle {
+.submit-prescription .recipient-form .form-subtitle {
   font-size: 14px;
   color: #555;
   margin-bottom: 20px;
 }
 
-.recipient-form .radio-section {
+.submit-prescription .recipient-form .radio-section {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
 }
 
-.recipient-form .radio-section .radio-option {
+.submit-prescription .recipient-form .radio-section .radio-option {
   font-size: 14px;
   color: #000;
 }
 
-.recipient-form .radio-section .radio-option input[type="radio"] {
+.submit-prescription .recipient-form .radio-section .radio-option input[type="radio"] {
   margin-right: 5px;
   cursor: pointer;
 }
 
-.recipient-form .input-row {
+.submit-prescription .recipient-form .input-row {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
 }
 
-.recipient-form .input-row .input-group {
+.submit-prescription .recipient-form .input-row .input-group {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.recipient-form .input-row .input-group label {
+.submit-prescription .recipient-form .input-row .input-group label {
   font-size: 14px;
   color: #373434;
   margin-bottom: 5px;
   font-weight: 300;
 }
 
-.recipient-form .input-row .input-group label .required {
+.submit-prescription .recipient-form .input-row .input-group label .required {
   color: #e61b77;
 }
 
-.recipient-form .input-row .input-group input,
-.recipient-form .input-row .input-group select,
-.recipient-form .input-row .input-group textarea {
+.submit-prescription .recipient-form .input-row .input-group input,
+.submit-prescription .recipient-form .input-row .input-group select,
+.submit-prescription .recipient-form .input-row .input-group textarea {
   border: 1px solid #ccc;
   border-radius: 8px !important;
   padding: 10px;
@@ -2274,31 +2291,31 @@ body {
   transition: all 0.3s ease;
 }
 
-.recipient-form .input-row .input-group input:focus,
-.recipient-form .input-row .input-group select:focus,
-.recipient-form .input-row .input-group textarea:focus {
+.submit-prescription .recipient-form .input-row .input-group input:focus,
+.submit-prescription .recipient-form .input-row .input-group select:focus,
+.submit-prescription .recipient-form .input-row .input-group textarea:focus {
   border: 2px solid;
   border-color: #516bf1;
 }
 
-.recipient-form .input-row .input-group select {
+.submit-prescription .recipient-form .input-row .input-group select {
   appearance: none;
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23000' d='M0 0h10L5 6z'/%3E%3C/svg%3E") no-repeat right 10px center;
   background-size: 10px 6px;
 }
 
-.recipient-form .input-row .input-group .calendar-icon {
+.submit-prescription .recipient-form .input-row .input-group .calendar-icon {
   position: absolute;
   right: 10px;
   top: 35px;
 }
 
-.recipient-form .textarea-wrap {
+.submit-prescription .recipient-form .textarea-wrap {
   display: flex;
   flex-direction: column;
 }
 
-.recipient-form .textarea-label {
+.submit-prescription .recipient-form .textarea-label {
   font-size: 14px;
   color: #373434;
   margin-bottom: 5px;
@@ -2307,7 +2324,7 @@ body {
   display: block;
 }
 
-.recipient-form textarea {
+.submit-prescription .recipient-form textarea {
   min-height: 80px;
   resize: none;
   width: 100%;
@@ -2319,19 +2336,18 @@ body {
   outline: none;
 }
 
-/* Actions Section */
-.actions-section {
+.submit-prescription .actions-section {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
 }
 
-.actions-section button.btn-white-border.btn-rounded {
+.submit-prescription .actions-section button.btn-white-border.btn-rounded {
   padding: 15px 20px;
 }
 
-.actions-section button i {
+.submit-prescription .actions-section button i {
   font-size: 18px;
   margin-right: 7px;
 }

@@ -34,55 +34,56 @@
                         <li><a href="#" class="active">Submit a Prescription</a></li>
                     </ul>
                 </nav>
-                <!-- Step Navigation -->
-                <div class="step-navigation mb-4">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <h4 class="section-heading">Step 1</h4>
-                        <ul class="steps list-inline d-flex align-items-center gap-3">
-                            <li class="list-inline-item step complete">
-                                <span class="step-circle"><i class="bi bi-check"></i></span> Upload Your Attachments
-                            </li>
-                            <li class="list-inline-item step active">
-                                <span class="step-circle">2</span> Set Your Recipient
-                            </li>
-                            <li class="list-inline-item step">
-                                <span class="step-circle">3</span> Payment
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="prescription-wrap">
-                    <!-- Title Section -->
-                    <div class="prescription-heading">
-                        <h3>Upload Your Prescription</h3>
-                        <p>Your prescription is required for us to verify and proceed to the next step.</p>
-                    </div>
-
-                    <!-- Upload Section -->
-                    <div class="upload-section">
-                        <div class="upload-box">
-                            <div class="icon">
-                                <img src="assets/images/icons/file-upload.png" class="file-upload-icon">
-                            </div>
-                            <p>Drag and drop your image or choose a PDF from your device to get started!</p>
-
+                <div class="mydawa-container submit-prescription">
+                    <!-- Step Navigation -->
+                    <div class="step-navigation mb-4">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h4 class="section-heading">Step 1</h4>
+                            <ul class="steps list-inline d-flex align-items-center gap-3">
+                                <li class="list-inline-item step complete">
+                                    <span class="step-circle"><i class="bi bi-check"></i></span> Upload Your Attachments
+                                </li>
+                                <li class="list-inline-item step active">
+                                    <span class="step-circle">2</span> Set Your Recipient
+                                </li>
+                                <li class="list-inline-item step">
+                                    <span class="step-circle">3</span> Payment
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="upload-notice">
-                        <i class="bi bi-exclamation-circle"></i>
-                        <span>Image or PDF file size must be under 250 MB.</span>
-                    </div>
+                    <div class="prescription-wrap">
+                        <!-- Title Section -->
+                        <div class="prescription-heading">
+                            <h3>Upload Your Prescription</h3>
+                            <p>Your prescription is required for us to verify and proceed to the next step.</p>
+                        </div>
 
+                        <!-- Upload Section -->
+                        <div class="upload-section">
+                            <div class="upload-box">
+                                <div class="icon">
+                                    <img src="assets/images/icons/file-upload.png" class="file-upload-icon">
+                                </div>
+                                <p>Drag and drop your image or choose a PDF from your device to get started!</p>
 
-                    <!-- Uploaded File Section -->
-                    <div class="uploaded-file-section">
-                        <div class="file-item">
-                            <img src="assets/images/prescription-img.png" alt="Prescription File" class="file-image" />
-                            <div class="file-info">
-                                <p class="file-name">Prescription_File_Name</p>
-                                <small class="file-details">JPEG . 12 MB</small>
                             </div>
-                            <button class="delete-button">
+                        </div>
+                        <div class="upload-notice">
+                            <i class="bi bi-exclamation-circle"></i>
+                            <span>Image or PDF file size must be under 250 MB.</span>
+                        </div>
+
+
+                        <!-- Uploaded File Section -->
+                        <div class="uploaded-file-section">
+                            <div class="file-item">
+                                <img src="assets/images/prescription-img.png" alt="Prescription File" class="file-image" />
+                                <div class="file-info">
+                                    <p class="file-name">Prescription_File_Name</p>
+                                    <small class="file-details">JPEG . 12 MB</small>
+                                </div>
+                                <button class="delete-button">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" fill="white" stroke="#E61B77"/>
                                     <path d="M25.4974 12.1673H22.9974V11.334C22.9974 10.6709 22.734 10.0351 22.2652 9.56622C21.7963 9.09738 21.1604 8.83398 20.4974 8.83398H15.4974C14.8344 8.83398 14.1985 9.09738 13.7296 9.56622C13.2608 10.0351 12.9974 10.6709 12.9974 11.334V12.1673H10.4974C10.2764 12.1673 10.0644 12.2551 9.90814 12.4114C9.75186 12.5677 9.66406 12.7796 9.66406 13.0007C9.66406 13.2217 9.75186 13.4336 9.90814 13.5899C10.0644 13.7462 10.2764 13.834 10.4974 13.834H10.5474L11.1391 23.259C11.2049 24.3187 11.6728 25.3133 12.4472 26.0396C13.2215 26.766 14.244 27.1694 15.3057 27.1673H20.7057C21.7675 27.1694 22.7899 26.766 23.5643 26.0396C24.3387 25.3133 24.8066 24.3187 24.8724 23.259L25.4474 13.834H25.4974C25.7184 13.834 25.9304 13.7462 26.0867 13.5899C26.2429 13.4336 26.3307 13.2217 26.3307 13.0007C26.3307 12.7796 26.2429 12.5677 26.0867 12.4114C25.9304 12.2551 25.7184 12.1673 25.4974 12.1673ZM14.6641 11.334C14.6641 11.113 14.7519 10.901 14.9081 10.7447C15.0644 10.5884 15.2764 10.5007 15.4974 10.5007H20.4974C20.7184 10.5007 20.9304 10.5884 21.0867 10.7447C21.2429 10.901 21.3307 11.113 21.3307 11.334V12.1673H14.6641V11.334ZM23.1974 23.159C23.1571 23.7942 22.876 24.3901 22.4115 24.8253C21.9469 25.2604 21.3339 25.5019 20.6974 25.5007H15.2974C14.6609 25.5019 14.0479 25.2604 13.5833 24.8253C13.1188 24.3901 12.8377 23.7942 12.7974 23.159L12.2141 13.834H23.7807L23.1974 23.159Z" fill="#E61B77"/>
@@ -90,32 +91,34 @@
                                     <path d="M19.6615 16.334C19.4404 16.334 19.2285 16.4218 19.0722 16.5781C18.9159 16.7343 18.8281 16.9463 18.8281 17.1673V22.1673C18.8281 22.3883 18.9159 22.6003 19.0722 22.7566C19.2285 22.9129 19.4404 23.0007 19.6615 23.0007C19.8825 23.0007 20.0944 22.9129 20.2507 22.7566C20.407 22.6003 20.4948 22.3883 20.4948 22.1673V17.1673C20.4948 16.9463 20.407 16.7343 20.2507 16.5781C20.0944 16.4218 19.8825 16.334 19.6615 16.334Z" fill="#E61B77"/>
                                 </svg>
                             </button>
-                        </div>
-                    </div>
-
-                    <!-- Payment Section -->
-                    <div class="payment-section">
-                        <h5 class="payment-heading">Payment Method</h5>
-                        <div class="radio-wrap">
-                            <div class="radio-item">
-                                <input type="radio" name="paymentMethod" id="selfPay" checked>
-                                <label for="selfPay">Self Pay</label>
-                            </div>
-                            <div class="radio-item">
-                                <input type="radio" name="paymentMethod" id="insurance">
-                                <label for="insurance">Insurance</label>
                             </div>
                         </div>
 
-                    </div>
+                        <!-- Payment Section -->
+                        <div class="payment-section">
+                            <h5 class="payment-heading">Payment Method</h5>
+                            <div class="radio-wrap">
+                                <div class="radio-item">
+                                    <input type="radio" name="paymentMethod" id="selfPay" checked>
+                                    <label for="selfPay">Self Pay</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" name="paymentMethod" id="insurance">
+                                    <label for="insurance">Insurance</label>
+                                </div>
+                            </div>
 
-                    <!-- Actions Section -->
-                    <div class="actions-section">
-                        <button class="btn-white-border btn-rounded me-2">Talk to a doctor</button>
-                        <button class="btn-green btn-rounded">Continue</button>
-                    </div>
+                        </div>
 
+                        <!-- Actions Section -->
+                        <div class="actions-section">
+                            <button class="btn-white-border btn-rounded me-2">Talk to a doctor</button>
+                            <button class="btn-green btn-rounded">Continue</button>
+                        </div>
+
+                    </div>
                 </div>
+
 
             </div>
 
