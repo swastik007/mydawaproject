@@ -1,3 +1,43 @@
+.mydawa-container {
+  margin: 0 auto;
+}
+
+@media (min-width: 440px) {
+  .mydawa-container {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mydawa-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mydawa-container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mydawa-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .mydawa-container {
+    max-width: 1560px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .mydawa-container {
+    max-width: 1730px;
+  }
+}
+
 body {
   font-family: 'Figtree', sans-serif;
 }
@@ -1272,7 +1312,28 @@ body {
   overflow: hidden;
   /* Prevent overflow from the image */
   border-radius: 12px;
-  height: 424px;
+  height: 412px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .homebanner-section {
+    height: 424px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homebanner-section {
+    height: 424px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .homebanner-section {
+    height: 540px;
+    margin-bottom: 70px;
+  }
 }
 
 .homebanner-section picture,
@@ -2750,6 +2811,153 @@ body {
 .product-page .related-products .related-products-list .related-product-card img {
   max-width: 100%;
   height: auto;
+}
+
+/* SCSS for Cart Page */
+.cart-container .cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-container .cart-steps {
+  display: flex;
+  gap: 15px;
+}
+
+.cart-container .cart-steps .step {
+  padding: 8px 12px;
+  border-radius: 15px;
+  background: #eee;
+}
+
+.cart-container .cart-steps .step.active {
+  background: #4A90E2;
+  color: white;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item .item-image {
+  width: 50px;
+  height: 50px;
+}
+
+.cart-item .item-details {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.cart-item .item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item .item-quantity button {
+  background: #ddd;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart-item .item-price {
+  font-weight: bold;
+}
+
+.cart-item .delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.discreet {
+  position: relative;
+}
+
+.discreet .discreet-tag {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: #ff4b5c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.cart-summary {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-summary .coupon-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-summary .coupon-box input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cart-summary .coupon-box button {
+  background: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-summary .price-details {
+  margin-top: 20px;
+}
+
+.cart-summary .price-details p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-summary .price-details .cart-total {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.cart-summary .price-details .proceed {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cart-summary .price-details .info {
+  font-size: 0.9em;
+  color: #888;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cart-content {
+    flex-direction: column;
+  }
+  .cart-items,
+  .cart-summary {
+    width: 100%;
+  }
 }
 
 .faq-page {

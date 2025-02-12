@@ -41,7 +41,19 @@
     overflow: hidden;
     /* Prevent overflow from the image */
     border-radius: 12px;
-    height: 424px;
+    height: 412px;
+    margin-bottom: 30px;
+    @include respond-to(sm) {
+        height: 424px;
+    }
+    @include respond-to(lg) {
+        height: 424px;
+        margin-bottom: 50px;
+    }
+    @include respond-to(xxl) {
+        height: 540px;
+        margin-bottom: 70px;
+    }
     picture,
     img {
         display: block;
