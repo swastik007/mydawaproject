@@ -1,29 +1,32 @@
 .faq-page {
-    margin: 30px 10px;
-    @media (min-width: 1200px) {
-        margin: 30px 30px 50px 30px;
-    }
     .section-heading {
         max-width: 221px;
         line-height: 1.2;
-        @media (min-width: 1200px) {
+        @include respond-to(lg) {
             max-width: 336px;
+        }
+        @include respond-to(xxl) {
+            max-width: 600px;
         }
     }
     .faq-container {
         display: flex;
         gap: 20px;
         flex-direction: column;
-        @media (min-width: 1200px) {
+        @include respond-to(lg) {
             flex-direction: row;
         }
     }
     /* Sidebar Navigation */
     .faq-sidebar {
         flex: 1;
-        @media (min-width: 1200px) {
+        @include respond-to(lg) {
             max-width: 288px;
             margin-right: 20px;
+        }
+        @include respond-to(xxl) {
+            max-width: 450px;
+            margin-right: 32px;
         }
         .faq-menu {
             list-style: none;
@@ -38,7 +41,7 @@
             /* Firefox */
             -ms-overflow-style: none;
             /* Internet Explorer 10+ */
-            @media (min-width: 1200px) {
+            @include respond-to(lg) {
                 flex-direction: column;
             }
             .faq-menu-item {
@@ -49,18 +52,22 @@
                 font-weight: 500;
                 padding: 7px 10px;
                 text-wrap: nowrap;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     padding: 10px 20px;
                     border: none;
                     border-radius: 8px;
                     font-size: 16px;
+                }
+                @include respond-to(xxl) {
+                    padding: 16px 32px;
+                    font-size: 22px;
                 }
                 &.active {
                     background-color: transparent;
                     color: $black;
                     border-bottom: 2px solid $black;
                     font-weight: 700;
-                    @media (min-width: 1200px) {
+                    @include respond-to(lg) {
                         background-color: #F9F9F9;
                         border-bottom: transparent;
                     }
@@ -69,7 +76,7 @@
                     border-bottom: 1px solid $black;
                     color: $black;
                     font-weight: 700;
-                    @media (min-width: 1200px) {
+                    @include respond-to(lg) {
                         background-color: #F9F9F9;
                         border-bottom: transparent;
                     }
@@ -89,7 +96,7 @@
         padding: 10px 20px;
         border-radius: 8px;
         height: fit-content;
-        @media (min-width: 1200px) {
+        @include respond-to(lg) {
             padding: 10px 20px;
         }
         .faq-section {
@@ -99,21 +106,29 @@
                 font-weight: 700;
                 color: $black;
                 line-height: 28px;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 16px;
+                    line-height: 25px;
+                }
+                @include respond-to(xxl) {
+                    font-size: 22px;
                     line-height: 25px;
                 }
             }
             .faq-item {
                 padding: 12px 0;
                 border-top: 1px solid #F8F8F8;
+                @include respond-to(lg) {
+                    padding: 15px 0;
+                }
+                @include respond-to(xxl) {
+                    padding: 20px 0;
+                }
                 &:first-of-type {
                     border-top: none;
                 }
                 .faq-question {
                     background: transparent;
-                    font-size: 16px;
-                    font-weight: 500;
                     cursor: pointer;
                     color: $black;
                     width: 100%;
@@ -121,13 +136,22 @@
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
-                    @media (min-width: 1200px) {
+                    font-size: 16px;
+                    font-weight: 500;
+                    @include respond-to(lg) {
                         font-size: 14px;
+                    }
+                    @include respond-to(xxl) {
+                        font-size: 22px;
+                        line-height: 25px;
                     }
                     .faq-arrow {
                         transition: transform 0.3s ease;
                         font-size: 16px;
                         color: #868686;
+                        @include respond-to(xxl) {
+                            font-size: 22px;
+                        }
                     }
                     &:hover {
                         color: $primary;
@@ -140,10 +164,15 @@
                     background: #fff;
                     padding: 15px 0;
                     display: block;
-                    font-size: 16px;
                     color: #8D8D92;
-                    @media (min-width: 1200px) {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    @include respond-to(lg) {
                         font-size: 14px;
+                    }
+                    @include respond-to(xxl) {
+                        font-size: 22px;
                     }
                     &.hidden {
                         display: none;
@@ -164,8 +193,11 @@
             font-weight: 700;
             color: #373434;
             line-height: 28px;
+            @include respond-to(lg) {
+                font-size: 14px;
+            }
             @media (min-width: 1200px) {
-                font-size: 16px;
+                font-size: 22px;
                 line-height: 25px;
             }
         }
@@ -174,23 +206,32 @@
             display: block;
             font-size: 16px;
             color: #8D8D92;
-            @media (min-width: 1200px) {
+            @include respond-to(lg) {
                 font-size: 14px;
+            }
+            @include respond-to(xxl) {
+                font-size: 22px;
             }
             p {
                 margin-bottom: 10px;
                 font-weight: 500;
                 font-size: 16px;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 14px;
+                }
+                @include respond-to(xxl) {
+                    font-size: 18px;
                 }
             }
             ul {
                 li {
                     padding: 3px 0;
                     font-size: 15px;
-                    @media (min-width: 1200px) {
+                    @include respond-to(lg) {
                         font-size: 14px;
+                    }
+                    @include respond-to(xxl) {
+                        font-size: 22px;
                     }
                 }
             }
@@ -207,19 +248,24 @@
                 font-weight: 500;
                 margin-left: 7px;
                 display: block;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 12px;
+                }
+                @include respond-to(xxl) {
+                    font-size: 22px;
                 }
             }
         }
         strong {
             color: $black;
             font-size: 16px;
-            line-height: 24px;
+            line-height: 1.5;
             font-weight: 500;
-            @media (min-width: 1200px) {
-                line-height: 1.5;
+            @include respond-to(lg) {
                 font-size: 14px;
+            }
+            @include respond-to(xxl) {
+                font-size: 22px;
             }
         }
     }
@@ -235,9 +281,13 @@
     padding: 20px;
     position: relative;
     overflow: hidden;
-    @media (min-width: 1200px) {
+    @include respond-to(lg) {
         padding: 42px 34px;
         margin: 50px 0 0 0;
+    }
+    @include respond-to(xxl) {
+        padding: 64px 48px;
+        margin: 80px 0 80px 0;
     }
     .cant-find-container {
         display: flex;
@@ -248,7 +298,7 @@
         flex-direction: column;
         text-align: center;
         width: 100%;
-        @media (min-width: 1200px) {
+        @include respond-to(lg) {
             flex-direction: row;
             text-align: left;
             align-items: center;
@@ -260,7 +310,7 @@
             gap: 10px;
             text-align: left;
             max-width: 220px;
-            @media (min-width: 1200px) {
+            @include respond-to(lg) {
                 align-items: center;
                 max-width: 100%;
             }
@@ -268,7 +318,7 @@
                 position: absolute;
                 right: -20px;
                 top: -20px;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     position: static;
                     background-color: white;
                     border-radius: 50%;
@@ -281,7 +331,7 @@
                     width: 50px;
                     height: 50px;
                     display: none;
-                    @media (min-width: 1200px) {
+                    @include respond-to(lg) {
                         display: block;
                     }
                 }
@@ -291,17 +341,23 @@
                 font-weight: 900;
                 color: $black;
                 margin: 0;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 18px;
                     font-weight: 400;
+                }
+                @include respond-to(xxl) {
+                    font-size: 28px;
                 }
             }
             h3 {
                 font-size: 28px;
                 font-weight: 900;
                 color: $black;
-                @media (min-width: 1200px) {
+                @include respond-to(lg) {
                     font-size: 32px;
+                }
+                @include respond-to(xxl) {
+                    font-size: 48px;
                 }
             }
         }
@@ -309,9 +365,13 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            @media (min-width: 1200px) {
+            @include respond-to(lg) {
                 margin-left: 70px;
                 max-width: 400px;
+            }
+            @include respond-to(xxl) {
+                margin-left: 90px;
+                max-width: 760px;
             }
             .cant-find-button {
                 display: flex;
@@ -326,9 +386,17 @@
                 color: #2e2e2e;
                 text-decoration: none;
                 transition: all 0.3s ease;
+                @include respond-to(xxl) {
+                    font-size: 24px;
+                    padding: 16px 24px;
+                }
                 img {
                     width: 20px;
                     height: 20px;
+                    @include respond-to(xxl) {
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
                 &:hover {
                     background-color: #e5f0ff;
@@ -345,7 +413,7 @@
         right: 0;
         left: auto;
         bottom: auto;
-        @media (min-width: 1200px) {
+        @include respond-to(lg) {
             display: none;
         }
     }

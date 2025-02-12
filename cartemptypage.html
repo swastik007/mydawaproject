@@ -11,6 +11,7 @@
     <meta name="description" content="mydawa">
     <meta name="keywords" content="mydawa">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
@@ -29,95 +30,35 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <li><span class="divider">/</span></li>
-                        <li><a href="#">Services</a></li>
-                        <li><span class="divider">/</span></li>
-                        <li><a href="#" class="active">Submit a Prescription</a></li>
+                        <li><a href="#" class="active">Cart</a></li>
                     </ul>
                 </nav>
-
-                <div class="cart-page">
+                <div class="cart-container mydawa-container">
+                    <!-- Cart Title and Steps -->
                     <div class="cart-header">
-                        <div class="breadcrumb">
-                            <a href="#">Home</a> / <span>Cart</span>
+                        <h2 class="section-heading">My Cart</h2>
+                        <div class="cart-steps">
+                            <span class="step active">
+                                <span class="number">1</span> Cart Summary</span>
+                            <span class="step"><span class="number">2</span> Delivery Details</span>
+                            <span class="step"><span class="number">3</span> Payment</span>
                         </div>
-                        <h1>My Cart</h1>
-                        <p>3 Items Added</p>
                     </div>
 
-                    <div class="cart-content">
-                        <div class="cart-items">
-                            <div class="cart-item">
-                                <div class="item-details">
-                                    <img src="pampers-image.png" alt="Pampers">
-                                    <div>
-                                        <h3>Pampers Swaddlers 360 Pull-On Diapers, Size 5</h3>
-                                        <p>By Pampers</p>
-                                    </div>
-                                </div>
-                                <div class="quantity-control">
-                                    <button class="decrease">-</button>
-                                    <input type="text" value="1" />
-                                    <button class="increase">+</button>
-                                    <button class="remove">🗑️</button>
-                                </div>
-                                <div class="price">
-                                    <span class="old-price">KES 250</span>
-                                    <span class="current-price">KES 150</span>
-                                </div>
-                            </div>
 
-                            <div class="cart-item">
-                                <div class="item-details">
-                                    <img src="durex-image.png" alt="Durex">
-                                    <div>
-                                        <h3>Durex Condoms Featherlite 3's</h3>
-                                        <p>By Durex</p>
-                                        <span class="tag">Discreet Delivery Available</span>
-                                    </div>
-                                </div>
-                                <div class="quantity-control">
-                                    <button class="decrease">-</button>
-                                    <input type="text" value="1" />
-                                    <button class="increase">+</button>
-                                    <button class="remove">🗑️</button>
-                                </div>
-                                <div class="price">
-                                    <span class="old-price">KES 250</span>
-                                    <span class="current-price">KES 150</span>
-                                </div>
-                            </div>
-
-                            <!-- Additional Cart Items Here -->
+                    <div class="cart-content container-fluid">
+                        <div class="empty-cart">
+                            <img src="assets/images/icons/cart-bag.png" alt="Shopping Bag" class="cart-icon">
+                            <h2>Your Cart Is Empty</h2>
+                            <p>Looks like you haven’t added anything yet. Start exploring our products and fill your cart with everything you need!</p>
+                            <a href="#" class="btn-grey">Start Shopping</a>
                         </div>
 
-                        <aside class="cart-summary">
-                            <div class="coupon-box">
-                                <h3>Apply Coupon</h3>
-                                <input type="text" placeholder="Enter Coupon Code" />
-                                <button>Apply</button>
-                            </div>
 
-                            <div class="summary-totals">
-                                <p>Total MRP: <span>KES 750</span></p>
-                                <p>Discount: <span>- KES 300</span></p>
-                                <p class="total">Cart Total: <span>KES 450</span></p>
-                            </div>
 
-                            <button class="proceed">Proceed</button>
-                            <p>Delivery charges will be calculated in the next step</p>
-                        </aside>
-                    </div>
-
-                    <div class="cart-footer">
-                        <p>Add <span>KES 25</span> to your cart to qualify for free shipping</p>
-                        <a href="#">View Wishlist</a>
                     </div>
                 </div>
-
-
             </div>
-
-
         </main>
         <div id="footer"></div>
     </div>

@@ -11,6 +11,7 @@
     <meta name="description" content="mydawa">
     <meta name="keywords" content="mydawa">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
@@ -32,16 +33,15 @@
                         <li><a href="#" class="active">Cart</a></li>
                     </ul>
                 </nav>
-
-
                 <div class="cart-container mydawa-container">
                     <!-- Cart Title and Steps -->
                     <div class="cart-header">
-                        <h1>My Cart</h1>
+                        <h2 class="section-heading">My Cart</h2>
                         <div class="cart-steps">
-                            <span class="step active">1 Cart Summary</span>
-                            <span class="step">2 Delivery Details</span>
-                            <span class="step">3 Payment</span>
+                            <span class="step active">
+                                <span class="number">1</span> Cart Summary</span>
+                            <span class="step"><span class="number">2</span> Delivery Details</span>
+                            <span class="step"><span class="number">3</span> Payment</span>
                         </div>
                     </div>
 
@@ -51,60 +51,135 @@
                             <!-- Cart Items -->
                             <div class="col-md-9">
                                 <div class="cart-items">
-                                    <div class="cart-item">
-                                        <img src="assets/images/product-images/product1.png" alt="Pampers" class="item-image">
-                                        <div class="item-details">
-                                            <h3>Pampers Swaddlers 360 Pull-On Diapers, Size 5</h3>
-                                            <p>By Pampers</p>
-                                        </div>
-                                        <div class="item-quantity">
-                                            <button class="minus">-</button>
-                                            <span>1</span>
-                                            <button class="plus">+</button>
-                                        </div>
-                                        <p class="item-price"><s>KES 250</s> KES 150</p>
-                                        <button class="delete">🗑</button>
+                                    <!-- Table Header (Only Visible on Large Screens) -->
+                                    <div class="cart-header-row">
+                                        <span class="col-item">3 Items Added</span>
+                                        <span class="col-quantity">Quantity</span>
+                                        <span class="col-price">Price</span>
                                     </div>
 
+                                    <div class="cart-item">
+                                        <div class="product-info">
+                                            <img src="assets/images/product-images/product11.png" alt="Pampers" class="item-image">
+                                            <div class="item-details">
+                                                <h3>Pampers Swaddlers 360 Pull-On Diapers, Size 5</h3>
+                                                <p>By Pampers</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-quantity">
+                                            <div class="d-flex justify-start">
+                                                <div class="change-quantity">
+                                                    <button class="minus">-</button>
+                                                    <span>1</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <button class="cart-delete">🗑</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-price">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+
+                                    </div>
                                     <div class="cart-item discreet">
                                         <span class="discreet-tag">Discreet Delivery Available</span>
-                                        <img src="assets/images/product-images/product2.png" alt="Durex" class="item-image">
-                                        <div class="item-details">
-                                            <h3>Durex Condoms Featherlite 3's</h3>
-                                            <p>By Durex</p>
+                                        <div class="product-info">
+                                            <img src="assets/images/product-images/product11.png" alt="Pampers" class="item-image">
+                                            <div class="item-details">
+                                                <h3>Pampers Swaddlers 360 Pull-On Diapers, Size 5</h3>
+                                                <p>By Pampers</p>
+                                            </div>
                                         </div>
                                         <div class="item-quantity">
-                                            <button class="minus">-</button>
-                                            <span>1</span>
-                                            <button class="plus">+</button>
+                                            <div class="d-flex justify-start">
+                                                <div class="change-quantity">
+                                                    <button class="minus">-</button>
+                                                    <span>1</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <button class="cart-delete">🗑</button>
+                                            </div>
                                         </div>
-                                        <p class="item-price"><s>KES 250</s> KES 150</p>
-                                        <button class="delete">🗑</button>
+                                        <div class="item-price">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="cart-item">
+                                        <div class="product-info">
+                                            <img src="assets/images/product-images/product3.png" alt="Pampers" class="item-image">
+                                            <div class="item-details">
+                                                <h3>Pampers Swaddlers 360 Pull-On Diapers, Size 5</h3>
+                                                <p>By Pampers</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-quantity">
+                                            <div class="d-flex justify-start">
+                                                <div class="change-quantity">
+                                                    <button class="minus">-</button>
+                                                    <span>1</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <button class="cart-delete">🗑</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-price">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="cart-item discreet">
+                                        <span class="discreet-tag">Discreet Delivery Available</span>
+                                        <div class="product-info">
+                                            <img src="assets/images/product-images/product5.png" alt="Pampers" class="item-image">
+                                            <div class="item-details">
+                                                <h3>Pampers Swaddlers 360 Pull-On Diapers, Size 5</h3>
+                                                <p>By Pampers</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-quantity">
+                                            <div class="d-flex justify-start">
+                                                <div class="change-quantity">
+                                                    <button class="minus">-</button>
+                                                    <span>1</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <button class="cart-delete">🗑</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-price">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+
                                     </div>
 
-                                    <div class="cart-item">
-                                        <img src="assets/images/product-images/product3.png" alt="Nivea" class="item-image">
-                                        <div class="item-details">
-                                            <h3>Nivea Cocoa Nourishing Body Lotion 200ml</h3>
-                                            <p>By Nivea</p>
-                                        </div>
-                                        <div class="item-quantity">
-                                            <button class="minus">-</button>
-                                            <span>1</span>
-                                            <button class="plus">+</button>
-                                        </div>
-                                        <p class="item-price"><s>KES 250</s> KES 150</p>
-                                        <button class="delete">🗑</button>
-                                    </div>
+
                                 </div>
+                                <div class="cart-notice">
+                                    <span><i class="bi bi-truck"></i>Add KES 25 to your cart to qualify for free shipping</span>
+                                    <a href="">View Wishlist</a>
+
+                                </div>
+
                             </div>
                             <div class="col-md-3">
                                 <!-- Cart Summary -->
                                 <div class="cart-summary">
                                     <div class="coupon-box">
                                         <h3>Apply Coupon</h3>
-                                        <input type="text" placeholder="Enter Coupon Code">
-                                        <button>Apply</button>
+                                        <div class="coupon-input">
+                                            <input type="text" placeholder="Enter Coupon Code">
+                                            <button>Apply</button>
+                                        </div>
+
                                     </div>
 
                                     <div class="price-details">
@@ -113,7 +188,8 @@
                                         <hr>
                                         <p class="cart-total">Cart Total <span>KES 450</span></p>
                                         <button class="proceed">Proceed</button>
-                                        <p class="info">Delivery charges will be calculated in the next step</p>
+                                        <p class="info"><i class="bi bi-exclamation-circle"></i>
+                                            <span>Delivery charges will be calculated in the next step</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -123,12 +199,7 @@
 
                     </div>
                 </div>
-
-
-
             </div>
-
-
         </main>
         <div id="footer"></div>
     </div>
