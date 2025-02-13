@@ -1,13 +1,16 @@
 .category-slider {
-    margin-top: 20px;
-    @media only screen and (min-width: 1440px) {
-        margin: 45px 60px 60px 60px;
+    margin: 20px auto;
+    @include respond-to(lg) {
+        margin: 40px auto;
+    }
+    @include respond-to(xxl) {
+        margin: 70px auto;
     }
     .card img {
         border-radius: 12px;
         height: 150px;
         object-fit: cover;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             height: 280px;
         }
     }
@@ -20,9 +23,26 @@
         line-height: 24px;
         color: $black;
         padding: 5px 15px;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             font-size: 20px;
             line-height: 28px;
+        }
+    }
+    .sale-badge {
+        background-color: $primary;
+        color: white;
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 3px 8px;
+        border-radius: 0 0 7px 7px;
+        @include respond-to(xxl) {
+            font-size: 20px;
+            padding: 5px 12px;
+            left: 30px;
         }
     }
 }

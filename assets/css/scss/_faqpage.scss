@@ -192,13 +192,12 @@
             font-size: 18px;
             font-weight: 700;
             color: #373434;
-            line-height: 28px;
+            line-height: 1.5;
             @include respond-to(lg) {
                 font-size: 14px;
             }
-            @media (min-width: 1200px) {
-                font-size: 22px;
-                line-height: 25px;
+            @include respond-to(xxl) {
+                font-size: 18px;
             }
         }
         .policy-answer {

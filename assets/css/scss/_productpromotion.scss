@@ -1,14 +1,17 @@
 .product-promotions {
-    margin: 10px;
-    @media only screen and (min-width: 1440px) {
-        margin: 45px 60px 60px 60px;
+    margin: 20px auto;
+    @include respond-to(lg) {
+        margin: 40px auto;
+    }
+    @include respond-to(xxl) {
+        margin: 70px auto;
     }
     .promotion-card {
         position: relative;
         display: flex;
         align-items: center;
         overflow: hidden;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             min-height: 400px;
         }
         &.card-pink {
@@ -47,14 +50,14 @@
         .heading {
             font-size: 20px;
             font-weight: 400;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 24px;
             }
         }
         .promo-text {
             font-size: 28px;
             font-weight: 800;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 32px;
             }
         }

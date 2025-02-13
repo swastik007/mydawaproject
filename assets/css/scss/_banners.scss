@@ -34,7 +34,8 @@
 //         border-radius: 10px;
 //     }
 // }
-.homebanner-section {
+.homebanner-section,
+.catbanner-section {
     position: relative;
     width: 100%;
     /* Ensure full width */
@@ -65,7 +66,7 @@
         object-fit: cover;
         /* Maintain aspect ratio and cover the entire container */
     }
-    .homebanner-text {
+    .banner-text {
         position: absolute;
         top: 50%;
         left: 50%;

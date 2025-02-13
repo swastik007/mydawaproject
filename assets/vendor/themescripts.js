@@ -174,7 +174,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 offerCarousel.trigger('next.owl.carousel');
             });
         }
-
+        // Offers by Category Carousel
+        if ($('#offerbycategory-carousel').length) {
+            $('#offerbycategory-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    400: { items: 2.8 },
+                    768: { items: 3 },
+                    1024: { items: 5 },
+                    1920: { items: 7 },
+                }
+            });
+        }
 
     }
     /* wishlist page carousel */
@@ -337,6 +352,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 initializeCarousels(); // Initialize carousel after loading
             });
     }
+    // Offer by Category Section
+    if (document.getElementById("offerbycategory")) {
+        fetch("components/offerbycategories.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("offerbycategory").innerHTML = data;
+                initializeCarousels(); // Initialize carousel after loading
+            });
+    }
 
 });
 
@@ -378,6 +402,25 @@ $(document).ready(function() {
         if (e.key === "Backspace" && !$(this).val() && currentIndex > 0) {
             $pinBoxes.eq(currentIndex - 1).focus();
         }
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const filterHeaders = document.querySelectorAll(".filter-header");
+
+    filterHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+            const parent = header.parentElement;
+            const content = parent.querySelector(".filter-content");
+
+            // Toggle open/close class
+            parent.classList.toggle("open");
+
+            if (parent.classList.contains("open")) {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        });
     });
 });
 
@@ -550,4 +593,43 @@ $(document).ready(function() {
             }
         });
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Product image thumbnails
+    const thumbnails = document.querySelectorAll(".thumbnail");
+    const mainImage = document.getElementById("main-image");
+
+    thumbnails.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+            // Change main image
+            mainImage.src = thumb.src;
+
+            // Update active thumbnail
+            thumbnails.forEach((t) => t.classList.remove("active"));
+            thumb.classList.add("active");
+        });
+    });
+
+    // Quantity control
+    const decreaseBtn = document.querySelector(".decrease-btn");
+    const increaseBtn = document.querySelector(".increase-btn");
+    const quantityDisplay = document.querySelector(".quantity");
+
+    decreaseBtn.addEventListener("click", () => {
+        let value = parseInt(quantityDisplay.textContent);
+        if (value > 1) {
+            quantityDisplay.textContent = value - 1;
+        }
+    });
+
+    increaseBtn.addEventListener("click", () => {
+        let value = parseInt(quantityDisplay.textContent);
+        quantityDisplay.textContent = value + 1;
+    });
+
+    // Close modal
+    document.querySelector(".close-modal").addEventListener("click", () => {
+        document.querySelector(".product-modal-overlay").style.display = "none";
+    });
 });

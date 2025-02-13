@@ -1,12 +1,12 @@
 .blog-section {
     margin: 10px;
-    @media only screen and (min-width: 1440px) {
+    @include respond-to(lg) {
         margin: 45px 60px 60px 60px;
     }
     .blog-card {
         .card-body {
             padding: 10px;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 padding: 20px;
             }
         }
@@ -15,7 +15,7 @@
             font-weight: 400;
             margin-bottom: 7px;
             text-transform: uppercase;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 14px;
             }
         }
@@ -23,7 +23,7 @@
             font-size: 16px;
             font-weight: 700;
             line-height: 150%;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 18px;
             }
         }

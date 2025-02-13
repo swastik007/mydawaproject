@@ -1,7 +1,10 @@
 .symptoms-section {
-    margin: 10px;
-    @media only screen and (min-width: 1440px) {
-        margin: 45px 60px 60px 60px;
+    margin: 20px 0;
+    @include respond-to(lg) {
+        margin: 40px 0;
+    }
+    @include respond-to(xxl) {
+        margin: 60px 0;
     }
     .symptoms-badge {
         background-color: #FFECD6;
@@ -14,7 +17,7 @@
         font-weight: 600;
         font-size: 16px;
         padding: 7px 15px;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             font-size: 18px;
             left: 80px;
         }
@@ -23,7 +26,7 @@
         border-top: 1px solid #D4DEE5;
         position: relative;
         padding: 20px;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             border-radius: 12px;
             border: 1px solid #D4DEE5;
             padding: 80px;
@@ -31,7 +34,7 @@
         .steps {
             display: flex;
             flex-direction: row;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 flex-direction: column;
             }
             .step {
@@ -40,7 +43,7 @@
                 padding: 20px;
                 align-items: center;
                 border-radius: 12px;
-                @media only screen and (min-width: 1440px) {
+                @include respond-to(lg) {
                     flex-direction: row;
                     padding: 10px;
                 }
@@ -53,14 +56,14 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    @media only screen and (min-width: 1440px) {
+                    @include respond-to(lg) {
                         width: 36px;
                         height: 36px;
                     }
                     span {
                         font-weight: 16px;
                         font-weight: 500;
-                        @media only screen and (min-width: 1440px) {
+                        @include respond-to(lg) {
                             font-size: 18px;
                             font-weight: 800;
                         }
@@ -72,7 +75,7 @@
                     line-height: 22px;
                     color: $black;
                     margin-bottom: 0;
-                    @media only screen and (min-width: 1440px) {
+                    @include respond-to(lg) {
                         margin-left: 15px;
                         font-size: 18px;
                         font-weight: 800;
@@ -96,7 +99,7 @@
         font-size: 28px;
         line-height: 36px;
         color: $black;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             font-size: 40px;
         }
         span {
@@ -106,7 +109,7 @@
     .symptom-subheading {
         font-size: 16px;
         line-height: 24px;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             font-size: 18px;
         }
     }
@@ -143,7 +146,7 @@
         .symptom-name {
             font-size: 16px;
             font-weight: bold;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 16px;
                 font-weight: 400;
                 text-align: center;

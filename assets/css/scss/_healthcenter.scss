@@ -167,6 +167,16 @@
                 list-style: none;
                 margin: 0;
                 padding: 0;
+                display: block;
+                .owl-carousel .owl-stage {
+                    display: flex;
+                    gap: 15px;
+                }
+                .owl-carousel .owl-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
                 @include respond-to(lg) {
                     display: flex;
                     flex-wrap: wrap;
@@ -174,18 +184,6 @@
                     .owl-stage {
                         display: unset;
                         /* Ensure Owl Carousel doesn't interfere */
-                    }
-                }
-                @media (max-width: 1199px) {
-                    display: block;
-                    .owl-carousel .owl-stage {
-                        display: flex;
-                        gap: 15px;
-                    }
-                    .owl-carousel .owl-item {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                     }
                 }
                 li {
@@ -378,6 +376,16 @@
         }
         .healthjourney-container {
             margin: 50px 0;
+            display: block;
+            .owl-carousel .owl-stage {
+                display: flex;
+                gap: 15px;
+            }
+            .owl-carousel .owl-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             @include respond-to(lg) {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -386,18 +394,6 @@
                 .owl-stage {
                     display: unset;
                     /* Prevent interference from Owl Carousel */
-                }
-            }
-            @media (max-width: 1199px) {
-                display: block;
-                .owl-carousel .owl-stage {
-                    display: flex;
-                    gap: 15px;
-                }
-                .owl-carousel .owl-item {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                 }
             }
         }
@@ -461,15 +457,11 @@
         }
     }
     .health-category-slider {
-        margin-top: 20px;
-        @media only screen and (min-width: 1440px) {
-            margin: 45px 60px 60px 60px;
-        }
         .card img {
             border-radius: 12px;
             height: 150px;
             object-fit: cover;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 height: 280px;
             }
         }
@@ -482,7 +474,7 @@
             line-height: 24px;
             color: $black;
             padding: 5px 15px;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 20px;
                 line-height: 28px;
             }

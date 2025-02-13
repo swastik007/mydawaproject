@@ -29,49 +29,108 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <li><span class="divider">/</span></li>
-                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Categories</a></li>
                         <li><span class="divider">/</span></li>
-                        <li><a href="#" class="active">Submit a Prescription</a></li>
+                        <li><a href="#" class="active">Sexual Wellness</a></li>
                     </ul>
                 </nav>
-                <div class="category-banner-section">
-                    <div class="container-fluid h-100 d-flex align-items-center">
-                        <div class="text-content text-start ms-5 mr-auto">
-                            <h2 class="text-white text-start">Durex</h2>
-                            <h5 class="text-white text-start">Durex is the global leader in sexual wellness, committed to enhancing sexual experiences through innovative products</h5>
-
+                <!-- banner section -->
+                <div class="catbanner-section mydawa-container">
+                    <picture>
+                        <!-- Image for larger screens -->
+                        <source srcset="assets/images/banners/sexual-wellness-banner.png" media="(min-width: 1200px)" />
+                        <!-- Image for smaller screens -->
+                        <source srcset="aassets/images/banners/sexual-wellness-banner.png" media="(max-width: 767px)" />
+                        <!-- Fallback image -->
+                        <img src="assets/images/banners/sexual-wellness-banner.png" alt="MyDawa Telehealth" />
+                    </picture>
+                    <div class="banner-text">
+                        <h4>Sexual Wellness</h4>
+                        <p>Sexual wellness is about feeling good in your body and being connected with your partner(s). </p>
+                        <div class="mt-4 d-block d-md-flex mix-btn">
+                            <button class="btn-primary me-3">
+                               Buy Now
+                            </button>
+                            <button class="btn-primary">Learn More</button>
                         </div>
                     </div>
                 </div>
-                <div id="popularproductbycat"></div>
-                <div class="category-page">
+                <div class="banner-bottom-section">
+                    need help?
+                    <a href="#" class="active">Chat with Us ?</a>
+                    <a href="#" class="active">Get expert Guidance</a>
+                    <a href="#" class="active">Send us email</a>
+                </div>
+
+
+                <div class="category-page mydawa-container">
+                    <!-- Filter Sidebar -->
                     <!-- Filter Sidebar -->
                     <aside class="category-sidebar">
-                        <div class="category-filters">
-                            <h4>Category</h4>
-                            <ul>
-                                <li><input type="checkbox" id="condoms" checked> <label for="condoms">Condoms</label></li>
-                                <li><input type="checkbox" id="lubricants" checked> <label for="lubricants">Lubricants</label></li>
-                                <li><input type="checkbox" id="contraceptives"> <label for="contraceptives">Contraceptives</label></li>
-                                <li><input type="checkbox" id="adult-toys"> <label for="adult-toys">Adult Toys</label></li>
-                                <li><input type="checkbox" id="performance-enhancers"> <label for="performance-enhancers">Performance Enhancers</label></li>
-                                <li><input type="checkbox" id="health-supplements"> <label for="health-supplements">Sexual Health Supplements</label></li>
-                            </ul>
+                        <div class="filter-section">
+                            <div class="filter-header" data-toggle="filter-category">
+                                <h4>Category</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                            </div>
+                            <div class="filter-content" id="filter-category">
+                                <ul>
+                                    <li><input type="checkbox" id="condoms" checked> <label for="condoms">Condoms</label></li>
+                                    <li><input type="checkbox" id="lubricants" checked> <label for="lubricants">Lubricants</label></li>
+                                    <li><input type="checkbox" id="contraceptives"> <label for="contraceptives">Contraceptives</label></li>
+                                    <li><input type="checkbox" id="adult-toys"> <label for="adult-toys">Adult Toys</label></li>
+                                    <li><input type="checkbox" id="performance-enhancers"> <label for="performance-enhancers">Performance Enhancers</label></li>
+                                    <li><input type="checkbox" id="health-supplements"> <label for="health-supplements">Sexual Health Supplements</label></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="category-price">
-                            <h4>Price</h4>
-                            <input type="range" min="200" max="4000" value="2000" class="price-range">
+
+                        <div class="filter-section">
+                            <div class="filter-header" data-toggle="filter-brand">
+                                <h4>Brand</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                            </div>
+                            <div class="filter-content" id="filter-brand">
+                                <ul>
+                                    <li><input type="checkbox" id="contempo" checked> <label for="contempo">Contempo</label></li>
+                                    <li><input type="checkbox" id="durex" checked> <label for="durex">Durex</label></li>
+                                    <li><input type="checkbox" id="kings"> <label for="kings">Kings</label></li>
+                                    <li><input type="checkbox" id="lifeguard"> <label for="lifeguard">Lifeguard</label></li>
+                                    <li><input type="checkbox" id="skins"> <label for="skins">Skins</label></li>
+                                    <li><input type="checkbox" id="skyn"> <label for="skyn">Skyn</label></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="category-discount">
-                            <h4>Discount</h4>
-                            <ul>
-                                <li><input type="checkbox" id="20-above"> <label for="20-above">20% and above</label></li>
-                                <li><input type="checkbox" id="30-above"> <label for="30-above">30% and above</label></li>
-                                <li><input type="checkbox" id="40-above"> <label for="40-above">40% and above</label></li>
-                                <li><input type="checkbox" id="50-above"> <label for="50-above">50% and above</label></li>
-                            </ul>
+
+                        <div class="filter-section">
+                            <div class="filter-header" data-toggle="filter-price">
+                                <h4>Price</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                            </div>
+                            <div class="filter-content" id="filter-price">
+                                <input type="range" min="200" max="4000" value="2000" class="price-range">
+                                <div class="price-values">
+                                    <span>KES 200</span> <span>KES 4000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <div class="filter-header" data-toggle="filter-discount">
+                                <h4>Discount</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                            </div>
+                            <div class="filter-content" id="filter-discount">
+                                <ul>
+                                    <li><input type="checkbox" id="10-above"> <label for="10-above">10% and above</label></li>
+                                    <li><input type="checkbox" id="20-above" checked> <label for="20-above">20% and above</label></li>
+                                    <li><input type="checkbox" id="30-above"> <label for="30-above">30% and above</label></li>
+                                    <li><input type="checkbox" id="40-above"> <label for="40-above">40% and above</label></li>
+                                    <li><input type="checkbox" id="50-above"> <label for="50-above">50% and above</label></li>
+                                    <li><input type="checkbox" id="60-above"> <label for="60-above">60% and above</label></li>
+                                    <li><input type="checkbox" id="70-above"> <label for="70-above">70% and above</label></li>
+                                    <li><input type="checkbox" id="80-above"> <label for="80-above">80% and above</label></li>
+                                    <li><input type="checkbox" id="90-above"> <label for="90-above">90% and above</label></li>
+                                </ul>
+                            </div>
                         </div>
                     </aside>
+
 
                     <!-- Category Section -->
                     <main class="category-section">

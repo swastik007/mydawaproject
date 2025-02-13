@@ -1,12 +1,8 @@
 .feature-section {
     background-color: #F1F3FB;
-    padding: 50px;
-    @media only screen and (min-width: 1440px) {
-        padding: 60px 80px 20px 80px;
-    }
     .feature-item {
         display: flex;
-        @media only screen and (min-width: 1440px) {
+        @include respond-to(lg) {
             margin: 0 20px;
         }
         .icon {
@@ -19,7 +15,7 @@
             font-size: 18px;
             font-weight: bold;
             color: $black;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 20px;
             }
         }
@@ -29,7 +25,7 @@
             line-height: 150%;
             font-weight: 400;
             max-width: 300px;
-            @media only screen and (min-width: 1440px) {
+            @include respond-to(lg) {
                 font-size: 20px;
             }
         }
