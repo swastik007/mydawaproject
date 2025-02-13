@@ -287,6 +287,337 @@
             outline: none;
         }
     }
+    .recipient-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        overflow: hidden;
+        @include respond-to(lg) {
+            margin-right: 50px;
+        }
+        @include respond-to(xxl) {
+            margin-bottom: 80px;
+        }
+        .recipient-card-header {
+            position: relative;
+            .recipient-image {
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+                border-bottom: 1px solid #ddd;
+                @include respond-to(lg) {
+                    height: 160px;
+                }
+                @include respond-to(xxl) {
+                    height: 220px;
+                }
+            }
+            .prescription-edit {
+                position: absolute;
+                top: 0;
+                bottom: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.25);
+                color: #fff;
+                padding: 10px;
+                font-size: 14px;
+                @include respond-to(lg) {
+                    font-size: 16px;
+                }
+                @include respond-to(xxl) {
+                    font-size: 20px;
+                    padding: 10px 25px;
+                }
+                .prescription-label {
+                    font-weight: 500;
+                    flex-grow: 1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .edit-btn {
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+            }
+        }
+        .recipient-card-body {
+            text-align: left;
+            background: #fff;
+            .recipient-details {
+                padding: 12px;
+                @include respond-to(xxl) {
+                    padding: 28px;
+                }
+                h4 {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: $black;
+                    @include respond-to(xxl) {
+                        font-size: 20px;
+                        margin-bottom: 16px;
+                    }
+                }
+                .edit-btn {
+                    background: none;
+                    border: none;
+                    color: #e61b77;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+                p {
+                    font-size: 14px;
+                    margin: 7px 0;
+                    color: $black;
+                    display: flex;
+                    justify-content: space-between;
+                    @include respond-to(xxl) {
+                        font-size: 20px;
+                        margin: 14px 0;
+                    }
+                    .title {
+                        font-weight: 300;
+                        color: $black;
+                    }
+                    .text {
+                        font-weight: 600;
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+    // Payment 
+    .payment-form {
+        margin: auto auto auto 0;
+        @include respond-to(lg) {
+            max-width: 600px;
+        }
+        @include respond-to(xxl) {
+            max-width: 900px;
+        }
+        h4 {
+            font-size: 16px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: $black;
+            @include respond-to(lg) {}
+            @include respond-to(xxl) {
+                font-size: 22px;
+                margin-bottom: 16px;
+            }
+        }
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .radio-section {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            .radio-option {
+                font-size: 14px;
+                color: #000;
+                input[type="radio"] {
+                    margin-right: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .insurance-provider {
+            margin: 20px auto auto 0;
+            @include respond-to(lg) {
+                margin: 20px auto auto 0;
+            }
+            @include respond-to(xxl) {
+                margin: 35px auto auto 0;
+            }
+            .insurance-grid {
+                display: grid;
+                gap: 20px;
+                // Default (Mobile: 2 Columns)
+                grid-template-columns: repeat(2, 1fr);
+                @include respond-to(md) {
+                    // Tablets (Medium Screens)
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                @include respond-to(lg) {
+                    // Large Screens (4 Columns)
+                    grid-template-columns: repeat(4, 1fr);
+                }
+                .insurance-option {
+                    border: 1px solid #ddd;
+                    background: #fff;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 80px;
+                    padding: 14px;
+                    @include respond-to(md) {
+                        // Tablets (Medium Screens)
+                        padding: 18px;
+                        height: 120px;
+                    }
+                    @include respond-to(lg) {
+                        // Large Screens (4 Columns)
+                        height: 150px;
+                        padding: 25px;
+                    }
+                    &.active {
+                        border-color: #45a85c;
+                    }
+                    img {
+                        width: 80%;
+                        filter: grayscale(100%);
+                        transition: filter 0.3s ease;
+                    }
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        border-color: #45a85c;
+                        img {
+                            filter: grayscale(0%);
+                        }
+                    }
+                }
+            }
+        }
+        .mtiba-instructions {
+            margin: 20px auto auto 0;
+            @include respond-to(lg) {
+                margin: 20px auto auto 0;
+            }
+            @include respond-to(xxl) {
+                margin: 35px auto auto 0;
+            }
+            ol {
+                padding-left: 20px;
+                font-size: 14px;
+                line-height: 1.6;
+                font-weight: 300;
+                margin-left: 15px;
+                @include respond-to(lg) {
+                    font-size: 16px;
+                }
+                @include respond-to(xxl) {
+                    font-size: 20px;
+                }
+            }
+        }
+        .visit-code {
+            margin-top: 20px;
+            @include respond-to(lg) {
+                margin-top: 30px;
+            }
+            @include respond-to(xxl) {
+                margin-top: 50px;
+            }
+            input {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 16px;
+                width: 200px;
+                @include respond-to(lg) {
+                    width: 220px;
+                }
+                @include respond-to(xxl) {
+                    width: 300px;
+                    padding: 16px;
+                }
+            }
+        }
+        .otp-verification {
+            margin-top: 20px;
+            @include respond-to(lg) {
+                margin-top: 30px;
+            }
+            @include respond-to(xxl) {
+                margin-top: 50px;
+            }
+            .otp-inputs {
+                display: flex;
+                gap: 10px;
+                input {
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    font-size: 18px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+            }
+            .resend-otp {
+                color: #e61b77;
+                cursor: pointer;
+                font-size: 14px;
+            }
+        }
+        .insurance-number {
+            margin-top: 20px;
+            @include respond-to(lg) {
+                margin-top: 30px;
+            }
+            @include respond-to(xxl) {
+                margin-top: 50px;
+            }
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+        }
+        .mtiba-code {
+            margin-top: 20px;
+            @include respond-to(lg) {
+                margin-top: 30px;
+            }
+            @include respond-to(xxl) {
+                margin-top: 50px;
+            }
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+        }
+        .selected-company {
+            background-color: #f3f3f3;
+            font-weight: 400;
+            border: 1px solid #e9e9e9;
+            color: #373434;
+            border-radius: 10px;
+            padding: 10px 40px 10px 20px;
+            font-size: 18px;
+        }
+        .btn-grey {
+            border-radius: 32px;
+            margin-left: 10px;
+            @include respond-to(xxl) {
+                padding: 15px 40px;
+                margin-left: 16px;
+            }
+        }
+    }
     /* Actions Section */
     .actions-section {
         display: flex;
@@ -300,6 +631,77 @@
             i {
                 font-size: 18px;
                 margin-right: 7px;
+            }
+        }
+    }
+}
+
+.popup-overlay {
+    display: none; // Hidden by default
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 400px;
+        position: relative;
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .popup-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            .popup-icon {
+                width: 40px;
+                margin-right: 10px;
+            }
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                color: #000;
+            }
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .popup-actions {
+            display: flex;
+            justify-content: space-between;
+            .btn-white-border {
+                background: #fff;
+                border: 1px solid #000;
+                padding: 10px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .btn-green {
+                background: #45a85c;
+                color: #fff;
+                padding: 10px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+                border: none;
             }
         }
     }

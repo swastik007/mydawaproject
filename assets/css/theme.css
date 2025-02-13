@@ -2336,6 +2336,467 @@ body {
   outline: none;
 }
 
+.submit-prescription .recipient-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .recipient-card {
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .recipient-card {
+    margin-bottom: 80px;
+  }
+}
+
+.submit-prescription .recipient-card .recipient-card-header {
+  position: relative;
+}
+
+.submit-prescription .recipient-card .recipient-card-header .recipient-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .recipient-card .recipient-card-header .recipient-image {
+    height: 160px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .recipient-card .recipient-card-header .recipient-image {
+    height: 220px;
+  }
+}
+
+.submit-prescription .recipient-card .recipient-card-header .prescription-edit {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .recipient-card .recipient-card-header .prescription-edit {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .recipient-card .recipient-card-header .prescription-edit {
+    font-size: 20px;
+    padding: 10px 25px;
+  }
+}
+
+.submit-prescription .recipient-card .recipient-card-header .prescription-edit .prescription-label {
+  font-weight: 500;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.submit-prescription .recipient-card .recipient-card-header .prescription-edit .edit-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-prescription .recipient-card .recipient-card-body {
+  text-align: left;
+  background: #fff;
+}
+
+.submit-prescription .recipient-card .recipient-card-body .recipient-details {
+  padding: 12px;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .recipient-card .recipient-card-body .recipient-details {
+    padding: 28px;
+  }
+}
+
+.submit-prescription .recipient-card .recipient-card-body .recipient-details h4 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #373434;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .recipient-card .recipient-card-body .recipient-details h4 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+.submit-prescription .recipient-card .recipient-card-body .recipient-details .edit-btn {
+  background: none;
+  border: none;
+  color: #e61b77;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-prescription .recipient-card .recipient-card-body .recipient-details p {
+  font-size: 14px;
+  margin: 7px 0;
+  color: #373434;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .recipient-card .recipient-card-body .recipient-details p {
+    font-size: 20px;
+    margin: 14px 0;
+  }
+}
+
+.submit-prescription .recipient-card .recipient-card-body .recipient-details p .title {
+  font-weight: 300;
+  color: #373434;
+}
+
+.submit-prescription .recipient-card .recipient-card-body .recipient-details p .text {
+  font-weight: 600;
+  color: #373434;
+}
+
+.submit-prescription .payment-form {
+  margin: auto auto auto 0;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form {
+    max-width: 900px;
+  }
+}
+
+.submit-prescription .payment-form h4 {
+  font-size: 16px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #373434;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form h4 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+}
+
+.submit-prescription .payment-form .form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.submit-prescription .payment-form .radio-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.submit-prescription .payment-form .radio-section .radio-option {
+  font-size: 14px;
+  color: #000;
+}
+
+.submit-prescription .payment-form .radio-section .radio-option input[type="radio"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.submit-prescription .payment-form .insurance-provider {
+  margin: 20px auto auto 0;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .insurance-provider {
+    margin: 20px auto auto 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .insurance-provider {
+    margin: 35px auto auto 0;
+  }
+}
+
+.submit-prescription .payment-form .insurance-provider .insurance-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 992px) {
+  .submit-prescription .payment-form .insurance-provider .insurance-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .insurance-provider .insurance-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 80px;
+  padding: 14px;
+}
+
+@media (min-width: 992px) {
+  .submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option {
+    padding: 18px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option {
+    height: 150px;
+    padding: 25px;
+  }
+}
+
+.submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option.active {
+  border-color: #45a85c;
+}
+
+.submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option img {
+  width: 80%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option:hover, .submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option:focus, .submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option.active {
+  border-color: #45a85c;
+}
+
+.submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option:hover img, .submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option:focus img, .submit-prescription .payment-form .insurance-provider .insurance-grid .insurance-option.active img {
+  filter: grayscale(0%);
+}
+
+.submit-prescription .payment-form .mtiba-instructions {
+  margin: 20px auto auto 0;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .mtiba-instructions {
+    margin: 20px auto auto 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .mtiba-instructions {
+    margin: 35px auto auto 0;
+  }
+}
+
+.submit-prescription .payment-form .mtiba-instructions ol {
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .mtiba-instructions ol {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .mtiba-instructions ol {
+    font-size: 20px;
+  }
+}
+
+.submit-prescription .payment-form .visit-code {
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .visit-code {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .visit-code {
+    margin-top: 50px;
+  }
+}
+
+.submit-prescription .payment-form .visit-code input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .visit-code input {
+    width: 220px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .visit-code input {
+    width: 300px;
+    padding: 16px;
+  }
+}
+
+.submit-prescription .payment-form .otp-verification {
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .otp-verification {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .otp-verification {
+    margin-top: 50px;
+  }
+}
+
+.submit-prescription .payment-form .otp-verification .otp-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-prescription .payment-form .otp-verification .otp-inputs input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-prescription .payment-form .otp-verification .resend-otp {
+  color: #e61b77;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-prescription .payment-form .insurance-number {
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .insurance-number {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .insurance-number {
+    margin-top: 50px;
+  }
+}
+
+.submit-prescription .payment-form .insurance-number input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.submit-prescription .payment-form .mtiba-code {
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .submit-prescription .payment-form .mtiba-code {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .mtiba-code {
+    margin-top: 50px;
+  }
+}
+
+.submit-prescription .payment-form .mtiba-code input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.submit-prescription .payment-form .selected-company {
+  background-color: #f3f3f3;
+  font-weight: 400;
+  border: 1px solid #e9e9e9;
+  color: #373434;
+  border-radius: 10px;
+  padding: 10px 40px 10px 20px;
+  font-size: 18px;
+}
+
+.submit-prescription .payment-form .btn-grey {
+  border-radius: 32px;
+  margin-left: 10px;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .payment-form .btn-grey {
+    padding: 15px 40px;
+    margin-left: 16px;
+  }
+}
+
 .submit-prescription .actions-section {
   display: flex;
   justify-content: flex-end;
@@ -2350,6 +2811,86 @@ body {
 .submit-prescription .actions-section button i {
   font-size: 18px;
   margin-right: 7px;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-overlay .popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  position: relative;
+}
+
+.popup-overlay .popup-content .close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.popup-overlay .popup-content .popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.popup-overlay .popup-content .popup-header .popup-icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.popup-overlay .popup-content .popup-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.popup-overlay .popup-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.popup-overlay .popup-content .popup-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-overlay .popup-content .popup-actions .btn-white-border {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup-overlay .popup-content .popup-actions .btn-green {
+  background: #45a85c;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
 }
 
 .wellness-banner-section {
