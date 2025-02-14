@@ -42,6 +42,8 @@
 //     });
 // });
 
+//Fetch Sections 
+
 document.addEventListener("DOMContentLoaded", function() {
 
     // Function to initialize carousels
@@ -190,179 +192,185 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         }
-
-    }
-    /* wishlist page carousel */
-    if ($('#wishlist-carousel').length) {
-        console.log('hello 202');
-        $("#wishlist-carousel").owlCarousel({
-            loop: false,
-            margin: 20,
-            nav: true,
-            dots: false,
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                1024: { items: 3 },
-            },
-            navText: [
-                "<i class='bi bi-chevron-left'></i>",
-                "<i class='bi bi-chevron-right'></i>",
-            ],
-        });
-    }
-    // Popular product by category Carousel
-    if ($('#popularproductbycat-carousel').length) {
-        $('#popularproductbycat-carousel').owlCarousel({
-            loop: true,
-            margin: 15,
-            nav: true,
-            dots: false,
-            navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                1024: { items: 4 }
-            }
-        });
-
-    }
-
-    // Load Header
-    if (document.getElementById("header")) {
-        fetch("components/header.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("header").innerHTML = data);
-    }
-
-    // Load Footer
-    if (document.getElementById("footer")) {
-        fetch("components/footer.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
-    }
-    // Home Slider Section
-    if (document.getElementById("homeslider")) {
-        fetch("components/home-slider.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("homeslider").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
+        /* wishlist page carousel */
+        if ($('#wishlist-carousel').length) {
+            console.log('hello 202');
+            $("#wishlist-carousel").owlCarousel({
+                loop: false,
+                margin: 20,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 3 },
+                },
+                navText: [
+                    "<i class='bi bi-chevron-left'></i>",
+                    "<i class='bi bi-chevron-right'></i>",
+                ],
             });
-    }
-
-    // Category Slider Section
-    if (document.getElementById("cat-slider")) {
-        fetch("components/category-section.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("cat-slider").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
+        }
+        // Popular product by category Carousel
+        if ($('#popularproductbycat-carousel').length) {
+            $('#popularproductbycat-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: true,
+                dots: false,
+                navText: ['<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>', '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'], // Customize text/icons
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 4 }
+                }
             });
-    }
 
-    // Load Offer Section
-    if (document.getElementById("offersection")) {
-        fetch("components/offer-section.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("offersection").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
-    }
+        }
 
-    // New product Section
-    if (document.getElementById("new-product")) {
-        fetch("components/newproduct-section.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("new-product").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
-    }
-
-    // New product Section
-    if (document.getElementById("popularproducts")) {
-        fetch("components/popularproduct-section.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("popularproducts").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
     }
 
 
-    // New product Section
-    if (document.getElementById("featuresection")) {
-        fetch("components/feature-section.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("featuresection").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
-    }
+    $(document).ready(function() {
+        // Load Header
+        if (document.getElementById("header")) {
+            fetch("components/header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data);
+        }
 
-    // Promotional Section
-    if (document.getElementById("promotionsection")) {
-        fetch("components/promotion-section.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("promotionsection").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
-    }
+        // Load Footer
+        if (document.getElementById("footer")) {
+            fetch("components/footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        }
+        // Home Slider Section
+        if (document.getElementById("homeslider")) {
+            fetch("components/home-slider.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("homeslider").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
 
-    // Load Blog Section
-    if (document.getElementById("blogsection")) {
-        fetch("components/blog-section.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("blogsection").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
-    }
+        // Category Slider Section
+        if (document.getElementById("cat-slider")) {
+            fetch("components/categoryslider.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("cat-slider").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
 
-    // Load Symptoms Section
-    if (document.getElementById("symptomsection")) {
-        fetch("components/symptoms-section.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("symptomsection").innerHTML = data);
-    }
+        // Load Offer Section
+        if (document.getElementById("offersection")) {
+            fetch("components/offersoftheday.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("offersection").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
 
-    // Header Searchbar result
-    if (document.getElementById("headersearchpopup")) {
-        fetch("components/headersearch.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("headersearchpopup").innerHTML = data);
-    }
+        // New product Section
+        if (document.getElementById("new-product")) {
+            fetch("components/newonmydawa.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("new-product").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
 
-    // Header searchbar suggestion
-    if (document.getElementById("headersearchsuggest")) {
-        fetch("components/headersearchsuggestion.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("headersearchsuggest").innerHTML = data);
-    }
+        // Promotional Section
+        if (document.getElementById("promotionsection")) {
+            fetch("components/productshowcase.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("promotionsection").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
 
-    // New product Section
-    if (document.getElementById("popularproductbycat")) {
-        fetch("components/popularproductbycat.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("popularproductbycat").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
-    }
-    // Offer by Category Section
-    if (document.getElementById("offerbycategory")) {
-        fetch("components/offerbycategories.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("offerbycategory").innerHTML = data;
-                initializeCarousels(); // Initialize carousel after loading
-            });
-    }
+        // New product Section
+        if (document.getElementById("popularproducts")) {
+            fetch("components/popularproducts.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("popularproducts").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
+
+
+        // New product Section
+        if (document.getElementById("featuresection")) {
+            fetch("components/features.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("featuresection").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
+
+        // Load Symptoms Section
+        if (document.getElementById("symptomsection")) {
+            fetch("components/symptoms.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("symptomsection").innerHTML = data);
+        }
+
+        // Load Blog Section
+        if (document.getElementById("blogsection")) {
+            fetch("components/blogslider.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("blogsection").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
+
+
+
+        // Header Searchbar result
+        if (document.getElementById("headersearchpopup")) {
+            fetch("components/headersearch.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("headersearchpopup").innerHTML = data);
+        }
+
+        // Header searchbar suggestion
+        if (document.getElementById("headersearchsuggest")) {
+            fetch("components/headersearchsuggestion.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("headersearchsuggest").innerHTML = data);
+        }
+
+        // New product Section
+        if (document.getElementById("popularproductbycat")) {
+            fetch("components/popularproductbycat.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("popularproductbycat").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
+        // Offer by Category Section
+        if (document.getElementById("offerbycategory")) {
+            fetch("components/offerbycategories.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("offerbycategory").innerHTML = data;
+                    initializeCarousels(); // Initialize carousel after loading
+                });
+        }
+    });
 
 });
+
 
 
 $(document).ready(function() {
@@ -631,5 +639,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Close modal
     document.querySelector(".close-modal").addEventListener("click", () => {
         document.querySelector(".product-modal-overlay").style.display = "none";
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+            // Close other open questions
+            faqItems.forEach((faq) => {
+                if (faq !== item) {
+                    faq.classList.remove("open");
+                }
+            });
+
+            // Toggle the clicked question
+            item.classList.toggle("open");
+        });
     });
 });
