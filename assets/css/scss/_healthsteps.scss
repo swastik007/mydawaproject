@@ -1,0 +1,195 @@
+.healthjourney-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    @media (min-width: 1024px) {
+        // Apply styles for larger screens
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Show 3 items per row
+        gap: 20px;
+        .healthjourney-card {
+            width: 100%; // Ensure full width inside grid
+        }
+    }
+    @media (max-width: 1023px) {
+        // Apply Owl Carousel only for mobile
+        display: block; // Default for Owl Carousel
+    }
+}
+
+.healthjourney-section {
+    margin: 20px 0;
+    @include respond-to(lg) {
+        margin: 30px 0;
+    }
+    .healthjourney-heading {
+        text-align: left;
+        font-size: 1.75em;
+        font-weight: 800;
+        color: $primary;
+        margin-bottom: 10px;
+        max-width: 288px;
+        color: $black;
+        text-transform: capitalize;
+        @include respond-to(lg) {
+            font-size: 2.5em;
+            max-width: 700px;
+            margin-bottom: 14px;
+        }
+        @include respond-to(xxl) {
+            font-size: 3em;
+            max-width: 800px;
+        }
+    }
+    .healthjourney-subheading {
+        font-size: 1em;
+        line-height: 1.4;
+        font-weight: 400;
+        max-width: 270px;
+        @include respond-to(lg) {
+            max-width: 800px;
+            font-size: 1.1em;
+        }
+        @include respond-to(lg) {
+            font-size: 1.25em;
+            max-width: 1100px;
+        }
+    }
+    .healthjourney-container {
+        margin: 50px 0;
+        display: block;
+        .owl-carousel .owl-stage {
+            display: flex;
+            gap: 15px;
+        }
+        .owl-carousel .owl-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include respond-to(lg) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 50px 0;
+            .owl-stage {
+                display: unset;
+                /* Prevent interference from Owl Carousel */
+            }
+        }
+    }
+    .healthjourney-card {
+        border-radius: 12px;
+        padding: 0;
+        text-align: center;
+        position: relative;
+        img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            @media (min-width: 768px) {
+                height: 280px;
+            }
+            @include respond-to(lg) {
+                height: 300px;
+            }
+            @include respond-to(xxl) {
+                height: 370px;
+            }
+        }
+        h4 {
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: $black;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.1em;
+            line-height: 1.5;
+            @include respond-to(lg) {
+                // top: 30px;
+                // left: 30px;
+            }
+            @include respond-to(xxl) {
+                font-size: 1.5em;
+                top: 40px;
+                left: 40px;
+                margin-bottom: 20px;
+            }
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.3;
+            color: $black;
+            font-weight: 400;
+            position: absolute;
+            top: 60px;
+            left: 40px;
+            text-align: left;
+            max-width: 270px;
+            @include respond-to(lg) {
+                // top: 65px;
+                // left: 30px;
+            }
+            @include respond-to(xxl) {
+                font-size: 1.2em;
+                top: 85px;
+                left: 40px;
+                max-width: 320px;
+            }
+        }
+        .arrow-link {
+            font-size: 14px;
+            font-weight: 500;
+            background-color: $black;
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            text-decoration: none;
+            border-radius: 50%;
+            padding: 7px;
+            @include respond-to(xxl) {
+                bottom: 50px;
+                left: 50px;
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+                @include respond-to(xxl) {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.health-category-slider {
+    .card img {
+        border-radius: 12px;
+        height: 150px;
+        object-fit: cover;
+        @include respond-to(lg) {
+            height: 280px;
+        }
+    }
+    .card-body {
+        padding-top: 10px;
+    }
+    .card-text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $black;
+        padding: 5px 15px;
+        @include respond-to(lg) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+}

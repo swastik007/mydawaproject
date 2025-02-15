@@ -1,7 +1,10 @@
 .new-products,
 .popularproductbycat {
     background-color: #EFF2F9;
-    padding: 10px;
+    padding: 40px 0;
+    @include respond-to(xxl) {
+        padding: 80px 0;
+    }
 }
 
 .deal-banner {

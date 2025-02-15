@@ -1,5 +1,17 @@
 .feature-section {
     background-color: #F1F3FB;
+    padding: 42px 0 32px 0;
+    @include respond-to(lg) {
+        padding: 50px 0 35px 0;
+    }
+    .mydawa-container {
+        @include respond-to(lg) {
+            padding: 0 50px;
+        }
+        @include respond-to(xxl) {
+            padding: 0 80px;
+        }
+    }
     .feature-item {
         display: flex;
         @include respond-to(lg) {
@@ -7,16 +19,30 @@
         }
         .icon {
             background-color: #fff;
-            padding: 25px;
+            padding: 20px;
             border-radius: 50%;
             margin-right: 20px;
+            @include respond-to(xxl) {
+                padding: 25px;
+            }
+            img {
+                width: 40px;
+                height: 40px;
+                @include respond-to(xxl) {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
         }
         h5 {
-            font-size: 18px;
+            font-size: 1.075em;
             font-weight: bold;
             color: $black;
             @include respond-to(lg) {
-                font-size: 20px;
+                font-size: 1.25em
+            }
+            @include respond-to(xxl) {
+                font-size: 1.4em
             }
         }
         p {

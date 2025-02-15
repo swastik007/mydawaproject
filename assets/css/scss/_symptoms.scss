@@ -95,15 +95,28 @@
         }
     }
     .symptom-heading {
+        text-align: left;
+        font-size: 1.5em;
         font-weight: 800;
-        font-size: 28px;
-        line-height: 36px;
+        color: $primary;
+        margin-bottom: 10px;
+        max-width: 288px;
         color: $black;
+        text-transform: capitalize;
+        display: flex;
         @include respond-to(lg) {
-            font-size: 40px;
+            font-size: 2.2em;
+            margin-bottom: 14px;
+        }
+        @include respond-to(xxl) {
+            font-size: 2.75em;
         }
         span {
             color: $primary;
+            margin-left: 7px;
+            @include respond-to(xxl) {
+                margin-left: 7px;
+            }
         }
     }
     .symptom-subheading {

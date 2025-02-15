@@ -1,56 +1,43 @@
-<section class="homepage-slider mydawa-container">
+<div class="home-slider mydawa-container">
     <div id="homepage-carousel" class="owl-carousel owl-theme">
-        <!-- Slide 1 -->
-        <div class="slide-item position-relative text-white" style="background-image: url('assets/images/home-slider.png'); background-size: cover; background-position: center; min-height: 400px;">
-            <div class="container-fluid h-100 d-flex align-items-center">
-                <div class="text-content text-start ms-lg-5 ms-0 mt-lg-0 mt-2 mr-auto">
-                    <h5 class="text-start text-white">I Choose Wellness</h5>
-                    <h2 class="text-white text-start">Supplements to support <br> your well-being.</h2>
-                    <div class="mt-4 d-block d-md-flex">
-                        <button class="btn-primary btn-rounded me-3 mb-2 w-auto w-md-100">Explore Category 
-                            <svg class="ms-2" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_50_592)">
-                                <path d="M0.75 5.625H11.2461" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.00391 0.75L11.252 5.625L6.00391 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_50_592">
-                                <rect width="12" height="12" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
-                        <button class="btn-outline-light btn-rounded  mb-2 w-auto w-md-100">
-                            Book Consultation
-                            <svg class="ms-2" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_50_592)">
-                                <path d="M0.75 5.625H11.2461" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.00391 0.75L11.252 5.625L6.00391 10.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_50_592">
-                                <rect width="12" height="12" fill="black"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
+        <div class="slide-item position-relative text-white">
+            <picture>
+                <source srcset="assets/images/banners/home-slider-lg.png" media="(min-width: 1200px)">
+                <source srcset="assets/images/banners/home-slider.png" media="(min-width: 768px)">
+                <img src="assets/images/banners/home-slider.png" alt="Home Slider" class="img-fluid w-100">
+            </picture>
+
+            <div class="container-fluid h-100 d-flex align-items-center position-absolute top-0 start-0 w-100 h-100">
+                <div class="text-content">
+                    <h5>I Choose Wellness</h5>
+                    <h2>Supplements to support <br> your well-being.</h2>
+                    <div class="button-wrap">
+                        <button class="btn-primary btn-rounded btn-lg">Explore Category</button>
+                        <button class="btn-outline-light btn-rounded">Book Consultation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-item position-relative text-white">
+            <picture>
+                <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 1200px)">
+                <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 768px)">
+                <img src="assets/images/banners/durex-banner.png" alt="Home Slider" class="img-fluid w-100">
+            </picture>
+
+            <div class="container-fluid h-100 d-flex align-items-center position-absolute top-0 start-0 w-100 h-100">
+                <div class="text-content">
+                    <h5>What is this?</h5>
+                    <h2>Supplements to support <br> your well-being.</h2>
+                    <div class="button-wrap">
+                        <button class="btn-primary btn-rounded">Explore Category</button>
+                        <button class="btn-outline-light btn-rounded">Book Consultation</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="up-chat">
-        <ul>
-            <li>
-                <a href="" class="d-flex align-items-center">
-                    <img src="img/upload-img.png" alt="upload"> Upload Prescription
-                </a>
-            </li>
-            <li>
-                <a href="" class="d-flex align-items-center">
-                    <img src="img/chat-img.png" alt="chat"> Upload Prescription
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
+
+    <!-- Custom Dots Container (Ensure it exists inside the home-slider) -->
+    <div class="custom-dots-container"></div>
+</div>

@@ -1,60 +1,114 @@
-// _mixins.scss
-@mixin respond-to($breakpoint) {
-    @if $breakpoint==xxs {
-        @media (min-width: 320px) {
-            @content;
-        }
-    }
-    @if $breakpoint==xs {
-        @media (min-width: 440px) {
-            @content;
-        }
-    }
-    @else if $breakpoint==sm {
-        @media (min-width: 768px) {
-            @content;
-        }
-    }
-    @else if $breakpoint==md {
-        @media (min-width: 992px) {
-            @content;
-        }
-    }
-    @else if $breakpoint==lg {
-        @media (min-width: 1200px) {
-            @content;
-        }
-    }
-    @else if $breakpoint==xl {
-        @media (min-width: 1600px) {
-            @content;
-        }
-    }
-    @else if $breakpoint==xxl {
-        @media (min-width: 1800px) {
-            @content;
-        }
-    }
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-Light.woff2") format("woff2"), url("../fonts/Figtree/Figtree-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
 }
 
-.mydawa-container {
-    margin: 0 auto;
-    @include respond-to(xs) {
-        max-width: 400px;
-    }
-    @include respond-to(sm) {
-        max-width: 720px;
-    }
-    @include respond-to(md) {
-        max-width: 800px;
-    }
-    @include respond-to(lg) {
-        max-width: 1140px;
-    }
-    @include respond-to(xxl) {
-        max-width: 1560px;
-    }
-    @include respond-to(xxl) {
-        max-width: 1730px;
-    }
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-Regular.woff2") format("woff2"), url("../fonts/Figtree/Figtree-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-Medium.woff2") format("woff2"), url("../fonts/Figtree/Figtree-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-SemiBold.woff2") format("woff2"), url("../fonts/Figtree/Figtree-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-Bold.woff2") format("woff2"), url("../fonts/Figtree/Figtree-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-ExtraBold.woff2") format("woff2"), url("../fonts/Figtree/Figtree-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/Figtree/Figtree-Black.woff2") format("woff2"), url("../fonts/Figtree/Figtree-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* Outfit Font */
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-Thin.woff2") format("woff2"), url("../fonts/Outfit/Outfit-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-ExtraLight.woff2") format("woff2"), url("../fonts/Outfit/Outfit-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-Light.woff2") format("woff2"), url("../fonts/Outfit/Outfit-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-Regular.woff2") format("woff2"), url("../fonts/Outfit/Outfit-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-Medium.woff2") format("woff2"), url("../fonts/Outfit/Outfit-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-SemiBold.woff2") format("woff2"), url("../fonts/Outfit/Outfit-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-Bold.woff2") format("woff2"), url("../fonts/Outfit/Outfit-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-ExtraBold.woff2") format("woff2"), url("../fonts/Outfit/Outfit-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/Outfit-Black.woff2") format("woff2"), url("../fonts/Outfit/Outfit-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
 }

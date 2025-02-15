@@ -1,68 +1,89 @@
-.btn-primary {
-    background-color: $primary;
+button {
     border: none;
-    border-radius: 10px;
-    padding: 10px 40px;
+    box-shadow: none;
+    outline: none;
+    font-size: 1em;
+    padding: 10px 20px;
     font-weight: 600;
     color: white;
-    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
     @include respond-to(xxl) {
-        padding: 16px 64px;
-        font-size: 28px;
+        padding: 12px 32px;
+        font-size: 1.4em;
     }
     &:hover,
     &:focus {
-        background-color: #d81b60;
-        border-color: #d81b60;
+        background-color: $primarydark;
+        border-color: $primarydark;
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+    &:hover,
+    &:focus {
+        background-color: $primarydark;
+        border-color: $primarydark;
     }
 }
 
 .btn-outline-light {
     background-color: #f3f3f3;
-    font-weight: 400;
-    border: none;
     color: $black;
-    border-radius: 10px;
-    padding: 10px 40px;
-    font-size: 18px;
-    @include respond-to(xxl) {
-        padding: 16px 64px;
-        font-size: 28px;
-    }
     &:hover,
     &:focus {
-        background-color: #ffffff;
-        border-color: #eee;
+        background-color: $grey3;
+        border-color: $primary;
         color: $primary;
     }
 }
 
 .btn-grey {
     background-color: $black;
-    font-weight: 400;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    padding: 10px 40px;
     &:hover,
     &:focus {
-        background-color: $primary;
-        border-color: $primary;
-        color: white;
+        background-color: $grey8;
+        border-color: $blackdark;
     }
 }
 
+.btn-rounded {
+    border-radius: 30px;
+    @include respond-to(xxl) {
+        border-radius: 50px;
+    }
+}
+
+.btn-sm {
+    padding: 5px 15px;
+    font-size: 12px;
+    @include respond-to(xxl) {
+        padding: 8px 20px;
+        font-size: 100%;
+    }
+}
+
+.btn-lg {
+    padding: 10px 40px;
+}
+
+// .btn-rounded {
+//     border-radius: 30px;
+//     padding: 15px 30px;
+//     display: flex;
+//     align-items: center;
+//     i {
+//         font-size: 20px;
+//         margin-left: 5px;
+//     }
+// }
 .btn-green {
     background-color: $green;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: 600;
-    color: white;
     &:hover,
     &:focus {
-        background-color: #54A02F;
-        border-color: #54A02F;
+        background-color: $greendark;
+        border-color: $greendark;
     }
 }
 
@@ -103,16 +124,5 @@
     &:focus {
         background-color: #f2f2f2;
         color: #444;
-    }
-}
-
-.btn-rounded {
-    border-radius: 30px;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    i {
-        font-size: 20px;
-        margin-left: 5px;
     }
 }
