@@ -600,12 +600,11 @@ input[type="radio"]:checked::before {
   min-width: 20px;
   margin-right: 12px;
   display: block;
-  display: none;
 }
 
 @media (min-width: 1200px) {
   .site-header .top-header .top-left-box .ham {
-    display: block;
+    display: none;
   }
 }
 
@@ -1191,25 +1190,39 @@ input[type="radio"]:checked::before {
 }
 
 .services-dropdown,
-.pages-dropdown {
+.pages-dropdown,
+.healthcenter-dropdown {
   position: relative;
   z-index: 111;
   cursor: pointer;
 }
 
 .services-dropdown .services-menu,
-.pages-dropdown .services-menu {
+.pages-dropdown .services-menu,
+.healthcenter-dropdown .services-menu {
+  display: none;
+}
+
+.services-dropdown .healthcenter-menu,
+.pages-dropdown .healthcenter-menu,
+.healthcenter-dropdown .healthcenter-menu {
   display: none;
 }
 
 .services-dropdown:hover .services-menu, .services-dropdown:focus .services-menu,
 .pages-dropdown:hover .services-menu,
-.pages-dropdown:focus .services-menu {
+.pages-dropdown:focus .services-menu,
+.healthcenter-dropdown:hover .services-menu,
+.healthcenter-dropdown:focus .services-menu {
   display: block;
 }
 
 .services-dropdown .services-menu,
-.pages-dropdown .services-menu {
+.services-dropdown .healthcenter-menu,
+.pages-dropdown .services-menu,
+.pages-dropdown .healthcenter-menu,
+.healthcenter-dropdown .services-menu,
+.healthcenter-dropdown .healthcenter-menu {
   /* Hidden by default */
   position: absolute;
   top: 40px;
@@ -1228,7 +1241,11 @@ input[type="radio"]:checked::before {
 }
 
 .services-dropdown .services-menu a,
-.pages-dropdown .services-menu a {
+.services-dropdown .healthcenter-menu a,
+.pages-dropdown .services-menu a,
+.pages-dropdown .healthcenter-menu a,
+.healthcenter-dropdown .services-menu a,
+.healthcenter-dropdown .healthcenter-menu a {
   width: 100%;
   font-size: 14px;
   color: #373434;
@@ -1237,7 +1254,11 @@ input[type="radio"]:checked::before {
 }
 
 .services-dropdown .services-menu a span,
-.pages-dropdown .services-menu a span {
+.services-dropdown .healthcenter-menu a span,
+.pages-dropdown .services-menu a span,
+.pages-dropdown .healthcenter-menu a span,
+.healthcenter-dropdown .services-menu a span,
+.healthcenter-dropdown .healthcenter-menu a span {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1245,15 +1266,96 @@ input[type="radio"]:checked::before {
 }
 
 .services-dropdown .services-menu a i,
-.pages-dropdown .services-menu a i {
+.services-dropdown .healthcenter-menu a i,
+.pages-dropdown .services-menu a i,
+.pages-dropdown .healthcenter-menu a i,
+.healthcenter-dropdown .services-menu a i,
+.healthcenter-dropdown .healthcenter-menu a i {
   color: #B1B1C3;
   font-size: 20px;
 }
 
 .services-dropdown .services-menu a:hover, .services-dropdown .services-menu a:focus,
+.services-dropdown .healthcenter-menu a:hover,
+.services-dropdown .healthcenter-menu a:focus,
 .pages-dropdown .services-menu a:hover,
-.pages-dropdown .services-menu a:focus {
+.pages-dropdown .services-menu a:focus,
+.pages-dropdown .healthcenter-menu a:hover,
+.pages-dropdown .healthcenter-menu a:focus,
+.healthcenter-dropdown .services-menu a:hover,
+.healthcenter-dropdown .services-menu a:focus,
+.healthcenter-dropdown .healthcenter-menu a:hover,
+.healthcenter-dropdown .healthcenter-menu a:focus {
   background-color: #F8F8FC;
+}
+
+.cart-dropdown-wrap {
+  position: relative;
+  z-index: 111;
+  cursor: pointer;
+}
+
+.cart-dropdown-wrap .cart-dropdown {
+  display: none;
+}
+
+.cart-dropdown-wrap:hover .cart-dropdown, .cart-dropdown-wrap:focus .cart-dropdown {
+  display: block;
+}
+
+.cart-dropdown-wrap .cart-dropdown {
+  /* Hidden by default */
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  /* Centers the dropdown */
+  width: 480px;
+  /* Set desired width */
+  background: white;
+  z-index: 10500;
+  /* Ensure dropdown is above other elements */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  border: 1px solid #E7ECF4;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 5px;
+}
+
+@media (min-width: 1200px) {
+  .cart-dropdown-wrap .cart-dropdown {
+    width: 700px;
+  }
+}
+
+.cart-dropdown-wrap .cart-dropdown a {
+  width: 100%;
+  font-size: 14px;
+  color: #373434;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.cart-dropdown-wrap .cart-dropdown a span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-dropdown-wrap .cart-dropdown a i {
+  color: #B1B1C3;
+  font-size: 20px;
+}
+
+.cart-dropdown-wrap .cart-dropdown a:hover, .cart-dropdown-wrap .cart-dropdown a:focus {
+  background-color: #F8F8FC;
+}
+
+.cart-dropdown-wrap .cart-item .product-info .item-details h3 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 3px;
 }
 
 header {
@@ -2198,6 +2300,10 @@ button:hover, button:focus {
   }
 }
 
+.category-slider a.card {
+  text-decoration: none;
+}
+
 .category-slider .card img {
   border-radius: 12px;
   height: 150px;
@@ -2265,6 +2371,10 @@ button:hover, button:focus {
   .offer-section {
     margin: 70px auto;
   }
+}
+
+.offer-section a {
+  text-decoration: none;
 }
 
 .feature-section {
@@ -5396,7 +5506,7 @@ button:hover, button:focus {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 440px) {
   .category-page .category-section .category-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -7146,87 +7256,6 @@ button:hover, button:focus {
   .cant-find-section .search-bg-icon {
     display: none;
   }
-}
-
-.faq-section {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px;
-  color: #fff;
-  background: #111;
-  border-radius: 10px;
-}
-
-.faq-section .faq-header {
-  flex: 1;
-}
-
-.faq-section .faq-header h4 {
-  font-size: 16px;
-  font-weight: 400;
-  color: #aaa;
-}
-
-.faq-section .faq-header h2 {
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.faq-section .faq-list {
-  flex: 2;
-  width: 100%;
-}
-
-.faq-section .faq-list .faq-item {
-  border-bottom: 1px solid #333;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.faq-section .faq-list .faq-item:last-child {
-  border-bottom: none;
-}
-
-.faq-section .faq-list .faq-item .faq-question {
-  background: transparent;
-  border: none;
-  color: #ccc;
-  font-size: 18px;
-  width: 100%;
-  text-align: left;
-  padding: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: color 0.3s;
-}
-
-.faq-section .faq-list .faq-item .faq-question .faq-arrow {
-  font-size: 16px;
-  transition: transform 0.3s ease;
-}
-
-.faq-section .faq-list .faq-item .faq-question:hover {
-  color: #fff;
-}
-
-.faq-section .faq-list .faq-item .faq-answer {
-  font-size: 16px;
-  color: #bbb;
-  padding: 15px;
-  display: none;
-}
-
-.faq-section .faq-list .faq-item.open .faq-answer {
-  display: block;
-}
-
-.faq-section .faq-list .faq-item.open .faq-arrow {
-  transform: rotate(180deg);
 }
 
 .wishlist-page {

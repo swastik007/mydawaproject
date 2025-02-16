@@ -6,4 +6,7 @@
     @include respond-to(xxl) {
         margin: 70px auto;
     }
+    a {
+        text-decoration: none;
+    }
 }

@@ -6,6 +6,9 @@
     @include respond-to(xxl) {
         margin: 70px auto;
     }
+    a.card {
+        text-decoration: none;
+    }
     .card img {
         border-radius: 12px;
         height: 150px;

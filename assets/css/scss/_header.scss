@@ -83,9 +83,8 @@
                 min-width: 20px;
                 margin-right: 12px;
                 display: block;
-                display: none;
                 @include respond-to(lg) {
-                    display: block;
+                    display: none;
                 }
             }
         }
@@ -571,11 +570,15 @@
 }
 
 .services-dropdown,
-.pages-dropdown {
+.pages-dropdown,
+.healthcenter-dropdown {
     position: relative;
     z-index: 111;
     cursor: pointer;
     .services-menu {
+        display: none;
+    }
+    .healthcenter-menu {
         display: none;
     }
     &:hover,
@@ -584,7 +587,8 @@
             display: block;
         }
     }
-    .services-menu {
+    .services-menu,
+    .healthcenter-menu {
         /* Hidden by default */
         position: absolute;
         top: 40px;
@@ -620,6 +624,75 @@
             &:hover,
             &:focus {
                 background-color: #F8F8FC;
+            }
+        }
+    }
+}
+
+.cart-dropdown-wrap {
+    position: relative;
+    z-index: 111;
+    cursor: pointer;
+    .cart-dropdown {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        .cart-dropdown {
+            display: block;
+        }
+    }
+    .cart-dropdown {
+        /* Hidden by default */
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        // transform: translateX(-50%);
+        /* Centers the dropdown */
+        width: 480px;
+        /* Set desired width */
+        background: white;
+        z-index: 10500;
+        /* Ensure dropdown is above other elements */
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        border: 1px solid #E7ECF4;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 5px;
+        @include respond-to(lg) {
+            width: 700px;
+        }
+        a {
+            width: 100%;
+            font-size: 14px;
+            color: $black;
+            font-weight: 600;
+            border-radius: 8px;
+            span {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            i {
+                color: #B1B1C3;
+                font-size: 20px;
+            }
+            &:hover,
+            &:focus {
+                background-color: #F8F8FC;
+            }
+        }
+    }
+    .cart-item {
+        .product-info {
+            .item-details {
+                h3 {
+                    font-size: 18px;
+                    line-height: 1.2;
+                    font-weight: 600;
+                    margin-bottom: 3px;
+                }
             }
         }
     }

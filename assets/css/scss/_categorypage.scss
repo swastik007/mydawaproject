@@ -281,7 +281,7 @@
             display: grid;
             gap: 20px;
             grid-template-columns: 1fr;
-            @include respond-to(md) {
+            @include respond-to(xs) {
                 grid-template-columns: repeat(2, 1fr);
             }
             @include respond-to(lg) {
