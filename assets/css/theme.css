@@ -1217,6 +1217,14 @@ input[type="radio"]:checked::before {
   display: block;
 }
 
+.services-dropdown:hover .healthcenter-menu, .services-dropdown:focus .healthcenter-menu,
+.pages-dropdown:hover .healthcenter-menu,
+.pages-dropdown:focus .healthcenter-menu,
+.healthcenter-dropdown:hover .healthcenter-menu,
+.healthcenter-dropdown:focus .healthcenter-menu {
+  display: block;
+}
+
 .services-dropdown .services-menu,
 .services-dropdown .healthcenter-menu,
 .pages-dropdown .services-menu,
@@ -1812,7 +1820,7 @@ header {
 
 @media (min-width: 1800px) {
   .footer-main .sub-footer .footer-links {
-    margin-right: 60px;
+    margin-right: 50px;
   }
 }
 
@@ -1957,6 +1965,17 @@ button:hover, button:focus {
   border-color: #252525;
 }
 
+.btn-white-border {
+  background-color: #fff;
+  color: #373434;
+  border: 1px solid #373434;
+}
+
+.btn-white-border:hover, .btn-white-border:focus {
+  background-color: #373434;
+  color: #fff;
+}
+
 .btn-rounded {
   border-radius: 30px;
 }
@@ -1990,21 +2009,6 @@ button:hover, button:focus {
 .btn-green:hover, .btn-green:focus {
   background-color: #65a146;
   border-color: #65a146;
-}
-
-.btn-white-border {
-  background-color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-weight: 600;
-  color: #373434;
-  border: 1px solid #373434;
-}
-
-.btn-white-border:hover, .btn-white-border:focus {
-  background-color: #373434;
-  color: #fff;
 }
 
 .btn-dark {
@@ -2923,6 +2927,63 @@ button:hover, button:focus {
 
 .banner-section.listingbanner-section .listingbutton-wrap button {
   margin-right: 10px;
+}
+
+.banner-section.health-banner {
+  height: 280px;
+}
+
+@media (min-width: 1800px) {
+  .banner-section.health-banner {
+    height: 440px;
+  }
+}
+
+.banner-section.health-banner .banner-content-wrap p {
+  font-weight: 300;
+  font-size: 0.875em;
+  line-height: 1.7;
+  color: white;
+  max-width: 280px;
+}
+
+@media (min-width: 1200px) {
+  .banner-section.health-banner .banner-content-wrap p {
+    font-size: 1em;
+    max-width: 800px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1800px) {
+  .banner-section.health-banner .banner-content-wrap p {
+    font-size: 1.5em;
+  }
+}
+
+.banner-section.health-banner .banner-content-wrap h2 {
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 7px;
+  color: white;
+  max-width: 340px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1200px) {
+  .banner-section.health-banner .banner-content-wrap h2 {
+    font-size: 2.8em;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .banner-section.health-banner .banner-content-wrap h2 {
+    font-size: 3.3em;
+    margin-bottom: 16px;
+    max-width: 500px;
+  }
 }
 
 .banner-bottom-section {
@@ -4254,12 +4315,28 @@ button:hover, button:focus {
   }
 }
 
+.submit-prescription .step-navigation .steps {
+  gap: 15px;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .step-navigation .steps {
+    gap: 40px;
+  }
+}
+
 .submit-prescription .step-navigation .steps .step {
   display: flex;
   align-items: center;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.3;
   font-weight: 500;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .step-navigation .steps .step {
+    font-size: 20px;
+  }
 }
 
 .submit-prescription .step-navigation .steps .step.active {
@@ -4275,13 +4352,22 @@ button:hover, button:focus {
   border-radius: 50%;
   background: #e7ecf4;
   color: #373434;
-  font-size: 12px;
-  font-weight: 600;
   margin-right: 5px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .step-navigation .steps .step .step-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
 }
 
 .submit-prescription .step-navigation .steps .step.complete .step-circle {
-  background: #45a85c;
+  background: #65a146;
   color: #fff;
 }
 
@@ -4297,9 +4383,15 @@ button:hover, button:focus {
 
 .submit-prescription .prescription-wrap {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 30px auto;
   /* Uploaded File Section */
   /* Payment Section */
+}
+
+@media (min-width: 1800px) {
+  .submit-prescription .prescription-wrap {
+    margin: 50px auto;
+  }
 }
 
 .submit-prescription .prescription-wrap .prescription-heading {
@@ -6085,35 +6177,180 @@ button:hover, button:focus {
 /* SCSS for Cart Page */
 .cart-container .cart-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 20px;
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .cart-container .cart-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .cart-container .cart-steps {
   display: flex;
+  gap: 5px;
+}
+
+@media (min-width: 992px) {
+  .cart-container .cart-steps {
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .cart-container .cart-steps {
+    gap: 40px;
+  }
+}
+
+.cart-container .cart-steps .step {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@media (min-width: 992px) {
+  .cart-container .cart-steps .step {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .cart-container .cart-steps .step {
+    font-size: 20px;
+  }
+}
+
+.cart-container .cart-steps .step.active {
+  font-weight: 600;
+}
+
+.cart-container .cart-steps .step .step-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e7ecf4;
+  color: #373434;
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+@media (min-width: 1800px) {
+  .cart-container .cart-steps .step .step-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin-right: 16px;
+  }
+}
+
+.cart-container .cart-steps .step.complete .step-circle {
+  background: #65a146;
+  color: #fff;
+}
+
+.cart-container .cart-steps .step.complete .step-circle i {
+  color: #fff;
+  font-size: 18px;
+}
+
+.cart-container .cart-steps .step.active .step-circle {
+  background: #516bf1;
+  color: #fff;
+}
+
+.cart-container .steps {
   gap: 15px;
 }
 
-.cart-container .cart-steps .step span.number {
-  padding: 8px 15px;
-  border-radius: 50%;
-  background: #eee;
+@media (min-width: 1800px) {
+  .cart-container .steps {
+    gap: 40px;
+  }
 }
 
-.cart-container .cart-steps .step.active span.number {
-  background: #516BF1;
-  color: white;
+.cart-container .steps .step {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@media (min-width: 1800px) {
+  .cart-container .steps .step {
+    font-size: 20px;
+  }
+}
+
+.cart-container .steps .step.active {
+  font-weight: 600;
+}
+
+.cart-container .steps .step .step-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e7ecf4;
+  color: #373434;
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+@media (min-width: 1800px) {
+  .cart-container .steps .step .step-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+.cart-container .steps .step.complete .step-circle {
+  background: #65a146;
+  color: #fff;
+}
+
+.cart-container .steps .step.complete .step-circle i {
+  color: #fff;
+  font-size: 18px;
+}
+
+.cart-container .steps .step.active .step-circle {
+  background: #516bf1;
+  color: #fff;
 }
 
 /* Table Header - Uses Grid */
 .cart-header-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  /* Adjust column widths */
-  background: #fff;
-  border-radius: 5px;
-  text-align: left;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .cart-header-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* Adjust column widths */
+    background: #fff;
+    border-radius: 5px;
+    text-align: left;
+  }
 }
 
 .cart-header-row span {
@@ -6153,6 +6390,7 @@ button:hover, button:focus {
   border: 1px solid #f0f0f0;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 @media (min-width: 1200px) {
@@ -6430,6 +6668,13 @@ button:hover, button:focus {
 
 .cart-summary {
   background: #fff;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1800px) {
+  .cart-summary {
+    margin-bottom: 0;
+  }
 }
 
 .cart-summary .coupon-box {
@@ -6452,6 +6697,7 @@ button:hover, button:focus {
   line-height: 1.6;
   font-weight: 700;
   color: #373434;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 1200px) {
@@ -6463,6 +6709,7 @@ button:hover, button:focus {
 @media (min-width: 1800px) {
   .cart-summary .coupon-box h3 {
     font-size: 24px;
+    margin-bottom: 24px;
   }
 }
 

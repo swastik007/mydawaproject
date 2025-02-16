@@ -48,6 +48,17 @@ button {
     }
 }
 
+.btn-white-border {
+    background-color: #fff;
+    color: $black;
+    border: 1px solid $black;
+    &:hover,
+    &:focus {
+        background-color: $black;
+        color: #fff;
+    }
+}
+
 .btn-rounded {
     border-radius: 30px;
     @include respond-to(xxl) {
@@ -84,21 +95,6 @@ button {
     &:focus {
         background-color: $greendark;
         border-color: $greendark;
-    }
-}
-
-.btn-white-border {
-    background-color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: 600;
-    color: $black;
-    border: 1px solid $black;
-    &:hover,
-    &:focus {
-        background-color: $black;
-        color: #fff;
     }
 }
 
