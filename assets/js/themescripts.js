@@ -3,6 +3,10 @@ console.log("🚀 jQuery script is running!");
 document.addEventListener("DOMContentLoaded", function() {
     loadComponents();
     setupEventListeners();
+    // Ensure carousels are initialized on all pages
+    setTimeout(() => {
+        initializeCarousels();
+    }, 500);
 });
 
 // Function to load HTML components dynamically
