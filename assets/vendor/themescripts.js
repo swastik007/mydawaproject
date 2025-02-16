@@ -1,3 +1,5 @@
+console.log("🚀 jQuery script is running!");
+
 document.addEventListener("DOMContentLoaded", function() {
     loadComponents();
     setupEventListeners();
@@ -12,6 +14,7 @@ function loadComponents() {
         { id: "healthsteps", file: "components/simplifyhealthjourney.html" },
         { id: "cat-slider", file: "components/categoryslider.html" },
         { id: "offersection", file: "components/offersoftheday.html" },
+        { id: "homebanner", file: "components/homebanner.html" },
         { id: "new-product", file: "components/newonmydawa.html" },
         { id: "promotionsection", file: "components/productshowcase.html" },
         { id: "popularproducts", file: "components/popularproducts.html" },
@@ -62,11 +65,10 @@ function initializeCarousels() {
     const carousels = [
         { id: "#homepage-carousel", options: { loop: true, margin: 10, nav: false, dots: true, items: 1 } },
         { id: "#category-carousel", options: { loop: true, margin: 10, nav: false, dots: false, responsive: { 0: { items: 1 }, 400: { items: 2.8 }, 768: { items: 3 }, 1024: { items: 5 }, 1920: { items: 7 } } } },
-        { id: "#category-carousel", options: { loop: true, margin: 10, nav: false, dots: false, responsive: { 0: { items: 1 }, 400: { items: 2.8 }, 768: { items: 3 }, 1024: { items: 5 }, 1920: { items: 7 } } } },
-        { id: "#blog-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 768: { items: 2 }, 1024: { items: 4 } } } },
-        { id: "#offer-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 } } } },
-        { id: "#popular-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 768: { items: 2 }, 1024: { items: 4 } } } },
-        { id: "#newproduct-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2.1 }, 768: { items: 2 }, 1024: { items: 4 } } } }
+        { id: "#blog-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } },
+        { id: "#offer-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
+        { id: "#popular-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
+        { id: "#newproduct-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2.1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } }
     ];
 
     setTimeout(() => {
@@ -85,7 +87,7 @@ function initializeCarousels() {
 function initializeHealthJourneyCarousel() {
     const container = $("#healthjourney-carousel");
 
-    if (window.innerWidth < 1024) { // Enable Owl Carousel for mobile screens
+    if (window.innerWidth < 1200) { // Enable Owl Carousel for mobile screens
         if (!container.hasClass("owl-loaded")) {
             console.log("Initializing Health Journey carousel...");
             container.addClass("owl-carousel").owlCarousel({
@@ -95,8 +97,8 @@ function initializeHealthJourneyCarousel() {
                 dots: true,
                 responsive: {
                     0: { items: 1 },
-                    600: { items: 2 },
-                    768: { items: 3 }
+                    600: { items: 1 },
+                    768: { items: 2 }
                 }
             });
         }
@@ -115,10 +117,18 @@ window.addEventListener("resize", initializeHealthJourneyCarousel);
 // Function to get navigation arrows for Owl Carousel
 function getNavText() {
     return [
-        '<span aria-label="Previous"><i class="bi bi-chevron-left"></i></span>',
-        '<span aria-label="Next"><i class="bi bi-chevron-right"></i></span>'
+        // Left (Previous) Arrow SVG
+        '<span aria-label="Previous"><svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M0.305419 8.8644C0.109857 8.63904 0 8.33343 0 8.01477C0 7.69611 0.109857 7.3905 0.305419 7.16514L6.20652 0.366945C6.30275 0.25207 6.41786 0.160501 6.54512 0.0976009C6.67239 0.0347008 6.80928 0.00144726 6.94778 0C7.08629 -0.00130267 7.22365 0.0290967 7.35185 0.0895197C7.48005 0.149943 7.59652 0.239141 7.69447 0.352013C7.79241 0.464885 7.86987 0.598992 7.92232 0.746741C7.97477 0.894491 8.00116 1.05264 7.99996 1.21216C7.99876 1.37168 7.96998 1.52942 7.91531 1.67607C7.86064 1.82272 7.78117 1.95527 7.68154 2.0661L2.51794 8.01477L7.68154 13.9634C7.87156 14.1901 7.9767 14.4936 7.97432 14.8087C7.97195 15.1238 7.86224 15.4252 7.66883 15.648C7.47542 15.8708 7.21379 15.9972 6.94028 15.9999C6.66677 16.0027 6.40326 15.8816 6.20652 15.6627L0.305419 8.8644Z" />' +
+        '</svg></span>',
+
+        // Right (Next) Arrow SVG
+        '<span aria-label="Next"><svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M7.69458 7.1356C7.89014 7.36096 8 7.66657 8 7.98523C8 8.30389 7.89014 8.6095 7.69458 8.83486L1.79348 15.6331C1.69725 15.7479 1.58214 15.8395 1.45488 15.9024C1.32761 15.9654 1.19072 15.9986 1.05222 16C0.913706 16.0013 0.776345 15.9709 0.648146 15.9105C0.519946 15.8501 0.403476 15.7609 0.305532 15.648C0.207587 15.5352 0.13013 15.401 0.0776796 15.2533C0.025229 15.1056 -0.00116426 14.9474 3.93333e-05 14.7878C0.00124293 14.6282 0.0300196 14.4706 0.0846901 14.3239C0.139361 14.1773 0.21883 14.0447 0.318461 13.9339L5.48206 7.98523L0.318461 2.03661C0.128442 1.80995 0.0232987 1.50639 0.0256754 1.1913C0.0280521 0.876207 0.137759 0.574795 0.331168 0.351982C0.524576 0.129169 0.786212 0.00278279 1.05972 4.47764e-05C1.33323 -0.00269323 1.59674 0.118435 1.79348 0.337342L7.69458 7.1356Z" />' +
+        '</svg></span>'
     ];
 }
+
 
 // Function to setup event listeners
 function setupEventListeners() {
@@ -224,3 +234,115 @@ function setupWishlistPopup() {
     wishlistBtn.addEventListener("click", () => wishlistPopup.classList.remove("hidden"));
     closeBtn.addEventListener("click", () => wishlistPopup.classList.add("hidden"));
 }
+$(window).on("load", function() {
+    console.log("🚀 jQuery Step Navigation Loaded!");
+
+    let currentStep = 0;
+    const stepSections = $(".step-section");
+    const steps = $(".step");
+
+    console.log("Step Sections Found: ", stepSections.length);
+
+    if (stepSections.length === 0) {
+        console.error("⚠️ No .step-section elements found! Check your HTML structure.");
+        return;
+    }
+
+    function updateStep() {
+        console.log(`Updating Step: ${currentStep}`);
+
+        // Hide all steps and remove 'active' class
+        stepSections.removeClass("active").hide();
+
+        // Show only the current step
+        stepSections.eq(currentStep).fadeIn().addClass("active");
+
+        // Update step indicators
+        steps.removeClass("selected completed");
+        steps.each(function(index) {
+            if (index < currentStep) {
+                $(this).addClass("completed");
+            } else if (index === currentStep) {
+                $(this).addClass("selected");
+            }
+        });
+
+        console.log(`✅ Step ${currentStep + 1} is now active.`);
+    }
+
+    // Handle "Continue" button clicks
+    $(".btn-next").click(function() {
+        console.log("➡️ Next button clicked.");
+        if (currentStep < stepSections.length - 1) {
+            currentStep++;
+            updateStep();
+        }
+    });
+
+    // Handle "Previous" button clicks
+    $(".btn-prev").click(function() {
+        console.log("⬅️ Previous button clicked.");
+        if (currentStep > 0) {
+            currentStep--;
+            updateStep();
+        }
+    });
+
+    // Initialize the first step
+    updateStep();
+});
+
+$(document).ready(function() {
+    function waitForHeader() {
+        let header = $(".site-header")[0]; // Get the actual DOM node
+        if (!header) {
+            console.error("❌ .site-header not found! Retrying...");
+            setTimeout(waitForHeader, 500); // Retry every 500ms
+        } else {
+            console.log("✅ .site-header found!");
+            initStickyHeader(); // Call function to make it sticky
+        }
+    }
+
+    function initStickyHeader() {
+        let header = $(".site-header");
+        let promoBar = $(".header-promo");
+        let mainContent = $("main.dawamain");
+
+        function checkSticky() {
+            let scrollPos = $(window).scrollTop();
+            console.log("Checking sticky on scroll... Position:", scrollPos);
+
+            if (scrollPos > 50) {
+                if (!header.hasClass("sticky")) {
+                    header.addClass("sticky");
+                    promoBar.hide();
+                    console.log("✅ Sticky class added!");
+                }
+            } else {
+                if (header.hasClass("sticky")) {
+                    header.removeClass("sticky");
+                    promoBar.show();
+                    console.log("❌ Sticky class removed!");
+                }
+            }
+        }
+
+        $(window).on("scroll", checkSticky);
+        checkSticky(); // Run on load
+
+        // **Mutation Observer: Reapply .sticky if removed**
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (!header.hasClass("sticky") && $(window).scrollTop() > 50) {
+                    console.warn("⚠️ .sticky was removed, reapplying!");
+                    header.addClass("sticky");
+                }
+            });
+        });
+
+        observer.observe(header[0], { attributes: true, attributeFilter: ["class"] });
+    }
+
+    waitForHeader(); // Start checking for header
+});

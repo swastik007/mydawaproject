@@ -1,173 +1,288 @@
-.symptoms-section {
-    margin: 20px 0;
-    @include respond-to(lg) {
-        margin: 40px 0;
-    }
-    @include respond-to(xxl) {
-        margin: 60px 0;
-    }
-    .symptoms-badge {
-        background-color: #FFECD6;
-        color: #FAA138;
-        position: absolute;
-        top: 0;
-        left: 30px;
-        border-radius: 0 0 10px 10px;
-        font-family: 'Outfit', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        padding: 7px 15px;
-        @include respond-to(lg) {
-            font-size: 18px;
-            left: 80px;
-        }
-    }
-    .symptoms-wrap {
+    .symptoms-section {
+        margin: 20px 0;
         border-top: 1px solid #D4DEE5;
-        position: relative;
-        padding: 20px;
+        border-bottom: 1px solid #D4DEE5;
         @include respond-to(lg) {
-            border-radius: 12px;
-            border: 1px solid #D4DEE5;
-            padding: 80px;
+            margin: 40px 0;
+            border-top: 0;
+            border-bottom: 0;
         }
-        .steps {
-            display: flex;
-            flex-direction: row;
+        @include respond-to(xxl) {
+            margin: 60px 0;
+        }
+        .symptoms-badge {
+            background-color: #FFECD6;
+            color: #FAA138;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            border-radius: 0 0 10px 10px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 7px 15px;
             @include respond-to(lg) {
-                flex-direction: column;
+                font-size: 18px;
+                left: 80px;
             }
-            .step {
-                display: flex;
-                flex-direction: column;
-                padding: 20px;
-                align-items: center;
+        }
+        .symptoms-wrap {
+            position: relative;
+            padding: 60px 20px;
+            @include respond-to(lg) {
                 border-radius: 12px;
+                border: 1px solid #D4DEE5;
+                padding: 80px;
+            }
+            .steps {
+                display: flex;
+                flex-direction: row;
                 @include respond-to(lg) {
-                    flex-direction: row;
-                    padding: 10px;
+                    flex-direction: column;
                 }
-                .step-circle {
-                    border-radius: 50%;
-                    border: 1px solid #D4D7E0;
-                    padding: 5px;
-                    width: 32px;
-                    height: 32px;
+                .step {
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
+                    padding: 20px;
                     align-items: center;
+                    border-radius: 12px;
+                    width: 33.33%;
                     @include respond-to(lg) {
-                        width: 36px;
-                        height: 36px;
+                        flex-direction: row;
+                        padding: 10px;
+                        width: 100%;
                     }
-                    span {
-                        font-weight: 16px;
-                        font-weight: 500;
+                    .step-circle {
+                        border-radius: 50%;
+                        border: 1px solid #D4D7E0;
+                        padding: 5px;
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         @include respond-to(lg) {
+                            width: 36px;
+                            height: 36px;
+                        }
+                        span {
+                            font-weight: 16px;
+                            font-weight: 500;
+                            @include respond-to(lg) {
+                                font-size: 18px;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 1.3;
+                        color: $black;
+                        margin-bottom: 0;
+                        text-align: center;
+                        margin-top: 12px;
+                        @include respond-to(lg) {
+                            margin-left: 15px;
                             font-size: 18px;
                             font-weight: 800;
+                            text-align: left;
+                            margin-top: 0;
+                        }
+                    }
+                    &.selected {
+                        background-color: #F6F7FB;
+                        .step-circle {
+                            border-radius: 50%;
+                            border: 2px solid $primary;
+                        }
+                        p {
+                            font-weight: bold;
                         }
                     }
                 }
-                p {
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 22px;
-                    color: $black;
-                    margin-bottom: 0;
-                    @include respond-to(lg) {
-                        margin-left: 15px;
-                        font-size: 18px;
-                        font-weight: 800;
-                    }
-                }
-                &.selected {
-                    background-color: #F6F7FB;
-                    .step-circle {
-                        border-radius: 50%;
-                        border: 2px solid $primary;
-                    }
-                    p {
-                        font-weight: bold;
-                    }
-                }
             }
         }
-    }
-    .symptom-heading {
-        text-align: left;
-        font-size: 1.5em;
-        font-weight: 800;
-        color: $primary;
-        margin-bottom: 10px;
-        max-width: 288px;
-        color: $black;
-        text-transform: capitalize;
-        display: flex;
-        @include respond-to(lg) {
-            font-size: 2.2em;
-            margin-bottom: 14px;
-        }
-        @include respond-to(xxl) {
-            font-size: 2.75em;
-        }
-        span {
+        .symptom-heading {
+            text-align: left;
+            font-size: 1.5em;
+            font-weight: 800;
             color: $primary;
-            margin-left: 7px;
-            @include respond-to(xxl) {
-                margin-left: 7px;
-            }
-        }
-    }
-    .symptom-subheading {
-        font-size: 16px;
-        line-height: 24px;
-        @include respond-to(lg) {
-            font-size: 18px;
-        }
-    }
-    .right-heading {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 24px;
-    }
-    .symptom-card {
-        .image-bg {
-            width: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            img.greyscale {
-                display: block;
-            }
-            img.color {
-                display: none;
-            }
-        }
-        &.selected {
-            .image-bg {
-                img.greyscale {
-                    display: none;
-                }
-                img.color {
-                    display: block;
-                }
-            }
-        }
-        .symptom-name {
-            font-size: 16px;
-            font-weight: bold;
+            margin-bottom: 10px;
+            max-width: 288px;
+            color: $black;
+            text-transform: capitalize;
+            display: flex;
             @include respond-to(lg) {
-                font-size: 16px;
-                font-weight: 400;
-                text-align: center;
-                margin-top: 10px;
+                font-size: 2.2em;
+                margin-bottom: 14px;
+            }
+            @include respond-to(xxl) {
+                font-size: 2.75em;
+            }
+            span {
+                color: $primary;
+                margin-left: 7px;
+                @include respond-to(xxl) {
+                    margin-left: 7px;
+                }
             }
         }
+        .symptom-subheading {
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 400;
+            @include respond-to(xxl) {
+                font-size: 24px;
+            }
+        }
+        .right-heading {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .symptoms-box-wrap {
+            display: grid;
+            grid-template-columns: 1fr; // Default for mobile (single column)
+            gap: 10px; // Adds spacing between grid items
+            @include respond-to(xxs) {
+                grid-template-columns: repeat(2, 1fr); // 2 columns
+            }
+            @include respond-to(sm) {
+                // Small screens (e.g., tablets)
+                grid-template-columns: repeat(3, 1fr); // 2 columns
+            }
+            @include respond-to(md) {
+                // Medium screens
+                grid-template-columns: repeat(4, 1fr); // 3 columns
+            }
+            @include respond-to(lg) {
+                // Large screens
+                grid-template-columns: repeat(5, 1fr); // 4 columns
+                gap: 16px;
+            }
+            @include respond-to(xxl) {
+                // Extra large screens (5 columns)
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+            }
+        }
+        .symptom-card {
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            @include respond-to(sm) {
+                // Small Screens
+                margin: 0 auto; // Center the card horizontally
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            @include respond-to(lg) {
+                // Large Screens
+                margin-left: auto; // Align to right
+                margin-right: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+            .image-bg {
+                border-radius: 12px;
+                width: 100%;
+                position: relative;
+                background-color: #f6f6f6;
+                height: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include respond-to(xxl) {
+                    height: 165px;
+                }
+                &.selected,
+                &:hover,
+                &:focus {
+                    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+                    img {
+                        filter: grayscale(0);
+                    }
+                    &.bg1 {
+                        background-color: #93CFE7;
+                    }
+                    &.bg2 {
+                        background-color: #FFEDA5;
+                    }
+                    &.bg3 {
+                        background-color: #94E2E2;
+                    }
+                    &.bg4 {
+                        background-color: #FEC091;
+                    }
+                    &.bg5 {
+                        background-color: #DAC6EB;
+                    }
+                    &.bg6 {
+                        background-color: #FFD6D6;
+                    }
+                    &.bg7 {
+                        background-color: #DAEE9F;
+                    }
+                    &.bg8 {
+                        background-color: #fbb6cb;
+                    }
+                }
+                img {
+                    width: auto;
+                    height: 100px;
+                    object-fit: contain;
+                    position: absolute;
+                    filter: grayscale(100%);
+                    bottom: -5px;
+                    @include respond-to(lg) {
+                        height: 105px;
+                        bottom: 0;
+                    }
+                    @include respond-to(xxl) {
+                        height: 145px;
+                        bottom: 0;
+                    }
+                }
+            }
+            .symptom-name {
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 10px;
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+        .btn-grey {
+            border-radius: 25px;
+        }
     }
-    .btn-grey {
-        border-radius: 25px;
+    
+    .step-section {
+        display: none; // Hide all steps initially
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        h5 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            @include respond-to(lg) {
+                font-size: 20px;
+            }
+            @include respond-to(lg) {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+        }
+        &.active {
+            display: block;
+            opacity: 1;
+        }
     }
-}

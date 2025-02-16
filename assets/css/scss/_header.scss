@@ -1,8 +1,34 @@
 .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white; // Ensures background stays visible
+    box-shadow: none; // No shadow initially
+    transition: all 0.3s ease-in-out; // Smooth transition
+    &.sticky {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        background: white;
+        .header-promo {
+            display: none; // Hide the promo section when sticky
+        }
+        .search-wrap {
+            display: none;
+        }
+        .navigation-wrap {
+            display: none;
+        }
+        .top-header {
+            padding: 10px 0;
+        }
+    }
     .header-promo {
         background-color: $primary;
         color: white;
         padding: 5px 0;
+        display: block;
+        transition: all 0.3s ease-in-out;
         @include respond-to(xxl) {
             padding: 7px 0;
         }
@@ -155,8 +181,12 @@
                 padding: 16px;
             }
             img {
-                width: 100%;
-                height: 100%;
+                width: 20px;
+                height: 20px;
+                @include respond-to(xxl) {
+                    width: 28px;
+                    height: 28px;
+                }
             }
             &:hover {
                 background: #e3e3e9;
@@ -238,6 +268,7 @@
         }
     }
     .search-container {
+        position: relative;
         display: flex;
         align-items: center;
         width: 430px;
@@ -542,8 +573,7 @@
 .services-dropdown,
 .pages-dropdown {
     position: relative;
-    position: relative;
-    z-index: 10000;
+    z-index: 111;
     cursor: pointer;
     .services-menu {
         display: none;
@@ -610,14 +640,15 @@ header {
 
 .search-wrap {
     width: 100%;
-    position: absolute!important;
+    position: absolute;
     left: 0;
     right: 0;
-    top: 84px;
+    top: 0;
     @include respond-to(lg) {
-        position: static!important;
+        position: relative;
         z-index: 10000;
         cursor: pointer;
+        z-index: 111;
     }
     .search-results {
         display: none;
@@ -631,7 +662,7 @@ header {
     .search-results {
         /* Hidden by default */
         position: absolute;
-        top: 60px;
+        top: 50px;
         left: 10px;
         // transform: translateX(-50%);
         /* Centers the dropdown */

@@ -79,16 +79,26 @@ ul {
 .dawamain {
     margin: 0 auto;
     width: 100%;
+    margin-top: 200px;
+    @include respond-to(lg) {
+        margin-top: 210px;
+    }
+    @include respond-to(xxl) {
+        margin-top: 280px;
+    }
 }
 
 .mydawa-container {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     @include respond-to(lg) {
         padding: 0 30px;
     }
     @include respond-to(xxl) {
         padding: 0 60px;
+    }
+    @include respond-to(sxxl) {
+        padding: 0 80px;
     }
     // @include respond-to(xs) {
     //     max-width: 400px;
@@ -170,11 +180,11 @@ ul {
 
 .section-heading {
     font-weight: 800;
-    font-size: 1.3em;
+    font-size: 1.4em;
     line-height: 1.3;
     color: $black;
-    @include respond-to(sm) {
-        font-size: 1.7em;
+    @include respond-to(xs) {
+        font-size: 1.9em;
     }
     @include respond-to(lg) {
         font-size: 2.5em;
@@ -212,8 +222,8 @@ ul {
         /* Light border */
         border-radius: 50%!important;
         /* Circular buttons */
-        width: 52px;
-        height: 52px;
+        width: 30px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -222,15 +232,34 @@ ul {
         /* Enable clicking */
         transition: all 0.3s ease-in-out;
         cursor: pointer;
+        @include respond-to(lg) {
+            width: 35px;
+            height: 35px;
+        }
+        @include respond-to(xxl) {
+            width: 52px;
+            height: 52px;
+        }
+        svg {
+            fill: #b1b1b1;
+            width: 5px;
+            height: 12px;
+            @include respond-to(lg) {
+                width: 8px;
+                height: 16px;
+            }
+        }
     }
     /* Hover effect for buttons */
     .owl-prev:hover,
     .owl-next:hover {
-        background-color: $primary!important;
+        background-color: $grey1!important;
         /* Theme color on hover */
-        border-color: $primary!important;
-        color: #ffffff;
+        border-color: $grey7!important;
         /* White icon color */
+        svg {
+            fill: $black;
+        }
     }
     /* Default icon styles */
     .owl-prev span,

@@ -154,7 +154,14 @@
 .category-page {
     display: flex;
     gap: 20px;
-    padding: 20px;
+    margin: 30px auto;
+    flex-direction: column;
+    @include respond-to(md) {
+        flex-direction: row;
+    }
+    @include respond-to(xxl) {
+        margin: 50px auto;
+    }
     .category-sidebar {
         @include respond-to(lg) {
             width: 25%;
