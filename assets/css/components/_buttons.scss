@@ -1,0 +1,124 @@
+button {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 1em;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    @include respond-to(xxl) {
+        padding: 12px 32px;
+        font-size: 1.4em;
+    }
+    &:hover,
+    &:focus {
+        background-color: $primarydark;
+        border-color: $primarydark;
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+    &:hover,
+    &:focus {
+        background-color: $primarydark;
+        border-color: $primarydark;
+    }
+}
+
+.btn-outline-light {
+    background-color: #f3f3f3;
+    color: $black;
+    &:hover,
+    &:focus {
+        background-color: $grey3;
+        border-color: $primary;
+        color: $primary;
+    }
+}
+
+.btn-grey {
+    background-color: $black;
+    &:hover,
+    &:focus {
+        background-color: $grey8;
+        border-color: $blackdark;
+    }
+}
+
+.btn-white-border {
+    background-color: #fff;
+    color: $black;
+    border: 1px solid $black;
+    &:hover,
+    &:focus {
+        background-color: $black;
+        color: #fff;
+    }
+}
+
+.btn-rounded {
+    border-radius: 30px;
+    @include respond-to(xxl) {
+        border-radius: 50px;
+    }
+}
+
+.btn-sm {
+    padding: 5px 15px;
+    font-size: 12px;
+    @include respond-to(xxl) {
+        padding: 8px 20px;
+        font-size: 100%;
+    }
+}
+
+.btn-lg {
+    padding: 10px 40px;
+}
+
+// .btn-rounded {
+//     border-radius: 30px;
+//     padding: 15px 30px;
+//     display: flex;
+//     align-items: center;
+//     i {
+//         font-size: 20px;
+//         margin-left: 5px;
+//     }
+// }
+.btn-green {
+    background-color: $green;
+    &:hover,
+    &:focus {
+        background-color: $greendark;
+        border-color: $greendark;
+    }
+}
+
+.btn-dark {
+    background-color: $black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    &:hover,
+    &:focus {
+        background-color: #555;
+        color: #fff;
+    }
+}
+
+.btn-white {
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: $primary;
+    &:hover,
+    &:focus {
+        background-color: #f2f2f2;
+        color: #444;
+    }
+}

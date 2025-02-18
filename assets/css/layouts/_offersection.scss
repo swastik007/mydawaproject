@@ -1,0 +1,12 @@
+.offer-section {
+    margin: 20px auto;
+    @include respond-to(lg) {
+        margin: 40px auto;
+    }
+    @include respond-to(xxl) {
+        margin: 70px auto;
+    }
+    a {
+        text-decoration: none;
+    }
+}

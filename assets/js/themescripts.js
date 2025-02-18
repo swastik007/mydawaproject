@@ -13,17 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
 function loadComponents() {
     const components = [
         { id: "header", file: "components/header.html" },
-        { id: "homeslider", file: "components/home-slider.html" },
-        { id: "floatingsearch", file: "components/floatingsearch.html" },
-        { id: "healthsteps", file: "components/simplifyhealthjourney.html" },
-        { id: "cat-slider", file: "components/categoryslider.html" },
-        { id: "offersection", file: "components/offersoftheday.html" },
-        { id: "homebanner", file: "components/homebanner.html" },
-        { id: "new-product", file: "components/newonmydawa.html" },
-        { id: "promotionsection", file: "components/productshowcase.html" },
-        { id: "popularproducts", file: "components/popularproducts.html" },
-        { id: "featuresection", file: "components/features.html" },
-        { id: "symptomsection", file: "components/symptoms.html" },
+        { id: "homeslider", file: "components/homepage/home-slider.html" },
+        { id: "floatingsearch", file: "components/homepage/floatingsearch.html" },
+        { id: "healthsteps", file: "components/homepage/simplifyhealthjourney.html" },
+        { id: "cat-slider", file: "components/homepage/categoryslider.html" },
+        { id: "offersection", file: "components/homepage/offersoftheday.html" },
+        { id: "homebanner", file: "components/homepage/homebanner.html" },
+        { id: "new-product", file: "components/homepage/newonmydawa.html" },
+        { id: "promotionsection", file: "components/homepage/productshowcase.html" },
+        { id: "popularproducts", file: "components/homepage/popularproducts.html" },
+        { id: "featuresection", file: "components/homepage/features.html" },
+        { id: "symptomsection", file: "components/homepage/symptoms.html" },
         { id: "footer", file: "components/footer.html" }
     ];
 

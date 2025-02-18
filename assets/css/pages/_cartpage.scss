@@ -1,0 +1,559 @@
+/* SCSS for Cart Page */
+
+.cart-container {
+    .cart-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        flex-direction: column;
+        @include respond-to(lg) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .cart-steps {
+        display: flex;
+        gap: 5px;
+        @include respond-to(md) {
+            gap: 15px;
+        }
+        @include respond-to(xxl) {
+            gap: 40px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            line-height: 1.3;
+            font-weight: 500;
+            @include respond-to(md) {
+                font-size: 16px;
+            }
+            @include respond-to(xxl) {
+                font-size: 20px;
+            }
+            &.active {
+                font-weight: 600;
+            }
+            .step-circle {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #e7ecf4;
+                color: $black;
+                margin-right: 10px;
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 600;
+                @include respond-to(xxl) {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 18px;
+                    margin-right: 16px;
+                }
+            }
+            &.complete .step-circle {
+                background: $greendark;
+                color: #fff;
+                i {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+            &.active .step-circle {
+                background: $blue;
+                color: #fff;
+            }
+        }
+    }
+    .steps {
+        gap: 15px;
+        @include respond-to(xxl) {
+            gap: 40px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 1.3;
+            font-weight: 500;
+            @include respond-to(xxl) {
+                font-size: 20px;
+            }
+            &.active {
+                font-weight: 600;
+            }
+            .step-circle {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #e7ecf4;
+                color: $black;
+                margin-right: 5px;
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 600;
+                @include respond-to(xxl) {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 18px;
+                }
+            }
+            &.complete .step-circle {
+                background: $greendark;
+                color: #fff;
+                i {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+            &.active .step-circle {
+                background: $blue;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+/* Table Header - Uses Grid */
+
+.cart-header-row {
+    display: none;
+    @include respond-to(lg) {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        /* Adjust column widths */
+        background: #fff;
+        border-radius: 5px;
+        text-align: left;
+    }
+    span {
+        text-align: left;
+        color: #BABABA;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 500;
+        @include respond-to(xxl) {
+            font-size: 18px;
+        }
+    }
+}
+
+.cart-content {
+    @include respond-to(md) {
+        flex-direction: column;
+    }
+}
+
+.cart-items,
+.cart-summary {
+    @include respond-to(md) {
+        width: 100%;
+    }
+}
+
+
+/* Cart Items - Align with Grid */
+
+.cart-item {
+    display: flex;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f0f0f0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include respond-to(lg) {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        /* Match header row */
+        align-items: center;
+        gap: 15px;
+        padding: 20px 10px;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 0;
+    }
+    @include respond-to(xxl) {
+        padding: 32px 15px;
+    }
+    .product-info {
+        display: flex;
+        flex-direction: row;
+        .item-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            @include respond-to(lg) {
+                width: 64px;
+                height: 64px;
+            }
+            @include respond-to(xxl) {
+                width: 102px;
+                height: 102px;
+            }
+        }
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-left: 10px;
+            @include respond-to(xxl) {
+                margin-left: 20px;
+            }
+            h3 {
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 600;
+                margin-bottom: 3px;
+                @include respond-to(xxl) {
+                    font-size: 24px;
+                    margin-bottom: 5px;
+                }
+            }
+            p {
+                font-size: 12px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: #BABABA;
+                @include respond-to(xxl) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .item-quantity {
+        display: flex;
+        justify-content: flex-start;
+        @include respond-to(xxl) {
+            margin-right: 15px;
+        }
+        .change-quantity {
+            display: flex;
+            align-items: center;
+            border-radius: 40px;
+            border: 1px solid #D4DEE5;
+            padding: 8px;
+            justify-content: space-around;
+            gap: 5px 8px;
+            @include respond-to(xxl) {
+                gap: 8px 30px;
+                padding: 8px 16px;
+            }
+            button {
+                background: #ECECF2;
+                border-radius: 50%;
+                border: none;
+                padding: 2px;
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include respond-to(xxl) {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            span {
+                font-size: 14px;
+                font-weight: 500;
+                color: $black;
+                line-height: 1.4;
+                @include respond-to(xxl) {
+                    font-size: 22px;
+                }
+            }
+        }
+        .cart-delete {
+            border: 1px solid #D4DEE5;
+            background-color: #fff;
+            margin-left: 10px;
+            border-radius: 20px;
+            padding: 7px 10px;
+            @include respond-to(xxl) {
+                font-size: 16px;
+                padding: 20px;
+                border-radius: 40px;
+            }
+        }
+    }
+    .item-price {
+        display: flex;
+        flex-direction: column;
+        @include respond-to(lg) {
+            flex-direction: row;
+        }
+        .product-price {
+            font-size: 16px;
+            color: #373434;
+            font-weight: 500;
+            margin-bottom: 0;
+            @include respond-to(lg) {
+                font-size: 20px;
+            }
+        }
+        .product-price-old {
+            color: #b2b2b2;
+            text-decoration: line-through;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 0;
+            margin-right: 10px;
+            @include respond-to(lg) {
+                font-size: 20px;
+                margin-right: 16px;
+            }
+        }
+    }
+    &.discreet {
+        position: relative;
+        padding-top: 50px;
+        @include respond-to(xxl) {
+            padding-top: 80px;
+        }
+        .discreet-tag {
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            background: #FFE6F1;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: $primary;
+            font-size: 10px;
+            line-height: 12px;
+            font-weight: 500;
+            @include respond-to(xxl) {
+                font-size: 16px;
+                line-height: 22px;
+                top: 14px;
+            }
+        }
+    }
+}
+
+.cart-notice {
+    background-color: #F9F9FD;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 20px 0;
+    display: flex;
+    @include respond-to(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @include respond-to(xxl) {
+        border-radius: 12px;
+        margin: 32px 0;
+        padding: 12px 20px;
+    }
+    span {
+        display: flex;
+        justify-content: flex-start;
+        i {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+    }
+    a {
+        color: $black;
+        text-decoration: 1px dotter $black;
+    }
+}
+
+.cart-summary {
+    background: #fff;
+    margin-bottom: 30px;
+    @include respond-to(xxl) {
+        margin-bottom: 0;
+    }
+    .coupon-box {
+        display: flex;
+        flex-direction: column;
+        background-color: #F9F9FD;
+        padding: 12px;
+        border-radius: 20px;
+        @include respond-to(xxl) {
+            padding: 30px;
+            border-radius: 18px;
+        }
+        h3 {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 15px;
+            @include respond-to(lg) {
+                font-size: 18px;
+            }
+            @include respond-to(xxl) {
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        .coupon-input {
+            display: flex;
+            flex-direction: row;
+            input {
+                padding: 10px;
+                background: #fff;
+                border-radius: 25px;
+                padding: 10px 16px;
+                border: 1px solid #D4DEE5;
+                margin-right: 7px;
+                @include respond-to(xxl) {
+                    font-size: 21px;
+                    padding: 14px 20px;
+                    margin-right: 10px;
+                }
+            }
+            button {
+                background: #333;
+                color: white;
+                padding: 7px 15px;
+                border: none;
+                cursor: pointer;
+                border-radius: 25px;
+                font-size: 18px;
+                @include respond-to(xxl) {
+                    font-size: 21px;
+                    padding: 14px 20px;
+                }
+            }
+        }
+    }
+    .price-details {
+        margin-top: 20px;
+        background-color: #F9F9FD;
+        padding: 12px;
+        border-radius: 20px;
+        @include respond-to(xxl) {
+            padding: 30px;
+            border-radius: 18px;
+        }
+        p {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cart-total {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .proceed {
+            font-family: "Outfit", serif;
+            background-color: #6fb74c;
+            font-size: 18px;
+            border-radius: 25px;
+            color: white;
+            padding: 10px 15px;
+            height: fit-content;
+            width: 100%;
+            border: none;
+            @include respond-to(xxl) {
+                font-size: 21px;
+                margin-top: 18px;
+                padding: 14px 20px;
+            }
+            &:hover,
+            &:focus {
+                background-color: #3b8914;
+            }
+        }
+        .info {
+            font-size: 0.9em;
+            color: $black;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 13px;
+            line-height: 1.2;
+            margin-top: 10px;
+            @include respond-to(xxl) {
+                font-size: 18px;
+                margin-top: 14px;
+                margin-left: 10px;
+            }
+            i {
+                font-size: 18px;
+                margin-right: 7px;
+                @include respond-to(xxl) {
+                    font-size: 22px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.empty-cart {
+    text-align: center;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px auto;
+    @include respond-to(lg) {
+        margin: 80px auto 100px auto;
+    }
+    @include respond-to(xxl) {
+        font-size: 24px;
+        margin: 120px auto 160px auto;
+    }
+    .cart-icon {
+        width: 70px; // Adjust size as needed
+        height: 70px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: $black;
+        @include respond-to(xxl) {
+            font-size: 32px;
+        }
+    }
+    p {
+        font-size: 14px;
+        color: $black;
+        max-width: 300px;
+        margin: 10px auto;
+        line-height: 1.5;
+        @include respond-to(xxl) {
+            max-width: 500px;
+        }
+        @include respond-to(xxl) {
+            font-size: 22px;
+            max-width: 700px;
+        }
+    }
+    .btn-grey {
+        border-radius: 28px;
+        text-decoration: none;
+        margin-top: 20px;
+        padding: 10px 20px;
+        @include respond-to(xxl) {
+            margin-top: 35px;
+            border-radius: 32px;
+            padding: 14px 28px;
+        }
+    }
+}
