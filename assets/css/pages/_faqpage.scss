@@ -115,72 +115,71 @@
                     line-height: 25px;
                 }
             }
-            .faq-item {
-                padding: 12px 0;
-                border-top: 1px solid #F8F8F8;
-                @include respond-to(lg) {
-                    padding: 15px 0;
-                }
-                @include respond-to(xxl) {
-                    padding: 20px 0;
-                }
-                &:first-of-type {
-                    border-top: none;
-                }
-                .faq-question {
-                    background: transparent;
-                    cursor: pointer;
-                    color: $black;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-size: 16px;
-                    font-weight: 500;
-                    @include respond-to(lg) {
-                        font-size: 14px;
-                    }
-                    @include respond-to(xxl) {
-                        font-size: 22px;
-                        line-height: 25px;
-                    }
-                    .faq-arrow {
-                        transition: transform 0.3s ease;
-                        font-size: 16px;
-                        color: #868686;
-                        @include respond-to(xxl) {
-                            font-size: 22px;
-                        }
-                    }
-                    &:hover {
-                        color: $primary;
-                        .faq-arrow {
-                            color: $primary;
-                        }
-                    }
-                }
-                .faq-answer {
-                    background: #fff;
-                    padding: 15px 0;
-                    display: block;
-                    color: #8D8D92;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 1.5;
-                    @include respond-to(lg) {
-                        font-size: 14px;
-                    }
-                    @include respond-to(xxl) {
-                        font-size: 22px;
-                    }
-                    &.hidden {
-                        display: none;
-                    }
-                }
-            }
         }
         .faq-section.hidden {
+            display: none;
+        }
+    }
+}
+
+.faq-item {
+    padding: 20px 0;
+    border-top: 1px solid #F8F8F8;
+    @include respond-to(lg) {
+        padding: 22px 0;
+    }
+    @include respond-to(xxl) {
+        padding: 30px 0;
+    }
+    &:first-of-type {
+        border-top: none;
+    }
+    .faq-question {
+        background: transparent;
+        cursor: pointer;
+        color: $black;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1.2;
+        @include respond-to(xxl) {
+            font-size: 1.275em;
+            line-height: 25px;
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease;
+            font-size: 1em;
+            color: #868686;
+            @include respond-to(xxl) {
+                font-size: 1.3em;
+            }
+        }
+        &:hover {
+            color: $primary;
+            .faq-arrow {
+                color: $primary;
+            }
+        }
+    }
+    .faq-answer {
+        background: #fff;
+        padding: 15px 0;
+        display: block;
+        color: #8D8D92;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1.5;
+        @include respond-to(lg) {
+            font-size: 0.875em;
+        }
+        @include respond-to(xxl) {
+            font-size: 1.2em;
+        }
+        &.hidden {
             display: none;
         }
     }
@@ -270,7 +269,7 @@
     }
 }
 
-.cant-find-section {
+.refine-search {
     background-color: #F1F3FB;
     border-radius: 12px;
     display: flex;
@@ -282,18 +281,16 @@
     overflow: hidden;
     @include respond-to(lg) {
         padding: 42px 34px;
-        margin: 50px 0 0 0;
     }
     @include respond-to(xxl) {
         padding: 64px 48px;
-        margin: 80px 0 80px 0;
     }
-    .cant-find-container {
+    .find-container {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 20px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex-direction: column;
         text-align: center;
         width: 100%;
@@ -302,7 +299,7 @@
             text-align: left;
             align-items: center;
         }
-        .cant-find-text {
+        .find-text {
             display: flex;
             flex-direction: row;
             align-items: flex-start;
@@ -313,7 +310,7 @@
                 align-items: center;
                 max-width: 100%;
             }
-            .cant-find-icon {
+            .find-icon {
                 position: absolute;
                 right: -20px;
                 top: -20px;
@@ -360,7 +357,7 @@
                 }
             }
         }
-        .cant-find-actions {
+        .find-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
@@ -372,7 +369,7 @@
                 margin-left: 90px;
                 max-width: 760px;
             }
-            .cant-find-button {
+            .find-button {
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -414,6 +411,14 @@
         bottom: auto;
         @include respond-to(lg) {
             display: none;
+        }
+    }
+    &.cant-find-section {
+        @include respond-to(lg) {
+            padding: 42px 34px;
+        }
+        @include respond-to(xxl) {
+            padding: 64px 48px;
         }
     }
 }

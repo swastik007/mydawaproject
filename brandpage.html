@@ -28,90 +28,198 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <li><span class="divider">/</span></li>
-                        <li><a href="#">Brand</a></li>
+                        <li><a href="#">Categories</a></li>
                         <li><span class="divider">/</span></li>
-                        <li><a href="#" class="active">Durex</a></li>
+                        <li><a href="#" class="active">Sexual Wellness</a></li>
                     </ul>
                 </nav>
                 <!-- banner section -->
-                <!-- banner section -->
-                <div class="banner-section listingbanner-section mydawa-container">
+                <div class="banner-section brand-section mydawa-container">
                     <picture>
                         <!-- Image for larger screens -->
-                        <source srcset="assets/images/banners/sexual-wellness-banner-lg.png" media="(min-width: 1200px)" />
+                        <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 1200px)" />
                         <!-- Image for smaller screens -->
-                        <source srcset="assets/images/banners/sexual-wellness-banner-lg.png" media="(max-width: 767px)" />
+                        <source srcset="assets/images/banners/durex-banner.png" media="(max-width: 767px)" />
                         <!-- Fallback image -->
                         <img src="assets/images/banners/durex-banner.png" alt="MyDawa Telehealth" />
                     </picture>
                     <div class="banner-content-wrap">
                         <div class="text-content">
                             <h4>Durex</h4>
-                            <p>Durex is the global leader in sexual wellness, committed to enhancing sexual experiences through innovative products </p>
+                            <p>Sexual wellness is about feeling good in your body and being connected with your partner(s). </p>
 
                         </div>
 
                     </div>
 
                 </div>
-                <div class="banner-section mydawa-container">
-                    <picture>
-                        <!-- Image for larger screens -->
-                        <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 1200px)" />
-                        <!-- Image for smaller screens -->
-                        <source srcset="aassets/images/banners/durex-banner.png" media="(max-width: 767px)" />
-                        <!-- Fallback image -->
-                        <img src="assets/images/banners/durex-banner.png" alt="MyDawa Telehealth" />
-                    </picture>
-                    <div class="banner-text">
-                        <h4>Durex</h4>
-                        <p>Durex is the global leader in sexual wellness, committed to enhancing sexual experiences through innovative products </p>
 
-                    </div>
-                </div>
-                <!-- best value offers section -->
-                <div id="popularproductbycat"></div>
+                <div id="popular-by-durex-section"></div>
 
 
-                <div class="category-page brand-page mydawa-container">
+                <div class="category-page mydawa-container">
                     <!-- Filter Sidebar -->
                     <!-- Filter Sidebar -->
                     <aside class="category-sidebar">
                         <div class="filter-section">
                             <div class="filter-header" data-toggle="filter-category">
-                                <h4>Category</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                                <h4>Category</h4>
+                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                </svg>
                             </div>
-                            <div class="filter-content" id="filter-category">
-                                <ul>
-                                    <li><input type="checkbox" id="condoms" checked> <label for="condoms">Condoms</label></li>
-                                    <li><input type="checkbox" id="lubricants" checked> <label for="lubricants">Lubricants</label></li>
-                                    <li><input type="checkbox" id="contraceptives"> <label for="contraceptives">Contraceptives</label></li>
-                                    <li><input type="checkbox" id="adult-toys"> <label for="adult-toys">Adult Toys</label></li>
-                                    <li><input type="checkbox" id="performance-enhancers"> <label for="performance-enhancers">Performance Enhancers</label></li>
-                                    <li><input type="checkbox" id="health-supplements"> <label for="health-supplements">Sexual Health Supplements</label></li>
+
+                            <div class="filter-content" id="filter-category" style="display: block;">
+                                <ul class="custom-checkbox-list">
+                                    <li>
+                                        <input type="checkbox" id="condoms" class="custom-checkbox" checked>
+                                        <label for="condoms">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Condoms
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="lubricants" class="custom-checkbox" checked>
+                                        <label for="lubricants">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Lubricants
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="contraceptives" class="custom-checkbox">
+                                        <label for="contraceptives">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Contraceptives
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="adulttoys" class="custom-checkbox">
+                                        <label for="adulttoys">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Adult Toys
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="performanceenhancers" class="custom-checkbox">
+                                        <label for="performanceenhancers">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Performance Enhancers
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="sexsupplements" class="custom-checkbox">
+                                        <label for="sexsupplements">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Sexual Health Supplements
+                                            </label>
+                                    </li>
+
                                 </ul>
                             </div>
+
                         </div>
 
                         <div class="filter-section">
-                            <div class="filter-header" data-toggle="filter-brand">
-                                <h4>Brand</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                            <div class="filter-header" data-toggle="filter-category">
+                                <h4>Brand</h4>
+                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                </svg>
                             </div>
-                            <div class="filter-content" id="filter-brand">
-                                <ul>
-                                    <li><input type="checkbox" id="contempo" checked> <label for="contempo">Contempo</label></li>
-                                    <li><input type="checkbox" id="durex" checked> <label for="durex">Durex</label></li>
-                                    <li><input type="checkbox" id="kings"> <label for="kings">Kings</label></li>
-                                    <li><input type="checkbox" id="lifeguard"> <label for="lifeguard">Lifeguard</label></li>
-                                    <li><input type="checkbox" id="skins"> <label for="skins">Skins</label></li>
-                                    <li><input type="checkbox" id="skyn"> <label for="skyn">Skyn</label></li>
+
+                            <div class="filter-content" id="filter-category" style="display: block;">
+                                <ul class="custom-checkbox-list">
+                                    <li>
+                                        <input type="checkbox" id="loreal" class="custom-checkbox" checked>
+                                        <label for="loreal">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                L'oreal
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="huggies" class="custom-checkbox" checked>
+                                        <label for="huggies">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Huggies
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="durex" class="custom-checkbox">
+                                        <label for="durex">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Durex
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="palmolive" class="custom-checkbox">
+                                        <label for="palmolive">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Palmolive
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="lifeguard" class="custom-checkbox">
+                                        <label for="lifeguard">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Life Guard
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="skinking" class="custom-checkbox">
+                                        <label for="skinking">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                Skin Kings
+                                            </label>
+                                    </li>
+
                                 </ul>
                             </div>
+
                         </div>
+
 
                         <div class="filter-section">
                             <div class="filter-header" data-toggle="filter-price">
-                                <h4>Price</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                                <h4>Price</h4>
+                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                </svg>
                             </div>
                             <div class="filter-content" id="filter-price">
                                 <input type="range" min="200" max="4000" value="2000" class="price-range">
@@ -122,263 +230,571 @@
                         </div>
 
                         <div class="filter-section">
-                            <div class="filter-header" data-toggle="filter-discount">
-                                <h4>Discount</h4> <i class="bi bi-chevron-down filter-arrow"></i>
+                            <div class="filter-header" data-toggle="filter-category">
+                                <h4>Discounts</h4>
+                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                </svg>
                             </div>
-                            <div class="filter-content" id="filter-discount">
-                                <ul>
-                                    <li><input type="checkbox" id="10-above"> <label for="10-above">10% and above</label></li>
-                                    <li><input type="checkbox" id="20-above" checked> <label for="20-above">20% and above</label></li>
-                                    <li><input type="checkbox" id="30-above"> <label for="30-above">30% and above</label></li>
-                                    <li><input type="checkbox" id="40-above"> <label for="40-above">40% and above</label></li>
-                                    <li><input type="checkbox" id="50-above"> <label for="50-above">50% and above</label></li>
-                                    <li><input type="checkbox" id="60-above"> <label for="60-above">60% and above</label></li>
-                                    <li><input type="checkbox" id="70-above"> <label for="70-above">70% and above</label></li>
-                                    <li><input type="checkbox" id="80-above"> <label for="80-above">80% and above</label></li>
-                                    <li><input type="checkbox" id="90-above"> <label for="90-above">90% and above</label></li>
+
+                            <div class="filter-content" id="filter-category" style="display: block;">
+                                <ul class="custom-checkbox-list">
+                                    <li>
+                                        <input type="checkbox" id="10-above" class="custom-checkbox" checked>
+                                        <label for="10-above">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                10% and above
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="20-above" class="custom-checkbox" checked>
+                                        <label for="20-above">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                20% and above
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="30-above" class="custom-checkbox">
+                                        <label for="30-above">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                30% and above
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="40-above" class="custom-checkbox">
+                                        <label for="40-above">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                40% and above
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="50-above" class="custom-checkbox">
+                                        <label for="50-above">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                50% and above
+                                            </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="60-above" class="custom-checkbox">
+                                        <label for="60-above">
+                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
+                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
+                                                </svg>
+                                                60% and above
+                                            </label>
+                                    </li>
+
                                 </ul>
                             </div>
+
                         </div>
                     </aside>
 
 
                     <!-- Category Section -->
                     <main class="category-section">
-                        <div class="category-header">
-                            <p>Showing 1-15 of 150 results</p>
-                            <div class="category-actions">
-                                <button class="sort-button">Sort</button>
-                                <button class="filter-button">Filter</button>
+                        <section class="product-listing-header">
+                            <div class="listing-info">
+                                <p class="desktop-text">Showing 1-15 of 150 results</p>
+                                <p class="mobile-text">Showing 150 items</p>
                             </div>
-                        </div>
+                            <div class="filter-options">
+                                <div class="dropdown">
+                                    <button class="dropdown-filter" id="sortButton">
+                                        <span class="desktop-text">Sort by<span class="select">Recommended</span><svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                        </svg> </span>
+                                        <span class="mobile-text">Sort <span class="arrow">
+                                            <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                        </svg></span></span>
+                                    </button>
+
+                                </div>
+                                <div class="dropdown">
+                                    <button class="dropdown-filter" id="filterButton">
+                                        <span class="desktop-text">Display<span class="select">15 per page</span><svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                        </svg> </span>
+                                        <span class="mobile-text">Filter <span class="arrow">
+                                            <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
+                                        </svg></span></span>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </section>
                         <div class="category-grid">
-                            <!-- Category Card -->
-                            <div class="card product-card">
+                            <!-- Product Card 1 -->
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product3.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
                                         </div>
 
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Repeat Category Cards -->
-                            <!-- Category Card -->
-                            <div class="card product-card">
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product1.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
                                         </div>
 
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Repeat Category Cards -->
-                            <!-- Category Card -->
-                            <div class="card product-card">
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product13.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
                                         </div>
 
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Repeat Category Cards -->
-                            <!-- Category Card -->
-                            <div class="card product-card">
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product11.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
                                         </div>
 
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Repeat Category Cards -->
-                            <!-- Category Card -->
-                            <div class="card product-card">
+                            </a>
+                            <!-- Product Card 1 -->
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product3.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
                                         </div>
 
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Repeat Category Cards -->
-                            <!-- Category Card -->
-                            <div class="card product-card">
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product1.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="refine-search">
+                                <img class="search-bg-icon" src="assets/images/icons/searchbg-cant-find.png" alt="Search BG" />
+
+                                <div class="find-container">
+                                    <div class="find-text">
+                                        <div class="find-icon">
+                                            <img class="search-icon" src="assets/images/icons/search-cant-find.png" alt="Search Icon" />
+                                        </div>
+                                        <div class="d-flex flex-column ms-lg-3 justify-content-start align-items-start ">
+                                            <h2>Refine your search By</h2>
+                                            <h3>Category</h3>
                                         </div>
 
                                     </div>
+                                    <div class="find-actions">
+                                        <a href="#" class="find-button">
+                                            <img src="assets/images/icons/chat-icon.png" alt="Chat Icon" /> Chat With Us
+                                        </a>
+                                        <a href="#" class="find-button">
+                                            <img src="assets/images/icons/doctor-icon.png" alt="Expert Guidance Icon" /> Get Expert Guidance
+                                        </a>
+                                        <a href="#" class="find-button">
+                                            <img src="assets/images/icons/mail-icon.png" alt="Email Icon" /> Send Us Email
+                                        </a>
+                                        <a href="#" class="find-button">
+                                            <img src="assets/images/icons/call-icon.png" alt="Call Icon" /> Call Us
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Repeat Category Cards -->
-                            <!-- Category Card -->
-                            <div class="card product-card">
+
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product13.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
                                         </div>
 
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Repeat Category Cards -->
-                            <!-- Category Card -->
-                            <div class="card product-card">
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
                                 <span class="sale-badge">Flat 5% Off</span>
-                                <button class="btn-wishlist">
-                                    <svg viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.67972 12.4908C8.4177 12.6637 8.18823 12.809 8.00334 12.9234C7.8179 12.8073 7.58752 12.6598 7.32432 12.4843C6.60785 12.0065 5.65753 11.3279 4.71199 10.5203C3.76185 9.70877 2.8448 8.79074 2.17235 7.83843C1.49289 6.87619 1.125 5.9667 1.125 5.15119C1.125 3.21124 2.63035 1.70326 4.40901 1.70326V1.70329L4.41711 1.70323C5.50651 1.69441 6.54166 2.26303 7.15213 3.23934L7.99508 4.58744L8.84511 3.2438C9.46115 2.27002 10.4961 1.70095 11.5872 1.70325C13.3641 1.71296 14.8647 3.21678 14.875 5.15343C14.8743 5.98749 14.5041 6.90526 13.8269 7.86714C13.1551 8.82121 12.2391 9.73643 11.2899 10.5433C10.3452 11.3463 9.39563 12.0184 8.67972 12.4908Z" stroke="#E61B77" stroke-width="2"></path>
-                                    <!-- Code injected by live-server -->
-           
-                                    </svg>
-                                </button>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
                                 <div class="img-box">
-                                    <img src="assets/images/product-images/product3.jpg" alt="Product2" class="product-img">
-                                    <span class="product-weight">250gms</span>
+                                    <img src="assets/images/product-images/product11.jpg" alt="Product 1" class="product-img">
                                 </div>
 
                                 <div class="card-body text-start">
-                                    <p class="product-category">Sexual Wellness</p>
-                                    <h5 class="product-title">Durex Condoms Featherlite 3's</h5>
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex flex-column">
-                                            <p class="product-price">KES 725</p>
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
                                         </div>
 
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Repeat Category Cards -->
+                            </a>
+                            <!-- Product Card 1 -->
+                            <a class="card product-card" href="/productpage.html">
+                                <span class="sale-badge">Flat 5% Off</span>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
 
+                                <span class="product-weight">250gms</span>
+                                <div class="img-box">
+                                    <img src="assets/images/product-images/product3.jpg" alt="Product 1" class="product-img">
+                                </div>
+
+                                <div class="card-body text-start">
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex flex-column">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
+                                <span class="sale-badge">Flat 5% Off</span>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
+                                <div class="img-box">
+                                    <img src="assets/images/product-images/product1.jpg" alt="Product 1" class="product-img">
+                                </div>
+
+                                <div class="card-body text-start">
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex flex-column">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
+                                <span class="sale-badge">Flat 5% Off</span>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
+                                <div class="img-box">
+                                    <img src="assets/images/product-images/product13.jpg" alt="Product 1" class="product-img">
+                                </div>
+
+                                <div class="card-body text-start">
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex flex-column">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="card product-card" href="/productpage.html">
+                                <span class="sale-badge">Flat 5% Off</span>
+                                <div class="action-btns">
+                                    <button class="btn-view">
+                            <img src="assets/images/icons/show-icon-white.png"  class="img-active">
+                            <img src="assets/images/icons/show-icon.png"  class="img-inactive">
+                        </button>
+                                    <button class="btn-wishlist">
+                            <img src="assets/images/icons/heart-fill.png"  class="img-active">
+                            <img src="assets/images/icons/heart-outline.png"  class="img-inactive">
+                        </button>
+                                </div>
+
+                                <span class="product-weight">250gms</span>
+                                <div class="img-box">
+                                    <img src="assets/images/product-images/product11.jpg" alt="Product 1" class="product-img">
+                                </div>
+
+                                <div class="card-body text-start">
+                                    <p class="product-category">Snacks</p>
+                                    <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex flex-column">
+                                            <p class="product-price-old">KES 400</p>
+                                            <p class="product-price">KES 380</p>
+                                        </div>
+
+                                        <button class="btn btn-cart">
+                                <span class="d-none d-lg-inline">Add To Cart</span>
+                                <span class="d-inline d-lg-none"><i class='bx bx-plus'></i> Add</span>
+                            </button>
+                                    </div>
+                                </div>
+                            </a>
 
                         </div>
                     </main>
                 </div>
 
+
             </div>
 
             <!-- Feature section -->
             <div id="featuresection"></div>
-
+            <div id="faqsection"></div>
         </main>
         <div id="footer"></div>
     </div>

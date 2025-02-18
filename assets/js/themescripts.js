@@ -24,8 +24,17 @@ function loadComponents() {
         { id: "popularproducts", file: "components/homepage/popularproducts.html" },
         { id: "featuresection", file: "components/homepage/features.html" },
         { id: "symptomsection", file: "components/homepage/symptoms.html" },
-        { id: "footer", file: "components/footer.html" }
+        { id: "footer", file: "components/footer.html" },
+        // category page 
+        { id: "faqsection", file: "components/pages/sexualwellnessfaq.html" },
+        { id: "popular-by-durex-section", file: "components/pages/popularproductsbydurex.html" },
+        { id: "bestvalueoffers", file: "components/pages/bestvalueoffers.html" },
+        { id: "offerbycategories", file: "components/pages/offerbycategories.html" },
+        { id: "discoverbrands", file: "components/pages/discoverbrands.html" },
+        { id: "musthavedeals", file: "components/pages/musthavedeals.html" },
+
     ];
+
 
     let loadedCount = 0;
 
@@ -72,7 +81,15 @@ function initializeCarousels() {
         { id: "#blog-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } },
         { id: "#offer-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
         { id: "#popular-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
-        { id: "#newproduct-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2.1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } }
+        { id: "#newproduct-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2.1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } },
+        { id: "#popular-durex-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
+        { id: "#bestvalueoffers-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2.1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } },
+        { id: "#categoryoffers-carousel", options: { loop: true, margin: 10, nav: false, dots: false, responsive: { 0: { items: 1 }, 400: { items: 2.8 }, 768: { items: 3 }, 1024: { items: 5 }, 1920: { items: 7 } } } },
+        { id: "#musthavedeals-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
+
+
+
+
     ];
 
     setTimeout(() => {
@@ -181,13 +198,24 @@ function setupFAQToggle() {
     });
 }
 
-// Filter Accordion
+// // Filter Accordion
+// function setupFilterAccordion() {
+//     document.querySelectorAll(".filter-header").forEach(header => {
+//         header.addEventListener("click", () => {
+//             const content = header.nextElementSibling;
+//             if (content) {
+//                 content.style.display = content.style.display === "block" ? "none" : "block";
+//             }
+//         });
+//     });
+// }
 function setupFilterAccordion() {
     document.querySelectorAll(".filter-header").forEach(header => {
         header.addEventListener("click", () => {
-            const content = header.nextElementSibling;
+            const content = document.getElementById(header.dataset.toggle);
             if (content) {
                 content.style.display = content.style.display === "block" ? "none" : "block";
+                header.classList.toggle("open");
             }
         });
     });

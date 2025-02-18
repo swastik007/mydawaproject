@@ -1,0 +1,128 @@
+.filter-section {
+    background-color: #F9F9FD;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    @include respond-to(lg) {
+        margin-bottom: 15px;
+        padding: 8px 14px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            @include respond-to(xxl) {
+                margin-bottom: 14px;
+            }
+        }
+    }
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+    h4 {
+        font-size: 16px;
+        font-weight: 600;
+        @include respond-to(lg) {
+            font-size: 16px;
+        }
+        @include respond-to(xxl) {
+            font-size: 20px;
+        }
+    }
+    &:hover {
+        color: #4a90e2;
+    }
+    // Open state styling
+    &.open .filter-content {
+        display: block;
+    }
+    &.open .filter-arrow {
+        transform: rotate(180deg);
+    }
+}
+
+.filter-arrow {
+    width: 18px;
+    height: 9px;
+    transition: transform 0.3s ease;
+    @include respond-to(xxl) {
+        font-size: 12px;
+    }
+}
+
+.filter-content {
+    padding: 10px;
+    display: none; // Hide by default
+    border-top: 1px solid #E7E7F4;
+    @include respond-to(lg) {
+        padding: 20px 16px 16px 16px;
+    }
+}
+
+.price-range {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+}
+
+.custom-checkbox-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            color: $black;
+            cursor: pointer;
+            @include respond-to(xxl) {
+                font-size: 1.125em;
+            }
+        }
+    }
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+.checkbox-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    @include respond-to(xxl) {
+        width: 24px;
+        height: 24px;
+        margin-right: 14px;
+    }
+}
+
+.custom-checkbox:checked+label .checkbox-icon {
+    background: #6574FF;
+    border-radius: 4px;
+}
+
+.custom-checkbox:checked+label .checkbox-icon rect {
+    fill: #6574FF;
+    stroke: #6574FF;
+}
+
+.custom-checkbox:checked+label .checkbox-icon .checkmark {
+    display: block;
+}

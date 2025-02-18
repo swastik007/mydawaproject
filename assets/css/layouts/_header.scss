@@ -312,6 +312,49 @@
     }
 }
 
+.brand-dropdown,
+.condition-dropdown {
+    position: relative;
+}
+
+.brand-menu,
+.condition-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: fit-content;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+    ul {
+        padding-left: 0!important;
+        li {
+            width: 100%;
+            padding-left: 0!important;
+            a {
+                padding: 5px 0;
+                border-radius: 10px;
+                &:hover {
+                    background-color: $grey2;
+                }
+                @include respond-to(xxl) {
+                    padding: 7px 0;
+                }
+            }
+        }
+    }
+}
+
+.brand-dropdown.active .brand-menu,
+.brand-dropdown:hover .brand-menu,
+.condition-dropdown.active .condition-menu,
+.condition-dropdown:hover .condition-menu {
+    display: block;
+}
+
 .category-dropdown {
     position: relative;
 }

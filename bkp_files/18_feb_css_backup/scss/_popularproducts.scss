@@ -1,9 +1,0 @@
-.popular-products {
-    margin: 40px auto;
-    @include respond-to(lg) {
-        margin: 40px auto;
-    }
-    @include respond-to(xxl) {
-        margin: 70px auto;
-    }
-}
