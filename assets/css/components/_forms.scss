@@ -1,0 +1,53 @@
+/* Hide default radio button */
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #aaa;
+    /* Default border */
+    border-radius: 50%;
+    /* Circular shape */
+    background-color: white;
+    /* White space inside */
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* Inner grey circle when unselected */
+
+input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    /* Inner grey circle */
+    height: 10px;
+    background-color: #bbb;
+    /* Grey inner color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* When checked, change border and inner circle */
+
+input[type="radio"]:checked {
+    border-color: #516BF1;
+    /* Outer border color when checked */
+}
+
+
+/* Inner pink circle when checked */
+
+input[type="radio"]:checked::before {
+    background-color: #516BF1;
+    /* Inner circle when checked */
+}

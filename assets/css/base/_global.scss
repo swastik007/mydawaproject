@@ -1,0 +1,95 @@
+html,
+body {
+    min-height: 100%;
+    font: 18px/1.5 "Figtree", serif;
+    color: rgba($black, 1);
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    // letter-spacing: .09px;
+    // @include hyphens(auto);
+}
+
+.dawamain {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 200px;
+    @include respond-to(lg) {
+        margin-top: 210px;
+    }
+    @include respond-to(xxl) {
+        margin-top: 280px;
+    }
+}
+
+.mydawa-container {
+    margin: 0 auto;
+    padding: 0 15px;
+    @include respond-to(lg) {
+        padding: 0 30px;
+    }
+    @include respond-to(xxl) {
+        padding: 0 60px;
+    }
+    @include respond-to(xxxl) {
+        padding: 0 80px;
+    }
+}
+
+// Global styles
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-1half {
+    grid-template-columns: 1fr;
+    @include respond-to(md) {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.grid-2 {
+    grid-template-columns: 1fr;
+    @include respond-to(md) {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.grid-3 {
+    grid-template-columns: 1fr;
+    @include respond-to(md) {
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+.grid-4 {
+    grid-template-columns: 1fr 1fr;
+    @include respond-to(md) {
+        grid-template-columns: 4fr 1fr;
+    }
+}
+
+.grid-4half {
+    grid-template-columns: 1fr 1fr;
+    @include respond-to(md) {
+        grid-template-columns: 4.5fr 1fr;
+    }
+}
+
+.grid-5 {
+    grid-template-columns: 1fr 1fr;
+    @include respond-to(md) {
+        grid-template-columns: 5fr 1fr;
+    }
+}
