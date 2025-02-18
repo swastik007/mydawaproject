@@ -3,8 +3,18 @@
     border: 1px solid #D4DEE5;
     border-radius: 12px;
     position: relative;
+    text-decoration: none;
     @include respond-to(lg) {
         padding: 15px;
+    }
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        border: 1px solid $primary;
+        color: $primary;
+        .product-title {
+            color: $primary;
+        }
     }
     .sale-badge {
         background-color: $primary;
@@ -23,50 +33,72 @@
             left: 30px;
         }
     }
-    .btn-wishlist {
-        border-radius: 50%;
-        border: 1px solid $primary;
-        color: $primary;
-        padding: 7px;
-        width: 30px;
-        height: 30px;
+    .action-btns {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
         position: absolute;
         right: 20px;
         top: 10px;
-        background-color: white;
+        gap: 7px;
+        z-index: 9;
+        @include respond-to(xxl) {
+            right: 25px;
+            top: 20px;
+            gap: 10px;
+        }
+    }
+    .btn-view,
+    .btn-wishlist {
+        border-radius: 50%;
+        padding: 7px;
+        width: 30px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         @include respond-to(xxl) {
-            right: 25px;
-            top: 20px;
             width: 40px;
             height: 40px;
         }
-        svg {
-            width: 16px;
-            height: 11px;
-            fill: none;
-            @include respond-to(xxl) {
-                width: 24px;
-                height: 17px;
-            }
+        img.img-active {
+            display: none;
+        }
+        img.img-inactive {
+            display: block;
         }
         &:hover,
         &:focus {
-            background-color: #FFD4E8;
-            border: 1px solid #FFD4E8;
-            svg {
-                width: 13px;
-                height: 11px;
-                fill: $primary;
+            img.img-active {
+                display: block;
             }
+            img.img-inactive {
+                display: none;
+            }
+        }
+    }
+    .btn-view {
+        border: 1px solid #898989;
+        color: #898989;
+        background-color: white;
+        &:hover,
+        &:focus {
+            background-color: $black;
+        }
+    }
+    .btn-wishlist {
+        border: 1px solid $primary;
+        color: $primary;
+        background-color: white;
+        &:hover,
+        &:focus {
+            background-color: rgba($primary, 0.2);
         }
     }
     .product-weight {
         position: absolute;
-        right: -17px;
-        top: 70px;
+        right: -13px;
+        top: 80px;
         background-color: #F6F6FF;
         color: $black;
         border-radius: 20px;
@@ -75,14 +107,15 @@
         z-index: 9;
         font-size: 0.875em;
         @include respond-to(lg) {
-            right: 18px;
+            right: -18px;
             top: 80px;
             font-size: 1em;
         }
         @include respond-to(xxl) {
             padding: 8px 32px;
             top: 120px;
-            font-size: 1.1em
+            font-size: 1.1em;
+            right: -22px;
         }
     }
     .img-box {
