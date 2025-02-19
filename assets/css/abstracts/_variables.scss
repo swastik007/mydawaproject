@@ -1,11 +1,20 @@
+:root {
+  // Accent color to define here Eg:
+  //   --accent-blue: #0a033c;
+}
+
+$font-family-sans-serif: $figtree;
+
+//  Color
 $primary: rgba(230, 27, 119, 1);
+
 $black: rgba(55, 52, 52, 1);
 $green: rgba(111, 183, 76, 1);
 // Dark Shades
 $primarydark: rgba(202, 14, 99, 1);
 $blackdark: rgba(37, 37, 37, 1);
 $greendark: rgba(101, 161, 70, 1);
-//Other Colors 
+//Other Colors
 $lightblue: rgba(77, 161, 222, 1);
 $blue: rgba(81, 107, 241, 1);
 $darkblue: rgba(0, 90, 161, 1);
@@ -21,3 +30,21 @@ $grey5: rgba(243, 243, 243, 1);
 $grey6: rgba(212, 222, 229, 1);
 $grey7: rgba(178, 178, 178, 1);
 $grey8: rgba(96, 97, 127, 1);
+
+// Button Values Override Here
+// //  Button
+// $btn-font-family: $metropolisMedium !default;
+// $btn-line-height: 20px !default;
+// $btn-padding-y: 15px !default;
+// $btn-padding-x: 30px !default;
+// $btn-border-radius: 10px !default;
+// // small
+// $btn-padding-y-sm: 12px !default;
+// $btn-padding-x-sm: 32px !default;
+// $btn-border-radius-sm: 5px !default;
+// $btn-font-size-lg: 16px !default;
+// // large
+// $btn-padding-y-lg: 20px !default;
+// $btn-padding-x-lg: 30px !default;
+// $btn-border-radius-lg: 10px !default;
+// $btn-font-size-sm: 16px !default;

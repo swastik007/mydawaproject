@@ -1,10 +1,53 @@
-// abstracts
-@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../vendor/bootstrap/scss/functions";
+
+//  Variable Override
 @import "./abstracts/variables";
-// Base
-@import "./base/reset";
-@import "./base/typography";
+
+// Additional Mixins
+@import "./abstracts/mixins";
+
+// Bootstrap Specific
+@import "../vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/variables-dark";
+@import "../vendor/bootstrap/scss/maps";
+@import "../vendor/bootstrap/scss/mixins";
+@import "../vendor/bootstrap/scss/utilities";
+@import "../vendor/bootstrap/scss/root";
+@import "../vendor/bootstrap/scss/reboot";
+
+@import "../vendor/bootstrap/scss/type";
+@import "../vendor/bootstrap/scss/images";
+@import "../vendor/bootstrap/scss/containers";
+@import "../vendor/bootstrap/scss/grid";
+@import "../vendor/bootstrap/scss/forms";
+@import "../vendor/bootstrap/scss/buttons";
+@import "../vendor/bootstrap/scss/transitions";
+@import "../vendor/bootstrap/scss/dropdown";
+@import "../vendor/bootstrap/scss/button-group";
+@import "../vendor/bootstrap/scss/nav";
+@import "../vendor/bootstrap/scss/navbar";
+@import "../vendor/bootstrap/scss/breadcrumb";
+@import "../vendor/bootstrap/scss/close";
+@import "../vendor/bootstrap/scss/modal";
+@import "../vendor/bootstrap/scss/popover";
+@import "../vendor/bootstrap/scss/carousel";
+@import "../vendor/bootstrap/scss/offcanvas";
+@import "../vendor/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../vendor/bootstrap/scss/helpers";
+
+// Utilities
+@import "../vendor/bootstrap/scss/utilities/api";
+
+//
+// Custom styles
+//
+// @import "./base/reset";
 @import "./base/global";
+@import "./base/typography";
+
 // Components
 @import "./components/buttons";
 @import "./components/popup";
@@ -12,10 +55,12 @@
 @import "./components/productbox";
 @import "./components/breadcrumb";
 @import "./components/filters";
-// layouts
+
+// Header / Footer Layout
 @import "./layouts/header";
 @import "./layouts/footer";
-// other page layouts components
+
+// Page Layout
 @import "./layouts/floatingsearch";
 @import "./layouts/banners";
 @import "./layouts/sliders";
@@ -29,6 +74,7 @@
 @import "./layouts/popularproducts";
 @import "./layouts/productpromotion";
 @import "./layouts/symptoms";
+
 // Pages Designs
 @import "./pages/cartpage";
 @import "./pages/submitprescription";
