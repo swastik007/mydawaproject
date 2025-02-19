@@ -177,112 +177,123 @@
                 @include respond-to(lg) {
                     width: 75%;
                 }
-                .product-listing-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 10px;
-                    font-size: 14px;
-                    margin-bottom: 12px;
-                    @include respond-to(xxl) {
-                        margin-bottom: 18px;
-                    }
+            }
+        }
+        
+        .product-listing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 12px;
+            @include respond-to(xxl) {
+                margin-bottom: 18px;
+            }
+        }
+        
+        .listing-info {
+            font-size: 14px;
+            @include respond-to(lg) {
+                font-size: 16px;
+            }
+            @include respond-to(xxl) {
+                font-size: 24px;
+            }
+        }
+        
+        .desktop-text {
+            display: none;
+            @include respond-to(lg) {
+                display: block;
+            }
+        }
+        
+        .mobile-text {
+            display: block;
+            @include respond-to(lg) {
+                display: none;
+            }
+        }
+        
+        .filter-options {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-filter {
+            background: #F5F5F7;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            color: $black;
+            cursor: pointer;
+            color: #bababa;
+            font-weight: 500;
+            @include respond-to(lg) {
+                color: #bababa;
+                background: transparent;
+            }
+            span.select {
+                color: $black;
+                margin-left: 7px;
+            }
+            span.arrow {
+                margin-left: 7px;
+            }
+            .filter-arrow {
+                rotate: 180deg;
+                width: 12px;
+                height: 9px;
+                margin-left: 7px;
+            }
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            top: 35px;
+            left: 0;
+            width: 150px;
+            list-style: none;
+            padding: 10px;
+        }
+        
+        .dropdown-menu li {
+            padding: 5px 10px;
+        }
+        
+        .dropdown-menu li:hover {
+            background: #E0E0E0;
+        }
+        
+        .category-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+            @include respond-to(xs) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include respond-to(lg) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .product-card {
+                height: fit-content;
+            }
+            .refine-search {
+                grid-column: span 1;
+                @include respond-to(xs) {
+                    grid-column: span 2;
                 }
-                .listing-info {
-                    font-size: 14px;
-                    @include respond-to(lg) {
-                        font-size: 16px;
-                    }
-                    @include respond-to(xxl) {
-                        font-size: 24px;
-                    }
-                }
-                .desktop-text {
-                    display: none;
-                    @include respond-to(lg) {
-                        display: block;
-                    }
-                }
-                .mobile-text {
-                    display: block;
-                    @include respond-to(lg) {
-                        display: none;
-                    }
-                }
-                .filter-options {
-                    display: flex;
-                    gap: 10px;
-                }
-                .dropdown {
-                    position: relative;
-                }
-                .dropdown-filter {
-                    background: #F5F5F7;
-                    border: none;
-                    padding: 8px 20px;
-                    border-radius: 20px;
-                    color: $black;
-                    cursor: pointer;
-                    color: #bababa;
-                    font-weight: 500;
-                    @include respond-to(lg) {
-                        color: #bababa;
-                        background: transparent;
-                    }
-                    span.select {
-                        color: $black;
-                        margin-left: 7px;
-                    }
-                    span.arrow {
-                        margin-left: 7px;
-                    }
-                    .filter-arrow {
-                        rotate: 180deg;
-                        width: 12px;
-                        height: 9px;
-                        margin-left: 7px;
-                    }
-                }
-                .dropdown-menu {
-                    display: none;
-                    position: absolute;
-                    background: white;
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                    border-radius: 5px;
-                    top: 35px;
-                    left: 0;
-                    width: 150px;
-                    list-style: none;
-                    padding: 10px;
-                }
-                .dropdown-menu li {
-                    padding: 5px 10px;
-                }
-                .dropdown-menu li:hover {
-                    background: #E0E0E0;
-                }
-                .category-grid {
-                    display: grid;
-                    gap: 20px;
-                    grid-template-columns: 1fr;
-                    @include respond-to(xs) {
-                        grid-template-columns: repeat(2, 1fr);
-                    }
-                    @include respond-to(lg) {
-                        grid-template-columns: repeat(3, 1fr);
-                    }
-                    .product-card {
-                        height: fit-content;
-                    }
-                    .refine-search {
-                        grid-column: span 1;
-                        @include respond-to(xs) {
-                            grid-column: span 2;
-                        }
-                        @include respond-to(lg) {
-                            grid-column: span 3;
-                        }
-                    }
+                @include respond-to(lg) {
+                    grid-column: span 3;
                 }
             }
         }

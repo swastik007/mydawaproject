@@ -25,6 +25,9 @@ function loadComponents() {
         { id: "featuresection", file: "components/homepage/features.html" },
         { id: "symptomsection", file: "components/homepage/symptoms.html" },
         { id: "footer", file: "components/footer.html" },
+        { id: "wishlistmodal", file: "components/pages/wishlistpopup.html" },
+        { id: "wishlistpinmodal", file: "components/pages/wishlistpinpopup.html" },
+        { id: "lastminutebuys", file: "components/pages/lastminutebuys.html" },
         // category page 
         { id: "faqsection", file: "components/pages/sexualwellnessfaq.html" },
         { id: "popular-by-durex-section", file: "components/pages/popularproductsbydurex.html" },
@@ -35,29 +38,23 @@ function loadComponents() {
 
     ];
 
-
     let loadedCount = 0;
 
     components.forEach(({ id, file }) => {
         let el = document.getElementById(id);
         if (el) {
             fetch(file)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
-                    }
-                    return response.text();
-                })
+                .then(response => response.text())
                 .then(data => {
                     el.innerHTML = data;
                     loadedCount++;
 
                     console.log(`✅ Loaded ${file} into #${id}`);
 
-                    // When all components are loaded, initialize carousels
+                    // When all components are loaded, initialize event listeners
                     if (loadedCount === components.length) {
-                        console.log("All components loaded. Initializing carousels...");
-                        initializeCarousels();
+                        console.log("All components loaded. Initializing event listeners...");
+                        setupEventListeners();
                     }
                 })
                 .catch(error => console.error(`❌ Error loading ${file}:`, error));
@@ -86,9 +83,7 @@ function initializeCarousels() {
         { id: "#bestvalueoffers-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2.1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } },
         { id: "#categoryoffers-carousel", options: { loop: true, margin: 10, nav: false, dots: false, responsive: { 0: { items: 1 }, 400: { items: 2.8 }, 768: { items: 3 }, 1024: { items: 5 }, 1920: { items: 7 } } } },
         { id: "#musthavedeals-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
-
-
-
+        { id: "#lastminutebuys-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
 
     ];
 
@@ -130,7 +125,19 @@ function initializeHealthJourneyCarousel() {
         }
     }
 }
-
+$(document).ready(function() {
+    $("#wishlist-carousel").owlCarousel({
+        loop: false,
+        margin: 15,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: { items: 1.2 },
+            600: { items: 2.1 },
+            1024: { items: 4 }
+        }
+    });
+});
 // Ensure carousel re-initializes when the window resizes
 window.addEventListener("resize", initializeHealthJourneyCarousel);
 
@@ -165,7 +172,11 @@ function setupEventListeners() {
     setupFilterAccordion();
     setupThumbnailSwitcher();
     setupQuantityControls();
-    setupWishlistPopup();
+
+    setTimeout(() => {
+        setupWishlistPopup(); // Ensure modal exists before setting up listeners
+        setupWishlistPinPopup();
+    }, 1000);
 }
 
 // Toggle Category Dropdown
@@ -257,14 +268,62 @@ function setupQuantityControls() {
 
 // Wishlist Popup
 function setupWishlistPopup() {
-    const wishlistPopup = document.getElementById("private-wishlist-popup");
-    const wishlistBtn = document.getElementById("private-wishlist-btn");
-    const closeBtn = document.getElementById("close-popup-btn");
+    $(document).on("click", ".btn-wishlist", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-    if (!wishlistPopup || !wishlistBtn || !closeBtn) return;
+        console.log("✅ Wishlist button clicked!");
 
-    wishlistBtn.addEventListener("click", () => wishlistPopup.classList.remove("hidden"));
-    closeBtn.addEventListener("click", () => wishlistPopup.classList.add("hidden"));
+        // Ensure modal exists before showing
+        if ($("#wishlistModal").length) {
+            $("#wishlistModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ Wishlist modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        $("#wishlistModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#wishlistModal")) {
+            $("#wishlistModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+
+// Wishlist PIN Popup
+function setupWishlistPinPopup() {
+    $(document).on("click", ".btn-wishlistpin", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        console.log("✅ Wishlist button clicked!");
+
+        // Ensure modal exists before showing
+        if ($("#wishlistModal").length) {
+            $("#wishlistModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ Wishlist modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        $("#wishlistModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#wishlistModal")) {
+            $("#wishlistModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
 }
 $(window).on("load", function() {
     console.log("🚀 jQuery Step Navigation Loaded!");

@@ -51,3 +51,125 @@ input[type="radio"]:checked::before {
     background-color: #516BF1;
     /* Inner circle when checked */
 }
+
+// .custom-checkbox-list {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     li {
+//         display: flex;
+//         align-items: center;
+//         margin-bottom: 10px;
+//         @include respond-to(xxl) {
+//             margin-bottom: 14px;
+//         }
+//         label {
+//             display: flex;
+//             align-items: center;
+//             font-size: 1em;
+//             color: $black;
+//             cursor: pointer;
+//             @include respond-to(xxl) {
+//                 font-size: 1.125em;
+//             }
+//         }
+//     }
+// }
+// .custom-checkbox {
+//     display: none;
+// }
+// .checkbox-icon {
+//     width: 18px;
+//     height: 18px;
+//     margin-right: 10px;
+//     @include respond-to(xxl) {
+//         width: 24px;
+//         height: 24px;
+//         margin-right: 14px;
+//     }
+// }
+// .custom-checkbox:checked+label .checkbox-icon {
+//     background: #6574FF;
+//     border-radius: 4px;
+// }
+// .custom-checkbox:checked+label .checkbox-icon rect {
+//     fill: #6574FF;
+//     stroke: #6574FF;
+// }
+// .custom-checkbox:checked+label .checkbox-icon .checkmark {
+//     display: block;
+// }
+.custom-checkbox-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-checkbox-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include respond-to(xxl) {
+        margin-bottom: 16px;
+    }
+}
+
+.custom-checkbox {
+    display: none;
+    /* Hide the default checkbox */
+}
+
+
+/* Custom checkbox style */
+
+.custom-checkbox+label {
+    position: relative;
+    padding-left: 30px;
+    /* Space for custom checkbox */
+    cursor: pointer;
+    font-size: 1em;
+    color: $black;
+    display: flex;
+    align-items: center;
+    @include respond-to(xxl) {
+        font-size: 1.125em;
+    }
+}
+
+
+/* Checkbox box */
+
+.custom-checkbox+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #D4DEE5;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+    @include respond-to(xxl) {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+/* Checkmark when checked */
+
+.custom-checkbox:checked+label::before {
+    background: #6574FF;
+    border-color: #6574FF;
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+    @include respond-to(xxl) {
+        font-size: 18px;
+    }
+}
