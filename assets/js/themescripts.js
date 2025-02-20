@@ -437,3 +437,104 @@ $(document).ready(function() {
 
     waitForHeader(); // Start checking for header
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("JavaScript loaded successfully!"); // Debugging
+
+    // Recipient Selection (Myself/Dependent)
+    const myselfRadio = document.getElementById("myself");
+    const dependentRadio = document.getElementById("dependent");
+    const myselfSection = document.getElementById("myselfSection");
+    const dependentSection = document.getElementById("dependentSection");
+
+    if (myselfRadio && dependentRadio && myselfSection && dependentSection) {
+        console.log("Recipient selection elements found.");
+
+        // Function to toggle recipient sections
+        function toggleRecipientSections() {
+            console.log("Recipient changed:", dependentRadio.checked ? "Dependent" : "Myself");
+            if (dependentRadio.checked) {
+                myselfSection.style.display = "none";
+                dependentSection.style.display = "block";
+            } else {
+                myselfSection.style.display = "block";
+                dependentSection.style.display = "none";
+            }
+        }
+
+        // Event Listeners for recipient selection (Only if on recipient page)
+        myselfRadio.addEventListener("change", toggleRecipientSections);
+        dependentRadio.addEventListener("change", toggleRecipientSections);
+
+        // Initialize on page load
+        toggleRecipientSections();
+    } else {
+        console.log("Recipient selection elements not found. Skipping recipient toggle.");
+    }
+    // Payment Method Selection - Step 1 (Self Pay, Insurance )
+    const selfPaymentRadio = document.getElementById("selfPaymentRadio");
+    const insuranceRadio = document.getElementById("insuranceRadio");
+    const selfPaymentSection = document.getElementById("selfPayment");
+    const insurancePaymentSection = document.getElementById("insurancePayment");
+
+    if (selfPaymentRadio && insuranceRadio && selfPaymentSection && insurancePaymentSection) {
+        console.log("selection elements found.");
+
+        // Function to toggle recipient sections
+        function togglePaymentTabSections() {
+            if (insuranceRadio.checked) {
+                selfPayment.style.display = "none";
+                insurancePayment.style.display = "block";
+            } else {
+                selfPayment.style.display = "block";
+                insurancePayment.style.display = "none";
+            }
+        }
+
+        selfPaymentRadio.addEventListener("change", togglePaymentTabSections);
+        insuranceRadio.addEventListener("change", togglePaymentTabSections);
+
+        // Initialize on page load
+        togglePaymentTabSections();
+    } else {
+        console.log("selection elements not found. Skipping  toggle.");
+    }
+    // Payment Method Selection (Self Pay, Smart, MTIBA, CIGNA, SLADE)
+    const selfpayRadio = document.getElementById("selfpay");
+    const smartRadio = document.getElementById("smart");
+    const mtibaRadio = document.getElementById("mtiba");
+    const cignaRadio = document.getElementById("cigna");
+    const sladeRadio = document.getElementById("slade");
+
+    const selfpaySection = document.getElementById("selfpaySection");
+    const smartSection = document.getElementById("smartSection");
+    const mtibaSection = document.getElementById("mtibaSection");
+    const cignaSection = document.getElementById("cignaSection");
+    const sladeSection = document.getElementById("sladeSection");
+
+    if (selfpayRadio && smartRadio && mtibaRadio && cignaRadio && sladeRadio) {
+        console.log("Payment selection elements found.");
+
+        // Function to toggle payment sections
+        function togglePaymentSections() {
+            console.log("Payment method changed");
+            if (selfpaySection) selfpaySection.style.display = selfpayRadio.checked ? "block" : "none";
+            if (smartSection) smartSection.style.display = smartRadio.checked ? "block" : "none";
+            if (mtibaSection) mtibaSection.style.display = mtibaRadio.checked ? "block" : "none";
+            if (cignaSection) cignaSection.style.display = cignaRadio.checked ? "block" : "none";
+            if (sladeSection) sladeSection.style.display = sladeRadio.checked ? "block" : "none";
+        }
+
+        // Event Listeners for payment selection (Only if on payment page)
+        selfpayRadio.addEventListener("change", togglePaymentSections);
+        smartRadio.addEventListener("change", togglePaymentSections);
+        mtibaRadio.addEventListener("change", togglePaymentSections);
+        cignaRadio.addEventListener("change", togglePaymentSections);
+        sladeRadio.addEventListener("change", togglePaymentSections);
+
+        // Initialize on page load
+        togglePaymentSections();
+    } else {
+        console.log("Payment selection elements not found. Skipping payment toggle.");
+    }
+});

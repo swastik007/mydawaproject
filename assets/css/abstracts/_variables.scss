@@ -1,15 +1,14 @@
 :root {
-  // Accent color to define here Eg:
-  //   --accent-blue: #0a033c;
+    // Accent color to define here Eg:
+    //   --accent-blue: #0a033c;
 }
 
 $font-family-sans-serif: $figtree;
-
 //  Color
 $primary: rgba(230, 27, 119, 1);
-
 $black: rgba(55, 52, 52, 1);
 $green: rgba(111, 183, 76, 1);
+$red:rgb(230, 27, 74, 1);
 // Dark Shades
 $primarydark: rgba(202, 14, 99, 1);
 $blackdark: rgba(37, 37, 37, 1);
@@ -30,7 +29,6 @@ $grey5: rgba(243, 243, 243, 1);
 $grey6: rgba(212, 222, 229, 1);
 $grey7: rgba(178, 178, 178, 1);
 $grey8: rgba(96, 97, 127, 1);
-
 // Button Values Override Here
 // //  Button
 // $btn-font-family: $metropolisMedium !default;

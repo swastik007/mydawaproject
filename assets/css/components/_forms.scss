@@ -52,6 +52,40 @@ input[type="radio"]:checked::before {
     /* Inner circle when checked */
 }
 
+.radio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    @include respond-to(xxl) {
+        margin-right: 35px;
+    }
+}
+
+.radio-item input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #e61b77;
+    cursor: pointer;
+    margin-right: 7px;
+    @include respond-to(xxl) {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+    }
+}
+
+.radio-item label {
+    font-size: 16px;
+    color: $black;
+    cursor: pointer;
+    margin-left: 7px;
+    font-weight: 500;
+    @include respond-to(xxl) {
+        font-size: 20px;
+    }
+}
+
 // .custom-checkbox-list {
 //     list-style: none;
 //     padding: 0;

@@ -36,7 +36,7 @@
                 <div class="mydawa-container submit-prescription">
                     <!-- Step Navigation -->
                     <div class="step-navigation mb-4">
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between">
                             <h4 class="section-heading">Step 1</h4>
                             <ul class="steps list-inline d-flex align-items-center">
                                 <li class="list-inline-item step complete">
@@ -52,6 +52,31 @@
                         </div>
                     </div>
                     <div class="prescription-wrap">
+                        <!-- Right notice box -->
+                        <div class="info-box">
+                            <div class="info-icon">
+
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4400_18236)">
+                                    <path d="M8.08553 5.33362H8.09092M8.08553 10.667V7.33362M14.8241 8.00028C14.8241 11.6823 11.8073 14.667 8.08553 14.667C4.3638 14.667 1.34692 11.6823 1.34692 8.00028C1.34692 4.31828 4.3638 1.33362 8.08553 1.33362C11.8073 1.33362 14.8241 4.31828 14.8241 8.00028Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_4400_18236">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </div>
+                            <div class="info-content">
+                                <h4>Important Information</h4>
+                                <ol>
+                                    <li>Please make sure you have included all the pages of the prescription, as well as the Claim Form.</li>
+                                    <li>For Cigna Insurance users, please attach a copy of your Card and National ID or Allen ID or Passport Copy.</li>
+                                </ol>
+                            </div>
+                        </div>
+
                         <!-- Title Section -->
                         <div class="prescription-heading">
                             <h3 class="form-title">Upload Your Prescription</h3>
@@ -69,8 +94,45 @@
                             </div>
                         </div>
                         <div class="upload-notice">
-                            <i class="bi bi-exclamation-circle"></i>
+
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4328_5741)">
+                                <path d="M8.08529 5.33362H8.09068M8.08529 10.667V7.33362M14.8239 8.00028C14.8239 11.6823 11.807 14.667 8.08529 14.667C4.36356 14.667 1.34668 11.6823 1.34668 8.00028C1.34668 4.31828 4.36356 1.33362 8.08529 1.33362C11.807 1.33362 14.8239 4.31828 14.8239 8.00028Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4328_5741">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+
                             <span>Image or PDF file size must be under 250 MB.</span>
+                        </div>
+                        <div class="upload-notice warning">
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4328_5741)">
+                                <path d="M8.08529 5.33362H8.09068M8.08529 10.667V7.33362M14.8239 8.00028C14.8239 11.6823 11.807 14.667 8.08529 14.667C4.36356 14.667 1.34668 11.6823 1.34668 8.00028C1.34668 4.31828 4.36356 1.33362 8.08529 1.33362C11.807 1.33362 14.8239 4.31828 14.8239 8.00028Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4328_5741">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <span>File size exceeds 250MB. Please upload a smaller file.</span>
+                        </div>
+                        <div class="upload-notice warning">
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4328_5741)">
+                                <path d="M8.08529 5.33362H8.09068M8.08529 10.667V7.33362M14.8239 8.00028C14.8239 11.6823 11.807 14.667 8.08529 14.667C4.36356 14.667 1.34668 11.6823 1.34668 8.00028C1.34668 4.31828 4.36356 1.33362 8.08529 1.33362C11.807 1.33362 14.8239 4.31828 14.8239 8.00028Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4328_5741">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Please upload at least one prescription file to continue.</span>
                         </div>
 
 
@@ -98,15 +160,63 @@
                             <h5 class="payment-heading">Payment Method</h5>
                             <div class="radio-wrap">
                                 <div class="radio-item">
-                                    <input type="radio" name="paymentMethod" id="selfPay" checked>
-                                    <label for="selfPay">Self Pay</label>
+                                    <input type="radio" name="paymentMethod" id="selfPaymentRadio" checked>
+                                    <label for="selfPayment">Self Pay</label>
                                 </div>
                                 <div class="radio-item">
-                                    <input type="radio" name="paymentMethod" id="insurance">
+                                    <input type="radio" name="paymentMethod" id="insuranceRadio">
                                     <label for="insurance">Insurance</label>
                                 </div>
                             </div>
 
+                        </div>
+
+
+
+
+                        <!-- selfPayment Section -->
+                        <div id="selfPayment">
+                            hi
+                        </div>
+
+                        <!-- insurance Section -->
+                        <div id="insurancePayment" style="display: none;">
+                            <h3 class="form-title">Are You a CIGNA Insurance User?</h3>
+                            <div class="radio-wrap">
+                                <div class="radio-item">
+                                    <input type="radio" name="" id="" checked>
+                                    <label for="">Yes</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" name="" id="">
+                                    <label for="">No</label>
+                                </div>
+                            </div>
+                            <h3 class="form-title">Upload Your National ID or Passport</h3>
+                            <div class="upload-section">
+                                <div class="upload-box">
+                                    <div class="icon">
+                                        <img src="assets/images/icons/file-upload.png" class="file-upload-icon">
+                                    </div>
+                                    <p>Drag and drop your image or choose a PDF from your device to get started!</p>
+
+                                </div>
+                            </div>
+                            <div class="upload-notice">
+
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4328_5741)">
+                                    <path d="M8.08529 5.33362H8.09068M8.08529 10.667V7.33362M14.8239 8.00028C14.8239 11.6823 11.807 14.667 8.08529 14.667C4.36356 14.667 1.34668 11.6823 1.34668 8.00028C1.34668 4.31828 4.36356 1.33362 8.08529 1.33362C11.807 1.33362 14.8239 4.31828 14.8239 8.00028Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_4328_5741">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <span>Image or PDF file size must be under 250 MB.</span>
+                            </div>
                         </div>
 
                         <!-- Actions Section -->

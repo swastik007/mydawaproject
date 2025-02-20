@@ -36,7 +36,7 @@
                 <div class="mydawa-container submit-prescription">
                     <!-- Step Navigation -->
                     <div class="step-navigation mb-4">
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between">
                             <h4 class="section-heading">Step 3</h4>
                             <ul class="steps list-inline d-flex align-items-center">
                                 <li class="list-inline-item step complete">
@@ -82,138 +82,228 @@
                                 <p class="form-subtitle">Select a payment option to complete the process.</p>
 
                                 <!-- Payment Method Selection -->
-                                <div class="radio-section">
-                                    <label class="radio-option">
-                                        <input type="radio" name="payment" value="self-pay"> Self Pay
+                                <div class="radio-wrap">
+                                    <label class="radio-item">
+                                        <input type="radio" name="payment" id="selfpay" value="self-pay"  checked> Self Pay
                                     </label>
-                                    <label class="radio-option">
-                                        <input type="radio" name="payment" value="smart" checked> Smart
+                                    <label class="radio-item">
+                                        <input type="radio" name="payment" id="smart" value="smart"> Smart
                                     </label>
-                                    <label class="radio-option">
-                                        <input type="radio" name="payment" value="mtiba"> MTIBA
+                                    <label class="radio-item">
+                                        <input type="radio" name="payment" id="mtiba" value="mtiba"> MTIBA
                                     </label>
-                                    <label class="radio-option">
-                                        <input type="radio" name="payment" value="cigna"> CIGNA
+                                    <label class="radio-item">
+                                        <input type="radio" name="payment" id="cigna" value="cigna"> CIGNA
                                     </label>
-                                    <label class="radio-option">
-                                        <input type="radio" name="payment" value="slade"> SLADE
+                                    <label class="radio-item">
+                                        <input type="radio" name="payment" id="slade" value="slade"> SLADE
                                     </label>
                                 </div>
-
-                                <!-- Insurance Selection -->
-                                <div class="insurance-provider">
-                                    <h4>Select Insurance Provider</h4>
-                                    <div class="insurance-grid">
-                                        <button class="insurance-option active" data-provider="britam">
-                                            <img src="assets/images/logos/logo1.png" alt="Britam">
-                                        </button>
-                                        <button class="insurance-option" data-provider="aar">
-                                            <img src="assets/images/logos/logo2.png" alt="AAR Insurance">
-                                        </button>
-                                        <button class="insurance-option" data-provider="uap">
-                                            <img src="assets/images/logos/logo3.png" alt="UAP Insurance">
-                                        </button>
-                                        <button class="insurance-option active" data-provider="britam">
-                                            <img src="assets/images/logos/logo4.png" alt="Britam">
-                                        </button>
-                                        <button class="insurance-option" data-provider="aar">
-                                            <img src="assets/images/logos/logo5.png" alt="AAR Insurance">
-                                        </button>
-                                        <button class="insurance-option" data-provider="uap">
-                                            <img src="assets/images/logos/logo6.png" alt="UAP Insurance">
-                                        </button>
-                                        <button class="insurance-option active" data-provider="britam">
-                                            <img src="assets/images/logos/logo7.png" alt="Britam">
-                                        </button>
-                                        <button class="insurance-option" data-provider="aar">
-                                            <img src="assets/images/logos/logo3.png" alt="AAR Insurance">
-                                        </button>
-                                        <button class="insurance-option" data-provider="uap">
-                                            <img src="assets/images/logos/white-bg.png" alt="UAP Insurance">
-                                        </button>
-                                        <button class="insurance-option active" data-provider="britam">
-                                            <img src="assets/images/logos/logo2.png" alt="Britam">
-                                        </button>
-                                        <button class="insurance-option" data-provider="aar">
-                                            <img src="assets/images/logos/logo1.png" alt="AAR Insurance">
-                                        </button>
-                                        <button class="insurance-option" data-provider="uap">
-                                            <img src="assets/images/logos/logo1.png" alt="UAP Insurance">
-                                        </button>
-                                        <button class="insurance-option active" data-provider="britam">
-                                            <img src="assets/images/logos/logo1.png" alt="Britam">
-                                        </button>
-                                        <button class="insurance-option" data-provider="aar">
-                                            <img src="assets/images/logos/logo1.png" alt="AAR Insurance">
-                                        </button>
-                                        <button class="insurance-option" data-provider="uap">
-                                            <img src="assets/images/logos/logo1.png" alt="UAP Insurance">
-                                        </button>
-                                        <!-- Add more insurance options -->
-                                    </div>
-                                </div>
-                                <!-- MTIBA Payment Instructions -->
-                                <div class="mtiba-instructions">
-                                    <h4>Follow These Steps to Obtain a Code:</h4>
-                                    <ol>
-                                        <li>Dial *255#</li>
-                                        <li>Enter your MTIBA PIN</li>
-                                        <li>Select "Initiate Treatment"</li>
-                                        <li>Select "Recent Clinic (Mydawa)"</li>
-                                        <li>Select the patient</li>
-                                        <li>Select cover</li>
-                                        <li>Authorize with 1</li>
-                                    </ol>
-                                </div>
-                                <!-- Enter Visit Code -->
-                                <div class="visit-code">
-                                    <h4>Provide Your visit code to verify your insurange provider</h4>
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <input type="text" placeholder="Enter Your Visit Code">
-                                        <button class="btn-grey">Verify Code</button>
-                                    </div>
-
-                                </div>
-                                <!-- OTP Verification -->
-                                <div class="otp-verification">
-                                    <h4>Enter Your OTP To Verify Your Insurance Provider</h4>
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <div class="otp-inputs">
-                                            <input type="text" maxlength="1">
-                                            <input type="text" maxlength="1">
-                                            <input type="text" maxlength="1">
-                                            <input type="text" maxlength="1">
+                                <div id="selfpaySection"></div>
+                                <div id="smartSection" style="display: none;">
+                                    <!-- Insurance Selection -->
+                                    <div class="insurance-provider">
+                                        <h4>Select Insurance Provider</h4>
+                                        <div class="insurance-grid">
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo1.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo2.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo3.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo4.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo5.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo6.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo7.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo3.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/white-bg.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo2.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo1.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo1.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo1.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo1.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo1.png" alt="UAP Insurance">
+                                            </button>
+                                            <!-- Add more insurance options -->
                                         </div>
-                                        <button class="btn-grey">Verify OTP</button>
                                     </div>
-
-                                    <a href="" class="resend-otp">Resend OTP</a>
-                                </div>
-
-                                <!-- Insurance Number Entry -->
-                                <div class="insurance-number">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <div class="d-flex flex-column justify-content-start items-start me-2 me-xl-3">
-                                            <h6>Selected Insurance</h6>
-                                            <button class="selected-company">Jubilee Insurance</button>
-                                        </div>
-                                        <div class="d-flex flex-column justify-content-start items-start">
-                                            <h6>Insurance Number</h6>
+                                    <!-- Enter Visit Code -->
+                                    <div class="visit-code">
+                                        <h4>Provide Your visit code to verify your insurange provider</h4>
+                                        <div class="d-flex justify-content-start align-items-center">
                                             <input type="text" placeholder="Enter Your Visit Code">
+                                            <button class="btn-grey">Verify Code</button>
                                         </div>
 
                                     </div>
+                                    <!-- OTP Verification -->
+                                    <div class="otp-verification">
+                                        <h4>Enter Your OTP To Verify Your Insurance Provider</h4>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="otp-inputs">
+                                                <input type="text" maxlength="1">
+                                                <input type="text" maxlength="1">
+                                                <input type="text" maxlength="1">
+                                                <input type="text" maxlength="1">
+                                            </div>
+                                            <button class="btn-grey">Verify OTP</button>
+                                        </div>
+
+                                        <a href="" class="resend-otp">Resend OTP</a>
+                                    </div>
+                                </div>
+                                <div id="mtibaSection" style="display: none;">
+
+                                    <!-- MTIBA Payment Instructions -->
+                                    <div class="mtiba-instructions">
+                                        <h4>Follow These Steps to Obtain a Code:</h4>
+                                        <ol>
+                                            <li>Dial *255#</li>
+                                            <li>Enter your MTIBA PIN</li>
+                                            <li>Select "Initiate Treatment"</li>
+                                            <li>Select "Recent Clinic (Mydawa)"</li>
+                                            <li>Select the patient</li>
+                                            <li>Select cover</li>
+                                            <li>Authorize with 1</li>
+                                        </ol>
+                                    </div>
+                                    <!-- MTIBA Payment Instructions -->
+                                    <div class="mtiba-code">
+
+                                        <input type="text" placeholder="Enter Treatment Code">
+                                    </div>
+                                </div>
+                                <div id="cignaSection" style="display: none;">
+                                    <!-- Member Selection -->
+                                    <div class="d-flex flex-column justify-content-start items-start">
+                                        <h6>Member Number</h6>
+                                        <input type="text" placeholder="Enter Member Number">
+                                    </div>
+                                </div>
+                                <div id="sladeSection" style="display: none;">
+                                    <!-- Insurance Selection -->
+                                    <div class="insurance-provider">
+                                        <h4>Select Insurance Provider</h4>
+                                        <div class="insurance-grid">
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo1.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo2.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo3.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo4.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo5.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo6.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo7.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo3.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/white-bg.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo2.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo1.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo1.png" alt="UAP Insurance">
+                                            </button>
+                                            <button class="insurance-option active" data-provider="britam">
+                                                <img src="assets/images/logos/logo1.png" alt="Britam">
+                                            </button>
+                                            <button class="insurance-option" data-provider="aar">
+                                                <img src="assets/images/logos/logo1.png" alt="AAR Insurance">
+                                            </button>
+                                            <button class="insurance-option" data-provider="uap">
+                                                <img src="assets/images/logos/logo1.png" alt="UAP Insurance">
+                                            </button>
+                                            <!-- Add more insurance options -->
+                                        </div>
+                                    </div>
+                                    <!-- Enter Visit Code -->
+                                    <div class="visit-code">
+                                        <h4>Provide Your visit code to verify your insurange provider</h4>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <input type="text" placeholder="Enter Your Visit Code">
+                                            <button class="btn-grey">Verify Code</button>
+                                        </div>
+
+                                    </div>
+                                    <!-- OTP Verification -->
+                                    <div class="otp-verification">
+                                        <h4>Enter Your OTP To Verify Your Insurance Provider</h4>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="otp-inputs">
+                                                <input type="text" maxlength="1">
+                                                <input type="text" maxlength="1">
+                                                <input type="text" maxlength="1">
+                                                <input type="text" maxlength="1">
+                                            </div>
+                                            <button class="btn-grey">Verify OTP</button>
+                                        </div>
+
+                                        <a href="" class="resend-otp">Resend OTP</a>
+                                    </div>
+                                    <!-- Insurance Number Entry -->
+                                    <div class="insurance-number">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="d-flex flex-column justify-content-start items-start me-2 me-xl-3">
+                                                <h6>Selected Insurance</h6>
+                                                <button class="selected-company">Jubilee Insurance</button>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-start items-start">
+                                                <h6>Insurance Number</h6>
+                                                <input type="text" placeholder="Enter Your Visit Code">
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- MTIBA Payment Instructions -->
-                                <div class="mtiba-code">
 
-                                    <input type="text" placeholder="Enter Treatment Code">
-                                </div>
 
                                 <!-- Actions Section -->
                                 <div class="actions-section">
-                                    <button class="btn-white-border btn-rounded me-2"><i class="bi bi-arrow-left"></i>Back</button>
+                                    <button class="btn-white-border btn-rounded me-2" onclick="window.location.href='/submitpresciption2.html';"><i class="bi bi-arrow-left"></i>Back</button>
                                     <button class="btn-green btn-rounded">Continue</button>
                                 </div>
                             </div>
