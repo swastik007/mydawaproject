@@ -26,6 +26,7 @@ function loadComponents() {
         { id: "symptomsection", file: "components/homepage/symptoms.html" },
         { id: "footer", file: "components/footer.html" },
         { id: "wishlistmodal", file: "components/pages/wishlistpopup.html" },
+        { id: "submitprescriptionmodal", file: "components/pages/submitprescriptionmodal.html" },
         { id: "wishlistpinmodal", file: "components/pages/wishlistpinpopup.html" },
         { id: "lastminutebuys", file: "components/pages/lastminutebuys.html" },
         // category page 
@@ -325,6 +326,36 @@ function setupWishlistPinPopup() {
         }
     });
 }
+
+// Submit Prescription Popup
+
+function setupWishlistPopup() {
+    $(document).on("click", ".btn-submitprescription", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Ensure modal exists before showing
+        if ($("#submitprescriptionModal").length) {
+            $("#submitprescriptionModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ submitprescription modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        $("#submitprescriptionModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#submitprescriptionModal")) {
+            $("#submitprescriptionModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+
 $(window).on("load", function() {
     console.log("🚀 jQuery Step Navigation Loaded!");
 
