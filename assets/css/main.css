@@ -17588,6 +17588,43 @@ header {
   flex-direction: column;
 }
 
+.related-product {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 12px;
+}
+.related-product--img {
+  width: 120px;
+}
+.related-product--title {
+  max-width: 164px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.related-product--price {
+  font-size: 16px;
+  font-weight: medium;
+}
+.related-product .btn {
+  font-family: "Outfit", serif;
+  background-color: rgb(111, 183, 76);
+  font-size: 15px;
+  border-radius: 25px;
+  color: white;
+  padding: 6px 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 1;
+  gap: 8px;
+  display: flex;
+}
+.related-product .btn.added {
+  background-color: transparent;
+  border-color: rgb(111, 183, 76);
+  color: rgb(111, 183, 76);
+}
+
 .faq-page {
   /* Sidebar Navigation */
   /* FAQ Content */
