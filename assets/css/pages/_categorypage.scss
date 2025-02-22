@@ -41,7 +41,7 @@
                 font-size: 24px;
                 font-weight: bold;
                 margin: 0 0 10px;
-                color: #000;
+                color: $black;
                 @include respond-to(lg) {
                     font-size: 32px;
                 }
@@ -62,7 +62,7 @@
                 font-size: 14px;
                 margin-bottom: 10px;
                 display: block;
-                color: #000;
+                color: $black;
             }
             .buttons {
                 display: flex;
@@ -103,7 +103,7 @@
                 }
             }
             .help-item {
-                color: #000;
+                color: $black;
                 display: flex;
                 align-items: center;
                 gap: 8px;

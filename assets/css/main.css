@@ -10532,6 +10532,27 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 html,
 body {
   min-height: 100%;
@@ -14636,7 +14657,7 @@ header {
 }
 .health-center .healthintro-section .healthintro-content ul.features-list li span {
   font-weight: 700;
-  color: #000;
+  color: rgb(55, 52, 52);
   font-size: 16px;
   line-height: 24px;
 }
@@ -14735,7 +14756,7 @@ header {
 .health-center .healthsteps-section .healthstep-card .healthstep-button {
   display: none;
   padding: 10px 20px;
-  background-color: #000;
+  background-color: rgb(55, 52, 52);
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -16929,7 +16950,7 @@ header {
   font-size: 24px;
   font-weight: bold;
   margin: 0 0 10px;
-  color: #000;
+  color: rgb(55, 52, 52);
 }
 @media (min-width: 1200px) {
   .wellness-banner-section .title {
@@ -16954,7 +16975,7 @@ header {
   font-size: 14px;
   margin-bottom: 10px;
   display: block;
-  color: #000;
+  color: rgb(55, 52, 52);
 }
 .wellness-banner-section .buttons {
   display: flex;
@@ -16999,7 +17020,7 @@ header {
   }
 }
 .wellness-banner-section .help-item {
-  color: #000;
+  color: rgb(55, 52, 52);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -17418,7 +17439,7 @@ header {
   aspect-ratio: 1/1;
 }
 .product-page .product-details .product-images .thumbnails img:hover {
-  border-color: #000;
+  border-color: rgb(55, 52, 52);
 }
 .product-page .product-details .product-info {
   display: flex;
