@@ -13260,7 +13260,7 @@ header {
   }
 }
 .banner-section .banner-content-wrap h4, .banner-section .banner-content-wrap .h4 {
-  font-weight: 800;
+  font-family: "Figtree-ExtraBold";
   font-size: 2em;
   line-height: 1;
   margin-bottom: 7px;
@@ -13282,7 +13282,7 @@ header {
   }
 }
 .banner-section .banner-content-wrap p {
-  font-weight: 300;
+  font-family: "Figtree-Light";
   font-size: 0.875em;
   line-height: 1.7;
   color: white;
@@ -13413,7 +13413,7 @@ header {
   }
 }
 .banner-section.health-banner .banner-content-wrap p {
-  font-weight: 300;
+  font-family: "Figtree-Light";
   font-size: 0.875em;
   line-height: 1.7;
   color: white;
