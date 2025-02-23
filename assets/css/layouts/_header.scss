@@ -35,7 +35,7 @@
         p {
             margin-bottom: 0;
             font-size: 14px;
-            font-weight: 500;
+            font-family: $figtreeMedium;
             text-align: center;
             @include respond-to(lg) {
                 font-size: 16px;
@@ -132,13 +132,13 @@
             font-size: 0.75em;
             color: #373434;
             line-height: 1.2;
-            font-weight: 300;
+            font-family: $figtreeLight;
             @include respond-to(xxl) {
                 font-size: 0.875em;
             }
             .text-bold {
                 font-size: 0.875em;
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 @include respond-to(xxl) {
                     font-size: 1.2em;
                 }
@@ -213,7 +213,7 @@
             li {
                 font-size: 14px;
                 padding-left: 10px;
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 @include respond-to(xxl) {
                     font-size: 18px;
                 }
@@ -459,12 +459,12 @@
         p {
             margin-bottom: 0;
             color: $black;
-            font-weight: 600;
+            font-family: $figtreeSemiBold;
             font-size: 14px;
             line-height: 14px;
         }
         span {
-            font-weight: 400;
+            font-family: $figtree;
             font-size: 12px;
             color: #909090;
         }
@@ -515,14 +515,14 @@
         padding-right: 25px;
         .heading {
             font-size: 14px;
-            font-weight: 400;
+            font-family: $figtree;
             @include respond-to(lg) {
                 font-size: 18px;
             }
         }
         .promo-text {
             font-size: 18px;
-            font-weight: 800;
+            font-family: $figtreeExtraBold;
             @include respond-to(lg) {
                 font-size: 24px;
             }
@@ -590,7 +590,7 @@
         .btn-rounded {
             padding: 10px 10px;
             font-size: 16px;
-            font-weight: 500;
+            font-family: $figtreeMedium;
             display: flex;
             justify-content: center;
         }
@@ -630,11 +630,11 @@
                 .address {
                     font-size: 14px;
                     line-height: 20px;
-                    font-weight: 400;
+                    font-family: $figtree;
                 }
             }
             .manage-link {
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 font-size: 12px;
                 line-height: 18px;
                 color: $black;
@@ -653,13 +653,13 @@
             display: flex;
             .btn-primary {
                 font-size: 16px;
-                font-weight: 600;
+                font-family: $figtreeSemiBold;
                 padding: 10px 25px;
                 margin-right: 7px;
             }
             .btn-outline-light {
                 font-size: 16px;
-                font-weight: 600;
+                font-family: $figtreeSemiBold;
                 padding: 7px 20px;
             }
         }
@@ -709,7 +709,7 @@
             width: 100%;
             font-size: 14px;
             color: $black;
-            font-weight: 600;
+            font-family: $figtreeSemiBold;
             border-radius: 8px;
             span {
                 width: 100%;
@@ -766,7 +766,7 @@
             width: 100%;
             font-size: 14px;
             color: $black;
-            font-weight: 600;
+            font-family: $figtreeSemiBold;
             border-radius: 8px;
             span {
                 width: 100%;
@@ -790,7 +790,7 @@
                 h3 {
                     font-size: 18px;
                     line-height: 1.2;
-                    font-weight: 600;
+                    font-family: $figtreeSemiBold;
                     margin-bottom: 3px;
                 }
             }
@@ -851,7 +851,7 @@ header {
         padding: 20px;
     }
     h5 {
-        font-weight: 700;
+        font-family: $figtreeBold;
         font-size: 16px;
         line-height: 24px;
         color: $black;
@@ -878,7 +878,7 @@ header {
             border-radius: 12px;
             align-items: center;
             font-size: 14px;
-            font-weight: 600;
+            font-family: $figtreeSemiBold;
             i {
                 color: #B1B1C3;
                 font-size: 20px;
@@ -902,7 +902,7 @@ header {
                 color: #B1B1C3;
                 font-size: 12px;
                 line-height: 14px;
-                font-weight: 500;
+                font-family: $figtreeMedium;
             }
         }
         a {
@@ -913,7 +913,7 @@ header {
             border-radius: 12px;
             align-items: center;
             font-size: 14px;
-            font-weight: 600;
+            font-family: $figtreeSemiBold;
             i {
                 color: #B1B1C3;
                 font-size: 20px;
@@ -938,14 +938,14 @@ header {
                     flex-direction: column;
                     .product-name {
                         font-size: 14px;
-                        font-weight: 600;
+                        font-family: $figtreeSemiBold;
                         line-height: 20px;
                         color: $black;
                         margin-bottom: 0;
                     }
                     .product-price {
                         font-size: 13px;
-                        font-weight: 600;
+                        font-family: $figtreeSemiBold;
                         line-height: 16px;
                         color: $black;
                         margin-bottom: 0;
@@ -954,7 +954,7 @@ header {
                         color: #B1B1C3;
                         font-size: 12px;
                         line-height: 14px;
-                        font-weight: 500;
+                        font-family: $figtreeMedium;
                     }
                 }
             }

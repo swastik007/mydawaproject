@@ -1,3 +1,73 @@
+.dawa-modal {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px 20px;
+    box-shadow: 0px 16px 12px rgba(0, 0, 0, 0.035);
+    border-radius: 8px;
+    z-index: 1000;
+    border: 1px solid #E7ECF4;
+    width: 100%;
+    @include respond-to(sm) {
+        width: fit-content;
+    }
+    @include respond-to(xxl) {
+        padding: 50px 35px;
+    }
+    &.modal-sm {
+        .modal-content {
+            max-width: 452px;
+            @include respond-to(xxl) {
+                max-width: 680px;
+            }
+        }
+    }
+    .close-btn {
+        position: absolute;
+        right: -20px;
+        top: -25px;
+        @include responsive-font(1.4em, 1.4em, 3em);
+        @include respond-to(xxl) {
+            top: -35px;
+            right: -10px;
+        }
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: $red;
+        }
+    }
+    .popup-icon {
+        width: 60px;
+        height: auto;
+        @include respond-to(xxl) {
+            width: 80px;
+        }
+    }
+    h2 {
+        font-family: $figtreeBold;
+        @include responsive-font(1.25em, 1.25em, 1.8em);
+    }
+    p {
+        @include responsive-font(0.875em, 0.875em, 1.2em);
+    }
+}
+
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    /* Dark semi-transparent overlay */
+    z-index: 999;
+    /* Ensure it's above everything except the modal */
+}
+
 .product-modal-overlay {
     position: fixed;
     top: 0;
@@ -186,19 +256,6 @@
     }
 }
 
-#modalOverlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.75);
-    /* Dark semi-transparent overlay */
-    z-index: 999;
-    /* Ensure it's above everything except the modal */
-}
-
 .wishlist-modal {
     position: fixed;
     top: 50%;
@@ -222,18 +279,6 @@
         }
         @include respond-to(xxl) {
             min-width: 674px;
-        }
-    }
-    .close-btn {
-        position: absolute;
-        right: -20px;
-        top: -25px;
-        cursor: pointer;
-        font-size: 24px;
-        @include respond-to(xxl) {
-            font-size: 32px;
-            top: -45px;
-            right: -10px;
         }
     }
     .product-info {

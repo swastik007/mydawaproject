@@ -1,7 +1,7 @@
 .symptoms-section {
     margin: 20px 0;
-    border-top: 1px solid #D4DEE5;
-    border-bottom: 1px solid #D4DEE5;
+    border-top: 1px solid #d4dee5;
+    border-bottom: 1px solid #d4dee5;
     @include respond-to(lg) {
         margin: 40px 0;
         border-top: 0;
@@ -11,14 +11,13 @@
         margin: 60px 0;
     }
     .symptoms-badge {
-        background-color: #FFECD6;
-        color: #FAA138;
+        background-color: #ffecd6;
+        color: #faa138;
         position: absolute;
         top: 0;
         left: 30px;
         border-radius: 0 0 10px 10px;
-        font-family: 'Outfit', sans-serif;
-        font-weight: 600;
+        font-family: $figtreeSemiBold;
         font-size: 16px;
         padding: 7px 15px;
         @include respond-to(lg) {
@@ -31,7 +30,7 @@
         padding: 60px 20px;
         @include respond-to(lg) {
             border-radius: 12px;
-            border: 1px solid #D4DEE5;
+            border: 1px solid #d4dee5;
             padding: 80px;
         }
         .steps {
@@ -54,7 +53,7 @@
                 }
                 .step-circle {
                     border-radius: 50%;
-                    border: 1px solid #D4D7E0;
+                    border: 1px solid #d4d7e0;
                     padding: 5px;
                     width: 32px;
                     height: 32px;
@@ -91,7 +90,7 @@
                     }
                 }
                 &.selected {
-                    background-color: #F6F7FB;
+                    background-color: #f6f7fb;
                     .step-circle {
                         border-radius: 50%;
                         border: 2px solid $primary;
@@ -210,25 +209,25 @@
                     filter: grayscale(0);
                 }
                 &.bg1 {
-                    background-color: #93CFE7;
+                    background-color: #93cfe7;
                 }
                 &.bg2 {
-                    background-color: #FFEDA5;
+                    background-color: #ffeda5;
                 }
                 &.bg3 {
-                    background-color: #94E2E2;
+                    background-color: #94e2e2;
                 }
                 &.bg4 {
-                    background-color: #FEC091;
+                    background-color: #fec091;
                 }
                 &.bg5 {
-                    background-color: #DAC6EB;
+                    background-color: #dac6eb;
                 }
                 &.bg6 {
-                    background-color: #FFD6D6;
+                    background-color: #ffd6d6;
                 }
                 &.bg7 {
-                    background-color: #DAEE9F;
+                    background-color: #daee9f;
                 }
                 &.bg8 {
                     background-color: #fbb6cb;

@@ -1,26 +1,33 @@
-button {
-    border: none;
-    box-shadow: none;
-    outline: none;
-    font-size: 1em;
-    padding: 10px 20px;
-    font-weight: 600;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    @include respond-to(xxl) {
-        padding: 12px 32px;
-        font-size: 1.4em;
-    }
-    &:hover,
-    &:focus {
-        background-color: $primarydark;
-        border-color: $primarydark;
-    }
-}
-
+// button {
+//     border: none;
+//     box-shadow: none;
+//     outline: none;
+//     font-size: 1em;
+//     padding: 10px 20px;
+//     font-weight: 600;
+//     color: white;
+//     border-radius: 10px;
+//     cursor: pointer;
+//     @include respond-to(xxl) {
+//         padding: 12px 32px;
+//         font-size: 1.4em;
+//     }
+//     &:hover,
+//     &:focus {
+//         background-color: $primarydark;
+//         border-color: $primarydark;
+//     }
+// }
 .btn-primary {
     background-color: $primary;
+    color: white;
+    font-family: $figtreeMedium;
+    border: 1px solid $primary;
+    box-shadow: none;
+    outline: none;
+    border-radius: 10px;
+    @include responsive-font(1em, 1em, 1.4em);
+    cursor: pointer;
     &:hover,
     &:focus {
         background-color: $primarydark;
@@ -31,6 +38,12 @@ button {
 .btn-outline-light {
     background-color: #f3f3f3;
     color: $black;
+    font-family: $figtreeMedium;
+    border: 1px solid #f3f3f3;
+    box-shadow: none;
+    outline: none;
+    border-radius: 10px;
+    @include responsive-font(1em, 1em, 1.4em);
     &:hover,
     &:focus {
         background-color: $grey3;
@@ -41,10 +54,29 @@ button {
 
 .btn-grey {
     background-color: $black;
+    font-family: $figtreeMedium;
+    border: 1px solid $black;
+    color: white;
+    box-shadow: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 10px;
+    @include responsive-font(1em, 1em, 1.4em);
     &:hover,
     &:focus {
         background-color: $grey8;
         border-color: $blackdark;
+        svg {
+            fill: white;
+        }
+    }
+    svg {
+        width: 10px;
+        height: 10px;
+        @include respond-to(xxl) {
+            width: 16px;
+            height: 16px;
+        }
     }
 }
 
@@ -52,31 +84,33 @@ button {
     background-color: #fff;
     color: $black;
     border: 1px solid $black;
+    font-family: $figtreeMedium;
+    box-shadow: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 10px;
+    @include responsive-font(1em, 1em, 1.4em);
     &:hover,
     &:focus {
         background-color: $black;
         color: #fff;
+        svg {
+            path {
+                stroke: white;
+            }
+        }
     }
-}
-
-.btn-rounded {
-    border-radius: 30px;
-    @include respond-to(xxl) {
-        border-radius: 50px;
+    svg {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 2px;
+        margin-right: 7px;
+        @include respond-to(xxl) {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+        }
     }
-}
-
-.btn-sm {
-    padding: 5px 15px;
-    font-size: 12px;
-    @include respond-to(xxl) {
-        padding: 8px 20px;
-        font-size: 100%;
-    }
-}
-
-.btn-lg {
-    padding: 10px 40px;
 }
 
 // .btn-rounded {
@@ -91,6 +125,13 @@ button {
 // }
 .btn-green {
     background-color: $green;
+    color: white;
+    font-family: $figtreeMedium;
+    border: 1px solid $green;
+    box-shadow: none;
+    outline: none;
+    border-radius: 10px;
+    @include responsive-font(1em, 1em, 1.4em);
     &:hover,
     &:focus {
         background-color: $greendark;
@@ -120,5 +161,40 @@ button {
     &:focus {
         background-color: #f2f2f2;
         color: #444;
+    }
+}
+
+.btn-rounded {
+    border-radius: 30px;
+    @include respond-to(xxl) {
+        border-radius: 50px;
+    }
+}
+
+.btn-sm {
+    padding: 5px 15px;
+    font-size: 12px;
+    @include respond-to(xxl) {
+        padding: 8px 20px;
+    }
+}
+
+.btn-lg {
+    padding: 14px 20px;
+    @include respond-to(xxl) {
+        padding: 20px 32px;
+    }
+}
+
+.select-button {
+    border: 1px solid #D4DEE5;
+    background-color: #F1F1F5;
+    color: $black;
+    font-family: $figtree;
+    padding: 14px 25px;
+    border-radius: 12px;
+    @include responsive-font(1em, 1em, 1.4em);
+    @include respond-to(xxl) {
+        padding: 16px 40px;
     }
 }

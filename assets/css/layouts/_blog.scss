@@ -12,7 +12,7 @@
         }
         .blog-category {
             font-size: 12px;
-            font-weight: 400;
+            font-family: $figtree;
             margin-bottom: 7px;
             text-transform: uppercase;
             @include respond-to(lg) {
@@ -21,7 +21,7 @@
         }
         .blog-title {
             font-size: 16px;
-            font-weight: 700;
+            font-family: $figtreeBold;
             line-height: 150%;
             @include respond-to(lg) {
                 font-size: 18px;

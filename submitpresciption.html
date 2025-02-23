@@ -38,22 +38,27 @@
                     <div class="step-navigation mb-4">
                         <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between">
                             <h4 class="section-heading">Step 1</h4>
-                            <ul class="steps list-inline d-flex align-items-center">
-                                <li class="list-inline-item step complete">
-                                    <span class="step-circle">1</span> Upload Your Attachments
+                            <ul class="steps">
+                                <li class="step active">
+                                    <span class="step-circle">1</span>
+                                    <span class="step-text">Upload Your Attachments</span>
+
                                 </li>
-                                <li class="list-inline-item step active">
-                                    <span class="step-circle">2</span> Set Your Recipient
+                                <li class="step">
+                                    <span class="step-circle">2</span>
+                                    <span class="step-text">Set Your Recipient</span>
                                 </li>
-                                <li class="list-inline-item step">
-                                    <span class="step-circle">3</span> Payment
+                                <li class="step">
+                                    <span class="step-circle">3</span>
+                                    <span class="step-text">Payment</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="prescription-wrap">
                         <!-- Right notice box -->
-                        <div class="info-box">
+                        <div class="prescribe-info-box">
                             <div class="info-icon">
 
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,23 +71,21 @@
                                     </clipPath>
                                     </defs>
                                 </svg>
-
+                                <h4>Important Information</h4>
                             </div>
                             <div class="info-content">
-                                <h4>Important Information</h4>
+
                                 <ol>
                                     <li>Please make sure you have included all the pages of the prescription, as well as the Claim Form.</li>
                                     <li>For Cigna Insurance users, please attach a copy of your Card and National ID or Allen ID or Passport Copy.</li>
                                 </ol>
                             </div>
                         </div>
-
                         <!-- Title Section -->
-                        <div class="prescription-heading">
-                            <h3 class="form-title">Upload Your Prescription</h3>
-                            <p class="form-subtitle">Your prescription is required for us to verify and proceed to the next step.</p>
+                        <div class="forms-heading">
+                            <h3>Upload Your Prescription</h3>
+                            <p>Your prescription is required for us to verify and proceed to the next step.</p>
                         </div>
-
                         <!-- Upload Section -->
                         <div class="upload-section">
                             <div class="upload-box">
@@ -134,8 +137,6 @@
                             </svg>
                             <span>Please upload at least one prescription file to continue.</span>
                         </div>
-
-
                         <!-- Uploaded File Section -->
                         <div class="uploaded-file-section">
                             <div class="file-item">
@@ -154,11 +155,10 @@
                             </button>
                             </div>
                         </div>
-
                         <!-- Payment Section -->
-                        <div class="payment-section">
-                            <h5 class="payment-heading">Payment Method</h5>
-                            <div class="radio-wrap">
+                        <div class="d-flex flex-column">
+                            <h3 class="form-title border-t">Are You a CIGNA Insurance User?</h3>
+                            <div class="d-flex flex-row justify-content-start">
                                 <div class="radio-item">
                                     <input type="radio" name="paymentMethod" id="selfPaymentRadio" checked>
                                     <label for="selfPayment">Self Pay</label>
@@ -170,19 +170,29 @@
                             </div>
 
                         </div>
-
-
-
-
                         <!-- selfPayment Section -->
                         <div id="selfPayment">
-                            hi
+                            Self Payment Content goes here
                         </div>
 
                         <!-- insurance Section -->
                         <div id="insurancePayment" style="display: none;">
-                            <h3 class="form-title">Are You a CIGNA Insurance User?</h3>
-                            <div class="radio-wrap">
+                            <!-- Title Section -->
+                            <div class="forms-heading mt-3 mt-lg-4">
+                                <h3>Upload your Claim Form</h3>
+                            </div>
+                            <!-- Upload Section -->
+                            <div class="upload-section">
+                                <div class="upload-box">
+                                    <div class="icon">
+                                        <img src="assets/images/icons/file-upload.png" class="file-upload-icon">
+                                    </div>
+                                    <p>Drag and drop your image or choose a PDF from your device to get started!</p>
+
+                                </div>
+                            </div>
+                            <h3 class="form-title border-t">Are You a CIGNA Insurance User?</h3>
+                            <div class="d-flex flex-row justify-content-start">
                                 <div class="radio-item">
                                     <input type="radio" name="" id="" checked>
                                     <label for="">Yes</label>
@@ -192,7 +202,7 @@
                                     <label for="">No</label>
                                 </div>
                             </div>
-                            <h3 class="form-title">Upload Your National ID or Passport</h3>
+                            <h3 class="form-title mt-4 mt-lg-5">Upload Your National ID or Passport</h3>
                             <div class="upload-section">
                                 <div class="upload-box">
                                     <div class="icon">
@@ -220,9 +230,9 @@
                         </div>
 
                         <!-- Actions Section -->
-                        <div class="actions-section">
-                            <button class="btn-white-border btn-rounded me-2">Talk to a doctor</button>
-                            <button class="btn-green btn-rounded" onclick="window.location.href='/submitpresciption2.html';">Continue</button>
+                        <div class="d-flex align-items-center justify-content-end mt-3 mt-lg-4 mt-xl-5">
+                            <button class="btn-white-border btn-rounded btn-lg me-2">Talk to a doctor</button>
+                            <button class="btn-green btn-rounded btn-lg" onclick="window.location.href='/submitpresciption2.html';">Continue</button>
                         </div>
 
                     </div>

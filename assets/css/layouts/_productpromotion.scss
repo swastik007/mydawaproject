@@ -49,14 +49,14 @@
         z-index: 2;
         .heading {
             font-size: 20px;
-            font-weight: 400;
+            font-family: $figtree;
             @include respond-to(lg) {
                 font-size: 24px;
             }
         }
         .promo-text {
             font-size: 28px;
-            font-weight: 800;
+            font-family: $figtreeExtraBold;
             @include respond-to(lg) {
                 font-size: 32px;
             }

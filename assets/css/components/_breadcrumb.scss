@@ -9,6 +9,7 @@
     }
     @include respond-to(xxl) {
         margin-top: 36px;
+        margin-bottom: 50px;
     }
     .breadcrumb {
         display: flex;
@@ -21,23 +22,24 @@
             a {
                 text-decoration: none;
                 color: $black;
-                font-size: 14px;
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 transition: color 0.3s ease;
-                @include respond-to(xxl) {
-                    font-size: 18px;
-                }
+                @include responsive-font(0.875em, 0.875em, 1.2em);
                 &:hover {
                     color: $primary;
                 }
                 &.active {
-                    font-weight: 700;
+                    font-family: $figtreeBold;
+                    @include responsive-font(0.875em, 0.875em, 1.2em);
                     color: $black;
                 }
             }
             .divider {
-                margin: 0 8px;
+                margin: 0 10px;
                 color: $black;
+                @include respond-to(xxl) {
+                    margin: 0 18px;
+                }
             }
         }
     }
