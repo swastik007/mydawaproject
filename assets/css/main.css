@@ -12014,6 +12014,15 @@ body {
   }
 }
 
+.btn-rounded {
+  border-radius: 30px;
+}
+@media (min-width: 1800px) {
+  .btn-rounded {
+    border-radius: 50px;
+  }
+}
+
 .btn-green {
   background-color: rgb(111, 183, 76);
   color: white;
@@ -12078,6 +12087,7 @@ body {
 @media (min-width: 1800px) {
   .btn-sm, .btn-group-sm > .btn {
     padding: 8px 20px;
+    font-size: 100%;
   }
 }
 
@@ -13855,6 +13865,120 @@ ol.form-list {
     width: 40px;
     margin-left: 30px;
   }
+}
+
+.date-time {
+  border: 1px solid #d4dee5;
+  border-radius: 12px;
+  display: flex;
+}
+.date-time__box {
+  padding: 32px;
+}
+.date-time__box:first-child {
+  border-right: 1px solid #d4dee5;
+}
+.date-time__box:last-child {
+  flex-grow: 1;
+}
+.date-time__title {
+  font-family: "Figtree-SemiBold";
+  font-size: 20px;
+  color: #434343;
+  margin-bottom: 36px;
+}
+
+.time-box {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+.time-box__wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.time-box__wrap h4, .time-box__wrap .h4 {
+  font-family: "Figtree-SemiBold";
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #737171;
+  margin: 0;
+}
+.time-box__wrap span {
+  font-family: "Figtree-SemiBold";
+  font-size: 15px;
+  color: #373434;
+}
+
+.times {
+  width: 238px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.times__link {
+  flex-basis: 0 0 calc(50% - 20px);
+  font-family: "Figtree-Medium";
+  border: 1px solid #d4dee5;
+  color: #373434;
+  line-height: 1;
+  padding: 6px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.times__link.selected {
+  color: #fff;
+  background-color: #6fb74c;
+  border-color: #6fb74c;
+}
+.times__link.disabled {
+  background-color: #f5f5f5;
+  text-decoration: line-through;
+}
+
+.time-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #373434;
+  padding: 12px 16px;
+  line-height: 1;
+  background-color: #f6f6f8;
+  border-radius: 12px;
+}
+
+.datepicker {
+  width: 100% !important;
+}
+.datepicker span {
+  font-size: 14px;
+}
+.datepicker .datepicker-picker .button {
+  background-color: transparent;
+  color: #373434;
+}
+.datepicker .datepicker-picker .days .dow {
+  font-size: 14px;
+  color: #737a86;
+}
+.datepicker .datepicker-picker span {
+  border-radius: 50%;
+  height: 46px;
+}
+.datepicker .datepicker-picker .button {
+  font-size: 15px;
+}
+.datepicker .datepicker-view {
+  width: 100%;
+}
+.datepicker .datepicker-cell.selected,
+.datepicker .datepicker-cell.selected:hover {
+  background-color: #6fb74c;
 }
 
 .site-header {
@@ -19189,6 +19313,14 @@ header {
   background-color: transparent;
   border-color: rgb(111, 183, 76);
   color: rgb(111, 183, 76);
+}
+
+.overview-tab .nav-underline {
+  border-bottom: 1px solid #f8f8f8;
+}
+.overview-tab .nav-link {
+  font-size: 15px;
+  color: #868686;
 }
 
 .faq-page {

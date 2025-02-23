@@ -1,0 +1,118 @@
+.date-time {
+  border: 1px solid #d4dee5;
+  border-radius: 12px;
+  display: flex;
+  &__box {
+    padding: 32px;
+    &:first-child {
+      border-right: 1px solid #d4dee5;
+    }
+    &:last-child {
+      flex-grow: 1;
+    }
+  }
+  &__title {
+    font-family: $figtreeSemiBold;
+    font-size: 20px;
+    color: #434343;
+    margin-bottom: 36px;
+  }
+}
+.time-box {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-bottom: 36px;
+  &__wrap {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    h4 {
+      font-family: $figtreeSemiBold;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #737171;
+      margin: 0;
+    }
+    span {
+      font-family: $figtreeSemiBold;
+      font-size: 15px;
+      color: #373434;
+    }
+  }
+}
+.times {
+  width: 238px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  &__link {
+    flex-basis: 0 0 calc(50% - 20px);
+    font-family: $figtreeMedium;
+    border: 1px solid #d4dee5;
+    color: #373434;
+    line-height: 1;
+    padding: 6px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    &.selected {
+      color: #fff;
+      background-color: #6fb74c;
+      border-color: #6fb74c;
+    }
+    &.disabled {
+      background-color: #f5f5f5;
+      text-decoration: line-through;
+    }
+  }
+}
+.time-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #373434;
+  padding: 12px 16px;
+  line-height: 1;
+  background-color: #f6f6f8;
+  border-radius: 12px;
+}
+
+// Datepicker Customize
+.datepicker {
+  width: 100% !important;
+  span {
+    font-size: 14px;
+  }
+  .datepicker-picker {
+    .button {
+      background-color: transparent;
+      color: #373434;
+    }
+    .days {
+      .dow {
+        font-size: 14px;
+        color: #737a86;
+      }
+    }
+    span {
+      border-radius: 50%;
+      height: 46px;
+    }
+  }
+  .datepicker-picker .button {
+    font-size: 15px;
+  }
+  .datepicker-view {
+    width: 100%;
+  }
+  .datepicker-cell.day {
+    // background-color: #f9f9fd;
+  }
+  .datepicker-cell.selected,
+  .datepicker-cell.selected:hover {
+    background-color: #6fb74c;
+  }
+}
