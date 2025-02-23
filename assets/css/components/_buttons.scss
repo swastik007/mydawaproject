@@ -164,6 +164,24 @@
     }
 }
 
+.btn-cart {
+    font-family: $outfit;
+    background-color: $green;
+    font-size: 15px;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 15px;
+    height: fit-content;
+    @include respond-to(lg) {
+        font-size: 20px;
+    }
+    @include respond-to(xxl) {
+        font-size: 24px;
+        padding: 14px 20px;
+        border-radius: 32px;
+    }
+}
+
 .select-button {
     border: 1px solid #D4DEE5;
     background-color: #F1F1F5;

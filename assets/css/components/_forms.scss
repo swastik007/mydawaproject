@@ -410,6 +410,10 @@ input.long-field {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    flex-direction: column;
+    @include respond-to(sm) {
+        flex-direction: row;
+    }
     @include respond-to(xxl) {
         margin-bottom: 32px;
     }

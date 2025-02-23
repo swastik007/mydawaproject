@@ -23,7 +23,7 @@
         top: 0;
         left: 20px;
         font-size: 14px;
-        font-weight: 600;
+        font-family: $figtreeSemiBold;
         line-height: 20px;
         padding: 3px 8px;
         border-radius: 0 0 7px 7px;
@@ -149,7 +149,7 @@
     }
     .product-category {
         color: #8A8A8A;
-        font-weight: light;
+        font-family: $figtreeLight;
         font-size: 14px;
         text-align: left;
         margin-bottom: 2px;
@@ -165,11 +165,11 @@
         color: $black;
         text-align: left;
         max-width: 220px;
-        font-weight: 700;
+        font-family: $figtreeBold;
         font-size: 15px;
         line-height: 1.6;
         @include respond-to(lg) {
-            font-weight: 800;
+            font-family: $figtreeExtraBold;
             font-size: 18px;
         }
         @include respond-to(xxl) {
@@ -180,7 +180,7 @@
         color: #b2b2b2;
         text-decoration: line-through;
         font-size: 15px;
-        font-weight: 500;
+        font-family: $figtreeMedium;
         margin-bottom: 0;
         @include respond-to(xxl) {
             font-size: 24px;
@@ -189,27 +189,10 @@
     .product-price {
         font-size: 16px;
         color: $black;
-        font-weight: 500;
+        font-family: $figtreeMedium;
         margin-bottom: 0;
         @include respond-to(xxl) {
             font-size: 24px;
-        }
-    }
-    .btn-cart {
-        font-family: "Outfit", serif;
-        background-color: $green;
-        font-size: 15px;
-        border-radius: 25px;
-        color: white;
-        padding: 10px 15px;
-        height: fit-content;
-        @include respond-to(lg) {
-            font-size: 20px;
-        }
-        @include respond-to(xxl) {
-            font-size: 24px;
-            padding: 14px 20px;
-            border-radius: 32px;
         }
     }
 }
