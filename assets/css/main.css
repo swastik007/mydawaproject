@@ -14609,7 +14609,7 @@ ol.form-list {
 }
 .delivery-wrap .delivery-dropdown .dropdown-header h4, .delivery-wrap .delivery-dropdown .dropdown-header .h4 {
   font-size: 16px;
-  font-weight: bold;
+  font-family: "Figtree-Bold";
   line-height: 24px;
 }
 .delivery-wrap .delivery-dropdown .dropdown-header p {
@@ -14665,7 +14665,7 @@ ol.form-list {
 }
 .delivery-wrap .delivery-dropdown .address-list .radio-container .name {
   font-size: 14px;
-  font-weight: bold;
+  font-family: "Figtree-Bold";
 }
 .delivery-wrap .delivery-dropdown .address-list .radio-container .address {
   font-size: 14px;
@@ -15082,12 +15082,12 @@ header {
 .footer-main .sub-footer-top .qr-content h5, .footer-main .sub-footer-top .qr-content .h5 {
   font-size: 18px;
   color: #373434;
-  font-weight: 500;
+  font-family: "Figtree-Medium";
   line-height: 150%;
 }
 @media (min-width: 992px) {
   .footer-main .sub-footer-top .qr-content h5, .footer-main .sub-footer-top .qr-content .h5 {
-    font-weight: 800;
+    font-family: "Figtree-ExtraBold";
   }
 }
 @media (min-width: 1800px) {
@@ -15157,11 +15157,11 @@ header {
   font-size: 1.1em;
   color: rgb(55, 52, 52);
   line-height: 150%;
-  font-weight: 500;
+  font-family: "Figtree-Medium";
 }
 @media (min-width: 992px) {
   .footer-main .sub-footer-top .subscribe-section h5, .footer-main .sub-footer-top .subscribe-section .h5 {
-    font-weight: 800;
+    font-family: "Figtree-ExtraBold";
   }
 }
 @media (min-width: 1800px) {
@@ -15218,7 +15218,7 @@ header {
 .footer-main .sub-footer .authorized-box h6, .footer-main .sub-footer .authorized-box .h6 {
   font-size: 18px;
   color: #373434;
-  font-weight: 700;
+  font-family: "Figtree-Bold";
   margin-bottom: 8px;
 }
 @media (min-width: 1800px) {
@@ -15260,7 +15260,7 @@ header {
 .footer-main .sub-footer .footer-links h6, .footer-main .sub-footer .footer-links .h6 {
   font-size: 12px;
   color: #969294;
-  font-weight: 500;
+  font-family: "Figtree-Medium";
   margin-bottom: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -15281,7 +15281,7 @@ header {
   display: block;
   font-size: 14px;
   color: #373434;
-  font-weight: 500;
+  font-family: "Figtree-Medium";
   margin-bottom: 8px;
   text-decoration: none;
 }
@@ -16374,7 +16374,7 @@ header {
 }
 .feature-section .feature-item h5, .feature-section .feature-item .h5 {
   font-size: 1.075em;
-  font-weight: bold;
+  font-family: "Figtree-Bold";
   color: rgb(55, 52, 52);
 }
 @media (min-width: 1200px) {
@@ -16391,7 +16391,7 @@ header {
   font-size: 18px;
   color: #787878;
   line-height: 150%;
-  font-weight: 400;
+  font-family: "Figtree";
   max-width: 300px;
 }
 @media (min-width: 1200px) {
@@ -18248,7 +18248,7 @@ header {
 }
 @media (min-width: 1800px) {
   .prescription-wrap {
-    max-width: 990px;
+    max-width: 950px;
     margin: 80px auto;
   }
 }
@@ -18395,14 +18395,14 @@ header {
 @media (min-width: 1200px) {
   .prescribe-info-box {
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: 70px;
     max-width: 252px;
   }
 }
 @media (min-width: 1800px) {
   .prescribe-info-box {
-    right: 70px;
+    right: 30px;
     top: 160px;
     max-width: 400px;
     padding: 24px;

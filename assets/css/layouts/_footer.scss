@@ -55,10 +55,10 @@
             h5 {
                 font-size: 18px;
                 color: rgba($black, 1);
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 line-height: 150%;
                 @include respond-to(md) {
-                    font-weight: 800;
+                    font-family: $figtreeExtraBold;
                 }
                 @include respond-to(xxl) {
                     font-size: 24px;
@@ -116,9 +116,9 @@
                 font-size: 1.1em;
                 color: $black;
                 line-height: 150%;
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 @include respond-to(md) {
-                    font-weight: 800;
+                    font-family: $figtreeExtraBold;
                 }
                 @include respond-to(xxl) {
                     font-size: 1.375em;
@@ -169,7 +169,7 @@
             h6 {
                 font-size: 18px;
                 color: rgba($black, 1);
-                font-weight: 700;
+                font-family: $figtreeBold;
                 margin-bottom: 8px;
                 @include respond-to(xxl) {
                     font-size: 24px;
@@ -203,7 +203,7 @@
             h6 {
                 font-size: 12px;
                 color: #969294;
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 margin-bottom: 20px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
@@ -220,7 +220,7 @@
                 display: block;
                 font-size: 14px;
                 color: rgba($black, 1);
-                font-weight: 500;
+                font-family: $figtreeMedium;
                 margin-bottom: 8px;
                 text-decoration: none;
                 @include respond-to(xxl) {

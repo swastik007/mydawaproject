@@ -40,16 +40,16 @@
                             <h4 class="section-heading">Step 1</h4>
                             <ul class="steps">
                                 <li class="step active">
-                                    <span class="step-circle">1</span>
+                                    <span class="step-circle complete">1</span>
                                     <span class="step-text">Select A Service</span>
 
                                 </li>
                                 <li class="step">
-                                    <span class="step-circle">2</span>
+                                    <span class="step-circle complete">2</span>
                                     <span class="step-text">Consent Form</span>
                                 </li>
                                 <li class="step">
-                                    <span class="step-circle">3</span>
+                                    <span class="step-circle active">3</span>
                                     <span class="step-text">pick up a time & date</span>
                                 </li>
                                 <li class="step">
@@ -62,40 +62,50 @@
 
                     <div class="prescription-wrap">
                         <div class="forms-heading">
-                            <h2 class="mb-3 mb-lg-4">Request an online consultation</h2>
-                            <h3>What would you like to discuss during your online consultation?</h3>
-                            <p>Your prescription is required for us to verify and proceed to the next step.</p>
+                            <h3>Select Consultation date and Time.</h3>
+                            <p>By selecting your convenient date and time, book your consultation.
+                            </p>
                         </div>
 
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="consultation" value="general-health">
-                                <span class="radio"></span>
-                                <div class="content">
-                                    <h3>General Health</h3>
-                                    <p>Discuss overall wellness, preventive care, or manage common health concerns like cold, flu, allergies, or chronic conditions.</p>
+                        <div class="date-time">
+                            <div class="date-time__box">
+                                <h2 class="date-time__title">Select Time</h2>
+                                <div class="time-box">
+                                    <div class="time-box__wrap">
+                                        <h4>
+                                            <img src="./assets/images/icons/time1.svg" /> Duration:
+                                        </h4>
+                                        <span>30 Min</span>
+                                    </div>
+                                    <div class="time-box__wrap">
+                                        <h4>
+                                            <img src="./assets/images/icons/call1.svg" /> Medium:
+                                        </h4>
+                                        <span>Phone Call</span>
+                                    </div>
                                 </div>
-                            </label>
-
-                            <label class="option">
-                                <input type="radio" name="consultation" value="prep-pep">
-                                <span class="radio"></span>
-                                <div class="content">
-                                    <h3>PrEP/PEP</h3>
-                                    <p>Get guidance on HIV prevention, including Pre-Exposure Prophylaxis (PrEP) or Post-Exposure Prophylaxis (PEP) treatments.</p>
+                                <div class="times">
+                                    <a href="#" class="times__link">11:00 AM</a>
+                                    <a href="#" class="times__link selected">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link disabled">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
                                 </div>
-                            </label>
-
-                            <label class="option">
-                                <input type="radio" name="consultation" value="mzima-package">
-                                <span class="radio"></span>
-                                <div class="content">
-                                    <h3>Mzima Package</h3>
-                                    <p>Explore personalized health plans, including screenings, consultations, and wellness programs tailored to your needs.</p>
-                                </div>
-                            </label>
-                        </div>
-
+                            </div>
+                            <div class="date-time__box">
+                                <h2 class="date-time__title">Select Date</h2>
+                                <div id="foo" data-date="01/25/2020"></div>
+                                <span class="time-note">
+                                <img src="./assets/images/icons/info.svg" /> Central
+                                European Time (08:11 PM)</span
+                              >
+                            </div>
+                          </div>
 
                         <!-- Actions Section -->
                         <div class="d-flex align-items-center justify-content-end mt-3 mt-lg-4 mt-xl-5">
