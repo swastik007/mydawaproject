@@ -139,50 +139,6 @@
       const datepicker = new Datepicker(elem, {
         // ...options
       });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const mainCategories = document.querySelectorAll(
-          "#main-categories .menu-category"
-        );
-        const subcategoriesColumn = document.getElementById("subcategories");
-        const productsColumn = document.getElementById("products");
-        const subcategoryItems = document.querySelectorAll(
-          "#subcategories .subcategory"
-        );
-
-        // Function to remove active class from all items
-        function removeActiveClass(elements) {
-          elements.forEach((el) => el.classList.remove("active"));
-        }
-
-        // Handle main category hover
-        mainCategories.forEach((category) => {
-          category.addEventListener("mouseenter", function () {
-            removeActiveClass(mainCategories);
-            this.classList.add("active");
-            subcategoriesColumn.style.display = "block";
-            productsColumn.style.display = "none";
-          });
-        });
-
-        // Handle subcategory hover
-        subcategoryItems.forEach((item) => {
-          item.addEventListener("mouseenter", function () {
-            removeActiveClass(subcategoryItems);
-            this.classList.add("active");
-            productsColumn.style.display = "block";
-          });
-        });
-
-        // Handle mouse leave from mega menu
-        const megaMenu = document.querySelector(".mega-menu");
-        megaMenu.addEventListener("mouseleave", function () {
-          subcategoriesColumn.style.display = "none";
-          productsColumn.style.display = "none";
-          removeActiveClass(mainCategories);
-          removeActiveClass(subcategoryItems);
-        });
-      });
     </script>
   </body>
 </html>
