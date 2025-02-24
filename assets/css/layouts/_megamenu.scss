@@ -1,0 +1,119 @@
+.category-dropdown.active .category-menu,
+.category-dropdown:hover .category-menu {
+  display: block;
+}
+// .has-submenu.active .submenu,
+// .has-submenu:hover .submenu {
+//   display: block;
+// }
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  a {
+    justify-content: start !important;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+  }
+}
+.card-img-top {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 7px;
+  margin-right: 7px;
+}
+.text-info {
+  p {
+    margin-bottom: 0;
+    color: $black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    color: #909090;
+  }
+}
+
+.category-menu {
+  //   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 870px;
+  min-height: 400px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+  .has-submenu {
+    &:hover {
+      .submenu {
+        display: block;
+      }
+    }
+    &:first-child {
+      .submenu {
+        display: block;
+        .has-sub-submenu:first-child {
+          .sub-submenu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    padding-left: 0 !important;
+    li {
+      padding-left: 0 !important;
+      a {
+        padding: 5px 0;
+        border-radius: 10px;
+        &:hover {
+          background-color: $grey2;
+        }
+        @include respond-to(xxl) {
+          padding: 7px 0;
+        }
+      }
+    }
+  }
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 280px;
+  padding: 10px 0;
+  border-left: 1px solid #f3f3fa;
+  .has-sub-submenu:hover {
+    .sub-submenu {
+      display: block;
+    }
+  }
+}
+
+.sub-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 280px;
+  padding: 10px 0;
+  border-left: 1px solid #f3f3fa;
+}
+
+.list-column {
+  //   background-color: red;
+  width: 280px;
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
