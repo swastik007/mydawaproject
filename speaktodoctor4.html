@@ -120,18 +120,24 @@
 
                         <!-- Dependent Section -->
                         <div id="dependentSection" style="display: none;">
-                            <div class="input-row">
-                                <div class="input-group">
-                                    <label for="existing-dependent">Previously Created Dependent <span class="required">*</span></label>
-                                    <select id="existing-dependent">
-                                        <option value="">Select</option>
-                                        <option value="dependent1">Dependent 1</option>
-                                        <option value="dependent2">Dependent 2</option>
-                                    </select>
+
+
+                            <div class="d-flex flex-column">
+                                <label for="existing-dependent">Previously Created Dependent <span class="required">*</span></label>
+                                <div class="custom-dropdown-select">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Select a Dependent
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#" data-value="clara">Clara Thompson</a></li>
+                                        <li><a class="dropdown-item selected" href="#" data-value="michael">Michael Anderson</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="john">John Smith</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="susan">Susan Johnson</a></li>
+                                        <li><a class="dropdown-item create-new" href="#">+ Create New Dependent</a></li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <p class="create-new-dependent">+ Create New Dependent</p>
+                            <p class="create-new-link">+ Create New Dependent</p>
 
                             <div class="input-row">
                                 <div class="input-group">
@@ -159,19 +165,24 @@
                             <div class="input-row">
                                 <div class="input-group">
                                     <label for="dependent-dob">Date of Birth <span class="required">*</span></label>
-                                    <input type="text" id="dependent-dob" placeholder="mm/dd/yyyy">
+                                    <input type="date" id="dependent-dob" placeholder="mm/dd/yyyy">
                                     <span class="calendar-icon">
                                         <img src="assets/images/icons/calendar-icon.png" />
                                     </span>
                                 </div>
                                 <div class="input-group">
                                     <label for="dependent-gender">Gender <span class="required">*</span></label>
-                                    <select id="dependent-gender">
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">Other</option>
-                                        <option value="prefer-not-to-disclose">Prefer not to disclose</option>
-                                    </select>
+                                    <div class="custom-dropdown-select">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Gender
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li><a class="dropdown-item" href="#" data-value="male">Male</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="female">Female</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="other">Other</a></li>
+                                            <li><a class="dropdown-item" href="#" data-value="prefer-not-to-disclose">Prefer not to disclose</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
@@ -179,7 +190,68 @@
                                 <label class="textarea-label" for="dependent-notes">Additional Notes</label>
                                 <textarea id="dependent-notes" placeholder="Enter Any Other Details You Want Us To Know"></textarea>
                             </div>
+
+                            <div class="d-flex flex-column  mt-5 mt-lg-5 border-top pt-4 mb-3 mb-lg-4">
+                                <label for="existing-dependent">Previously Created Dependent <span class="required">*</span></label>
+                                <div class="custom-dropdown-select">
+                                    <button class="btn dropdown-toggle selected" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Michael Anderson
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#" data-value="clara">Clara Thompson</a></li>
+                                        <li><a class="dropdown-item selected" href="#" data-value="michael">Michael Anderson</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="john">John Smith</a></li>
+                                        <li><a class="dropdown-item" href="#" data-value="susan">Susan Johnson</a></li>
+                                        <li><a class="dropdown-item create-new" href="#">+ Create New Dependent</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="dependent-first-name">First Name <span class="required">*</span></label>
+                                    <input class="filled" type="text" id="dependent-first-name" placeholder="Michael">
+                                </div>
+                                <div class="input-group">
+                                    <label for="dependent-last-name">Last Name <span class="required">*</span></label>
+                                    <input class="filled" type="text" id="dependent-last-name" placeholder="Anderson">
+                                </div>
+                            </div>
+
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="dependent-dob">Date of Birth <span class="required">*</span></label>
+                                    <input class="filled" type="text" id="dependent-dob" placeholder="21 July 2022">
+                                    <span class="calendar-icon">
+                                        <img src="assets/images/icons/calendar-icon.png" />
+                                    </span>
+                                </div>
+
+                                <div class="input-group">
+
+                                    <div class="input-group">
+                                        <label for="dependent-gender">Gender <span class="required">*</span></label>
+                                        <div class="custom-dropdown-select">
+                                            <button class="btn dropdown-toggle filled" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Female
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="#" data-value="male">Male</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="female">Female</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="other">Other</a></li>
+                                                <li><a class="dropdown-item" href="#" data-value="prefer-not-to-disclose">Prefer not to disclose</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="textarea-wrap">
+                                <label class="textarea-label" for="dependent-notes">Additional Notes</label>
+                                <textarea class="filled" id="dependent-notes" placeholder="This is short info about the dependent person added in this case Micheal Anderson."></textarea>
+                            </div>
                         </div>
+
 
                         <!-- Actions Section -->
                         <div class="d-flex align-items-center justify-content-end mt-3 mt-lg-4 mt-xl-5">

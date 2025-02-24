@@ -333,28 +333,20 @@
                 }
             }
             h2 {
-                font-size: 28px;
-                font-weight: 900;
+                font-family: $figtreeBlack;
                 color: $black;
                 margin: 0;
+                @include responsive-font(1.5em, 1.1em, 1.5em);
                 @include respond-to(lg) {
-                    font-size: 18px;
-                    font-weight: 400;
-                }
-                @include respond-to(xxl) {
-                    font-size: 28px;
+                    font-family: $figtree;
                 }
             }
             h3 {
                 font-size: 28px;
                 font-weight: 900;
                 color: $black;
-                @include respond-to(lg) {
-                    font-size: 32px;
-                }
-                @include respond-to(xxl) {
-                    font-size: 48px;
-                }
+                font-family: $figtreeBlack;
+                @include responsive-font(1.1em, 1.8em, 3em);
             }
         }
         .find-actions {

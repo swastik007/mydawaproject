@@ -573,3 +573,14 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Payment selection elements not found. Skipping payment toggle.");
     }
 });
+
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const dropdownBtn = document.getElementById('dropdownMenuButton');
+        dropdownBtn.textContent = this.textContent;
+
+        if (this.classList.contains("create-new")) {
+            alert("Redirecting to create new dependent form...");
+        }
+    });
+});

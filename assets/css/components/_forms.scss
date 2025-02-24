@@ -392,9 +392,48 @@ textarea {
     }
     &:focus {
         border: 2px solid;
-        border-color: #516bf1;
+        border-color: $blue;
         // box-shadow: 0 0 5px rgba(230, 27, 119, 0.4);
     }
+    // **Disabled & Prefilled State**
+    &:disabled,
+    &.filled {
+        background-color: #F1F1F5 !important;
+        color: $black !important;
+        border-color: #D4DEE5;
+        cursor: not-allowed;
+    }
+    &.filled {
+        pointer-events: none;
+    }
+}
+
+
+/* Hide default calendar icon in Chrome, Safari, Edge, and Firefox */
+
+input[type="date"] {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    padding-right: 40px;
+    /* Ensure space for custom icon */
+}
+
+
+/* Remove additional styles on WebKit browsers */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+/* Remove additional styles on Firefox */
+
+input[type="date"]::-moz-calendar-picker-indicator {
+    display: none;
 }
 
 input.long-field {
@@ -421,20 +460,6 @@ input.long-field {
         flex: 1;
         display: flex;
         flex-direction: column;
-        label {
-            font-family: $figtreeLight;
-            color: $black;
-            margin-bottom: 5px;
-            @include responsive-font(1em, 1em, 1.4em);
-            .required {
-                color: $primary;
-            }
-        }
-        select {
-            appearance: none;
-            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23000' d='M0 0h10L5 6z'/%3E%3C/svg%3E") no-repeat right 10px center;
-            background-size: 10px 6px;
-        }
         .calendar-icon {
             position: absolute;
             right: 10px;
@@ -446,6 +471,22 @@ input.long-field {
             img {}
         }
     }
+}
+
+label {
+    font-family: $figtreeLight;
+    color: $black;
+    margin-bottom: 5px;
+    @include responsive-font(1em, 1em, 1.4em);
+    .required {
+        color: $primary;
+    }
+}
+
+select {
+    appearance: none;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23000' d='M0 0h10L5 6z'/%3E%3C/svg%3E") no-repeat right 10px center;
+    background-size: 10px 6px;
 }
 
 .textarea-wrap {
@@ -739,5 +780,89 @@ ol.form-list {
     }
     input[type="radio"]:checked {
         border-color: $blue;
+    }
+}
+
+.custom-dropdown-select {
+    position: relative;
+    .dropdown-toggle {
+        border: 2px solid #D4DEE5;
+        background: #fff;
+        color: $black;
+        width: 100%;
+        text-align: left;
+        padding: 10px 18px;
+        border-radius: 5px;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="blue"><path fill-rule="evenodd" d="M5.293 7.707a1 1 0 011.414 0L10 11.086l3.293-3.379a1 1 0 111.414 1.414l-4 4.121a1 1 0 01-1.414 0l-4-4.121a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>');
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 16px;
+        @include responsive-font(1em,
+        1em,
+        1.4em);
+        &.selected {
+            background-color: #F1F1F5;
+            border: 2px solid $blue;
+        }
+        &.filled {
+            background-color: #F1F1F5;
+        }
+        @include respond-to(xxl) {
+            padding: 16px 22px;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    .dropdown-menu {
+        width: 100%;
+        li {
+            padding: 0;
+        }
+    }
+    .dropdown-item {
+        padding: 7px 15px;
+        @include responsive-font(1em,
+        1em,
+        1.4em);
+        @include respond-to(xxl) {
+            padding: 12px 24px;
+        }
+    }
+    .dropdown-item:hover {
+        background: #F8F8FC;
+    }
+    .dropdown-item.selected {
+        background: #F8F8FC;
+        font-family: $figtree;
+    }
+    .dropdown-item.create-new {
+        color: $primary;
+        text-align: right;
+        font-family: $figtreeMedium;
+        border-top: 1px solid #ddd;
+        @include responsive-font(1em,
+        1em,
+        1.4em);
+        margin-right: 0;
+        margin-left: auto;
+    }
+    .dropdown-item.create-new:hover {
+        background: #F8F8FC;
+    }
+}
+
+.create-new-link {
+    color: $primary;
+    font-family: $figtreeMedium;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    @include responsive-font(1em,
+    1em,
+    1.4em);
+    @include respond-to(xxl) {
+        margin-top: 16px;
+        margin-bottom: 20px;
     }
 }
