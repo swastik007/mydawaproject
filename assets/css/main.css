@@ -12153,7 +12153,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 30px 20px;
   box-shadow: 0px 16px 12px rgba(0, 0, 0, 0.035);
   border-radius: 8px;
   z-index: 1000;
@@ -12165,28 +12164,25 @@ body {
     width: fit-content;
   }
 }
-@media (min-width: 1800px) {
-  .dawa-modal {
-    padding: 50px 35px;
-  }
-}
 .dawa-modal.modal-sm .modal-content {
-  max-width: 452px;
+  max-width: 600px;
+  padding: 50px 35px;
 }
 @media (min-width: 1800px) {
   .dawa-modal.modal-sm .modal-content {
-    max-width: 680px;
+    max-width: 750px;
+    padding: 70px 50px;
   }
 }
 .dawa-modal .close-btn {
   position: absolute;
-  right: -20px;
-  top: -25px;
-  font-size: 1.4em;
+  right: 10px;
+  top: 0;
+  font-size: 2em;
 }
 @media (min-width: 1200px) {
   .dawa-modal .close-btn {
-    font-size: 1.4em;
+    font-size: 2em;
   }
 }
 @media (min-width: 1800px) {
@@ -12196,8 +12192,8 @@ body {
 }
 @media (min-width: 1800px) {
   .dawa-modal .close-btn {
-    top: -35px;
-    right: -10px;
+    top: 30x;
+    right: 30px;
   }
 }
 .dawa-modal .close-btn:hover, .dawa-modal .close-btn:focus {
@@ -12215,16 +12211,16 @@ body {
 }
 .dawa-modal h2, .dawa-modal .h2 {
   font-family: "Figtree-Bold";
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 @media (min-width: 1200px) {
   .dawa-modal h2, .dawa-modal .h2 {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 @media (min-width: 1800px) {
   .dawa-modal h2, .dawa-modal .h2 {
-    font-size: 1.8em;
+    font-size: 2.3em;
   }
 }
 .dawa-modal p {
@@ -12238,6 +12234,70 @@ body {
 @media (min-width: 1800px) {
   .dawa-modal p {
     font-size: 1.2em;
+  }
+}
+.dawa-modal .date,
+.dawa-modal .time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dawa-modal .date img,
+.dawa-modal .time img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  object-fit: contain;
+}
+@media (min-width: 1800px) {
+  .dawa-modal .date img,
+  .dawa-modal .time img {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+  }
+}
+.dawa-modal .date span,
+.dawa-modal .time span {
+  font-size: 1em;
+  font-family: "Figtree-SemiBold";
+  margin-right: 7px;
+}
+@media (min-width: 1200px) {
+  .dawa-modal .date span,
+  .dawa-modal .time span {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1800px) {
+  .dawa-modal .date span,
+  .dawa-modal .time span {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1800px) {
+  .dawa-modal .date span,
+  .dawa-modal .time span {
+    margin-right: 10px;
+  }
+}
+.dawa-modal .date p,
+.dawa-modal .time p {
+  font-size: 1em;
+  color: rgb(230, 27, 119);
+  font-family: "Figtree-SemiBold";
+  margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .dawa-modal .date p,
+  .dawa-modal .time p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1800px) {
+  .dawa-modal .date p,
+  .dawa-modal .time p {
+    font-size: 1.5em;
   }
 }
 
@@ -13261,18 +13321,18 @@ textarea {
   align-items: center;
   cursor: pointer;
   width: 100%;
-  height: 80px;
+  height: 110px;
   padding: 14px;
 }
 @media (min-width: 992px) {
   .image-select-grid .image-option {
     padding: 18px;
-    height: 120px;
+    height: 140px;
   }
 }
 @media (min-width: 1200px) {
   .image-select-grid .image-option {
-    height: 140px;
+    height: 160px;
     padding: 25px;
   }
 }
@@ -13307,7 +13367,7 @@ textarea {
 .image-select-grid .image-option img {
   object-fit: contain;
   width: 100%;
-  height: auto;
+  height: 100%;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
@@ -13409,6 +13469,7 @@ ol.form-list {
   font-family: "Figtree";
   font-size: 0.875em;
   color: #8D8D92;
+  line-height: 1.5;
 }
 @media (min-width: 1200px) {
   .consent-box p {
@@ -13425,6 +13486,9 @@ ol.form-list {
   font-size: 0.875em;
   font-family: "Figtree-Medium";
   color: #8D8D92;
+  border-top: 1px solid #F8F8F8;
+  padding-top: 20px;
+  margin-top: 12px;
 }
 @media (min-width: 1200px) {
   .consent-box ol {
@@ -13436,12 +13500,20 @@ ol.form-list {
     font-size: 1.2em;
   }
 }
+@media (min-width: 1800px) {
+  .consent-box ol {
+    padding-left: 20px;
+    padding-top: 25px;
+    margin-top: 20px;
+  }
+}
 .consent-box ol li {
-  margin-bottom: 7px;
+  margin-bottom: 14px;
+  line-height: 1.2;
 }
 @media (min-width: 1800px) {
   .consent-box ol li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -14002,6 +14074,7 @@ ol.form-list {
   white-space: nowrap;
   font-family: "Figtree-Medium";
   font-size: 1em;
+  text-transform: capitalize;
 }
 @media (min-width: 1200px) {
   .step-navigation .steps .step .step-text {

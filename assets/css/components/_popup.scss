@@ -4,7 +4,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
-    padding: 30px 20px;
     box-shadow: 0px 16px 12px rgba(0, 0, 0, 0.035);
     border-radius: 8px;
     z-index: 1000;
@@ -13,25 +12,24 @@
     @include respond-to(sm) {
         width: fit-content;
     }
-    @include respond-to(xxl) {
-        padding: 50px 35px;
-    }
     &.modal-sm {
         .modal-content {
-            max-width: 452px;
+            max-width: 600px;
+            padding: 50px 35px;
             @include respond-to(xxl) {
-                max-width: 680px;
+                max-width: 750px;
+                padding: 70px 50px;
             }
         }
     }
     .close-btn {
         position: absolute;
-        right: -20px;
-        top: -25px;
-        @include responsive-font(1.4em, 1.4em, 3em);
+        right: 10px;
+        top: 0;
+        @include responsive-font(2em, 2em, 3em);
         @include respond-to(xxl) {
-            top: -35px;
-            right: -10px;
+            top: 30x;
+            right: 30px;
         }
         &:hover,
         &:focus {
@@ -48,10 +46,41 @@
     }
     h2 {
         font-family: $figtreeBold;
-        @include responsive-font(1.25em, 1.25em, 1.8em);
+        @include responsive-font(1.5em, 1.5em, 2.3em);
     }
     p {
         @include responsive-font(0.875em, 0.875em, 1.2em);
+    }
+    .date,
+    .time {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+            object-fit: contain;
+            @include respond-to(xxl) {
+                width: 35px;
+                height: 35px;
+                margin-right: 8px;
+            }
+        }
+        span {
+            @include responsive-font(1em, 1em, 1.5em);
+            font-family: $figtreeSemiBold;
+            margin-right: 7px;
+            @include respond-to(xxl) {
+                margin-right: 10px;
+            }
+        }
+        p {
+            @include responsive-font(1em, 1em, 1.5em);
+            color: $primary;
+            font-family: $figtreeSemiBold;
+            margin-bottom: 0;
+        }
     }
 }
 

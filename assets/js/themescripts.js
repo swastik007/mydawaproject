@@ -26,6 +26,7 @@ function loadComponents() {
         { id: "symptomsection", file: "components/homepage/symptoms.html" },
         { id: "footer", file: "components/footer.html" },
         { id: "wishlistmodal", file: "components/pages/wishlistpopup.html" },
+        { id: "speaktodoctormodal", file: "components/pages/speaktodoctormodal.html" },
         { id: "submitprescriptionmodal", file: "components/pages/submitprescriptionmodal.html" },
         { id: "wishlistpinmodal", file: "components/pages/wishlistpinpopup.html" },
         { id: "lastminutebuys", file: "components/pages/lastminutebuys.html" },
@@ -177,6 +178,8 @@ function setupEventListeners() {
     setTimeout(() => {
         setupWishlistPopup(); // Ensure modal exists before setting up listeners
         setupWishlistPinPopup();
+        setupPopup();
+
     }, 1000);
 }
 
@@ -329,33 +332,34 @@ function setupWishlistPinPopup() {
 
 // Submit Prescription Popup
 
-function setupWishlistPopup() {
-    $(document).on("click", ".btn-submitprescription", function(e) {
+
+// Speak to doctor
+function setupPopup() {
+    $(document).on("click", ".btn-popup", function(e) {
         e.preventDefault();
         e.stopPropagation();
 
         // Ensure modal exists before showing
-        if ($("#submitprescriptionModal").length) {
-            $("#submitprescriptionModal").fadeIn();
+        if ($("#popupModal").length) {
+            $("#popupModal").fadeIn();
             $("#modalOverlay").fadeIn(); // Show overlay
         } else {
-            console.error("❌ submitprescription modal not found in the DOM!");
+            console.error("❌ modal not found in the DOM!");
         }
     });
 
     $(document).on("click", ".close-btn, #modalOverlay", function() {
-        $("#submitprescriptionModal").fadeOut();
+        $("#popupModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
     $(window).on("click", function(e) {
-        if ($(e.target).is("#submitprescriptionModal")) {
-            $("#submitprescriptionModal").fadeOut();
+        if ($(e.target).is("#popupModal")) {
+            $("#popupModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
         }
     });
 }
-
 $(window).on("load", function() {
     console.log("🚀 jQuery Step Navigation Loaded!");
 
