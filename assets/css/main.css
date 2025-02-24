@@ -15134,7 +15134,7 @@ ol.form-list {
 .cart-dropdown-wrap .cart-dropdown {
   /* Hidden by default */
   position: absolute;
-  top: 60px;
+  top: 40px;
   right: 10px;
   /* Centers the dropdown */
   width: 480px;
@@ -15156,6 +15156,7 @@ ol.form-list {
 @media (min-width: 1800px) {
   .cart-dropdown-wrap .cart-dropdown {
     width: 900px;
+    top: 60px;
   }
 }
 .cart-dropdown-wrap .item-details h3, .cart-dropdown-wrap .item-details .h3 {

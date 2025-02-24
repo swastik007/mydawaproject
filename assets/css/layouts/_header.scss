@@ -642,7 +642,7 @@
     .cart-dropdown {
         /* Hidden by default */
         position: absolute;
-        top: 60px;
+        top: 40px;
         right: 10px;
         // transform: translateX(-50%);
         /* Centers the dropdown */
@@ -661,6 +661,7 @@
         }
         @include respond-to(xxl) {
             width: 900px;
+            top: 60px;
         }
     }
     .item-details {
