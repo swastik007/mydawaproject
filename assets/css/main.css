@@ -13374,17 +13374,181 @@ ol.form-list {
   border: 1px solid #e0e0e0;
   margin-top: 15px;
 }
+@media (min-width: 992px) {
+  .consent-box {
+    padding: 30px;
+  }
+}
+@media (min-width: 1800px) {
+  .consent-box {
+    padding: 40px;
+  }
+}
 .consent-box h2, .consent-box .h2 {
-  font-size: 16px;
-  font-weight: bold;
   margin-bottom: 10px;
+  font-family: "Figtree-Bold";
+  font-size: 1em;
+  color: rgb(55, 52, 52);
+}
+@media (min-width: 1200px) {
+  .consent-box h2, .consent-box .h2 {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1800px) {
+  .consent-box h2, .consent-box .h2 {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 1800px) {
+  .consent-box h2, .consent-box .h2 {
+    margin-bottom: 16px;
+  }
 }
 .consent-box p {
-  font-size: 14px;
-  color: #444;
+  font-family: "Figtree";
+  font-size: 0.875em;
+  color: #8D8D92;
+}
+@media (min-width: 1200px) {
+  .consent-box p {
+    font-size: 0.875em;
+  }
+}
+@media (min-width: 1800px) {
+  .consent-box p {
+    font-size: 1.2em;
+  }
 }
 .consent-box ol {
   padding-left: 15px;
+  font-size: 0.875em;
+  font-family: "Figtree-Medium";
+  color: #8D8D92;
+}
+@media (min-width: 1200px) {
+  .consent-box ol {
+    font-size: 0.875em;
+  }
+}
+@media (min-width: 1800px) {
+  .consent-box ol {
+    font-size: 1.2em;
+  }
+}
+.consent-box ol li {
+  margin-bottom: 7px;
+}
+@media (min-width: 1800px) {
+  .consent-box ol li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Large Radio inputs */
+.radio-option-full {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: white;
+  border: 2px solid #D4DEE5;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  /* Hidden Radio Input */
+  /* Custom Radio Button */
+  /* Inner dot for selected radio */
+  /* Selected State */
+  /* Content */
+  /* Highlight Selection */
+}
+.radio-option-full:hover {
+  border: 2px solid rgb(81, 107, 241);
+}
+@media (min-width: 1800px) {
+  .radio-option-full {
+    padding: 35px;
+  }
+}
+.radio-option-full input[type=radio] {
+  display: none;
+}
+.radio-option-full .radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #777;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+@media (min-width: 1800px) {
+  .radio-option-full .radio {
+    margin-top: 5px;
+  }
+}
+.radio-option-full .radio::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.radio-option-full input[type=radio]:checked + .radio {
+  border-color: rgb(81, 107, 241);
+}
+.radio-option-full input[type=radio]:checked + .radio::before {
+  background: rgb(81, 107, 241);
+}
+.radio-option-full .content {
+  flex: 1;
+  text-align: left;
+}
+.radio-option-full .content h3, .radio-option-full .content .h3 {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: rgb(55, 52, 52);
+  font-family: "Figtree-Medium";
+}
+@media (min-width: 1200px) {
+  .radio-option-full .content h3, .radio-option-full .content .h3 {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1800px) {
+  .radio-option-full .content h3, .radio-option-full .content .h3 {
+    font-size: 1.4em;
+  }
+}
+.radio-option-full .content p {
+  font-size: 0.875em;
+  margin: 5px 0 0;
+  color: rgb(55, 52, 52);
+  font-family: "Figtree-Light";
+}
+@media (min-width: 1200px) {
+  .radio-option-full .content p {
+    font-size: 0.875em;
+  }
+}
+@media (min-width: 1800px) {
+  .radio-option-full .content p {
+    font-size: 1.1em;
+  }
+}
+.radio-option-full input[type=radio]:checked ~ .content {
+  color: rgb(81, 107, 241);
+}
+.radio-option-full input[type=radio]:checked ~ .content h3, .radio-option-full input[type=radio]:checked ~ .content .h3 {
+  color: rgb(81, 107, 241);
+}
+.radio-option-full input[type=radio]:checked {
+  border-color: rgb(81, 107, 241);
 }
 
 .product-card {

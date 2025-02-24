@@ -604,16 +604,130 @@ ol.form-list {
     border-radius: 10px;
     border: 1px solid #e0e0e0;
     margin-top: 15px;
+    @include respond-to(md) {
+        padding: 30px;
+    }
+    @include respond-to(xxl) {
+        padding: 40px;
+    }
     h2 {
-        font-size: 16px;
-        font-weight: bold;
         margin-bottom: 10px;
+        font-family: $figtreeBold;
+        @include responsive-font(1em,
+        1em,
+        1.4em);
+        color: $black;
+        @include respond-to(xxl) {
+            margin-bottom: 16px;
+        }
     }
     p {
-        font-size: 14px;
-        color: #444;
+        font-family: $figtree;
+        @include responsive-font(0.875em,
+        0.875em,
+        1.2em);
+        color: #8D8D92;
     }
     ol {
         padding-left: 15px;
+        @include responsive-font(0.875em,
+        0.875em,
+        1.2em);
+        font-family: $figtreeMedium;
+        color: #8D8D92;
+        li {
+            margin-bottom: 7px;
+            @include respond-to(xxl) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+/* Large Radio inputs */
+
+.radio-option-full {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: white;
+    border: 2px solid #D4DEE5;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    &:hover {
+        border: 2px solid $blue;
+    }
+    @include respond-to(xxl) {
+        padding: 35px;
+    }
+    /* Hidden Radio Input */
+    input[type="radio"] {
+        display: none;
+    }
+    /* Custom Radio Button */
+    .radio {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #777;
+        border-radius: 50%!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.3s;
+        @include respond-to(xxl) {
+            margin-top: 5px;
+        }
+    }
+    /* Inner dot for selected radio */
+    .radio::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+    /* Selected State */
+    input[type="radio"]:checked+.radio {
+        border-color: $blue;
+    }
+    input[type="radio"]:checked+.radio::before {
+        background: $blue;
+    }
+    /* Content */
+    .content {
+        flex: 1;
+        text-align: left;
+        h3 {
+            @include responsive-font(1em,
+            1em,
+            1.4em);
+            margin-bottom: 5px;
+            color: $black;
+            font-family: $figtreeMedium;
+        }
+        p {
+            @include responsive-font(0.875em,
+            0.875em,
+            1.1em);
+            margin: 5px 0 0;
+            color: $black;
+            font-family: $figtreeLight;
+        }
+    }
+    /* Highlight Selection */
+    input[type="radio"]:checked~.content {
+        color: $blue;
+    }
+    input[type="radio"]:checked~.content h3 {
+        color: $blue;
+    }
+    input[type="radio"]:checked {
+        border-color: $blue;
     }
 }
