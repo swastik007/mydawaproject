@@ -99,14 +99,16 @@
     }
     .delivery-info {
         background: #ffecd6;
-        min-width: 208px;
         padding: 12px 15px;
         border-radius: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 178px;
+        width: 80px;
         height: 44px;
+        @include respond-to(xs) {
+            min-width: 208px;
+        }
         @include respond-to(xxl) {
             padding: 16px 25px;
             width: 290px;
@@ -133,6 +135,10 @@
             color: #373434;
             line-height: 1.2;
             font-weight: 300;
+            display: none;
+            @include respond-to(xs) {
+                display: block;
+            }
             @include respond-to(xxl) {
                 font-size: 0.875em;
             }
@@ -207,6 +213,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include respond-to(xxl) {
+            padding: 7px 0;
+        }
         ul {
             font-size: 14px;
             display: flex;

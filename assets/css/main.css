@@ -12147,6 +12147,17 @@ body {
   }
 }
 
+.btn-dots {
+  background: #EEEEF8;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
 .dawa-modal {
   position: fixed;
   top: 40%;
@@ -14506,14 +14517,18 @@ ol.form-list {
 }
 .site-header .delivery-info {
   background: #ffecd6;
-  min-width: 208px;
   padding: 12px 15px;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 178px;
+  width: 80px;
   height: 44px;
+}
+@media (min-width: 440px) {
+  .site-header .delivery-info {
+    min-width: 208px;
+  }
 }
 @media (min-width: 1800px) {
   .site-header .delivery-info {
@@ -14545,6 +14560,12 @@ ol.form-list {
   color: #373434;
   line-height: 1.2;
   font-weight: 300;
+  display: none;
+}
+@media (min-width: 440px) {
+  .site-header .delivery-info .icon-text {
+    display: block;
+  }
 }
 @media (min-width: 1800px) {
   .site-header .delivery-info .icon-text {
@@ -14632,6 +14653,11 @@ ol.form-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 1800px) {
+  .site-header .header-navigation {
+    padding: 7px 0;
+  }
 }
 .site-header .header-navigation ul {
   font-size: 14px;
