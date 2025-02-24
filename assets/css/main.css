@@ -18333,14 +18333,24 @@ header {
   border: 1px solid #D4DEE5;
   background-color: #fff;
   margin-left: 10px;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 7px 10px;
+  min-width: 80px;
+}
+.cart-item .item-quantity .cart-delete img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 @media (min-width: 1800px) {
   .cart-item .item-quantity .cart-delete {
     font-size: 16px;
     padding: 20px;
     border-radius: 40px;
+  }
+  .cart-item .item-quantity .cart-delete img {
+    width: 30px;
+    height: 30px;
   }
 }
 .cart-item .item-price {

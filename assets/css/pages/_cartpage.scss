@@ -281,12 +281,22 @@
             border: 1px solid #D4DEE5;
             background-color: #fff;
             margin-left: 10px;
-            border-radius: 20px;
+            border-radius: 12px;
             padding: 7px 10px;
+            min-width: 80px;
+            img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+            }
             @include respond-to(xxl) {
                 font-size: 16px;
                 padding: 20px;
                 border-radius: 40px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
     }
