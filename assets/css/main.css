@@ -19508,59 +19508,79 @@ header {
   display: flex;
   gap: 10px;
 }
-
-.dropdown {
+.filter-options .dropdown {
   position: relative;
 }
-
-.dropdown-filter {
-  background: #F5F5F7;
+.filter-options .dropdown .dropdown-toggle:after {
+  display: none;
+  visibility: hidden;
+}
+.filter-options .dropdown-filter {
+  background: transparent;
   border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  color: rgb(55, 52, 52);
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a4a;
+  display: flex;
+  align-items: center;
+  padding: 0;
   cursor: pointer;
-  font-family: "Figtree-Medium";
+}
+.filter-options .dropdown-filter:focus {
+  outline: none;
+  box-shadow: none;
+}
+.filter-options .dropdown-filter .select {
+  margin-left: 6px;
+  font-weight: 600;
+}
+.filter-options .dropdown-filter .chevron-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  transition: transform 0.2s ease-in-out;
+  fill: #4a4a4a;
+  transform: rotate(180deg);
+}
+.filter-options .dropdown-filter[aria-expanded=true] .chevron-icon {
+  transform: rotate(0deg);
+}
+.filter-options .dropdown-menu {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  padding: 8px 0;
+  position: absolute;
+  left: auto !important;
+  right: 0 !important;
+}
+.filter-options .dropdown-menu .dropdown-item {
+  padding: 8px 16px;
+  color: #333;
+  transition: background 0.2s ease-in-out;
+  font-size: 0.85em;
 }
 @media (min-width: 1200px) {
-  .dropdown-filter {
-    color: #bababa;
-    background: transparent;
+  .filter-options .dropdown-menu .dropdown-item {
+    font-size: 0.85em;
   }
 }
-.dropdown-filter span.select {
-  color: rgb(55, 52, 52);
-  margin-left: 7px;
+@media (min-width: 1800px) {
+  .filter-options .dropdown-menu .dropdown-item {
+    font-size: 1em;
+  }
 }
-.dropdown-filter span.arrow {
-  margin-left: 7px;
+.filter-options .dropdown-menu .dropdown-item:hover {
+  background: #f5f5f5;
 }
-.dropdown-filter .filter-arrow {
-  rotate: 180deg;
-  width: 12px;
-  height: 9px;
-  margin-left: 7px;
+.filter-options .dropdown-menu .dropdown-item:active {
+  background: #ddd;
 }
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  top: 35px;
-  left: 0;
-  width: 150px;
-  list-style: none;
-  padding: 10px;
-}
-
-.dropdown-menu li {
-  padding: 5px 10px;
-}
-
-.dropdown-menu li:hover {
-  background: #E0E0E0;
+.filter-options .filter-options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .category-grid {
