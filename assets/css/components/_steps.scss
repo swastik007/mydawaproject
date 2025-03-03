@@ -46,7 +46,7 @@
             .step-text {
                 white-space: nowrap;
                 font-family: $figtreeMedium;
-                @include responsive-font(1em, 1em, 1.4em);
+                @include responsive-font(1em, 1em, 1.6em);
                 text-transform: capitalize;
             }
             &:not(:last-child)::after {

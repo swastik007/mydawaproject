@@ -185,7 +185,6 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            font-size: 14px;
             margin-bottom: 12px;
             @include respond-to(xxl) {
                 margin-bottom: 18px;
@@ -193,17 +192,18 @@
         }
         
         .listing-info {
-            font-size: 14px;
-            @include respond-to(lg) {
-                font-size: 16px;
-            }
-            @include respond-to(xxl) {
-                font-size: 24px;
+            p {
+                @include responsive-font(1em,
+                1em,
+                1.6em);
             }
         }
         
         .desktop-text {
             display: none;
+            @include responsive-font(1em,
+            1em,
+            1.6em);
             @include respond-to(lg) {
                 display: block;
             }
@@ -211,6 +211,9 @@
         
         .mobile-text {
             display: block;
+            @include responsive-font(1em,
+            1em,
+            1.6em);
             @include respond-to(lg) {
                 display: none;
             }
@@ -232,8 +235,7 @@
             border-radius: 20px;
             color: $black;
             cursor: pointer;
-            color: #bababa;
-            font-weight: 500;
+            font-family: $figtreeMedium;
             @include respond-to(lg) {
                 color: #bababa;
                 background: transparent;

@@ -5,7 +5,7 @@ textarea {
     border: 1px solid #d4dee5;
     border-radius: 8px !important;
     padding: 12px 14px;
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em, 1em, 1.6em);
     font-family: $figtree;
     color: $black;
     outline: none;
@@ -74,7 +74,7 @@ select {
     margin-bottom: 5px;
     @include responsive-font(1em,
     1em,
-    1.25em);
+    1.6em);
     @include respond-to(xxl) {
         margin-bottom: 8px;
     }
@@ -192,7 +192,7 @@ input[type="radio"]:checked::before {
         font-weight: 500;
         @include responsive-font(1em,
         1em,
-        1.4em);
+        1.6em);
         font-family: $figtreeMedium;
     }
 }
@@ -230,7 +230,7 @@ input[type="radio"]:checked::before {
     align-items: center;
     @include responsive-font(1em,
     1em,
-    1.25em);
+    1.6em);
 }
 
 
@@ -501,7 +501,7 @@ input[type="radio"]:checked::before {
         font-family: $figtreeBold;
         @include responsive-font(1em,
         1em,
-        1.4em);
+        1.6em);
         color: $black;
     }
     .file-details {
@@ -701,7 +701,7 @@ ol.form-list {
         font-family: $figtreeBold;
         @include responsive-font(1em,
         1em,
-        1.4em);
+        1.6em);
         color: $black;
         @include respond-to(xxl) {
             margin-bottom: 16px;
@@ -844,7 +844,7 @@ ol.form-list {
         background-size: 16px;
         @include responsive-font(1em,
         1em,
-        1.4em);
+        1.6em);
         &.selected {
             background-color: #F1F1F5;
             border: 2px solid $blue;
@@ -869,7 +869,7 @@ ol.form-list {
         padding: 7px 15px;
         @include responsive-font(1em,
         1em,
-        1.4em);
+        1.6em);
         @include respond-to(xxl) {
             padding: 12px 24px;
         }
@@ -888,7 +888,7 @@ ol.form-list {
         border-top: 1px solid #ddd;
         @include responsive-font(1em,
         1em,
-        1.4em);
+        1.6em);
         margin-right: 0;
         margin-left: auto;
     }

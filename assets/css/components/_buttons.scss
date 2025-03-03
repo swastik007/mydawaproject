@@ -6,7 +6,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em, 1em, 1.6em);
     cursor: pointer;
     &:hover,
     &:focus {
@@ -23,7 +23,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em, 1em, 1.6em);
     &:hover,
     &:focus {
         background-color: $grey3;
@@ -41,7 +41,7 @@
     outline: none;
     font-size: 1em;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em, 1em, 1.6em);
     &:hover,
     &:focus {
         background-color: $grey8;
@@ -69,7 +69,7 @@
     outline: none;
     font-size: 1em;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em, 1em, 1.6em);
     &:hover,
     &:focus {
         background-color: $black;
@@ -108,7 +108,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em, 1em, 1.6em);
     &:hover,
     &:focus {
         background-color: $greendark;
@@ -189,7 +189,7 @@
     font-family: $figtree;
     padding: 14px 25px;
     border-radius: 12px;
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em, 1em, 1.6em);
     @include respond-to(xxl) {
         padding: 16px 40px;
     }

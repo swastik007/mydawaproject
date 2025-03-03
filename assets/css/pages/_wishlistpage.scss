@@ -8,12 +8,11 @@
         border: none;
         padding: 5px 10px;
         border: none;
-        font-size: 16px;
         cursor: pointer;
         color: $black;
         background-color: transparent;
         font-family: $figtreeSemiBold;
-        @include responsive-font(1em, 1em, 1.4em);
+        @include responsive-font(1em, 1em, 1.6em);
         display: flex;
         align-items: center;
         &:hover,
@@ -61,12 +60,23 @@
         .wishlist-image {
             width: 100%;
             height: auto;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid #EBF5FC;
+            padding: 16px;
+            @include respond-to(xxl) {
+                gap: 25px;
+            }
             img {
-                border-radius: 8px;
-                border: 1px solid #EBF5FC;
                 width: 116px;
                 height: 124px;
                 object-fit: contain;
+                margin: 0 auto;
+                border: none;
+                @include respond-to(xxl) {
+                    width: 160px;
+                    height: 184px;
+                }
             }
         }
     }
@@ -74,12 +84,12 @@
         margin-bottom: 5px;
         text-align: left;
         font-family: $figtreeBold;
-        @include responsive-font(1em, 1em, 1.4em);
+        @include responsive-font(1em, 1em, 1.6em);
     }
     .wishlist-items {
         color: #8A8A8A;
         font-family: $figtreeLight;
-        @include responsive-font(1em, 1em, 1.4em);
+        @include responsive-font(1em, 1em, 1.6em);
     }
 }
 
@@ -632,4 +642,5 @@
 //             }
 //         }
 //     }
+// }   }
 // }

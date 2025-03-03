@@ -68,7 +68,7 @@
             }
         }
         span {
-            @include responsive-font(1em, 1em, 1.5em);
+            @include responsive-font(1em, 1em, 1.6em);
             font-family: $figtreeSemiBold;
             margin-right: 7px;
             @include respond-to(xxl) {
@@ -76,7 +76,7 @@
             }
         }
         p {
-            @include responsive-font(1em, 1em, 1.5em);
+            @include responsive-font(1em, 1em, 1.6em);
             color: $primary;
             font-family: $figtreeSemiBold;
             margin-bottom: 0;
