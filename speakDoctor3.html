@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Dawa</title>
@@ -14,94 +15,86 @@
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker-bs5.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker-bs5.min.css" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css"> -->
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container-main">
-      <div id="header"></div>
-      <main class="dawamain">
-        <div class="page-content">
-          <!-- Breadcrumb section -->
-          <nav class="breadcrumb-container mydawa-container">
-            <ul class="breadcrumb">
-              <li><a href="#">Home</a></li>
-              <li><span class="divider">/</span></li>
-              <li><a href="#">Services</a></li>
-              <li><span class="divider">/</span></li>
-              <li><a href="#" class="active">Speak to doctor 3</a></li>
-            </ul>
-          </nav>
-          <div class="mydawa-container submit-prescription">
-            <!-- Step Navigation -->
-            <div class="step-navigation mb-4">
-              <div
-                class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between"
-              >
-                <h4 class="section-heading">Step 3</h4>
-                <ul class="steps list-inline d-flex align-items-center">
-                  <li class="list-inline-item step complete">
-                    <span class="step-circle">1</span> Upload Your Attachments
-                  </li>
-                  <li class="list-inline-item step active">
-                    <span class="step-circle">2</span> Set Your Recipient
-                  </li>
-                  <li class="list-inline-item step">
-                    <span class="step-circle">3</span> Payment
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="prescription-wrap">
-              <!-- Title Section -->
-              <div class="prescription-heading">
-                <h2 class="form-title">Select Consultation date and Time.</h2>
-                <p class="form-subtitle">
-                  By selecting your convenient date and time, book your
-                  consultation.
-                </p>
-              </div>
-              <!-- Payment Section -->
-              <div class="date-time">
-                <div class="date-time__box">
-                  <h2 class="date-time__title">Select Time</h2>
-                  <div class="time-box">
-                    <div class="time-box__wrap">
-                      <h4>
-                        <img src="./assets/images/icons/time1.svg" />
-                        Duration:
-                      </h4>
-                      <span>30 Min</span>
+        <div id="header"></div>
+        <main class="dawamain">
+            <div class="page-content">
+                <!-- Breadcrumb section -->
+                <nav class="breadcrumb-container mydawa-container">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#">Services</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#" class="active">Speak to doctor 3</a></li>
+                    </ul>
+                </nav>
+                <div class="mydawa-container submit-prescription">
+                    <!-- Step Navigation -->
+                    <div class="step-navigation mb-4">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between">
+                            <h4 class="section-heading">Step 3</h4>
+                            <ul class="steps list-inline d-flex align-items-center">
+                                <li class="list-inline-item step complete">
+                                    <span class="step-circle">1</span> Upload Your Attachments
+                                </li>
+                                <li class="list-inline-item step active">
+                                    <span class="step-circle">2</span> Set Your Recipient
+                                </li>
+                                <li class="list-inline-item step">
+                                    <span class="step-circle">3</span> Payment
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="time-box__wrap">
-                      <h4>
-                        <img src="./assets/images/icons/call1.svg" />
-                        Medium:
-                      </h4>
-                      <span>Phone Call</span>
-                    </div>
-                  </div>
-                  <div class="times">
-                    <a href="#" class="times__link">11:00 AM</a>
-                    <a href="#" class="times__link selected">11:30 AM</a>
-                    <a href="#" class="times__link">11:30 AM</a>
-                    <a href="#" class="times__link disabled">11:30 AM</a>
-                    <a href="#" class="times__link">11:30 AM</a>
-                    <a href="#" class="times__link">11:30 AM</a>
-                    <a href="#" class="times__link">11:30 AM</a>
-                    <a href="#" class="times__link">11:30 AM</a>
-                    <a href="#" class="times__link">11:30 AM</a>
-                    <a href="#" class="times__link">11:30 AM</a>
-                  </div>
-                </div>
-                <div class="date-time__box">
-                  <h2 class="date-time__title">Select Date</h2>
-                  <div id="foo" data-date="01/25/2020"></div>
-                  <span class="time-note">
+                    <div class="form-page-wrap">
+                        <!-- Title Section -->
+                        <div class="prescription-heading">
+                            <h2 class="form-title">Select Consultation date and Time.</h2>
+                            <p class="form-subtitle">
+                                By selecting your convenient date and time, book your consultation.
+                            </p>
+                        </div>
+                        <!-- Payment Section -->
+                        <div class="date-time">
+                            <div class="date-time__box">
+                                <h2 class="date-time__title">Select Time</h2>
+                                <div class="time-box">
+                                    <div class="time-box__wrap">
+                                        <h4>
+                                            <img src="./assets/images/icons/time1.svg" /> Duration:
+                                        </h4>
+                                        <span>30 Min</span>
+                                    </div>
+                                    <div class="time-box__wrap">
+                                        <h4>
+                                            <img src="./assets/images/icons/call1.svg" /> Medium:
+                                        </h4>
+                                        <span>Phone Call</span>
+                                    </div>
+                                </div>
+                                <div class="times">
+                                    <a href="#" class="times__link">11:00 AM</a>
+                                    <a href="#" class="times__link selected">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link disabled">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                </div>
+                            </div>
+                            <div class="date-time__box">
+                                <h2 class="date-time__title">Select Date</h2>
+                                <div id="foo" data-date="01/25/2020"></div>
+                                <span class="time-note">
                     <img src="./assets/images/icons/info.svg" /> Central
                     European Time (08:11 PM)</span
                   >

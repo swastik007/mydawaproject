@@ -1,3 +1,114 @@
+// Form input & text area
+input,
+select,
+textarea {
+    border: 1px solid #d4dee5;
+    border-radius: 8px !important;
+    padding: 12px 14px;
+    @include responsive-font(1em, 1em, 1.4em);
+    font-family: $figtree;
+    color: $black;
+    outline: none;
+    transition: all 0.3s ease;
+    @include respond-to(xxl) {
+        padding: 16px 22px;
+    }
+    &:focus {
+        border: 2px solid;
+        border-color: $blue;
+        // box-shadow: 0 0 5px rgba(230, 27, 119, 0.4);
+    }
+    // **Disabled & Prefilled State**
+    &:disabled,
+    &.filled {
+        background-color: #F1F1F5 !important;
+        color: $black !important;
+        border-color: #D4DEE5;
+        cursor: not-allowed;
+    }
+    &.filled {
+        pointer-events: none;
+    }
+}
+
+textarea {
+    min-height: 160px;
+    resize: none;
+    width: 100%;
+    outline: none;
+    @include respond-to(xxl) {
+        min-height: 220px;
+    }
+    &::placeholder {
+        color: $black;
+    }
+}
+
+label {
+    font-family: $figtreeLight;
+    color: $black;
+    margin-bottom: 7px;
+    @include responsive-font(0.85em, 0.85em, 1.2em);
+    @include respond-to(xxl) {
+        margin-bottom: 12px;
+    }
+    .required {
+        color: $primary;
+    }
+}
+
+select {
+    appearance: none;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23000' d='M0 0h10L5 6z'/%3E%3C/svg%3E") no-repeat right 10px center;
+    background-size: 10px 6px;
+}
+
+.textarea-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea-label {
+    font-family: $figtreeLight;
+    color: $black;
+    margin-bottom: 5px;
+    @include responsive-font(1em,
+    1em,
+    1.25em);
+    @include respond-to(xxl) {
+        margin-bottom: 8px;
+    }
+}
+
+
+/* Hide default calendar icon in Chrome, Safari, Edge, and Firefox */
+
+input[type="date"] {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    padding-right: 40px;
+    /* Ensure space for custom icon */
+}
+
+
+/* Remove additional styles on WebKit browsers */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+/* Remove additional styles on Firefox */
+
+input[type="date"]::-moz-calendar-picker-indicator {
+    display: none;
+}
+
+
 /* Hide default radio button */
 
 input[type="radio"] {
@@ -79,7 +190,9 @@ input[type="radio"]:checked::before {
         cursor: pointer;
         margin-left: 7px;
         font-weight: 500;
-        @include responsive-font(1em, 1em, 1.4em);
+        @include responsive-font(1em,
+        1em,
+        1.4em);
         font-family: $figtreeMedium;
     }
 }
@@ -112,13 +225,12 @@ input[type="radio"]:checked::before {
     padding-left: 30px;
     /* Space for custom checkbox */
     cursor: pointer;
-    font-size: 1em;
     color: $black;
     display: flex;
     align-items: center;
-    @include respond-to(xxl) {
-        font-size: 1.125em;
-    }
+    @include responsive-font(1em,
+    1em,
+    1.25em);
 }
 
 
@@ -150,12 +262,23 @@ input[type="radio"]:checked::before {
     border-color: #6574ff;
     content: "✔";
     color: white;
-    font-size: 14px;
     text-align: center;
     line-height: 1.2;
     font-weight: bold;
+    @include responsive-font(0.85em,
+    0.85em,
+    1.1em);
+}
+
+
+/* Default Page Wrapper */
+
+.form-page-wrap {
+    max-width: 700px;
+    margin: 40px auto;
     @include respond-to(xxl) {
-        font-size: 18px;
+        max-width: 1120px;
+        margin: 70px auto;
     }
 }
 
@@ -169,18 +292,24 @@ input[type="radio"]:checked::before {
         margin-bottom: 35px;
     }
     h2 {
-        @include responsive-font(2.2em, 2.2em, 3em);
+        @include responsive-font(2.2em,
+        2.2em,
+        3em);
         font-family: $figtreeBold;
     }
     h3 {
-        @include responsive-font(1.25em, 1.25em, 1.8em);
+        @include responsive-font(1.25em,
+        1.25em,
+        1.8em);
         font-family: $figtreeSemiBold;
         color: $black;
         margin-bottom: 0;
     }
     p {
         font-family: $figtreeLight;
-        @include responsive-font(0.875em, 0.875em, 1.2em);
+        @include responsive-font(0.875em,
+        0.875em,
+        1.2em);
         margin-bottom: 0;
     }
 }
@@ -189,12 +318,13 @@ input[type="radio"]:checked::before {
 /* Form Elements */
 
 .form-title {
-    @include responsive-font(1.25em, 1.25em, 1.8em);
+    @include responsive-font(1.25em,
+    1.25em,
+    1.8em);
     font-family: $figtreeSemiBold;
     color: $black;
     margin-bottom: 15px;
     @include respond-to(xxl) {
-        font-size: 32px;
         margin-bottom: 25px;
     }
     &.border-t {
@@ -210,7 +340,9 @@ input[type="radio"]:checked::before {
 
 .form-subtitle {
     font-family: $figtreeLight;
-    @include responsive-font(0.875em, 0.875em, 1.2em);
+    @include responsive-font(0.875em,
+    0.875em,
+    1.2em);
     margin-bottom: 14px;
     @include respond-to(xxl) {
         margin-bottom: 20px;
@@ -218,7 +350,9 @@ input[type="radio"]:checked::before {
 }
 
 .form-heading {
-    @include responsive-font(1em, 1em, 1.4em);
+    @include responsive-font(1em,
+    1em,
+    1.4em);
     font-family: $figtreeSemiBold;
     color: $black;
     margin-bottom: 15px;
@@ -262,7 +396,9 @@ input[type="radio"]:checked::before {
         }
         p {
             color: $black;
-            @include responsive-font(1.25em, 1.25em, 1.8em);
+            @include responsive-font(1.25em,
+            1.25em,
+            1.8em);
             font-family: $figtreeSemiBold;
             line-height: 1.2;
             margin-top: 20px;
@@ -299,7 +435,9 @@ input[type="radio"]:checked::before {
         color: $black;
         font-family: $figtreeMedium;
         display: block;
-        @include responsive-font(0.875em, 0.875em, 1.2em);
+        @include responsive-font(0.875em,
+        0.875em,
+        1.2em);
     }
     &.warning {
         border: 1px solid #e61b1b;
@@ -347,11 +485,15 @@ input[type="radio"]:checked::before {
     .file-name {
         margin: 0;
         font-family: $figtreeBold;
-        @include responsive-font(1em, 1em, 1.4em);
+        @include responsive-font(1em,
+        1em,
+        1.4em);
         color: $black;
     }
     .file-details {
-        @include responsive-font(0.875em, 0.875em, 1.2em);
+        @include responsive-font(0.875em,
+        0.875em,
+        1.2em);
         color: $black;
     }
     .delete-button {
@@ -375,67 +517,6 @@ input[type="radio"]:checked::before {
     }
 }
 
-// Form input & text area
-input,
-select,
-textarea {
-    border: 1px solid #d4dee5;
-    border-radius: 8px !important;
-    padding: 12px 14px;
-    @include responsive-font(1em, 1em, 1.4em);
-    font-family: $figtree;
-    color: $black;
-    outline: none;
-    transition: all 0.3s ease;
-    @include respond-to(xxl) {
-        padding: 16px 22px;
-    }
-    &:focus {
-        border: 2px solid;
-        border-color: $blue;
-        // box-shadow: 0 0 5px rgba(230, 27, 119, 0.4);
-    }
-    // **Disabled & Prefilled State**
-    &:disabled,
-    &.filled {
-        background-color: #F1F1F5 !important;
-        color: $black !important;
-        border-color: #D4DEE5;
-        cursor: not-allowed;
-    }
-    &.filled {
-        pointer-events: none;
-    }
-}
-
-
-/* Hide default calendar icon in Chrome, Safari, Edge, and Firefox */
-
-input[type="date"] {
-    position: relative;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    padding-right: 40px;
-    /* Ensure space for custom icon */
-}
-
-
-/* Remove additional styles on WebKit browsers */
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
-
-
-/* Remove additional styles on Firefox */
-
-input[type="date"]::-moz-calendar-picker-indicator {
-    display: none;
-}
-
 input.long-field {
     @include respond-to(lg) {
         min-width: 350px;
@@ -454,7 +535,7 @@ input.long-field {
         flex-direction: row;
     }
     @include respond-to(xxl) {
-        margin-bottom: 32px;
+        margin-bottom: 36px;
     }
     .input-group {
         flex: 1;
@@ -470,56 +551,6 @@ input.long-field {
             }
             img {}
         }
-    }
-}
-
-label {
-    font-family: $figtreeLight;
-    color: $black;
-    margin-bottom: 5px;
-    @include responsive-font(1em, 1em, 1.4em);
-    .required {
-        color: $primary;
-    }
-}
-
-select {
-    appearance: none;
-    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23000' d='M0 0h10L5 6z'/%3E%3C/svg%3E") no-repeat right 10px center;
-    background-size: 10px 6px;
-}
-
-.textarea-wrap {
-    display: flex;
-    flex-direction: column;
-}
-
-.textarea-label {
-    font-family: $figtreeLight;
-    color: $black;
-    margin-bottom: 5px;
-    @include responsive-font(1em,
-    1em,
-    1.25em);
-    @include respond-to(xxl) {
-        margin-bottom: 8px;
-    }
-}
-
-textarea {
-    min-height: 120px;
-    resize: none;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 8px !important;
-    padding: 10px;
-    font-size: 14px;
-    color: $black;
-    outline: none;
-    @include respond-to(xxl) {
-        font-size: 21px;
-        padding: 14px;
-        min-height: 160px;
     }
 }
 
@@ -864,5 +895,42 @@ ol.form-list {
     @include respond-to(xxl) {
         margin-top: 16px;
         margin-bottom: 20px;
+    }
+}
+
+.form-search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f7;
+    border-radius: 26px;
+    padding: 5px 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    @include respond-to(xxl) {
+        width: 320px;
+    }
+    .search-input {
+        border: none;
+        background: transparent;
+        flex: 1;
+        outline: none;
+        padding: 8px;
+        @include responsive-font(0.85em,
+        0.85em,
+        1.1em);
+    }
+    .search-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: $black;
+        }
     }
 }
