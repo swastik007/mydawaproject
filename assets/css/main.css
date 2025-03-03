@@ -11909,12 +11909,22 @@ body {
 }
 @media (min-width: 1800px) {
   .section-heading {
-    font-size: 3.2em;
+    font-size: 4em;
   }
 }
 @media (min-width: 1200px) {
   .section-heading {
     font-family: "Figtree-Black";
+  }
+}
+.section-heading svg {
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1800px) {
+  .section-heading svg {
+    width: 32px;
+    height: 32px;
   }
 }
 
