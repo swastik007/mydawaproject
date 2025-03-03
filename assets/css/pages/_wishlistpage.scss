@@ -1,50 +1,92 @@
-.wishlist-page {
-    margin-bottom: 50px;
+.wishlist-actions {
+    display: flex;
+    gap: 10px;
     @include respond-to(xxl) {
-        margin-bottom: 80px;
+        gap: 16px;
     }
-    .wishlist-actions {
+    button {
+        border: none;
+        padding: 5px 10px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: $black;
+        background-color: transparent;
+        font-family: $figtreeSemiBold;
+        @include responsive-font(1em, 1em, 1.4em);
         display: flex;
-        gap: 10px;
-        button {
-            border: none;
-            padding: 5px 10px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: 600;
-            color: $black;
-            background-color: transparent;
+        align-items: center;
+        &:hover,
+        &:focus {
+            color: $primary;
+            svg {
+                path {
+                    stroke: $primary;
+                }
+            }
         }
-        .btn-new-list {}
-        .btn-private {}
+        svg {
+            width: 12px;
+            height: 12px;
+            margin-right: 7px;
+            @include respond-to(xxl) {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            path {
+                stroke: $black;
+            }
+        }
+    }
+}
+
+.wishlist-card {
+    background: #F9F9FD;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    @include respond-to(xxl) {
+        padding: 24px;
     }
     .wishlist-images {
-        img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 15px;
+        @include respond-to(xxl) {
+            gap: 16px;
+        }
+        .wishlist-image {
             width: 100%;
-            aspect-ratio: 1/1;
-            background: #f5f5f5;
-            border-radius: 6px;
-            overflow: hidden;
-            width: 125px;
-            height: 125px;
-            background-color: white;
-            padding: 15px;
-            @include respond-to(xxl) {
-                padding: 28px;
+            height: auto;
+            img {
+                border-radius: 8px;
+                border: 1px solid #EBF5FC;
+                width: 116px;
+                height: 124px;
+                object-fit: contain;
             }
         }
     }
     .wishlist-name {
-        font-size: 1em;
-        margin-top: 10px;
-        margin-left: 5px;
+        margin-bottom: 5px;
         text-align: left;
-        font-weight: 600;
-        @include respond-to(xxl) {
-            font-size: 1.125em;
-            margin-top: 12px;
-        }
+        font-family: $figtreeBold;
+        @include responsive-font(1em, 1em, 1.4em);
+    }
+    .wishlist-items {
+        color: #8A8A8A;
+        font-family: $figtreeLight;
+        @include responsive-font(1em, 1em, 1.4em);
+    }
+}
+
+.page-wrapper {
+    margin-bottom: 50px;
+    @include respond-to(xxl) {
+        margin-bottom: 80px;
     }
     .wishlist-items {
         font-size: 0.875em;
@@ -147,35 +189,7 @@
     //         }
     //     }
     // }
-    .wishlist-carousel {
-        .wishlist-card {
-            background: #f8f8f8;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-            .wishlist-images {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-                margin-bottom: 15px;
-                .wishlist-image {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 8px;
-                }
-            }
-            .wishlist-name {
-                font-size: 16px;
-                font-weight: bold;
-                margin-bottom: 5px;
-            }
-            .wishlist-items {
-                font-size: 14px;
-                color: #555;
-            }
-        }
-    }
+    .wishlist-carousel {}
     .wishlist-card.wishlist-empty {
         background: #f8f8f8;
         border-radius: 8px;

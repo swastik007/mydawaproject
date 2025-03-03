@@ -6,7 +6,6 @@
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
     font-family: $inter;
     border: 1px solid #d4dee5;
     thead {
@@ -58,18 +57,19 @@
     }
     /* Custom checkbox styling */
     .checkmark {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         border-radius: 6px;
-        background-color: #E0E0E0;
+        background-color: #fff;
+        border: 1px solid #D4DEE5;
         /* Default unchecked state */
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease-in-out;
         @include respond-to(xxl) {
-            width: 36px;
-            height: 36px;
+            width: 30px;
+            height: 30px;
         }
     }
     /* Checked state */
@@ -89,26 +89,23 @@
     }
 }
 
-// Checkbox styling
-.form-check-input {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
 // Status badge styles
 .badge {
     padding: 6px 12px;
-    font-size: 12px;
-    border-radius: 12px;
-    font-weight: 600;
+    border-radius: 25px;
+    font-family: $interLight;
+    @include responsive-font(0.75em, 0.75em, 1em);
+    @include respond-to(xxl) {
+        padding: 10px 18px;
+    }
 }
 
 .status-in-transit {
-    background-color: #e6f9e6;
-    color: #2e9b2e;
+    background-color: #ECFFF3;
+    color: $green;
 }
 
 .status-processing {
-    background-color: #fff3cd;
-    color: #856404;
+    background-color: #FFFCEC;
+    color: #B99608;
 }
