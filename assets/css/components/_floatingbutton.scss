@@ -1,0 +1,113 @@
+.help-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+
+  .help-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
+
+    &:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    &__text {
+      font-size: 16px;
+      font-family: $figtreeSemiBold;
+      color: #373434;
+    }
+
+    &__icon {
+      &--active {
+        display: none;
+      }
+    }
+  }
+
+  .help-menu {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 255px;
+    padding: 16px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      visibility: visible;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 8px;
+      transition: background-color 0.2s;
+      animation: fadeInUp 0.3s forwards;
+      opacity: 0;
+      border-radius: 8px;
+      color: #737171;
+      text-decoration: none;
+      transition: 400ms ease;
+
+      &:hover {
+        background-color: #f8f8fc;
+        color: #373434;
+      }
+
+      &:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.15s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.2s;
+      }
+    }
+
+    &__icon {
+    }
+
+    &__text {
+      font-size: 14px;
+      font-family: $figtreeSemiBold;
+    }
+  }
+}
+
+/* Animation for menu appearing */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
