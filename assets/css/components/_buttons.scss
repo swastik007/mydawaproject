@@ -15,6 +15,27 @@
     }
 }
 
+.btn-outline {
+    background-color: #fff;
+    color: $black;
+    font-family: $figtreeMedium;
+    border: 1px solid #D4DEE5;
+    box-shadow: none;
+    outline: none;
+    border-radius: 10px;
+    @include responsive-font(1em, 1em, 1.6em);
+    &:hover,
+    &:focus {
+        background-color: $grey2;
+        border-color: $primary;
+        color: $primary;
+        span,
+        svg {
+            color: $primary;
+        }
+    }
+}
+
 .btn-outline-light {
     background-color: #f3f3f3;
     color: $black;

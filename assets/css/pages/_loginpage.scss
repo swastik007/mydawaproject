@@ -1,99 +1,256 @@
-.login {
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 60px;
-  margin: 30px 0;
-  h1 {
-    font-family: $figtreeBold;
-  }
-  &__form {
-    .form-control {
-      margin-bottom: 15px;
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    @include respond-to(lg) {
+        padding: 40px;
     }
-    .form-label {
-      font-family: $figtreeMedium;
-      line-height: 30px;
+    @include respond-to(xxl) {
+        padding: 60px;
+    }
+    .auth-container {
+        width: 100%;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+    .auth-title {
+        text-align: left;
+        font-family: $figtreeExtraBold;
+        @include responsive-font(1.75em, 1.75em, 2.8em);
+    }
+    .auth-subtitle {
+        text-align: left;
+        margin-bottom: 1.5rem;
+        color: $black;
+        font-family: $figtree;
+        @include responsive-font(1em, 1em, 1.6em);
+    }
+    .auth-link {
+        color: $green;
+        text-decoration: none;
+        font-family: $figtreeBold;
+        margin-left: 7px;
+        border-bottom: 1px dashed $green;
+    }
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        input {
+            width: 100%;
+        }
+    }
+    .form-check-label {
+        margin-bottom: 0;
     }
     .view-pass {
-      position: absolute;
-      right: 18px;
-      top: 50%;
-      transform: translateY(-50%);
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
     }
-    .btn-submit {
-      margin-top: 30px;
-      border-radius: 30px;
+    .form-options {
+        .form-check {
+            display: flex;
+            align-items: center;
+            input {
+                margin-right: 10px;
+            }
+            label {
+                @include responsive-font(0.875em, 0.875em, 1.4em);
+            }
+        }
+        .auth-link {
+            font-family: $figtreeMedium;
+            @include responsive-font(0.875em, 0.875em, 1.4em);
+        }
     }
-  }
-  &__footer {
-    margin-top: 20px;
-    font-family: $figtreeMedium;
-    color: #5d5a6f;
-    a {
-      color: #5d5a6f;
+    .auth-btn {
+        width: 100%;
+        // padding: 0.75rem;
+        // font-size: 1rem;
+        // font-weight: 600;
+        // border-radius: 5px;
+        // text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin-bottom: 0.75rem;
+        &.btn-primary {
+            background-color: #e91e63;
+            border: none;
+        }
+        &.btn-outline {
+            border: 1px solid #ced4da;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+            }
+        }
+        &.google-auth {
+            color: #333;
+        }
+        &.facebook-auth {
+            color: #1877f2;
+        }
     }
-    .form-check {
-      display: flex;
-      align-items: center;
-      column-gap: 12px;
-      margin: 0;
-      &-input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-        margin-top: 0;
-      }
-      &-label {
-        font-family: $figtree;
-        margin: 0;
-      }
+    .divider {
+        text-align: center;
+        font-family: $figtreeSemiBold;
+        margin: 1rem 0;
+        position: relative;
+        @include responsive-font(0.875em, 0.875em, 1.4em);
+        @include respond-to(xxl) {
+            margin: 1.6em 0;
+        }
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 45%;
+            height: 1px;
+            background-color: #ced4da;
+            top: 50%;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
     }
-  }
+    .btn-primary {
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+            margin-left: 10px;
+            @include respond-to(xxl) {
+                width: 28px;
+                height: 28px;
+                margin-left: 16px;
+            }
+        }
+    }
+    .btn-social {
+        width: 100%;
+        display: flex;
+        column-gap: 20px;
+        color: $black;
+        align-items: center;
+        img {
+            width: 30px;
+        }
+        span {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+    }
+    .otp-inputs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 1.5rem;
+        .otp-box {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            text-align: center;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+            &:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+        }
+    }
 }
-.text-separator {
-  margin: 20px 0;
-  text-align: center;
-  overflow: hidden;
-  span {
-    position: relative;
-    padding: 10px;
-    &:before {
-      content: "";
-      width: 300px;
-      height: 1px;
-      background-color: #5d5a6f;
-      position: absolute;
-      left: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    &:after {
-      content: "";
-      width: 300px;
-      height: 1px;
-      background-color: #5d5a6f;
-      position: absolute;
-      right: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
-}
-.btn-social {
-  width: 100%;
-  display: flex;
-  column-gap: 20px;
-  padding: 5px;
-  color: #5d5a6f;
-  align-items: center;
-  border-radius: 30px;
-  margin-bottom: 16px;
-  svg {
-    width: 30px;
-  }
-  span {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-  }
-}
+
+// .login {
+//     padding: 60px;
+//     margin: 30px 0;
+//     h1 {
+//         font-family: $figtreeBold;
+//     }
+//     &__form {
+//         .form-control {
+//             margin-bottom: 15px;
+//         }
+//         .form-label {
+//             font-family: $figtreeMedium;
+//             line-height: 30px;
+//         }
+//         .view-pass {
+//             position: absolute;
+//             right: 18px;
+//             top: 50%;
+//             transform: translateY(-50%);
+//         }
+//         .btn-submit {
+//             margin-top: 30px;
+//             border-radius: 30px;
+//         }
+//     }
+//     &__footer {
+//         margin-top: 20px;
+//         font-family: $figtreeMedium;
+//         color: #5d5a6f;
+//         a {
+//             color: #5d5a6f;
+//         }
+//         .form-check {
+//             display: flex;
+//             align-items: center;
+//             column-gap: 12px;
+//             margin: 0;
+//             &-input[type="checkbox"] {
+//                 width: 20px;
+//                 height: 20px;
+//                 margin-top: 0;
+//             }
+//             &-label {
+//                 font-family: $figtree;
+//                 margin: 0;
+//             }
+//         }
+//     }
+// }
+// .text-separator {
+//     margin: 20px 0;
+//     text-align: center;
+//     overflow: hidden;
+//     span {
+//         position: relative;
+//         padding: 10px;
+//         &:before {
+//             content: "";
+//             width: 300px;
+//             height: 1px;
+//             background-color: #5d5a6f;
+//             position: absolute;
+//             left: 100%;
+//             top: 50%;
+//             transform: translateY(-50%);
+//         }
+//         &:after {
+//             content: "";
+//             width: 300px;
+//             height: 1px;
+//             background-color: #5d5a6f;
+//             position: absolute;
+//             right: 100%;
+//             top: 50%;
+//             transform: translateY(-50%);
+//         }
+//     }
+// }

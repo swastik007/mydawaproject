@@ -132,6 +132,98 @@
     }
 }
 
+
+/* Login slider */
+
+.login-slider {
+    position: relative;
+    .banner-content-wrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-start;
+        top: 10px; // Align to top
+        bottom: 10px; // Allow flexibility for bottom alignment
+        transform: none; // Remove centering for small screens
+        justify-content: flex-start;
+        @include respond-to(lg) {
+            // On large screens
+            align-items: flex-start; // Center-align content inside
+            left: 10px;
+            top: 50%; // Move it to the vertical center
+            transform: translateY(-50%); // Adjust centering
+        }
+    }
+    .text-content {
+        text-align: left;
+        color: white;
+        line-height: 1.5;
+        margin-left: 20px;
+        margin-top: 20px;
+        @include respond-to(lg) {
+            margin-top: 0;
+        }
+        @include respond-to(xxl) {
+            margin-left: 60px;
+        }
+        h5 {
+            font-size: 1.25em;
+            font-family: $figtreeLight;
+            margin-bottom: 0px;
+            @include respond-to(xxl) {
+                font-size: 2em;
+            }
+        }
+        h2 {
+            font-size: 2em;
+            font-family: $figtreeExtraBold;
+            line-height: 1.1;
+            max-width: 300px;
+            @include respond-to(sm) {
+                font-size: 3.2em;
+                max-width: 600px;
+            }
+            @include respond-to(lg) {
+                font-size: 3.2em;
+                max-width: 700px;
+            }
+            @include respond-to(xxl) {
+                font-size: 4em;
+                max-width: 850px;
+            }
+        }
+    }
+    // Styling for Owl Carousel Dots on Top of the Image
+    .owl-dots {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        align-items: flex-start;
+        top: -10px; // Align to top
+        bottom: 10px; // Allow flexibility for bottom alignment
+        transform: none; // Remove centering for small screens
+        justify-content: flex-start;
+        @include respond-to(lg) {
+            // On large screens
+            align-items: flex-start; // Center-align content inside
+            left: 10px;
+            top: 40%; // Move it to the vertical center
+            transform: translateY(-50%); // Adjust centering
+        }
+        .owl-dot {
+            width: 30px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3); // Default color for inactive dots
+            border-radius: 3px; // Rounded edges
+            transition: all 0.3s ease-in-out;
+        }
+        .owl-dot.active {
+            width: 50px; // Longer active indicator
+            background: #ffffff; // White active dot
+        }
+    }
+}
+
 .offer-section,
 .popular-products,
 .blog-section {

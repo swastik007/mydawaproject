@@ -1,6 +1,6 @@
 console.log("🚀 jQuery script is running!");
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     loadComponents();
     setupEventListeners();
     // Ensure carousels are initialized on all pages
@@ -86,6 +86,7 @@ function initializeCarousels() {
         { id: "#categoryoffers-carousel", options: { loop: true, margin: 10, nav: false, dots: false, responsive: { 0: { items: 1 }, 400: { items: 2.8 }, 768: { items: 3 }, 1024: { items: 5 }, 1920: { items: 7 } } } },
         { id: "#musthavedeals-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
         { id: "#lastminutebuys-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
+        { id: "#login-carousel", options: { loop: true, margin: 10, nav: false, dots: true, items: 1 } },
 
     ];
 
@@ -127,7 +128,7 @@ function initializeHealthJourneyCarousel() {
         }
     }
 }
-$(document).ready(function () {
+$(document).ready(function() {
     $("#wishlist-carousel").owlCarousel({
         loop: false,
         margin: 15,
@@ -162,11 +163,11 @@ function getNavText() {
 
 // Function to setup event listeners
 function setupEventListeners() {
-    document.addEventListener("click", function (e) {
+    document.addEventListener("click", function(e) {
         if (e.target.matches(".category-toggle")) toggleCategoryMenu(e);
     });
 
-    document.addEventListener("keydown", function (e) {
+    document.addEventListener("keydown", function(e) {
         if (e.key === "Escape") closeCategoryMenu();
     });
 
@@ -272,7 +273,7 @@ function setupQuantityControls() {
 
 // Wishlist Popup
 function setupWishlistPopup() {
-    $(document).on("click", ".btn-wishlist", function (e) {
+    $(document).on("click", ".btn-wishlist", function(e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -287,12 +288,12 @@ function setupWishlistPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function () {
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
         $("#wishlistModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function (e) {
+    $(window).on("click", function(e) {
         if ($(e.target).is("#wishlistModal")) {
             $("#wishlistModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
@@ -302,7 +303,7 @@ function setupWishlistPopup() {
 
 // Wishlist PIN Popup
 function setupWishlistPinPopup() {
-    $(document).on("click", ".btn-wishlistpin", function (e) {
+    $(document).on("click", ".btn-wishlistpin", function(e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -317,12 +318,12 @@ function setupWishlistPinPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function () {
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
         $("#wishlistModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function (e) {
+    $(window).on("click", function(e) {
         if ($(e.target).is("#wishlistModal")) {
             $("#wishlistModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
@@ -335,7 +336,7 @@ function setupWishlistPinPopup() {
 
 // Speak to doctor
 function setupPopup() {
-    $(document).on("click", ".btn-popup", function (e) {
+    $(document).on("click", ".btn-popup", function(e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -348,19 +349,19 @@ function setupPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function () {
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
         $("#popupModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function (e) {
+    $(window).on("click", function(e) {
         if ($(e.target).is("#popupModal")) {
             $("#popupModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
         }
     });
 }
-$(window).on("load", function () {
+$(window).on("load", function() {
     console.log("🚀 jQuery Step Navigation Loaded!");
 
     let currentStep = 0;
@@ -385,7 +386,7 @@ $(window).on("load", function () {
 
         // Update step indicators
         steps.removeClass("selected completed");
-        steps.each(function (index) {
+        steps.each(function(index) {
             if (index < currentStep) {
                 $(this).addClass("completed");
             } else if (index === currentStep) {
@@ -397,7 +398,7 @@ $(window).on("load", function () {
     }
 
     // Handle "Continue" button clicks
-    $(".btn-next").click(function () {
+    $(".btn-next").click(function() {
         console.log("➡️ Next button clicked.");
         if (currentStep < stepSections.length - 1) {
             currentStep++;
@@ -406,7 +407,7 @@ $(window).on("load", function () {
     });
 
     // Handle "Previous" button clicks
-    $(".btn-prev").click(function () {
+    $(".btn-prev").click(function() {
         console.log("⬅️ Previous button clicked.");
         if (currentStep > 0) {
             currentStep--;
@@ -418,7 +419,7 @@ $(window).on("load", function () {
     updateStep();
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
     function waitForHeader() {
         let header = $(".site-header")[0]; // Get the actual DOM node
         if (!header) {
@@ -458,8 +459,8 @@ $(document).ready(function () {
         checkSticky(); // Run on load
 
         // **Mutation Observer: Reapply .sticky if removed**
-        const observer = new MutationObserver(function (mutations) {
-            mutations.forEach(function (mutation) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
                 if (!header.hasClass("sticky") && $(window).scrollTop() > 50) {
                     console.warn("⚠️ .sticky was removed, reapplying!");
                     header.addClass("sticky");
@@ -473,7 +474,7 @@ $(document).ready(function () {
     waitForHeader(); // Start checking for header
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     console.log("JavaScript loaded successfully!"); // Debugging
 
     // Recipient Selection (Myself/Dependent)
@@ -575,7 +576,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.querySelectorAll('.dropdown-item').forEach(item => {
-    item.addEventListener('click', function () {
+    item.addEventListener('click', function() {
         const dropdownBtn = document.getElementById('dropdownMenuButton');
         dropdownBtn.textContent = this.textContent;
 
@@ -586,11 +587,11 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
 });
 
 // Floating Icon
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const helpButton = document.getElementById("helpButton");
     const helpMenu = document.getElementById("helpMenu");
 
-    helpButton.addEventListener("click", function () {
+    helpButton.addEventListener("click", function() {
         helpMenu.classList.toggle("active");
 
         // Toggle button icon between plus and times
@@ -618,7 +619,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close menu when clicking outside
-    document.addEventListener("click", function (event) {
+    document.addEventListener("click", function(event) {
         const isClickInside =
             helpButton.contains(event.target) ||
             helpMenu.contains(event.target);

@@ -1,5 +1,8 @@
 // Form input & text area
-input,
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
 select,
 textarea {
     border: 1px solid #d4dee5;
