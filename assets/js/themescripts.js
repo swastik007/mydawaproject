@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ensure carousels are initialized on all pages
     setTimeout(() => {
         initializeCarousels();
-    }, 2000);
+    }, 100);
 });
 
 // Function to load HTML components dynamically
