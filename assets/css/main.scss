@@ -52,9 +52,15 @@
 @import "./components/steps";
 @import "./components/datetime";
 @import "./components/floatingbutton";
+@import "./components/offerbanner";
+@import "./components/topheader";
+@import "./components/search";
+@import "./components/cart";
+@import "./components/deliverydropdown";
 // Header / Footer Layout
 @import "./layouts/header";
 @import "./layouts/footer";
+@import "./layouts/mainnavigation";
 // Page Layout
 @import "./layouts/floatingsearch";
 @import "./layouts/banners";

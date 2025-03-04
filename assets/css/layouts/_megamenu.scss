@@ -1,11 +1,17 @@
-.category-dropdown.active .category-menu,
-.category-dropdown:hover .category-menu {
-  display: block;
+.main-dropdown {
+  position: relative;
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  &:hover {
+    .dropdown-list {
+      display: block;
+    }
+  }
 }
-// .has-submenu.active .submenu,
-// .has-submenu:hover .submenu {
-//   display: block;
-// }
 
 .category-list {
   display: flex;
@@ -39,11 +45,7 @@
   }
 }
 
-.category-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+.mega-menu {
   width: 870px;
   min-height: 400px;
   background: white;
