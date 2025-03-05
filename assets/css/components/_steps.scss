@@ -28,7 +28,7 @@
                 background: #e7ecf4;
                 color: $black;
                 margin-right: 10px;
-                @include responsive-font(0.75em, 0.75em, 1em);
+                @include responsive-font(14px, 14px, 22px);
                 font-family: $figtreeSemiBold;
                 @include respond-to(xxl) {
                     width: 35px;
@@ -46,7 +46,7 @@
             .step-text {
                 white-space: nowrap;
                 font-family: $figtreeMedium;
-                @include responsive-font(1em, 1em, 1.6em);
+                @include responsive-font(16px, 16px, 28px);
                 text-transform: capitalize;
             }
             &:not(:last-child)::after {

@@ -102,34 +102,6 @@
             /* Maintain aspect ratio and cover the entire container */
         }
     }
-    .custom-dots-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px; // Default position (for mobile)
-    }
-    .custom-dots-container .owl-dot {
-        width: 12px;
-        height: 12px;
-        margin: 0 5px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-        transition: background 0.3s ease;
-    }
-    .custom-dots-container .owl-dot.active {
-        background-color: white;
-    }
-    @media (min-width: 1200px) {
-        .text-content {
-            position: relative;
-        }
-        .custom-dots-container {
-            position: absolute;
-            top: -40px; // Move dots to the top inside text-content
-            left: 0;
-            right: 0;
-            justify-content: flex-start;
-        }
-    }
 }
 
 
@@ -150,8 +122,11 @@
             // On large screens
             align-items: flex-start; // Center-align content inside
             left: 10px;
-            top: 50%; // Move it to the vertical center
-            transform: translateY(-50%); // Adjust centering
+            top: 170px;
+            max-width: 550px;
+        }
+        @include respond-to(xxl) {
+            max-width: 740px;
         }
     }
     .text-content {
@@ -167,59 +142,59 @@
             margin-left: 60px;
         }
         h5 {
-            font-size: 1.25em;
             font-family: $figtreeLight;
             margin-bottom: 0px;
-            @include respond-to(xxl) {
-                font-size: 2em;
-            }
+            @include responsive-font(1em, 1em, 1.6em);
         }
         h2 {
-            font-size: 2em;
             font-family: $figtreeExtraBold;
-            line-height: 1.1;
+            line-height: 1.5;
             max-width: 300px;
+            @include responsive-font(2em, 2em, 3.2em);
             @include respond-to(sm) {
-                font-size: 3.2em;
-                max-width: 600px;
+                max-width: 400px;
             }
             @include respond-to(lg) {
-                font-size: 3.2em;
-                max-width: 700px;
+                max-width: 550px;
             }
             @include respond-to(xxl) {
-                font-size: 4em;
-                max-width: 850px;
+                max-width: 700px;
             }
         }
     }
     // Styling for Owl Carousel Dots on Top of the Image
-    .owl-dots {
+    .custom-dots-container {
         display: flex;
-        flex-direction: row;
-        position: absolute;
-        align-items: flex-start;
-        top: -10px; // Align to top
-        bottom: 10px; // Allow flexibility for bottom alignment
-        transform: none; // Remove centering for small screens
         justify-content: flex-start;
-        @include respond-to(lg) {
-            // On large screens
-            align-items: flex-start; // Center-align content inside
-            left: 10px;
-            top: 40%; // Move it to the vertical center
-            transform: translateY(-50%); // Adjust centering
+        position: absolute;
+        right: 0;
+        z-index: 8;
+        top: 50px;
+        left: 78px;
+        @include respond-to(xxl) {
+            top: 120px;
+            left: 80px;
         }
         .owl-dot {
-            width: 30px;
-            height: 6px;
-            background: rgba(255, 255, 255, 0.3); // Default color for inactive dots
-            border-radius: 3px; // Rounded edges
-            transition: all 0.3s ease-in-out;
-        }
-        .owl-dot.active {
-            width: 50px; // Longer active indicator
-            background: #ffffff; // White active dot
+            width: 20px;
+            height: 4px;
+            margin: 0 5px;
+            background-color: rgba(250, 250, 250, 0.4);
+            border-radius: 12px;
+            transition: background 0.3s ease;
+            outline: 0;
+            border: none;
+            @include respond-to(xxl) {
+                width: 35px;
+                height: 6px;
+            }
+            &.active {
+                background-color: white;
+                width: 44px;
+                @include respond-to(xxl) {
+                    width: 75px;
+                }
+            }
         }
     }
 }

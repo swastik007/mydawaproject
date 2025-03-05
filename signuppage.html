@@ -20,7 +20,7 @@
     <div id="header"></div>
     <main class="dawamain">
         <div class="page-content">
-            <div class="container-fluid">
+            <div class="d-block w-100 mx-auto">
                 <div class="row justify-content-center">
                     <div class="col-md-6 login-slider">
                         <div id="login-carousel" class="owl-carousel owl-theme">
@@ -32,6 +32,7 @@
                                 </picture>
 
                                 <div class="banner-content-wrap">
+
                                     <div class="text-content">
                                         <h5>I Choose Wellness</h5>
                                         <h2>Kenya’s Most Trusted Online Pharmacy, for Affordable and Genuine Medicine.</h2>
@@ -43,9 +44,10 @@
                                 <picture>
                                     <!-- <source srcset="assets/images/banners/homeslider2lg.png" media="(min-width: 1200px)"> -->
                                     <!-- <source srcset="assets/images/banners/homeslider2sm.png" media="(min-width: 768px)"> -->
-                                    <img src="assets/images/banners/homeslider2sm.png" alt="Home Slider" class="img-fluid w-100">
+                                    <img src="assets/images/banners/slider-login-img2.jpg" alt="Home Slider" class="img-fluid w-100">
                                 </picture>
                                 <div class="banner-content-wrap">
+
                                     <div class="text-content">
                                         <h5>Get you health in balance</h5>
                                         <h2>Wide range of products <br> to choose from.</h2>
@@ -54,9 +56,23 @@
                                 </div>
 
                             </div>
-                        </div>
+                            <div class="slide-item position-relative text-white">
+                                <picture>
+                                    <!-- <source srcset="assets/images/banners/homeslider2lg.png" media="(min-width: 1200px)"> -->
+                                    <!-- <source srcset="assets/images/banners/homeslider2sm.png" media="(min-width: 768px)"> -->
+                                    <img src="assets/images/banners/slider-login-img3.jpg" alt="Home Slider" class="img-fluid w-100">
+                                </picture>
+                                <div class="banner-content-wrap">
 
-                        <!-- Custom Dots Container (Ensure it exists inside the home-slider) -->
+                                    <div class="text-content">
+                                        <h5>Let’s Talk Contraceptives</h5>
+                                        <h2>Family planning empowers your family to live healthier and happier lives</h2>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="custom-dots-container"></div>
                     </div>
                     <div class="col-md-6">
@@ -69,65 +85,70 @@
 
                                 <form>
                                     <!-- Name -->
-                                    <div class="input-group">
+                                    <div class="input-group mb-4">
                                         <label for="fullName">Name <span class="required">*</span></label>
                                         <input type="text" id="fullName" placeholder="Enter Your Name" required>
                                     </div>
 
                                     <!-- Phone Number -->
-                                    <div class="input-group">
+                                    <div class="input-group mb-4">
                                         <label for="phoneNumber">Phone Number <span class="required">*</span></label>
                                         <div class="input-icon">
-                                            <img src="assets/images/icons/phone-icon.svg" alt="Phone">
+                                            <img src="assets/images/icons/form-icon-call.png" alt="Phone">
                                             <input type="text" id="phoneNumber" placeholder="+977 0123456789" required>
                                         </div>
                                     </div>
 
                                     <!-- Email ID -->
-                                    <div class="input-group">
+                                    <div class="input-group mb-4">
                                         <label for="email">Email ID <span class="required">*</span></label>
-                                        <input type="email" id="email" placeholder="Enter Your Email" required>
+                                        <div class="input-icon">
+                                            <img src="assets/images/icons/form-icon-mail.png" alt="Phone">
+                                            <input type="text" id="email" placeholder="Enter Your Email" required>
+                                        </div>
                                     </div>
 
                                     <!-- Password -->
-                                    <div class="input-group password-group">
-                                        <label for="password">Password <span class="required">*</span></label>
-                                        <div class="password-wrapper">
-                                            <input type="password" id="password" placeholder="Enter Password" required>
-                                            <span class="toggle-password" data-target="password">
-                                                <img src="assets/images/icons/login-eye.svg" alt="Toggle Password">
-                                            </span>
+                                    <!-- Password Input -->
+                                    <div class="input-group password-group  mb-4">
+                                        <label for="InputPassword" class="form-label">Password<span class="required">*</span></label>
+                                        <div class="position-relative w-100">
+                                            <input type="password" id="InputPassword" placeholder="Password" />
+                                            <a href="#" class="view-pass" id="ViewPass">
+                                                <img src="./assets/images/icons/login-eye.svg" alt="Show Password Icon" />
+                                            </a>
                                         </div>
                                     </div>
 
                                     <!-- Confirm Password -->
-                                    <div class="input-group password-group">
-                                        <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
-                                        <div class="password-wrapper">
-                                            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-                                            <span class="toggle-password" data-target="confirmPassword">
-                                                <img src="assets/images/icons/login-eye.svg" alt="Toggle Password">
-                                            </span>
+                                    <!-- Password Input -->
+                                    <div class="input-group password-group mb-4 ">
+                                        <label for="InputPassword" class="form-label">Confirm Password<span class="required">*</span></label>
+                                        <div class="position-relative w-100">
+                                            <input type="password" id="InputPassword" placeholder="Password" />
+                                            <a href="#" class="view-pass" id="ViewPass">
+                                                <img src="./assets/images/icons/login-eye.svg" alt="Show Password Icon" />
+                                            </a>
                                         </div>
                                     </div>
 
                                     <!-- Terms & Conditions -->
-                                    <div class="form-options">
-                                        <div class="form-check">
+                                    <div class="form-options mt-3 mt-xl-4">
+                                        <div class="form-check mb-3">
                                             <input class="form-check-input" type="checkbox" id="updates">
                                             <label class="form-check-label" for="updates">
                                                 Get the latest updates on new products and offers from Mydawa
                                             </label>
                                         </div>
 
-                                        <div class="form-check">
+                                        <div class="form-check mb-3">
                                             <input class="form-check-input" type="checkbox" id="terms" required>
                                             <label class="form-check-label" for="terms">
                                                 I accept the <a href="#">Terms and conditions</a> and <a href="#">Privacy Policy</a> <span class="required">*</span>
                                             </label>
                                         </div>
 
-                                        <div class="form-check">
+                                        <div class="form-check mb-3">
                                             <input class="form-check-input" type="checkbox" id="ageConfirm" required>
                                             <label class="form-check-label" for="ageConfirm">
                                                 I am over 18 years old <span class="required">*</span>
@@ -135,9 +156,9 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary auth-btn">Create Account</button>
+                                    <button type="submit" class="btn btn-primary btn-rounded btn-lg auth-btn my-3">Create Account</button>
 
-                                    <p class="terms-note">
+                                    <p class="terms-note text-center">
                                         By creating an account, you agree to MYDAWA <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
                                     </p>
                                 </form>
@@ -156,22 +177,20 @@
     <script src="assets/js/themescripts.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const toggleButtons = document.querySelectorAll(".toggle-password");
+            const passwordField = document.getElementById("InputPassword");
+            const toggleButton = document.getElementById("ViewPass");
+            const toggleIcon = toggleButton.querySelector("img");
 
-            toggleButtons.forEach(button => {
-                button.addEventListener("click", function() {
-                    const targetId = this.getAttribute("data-target");
-                    const passwordField = document.getElementById(targetId);
-                    const icon = this.querySelector("img");
+            toggleButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevents anchor from navigating
 
-                    if (passwordField.type === "password") {
-                        passwordField.type = "text";
-                        icon.src = "assets/images/icons/login-eye-slash.svg"; // Replace with closed eye icon
-                    } else {
-                        passwordField.type = "password";
-                        icon.src = "assets/images/icons/login-eye.svg"; // Open eye icon
-                    }
-                });
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                    toggleIcon.src = "./assets/images/icons/login-eye-slash.svg";
+                } else {
+                    passwordField.type = "password";
+                    toggleIcon.src = "./assets/images/icons/login-eye.svg";
+                }
             });
         });
     </script>

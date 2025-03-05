@@ -86,7 +86,8 @@ function initializeCarousels() {
         { id: "#categoryoffers-carousel", options: { loop: true, margin: 10, nav: false, dots: false, responsive: { 0: { items: 1 }, 400: { items: 2.8 }, 768: { items: 3 }, 1024: { items: 5 }, 1920: { items: 7 } } } },
         { id: "#musthavedeals-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
         { id: "#lastminutebuys-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 3 }, 1200: { items: 3.9 } } } },
-        { id: "#login-carousel", options: { loop: true, margin: 10, nav: false, dots: true, items: 1 } },
+        { id: "#login-carousel", options: { loop: true, margin: 10, nav: false, items: 1, autoplay: true, autoplayTimeout: 50000, smartSpeed: 600, dots: true, dotsContainer: ".custom-dots-container" } },
+
 
     ];
 
