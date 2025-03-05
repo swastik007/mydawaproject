@@ -464,7 +464,7 @@
                         <a
                           href="#"
                           class="menu-item"
-                          data-category="category-two"
+                          data-category="categoryTwo"
                         >
                           <div class="d-flex align-items-center flex-grow-1">
                             <img
@@ -951,8 +951,118 @@
             },
           },
         },
-      };
+        categoryTwo: {
+          title: "Electronics",
+          subcategories: {
+            nailcare: {
+              title: "Nail Care",
+              products: [
+                "Sun Protection",
+                "Moisturizer",
+                "Body Wash & Soaps",
+                "Scrubs",
+                "Acne Care",
+                "Lip Care",
+                "Scrubs",
+                "Acne Care",
+                "Sun Protection",
+                "Lip Care",
+              ],
+            },
+            bodycare1: {
+              title: "Body Care",
+              products: [
+                "Moisturizer",
+                "Body Wash & Soaps",
+                "Scrubs",
+                "Acne Care",
+                "Sun Protection",
+                "Lip Care",
+                "Scrubs",
+                "Acne Care",
+                "Sun Protection",
+                "Lip Care",
+              ],
+            },
+            nailcare1: {
+              title: "Nail Care",
+              products: [
+                "Sun Protection",
+                "Moisturizer",
+                "Body Wash & Soaps",
+                "Scrubs",
+                "Acne Care",
+                "Lip Care",
+                "Scrubs",
+                "Acne Care",
+                "Sun Protection",
+                "Lip Care",
+              ],
+            },
+            haircare1: {
+              title: "Hair care",
+              products: [
+                "Scrubs",
+                "Sun Protection",
+                "Moisturizer",
+                "Body Wash & Soaps",
+                "Scrubs",
+                "Acne Care",
+                "Lip Care",
+                "Acne Care",
+                "Sun Protection",
+                "Lip Care",
+              ],
+            },
+            facecare1: {
+              title: "Face Care",
+              products: [
+                "Lip Care",
+                "Sun Protection",
+                "Moisturizer",
+                "Body Wash & Soaps",
+                "Scrubs",
+                "Acne Care",
+                "Lip Care",
+                "Scrubs",
+                "Acne Care",
+                "Sun Protection",
+              ],
+            },
 
+            haircare: {
+              title: "Hair care",
+              products: [
+                "Scrubs",
+                "Sun Protection",
+                "Moisturizer",
+                "Body Wash & Soaps",
+                "Scrubs",
+                "Acne Care",
+                "Lip Care",
+                "Acne Care",
+                "Sun Protection",
+                "Lip Care",
+              ],
+            },
+            facecare: {
+              title: "Face Care",
+              products: [
+                "Lip Care",
+                "Sun Protection",
+                "Moisturizer",
+                "Body Wash & Soaps",
+                "Scrubs",
+                "Acne Care",
+                "Lip Care",
+                "Scrubs",
+                "Acne Care",
+                "Sun Protection",
+              ],
+            },
+          },
+        },
+      };
       document.addEventListener("DOMContentLoaded", function () {
         const mainCategories = document.querySelectorAll(
           "#main-categories .menu-item"
@@ -969,20 +1079,29 @@
           if (!data) return;
 
           subcategoriesColumn.innerHTML = "";
-          Object.entries(data.subcategories).forEach(([key, subcategory]) => {
+          const subcategoryEntries = Object.entries(data.subcategories);
+
+          // Render subcategories
+          subcategoryEntries.forEach(([key, subcategory], index) => {
             const item = document.createElement("a");
             item.href = "#";
-            item.className = "menu-item";
+            item.className = `menu-item ${index === 0 ? "active" : ""}`;
             item.dataset.subcategory = key;
             item.dataset.parentCategory = category;
             item.innerHTML = `
-                <span>${subcategory.title}</span>
-                <i class="menu-item-arrow bx bx-chevron-right"></i>
-            `;
+          <span>${subcategory.title}</span>
+          <i class="menu-item-arrow bx bx-chevron-right"></i>
+      `;
             subcategoriesColumn.appendChild(item);
           });
+
           subcategoriesColumn.style.display = "block";
-          productsColumn.style.display = "none";
+
+          // Show products of the first subcategory automatically
+          if (subcategoryEntries.length > 0) {
+            const firstSubcategoryKey = subcategoryEntries[0][0];
+            showProducts(category, firstSubcategoryKey);
+          }
 
           // Add hover listeners to new subcategory items
           const subcategoryItems =
@@ -1004,17 +1123,24 @@
           if (!data) return;
 
           productsColumn.innerHTML = "";
-          data.products.forEach((product) => {
+          data.products.forEach((product, index) => {
             const item = document.createElement("a");
             item.href = "#";
-            item.className = "menu-item";
+            item.className = `menu-item ${index === 0 ? "" : ""}`;
             item.innerHTML = `
-                    <span>${product}</span>
-                    <i class="menu-item-arrow bx bx-chevron-right"></i>
-            `;
+          <span>${product}</span>
+          <i class="menu-item-arrow bx bx-chevron-right"></i>
+      `;
             productsColumn.appendChild(item);
           });
           productsColumn.style.display = "block";
+        }
+
+        // Initial load - activate first main category
+        if (mainCategories.length > 0) {
+          const firstCategory = mainCategories[0];
+          firstCategory.classList.add("active");
+          showSubcategories(firstCategory.dataset.category);
         }
 
         // Main category hover handlers
@@ -1032,8 +1158,97 @@
           subcategoriesColumn.style.display = "none";
           productsColumn.style.display = "none";
           clearActive(mainCategories);
+
+          // Restore initial state
+          if (mainCategories.length > 0) {
+            const firstCategory = mainCategories[0];
+            firstCategory.classList.add("active");
+            showSubcategories(firstCategory.dataset.category);
+          }
         });
       });
+
+      //   document.addEventListener("DOMContentLoaded", function () {
+      //     const mainCategories = document.querySelectorAll(
+      //       "#main-categories .menu-item"
+      //     );
+      //     const subcategoriesColumn = document.getElementById("subcategories");
+      //     const productsColumn = document.getElementById("products");
+
+      //     function clearActive(elements) {
+      //       elements.forEach((el) => el.classList.remove("active"));
+      //     }
+
+      //     function showSubcategories(category) {
+      //       const data = menuData[category];
+      //       if (!data) return;
+
+      //       subcategoriesColumn.innerHTML = "";
+      //       Object.entries(data.subcategories).forEach(([key, subcategory]) => {
+      //         const item = document.createElement("a");
+      //         item.href = "#";
+      //         item.className = "menu-item";
+      //         item.dataset.subcategory = key;
+      //         item.dataset.parentCategory = category;
+      //         item.innerHTML = `
+      //             <span>${subcategory.title}</span>
+      //             <i class="menu-item-arrow bx bx-chevron-right"></i>
+      //         `;
+      //         subcategoriesColumn.appendChild(item);
+      //       });
+      //       subcategoriesColumn.style.display = "block";
+      //       productsColumn.style.display = "none";
+
+      //       // Add hover listeners to new subcategory items
+      //       const subcategoryItems =
+      //         subcategoriesColumn.querySelectorAll(".menu-item");
+      //       subcategoryItems.forEach((item) => {
+      //         item.addEventListener("mouseenter", function () {
+      //           clearActive(subcategoryItems);
+      //           this.classList.add("active");
+      //           showProducts(
+      //             this.dataset.parentCategory,
+      //             this.dataset.subcategory
+      //           );
+      //         });
+      //       });
+      //     }
+
+      //     function showProducts(category, subcategory) {
+      //       const data = menuData[category].subcategories[subcategory];
+      //       if (!data) return;
+
+      //       productsColumn.innerHTML = "";
+      //       data.products.forEach((product) => {
+      //         const item = document.createElement("a");
+      //         item.href = "#";
+      //         item.className = "menu-item";
+      //         item.innerHTML = `
+      //                 <span>${product}</span>
+      //                 <i class="menu-item-arrow bx bx-chevron-right"></i>
+      //         `;
+      //         productsColumn.appendChild(item);
+      //       });
+      //       productsColumn.style.display = "block";
+      //     }
+
+      //     // Main category hover handlers
+      //     mainCategories.forEach((category) => {
+      //       category.addEventListener("mouseenter", function () {
+      //         clearActive(mainCategories);
+      //         this.classList.add("active");
+      //         showSubcategories(this.dataset.category);
+      //       });
+      //     });
+
+      //     // Mouse leave handler for entire menu
+      //     const megaMenu = document.querySelector(".mega-menu");
+      //     megaMenu.addEventListener("mouseleave", function () {
+      //       subcategoriesColumn.style.display = "none";
+      //       productsColumn.style.display = "none";
+      //       clearActive(mainCategories);
+      //     });
+      //   });
     </script>
   </body>
 </html>
