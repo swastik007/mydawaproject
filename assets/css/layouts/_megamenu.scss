@@ -1,11 +1,20 @@
-.category-dropdown.active .category-menu,
-.category-dropdown:hover .category-menu {
-  display: block;
+.main-dropdown {
+  position: relative;
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  &:hover {
+    .dropdown-list {
+      display: block;
+      .mega-menu {
+        display: flex;
+      }
+    }
+  }
 }
-// .has-submenu.active .submenu,
-// .has-submenu:hover .submenu {
-//   display: block;
-// }
 
 .category-list {
   display: flex;
@@ -39,75 +48,51 @@
   }
 }
 
-.category-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+.mega-menu {
   width: 870px;
-  min-height: 400px;
+  max-width: 870px;
+  display: flex;
   background: white;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  z-index: 1000;
-  .has-submenu {
-    &:hover {
-      .submenu {
-        display: block;
-      }
-    }
-    &:first-child {
-      .submenu {
-        display: block;
-        .has-sub-submenu:first-child {
-          .sub-submenu {
-            display: block;
-          }
-        }
-      }
-    }
-  }
-  ul {
-    li {
-      a {
-        padding: 5px 0;
-        border-radius: 10px;
-        &:hover {
-          background-color: $grey2;
-        }
-      }
-    }
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  padding: 28px 8px;
+}
+
+.menu-column {
+  border-right: 1px solid #eee;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  flex-basis: calc(100% / 3);
+  height: calc(400px - (28px * 2));
+  overflow-x: scroll;
+  &:last-child {
+    border-right: none;
   }
 }
 
-.submenu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 280px;
-  padding: 10px 0;
-  border-left: 1px solid #f3f3fa;
-  .has-sub-submenu:hover {
-    .sub-submenu {
-      display: block;
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  text-decoration: none;
+  justify-content: space-between !important;
+  border-radius: 12px;
+  &:hover,
+  &.active {
+    background-color: #f8f9fa;
+    .menu-item-arrow {
+      opacity: 1;
     }
   }
 }
-
-.sub-submenu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 280px;
-  padding: 10px 0;
-  border-left: 1px solid #f3f3fa;
-}
-
-.list-column {
-  width: 280px;
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
+.bx.menu-item-arrow {
+  opacity: 0;
+  color: #b1b1c3;
+  font-size: 20px;
 }

@@ -1,0 +1,37 @@
+.top-header {
+  overflow: visible !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 999;
+  @include respond-to(xxl) {
+    padding: 32px 0;
+  }
+  .top-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .top-left-box {
+    display: flex;
+    align-items: center;
+    .ham {
+      min-width: 20px;
+      margin-right: 12px;
+      display: block;
+      @include respond-to(lg) {
+        display: none;
+      }
+    }
+  }
+  .top-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include respond-to(lg) {
+      gap: 24px;
+    }
+  }
+}
