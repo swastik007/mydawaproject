@@ -16050,6 +16050,10 @@ header {
     justify-content: flex-end;
   }
 }
+.header-navigation .right-nav-section button {
+  font-size: 14px;
+}
+
 .services-dropdown {
   position: relative;
   z-index: 111;
@@ -18387,6 +18391,9 @@ header {
 .main-dropdown:hover .dropdown-list {
   display: block;
 }
+.main-dropdown:hover .dropdown-list .mega-menu {
+  display: flex;
+}
 
 .category-list {
   display: flex;
@@ -18423,57 +18430,51 @@ header {
 
 .mega-menu {
   width: 870px;
-  min-height: 400px;
+  max-width: 870px;
+  display: flex;
   background: white;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  z-index: 1000;
-}
-.mega-menu .has-submenu:hover .submenu {
-  display: block;
-}
-.mega-menu .has-submenu:first-child .submenu {
-  display: block;
-}
-.mega-menu .has-submenu:first-child .submenu .has-sub-submenu:first-child .sub-submenu {
-  display: block;
-}
-.mega-menu ul li a {
-  padding: 5px 0;
-  border-radius: 10px;
-}
-.mega-menu ul li a:hover {
-  background-color: rgb(249, 249, 253);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  padding: 28px 8px;
 }
 
-.submenu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 280px;
-  padding: 10px 0;
-  border-left: 1px solid #f3f3fa;
-}
-.submenu .has-sub-submenu:hover .sub-submenu {
-  display: block;
-}
-
-.sub-submenu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 280px;
-  padding: 10px 0;
-  border-left: 1px solid #f3f3fa;
-}
-
-.list-column {
-  width: 280px;
-}
-.list-column ul {
+.menu-column {
+  border-right: 1px solid #eee;
+  background: white;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
+  flex-basis: 33.3333333333%;
+  height: 344px;
+  overflow-x: scroll;
+}
+.menu-column:last-child {
+  border-right: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  text-decoration: none;
+  justify-content: space-between !important;
+  border-radius: 12px;
+}
+.menu-item:hover, .menu-item.active {
+  background-color: #f8f9fa;
+}
+.menu-item:hover .menu-item-arrow, .menu-item.active .menu-item-arrow {
+  opacity: 1;
+}
+
+.bx.menu-item-arrow {
+  opacity: 0;
+  color: #b1b1c3;
+  font-size: 20px;
 }
 
 /* SCSS for Cart Page */
