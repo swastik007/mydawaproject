@@ -33,6 +33,7 @@
                 @include respond-to(xxl) {
                     width: 35px;
                     height: 35px;
+                    margin-right: 16px;
                 }
                 &.complete {
                     background: $greendark;

@@ -1,3 +1,88 @@
+.toggle-buttons {
+    display: flex;
+    .toggle-btn {
+        @include responsive-font(1em, 1em, 1.6em);
+        padding: 10px 25px;
+        margin-right: 7px;
+        background-color: #F3F3F3;
+        color: $black;
+        font-family: $figtreeSemiBold;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 12px;
+        &.active {
+            background-color: $primary;
+            color: white;
+        }
+    }
+}
+
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    h3 {
+        font-family: $figtreeSemiBold;
+        @include responsive-font(20px, 20px, 36px);
+        margin: 0;
+        text-align: left;
+    }
+    p {
+        font-family: $figtree;
+        @include responsive-font(14px, 14px, 20px);
+        color: $black;
+        line-height: 1.4;
+        flex-basis: 100%; // Ensures text wraps properly on small screens
+    }
+}
+
+.location-box {
+    border: 1px dashed #D4DEE5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+    .location-icon {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 10px;
+        @include respond-to(xxl) {
+            width: 116px;
+            height: 116px;
+            margin-bottom: 16px;
+        }
+    }
+    h4 {
+        @include responsive-font(14px, 14px, 22px);
+        font-family: $figtreeSemiBold;
+    }
+    p {
+        @include responsive-font(14px, 14px, 22px);
+        font-family: $figtreeSemiBold;
+    }
+    .add-address-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: 25px;
+        background: #222;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        &:hover {
+            background: #444;
+        }
+    }
+}
+
 .loyalty-card {
     display: flex;
     justify-content: space-between;
@@ -74,48 +159,6 @@
 #locationSelection {
     background: #fff;
     text-align: center;
-    .location-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #e0e0e0;
-        margin-bottom: 15px;
-        h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        p {
-            font-size: 0.875rem;
-            color: #6c757d;
-            margin: 5px 0 0;
-            flex-basis: 100%; // Ensures text wraps properly on small screens
-        }
-        .toggle-buttons {
-            display: flex;
-            background: #f5f5f5;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-top: 10px;
-            .toggle-btn {
-                padding: 10px 20px;
-                font-size: 0.875rem;
-                font-weight: 500;
-                border: none;
-                background: transparent;
-                cursor: pointer;
-                flex: 1;
-                transition: all 0.3s ease;
-                &.active {
-                    background: #e91e63;
-                    color: #fff;
-                    border-radius: 20px;
-                }
-            }
-        }
-    }
     .location-box {
         border: 1px dashed #ccc;
         border-radius: 10px;
