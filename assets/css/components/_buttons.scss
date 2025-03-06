@@ -142,9 +142,10 @@
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
+    @include responsive-font(1em, 1em, 1.6em);
     &:hover,
     &:focus {
-        background-color: #555;
+        background-color: $grey9;
         color: #fff;
     }
 }

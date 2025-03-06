@@ -43,29 +43,52 @@
 }
 
 .location-box {
-    border: 1px dashed #D4DEE5;
+    // border: 1px dashed #D4DEE5;
     border-radius: 12px;
-    padding: 20px;
+    padding: 40px;
     margin-top: 20px;
     text-align: center;
     background: #fff;
+    border: none;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 3px dashed #D4DEE5;
+        /* Customize thickness */
+        border-radius: 10px;
+        pointer-events: none;
+    }
+    @include respond-to(xxl) {
+        padding: 80px 60px;
+    }
     .location-icon {
         width: 72px;
         height: 72px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         @include respond-to(xxl) {
             width: 116px;
             height: 116px;
-            margin-bottom: 16px;
+            margin-bottom: 36px;
         }
     }
     h4 {
-        @include responsive-font(14px, 14px, 22px);
-        font-family: $figtreeSemiBold;
+        @include responsive-font(20px, 20px, 36px);
+        font-family: $figtreeBold;
+        line-height: 1.5;
     }
     p {
-        @include responsive-font(14px, 14px, 22px);
-        font-family: $figtreeSemiBold;
+        @include responsive-font(16px, 16px, 28px);
+        font-family: $figtreeMedium;
+        line-height: 1.5;
+        max-width: 300px;
+        @include respond-to(xxl) {
+            max-width: 500px;
+        }
     }
     .add-address-btn {
         padding: 10px 20px;
@@ -87,13 +110,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f9f9f9;
+    background: #F9F9FD;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 320px;
-    margin: auto;
+    margin: 30px auto;
     .icon-text {
         display: flex;
         align-items: center;
