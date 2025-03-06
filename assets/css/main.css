@@ -18134,7 +18134,7 @@ header {
   }
 }
 .symptoms-section .symptoms-wrap .steps .step .step-circle span {
-  font-weight: 16px;
+  font-size: 16px;
   font-family: "Figtree-Medium";
 }
 @media (min-width: 1200px) {
@@ -18142,6 +18142,14 @@ header {
     font-size: 18px;
     font-family: "Figtree-ExtraBold";
   }
+}
+.symptoms-section .symptoms-wrap .steps .step.visited .step-circle {
+  background-image: url("../../assets/images/icons/step-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.symptoms-section .symptoms-wrap .steps .step.visited .step-circle span {
+  font-size: 0;
 }
 .symptoms-section .symptoms-wrap .steps .step p {
   font-size: 14px;
@@ -18290,6 +18298,19 @@ header {
     height: 165px;
   }
 }
+.symptoms-section .symptom-card .image-bg.selected {
+  position: relative;
+  border: 2px solid #516bf1;
+}
+.symptoms-section .symptom-card .image-bg.selected:before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  right: -10px;
+  top: -10px;
+  background-image: url("../../assets/images/icons/img-check.svg");
+}
 .symptoms-section .symptom-card .image-bg.selected, .symptoms-section .symptom-card .image-bg:hover, .symptoms-section .symptom-card .image-bg:focus {
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
@@ -18348,10 +18369,6 @@ header {
   text-align: center;
   margin-bottom: 0;
 }
-.symptoms-section .btn-grey {
-  border-radius: 25px;
-}
-
 .step-section {
   display: none;
   opacity: 0;
@@ -18377,6 +18394,39 @@ header {
 .step-section.active {
   display: block;
   opacity: 1;
+}
+
+.stepper-btn-group {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.trigger-check {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.trigger-check .form-check {
+  padding: 0;
+}
+.trigger-check .form-check--label {
+  display: flex;
+  border-radius: 12px;
+  padding: 24px 20px 24px 48px;
+  line-height: 1;
+  border: 2px solid #e7e8ed;
+  color: #373434;
+  background-image: url("../../assets/images/icons/n-check.svg");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  font-size: 15px;
+  font-family: "Figtree-Bold";
+}
+.trigger-check .form-check .btn-check:checked + .form-check--label {
+  border: 2px solid #516bf1;
+  background-image: url("../../assets/images/icons/active-check.svg");
 }
 
 .main-dropdown {
