@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setupEventListeners();
     // Ensure carousels are initialized on all pages
     setTimeout(() => {
-        initializseCarousels();
+        initializeCarousels();
     }, 100);
 });
 
