@@ -43,35 +43,6 @@
             color: $greendark;
         }
     }
-    .input-group {
-        display: flex;
-        flex-direction: column;
-        input {
-            width: 100%;
-        }
-    }
-    .input-icon {
-        position: relative;
-        img {
-            position: absolute;
-            left: 7px;
-            top: 7px;
-            width: 20px;
-            height: 20px;
-            @include respond-to(xxl) {
-                width: 35px;
-                height: 35px;
-                left: 20px;
-                top: 20px;
-            }
-        }
-        input {
-            padding-left: 30px;
-            @include respond-to(xxl) {
-                padding-left: 70px;
-            }
-        }
-    }
     .form-check-label {
         margin-bottom: 0;
         @include responsive-font(0.875em, 0.875em, 1.4em);
@@ -226,6 +197,61 @@
                 box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
             }
         }
+    }
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    input {
+        width: 100%;
+    }
+}
+
+.input-icon {
+    position: relative;
+    img {
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        width: 20px;
+        height: 20px;
+        @include respond-to(xxl) {
+            width: 35px;
+            height: 35px;
+            left: 20px;
+            top: 20px;
+        }
+    }
+    input.with-icon {
+        padding-left: 30px;
+        @include respond-to(xxl) {
+            padding-left: 70px;
+        }
+    }
+    img.right-icon {
+        position: absolute;
+        left: auto;
+        right: 7px;
+        top: 7px;
+        width: 20px;
+        height: 20px;
+        @include respond-to(xxl) {
+            width: 35px;
+            height: 35px;
+            right: 20px;
+            top: 20px;
+        }
+    }
+}
+
+.form-bottom-info {
+    font-family: $figtreeLight;
+    @include responsive-font(13px, 13px, 20px);
+    line-height: 1.5;
+    margin-top: 5px;
+    @include respond-to(xxl) {
+        margin-top: 8px;
     }
 }
 

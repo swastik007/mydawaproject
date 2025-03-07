@@ -51,6 +51,10 @@
     background: #fff;
     border: none;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &:before {
         content: "";
         position: absolute;
@@ -175,154 +179,6 @@
     }
     input:checked+.slider:before {
         transform: translateX(14px);
-    }
-}
-
-#locationSelection {
-    background: #fff;
-    text-align: center;
-    .location-box {
-        border: 1px dashed #ccc;
-        border-radius: 10px;
-        padding: 20px;
-        margin-top: 20px;
-        text-align: center;
-        background: #fcfcfc;
-        .location-icon {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
-        }
-        h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        p {
-            font-size: 0.875rem;
-            color: #6c757d;
-            margin-bottom: 15px;
-        }
-        .add-address-btn {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-radius: 25px;
-            background: #222;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            &:hover {
-                background: #444;
-            }
-        }
-    }
-}
-
-// Responsive Adjustments
-@media (max-width: 768px) {
-    #locationSelection {
-        .location-header {
-            flex-direction: column;
-            text-align: center;
-        }
-        .toggle-buttons {
-            width: 100%;
-            margin-top: 10px;
-        }
-    }
-}
-
-#addressFormSection {
-    background: #fff;
-    width: 100%;
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    .input-row {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 1rem;
-        .input-group {
-            flex: 1;
-        }
-    }
-    .input-group {
-        margin-bottom: 1rem;
-        position: relative;
-        label {
-            font-size: 0.875rem;
-            font-weight: 500;
-            display: block;
-            margin-bottom: 5px;
-        }
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            &:focus {
-                outline: none;
-                border-color: #007bff;
-                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-            }
-        }
-        textarea {
-            height: 80px;
-            resize: none;
-        }
-    }
-    .with-icon {
-        position: relative;
-        .edit-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            img {
-                width: 16px;
-                height: 16px;
-            }
-        }
-    }
-    .change-text {
-        font-size: 0.875rem;
-        margin-bottom: 1rem;
-        text-align: left;
-        color: #6c757d;
-        a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-    }
-    .add-address-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 25px;
-        background: #222;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        transition: background 0.3s ease;
-        &:hover {
-            background: #444;
-        }
-    }
-}
-
-// Responsive Adjustments
-@media (max-width: 768px) {
-    .input-row {
-        flex-direction: column;
     }
 }
 

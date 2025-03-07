@@ -11798,12 +11798,12 @@ body {
 }
 @media (min-width: 1200px) {
   .dawamain {
-    margin-top: 175px;
+    margin-top: 200px;
   }
 }
 @media (min-width: 1800px) {
   .dawamain {
-    margin-top: 220px;
+    margin-top: 300px;
   }
 }
 
@@ -21217,39 +21217,6 @@ header {
 .login-form .auth-link:hover, .login-form .auth-link:focus {
   color: rgb(101, 161, 70);
 }
-.login-form .input-group {
-  display: flex;
-  flex-direction: column;
-}
-.login-form .input-group input {
-  width: 100%;
-}
-.login-form .input-icon {
-  position: relative;
-}
-.login-form .input-icon img {
-  position: absolute;
-  left: 7px;
-  top: 7px;
-  width: 20px;
-  height: 20px;
-}
-@media (min-width: 1800px) {
-  .login-form .input-icon img {
-    width: 35px;
-    height: 35px;
-    left: 20px;
-    top: 20px;
-  }
-}
-.login-form .input-icon input {
-  padding-left: 30px;
-}
-@media (min-width: 1800px) {
-  .login-form .input-icon input {
-    padding-left: 70px;
-  }
-}
 .login-form .form-check-label {
   margin-bottom: 0;
   font-size: 0.875em;
@@ -21440,6 +21407,79 @@ header {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group input {
+  width: 100%;
+}
+
+.input-icon {
+  position: relative;
+}
+.input-icon img {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1800px) {
+  .input-icon img {
+    width: 35px;
+    height: 35px;
+    left: 20px;
+    top: 20px;
+  }
+}
+.input-icon input.with-icon {
+  padding-left: 30px;
+}
+@media (min-width: 1800px) {
+  .input-icon input.with-icon {
+    padding-left: 70px;
+  }
+}
+.input-icon img.right-icon {
+  position: absolute;
+  left: auto;
+  right: 7px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1800px) {
+  .input-icon img.right-icon {
+    width: 35px;
+    height: 35px;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.form-bottom-info {
+  font-family: "Figtree-Light";
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+@media (min-width: 1200px) {
+  .form-bottom-info {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1800px) {
+  .form-bottom-info {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .form-bottom-info {
+    margin-top: 8px;
+  }
+}
+
 .toggle-buttons {
   display: flex;
 }
@@ -21522,6 +21562,10 @@ header {
   background: #fff;
   border: none;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .location-box:before {
   content: "";
@@ -21571,6 +21615,7 @@ header {
   font-size: 16px;
   font-family: "Figtree-Medium";
   line-height: 1.5;
+  max-width: 300px;
 }
 @media (min-width: 1200px) {
   .location-box p {
@@ -21580,6 +21625,11 @@ header {
 @media (min-width: 1800px) {
   .location-box p {
     font-size: 28px;
+  }
+}
+@media (min-width: 1800px) {
+  .location-box p {
+    max-width: 500px;
   }
 }
 .location-box .add-address-btn {
@@ -21601,13 +21651,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f9f9f9;
+  background: #F9F9FD;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 320px;
-  margin: auto;
+  margin: 30px auto;
 }
 .loyalty-card .icon-text {
   display: flex;
@@ -21669,150 +21718,6 @@ header {
   transform: translateX(14px);
 }
 
-#locationSelection {
-  background: #fff;
-  text-align: center;
-}
-#locationSelection .location-box {
-  border: 1px dashed #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
-  text-align: center;
-  background: #fcfcfc;
-}
-#locationSelection .location-box .location-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-#locationSelection .location-box h4, #locationSelection .location-box .h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-#locationSelection .location-box p {
-  font-size: 0.875rem;
-  color: #6c757d;
-  margin-bottom: 15px;
-}
-#locationSelection .location-box .add-address-btn {
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 25px;
-  background: #222;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-#locationSelection .location-box .add-address-btn:hover {
-  background: #444;
-}
-
-@media (max-width: 768px) {
-  #locationSelection .location-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  #locationSelection .toggle-buttons {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-#addressFormSection {
-  background: #fff;
-  width: 100%;
-}
-#addressFormSection form {
-  display: flex;
-  flex-direction: column;
-}
-#addressFormSection .input-row {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 1rem;
-}
-#addressFormSection .input-row .input-group {
-  flex: 1;
-}
-#addressFormSection .input-group {
-  margin-bottom: 1rem;
-  position: relative;
-}
-#addressFormSection .input-group label {
-  font-size: 0.875rem;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 5px;
-}
-#addressFormSection .input-group input,
-#addressFormSection .input-group select,
-#addressFormSection .input-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-#addressFormSection .input-group input:focus,
-#addressFormSection .input-group select:focus,
-#addressFormSection .input-group textarea:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-#addressFormSection .input-group textarea {
-  height: 80px;
-  resize: none;
-}
-#addressFormSection .with-icon {
-  position: relative;
-}
-#addressFormSection .with-icon .edit-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-#addressFormSection .with-icon .edit-icon img {
-  width: 16px;
-  height: 16px;
-}
-#addressFormSection .change-text {
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  color: #6c757d;
-}
-#addressFormSection .change-text a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 500;
-}
-#addressFormSection .add-address-btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 25px;
-  background: #222;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  transition: background 0.3s ease;
-}
-#addressFormSection .add-address-btn:hover {
-  background: #444;
-}
-
-@media (max-width: 768px) {
-  .input-row {
-    flex-direction: column;
-  }
-}
 #addressSelection {
   width: 100%;
   background: #fff;
