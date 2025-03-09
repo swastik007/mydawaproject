@@ -62,7 +62,7 @@
                         <!-- Cart Items -->
                         <div class="col-md-7 col-lg-8">
                             <div id="">
-                                <div class="location-header">
+                                <div class="location-header has-border">
                                     <div class="d-flex flex-column">
                                         <h3>Choose your location</h3>
                                         <p>Delivery options and speeds may differ depending on your location</p>
@@ -78,26 +78,26 @@
                                     <img src="assets/images/icons/add-address-icon.png" alt="Location Icon" class="location-icon">
                                     <h4>Add Your Address</h4>
                                     <p>Help us deliver your medications swiftly by clicking the 'Add Address' button below.</p>
-                                    <button class="btn btn-dark btn-lg btn-rounded">Add Address</button>
+                                    <button class="d-block mx-auto mt-3 mt-xl-4 btn-dark btn-rounded btn-lg">Add Address</button>
                                 </div>
                             </div>
 
 
                         </div>
-                        <div class="col-md-5 col-lg-4 ps-md-4">
+                        <div class="col-md-5 col-lg-4 ps-md-4 ps-xl-6">
                             <!-- Cart Summary -->
                             <div class="cart-summary">
                                 <div class="coupon-box">
                                     <h3>Apply Coupon</h3>
                                     <div class="coupon-input">
                                         <input type="text" placeholder="Enter Coupon Code">
-                                        <button>Apply</button>
+                                        <button class="btn-rounded btn-dark">Apply</button>
                                     </div>
-
+                                    <img src="/assets/images/icons/coupon-bg.png" class="coupon-bg" />
                                 </div>
                                 <div id="loyaltyBalance" class="loyalty-card">
                                     <div class="icon-text">
-                                        <img src="assets/images/icons/loyalty-icon.svg" alt="Loyalty Points">
+                                        <img src="assets/images/icons/loyalty-card-icon.png" alt="Loyalty Points">
                                         <div>
                                             <h4>Balance : KES 200</h4>
                                             <p>Amazing! You've saved KES 200 on your purchase by using your loyalty points!</p>
@@ -110,12 +110,17 @@
                                 </div>
 
                                 <div class="price-details">
-                                    <p>Total MRP <span>KES 750</span></p>
-                                    <p>Discount <span>- KES 300</span></p>
+                                    <p class="sub-price">Total MRP <span>KES 750</span></p>
+                                    <p class="sub-price">Discount <span>- KES 300</span></p>
+                                    <p class="sub-price">Total MRP <span>KES 750</span></p>
                                     <hr>
                                     <p class="cart-total">Cart Total <span>KES 450</span></p>
-                                    <button class="proceed" onclick="window.location.href='/deliverydetails.html';">Proceed</button>
-                                    <p class="info"><i class="bi bi-exclamation-circle"></i>
+                                    <button class="btn-green btn-rounded btn-lg w-100" onclick="window.location.href='/deliverydetails.html';">Proceed</button>
+                                    <p class="info">
+                                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.1108 6.66797H10.1175M10.1108 13.3346V9.16797M18.534 10.0013C18.534 14.6038 14.7629 18.3346 10.1108 18.3346C5.45859 18.3346 1.6875 14.6038 1.6875 10.0013C1.6875 5.3988 5.45859 1.66797 10.1108 1.66797C14.7629 1.66797 18.534 5.3988 18.534 10.0013Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+
                                         <span>Delivery charges will be calculated in the next step</span></p>
                                 </div>
                             </div>

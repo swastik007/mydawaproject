@@ -40,19 +40,6 @@
     }
 }
 
-.cart-content {
-    @include respond-to(md) {
-        flex-direction: column;
-    }
-}
-
-.cart-items,
-.cart-summary {
-    @include respond-to(md) {
-        width: 100%;
-    }
-}
-
 
 /* Cart Items - Align with Grid */
 
@@ -282,123 +269,222 @@
     @include respond-to(xxl) {
         margin-bottom: 0;
     }
-    .coupon-box {
-        display: flex;
-        flex-direction: column;
-        background-color: #F9F9FD;
-        padding: 12px;
-        border-radius: 20px;
+}
+
+.coupon-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9FD;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    @include respond-to(xxl) {
+        padding: 35px;
+    }
+    h3 {
+        font-family: $interBold;
+        @include responsive-font(16px, 16px, 28px);
+        line-height: 1.6;
+        color: $black;
+        margin-bottom: 10px;
         @include respond-to(xxl) {
-            padding: 30px;
-            border-radius: 18px;
-        }
-        h3 {
-            font-size: 18px;
-            line-height: 1.6;
-            font-weight: 700;
-            color: $black;
             margin-bottom: 15px;
-            @include respond-to(lg) {
-                font-size: 18px;
-            }
+        }
+    }
+    .coupon-input {
+        display: flex;
+        flex-direction: row;
+        input {
+            padding: 10px;
+            background: #fff;
+            border-radius: 25px;
+            padding: 10px 16px;
+            border: 1px solid #D4DEE5;
+            margin-right: 10px;
+            border-radius: 35px!important;
+            @include responsive-font(14px, 14px, 22px);
             @include respond-to(xxl) {
-                font-size: 24px;
-                margin-bottom: 24px;
+                padding: 14px 20px;
+                margin-right: 16px;
             }
         }
-        .coupon-input {
-            display: flex;
-            flex-direction: row;
-            input {
-                padding: 10px;
-                background: #fff;
-                border-radius: 25px;
-                padding: 10px 16px;
-                border: 1px solid #D4DEE5;
-                margin-right: 7px;
-                @include respond-to(xxl) {
-                    font-size: 21px;
-                    padding: 14px 20px;
-                    margin-right: 10px;
-                }
+        button {
+            padding: 7px 15px;
+            @include respond-to(xxl) {
+                padding: 14px 20px;
             }
-            button {
-                background: #333;
-                color: white;
-                padding: 7px 15px;
-                border: none;
-                cursor: pointer;
-                border-radius: 25px;
-                font-size: 18px;
-                @include respond-to(xxl) {
-                    font-size: 21px;
-                    padding: 14px 20px;
-                }
+        }
+        // button {
+        //     background: #333;
+        //     color: white;
+        //     padding: 7px 15px;
+        //     border: none;
+        //     cursor: pointer;
+        //     border-radius: 25px;
+        //     font-size: 18px;
+        //     @include respond-to(xxl) {
+        //         font-size: 21px;
+        //         padding: 14px 20px;
+        //     }
+        // }
+    }
+    .coupon-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        @include respond-to(xxl) {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+.price-details {
+    margin-top: 20px;
+    background-color: #F9F9FD;
+    padding: 20px;
+    border-radius: 12px;
+    @include respond-to(xxl) {
+        padding: 35px;
+    }
+    .sub-price {
+        display: flex;
+        justify-content: space-between;
+        @include responsive-font(16px, 16px, 28px);
+    }
+    .cart-total {
+        display: flex;
+        justify-content: space-between;
+        font-family: $figtreeBold;
+        @include responsive-font(16px, 16px, 28px);
+        margin-bottom: 15px;
+        @include respond-to(xxl) {
+            margin-bottom: 25px;
+        }
+    }
+    .info {
+        color: $black;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        line-height: 1.2;
+        margin-top: 15px;
+        @include respond-to(xxl) {
+            margin-top: 25px;
+        }
+        span {
+            margin-left: 10px;
+            @include responsive-font(13px, 13px, 22px);
+            @include respond-to(xxl) {
+                margin-left: 16px;
+            }
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            @include respond-to(xxl) {
+                width: 32px;
+                height: 32px;
             }
         }
     }
-    .price-details {
-        margin-top: 20px;
-        background-color: #F9F9FD;
-        padding: 12px;
-        border-radius: 20px;
-        @include respond-to(xxl) {
-            padding: 30px;
-            border-radius: 18px;
+}
+
+.loyalty-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F9F9FD;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    margin: 30px auto;
+    @include respond-to(xxl) {
+        padding: 25px;
+    }
+    .icon-text {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        img {
+            width: 24px;
+            height: 24px;
+            @include respond-to(xxl) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        h4 {
+            @include responsive-font(16px, 16px, 28px);
+            font-family: $interSemiBold;
+            margin-bottom: 10px;
+            @include respond-to(xxl) {
+                margin-bottom: 15px;
+            }
         }
         p {
-            display: flex;
-            justify-content: space-between;
+            @include responsive-font(13px, 13px, 20px);
+            color: $grey9;
+            margin: 0;
         }
-        .cart-total {
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .proceed {
-            font-family: "Outfit", serif;
-            background-color: #6fb74c;
-            font-size: 18px;
-            border-radius: 25px;
-            color: white;
-            padding: 10px 15px;
-            height: fit-content;
-            width: 100%;
-            border: none;
+    }
+}
+
+// Toggle Switch
+.switch {
+    position: relative;
+    display: flex;
+    width: 34px;
+    height: 20px;
+    flex-basis: 34px;
+    @include respond-to(xxl) {
+        width: 72px;
+        height: 32px;
+        flex-basis: 72px;
+    }
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.3s;
+        border-radius: 20px;
+        &:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
             @include respond-to(xxl) {
-                font-size: 21px;
-                margin-top: 18px;
-                padding: 14px 20px;
-            }
-            &:hover,
-            &:focus {
-                background-color: #3b8914;
+                width: 22px;
+                height: 22px;
+                left: 5px;
+                bottom: 5px;
             }
         }
-        .info {
-            font-size: 0.9em;
-            color: $black;
-            text-align: left;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            font-size: 13px;
-            line-height: 1.2;
-            margin-top: 10px;
-            @include respond-to(xxl) {
-                font-size: 18px;
-                margin-top: 14px;
-                margin-left: 10px;
-            }
-            i {
-                font-size: 18px;
-                margin-right: 7px;
-                @include respond-to(xxl) {
-                    font-size: 22px;
-                    margin-right: 10px;
-                }
-            }
-        }
+    }
+    input:checked+.slider {
+        background-color: #6c63ff;
+    }
+    input:checked+.slider:before {
+        transform: translateX(14px);
     }
 }
 

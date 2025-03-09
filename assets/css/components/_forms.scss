@@ -32,6 +32,9 @@ textarea {
     &.filled {
         pointer-events: none;
     }
+    &.readonly {
+        background-color: #F1F1F5;
+    }
 }
 
 textarea {
@@ -771,15 +774,18 @@ ol.form-list {
     .radio {
         width: 20px;
         height: 20px;
-        border: 2px solid #777;
+        border: 2px solid #C7D0E4;
         border-radius: 50%!important;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
         transition: all 0.3s;
+        margin-right: 10px;
         @include respond-to(xxl) {
-            margin-top: 5px;
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
         }
     }
     /* Inner dot for selected radio */
@@ -787,9 +793,13 @@ ol.form-list {
         content: "";
         width: 10px;
         height: 10px;
-        background: transparent;
+        background: #C7D0E4;
         border-radius: 50%;
         transition: all 0.3s;
+        @include respond-to(xxl) {
+            width: 15px;
+            height: 15px;
+        }
     }
     /* Selected State */
     input[type="radio"]:checked+.radio {
@@ -951,6 +961,30 @@ ol.form-list {
             width: 18px;
             height: 18px;
             fill: $black;
+        }
+    }
+}
+
+.custom-address-dropdown {
+    width: 100%;
+    display: none;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    top: 90px;
+    padding: 20px;
+    @include respond-to(xxl) {
+        top: 125px;
+    }
+    .custom-dropdown-item {
+        padding: 10px;
+        cursor: pointer;
+        transition: background 0.2s;
+        &:hover {
+            background: #f8f9fa;
+        }
+        strong {
+            color: $green;
         }
     }
 }
