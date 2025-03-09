@@ -30,6 +30,10 @@ function loadComponents() {
         { id: "submitprescriptionmodal", file: "components/pages/submitprescriptionmodal.html" },
         { id: "wishlistpinmodal", file: "components/pages/wishlistpinpopup.html" },
         { id: "lastminutebuys", file: "components/pages/lastminutebuys.html" },
+        { id: "paymentmodalsection", file: "components/pages/paymentmodal.html" },
+        { id: "editdeliverysection", file: "components/pages/editdeliveryaddressmodal.html" },
+        { id: "adddeliverysection", file: "components/pages/adddeliveryaddressmodal.html" },
+        { id: "topupmodalsection", file: "components/pages/topupbalancemodal.html" },
         // category page 
         { id: "faqsection", file: "components/pages/sexualwellnessfaq.html" },
         { id: "popular-by-durex-section", file: "components/pages/popularproductsbydurex.html" },
@@ -181,7 +185,10 @@ function setupEventListeners() {
         setupWishlistPopup(); // Ensure modal exists before setting up listeners
         setupWishlistPinPopup();
         setupPopup();
-
+        setupPaymentPopup();
+        setupEditDeliveryPopup();
+        setupAddDeliveryPopup();
+        setuptopBalancePopup();
     }, 1000);
 }
 
@@ -362,6 +369,146 @@ function setupPopup() {
         }
     });
 }
+
+// Payment Popup
+function setupPaymentPopup() {
+    console.log("🚀 setupPaymentPopup() function executed");
+
+    $(document).on("click", ".btn-payment-popup", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('✅ Payment popup button clicked');
+
+        // Ensure modal exists before showing
+        if ($("#paymentModal").length) {
+            console.log("✅ Payment modal found, opening...");
+            $("#paymentModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ Payment modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        console.log("❌ Closing payment modal");
+        $("#paymentModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#paymentModal")) {
+            console.log("❌ Clicking outside payment modal, closing...");
+            $("#paymentModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+
+// Edit Delivery Popup
+function setupEditDeliveryPopup() {
+    console.log("🚀 setupPaymentPopup() function executed");
+
+    $(document).on("click", ".btn-edit-delivery", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Ensure modal exists before showing
+        if ($("#editDeliveryModal").length) {
+            console.log("✅ Payment modal found, opening...");
+            $("#editDeliveryModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ Payment modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        console.log("❌ Closing payment modal");
+        $("#editDeliveryModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#editDeliveryModal")) {
+            console.log("❌ Clicking outside payment modal, closing...");
+            $("#editDeliveryModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+
+// Add Delivery Popup
+function setupAddDeliveryPopup() {
+
+    $(document).on("click", ".btn-add-delivery", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Ensure modal exists before showing
+        if ($("#addDeliveryModal").length) {
+            console.log("✅ Payment modal found, opening...");
+            $("#addDeliveryModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ Payment modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        console.log("❌ Closing modal");
+        $("#addDeliveryModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#addDeliveryModal")) {
+            console.log("❌ Clicking outside modal, closing...");
+            $("#addDeliveryModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+
+
+// Top-up Balance Popup
+function setuptopBalancePopup() {
+    console.log("🚀 Top-up Balance Popup script loaded!");
+
+    $(document).on("click", ".btn-topup", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Ensure modal exists before showing
+        if ($("#topupBalanceModal").length) {
+            console.log("✅ Top-up modal found, opening...");
+            $("#topupBalanceModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ Top-up modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        console.log("❌ Closing modal");
+        $("#topupBalanceModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#topupBalanceModal")) {
+            console.log("❌ Clicking outside modal, closing...");
+            $("#topupBalanceModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+
+// Ensure the function is executed
+$(document).ready(function() {
+    setuptopBalancePopup();
+});
+
+
 $(window).on("load", function() {
     console.log("🚀 jQuery Step Navigation Loaded!");
 
@@ -576,6 +723,136 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("🚀 Payment selection script loaded!");
+
+    // Payment option radio buttons
+    const paymentRadios = document.querySelectorAll(".radio-option-full input[type='radio']");
+
+    // Payment details sections
+    const mobileMoneySection = document.getElementById("mobileMoneySection");
+    const debitCardSection = document.getElementById("debitCardSection");
+    const accountBalanceSection = document.getElementById("accountBalanceSection");
+    const loyaltyPointSection = document.getElementById("loyaltyPointSection");
+
+    // Function to show only the selected payment section
+    function togglePaymentSection(selectedValue) {
+        console.log("Selected Payment Method:", selectedValue);
+
+        // Hide all sections first
+        mobileMoneySection.style.display = "none";
+        debitCardSection.style.display = "none";
+        accountBalanceSection.style.display = "none";
+        loyaltyPointSection.style.display = "none";
+
+        // Show the selected section
+        if (selectedValue === "mobile-money") {
+            mobileMoneySection.style.display = "block";
+        } else if (selectedValue === "credit-debit") {
+            debitCardSection.style.display = "block";
+        } else if (selectedValue === "account-balance") {
+            accountBalanceSection.style.display = "block";
+        } else if (selectedValue === "radio-loyalty") {
+            loyaltyPointSection.style.display = "block";
+        }
+    }
+
+    // Attach event listeners to all radio buttons
+    paymentRadios.forEach((radio) => {
+        radio.addEventListener("change", function() {
+            togglePaymentSection(this.value);
+        });
+
+        // Initialize the selected section on page load
+        if (radio.checked) {
+            togglePaymentSection(radio.value);
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("🚀 Top-up Balance Modal script loaded!");
+
+    // Ensure the modal exists before running the script
+    const topupModal = document.getElementById("topupBalanceModal");
+    if (!topupModal) {
+        console.warn("⚠️ Top-up modal not found in the DOM.");
+        return; // Stop execution if modal is missing
+    }
+
+    const closeModalBtn = topupModal.querySelector(".close-btn");
+    if (!closeModalBtn) {
+        console.warn("⚠️ Close button not found inside the modal.");
+        return;
+    }
+
+    // Radio buttons
+    const topupRadios = document.querySelectorAll(".shipping-options input[type='radio']");
+
+    // Payment sections
+    const mPesaSection = document.getElementById("mPesaSection");
+    const airtelSection = document.getElementById("airtelSection");
+
+    // Function to show the modal
+    function showTopupModal() {
+        console.log("📌 Showing top-up modal...");
+        topupModal.style.display = "block";
+    }
+
+    // Function to hide the modal
+    function hideTopupModal() {
+        console.log("📌 Hiding top-up modal...");
+        topupModal.style.display = "none";
+    }
+
+    // Attach click event to the button that opens the modal
+    document.querySelectorAll(".btn-topup").forEach((button) => {
+        button.addEventListener("click", function(e) {
+            e.preventDefault();
+            showTopupModal();
+        });
+    });
+
+    // Close modal on close button click
+    closeModalBtn.addEventListener("click", hideTopupModal);
+
+    // Close modal when clicking outside modal content
+    window.addEventListener("click", function(e) {
+        if (e.target === topupModal) {
+            hideTopupModal();
+        }
+    });
+
+    // Function to toggle payment instructions
+    function togglePaymentInstructions(selectedValue) {
+        console.log("Selected Top-up Method:", selectedValue);
+
+        // Hide both sections
+        mPesaSection.style.display = "none";
+        airtelSection.style.display = "none";
+
+        // Show selected section
+        if (selectedValue === "option-mpesa") {
+            mPesaSection.style.display = "block";
+        } else if (selectedValue === "option-airtel") {
+            airtelSection.style.display = "block";
+        }
+    }
+
+    // Attach event listeners to radio buttons
+    topupRadios.forEach((radio) => {
+        radio.addEventListener("change", function() {
+            togglePaymentInstructions(this.value);
+        });
+
+        // Ensure the correct section is shown on page load
+        if (radio.checked) {
+            togglePaymentInstructions(radio.value);
+        }
+    });
+});
+
+
 document.querySelectorAll('.dropdown-item').forEach(item => {
     item.addEventListener('click', function() {
         const dropdownBtn = document.getElementById('dropdownMenuButton');
@@ -591,6 +868,9 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
 document.addEventListener("DOMContentLoaded", function() {
     const helpButton = document.getElementById("helpButton");
     const helpMenu = document.getElementById("helpMenu");
+
+    // Only run this script if helpButton exists
+    if (!helpButton || !helpMenu) return;
 
     helpButton.addEventListener("click", function() {
         helpMenu.classList.toggle("active");

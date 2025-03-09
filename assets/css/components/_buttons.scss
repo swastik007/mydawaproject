@@ -228,3 +228,21 @@
     align-items: center;
     border: none;
 }
+
+.blue-dotted-link {
+    font-family: $figtreeBold;
+    margin-left: 5px;
+    border-bottom: 1px dashed $blue;
+    width: fit-content;
+    display: block;
+    color: $blue;
+    text-decoration: none;
+    cursor: pointer;
+    @include responsive-font(14px, 14px, 22px);
+    &:hover,
+    &:focus {
+        transition: ease-in 0.3s;
+        color: $green;
+        border-bottom: 1px dashed $green;
+    }
+}

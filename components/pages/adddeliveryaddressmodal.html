@@ -1,0 +1,74 @@
+<!-- Payment Modal -->
+<div id="addDeliveryModal" class="dawa-modal modal-lg" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="d-flex flex-column">
+            <div class="popup-header mb-3 mb-xl-4 d-flex flex-column justify-content-start align-items-start">
+                <h3>Add Delivery Details</h3>
+            </div>
+            <form>
+                <!-- Name & Phone Number -->
+                <div class="input-row mb-3 mb-xl-4">
+                    <div class="input-group">
+                        <label for="fullName">Name <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <input class="readonly" type="text" id="fullName" placeholder="Tabrez Shaikh" readonly>
+                            <img class="right-icon" src="assets/images/icons/form-edit-pencil.png" alt="Phone">
+                        </div>
+                        <span class="form-bottom-info">Not the receiver? Change name & phone number</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="assets/images/icons/form-call-icon.png" alt="Phone">
+                            <input class="with-icon readonly" type="text" id="phoneNumber" placeholder="+977 0123456789" readonly>
+
+                            <img class="right-icon" src="assets/images/icons/form-edit-pencil.png" alt="Phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-row mb-3 mb-xl-4">
+                    <div class="input-group">
+                        <label for="fullName">Name <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="assets/images/icons/form-icon-mail.png" alt="Phone">
+                            <input class="with-icon" type="text" id="fullName" placeholder="Tabrez Shaikh" readonly>
+                            <img class="right-icon" src="assets/images/icons/form-checked-circle.png" alt="Phone">
+                        </div>
+                        <span class="form-bottom-info">Not the receiver? Change name & phone number</span>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <input type="text" id="phoneNumber" placeholder="+977 0123456789" readonly>
+
+                            <img class="right-icon" src="assets/images/icons/form-icon-mail.png" alt="Phone">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Search Address -->
+
+                <div class="input-group mb-3 mb-xl-4 position-relative">
+                    <label for="searchAddress" class="form-label">Search Address <span class="text-danger">*</span></label>
+                    <input type="text" id="searchAddress" class="" placeholder="1234 Innovation Drive, Nairobi, Kenya">
+                    <ul id="suggestions" class="dropdown-menu custom-address-dropdown"></ul>
+                </div>
+
+
+                <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                    <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                    <button class="btn-green btn-rounded btn-lg">Update Address</button>
+                </div>
+            </form>
+
+
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<!-- Topup Balance Modal -->
+<div id="topupBalanceModal" class="dawa-modal modal-lg" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="d-flex flex-column">
+            <div class="popup-header mb-3 mb-xl-4 d-flex flex-column justify-content-start align-items-start">
+                <h3>Top up Balance</h3>
+            </div>
+            <div class="shipping-selection">
+                <div class="shipping-options">
+                    <label class="radio-option-full">
+                        <input type="radio" name="option-mpesa" value="option-mpesa">
+                        <span class="radio"></span>
+                        <div class="content">
+                            <h3>M-PESA Paybill</h3>
+                            <p>follow the steps to make payment</p>
+                        </div>
+                        
+                    </label>
+                    <label class="radio-option-full">
+                        <input type="radio" name="option-airtel" value="option-airtel">
+                        <span class="radio"></span>
+                        <div class="content">
+                            <h3>Airtel Paybill</h3>
+                            <p>follow the steps to make payment</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mPesaSection" id="mPesaSection">
+                <div class="instructions-box">
+                    <h4>Follow the steps to make a payment:</h4>
+                    <ol>
+                        <li>You will receive an M-PESA Express push notification to the following number: <strong>(+977) 0123456789</strong></li>
+
+                    </ol>
+                    <a class="blue-dotted-link">Change Phone Number</a>
+                </div>
+            </div>
+            <div class="airtelSection" id="airtelSection" style="display: none;">
+                <div class="instructions-box">
+                    <h4>Follow the steps to make a payment:</h4>
+                    <ol>
+                        <li>Go to the Airtel Mobile Money</li>
+                        <li>Select Make Payment</li>
+                        <li>Select Pay bill then other</li>
+                        <li>Under Pay bill name enter 770700</li>
+                        <li>Enter Amount</li>
+                        <li>Enter Amount</li>
+                        <li>Enter your airtel money pin</li>
+                        <li>Under reference enter your account number</li>
+                    </ol>
+                    <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                        <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                        <button class="btn-green btn-rounded btn-lg">Done</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

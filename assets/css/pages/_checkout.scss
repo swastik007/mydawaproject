@@ -263,3 +263,117 @@
         }
     }
 }
+
+.payment-options-grid {
+    display: grid;
+    gap: 15px;
+    /* Adjust spacing between grid items */
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid #E7ECF4;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    /* Default: 2 columns */
+    @include respond-to(xxl) {
+        grid-template-columns: repeat(4, 1fr);
+        padding-bottom: 48px;
+        margin-bottom: 48px;
+    }
+}
+
+.instructions-box {
+    background-color: #FCFCFC;
+    border: 1px solid #D4DEE5;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    @include respond-to(xxl) {
+        padding: 35px;
+        margin-top: 32px;
+    }
+    h4 {
+        font-family: $figtreeSemiBold;
+        @include responsive-font(16px, 16px, 28px);
+        margin-bottom: 15px;
+        @include respond-to(xxl) {
+            margin-bottom: 28px;
+        }
+    }
+    ol {
+        font-family: $figtreeLight;
+        line-height: 1.6;
+        @include responsive-font(16px, 16px, 28px);
+    }
+}
+
+.alert {
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    line-height: 1.5;
+    @include responsive-font(14px, 14px, 22px);
+    @include respond-to(xxl) {
+        padding: 20px;
+        margin-bottom: 35px;
+    }
+    img {
+        width: 16px;
+        height: 16px;
+        margin-top: 5px;
+        @include respond-to(xxl) {
+            width: 24px;
+            height: 24px;
+            margin-top: 8px;
+        }
+    }
+    &.alert-gray {
+        background-color: #F6F6F8;
+        border: none;
+        color: $black;
+    }
+    &.alert-green {
+        background-color: #F6FFF2;
+        border: none;
+        color: $green;
+    }
+    &.alert-red {
+        background-color: #FFF6F6;
+        border: none;
+        color: #D40E0E;
+    }
+}
+
+.payment-header,
+.balance-section {
+    h3 {
+        font-family: $figtree;
+        @include responsive-font(20px, 20px, 35px);
+    }
+    p {
+        font-family: $figtreeLight;
+        @include responsive-font(16px, 16px, 28px);
+        max-width: 650px;
+        @include respond-to(xxl) {
+            max-width: 850px;
+        }
+    }
+}
+
+.transfer-points {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img {
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+        @include respond-to(xxl) {
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+        }
+    }
+}

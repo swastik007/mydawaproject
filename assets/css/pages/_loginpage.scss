@@ -57,31 +57,6 @@
         .auth-link {
             margin-left: 7px;
         }
-        .form-check {
-            display: flex;
-            align-items: center;
-            input {
-                margin-right: 10px;
-            }
-            label {
-                @include responsive-font(0.875em, 0.875em, 1.4em);
-            }
-            .form-check-input {
-                width: 15px;
-                height: 15px;
-                @include respond-to(xxl) {
-                    width: 25px;
-                    height: 25px;
-                }
-            }
-            .form-check-input:checked {
-                background-color: $blue;
-                border-color: $blue;
-            }
-            .form-check-input:focus {
-                box-shadow: none;
-            }
-        }
         .auth-link {
             font-family: $figtreeMedium;
             @include responsive-font(0.875em, 0.875em, 1.4em);
