@@ -17282,7 +17282,7 @@ header {
 .healthjourney-section .healthjourney-heading {
   text-align: left;
   font-size: 1.75em;
-  font-weight: 800;
+  font-family: "Figtree-ExtraBold";
   color: rgb(230, 27, 119);
   margin-bottom: 10px;
   max-width: 310px;
@@ -17335,8 +17335,7 @@ header {
 }
 @media (min-width: 1200px) {
   .healthjourney-section .healthjourney-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 20px;
     margin: 50px 0;
   }
@@ -17347,41 +17346,43 @@ header {
 }
 .healthjourney-section .healthjourney-card {
   border-radius: 12px;
-  padding: 0;
-  text-align: center;
+  padding: 28px;
   position: relative;
-}
-.healthjourney-section .healthjourney-card img {
-  width: 100%;
+  overflow: hidden;
   height: 256px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  width: calc(33.3333333333% - 20px);
 }
-@media (min-width: 768px) {
-  .healthjourney-section .healthjourney-card img {
-    height: 280px;
-  }
+.healthjourney-section .healthjourney-card-full {
+  padding-left: 176px;
+  height: 156px;
+  width: calc(100% - 20px);
 }
-@media (min-width: 1200px) {
-  .healthjourney-section .healthjourney-card img {
-    height: 300px;
-  }
+.healthjourney-section .healthjourney-card-full .arrow-link {
+  left: auto !important;
+  bottom: 30px !important;
+  right: 20px;
 }
 @media (min-width: 1800px) {
-  .healthjourney-section .healthjourney-card img {
-    height: 370px;
+  .healthjourney-section .healthjourney-card-full .arrow-link {
+    left: auto !important;
+    bottom: 50px !important;
+    right: 50px;
   }
 }
+.healthjourney-section .healthjourney-card img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  z-index: -9;
+}
 .healthjourney-section .healthjourney-card h4, .healthjourney-section .healthjourney-card .h4 {
-  font-weight: 700;
+  font-family: "Figtree-Bold";
   margin-bottom: 12px;
   color: rgb(55, 52, 52);
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 1.1em;
+  font-size: 20px;
   line-height: 1.5;
 }
 @media (min-width: 1800px) {
@@ -17397,11 +17398,8 @@ header {
   line-height: 1.3;
   color: rgb(55, 52, 52);
   font-weight: 400;
-  position: absolute;
-  top: 55px;
-  left: 20px;
   text-align: left;
-  max-width: 270px;
+  max-width: 160px;
 }
 @media (min-width: 1800px) {
   .healthjourney-section .healthjourney-card p {
@@ -17420,7 +17418,11 @@ header {
   left: 20px;
   text-decoration: none;
   border-radius: 50%;
-  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
 }
 @media (min-width: 1800px) {
   .healthjourney-section .healthjourney-card .arrow-link {
