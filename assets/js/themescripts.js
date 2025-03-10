@@ -1,5 +1,6 @@
 console.log("🚀 jQuery script is running!");
 
+
 document.addEventListener("DOMContentLoaded", function() {
     loadComponents();
     setupEventListeners();
@@ -34,6 +35,9 @@ function loadComponents() {
         { id: "editdeliverysection", file: "components/pages/editdeliveryaddressmodal.html" },
         { id: "adddeliverysection", file: "components/pages/adddeliveryaddressmodal.html" },
         { id: "topupmodalsection", file: "components/pages/topupbalancemodal.html" },
+        { id: "transferbalancemodalsection", file: "components/pages/transferbalancemodal.html" },
+        { id: "ordersuccesssection", file: "components/pages/ordersuccessmodal.html" },
+
         // category page 
         { id: "faqsection", file: "components/pages/sexualwellnessfaq.html" },
         { id: "popular-by-durex-section", file: "components/pages/popularproductsbydurex.html" },
@@ -189,6 +193,8 @@ function setupEventListeners() {
         setupEditDeliveryPopup();
         setupAddDeliveryPopup();
         setuptopBalancePopup();
+        setuptransferBalancePopup();
+        setuporderSuccessPopup();
     }, 1000);
 }
 
@@ -498,6 +504,87 @@ function setuptopBalancePopup() {
         if ($(e.target).is("#topupBalanceModal")) {
             console.log("❌ Clicking outside modal, closing...");
             $("#topupBalanceModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+
+// Transfer Balance Popup
+function setuptransferBalancePopup() {
+    console.log("🚀 Top-up Balance Popup script loaded!");
+
+    $(document).on("click", ".btn-transferbalance", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Ensure modal exists before showing
+        if ($("#transferBalanceModal").length) {
+            console.log("✅ Top-up modal found, opening...");
+            $("#transferBalanceModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+            const phoneInput = document.querySelector("#phoneNumber");
+
+            if (phoneInput) {
+                window.intlTelInput(phoneInput, {
+                    initialCountry: "np", // Set default to Nepal
+                    separateDialCode: true, // Show country code separately
+                    preferredCountries: ["np", "in", "us", "gb"], // Top preferred countries
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+                });
+            } else {
+                console.error("❌ Phone input element not found! Ensure the input exists in the DOM.");
+            }
+
+        } else {
+            console.error("❌ Top-up modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        console.log("❌ Closing modal");
+        $("#transferBalanceModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#transferBalanceModal")) {
+            console.log("❌ Clicking outside modal, closing...");
+            $("#transferBalanceModal").fadeOut();
+            $("#modalOverlay").fadeOut(); // Hide overlay
+        }
+    });
+}
+// Order Success Popup
+function setuporderSuccessPopup() {
+    console.log("🚀 order success script loaded!");
+
+    $(document).on("click", ".btn-ordersuccess", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Close any other open modals
+        $(".dawa-modal").fadeOut();
+        $("#modalOverlay").fadeOut();
+
+        // Ensure modal exists before showing
+        if ($("#orderSuccessModal").length) {
+            console.log("✅ Top-up modal found, opening...");
+            $("#orderSuccessModal").fadeIn();
+            $("#modalOverlay").fadeIn(); // Show overlay
+        } else {
+            console.error("❌ Top-up modal not found in the DOM!");
+        }
+    });
+
+    $(document).on("click", ".close-btn, #modalOverlay", function() {
+        console.log("❌ Closing modal");
+        $("#orderSuccessModal").fadeOut();
+        $("#modalOverlay").fadeOut(); // Hide overlay
+    });
+
+    $(window).on("click", function(e) {
+        if ($(e.target).is("#orderSuccessModal")) {
+            console.log("❌ Clicking outside modal, closing...");
+            $("#orderSuccessModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
         }
     });

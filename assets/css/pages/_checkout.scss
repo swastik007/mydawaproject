@@ -377,3 +377,170 @@
         }
     }
 }
+
+.available-points {
+    font-family: $figtree;
+    @include responsive-font(20px, 20px, 35px);
+    span {
+        font-family: $figtreeBold;
+    }
+}
+
+// Tracking Order Page 
+.tracking-card {
+    background: #fff;
+    padding: 20px 0;
+    border: 1px solid #D4DEE5;
+    border-radius: 12px;
+    margin: 0 auto;
+    @include respond-to(lg) {
+        max-width: 830px;
+    }
+    @include respond-to(xxl) {
+        max-width: 1320px;
+    }
+    .tracking-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 10px 20px;
+        @include respond-to(xxl) {
+            margin: 15px 35px;
+        }
+        h2 {
+            margin: 0;
+            font-family: $figtreeSemiBold;
+            @include responsive-font(28px, 28px, 44px);
+        }
+        .sub-text {
+            font-family: $figtreeLight;
+            @include responsive-font(14px, 14px, 22px);
+        }
+        .status {
+            background: #FFFCEC;
+            color: #B99608;
+            padding: 7px 20px;
+            border-radius: 20px;
+            font-family: $figtreeMedium;
+            @include responsive-font(14px, 14px, 22px);
+            @include respond-to(xxl) {
+                padding: 12px 32px;
+            }
+        }
+    }
+    .tracking-info {
+        background: #F9F9FD;
+        padding: 20px 35px;
+        border-radius: 10px;
+        @include respond-to(xxl) {
+            padding: 36px 28px;
+        }
+        @include respond-to(xxl) {
+            padding: 56px 44px;
+        }
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            @include respond-to(xxl) {
+                gap: 18px;
+                margin-bottom: 25px;
+            }
+            .icon {
+                width: 24px;
+                height: 24px;
+                @include respond-to(xxl) {
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+            span {
+                font-family: $figtreeSemiBold;
+                color: #8D8B8C;
+                @include responsive-font(15px, 15px, 26px);
+            }
+            p {
+                margin: 0;
+                flex-grow: 1;
+                text-align: right;
+                font-family: $figtreeBold;
+                @include responsive-font(15px, 15px, 26px);
+                color: $black;
+            }
+        }
+    }
+    .tracking-progress {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        position: relative;
+        margin: 40px 20px 30px 20px;
+        @include respond-to(xxl) {
+            margin: 50px 35px 30px 35px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: #ddd;
+            z-index: 0;
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            .circle {
+                width: 20px;
+                height: 20px;
+                background: #ddd;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+                @include respond-to(xxl) {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+            &.completed .circle {
+                background: $green;
+            }
+            p {
+                font-family: $figtreeBold;
+                @include responsive-font(15px, 15px, 26px);
+                color: $black;
+                margin-top: 10px;
+                margin-bottom: 0;
+                line-height: 1.5;
+                @include respond-to(xxl) {
+                    margin-top: 16px;
+                }
+            }
+            span {
+                color: $black;
+                @include responsive-font(13px, 13px, 20px);
+            }
+        }
+    }
+}
+
+.exchange-icon {
+    width: 16px;
+    height: 16px;
+    // margin: 10px auto;
+    @include respond-to(xxl) {
+        width: 24px;
+        height: 24px;
+        // margin: 16px auto;
+    }
+}

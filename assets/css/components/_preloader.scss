@@ -1,0 +1,34 @@
+.preloader {
+    text-align: center;
+}
+
+p.preloader-text {
+    color: $black;
+    @include responsive-font(20px, 20px, 32px);
+    font-family: $figtreeMedium;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.loader {
+    width: 72px;
+    height: 72px;
+    border: 4px solid #FFE7F2;
+    border-top: 4px solid $primary; // Pink color for the animation
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    margin: 0 auto 20px;
+    @include respond-to(lg) {
+        width: 115px;
+        height: 115px;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
