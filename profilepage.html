@@ -31,35 +31,42 @@
                     <li><a href="#" class="active">My Profile</a></li>
                 </ul>
             </nav>
-            <div class="d-flex mb-4 mb-xl-5">
+            <div class=" mydawa-container mb-6 mb-xl-7">
                 <div class="row">
                     <!-- Sidebar Navigation with Tabs -->
-                    <div class="col-md-3">
-                        <div class="nav flex-column nav-pills" id="dashboard-tabs" role="tablist">
+                    <div class="col-md-3 col-lg-2">
+                        <div class="nav flex-column nav-pills dashboard-sidebar" id="dashboard-tabs" role="tablist">
                             <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
-                                <i class="bi bi-person"></i> My Profile
+                                <img src="assets/images/icons/icon-my-profile.png" /> My Profile
                             </button>
                             <button class="nav-link" id="orders-tab" data-bs-toggle="pill" data-bs-target="#orders" type="button" role="tab">
-                                <i class="bi bi-box"></i> My Orders
+                                
+<svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 22C11.1818 22 10.4002 21.6698 8.83693 21.0095C4.94564 19.3657 3 18.5438 3 17.1613C3 16.7742 3 10.0645 3 7M12 22C12.8182 22 13.5998 21.6698 15.1631 21.0095C19.0544 19.3657 21 18.5438 21 17.1613V7M12 22L12 11.3548" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.32592 9.69138L5.40472 8.27785C3.80157 7.5021 3 7.11423 3 6.5C3 5.88577 3.80157 5.4979 5.40472 4.72215L8.32592 3.30862C10.1288 2.43621 11.0303 2 12 2C12.9697 2 13.8712 2.4362 15.6741 3.30862L18.5953 4.72215C20.1984 5.4979 21 5.88577 21 6.5C21 7.11423 20.1984 7.5021 18.5953 8.27785L15.6741 9.69138C13.8712 10.5638 12.9697 11 12 11C11.0303 11 10.1288 10.5638 8.32592 9.69138Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 12L8 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M17 4L7 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+     My Orders
                             </button>
                             <button class="nav-link" id="prescriptions-tab" data-bs-toggle="pill" data-bs-target="#prescriptions" type="button" role="tab">
-                                <i class="bi bi-file-medical"></i> My Prescriptions
+                                <img src="assets/images/icons/icon-my-prescriptions.png" /> My Prescriptions
                             </button>
                             <button class="nav-link" id="wishlist-tab" data-bs-toggle="pill" data-bs-target="#wishlist" type="button" role="tab">
-                                <i class="bi bi-heart"></i> Wishlist
+                                <img src="assets/images/icons/icon-wishlist.png" /> Wishlist
                             </button>
                             <button class="nav-link" id="address-tab" data-bs-toggle="pill" data-bs-target="#address" type="button" role="tab">
-                                <i class="bi bi-geo-alt"></i> Manage Address
+                                <img src="assets/images/icons/icon-manage-address.png" /> Manage Address
                             </button>
                             <button class="nav-link text-danger" id="logout-tab">
-                                <i class="bi bi-box-arrow-left"></i> Log Out
+                                <img src="assets/images/icons/icon-logout.png" /> Log Out
                             </button>
                         </div>
                     </div>
 
                     <!-- Right Content Section -->
-                    <div class="col-md-9">
-                        <div class="tab-content" id="dashboard-content">
+                    <div class="col-md-9 col-lg-10">
+                        <div class="tab-content ms-md-2 ms-lg-3 ms-xl-4" id="dashboard-content">
 
                             <!-- Profile Tab with Accordion -->
                             <div class="tab-pane fade show active" id="profile" role="tabpanel">
