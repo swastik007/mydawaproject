@@ -13068,6 +13068,7 @@ input[type=radio]:checked::before {
   font-weight: 500;
   font-size: 1em;
   font-family: "Figtree-Medium";
+  margin-bottom: 0;
 }
 @media (min-width: 1200px) {
   .radio-item label {
