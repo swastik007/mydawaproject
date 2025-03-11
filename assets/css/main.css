@@ -12275,6 +12275,53 @@ body {
   border-bottom: 1px dashed rgb(111, 183, 76);
 }
 
+.badge {
+  padding: 6px 12px;
+  border-radius: 25px;
+  font-weight: unset;
+  font-family: "Figtree-Medium" !important;
+  font-size: 12px;
+}
+@media (min-width: 1200px) {
+  .badge {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1800px) {
+  .badge {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .badge {
+    padding: 10px 18px;
+  }
+}
+.badge.badge-green {
+  background-color: #ECFFF3;
+  color: rgb(111, 183, 76);
+}
+.badge.badge-brown {
+  background-color: #FFFCEC;
+  color: #B99608;
+}
+.badge.badge-purple {
+  background-color: #FFF0FF;
+  color: #B908B9;
+}
+.badge.badge-red {
+  background-color: #FFF6F6;
+  color: rgb(230, 27, 74);
+}
+.badge.badge-blue {
+  background-color: #ECFFF3;
+  color: rgb(81, 107, 241);
+}
+.badge.badge-primary {
+  background-color: #FFF0F6;
+  color: rgb(230, 27, 119);
+}
+
 .dawa-modal {
   position: fixed;
   top: 100px;
@@ -14213,6 +14260,11 @@ ol.form-list {
   font-size: 16px;
 }
 
+/* reset bootstrap input shadow */
+.nav-link:focus-visible {
+  box-shadow: none;
+}
+
 /* Adjust intl-tel-input styles */
 .iti input[type=tel] {
   border: 1px solid #d4dee5;
@@ -14274,22 +14326,233 @@ ol.form-list {
     background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/img/flags@2x.png");
   }
 }
-.custom-table {
-  background-color: #ffffff;
-  border-radius: 8px !important;
+.tab-content .accordion-button:not(.collapsed) {
+  background-color: white;
+}
+.tab-content .accordion-button h4, .tab-content .accordion-button .h4 {
+  font-size: 16px;
+}
+@media (min-width: 1200px) {
+  .tab-content .accordion-button h4, .tab-content .accordion-button .h4 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .tab-content .accordion-button h4, .tab-content .accordion-button .h4 {
+    font-size: 28px;
+  }
+}
+
+.accordion-heading1 {
+  color: rgb(55, 52, 52);
+  font-size: 20px;
+  font-family: "Figtree-SemiBold";
+}
+@media (min-width: 1200px) {
+  .accordion-heading1 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .accordion-heading1 {
+    font-size: 32px;
+  }
+}
+.accordion-heading1 p {
+  font-family: "Figtree-Light";
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+@media (min-width: 1200px) {
+  .accordion-heading1 p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .accordion-heading1 p {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1800px) {
+  .accordion-heading1 p {
+    margin-top: 8px;
+  }
+}
+
+.nav .nav-link {
+  border-radius: 8px;
+  color: rgb(55, 52, 52);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Figtree-SemiBold";
+  font-size: 14px;
+  padding: 10px 18px;
+}
+@media (min-width: 1200px) {
+  .nav .nav-link {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .nav .nav-link {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .nav .nav-link {
+    padding: 15px 30px;
+  }
+}
+.nav .nav-link svg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 7px;
+}
+@media (min-width: 1800px) {
+  .nav .nav-link svg {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+  }
+}
+.nav .nav-link svg path {
+  stroke: #737171;
+}
+.nav .nav-link.active, .nav .nav-link.show > .nav-link {
+  background-color: #F8F8FC;
+  color: rgb(55, 52, 52);
+}
+.nav .nav-link.active svg path, .nav .nav-link.show > .nav-link svg path {
+  stroke: rgb(55, 52, 52);
+}
+.nav .nav-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 7px;
+}
+@media (min-width: 1800px) {
+  .nav .nav-link img {
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
+  }
+}
+
+#profileAccordion .accordion-button:focus {
+  box-shadow: none;
+}
+#profileAccordion .accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+#profileAccordion .accordion-item {
+  border: 1px solid #f1f1f1;
+  border-radius: 12px;
+}
+#profileAccordion .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed,
+#profileAccordion .accordion-item:first-of-type > .accordion-header .accordion-button {
+  border: 1px solid #f1f1f1;
+  border-radius: 12px !important;
+}
+#profileAccordion .accordion-item:first-of-type > .accordion-header .accordion-button {
+  border: none;
+  border-radius: 12px !important;
+  box-shadow: none;
+}
+
+.tab-title-heading {
+  font-family: "Figtree-SemiBold";
+  font-size: 20px;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .tab-title-heading {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .tab-title-heading {
+    font-size: 32px;
+  }
+}
+
+#orders .nav-tabs {
+  border: none;
+}
+#orders .nav-tabs .nav-item {
+  border: none;
+}
+#orders .nav-tabs .nav-item .nav-link {
+  border-radius: 0;
+  color: rgb(55, 52, 52);
+  font-size: 14px;
+  font-family: "Figtree";
+  padding: 5px 0;
+  margin-right: 15px;
+}
+@media (min-width: 1200px) {
+  #orders .nav-tabs .nav-item .nav-link {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  #orders .nav-tabs .nav-item .nav-link {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1800px) {
+  #orders .nav-tabs .nav-item .nav-link {
+    margin-right: 25px;
+  }
+}
+#orders .nav-tabs .nav-item .nav-link:hover, #orders .nav-tabs .nav-item .nav-link:focus {
+  border: none;
+  color: rgb(111, 183, 76);
+  font-family: "Figtree-Medium";
+}
+#orders .nav-tabs .nav-item .nav-link.active {
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid rgb(111, 183, 76) !important;
+  font-family: "Figtree-Medium";
+}
+#orders .table {
+  border-radius: 0 8px 8px 0 !important;
+}
+#orders thead th {
+  background-color: #F1F1F5;
+  font-family: "Figtree-Light";
+  color: #929292;
+}
+#orders tbody tr {
+  border: none;
+}
+#orders tbody tr:hover {
+  background-color: #f1f3f5;
+}
+#orders tbody tr td {
+  font-family: "Figtree-Medium";
+}
+
+.table {
   overflow: hidden;
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
-  font-family: "Inter";
+  background-color: #ffffff;
   border: 1px solid #d4dee5;
+  font-family: "Inter";
+  border-radius: 8px !important;
   /* Custom Checkbox Styles */
   /* Hide default checkbox */
   /* Custom checkbox styling */
   /* Checked state */
   /* Checkmark icon when checked */
 }
-.custom-table thead th {
+.table thead th {
   padding: 12px;
   background-color: #f8f9fa;
   font-family: "Inter-Light";
@@ -14298,49 +14561,49 @@ ol.form-list {
   font-size: 0.875em;
 }
 @media (min-width: 1200px) {
-  .custom-table thead th {
+  .table thead th {
     font-size: 0.875em;
   }
 }
 @media (min-width: 1800px) {
-  .custom-table thead th {
+  .table thead th {
     font-size: 1.1em;
   }
 }
 @media (min-width: 1800px) {
-  .custom-table thead th {
+  .table thead th {
     padding: 16px 22px;
   }
 }
-.custom-table tbody tr {
+.table tbody tr {
   border: none;
 }
-.custom-table tbody tr:hover {
+.table tbody tr:hover {
   background-color: #f1f3f5;
 }
-.custom-table tbody tr td {
+.table tbody tr td {
   border: none;
   color: rgb(55, 52, 52);
   font-family: "Inter-Medium";
-  font-size: 0.875em;
+  font-size: 14px;
   padding: 12px 14px;
 }
 @media (min-width: 1200px) {
-  .custom-table tbody tr td {
-    font-size: 0.875em;
+  .table tbody tr td {
+    font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
-  .custom-table tbody tr td {
-    font-size: 1.1em;
+  .table tbody tr td {
+    font-size: 22px;
   }
 }
 @media (min-width: 1800px) {
-  .custom-table tbody tr td {
+  .table tbody tr td {
     padding: 16px 22px;
   }
 }
-.custom-table .custom-checkbox {
+.table .custom-checkbox {
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -14348,13 +14611,13 @@ ol.form-list {
   user-select: none;
   margin-right: 15px;
 }
-.custom-table .custom-checkbox input {
+.table .custom-checkbox input {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
-.custom-table .checkmark {
+.table .checkmark {
   width: 18px;
   height: 18px;
   border-radius: 6px;
@@ -14367,46 +14630,24 @@ ol.form-list {
   transition: all 0.3s ease-in-out;
 }
 @media (min-width: 1800px) {
-  .custom-table .checkmark {
+  .table .checkmark {
     width: 30px;
     height: 30px;
   }
 }
-.custom-table .custom-checkbox input:checked + .checkmark {
+.table .custom-checkbox input:checked + .checkmark {
   background-color: rgb(81, 107, 241);
   /* Blue background */
   position: relative;
 }
-.custom-table .custom-checkbox input:checked + .checkmark::after {
+.table .custom-checkbox input:checked + .checkmark::after {
   content: "✔";
   font-size: 12px;
   color: white;
 }
 @media (min-width: 1800px) {
-  .custom-table .custom-checkbox input:checked + .checkmark::after {
+  .table .custom-checkbox input:checked + .checkmark::after {
     font-size: 18px;
-  }
-}
-
-.badge {
-  padding: 6px 12px;
-  border-radius: 25px;
-  font-family: "Inter-Light";
-  font-size: 0.75em;
-}
-@media (min-width: 1200px) {
-  .badge {
-    font-size: 0.75em;
-  }
-}
-@media (min-width: 1800px) {
-  .badge {
-    font-size: 1em;
-  }
-}
-@media (min-width: 1800px) {
-  .badge {
-    padding: 10px 18px;
   }
 }
 
@@ -22783,58 +23024,8 @@ header {
   padding: 20px;
   border-radius: 12px;
 }
-.dashboard-sidebar .nav-link {
-  border-radius: 8px;
-  color: #737171;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: "Figtree-SemiBold";
-  font-size: 14px;
-}
-@media (min-width: 1200px) {
-  .dashboard-sidebar .nav-link {
-    font-size: 14px;
-  }
-}
-@media (min-width: 1800px) {
-  .dashboard-sidebar .nav-link {
-    font-size: 20px;
-  }
-}
-.dashboard-sidebar .nav-link svg {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  margin-right: 7px;
-}
-@media (min-width: 1800px) {
-  .dashboard-sidebar .nav-link svg {
-    width: 36px;
-    height: 36px;
-    margin-right: 12px;
-  }
-}
-.dashboard-sidebar .nav-link svg path {
-  stroke: #737171;
-}
-.dashboard-sidebar .nav-link.active, .dashboard-sidebar .nav-link.show > .nav-link {
-  background-color: #F8F8FC;
-  color: rgb(55, 52, 52);
-}
-.dashboard-sidebar .nav-link.active svg path, .dashboard-sidebar .nav-link.show > .nav-link svg path {
-  stroke: rgb(55, 52, 52);
-}
-.dashboard-sidebar .nav-link img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  margin-right: 7px;
-}
-@media (min-width: 1800px) {
-  .dashboard-sidebar .nav-link img {
-    width: 35px;
-    height: 35px;
-    margin-right: 12px;
-  }
+
+.border-container {
+  border: 1px solid #E7ECF4;
+  border-radius: 12px;
 }/*# sourceMappingURL=main.css.map */

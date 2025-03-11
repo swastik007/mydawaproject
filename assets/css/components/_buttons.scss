@@ -246,3 +246,39 @@
         border-bottom: 1px dashed $green;
     }
 }
+
+// Status badge styles
+.badge {
+    padding: 6px 12px;
+    border-radius: 25px;
+    font-weight: unset;
+    font-family: $figtreeMedium!important;
+    @include responsive-font(12px, 12px, 20px);
+    @include respond-to(xxl) {
+        padding: 10px 18px;
+    }
+    &.badge-green {
+        background-color: #ECFFF3;
+        color: $green;
+    }
+    &.badge-brown {
+        background-color: #FFFCEC;
+        color: #B99608;
+    }
+    &.badge-purple {
+        background-color: #FFF0FF;
+        color: #B908B9;
+    }
+    &.badge-red {
+        background-color: #FFF6F6;
+        color: $red;
+    }
+    &.badge-blue {
+        background-color: #ECFFF3;
+        color: $blue;
+    }
+    &.badge-primary {
+        background-color: #FFF0F6;
+        color: $primary;
+    }
+}

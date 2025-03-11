@@ -1,13 +1,13 @@
 // SCSS for styling the table
-.custom-table {
-    background-color: #ffffff;
-    border-radius: 8px !important;
+.table {
     overflow: hidden;
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
-    font-family: $inter;
+    background-color: #ffffff;
     border: 1px solid #d4dee5;
+    font-family: $inter;
+    border-radius: 8px !important;
     thead {
         th {
             padding: 12px;
@@ -31,7 +31,7 @@
                 border: none;
                 color: $black;
                 font-family: $interMedium;
-                @include responsive-font(0.875em, 0.875em, 1.1em);
+                @include responsive-font(14px, 14px, 22px);
                 padding: 12px 14px;
                 @include respond-to(xxl) {
                     padding: 16px 22px;
@@ -86,17 +86,6 @@
         @include respond-to(xxl) {
             font-size: 18px;
         }
-    }
-}
-
-// Status badge styles
-.badge {
-    padding: 6px 12px;
-    border-radius: 25px;
-    font-family: $interLight;
-    @include responsive-font(0.75em, 0.75em, 1em);
-    @include respond-to(xxl) {
-        padding: 10px 18px;
     }
 }
 

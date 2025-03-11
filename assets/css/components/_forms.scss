@@ -1089,6 +1089,13 @@ ol.form-list {
 }
 
 
+/* reset bootstrap input shadow */
+
+.nav-link:focus-visible {
+    box-shadow: none;
+}
+
+
 /* Adjust intl-tel-input styles */
 
 .iti input[type=tel] {

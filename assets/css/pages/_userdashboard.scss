@@ -2,48 +2,9 @@
     border: 1px solid #E7ECF4;
     padding: 20px;
     border-radius: 12px;
-    .nav-link {
-        border-radius: 8px;
-        color: #737171;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        font-family: $figtreeSemiBold;
-        @include responsive-font(14px, 14px, 20px);
-        svg {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            margin-right: 7px;
-            @include respond-to(xxl) {
-                width: 36px;
-                height: 36px;
-                margin-right: 12px;
-            }
-            path {
-                stroke: #737171;
-            }
-        }
-        &.active,
-        &.show>.nav-link {
-            background-color: #F8F8FC;
-            color: $black;
-            svg {
-                path {
-                    stroke: $black;
-                }
-            }
-        }
-        img {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            margin-right: 7px;
-            @include respond-to(xxl) {
-                width: 35px;
-                height: 35px;
-                margin-right: 12px;
-            }
-        }
-    }
+}
+
+.border-container {
+    border: 1px solid #E7ECF4;
+    border-radius: 12px;
 }
