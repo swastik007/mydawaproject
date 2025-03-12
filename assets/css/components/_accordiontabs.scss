@@ -73,114 +73,14 @@
     }
 }
 
-#profileAccordion {
-    .accordion-button:focus {
-        box-shadow: none;
-    }
-    .accordion-button:not(.collapsed) {
-        box-shadow: none;
-    }
-    .accordion-item {
-        border: 1px solid #f1f1f1;
-        border-radius: 12px;
-    }
-    .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed,
-    .accordion-item:first-of-type>.accordion-header .accordion-button {
-        border: 1px solid #f1f1f1;
-        border-radius: 12px!important;
-    }
-    .accordion-item:first-of-type>.accordion-header .accordion-button {
-        border: none;
-        border-radius: 12px!important;
-        box-shadow: none;
-    }
-}
+#profileAccordion {}
 
 .tab-title-heading {
     font-family: $figtreeSemiBold;
-    @include responsive-font(20px, 20px, 32px);
+    @include responsive-font(20px, 20px, 30px);
     line-height: 1.2;
 }
 
-#orders {
-    .nav-tabs {
-        border: none;
-        .nav-item {
-            border: none;
-            .nav-link {
-                border-radius: 0;
-                color: $black;
-                @include responsive-font(14px, 14px, 22px);
-                font-family: $figtree;
-                padding: 5px 0;
-                margin-right: 15px;
-                @include respond-to(xxl) {
-                    margin-right: 25px;
-                }
-                &:hover,
-                &:focus {
-                    border: none;
-                    color: $green;
-                    font-family: $figtreeMedium;
-                }
-                &.active {
-                    background-color: white;
-                    border: none;
-                    border-bottom: 2px solid $green!important;
-                    font-family: $figtreeMedium;
-                }
-            }
-        }
-    }
-    .table {
-        border-radius: 0!important;
-        $font-family: $figtree;
-        border: none;
-        border-top: 1px solid #d4dee5;
-    }
-    thead {
-        th {
-            background-color: #F1F1F5;
-            font-family: $figtreeLight;
-            color: #929292;
-            border-bottom: none;
-            box-shadow: none;
-        }
-    }
-    tbody {
-        tr {
-            border: none;
-            &:hover {
-                background-color: #f1f3f5;
-            }
-            td {
-                font-family: $figtreeMedium;
-            }
-        }
-    }
-    .form-search-container {
-        background-color: white;
-        .search-input {}
-    }
-}
+#orders {}
 
-#profile {
-    .accordion-button {
-        padding: 30px;
-        @include respond-to(xxl) {
-            padding: 48px;
-        }
-    }
-    .accordion-body {
-        padding: 0px 30px 30px 30px;
-        @include respond-to(xxl) {
-            padding: 0 48px 48px 48px;
-        }
-    }
-    .input-row {
-        gap: 20px;
-        @include respond-to(xxl) {
-            gap: 35px;
-        }
-    }
-}
+#profile {}

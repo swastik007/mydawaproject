@@ -9,3 +9,346 @@
     border: 1px solid #E7ECF4;
     border-radius: 12px;
 }
+
+.order-detail-heading {
+    background-color: #FCFCFC;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    @include respond-to(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include respond-to(xxl) {
+        padding: 50px 40px;
+    }
+    h2 {
+        font-family: $figtreeSemiBold;
+        line-height: 1.2;
+        @include responsive-font(28px, 28px, 46px);
+    }
+    .badge {
+        border-radius: 20px;
+        @include responsive-font(14px, 14px, 22px);
+        padding: 10px 18px;
+        border: 1px solid #FFFFFF;
+        @include respond-to(xxl) {
+            padding: 15px 25px;
+        }
+    }
+}
+
+.order-info {
+    display: grid;
+    grid-template-columns: 1fr; // Change to single column
+    margin-top: 20px;
+    @include respond-to(md) {
+        grid-template-columns: 1fr 1fr; // Two equal columns
+        gap: 20px; // Space between columns
+    }
+    @include respond-to(xxl) {
+        margin-top: 35px;
+        gap: 25px;
+    }
+    .delivery-address,
+    .order-additional-details {
+        border: 1px solid #E7ECF4;
+        padding: 15px;
+        border-radius: 12px;
+        width: 100%;
+        @include respond-to(xxl) {
+            padding: 30px;
+        }
+        h4 {
+            font-family: $figtreeMedium;
+            color: rgba($black, 0.5);
+            @include responsive-font(16px, 16px, 24px);
+            margin-bottom: 12px;
+            @include respond-to(xxl) {
+                margin-bottom: 18px;
+            }
+        }
+        p {
+            font-family: $figtreeSemiBold;
+            color: $black;
+            @include responsive-font(16px, 16px, 24px);
+        }
+        span {
+            font-family: $figtree;
+            color: $black;
+            display: block;
+            @include responsive-font(14px, 14px, 20px);
+            margin-bottom: 7px;
+            @include respond-to(xxl) {
+                margin-bottom: 12px;
+            }
+            &.phone {
+                color: #5F6C72;
+            }
+            &.mail {
+                color: #5F6C72;
+            }
+        }
+    }
+}
+
+.dashboard-content {
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+    .accordion-button:not(.collapsed) {
+        box-shadow: none;
+    }
+    .accordion-item {
+        border: 1px solid #f1f1f1;
+        border-radius: 12px;
+    }
+    .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed,
+    .accordion-item:first-of-type>.accordion-header .accordion-button {
+        border: 1px solid #f1f1f1;
+        border-radius: 12px!important;
+    }
+    .accordion-item:first-of-type>.accordion-header .accordion-button {
+        border: none;
+        border-radius: 12px!important;
+        box-shadow: none;
+    }
+    /* profile tabs */
+    .profile-tab {
+        .accordion-button {
+            padding: 30px;
+            @include respond-to(xxl) {
+                padding: 48px;
+            }
+        }
+        .accordion-body {
+            padding: 0px 30px 30px 30px;
+            @include respond-to(xxl) {
+                padding: 0 48px 48px 48px;
+            }
+        }
+        .input-row {
+            gap: 20px;
+            @include respond-to(xxl) {
+                gap: 35px;
+            }
+        }
+    }
+    .loyalty-tab {
+        .accordion-heading1 {
+            @include responsive-font(20px, 20px, 30px);
+        }
+        .accordion-button {
+            padding: 15px 20px;
+            @include respond-to(xxl) {
+                padding: 25px 35px;
+            }
+        }
+        .accordion-body {
+            padding: 0px;
+        }
+        .table {
+            thead {
+                th:first-of-type {
+                    padding: 10px 20px;
+                    @include respond-to(xxl) {
+                        padding: 16px 30px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:first-of-type {
+                        padding: 10px 20px;
+                        @include respond-to(xxl) {
+                            padding: 16px 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Order TABS */
+    .nav-tabs {
+        border: none;
+        .nav-item {
+            border: none;
+            .nav-link {
+                border-radius: 0;
+                color: $black;
+                @include responsive-font(14px, 14px, 22px);
+                font-family: $figtree;
+                padding: 5px 0;
+                margin-right: 15px;
+                @include respond-to(xxl) {
+                    margin-right: 25px;
+                }
+                &:hover,
+                &:focus {
+                    border: none;
+                    color: $green;
+                    font-family: $figtreeMedium;
+                }
+                &.active {
+                    background-color: white;
+                    border: none;
+                    border-bottom: 2px solid $green!important;
+                    font-family: $figtreeMedium;
+                }
+            }
+        }
+    }
+    .table {
+        border-radius: 0!important;
+        $font-family: $figtree;
+        border: none;
+        border-top: 1px solid #d4dee5;
+    }
+    thead {
+        th {
+            background-color: #F1F1F5;
+            font-weight: unset;
+            font-family: $figtreeLight;
+            color: #929292;
+            border-bottom: none;
+            box-shadow: none;
+        }
+    }
+    tbody {
+        tr {
+            border: none;
+            &:hover {
+                background-color: #f1f3f5;
+            }
+            td {
+                font-weight: unset;
+                font-family: $figtreeMedium;
+                @include responsive-font(16px, 16px, 22px);
+            }
+        }
+    }
+    .form-search-container {
+        background-color: white;
+        .search-input {}
+    }
+    /* order tracking */
+    .tracking-progress {
+        margin: 20px 20px 30px 20px;
+        @include respond-to(xxl) {
+            margin: 30px 35px 40px 35px;
+        }
+    }
+    /* manage address */
+    .manage-address {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        @include respond-to(xxl) {
+            gap: 20px;
+        }
+    }
+    .manage-address {
+        width: 100%;
+        background: #fff;
+        /* Adjust spacing between cards */
+        .address-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            background: white;
+            border: 2px solid #D4DEE5;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+            flex: 1 1 100%;
+            /* Default: Full width */
+            max-width: 100%;
+            /* Prevents shrinking below container width */
+            border: 1px solid #ddd;
+            @include respond-to(lg) {
+                flex: 1 1 calc(50% - 10px);
+                /* Half width with spacing */
+                max-width: calc(50% - 10px);
+                /* Prevents expanding beyond half */
+            }
+            @include respond-to(xxl) {
+                padding: 35px;
+            }
+            h3 {
+                font-family: $interSemiBold;
+                @include responsive-font(16px, 16px, 28px);
+                margin-bottom: 10px;
+            }
+            p {
+                font-family: $inter;
+                @include responsive-font(15px, 15px, 26px);
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .delete-icon-btn {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: rgba($black, 0.7);
+            @include respond-to(xxl) {
+                width: 30px;
+                height: 30px;
+            }
+            path {
+                fill: rgba($black, 0.7);
+            }
+        }
+        &:hover,
+        &:focus {
+            svg {
+                fill: #111;
+                path {
+                    fill: #111;
+                }
+            }
+        }
+    }
+    .beneficiary-detail-heading {
+        border: 1px solid #E7ECF4;
+        border-radius: 12px;
+        padding: 20px;
+        @include respond-to(xxl) {
+            padding: 30px;
+        }
+        .details-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr; // Single column on mobile
+            padding-top: 10px;
+            @include respond-to(md) {
+                grid-template-columns: repeat(2, 1fr); // Two columns on smaller screens
+            }
+            @include respond-to(lg) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @include respond-to(xxl) {
+                padding-top: 15px;
+            }
+            .detail-item {
+                display: flex;
+                flex-direction: column;
+                .label {
+                    font-family: $figtree;
+                    color: $black;
+                    @include responsive-font(14px, 14px, 20px);
+                }
+                .value {
+                    font-family: $figtreeMedium;
+                    color: $black;
+                    @include responsive-font(14px, 14px, 20px);
+                }
+            }
+        }
+    }
+}

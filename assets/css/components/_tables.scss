@@ -89,12 +89,13 @@
     }
 }
 
-.status-in-transit {
-    background-color: #ECFFF3;
-    color: $green;
-}
-
-.status-processing {
-    background-color: #FFFCEC;
-    color: #B99608;
+.table-thumb {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 5px;
+    @include respond-to(xxl) {
+        width: 38px;
+        height: 38px;
+    }
 }
