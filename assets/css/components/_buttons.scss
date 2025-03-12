@@ -229,13 +229,13 @@
     border: none;
 }
 
-.blue-dotted-link {
-    font-family: $figtreeBold;
+.dotted-link {
+    font-family: $figtreeSemiBold;
     margin-left: 5px;
-    border-bottom: 1px dashed $blue;
+    border-bottom: 1px dashed $black;
     width: fit-content;
     display: block;
-    color: $blue;
+    color: $black;
     text-decoration: none;
     cursor: pointer;
     @include responsive-font(14px, 14px, 22px);
@@ -244,6 +244,36 @@
         transition: ease-in 0.3s;
         color: $green;
         border-bottom: 1px dashed $green;
+    }
+    &.blue-dotted {
+        border-bottom: 1px dashed $blue;
+        color: $blue;
+        &:hover,
+        &:focus {
+            transition: ease-in 0.3s;
+            color: $darkblue;
+            border-bottom: 1px dashed $darkblue;
+        }
+    }
+    &.red-dotted {
+        border-bottom: 1px dashed $red;
+        color: $red;
+        &:hover,
+        &:focus {
+            transition: ease-in 0.3s;
+            color: $darkred;
+            border-bottom: 1px dashed $darkred
+        }
+    }
+    &.green-dotted {
+        border-bottom: 1px dashed $green;
+        color: $green;
+        &:hover,
+        &:focus {
+            transition: ease-in 0.3s;
+            color: $greendark;
+            border-bottom: 1px dashed $greendark;
+        }
     }
 }
 

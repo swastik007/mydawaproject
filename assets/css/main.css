@@ -12248,31 +12248,58 @@ body {
   border: none;
 }
 
-.blue-dotted-link {
-  font-family: "Figtree-Bold";
+.dotted-link {
+  font-family: "Figtree-SemiBold";
   margin-left: 5px;
-  border-bottom: 1px dashed rgb(81, 107, 241);
+  border-bottom: 1px dashed rgb(55, 52, 52);
   width: fit-content;
   display: block;
-  color: rgb(81, 107, 241);
+  color: rgb(55, 52, 52);
   text-decoration: none;
   cursor: pointer;
   font-size: 14px;
 }
 @media (min-width: 1200px) {
-  .blue-dotted-link {
+  .dotted-link {
     font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
-  .blue-dotted-link {
+  .dotted-link {
     font-size: 22px;
   }
 }
-.blue-dotted-link:hover, .blue-dotted-link:focus {
+.dotted-link:hover, .dotted-link:focus {
   transition: ease-in 0.3s;
   color: rgb(111, 183, 76);
   border-bottom: 1px dashed rgb(111, 183, 76);
+}
+.dotted-link.blue-dotted {
+  border-bottom: 1px dashed rgb(81, 107, 241);
+  color: rgb(81, 107, 241);
+}
+.dotted-link.blue-dotted:hover, .dotted-link.blue-dotted:focus {
+  transition: ease-in 0.3s;
+  color: rgb(0, 90, 161);
+  border-bottom: 1px dashed rgb(0, 90, 161);
+}
+.dotted-link.red-dotted {
+  border-bottom: 1px dashed rgb(230, 27, 74);
+  color: rgb(230, 27, 74);
+}
+.dotted-link.red-dotted:hover, .dotted-link.red-dotted:focus {
+  transition: ease-in 0.3s;
+  color: rgb(205, 12, 57);
+  border-bottom: 1px dashed rgb(205, 12, 57);
+}
+.dotted-link.green-dotted {
+  border-bottom: 1px dashed rgb(111, 183, 76);
+  color: rgb(111, 183, 76);
+}
+.dotted-link.green-dotted:hover, .dotted-link.green-dotted:focus {
+  transition: ease-in 0.3s;
+  color: rgb(101, 161, 70);
+  border-bottom: 1px dashed rgb(101, 161, 70);
 }
 
 .badge {
@@ -12861,7 +12888,7 @@ textarea {
   border: 1px solid #d4dee5;
   border-radius: 8px !important;
   padding: 12px 14px;
-  font-size: 1em;
+  font-size: 16px;
   font-family: "Figtree";
   color: rgb(55, 52, 52);
   outline: none;
@@ -12874,7 +12901,7 @@ textarea {
   input[type=password],
   select,
   textarea {
-    font-size: 1em;
+    font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
@@ -12884,7 +12911,7 @@ textarea {
   input[type=password],
   select,
   textarea {
-    font-size: 1.6em;
+    font-size: 24px;
   }
 }
 @media (min-width: 1800px) {
@@ -14382,7 +14409,7 @@ ol.form-list {
 
 .nav .nav-link {
   border-radius: 8px;
-  color: rgb(55, 52, 52);
+  color: rgb(113, 113, 112);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -14405,17 +14432,23 @@ ol.form-list {
     padding: 15px 30px;
   }
 }
+.nav .nav-link.text-danger {
+  color: rgb(230, 27, 74);
+}
+.nav .nav-link.text-danger svg path {
+  stroke: rgb(230, 27, 74);
+}
 .nav .nav-link svg {
   width: 24px;
   height: 24px;
   object-fit: contain;
-  margin-right: 7px;
+  margin-right: 10px;
 }
 @media (min-width: 1800px) {
   .nav .nav-link svg {
     width: 36px;
     height: 36px;
-    margin-right: 12px;
+    margin-right: 16px;
   }
 }
 .nav .nav-link svg path {
@@ -14427,19 +14460,6 @@ ol.form-list {
 }
 .nav .nav-link.active svg path, .nav .nav-link.show > .nav-link svg path {
   stroke: rgb(55, 52, 52);
-}
-.nav .nav-link img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  margin-right: 7px;
-}
-@media (min-width: 1800px) {
-  .nav .nav-link img {
-    width: 35px;
-    height: 35px;
-    margin-right: 12px;
-  }
 }
 
 #profileAccordion .accordion-button:focus {
@@ -14520,12 +14540,16 @@ ol.form-list {
   font-family: "Figtree-Medium";
 }
 #orders .table {
-  border-radius: 0 8px 8px 0 !important;
+  border-radius: 0 !important;
+  border: none;
+  border-top: 1px solid #d4dee5;
 }
 #orders thead th {
   background-color: #F1F1F5;
   font-family: "Figtree-Light";
   color: #929292;
+  border-bottom: none;
+  box-shadow: none;
 }
 #orders tbody tr {
   border: none;
@@ -14535,6 +14559,33 @@ ol.form-list {
 }
 #orders tbody tr td {
   font-family: "Figtree-Medium";
+}
+#orders .form-search-container {
+  background-color: white;
+}
+#profile .accordion-button {
+  padding: 30px;
+}
+@media (min-width: 1800px) {
+  #profile .accordion-button {
+    padding: 48px;
+  }
+}
+#profile .accordion-body {
+  padding: 0px 30px 30px 30px;
+}
+@media (min-width: 1800px) {
+  #profile .accordion-body {
+    padding: 0 48px 48px 48px;
+  }
+}
+#profile .input-row {
+  gap: 20px;
+}
+@media (min-width: 1800px) {
+  #profile .input-row {
+    gap: 35px;
+  }
 }
 
 .table {
@@ -14683,14 +14734,14 @@ ol.form-list {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 12px;
+  padding: 5px 15px;
   background: white;
   color: #A2A3A8;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   border: none;
   margin: 0;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid transparent;
   font-size: 1em;
 }
@@ -14706,13 +14757,14 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .custom-pagination .page-item .page-link {
-    padding: 8px 20px;
+    padding: 8px 18px;
   }
 }
-.custom-pagination .page-item .page-link:hover {
+.custom-pagination .page-item .page-link:hover, .custom-pagination .page-item .page-link:focus {
   background-color: #f8f8f8;
   color: rgb(230, 27, 119);
   border-color: rgb(230, 27, 119);
+  box-shadow: none;
 }
 .custom-pagination .page-item.prev .page-link, .custom-pagination .page-item.next .page-link {
   background: transparent;
@@ -22132,10 +22184,10 @@ header {
 }
 @media (min-width: 1800px) {
   .input-icon img.right-icon {
-    width: 35px;
-    height: 35px;
-    right: 20px;
-    top: 20px;
+    width: 32px;
+    height: 32px;
+    right: 18px;
+    top: 18px;
   }
 }
 
@@ -22919,7 +22971,8 @@ header {
     font-size: 26px;
   }
 }
-.tracking-card .tracking-progress {
+
+.tracking-progress {
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
@@ -22927,11 +22980,11 @@ header {
   margin: 40px 20px 30px 20px;
 }
 @media (min-width: 1800px) {
-  .tracking-card .tracking-progress {
+  .tracking-progress {
     margin: 50px 35px 30px 35px;
   }
 }
-.tracking-card .tracking-progress::before {
+.tracking-progress::before {
   content: "";
   position: absolute;
   top: 14px;
@@ -22941,7 +22994,7 @@ header {
   background: #ddd;
   z-index: 0;
 }
-.tracking-card .tracking-progress .step {
+.tracking-progress .step {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22949,7 +23002,7 @@ header {
   position: relative;
   z-index: 1;
 }
-.tracking-card .tracking-progress .step .circle {
+.tracking-progress .step .circle {
   width: 20px;
   height: 20px;
   background: #ddd;
@@ -22962,15 +23015,15 @@ header {
   color: white;
 }
 @media (min-width: 1800px) {
-  .tracking-card .tracking-progress .step .circle {
+  .tracking-progress .step .circle {
     width: 32px;
     height: 32px;
   }
 }
-.tracking-card .tracking-progress .step.completed .circle {
+.tracking-progress .step.completed .circle {
   background: rgb(111, 183, 76);
 }
-.tracking-card .tracking-progress .step p {
+.tracking-progress .step p {
   font-family: "Figtree-Bold";
   font-size: 15px;
   color: rgb(55, 52, 52);
@@ -22979,31 +23032,31 @@ header {
   line-height: 1.5;
 }
 @media (min-width: 1200px) {
-  .tracking-card .tracking-progress .step p {
+  .tracking-progress .step p {
     font-size: 15px;
   }
 }
 @media (min-width: 1800px) {
-  .tracking-card .tracking-progress .step p {
+  .tracking-progress .step p {
     font-size: 26px;
   }
 }
 @media (min-width: 1800px) {
-  .tracking-card .tracking-progress .step p {
+  .tracking-progress .step p {
     margin-top: 16px;
   }
 }
-.tracking-card .tracking-progress .step span {
+.tracking-progress .step span {
   color: rgb(55, 52, 52);
   font-size: 13px;
 }
 @media (min-width: 1200px) {
-  .tracking-card .tracking-progress .step span {
+  .tracking-progress .step span {
     font-size: 13px;
   }
 }
 @media (min-width: 1800px) {
-  .tracking-card .tracking-progress .step span {
+  .tracking-progress .step span {
     font-size: 20px;
   }
 }
@@ -23023,6 +23076,7 @@ header {
   border: 1px solid #E7ECF4;
   padding: 20px;
   border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 7px 20px 0px, rgba(0, 0, 0, 0.001) 0px 0px 0px 1px;
 }
 
 .border-container {

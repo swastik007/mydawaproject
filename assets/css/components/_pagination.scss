@@ -18,7 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 5px 12px;
+            padding: 5px 15px;
             background: white;
             color: #A2A3A8;
             $font-family: $figtreeSemiBold;
@@ -26,16 +26,18 @@
             text-decoration: none;
             border: none;
             margin: 0;
-            border-radius: 12px;
+            border-radius: 8px;
             border: 1px solid transparent;
             @include responsive-font(1em, 1em, 1.6em);
             @include respond-to(xxl) {
-                padding: 8px 20px;
+                padding: 8px 18px;
             }
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: #f8f8f8;
                 color: $primary;
                 border-color: $primary;
+                box-shadow: none;
             }
         }
         &.prev .page-link,

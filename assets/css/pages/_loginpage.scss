@@ -212,10 +212,10 @@
         width: 20px;
         height: 20px;
         @include respond-to(xxl) {
-            width: 35px;
-            height: 35px;
-            right: 20px;
-            top: 20px;
+            width: 32px;
+            height: 32px;
+            right: 18px;
+            top: 18px;
         }
     }
 }

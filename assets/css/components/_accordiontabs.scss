@@ -28,7 +28,7 @@
 .nav {
     .nav-link {
         border-radius: 8px;
-        color: $black;
+        color: $grey9;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -38,15 +38,23 @@
         @include respond-to(xxl) {
             padding: 15px 30px;
         }
+        &.text-danger {
+            color: $red;
+            svg {
+                path {
+                    stroke: $red;
+                }
+            }
+        }
         svg {
             width: 24px;
             height: 24px;
             object-fit: contain;
-            margin-right: 7px;
+            margin-right: 10px;
             @include respond-to(xxl) {
                 width: 36px;
                 height: 36px;
-                margin-right: 12px;
+                margin-right: 16px;
             }
             path {
                 stroke: #737171;
@@ -60,17 +68,6 @@
                 path {
                     stroke: $black;
                 }
-            }
-        }
-        img {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            margin-right: 7px;
-            @include respond-to(xxl) {
-                width: 35px;
-                height: 35px;
-                margin-right: 12px;
             }
         }
     }
@@ -136,14 +133,18 @@
         }
     }
     .table {
-        border-radius: 0 8px 8px 0!important;
+        border-radius: 0!important;
         $font-family: $figtree;
+        border: none;
+        border-top: 1px solid #d4dee5;
     }
     thead {
         th {
             background-color: #F1F1F5;
             font-family: $figtreeLight;
             color: #929292;
+            border-bottom: none;
+            box-shadow: none;
         }
     }
     tbody {
@@ -155,6 +156,31 @@
             td {
                 font-family: $figtreeMedium;
             }
+        }
+    }
+    .form-search-container {
+        background-color: white;
+        .search-input {}
+    }
+}
+
+#profile {
+    .accordion-button {
+        padding: 30px;
+        @include respond-to(xxl) {
+            padding: 48px;
+        }
+    }
+    .accordion-body {
+        padding: 0px 30px 30px 30px;
+        @include respond-to(xxl) {
+            padding: 0 48px 48px 48px;
+        }
+    }
+    .input-row {
+        gap: 20px;
+        @include respond-to(xxl) {
+            gap: 35px;
         }
     }
 }
