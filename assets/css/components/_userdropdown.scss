@@ -1,0 +1,181 @@
+.user-wrap {
+  position: relative;
+  z-index: 10000;
+  cursor: pointer;
+  .delivery-dropdown {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    .delivery-dropdown {
+      display: block;
+    }
+  }
+  /* Ensure parent has a high z-index */
+  .delivery-dropdown {
+    /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    // transform: translateX(-50%);
+    /* Centers the dropdown */
+    width: 324px;
+    /* Set desired width */
+    background: white;
+    z-index: 999999;
+    /* Ensure dropdown is above other elements */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    border: 1px solid #e7ecf4;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    .dropdown-header {
+      color: $black;
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+      }
+      p {
+        text-wrap: auto;
+        margin-bottom: 0;
+      }
+    }
+    .dropdown-wrap {
+      display: flex;
+      padding: 20px;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .zip-code {
+      padding: 20px;
+      border-top: 1px solid #e7ecf4;
+      @include respond-to(lg) {
+      }
+    }
+    .btn-rounded {
+      padding: 10px 10px;
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    input {
+      border-radius: 40px !important;
+      /* Change this value for more/less rounded corners */
+      border: 1px solid #ccc;
+      /* Default border */
+      padding: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+    }
+    /* Outline and border color when input is clicked (focused) */
+    input:focus {
+      border-color: #e61b77;
+      /* Border color when focused */
+      outline: 3px solid rgba(230, 27, 119, 0.3);
+      /* Light pinkish outline */
+      box-shadow: 0 0 5px rgba(230, 27, 119, 0.5);
+      /* Optional shadow for effect */
+    }
+    .address-list {
+      display: flex;
+      flex-direction: column;
+      .radio-container {
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        border: 1px solid #e6ebf3;
+        margin-bottom: 10px;
+        .name {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .address {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+    .delivery-options {
+      display: flex;
+      .btn-primary {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px 25px;
+        margin-right: 7px;
+      }
+      .btn-outline-light {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 7px 20px;
+      }
+    }
+  }
+
+  .manage-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: #516bf1;
+    border-bottom: 2px dashed #516bf1;
+    /* Dotted border with pink color */
+    padding: 5px 0px;
+    /* Adds some space inside */
+    text-decoration: none;
+    /* Removes default underline */
+    display: block;
+    /* Ensures the border wraps around content properly */
+    width: fit-content;
+  }
+  .user-menu {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    padding: 0 16px 16px;
+    &__item {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 10px 8px;
+      transition: background-color 0.2s;
+      animation: fadeInUp 0.3s forwards;
+      opacity: 0;
+      border-radius: 8px;
+      color: #737171;
+      text-decoration: none;
+      transition: 400ms ease;
+
+      &:hover {
+        background-color: #f8f8fc;
+        color: #373434;
+      }
+
+      &:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.15s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.2s;
+      }
+    }
+
+    &__icon {
+    }
+
+    &__text {
+      font-size: 14px;
+      font-family: $figtreeSemiBold;
+    }
+  }
+}
