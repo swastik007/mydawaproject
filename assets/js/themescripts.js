@@ -1,7 +1,7 @@
 console.log("🚀 jQuery script is running!");
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     loadComponents();
     setupEventListeners();
     // Ensure carousels are initialized on all pages
@@ -137,7 +137,7 @@ function initializeHealthJourneyCarousel() {
         }
     }
 }
-$(document).ready(function() {
+$(document).ready(function () {
     $("#wishlist-carousel").owlCarousel({
         loop: false,
         margin: 15,
@@ -172,11 +172,11 @@ function getNavText() {
 
 // Function to setup event listeners
 function setupEventListeners() {
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", function (e) {
         if (e.target.matches(".category-toggle")) toggleCategoryMenu(e);
     });
 
-    document.addEventListener("keydown", function(e) {
+    document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") closeCategoryMenu();
     });
 
@@ -287,7 +287,7 @@ function setupQuantityControls() {
 
 // Wishlist Popup
 function setupWishlistPopup() {
-    $(document).on("click", ".btn-wishlist", function(e) {
+    $(document).on("click", ".btn-wishlist", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -302,12 +302,12 @@ function setupWishlistPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         $("#wishlistModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#wishlistModal")) {
             $("#wishlistModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
@@ -317,7 +317,7 @@ function setupWishlistPopup() {
 
 // Wishlist PIN Popup
 function setupWishlistPinPopup() {
-    $(document).on("click", ".btn-wishlistpin", function(e) {
+    $(document).on("click", ".btn-wishlistpin", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -332,12 +332,12 @@ function setupWishlistPinPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         $("#wishlistModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#wishlistModal")) {
             $("#wishlistModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
@@ -350,7 +350,7 @@ function setupWishlistPinPopup() {
 
 // Speak to doctor
 function setupPopup() {
-    $(document).on("click", ".btn-popup", function(e) {
+    $(document).on("click", ".btn-popup", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -363,12 +363,12 @@ function setupPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         $("#popupModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#popupModal")) {
             $("#popupModal").fadeOut();
             $("#modalOverlay").fadeOut(); // Hide overlay
@@ -380,7 +380,7 @@ function setupPopup() {
 function setupPaymentPopup() {
     console.log("🚀 setupPaymentPopup() function executed");
 
-    $(document).on("click", ".btn-payment-popup", function(e) {
+    $(document).on("click", ".btn-payment-popup", function (e) {
         e.preventDefault();
         e.stopPropagation();
         console.log('✅ Payment popup button clicked');
@@ -395,13 +395,13 @@ function setupPaymentPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         console.log("❌ Closing payment modal");
         $("#paymentModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#paymentModal")) {
             console.log("❌ Clicking outside payment modal, closing...");
             $("#paymentModal").fadeOut();
@@ -414,7 +414,7 @@ function setupPaymentPopup() {
 function setupEditDeliveryPopup() {
     console.log("🚀 setupPaymentPopup() function executed");
 
-    $(document).on("click", ".btn-edit-delivery", function(e) {
+    $(document).on("click", ".btn-edit-delivery", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -428,13 +428,13 @@ function setupEditDeliveryPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         console.log("❌ Closing payment modal");
         $("#editDeliveryModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#editDeliveryModal")) {
             console.log("❌ Clicking outside payment modal, closing...");
             $("#editDeliveryModal").fadeOut();
@@ -446,7 +446,7 @@ function setupEditDeliveryPopup() {
 // Add Delivery Popup
 function setupAddDeliveryPopup() {
 
-    $(document).on("click", ".btn-add-delivery", function(e) {
+    $(document).on("click", ".btn-add-delivery", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -460,13 +460,13 @@ function setupAddDeliveryPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         console.log("❌ Closing modal");
         $("#addDeliveryModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#addDeliveryModal")) {
             console.log("❌ Clicking outside modal, closing...");
             $("#addDeliveryModal").fadeOut();
@@ -480,7 +480,7 @@ function setupAddDeliveryPopup() {
 function setuptopBalancePopup() {
     console.log("🚀 Top-up Balance Popup script loaded!");
 
-    $(document).on("click", ".btn-topup", function(e) {
+    $(document).on("click", ".btn-topup", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -494,13 +494,13 @@ function setuptopBalancePopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         console.log("❌ Closing modal");
         $("#topupBalanceModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#topupBalanceModal")) {
             console.log("❌ Clicking outside modal, closing...");
             $("#topupBalanceModal").fadeOut();
@@ -513,7 +513,7 @@ function setuptopBalancePopup() {
 function setuptransferBalancePopup() {
     console.log("🚀 Top-up Balance Popup script loaded!");
 
-    $(document).on("click", ".btn-transferbalance", function(e) {
+    $(document).on("click", ".btn-transferbalance", function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -540,13 +540,13 @@ function setuptransferBalancePopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         console.log("❌ Closing modal");
         $("#transferBalanceModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#transferBalanceModal")) {
             console.log("❌ Clicking outside modal, closing...");
             $("#transferBalanceModal").fadeOut();
@@ -558,7 +558,7 @@ function setuptransferBalancePopup() {
 function setuporderSuccessPopup() {
     console.log("🚀 order success script loaded!");
 
-    $(document).on("click", ".btn-ordersuccess", function(e) {
+    $(document).on("click", ".btn-ordersuccess", function (e) {
         e.preventDefault();
         e.stopPropagation();
         // Close any other open modals
@@ -575,13 +575,13 @@ function setuporderSuccessPopup() {
         }
     });
 
-    $(document).on("click", ".close-btn, #modalOverlay", function() {
+    $(document).on("click", ".close-btn, #modalOverlay", function () {
         console.log("❌ Closing modal");
         $("#orderSuccessModal").fadeOut();
         $("#modalOverlay").fadeOut(); // Hide overlay
     });
 
-    $(window).on("click", function(e) {
+    $(window).on("click", function (e) {
         if ($(e.target).is("#orderSuccessModal")) {
             console.log("❌ Clicking outside modal, closing...");
             $("#orderSuccessModal").fadeOut();
@@ -591,12 +591,12 @@ function setuporderSuccessPopup() {
 }
 
 // Ensure the function is executed
-$(document).ready(function() {
+$(document).ready(function () {
     setuptopBalancePopup();
 });
 
 
-$(window).on("load", function() {
+$(window).on("load", function () {
     console.log("🚀 jQuery Step Navigation Loaded!");
 
     let currentStep = 0;
@@ -621,7 +621,7 @@ $(window).on("load", function() {
 
         // Update step indicators
         steps.removeClass("selected completed");
-        steps.each(function(index) {
+        steps.each(function (index) {
             if (index < currentStep) {
                 $(this).addClass("completed");
             } else if (index === currentStep) {
@@ -633,7 +633,7 @@ $(window).on("load", function() {
     }
 
     // Handle "Continue" button clicks
-    $(".btn-next").click(function() {
+    $(".btn-next").click(function () {
         console.log("➡️ Next button clicked.");
         if (currentStep < stepSections.length - 1) {
             currentStep++;
@@ -642,7 +642,7 @@ $(window).on("load", function() {
     });
 
     // Handle "Previous" button clicks
-    $(".btn-prev").click(function() {
+    $(".btn-prev").click(function () {
         console.log("⬅️ Previous button clicked.");
         if (currentStep > 0) {
             currentStep--;
@@ -654,7 +654,7 @@ $(window).on("load", function() {
     updateStep();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     function waitForHeader() {
         let header = $(".site-header")[0]; // Get the actual DOM node
         if (!header) {
@@ -694,8 +694,8 @@ $(document).ready(function() {
         checkSticky(); // Run on load
 
         // **Mutation Observer: Reapply .sticky if removed**
-        const observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
                 if (!header.hasClass("sticky") && $(window).scrollTop() > 50) {
                     console.warn("⚠️ .sticky was removed, reapplying!");
                     header.addClass("sticky");
@@ -709,7 +709,7 @@ $(document).ready(function() {
     waitForHeader(); // Start checking for header
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript loaded successfully!"); // Debugging
 
     // Recipient Selection (Myself/Dependent)
@@ -810,7 +810,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     console.log("🚀 Payment selection script loaded!");
 
     // Payment option radio buttons
@@ -846,7 +846,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Attach event listeners to all radio buttons
     paymentRadios.forEach((radio) => {
-        radio.addEventListener("change", function() {
+        radio.addEventListener("change", function () {
             togglePaymentSection(this.value);
         });
 
@@ -857,7 +857,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     console.log("🚀 Top-up Balance Modal script loaded!");
 
     // Ensure the modal exists before running the script
@@ -894,7 +894,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Attach click event to the button that opens the modal
     document.querySelectorAll(".btn-topup").forEach((button) => {
-        button.addEventListener("click", function(e) {
+        button.addEventListener("click", function (e) {
             e.preventDefault();
             showTopupModal();
         });
@@ -904,7 +904,7 @@ document.addEventListener("DOMContentLoaded", function() {
     closeModalBtn.addEventListener("click", hideTopupModal);
 
     // Close modal when clicking outside modal content
-    window.addEventListener("click", function(e) {
+    window.addEventListener("click", function (e) {
         if (e.target === topupModal) {
             hideTopupModal();
         }
@@ -928,7 +928,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Attach event listeners to radio buttons
     topupRadios.forEach((radio) => {
-        radio.addEventListener("change", function() {
+        radio.addEventListener("change", function () {
             togglePaymentInstructions(this.value);
         });
 
@@ -941,7 +941,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.querySelectorAll('.dropdown-item').forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         const dropdownBtn = document.getElementById('dropdownMenuButton');
         dropdownBtn.textContent = this.textContent;
 
@@ -952,14 +952,14 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
 });
 
 // Floating Icon
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const helpButton = document.getElementById("helpButton");
     const helpMenu = document.getElementById("helpMenu");
 
     // Only run this script if helpButton exists
     if (!helpButton || !helpMenu) return;
 
-    helpButton.addEventListener("click", function() {
+    helpButton.addEventListener("click", function () {
         helpMenu.classList.toggle("active");
 
         // Toggle button icon between plus and times
@@ -987,7 +987,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Close menu when clicking outside
-    document.addEventListener("click", function(event) {
+    document.addEventListener("click", function (event) {
         const isClickInside =
             helpButton.contains(event.target) ||
             helpMenu.contains(event.target);
@@ -1016,4 +1016,29 @@ document.addEventListener("DOMContentLoaded", function() {
             </style>
         `
     );
+});
+
+// Counter
+const decreaseBtn = document.querySelector('.decrease-btn');
+const increaseBtn = document.querySelector('.increase-btn');
+const countDisplay = document.querySelector('.count-display');
+
+let count = 28; // Starting count
+
+// Update display with leading zero if needed
+function updateDisplay() {
+    const displayText = count === 1 ? "01 Day" : `${count < 10 ? '0' + count : count} Days`;
+    countDisplay.textContent = displayText;
+}
+
+decreaseBtn.addEventListener('click', () => {
+    if (count > 1) {
+        count--;
+        updateDisplay();
+    }
+});
+
+increaseBtn.addEventListener('click', () => {
+    count++;
+    updateDisplay();
 });
