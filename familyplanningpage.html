@@ -1,142 +1,770 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Dawa</title>
-    <link rel="shortcut icon" href="assets/images/favicon.png">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="mydawa">
-    <meta name="keywords" content="mydawa">
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="mydawa" />
+    <meta name="keywords" content="mydawa" />
 
-    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <div class="container-main">
-        <div id="header"></div>
-        <main class="dawamain">
-            <div class="page-content">
-                <!-- Breadcrumb section -->
-                <nav class="breadcrumb-container mydawa-container">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><span class="divider">/</span></li>
-                        <li><a href="#">Services</a></li>
-                        <li><span class="divider">/</span></li>
-                        <li><a href="#" class="active">Submit a Prescription</a></li>
-                    </ul>
-                </nav>
+      <div id="header"></div>
+      <main class="dawamain">
+        <div class="page-content">
+          <!-- Breadcrumb section -->
+          <nav class="breadcrumb-container mydawa-container">
+            <ul class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><span class="divider">/</span></li>
+              <li><a href="#">Services</a></li>
+              <li><span class="divider">/</span></li>
+              <li><a href="#" class="active">Submit a Prescription</a></li>
+            </ul>
+          </nav>
 
-                <div class="health-center">
-                    <div class="header-section">
-                        <h1>My Health Center</h1>
-                        <h2>Family Planning</h2>
-                    </div>
-
-                    <section class="intro-section">
-                        <div class="text-section">
-                            <h3>Family planning empowers your family to live healthier and happier lives</h3>
-                            <p>
-                                It helps manage your reproductive health by guiding family planning, pregnancy spacing, and choosing the best contraceptive methods for you.
-                            </p>
-                            <ul>
-                                <li>Foster Healthier Families</li>
-                                <li>Reduce Unplanned Pregnancies</li>
-                                <li>Personalized & Curated Choices</li>
-                                <li>Enhance Economic Stability</li>
-                            </ul>
-                        </div>
-                        <div class="image-section">
-                            <img src="path/to/family-image.jpg" alt="Family Planning">
-                        </div>
-                    </section>
-
-                    <section class="getting-started">
-                        <h3>Getting Started with Family Planning</h3>
-                        <div class="steps">
-                            <div class="step">
-                                <h4>1</h4>
-                                <p>Explore Your Family Planning Options</p>
-                            </div>
-                            <div class="step">
-                                <h4>2</h4>
-                                <p>Consult A Family Planning Specialist</p>
-                            </div>
-                            <div class="step">
-                                <h4>3</h4>
-                                <p>Choose The Right Contraceptive Method</p>
-                            </div>
-                        </div>
-                        <button>Book Appointment</button>
-                    </section>
-
-                    <section class="contraceptives">
-                        <h3>Let's Talk Contraceptives</h3>
-                        <div class="options">
-                            <div class="option">Combine Pills</div>
-                            <div class="option">Diaphragm</div>
-                            <div class="option">Patch</div>
-                            <div class="option">Injections</div>
-                            <div class="option">Condoms</div>
-                            <div class="option">Copper Coil IUD</div>
-                        </div>
-                    </section>
-
-                    <section class="fertility-calculator">
-                        <h3>Estimate Your Fertility Window</h3>
-                        <p>Enter Your Details To Calculate Your Fertility Window And Get Personalized Insights</p>
-                        <form>
-                            <label>First Day Of Last Period</label>
-                            <input type="date">
-                            <label>Average Cycle Length</label>
-                            <div class="cycle-input">
-                                <button type="button">-</button>
-                                <input type="number" value="28">
-                                <button type="button">+</button>
-                            </div>
-                            <button>Show My Fertile Dates</button>
-                        </form>
-                    </section>
-
-                    <section class="categories">
-                        <h3>Shop Our Sexual Wellness Categories</h3>
-                        <div class="category-list">
-                            <div>Contraceptives</div>
-                            <div>Condoms</div>
-                            <div>Adult Toys</div>
-                            <div>Lubricants</div>
-                            <div>Supplements</div>
-                            <div>Performance Enhancers</div>
-                        </div>
-                    </section>
-
-                    <section class="expert">
-                        <h3>Want to talk to an expert?</h3>
-                        <p>Connect with our qualified doctors for personalized support with your sexual wellness needs.</p>
-                        <button>Book An Appointment</button>
-                    </section>
-                </div>
-
+          <div class="mydawa-container">
+            <div
+              class="header-section bg-blue d-flex align-items-center justify-content-between"
+            >
+              <div class="">
+                <p>My Health Center</p>
+                <h1>Family Planning</h1>
+              </div>
+              <img src="./assets/images/planning-header.png" />
             </div>
 
+            <section class="intro-section d-flex align-items-center gap-6">
+              <img
+                src="./assets/images/family-planning.png"
+                alt="Family Planning"
+              />
+              <div class="text-section">
+                <h3>
+                  Family planning empowers your family to live healthier and
+                  happier lives
+                </h3>
+                <p>
+                  It helps manage your reproductive health by guiding family
+                  planning, pregnancy spacing, and choosing the best
+                  contraceptive methods for you.
+                </p>
+                <ul>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/ff-1.png" />
+                    </span>
+                    <p>Foster Healthier Families</p>
+                  </li>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/ff-2.png" />
+                    </span>
+                    <p>Reduce Unplanned Pregnancies</p>
+                  </li>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/ff-3.png" />
+                    </span>
+                    <p>Personalized & Curated Choices</p>
+                  </li>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/ff-4.png" />
+                    </span>
+                    <p>Enhance Economic Stability</p>
+                  </li>
+                </ul>
+              </div>
+            </section>
 
-        </main>
-        <div id="footer"></div>
+            <section class="getting-started">
+              <h2 class="section-heading mb-3 mt-6">
+                Getting Started with Family Planning
+              </h2>
+              <div class="stepper-steps">
+                <div class="stepper-step">
+                  <h4>Explore</h4>
+                  <span>Explore Your Family Planning Options</span>
+                  <img src="./assets/images/1-bg.png" />
+                  <div class="overlay">
+                    <h4>Explore</h4>
+                    <span>Explore Your Family Planning Options</span>
+                    <p>
+                      Once you’ve explored different contraceptive options,
+                      connect with a Family Planning Specialist for personalized
+                      advice. Get tailored recommendations that suit your body
+                      and lifestyle.
+                    </p>
+                    <a href="#" class="p-3 btn-grey btn-rounded"
+                      >Book Appointment
+                      <svg
+                        class="ms-2"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_50_592)">
+                          <path
+                            d="M0.75 5.625H11.2461"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_50_592">
+                            <rect width="12" height="12" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="stepper-step">
+                  <h4>2</h4>
+                  <span>Consult A Family Planning Specialist</span>
+                  <img src="./assets/images/1-bg.png" />
+                </div>
+                <div class="stepper-step">
+                  <h4>3</h4>
+                  <span>Choose The Right Contraceptive Method</span>
+                  <img src="./assets/images/3-bg.png" />
+                </div>
+              </div>
+            </section>
+
+            <section class="contraceptives">
+              <div class="d-flex mt-6">
+                <div class="">
+                  <h2 class="section-heading mb-3">
+                    Let's Talk Contraceptives
+                  </h2>
+                  <p class="w-50">
+                    Every woman is unique, and the best birth control is safe,
+                    comfortable, and suited to her needs, considering age,
+                    health, and reproductive goals.
+                  </p>
+                </div>
+                <a href="#" class="btn-link text-primary"
+                  >View All
+                  <svg
+                    class="ms-2"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_50_592)">
+                      <path
+                        d="M0.75 5.625H11.2461"
+                        stroke="rgb(230, 27, 119)"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                        stroke="rgb(230, 27, 119)"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_50_592">
+                        <rect
+                          width="12"
+                          height="12"
+                          fill="rgb(230, 27, 119)"
+                        ></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+              <div class="healthjourney-section">
+                <div class="healthjourney-container">
+                  <div class="healthjourney-card">
+                    <img
+                      src="assets/images/t1.png"
+                      alt="Respiratory Infections"
+                    />
+                    <h4>Combine Pills</h4>
+                    <div class="custom-overlay">
+                      <h4>Condoms</h4>
+                      <ul class="custom-list">
+                        <li>
+                          Good for preventing most sexually transmitted
+                          infections.
+                        </li>
+                        <li>Can be difficult to negotiate and use.</li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="mt-4 p-3 btn-grey btn-rounded"
+                          >Shop Now
+                          <svg
+                            class="ms-2"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_50_592)">
+                              <path
+                                d="M0.75 5.625H11.2461"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_50_592">
+                                <rect
+                                  width="12"
+                                  height="12"
+                                  fill="white"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="healthjourney-card">
+                    <img
+                      src="assets/images/t2.png"
+                      alt="Primary Healthcare Services"
+                    />
+                    <h4>Diaphragm</h4>
+                    <div class="custom-overlay">
+                      <h4>Condoms</h4>
+                      <ul class="custom-list">
+                        <li>
+                          Good for preventing most sexually transmitted
+                          infections.
+                        </li>
+                        <li>Can be difficult to negotiate and use.</li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="mt-4 p-3 btn-grey btn-rounded"
+                          >Shop Now
+                          <svg
+                            class="ms-2"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_50_592)">
+                              <path
+                                d="M0.75 5.625H11.2461"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_50_592">
+                                <rect
+                                  width="12"
+                                  height="12"
+                                  fill="white"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="healthjourney-card">
+                    <img
+                      src="assets/images/t3.png"
+                      alt="Sexual Wellness (STD/STI/UTI)"
+                    />
+                    <h4>Patch</h4>
+                    <div class="custom-overlay">
+                      <h4>Condoms</h4>
+                      <ul class="custom-list">
+                        <li>
+                          Good for preventing most sexually transmitted
+                          infections.
+                        </li>
+                        <li>Can be difficult to negotiate and use.</li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="mt-4 p-3 btn-grey btn-rounded"
+                          >Shop Now
+                          <svg
+                            class="ms-2"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_50_592)">
+                              <path
+                                d="M0.75 5.625H11.2461"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_50_592">
+                                <rect
+                                  width="12"
+                                  height="12"
+                                  fill="white"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="healthjourney-card">
+                    <img
+                      src="assets/images/t4.png"
+                      alt="Chronic Disease Management"
+                    />
+                    <h4>Injections</h4>
+                    <div class="custom-overlay">
+                      <h4>Condoms</h4>
+                      <ul class="custom-list">
+                        <li>
+                          Good for preventing most sexually transmitted
+                          infections.
+                        </li>
+                        <li>Can be difficult to negotiate and use.</li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="mt-4 p-3 btn-grey btn-rounded"
+                          >Shop Now
+                          <svg
+                            class="ms-2"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_50_592)">
+                              <path
+                                d="M0.75 5.625H11.2461"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_50_592">
+                                <rect
+                                  width="12"
+                                  height="12"
+                                  fill="white"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="healthjourney-card">
+                    <img
+                      src="assets/images/t5.png"
+                      alt="Dermatological Care (Acne)"
+                    />
+                    <h4>Condoms</h4>
+                    <div class="custom-overlay">
+                      <h4>Condoms</h4>
+                      <ul class="custom-list">
+                        <li>
+                          Good for preventing most sexually transmitted
+                          infections.
+                        </li>
+                        <li>Can be difficult to negotiate and use.</li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="mt-4 p-3 btn-grey btn-rounded"
+                          >Shop Now
+                          <svg
+                            class="ms-2"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_50_592)">
+                              <path
+                                d="M0.75 5.625H11.2461"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_50_592">
+                                <rect
+                                  width="12"
+                                  height="12"
+                                  fill="white"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="healthjourney-card">
+                    <img src="assets/images/t5.png" alt="Gastroenteritis" />
+                    <h4>Copper Coil IUD</h4>
+                    <div class="custom-overlay">
+                      <h4>Condoms</h4>
+                      <ul class="custom-list">
+                        <li>
+                          Good for preventing most sexually transmitted
+                          infections.
+                        </li>
+                        <li>Can be difficult to negotiate and use.</li>
+                      </ul>
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="mt-4 p-3 btn-grey btn-rounded"
+                          >Shop Now
+                          <svg
+                            class="ms-2"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_50_592)">
+                              <path
+                                d="M0.75 5.625H11.2461"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_50_592">
+                                <rect
+                                  width="12"
+                                  height="12"
+                                  fill="white"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="symptoms-section">
+              <div class="">
+                <div class="symptoms-wrap p-relative pb-5">
+                  <div class="symptoms-badge">Ovulation Calculator</div>
+                  <div class="row">
+                    <!-- Left Section -->
+                    <div class="col-lg-4 mb-4">
+                      <div class="steps mt-4">
+                        <img src="./assets/images/fertility.png" />
+                      </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-lg-8">
+                      <div
+                        class="d-flex gap-5 align-items-center border-bottom mb-4"
+                      >
+                        <h1 class="symptom-heading flex-column text-nowrap">
+                          Estimate Your
+                          <span class="m-0">Fertility Window</span>
+                        </h1>
+                        <p class="symptom-subheading">
+                          Estimate and track your most fertile days quickly and
+                          easily to boost your chances of pregnancy.
+                        </p>
+                      </div>
+                      <p class="w-75 text-capitalize">
+                        <b>
+                          Enter your details to calculate your fertility window
+                          and get personalized insights
+                        </b>
+                      </p>
+                      <div class="row mb-3">
+                        <label
+                          for="colFormLabelSm"
+                          class="col-sm-4 col-form-label"
+                          >When was the first day of your last menstrual
+                          period?</label
+                        >
+                        <div class="col-sm-7">
+                          <input
+                            type="date"
+                            class="form-control custom-date-control"
+                            id="colFormLabelSm"
+                            placeholder=""
+                          />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label
+                          for="colFormLabelSm"
+                          class="col-sm-4 col-form-label"
+                          >What is the average number of days in your menstrual
+                          cycle?</label
+                        >
+                        <div class="w-auto">
+                          <div class="counter">
+                            <button class="btncount decrease-btn">
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <rect
+                                  x="2"
+                                  y="7"
+                                  width="12"
+                                  height="2"
+                                  rx="1"
+                                  fill="white"
+                                />
+                              </svg>
+                            </button>
+                            <div class="count-display">28 Days</div>
+                            <button class="btncount increase-btn">
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <rect
+                                  x="7"
+                                  y="2"
+                                  width="2"
+                                  height="12"
+                                  rx="1"
+                                  fill="white"
+                                />
+                                <rect
+                                  x="2"
+                                  y="7"
+                                  width="12"
+                                  height="2"
+                                  rx="1"
+                                  fill="white"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mt-4">
+                        <button
+                          class="btn-grey btn-rounded btn-lg btn-next"
+                          style="display: inline-block"
+                        >
+                          Show My Fertile dates
+                          <svg
+                            class="ms-2"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_50_592)">
+                              <path
+                                d="M0.75 5.625H11.2461"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_50_592">
+                                <rect
+                                  width="12"
+                                  height="12"
+                                  fill="white"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="banner-section homebanner-section">
+              <picture>
+                <!-- Image for larger screens -->
+                <source
+                  srcset="assets/images/cto.png"
+                  media="(min-width: 1200px)"
+                />
+                <!-- Image for smaller screens -->
+                <source
+                  srcset="assets/images/cto.png"
+                  media="(max-width: 767px)"
+                />
+                <!-- Fallback image -->
+                <img src="assets/images/cto.png" alt="MyDawa Telehealth" />
+              </picture>
+              <div class="banner-content-wrap">
+                <div class="text-content">
+                  <h4 class="text-dark">Want to talk to an expert?</h4>
+                  <p class="text-dark w-50">
+                    Connect with our qualified doctors for personalized support
+                    with your sexual wellness needs.
+                  </p>
+                </div>
+                <div class="button-wrap">
+                  <button class="btn-primary btn-rounded">
+                    Book an Appointment
+                    <svg
+                      class="ms-2"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_50_592)">
+                        <path
+                          d="M0.75 5.625H11.2461"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_50_592">
+                          <rect width="12" height="12" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="footer"></div>
     </div>
-
 
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
     <script src="assets/js/themescripts.js"></script>
-</body>
-
+  </body>
 </html>

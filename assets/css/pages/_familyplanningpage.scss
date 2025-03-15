@@ -1,0 +1,188 @@
+.header-section {
+  border-radius: 12px;
+  background-image: url("../../assets/images/hero-section.png");
+  padding: 0 84px;
+  &.bg-blue {
+    background-color: #5187eb;
+  }
+  p {
+    font-size: 22px;
+    font-family: $figtreeLight;
+    line-height: 28px;
+    color: #fff;
+  }
+  h1 {
+    font-size: 52px;
+    font-family: $figtreeExtraBold;
+    line-height: 56px;
+    color: #fff;
+  }
+}
+.intro-section {
+  .text-section {
+    h3 {
+      font-size: 40px;
+      font-family: $figtreeExtraBold;
+      line-height: 48px;
+      color: #373434;
+    }
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      color: #373434;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      li {
+        flex: 0 0 calc(50% - 24px);
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        p {
+          font-size: 16px;
+          font-family: $figtreeBold;
+          line-height: 24px;
+          max-width: 170px;
+          margin: 0;
+        }
+        .f-icon {
+          display: flex;
+          width: 48px;
+          height: 48px;
+          justify-content: center;
+          align-items: center;
+          background-color: #f1f3fb;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.stepper-steps {
+  display: flex;
+  gap: 12px;
+
+  .stepper-step {
+    flex-grow: 1;
+    height: 416px;
+    border-radius: 12px;
+    background-color: #ffc85b;
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+    color: #fff;
+    .overlay {
+      position: absolute;
+      color: #373434;
+
+      right: 0;
+      top: 100%;
+      height: 416px;
+      background-color: #fdf8ee;
+      border-radius: 12px;
+      transition: 400ms ease;
+      padding: 40px;
+    }
+    &:hover {
+      .overlay {
+        top: 0;
+      }
+    }
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    h4 {
+      font-size: 32px;
+      font-family: $figtreeBold;
+      line-height: 40px;
+    }
+    span {
+      font-size: 20px;
+      font-family: $figtreeLight;
+      line-height: 24px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    a {
+      position: absolute;
+      left: 40px;
+      bottom: 28px;
+      text-decoration: none;
+    }
+  }
+}
+.custom-list {
+  list-style-type: disc;
+  padding-left: 15px;
+}
+.custom-overlay {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  background-color: #ecdaff;
+  border-radius: 12px;
+  transition: 400ms ease;
+  padding: 32px 36px;
+  a {
+    text-decoration: none;
+  }
+}
+.healthjourney-card:hover {
+  .custom-overlay {
+    top: 0;
+  }
+}
+
+// Counter
+.counter {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btncount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #6bb96b;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.btncount:hover {
+  background-color: #5aa85a;
+}
+
+.count-display {
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  min-width: 100px;
+  text-align: center;
+}
+.custom-date-control {
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 16px 20px !important;
+  line-height: 1 !important;
+}
