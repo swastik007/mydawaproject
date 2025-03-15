@@ -23855,6 +23855,15 @@ header {
 .header-section.bg-blue {
   background-color: #5187eb;
 }
+.header-section.bg-pink {
+  background-color: #eb5187;
+}
+.header-section.bg-green {
+  background-color: #2eb178;
+}
+.header-section.bg-green1 {
+  background-color: #2eb19f;
+}
 .header-section p {
   font-size: 22px;
   font-family: "Figtree-Light";
