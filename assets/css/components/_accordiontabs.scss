@@ -76,10 +76,34 @@
 #profileAccordion {}
 
 .tab-title-heading {
-    font-family: $figtreeSemiBold;
-    @include responsive-font(20px, 20px, 30px);
-    line-height: 1.2;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    @include respond-to(xxl) {
+        margin-bottom: 15px;
+    }
+    svg {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+        margin-right: 10px;
+        @include respond-to(xxl) {
+            width: 28px;
+            height: 28px;
+            margin-right: 16px;
+        }
+        path {
+            fill: $black;
+        }
+    }
+    h3 {
+        font-family: $figtreeSemiBold;
+        @include responsive-font(20px, 20px, 30px);
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    a {
+        display: flex;
+        align-items: center;
+    }
 }
 
 #orders {}

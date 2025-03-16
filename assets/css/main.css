@@ -14462,20 +14462,48 @@ ol.form-list {
 }
 
 .tab-title-heading {
+  margin-bottom: 10px;
+}
+@media (min-width: 1800px) {
+  .tab-title-heading {
+    margin-bottom: 15px;
+  }
+}
+.tab-title-heading svg {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+@media (min-width: 1800px) {
+  .tab-title-heading svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+  }
+}
+.tab-title-heading svg path {
+  fill: rgb(55, 52, 52);
+}
+.tab-title-heading h3, .tab-title-heading .h3 {
   font-family: "Figtree-SemiBold";
   font-size: 20px;
   line-height: 1.2;
   margin-bottom: 0;
 }
 @media (min-width: 1200px) {
-  .tab-title-heading {
+  .tab-title-heading h3, .tab-title-heading .h3 {
     font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
-  .tab-title-heading {
+  .tab-title-heading h3, .tab-title-heading .h3 {
     font-size: 30px;
   }
+}
+.tab-title-heading a {
+  display: flex;
+  align-items: center;
 }
 
 .table {
@@ -23563,32 +23591,6 @@ header {
     font-size: 26px;
   }
 }
-.dashboard-content .delete-icon-btn {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  outline: none;
-}
-.dashboard-content .delete-icon-btn svg {
-  width: 20px;
-  height: 20px;
-  fill: rgba(55, 52, 52, 0.7);
-}
-@media (min-width: 1800px) {
-  .dashboard-content .delete-icon-btn svg {
-    width: 30px;
-    height: 30px;
-  }
-}
-.dashboard-content .delete-icon-btn svg path {
-  fill: rgba(55, 52, 52, 0.7);
-}
-.dashboard-content .delete-icon-btn:hover svg, .dashboard-content .delete-icon-btn:focus svg {
-  fill: #111;
-}
-.dashboard-content .delete-icon-btn:hover svg path, .dashboard-content .delete-icon-btn:focus svg path {
-  fill: #111;
-}
 .dashboard-content .beneficiary-detail-heading {
   border: 1px solid #E7ECF4;
   border-radius: 12px;
@@ -23653,6 +23655,33 @@ header {
   .dashboard-content .beneficiary-detail-heading .details-grid .detail-item .value {
     font-size: 20px;
   }
+}
+.dashboard-content .action-icons button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  margin-right: 10px;
+}
+.dashboard-content .action-icons button svg {
+  width: 20px;
+  height: 20px;
+  fill: rgba(55, 52, 52, 0.7);
+}
+@media (min-width: 1800px) {
+  .dashboard-content .action-icons button svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+.dashboard-content .action-icons button svg path {
+  fill: rgba(55, 52, 52, 0.7);
+}
+.dashboard-content .action-icons button:hover svg, .dashboard-content .action-icons button:focus svg {
+  fill: #111;
+}
+.dashboard-content .action-icons button:hover svg path, .dashboard-content .action-icons button:focus svg path {
+  fill: #111;
 }
 
 .header-section {
