@@ -12161,6 +12161,32 @@ body {
   color: #444;
 }
 
+.btn-lightred {
+  background-color: #FFF6F6;
+  color: rgb(230, 27, 74);
+  font-family: "Figtree-Medium";
+  border: 1px solid #FFF6F6;
+  box-shadow: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1em;
+}
+@media (min-width: 1200px) {
+  .btn-lightred {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1800px) {
+  .btn-lightred {
+    font-size: 1.6em;
+  }
+}
+.btn-lightred:hover, .btn-lightred:focus {
+  background-color: rgb(230, 27, 74);
+  border-color: rgb(230, 27, 74);
+  color: white;
+}
+
 .btn-rounded {
   border-radius: 30px;
 }
@@ -12380,7 +12406,6 @@ body {
 }
 .dawa-modal .modal-content {
   padding: 20px 35px 50px 35px;
-  max-height: 80vh;
   overflow-y: auto;
 }
 @media (min-width: 1800px) {
@@ -22595,44 +22620,6 @@ header {
   border: 2px solid #007bff;
   background: #eef5ff;
 }
-.addressSelection .add-new-address {
-  display: block;
-  color: rgb(81, 107, 241);
-  font-weight: 500;
-  text-decoration: none;
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-}
-@media (min-width: 1200px) {
-  .addressSelection .add-new-address {
-    font-size: 18px;
-  }
-}
-@media (min-width: 1800px) {
-  .addressSelection .add-new-address {
-    font-size: 28px;
-  }
-}
-.addressSelection .add-new-address span {
-  font-family: "Figtree-Bold";
-  margin-left: 5px;
-  border-bottom: 1px dashed rgb(81, 107, 241);
-  width: fit-content;
-  display: block;
-  font-size: 14px;
-}
-@media (min-width: 1200px) {
-  .addressSelection .add-new-address span {
-    font-size: 14px;
-  }
-}
-@media (min-width: 1800px) {
-  .addressSelection .add-new-address span {
-    font-size: 22px;
-  }
-}
 .addressSelection .shipping-selection {
   border-top: 1px solid #E7ECF4;
   margin-top: 20px;
@@ -22708,6 +22695,51 @@ header {
   .addressSelection .shipping-options .radio-option-full p {
     font-size: 26px;
   }
+}
+
+.add-new-address {
+  display: block;
+  color: rgb(81, 107, 241);
+  font-weight: 500;
+  text-decoration: none;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+@media (min-width: 1200px) {
+  .add-new-address {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1800px) {
+  .add-new-address {
+    font-size: 28px;
+  }
+}
+.add-new-address span {
+  font-family: "Figtree-Bold";
+  margin-left: 5px;
+  border-bottom: 1px dashed rgb(81, 107, 241);
+  width: fit-content;
+  display: block;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .add-new-address span {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .add-new-address span {
+    font-size: 22px;
+  }
+}
+.add-new-address:hover, .add-new-address:focus {
+  color: rgb(0, 90, 161);
+}
+.add-new-address:hover span, .add-new-address:focus span {
+  border-bottom: 1px dashed rgb(0, 90, 161);
 }
 
 .payment-options-grid {
@@ -23542,7 +23574,7 @@ header {
   padding: 15px;
   border-radius: 8px;
   position: relative;
-  flex: 1 1 100%;
+  flex-direction: row;
   /* Default: Full width */
   max-width: 100%;
   /* Prevents shrinking below container width */
@@ -23560,6 +23592,10 @@ header {
   .dashboard-content .manage-address .address-option {
     padding: 35px;
   }
+}
+.dashboard-content .manage-address .address-option .content {
+  display: flex;
+  flex-direction: column;
 }
 .dashboard-content .manage-address .address-option h3, .dashboard-content .manage-address .address-option .h3 {
   font-family: "Inter-SemiBold";
@@ -23590,6 +23626,55 @@ header {
   .dashboard-content .manage-address .address-option p {
     font-size: 26px;
   }
+}
+@media (min-width: 1800px) {
+  .dashboard-content .manage-address .address-option p {
+    margin-bottom: 8px;
+  }
+}
+.dashboard-content .manage-address .address-option span {
+  font-family: "Inter";
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+@media (min-width: 1200px) {
+  .dashboard-content .manage-address .address-option span {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1800px) {
+  .dashboard-content .manage-address .address-option span {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1800px) {
+  .dashboard-content .manage-address .address-option span {
+    margin-bottom: 8px;
+  }
+}
+.dashboard-content .manage-address .address-option button {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+@media (min-width: 1800px) {
+  .dashboard-content .manage-address .address-option button {
+    margin-bottom: 15px;
+  }
+}
+.dashboard-content .manage-address .address-option button svg {
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1800px) {
+  .dashboard-content .manage-address .address-option button svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+.dashboard-content .manage-address .address-option button:hover svg path, .dashboard-content .manage-address .address-option button:focus svg path {
+  fill: rgb(55, 52, 52);
 }
 .dashboard-content .beneficiary-detail-heading {
   border: 1px solid #E7ECF4;
@@ -23682,6 +23767,87 @@ header {
 }
 .dashboard-content .action-icons button:hover svg path, .dashboard-content .action-icons button:focus svg path {
   fill: #111;
+}
+
+.product-title-popup {
+  color: rgb(55, 52, 52);
+  text-align: left;
+  max-width: 280px;
+  font-family: "Figtree-Bold";
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .product-title-popup {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .product-title-popup {
+    font-size: 28px;
+  }
+}
+
+.product-cat-popup {
+  color: #8A8A8A;
+  font-family: "Figtree-Light";
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5;
+}
+@media (min-width: 1200px) {
+  .product-cat-popup {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1800px) {
+  .product-cat-popup {
+    font-size: 18px;
+  }
+}
+
+.product-img-popup {
+  width: 64px;
+  height: 64px;
+}
+@media (min-width: 1200px) {
+  .product-img-popup {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.available-points-heading h3, .available-points-heading .h3 {
+  font-family: "Figtree";
+  font-size: 20px;
+}
+@media (min-width: 1200px) {
+  .available-points-heading h3, .available-points-heading .h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .available-points-heading h3, .available-points-heading .h3 {
+    font-size: 30px;
+  }
+}
+.available-points-heading h3 strong, .available-points-heading .h3 strong {
+  font-family: "Figtree-Bold";
+}
+.available-points-heading p {
+  font-family: "Figtree-Light";
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .available-points-heading p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .available-points-heading p {
+    font-size: 20px;
+  }
 }
 
 .header-section {

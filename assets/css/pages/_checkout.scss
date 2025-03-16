@@ -204,24 +204,6 @@
             background: #eef5ff;
         }
     }
-    .add-new-address {
-        display: block;
-        color: $blue;
-        font-weight: 500;
-        text-decoration: none;
-        margin: 15px 0;
-        display: flex;
-        align-items: center;
-        @include responsive-font(18px, 18px, 28px);
-        span {
-            font-family: $figtreeBold;
-            margin-left: 5px;
-            border-bottom: 1px dashed $blue;
-            width: fit-content;
-            display: block;
-            @include responsive-font(14px, 14px, 22px);
-        }
-    }
     .shipping-selection {
         border-top: 1px solid #E7ECF4;
         margin-top: 20px;
@@ -260,6 +242,32 @@
                 @include responsive-font(15px, 15px, 26px);
                 margin-bottom: 5px;
             }
+        }
+    }
+}
+
+.add-new-address {
+    display: block;
+    color: $blue;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    @include responsive-font(18px, 18px, 28px);
+    span {
+        font-family: $figtreeBold;
+        margin-left: 5px;
+        border-bottom: 1px dashed $blue;
+        width: fit-content;
+        display: block;
+        @include responsive-font(14px, 14px, 22px);
+    }
+    &:hover,
+    &:focus {
+        color: $darkblue;
+        span {
+            border-bottom: 1px dashed $darkblue;
         }
     }
 }

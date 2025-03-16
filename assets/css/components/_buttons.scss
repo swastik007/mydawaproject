@@ -164,6 +164,23 @@
     }
 }
 
+.btn-lightred {
+    background-color: #FFF6F6;
+    color: $red;
+    font-family: $figtreeMedium;
+    border: 1px solid #FFF6F6;
+    box-shadow: none;
+    outline: none;
+    border-radius: 10px;
+    @include responsive-font(1em, 1em, 1.6em);
+    &:hover,
+    &:focus {
+        background-color: $red;
+        border-color: $red;
+        color: white;
+    }
+}
+
 .btn-rounded {
     border-radius: 30px;
     @include respond-to(xxl) {

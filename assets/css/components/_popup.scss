@@ -25,7 +25,6 @@
     }
     .modal-content {
         padding: 20px 35px 50px 35px;
-        max-height: 80vh;
         overflow-y: auto;
         @include respond-to(xxl) {
             padding: 30px 50px;

@@ -11,6 +11,7 @@
     <meta name="description" content="mydawa">
     <meta name="keywords" content="mydawa">
 
+    <link rel="stylesheet" href="../assets/vendor/itl.css">
     <link rel="stylesheet" href="../assets/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="../assets/vendor/owl.theme.default.min.css">
@@ -21,7 +22,7 @@
 
 <body>
     <div class="container-main">
-        <div id="header"></div>
+
         <main class="dawamain">
             <!-- Breadcrumb section -->
             <nav class="breadcrumb-container mydawa-container">
@@ -343,7 +344,7 @@
                                 </div>
                                 <div class="d-flex align-items-center justify-content-end mt-3 mt-lg-4 mt-xl-5">
                                     <a class="dotted-link blue-dotted me-2 me-xl-3">Deactivate Account</a>
-                                    <a class="dotted-link red-dotted">Delete Account</a>
+                                    <a class="dotted-link red-dotted btn-delete-account">Delete Account</a>
                                 </div>
                             </div>
 
@@ -520,7 +521,7 @@
                                                     <td>21 Feb, 2025</td>
                                                     <td>1</td>
                                                     <td>KES 2040</td>
-                                                    <td><a href="#">Return</a></td>
+                                                    <td><a href="#" class="btn-return-product">Return</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="table-thumb" src="../assets/images/product-images/product11.jpg" />Trojan Super Thin Condoms</td>
@@ -528,7 +529,7 @@
                                                     <td>15 Mar, 2025</td>
                                                     <td>2</td>
                                                     <td>KES 2200</td>
-                                                    <td><a href="#">Return</a></td>
+                                                    <td><a href="#" class="btn-return-product">Return</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="table-thumb" src="../assets/images/product-images/product9.jpg" />Lifestyles SKYN Original</td>
@@ -536,7 +537,7 @@
                                                     <td>10 Apr, 2025</td>
                                                     <td>3</td>
                                                     <td>KES 2500</td>
-                                                    <td><a href="#">Return</a></td>
+                                                    <td><a href="#" class="btn-return-product">Return</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img class="table-thumb" src="../assets/images/product-images/product2.jpg" />Kimono MicroThin Condoms</td>
@@ -544,7 +545,7 @@
                                                     <td>5 May, 2025</td>
                                                     <td>5</td>
                                                     <td>KES 2300</td>
-                                                    <td><a href="#">Return</a></td>
+                                                    <td><a href="#" class="btn-return-product">Return</a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -695,9 +696,9 @@
                                 <!--Beneficiary TAble section -->
                                 <div class="d-flex justify-content-lg-between align-items-center mb-3">
                                     <h3 class="tab-title-heading">Beneficieries List</h3>
-                                    <button class="btn-grey btn-rounded btn-sm" onclick="window.location.href='/speaktodoctor.html';">
+                                    <button class="btn-grey btn-rounded btn-sm btn-add-beneficiary">
                                         Add a beneficiary
-                                      </button>
+                                    </button>
                                 </div>
 
                                 <div class="border-container">
@@ -734,17 +735,23 @@
 
                                                     <td class="action-icons">
                                                         <button class="edit-icon-btn btn-edit-beneficiary">
-                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
                                                                 <g clip-path="url(#clip0_5995_35024)">
-                                                                <path d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z" fill="#373434" fill-opacity="0.5"/>
-                                                                <path d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z" fill="#373434" fill-opacity="0.5"/>
+                                                                    <path
+                                                                        d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
+                                                                    <path
+                                                                        d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
                                                                 </g>
                                                                 <defs>
-                                                                <clipPath id="clip0_5995_35024">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0.599609)"/>
-                                                                </clipPath>
+                                                                    <clipPath id="clip0_5995_35024">
+                                                                        <rect width="20" height="20" fill="white"
+                                                                            transform="translate(0.599609)" />
+                                                                    </clipPath>
                                                                 </defs>
-                                                                </svg>
+                                                            </svg>
                                                         </button>
                                                         <button class="delete-icon-btn">
                                                             <svg viewBox="0 0 20 20" fill="none"
@@ -770,17 +777,23 @@
                                                     <td>1</td>
                                                     <td class="action-icons">
                                                         <button class="edit-icon-btn">
-                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
                                                                 <g clip-path="url(#clip0_5995_35024)">
-                                                                <path d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z" fill="#373434" fill-opacity="0.5"/>
-                                                                <path d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z" fill="#373434" fill-opacity="0.5"/>
+                                                                    <path
+                                                                        d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
+                                                                    <path
+                                                                        d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
                                                                 </g>
                                                                 <defs>
-                                                                <clipPath id="clip0_5995_35024">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0.599609)"/>
-                                                                </clipPath>
+                                                                    <clipPath id="clip0_5995_35024">
+                                                                        <rect width="20" height="20" fill="white"
+                                                                            transform="translate(0.599609)" />
+                                                                    </clipPath>
                                                                 </defs>
-                                                                </svg>
+                                                            </svg>
                                                         </button>
                                                         <button class="delete-icon-btn">
                                                             <svg viewBox="0 0 20 20" fill="none"
@@ -806,17 +819,23 @@
                                                     <td>1</td>
                                                     <td class="action-icons">
                                                         <button class="edit-icon-btn">
-                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
                                                                 <g clip-path="url(#clip0_5995_35024)">
-                                                                <path d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z" fill="#373434" fill-opacity="0.5"/>
-                                                                <path d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z" fill="#373434" fill-opacity="0.5"/>
+                                                                    <path
+                                                                        d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
+                                                                    <path
+                                                                        d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
                                                                 </g>
                                                                 <defs>
-                                                                <clipPath id="clip0_5995_35024">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0.599609)"/>
-                                                                </clipPath>
+                                                                    <clipPath id="clip0_5995_35024">
+                                                                        <rect width="20" height="20" fill="white"
+                                                                            transform="translate(0.599609)" />
+                                                                    </clipPath>
                                                                 </defs>
-                                                                </svg>
+                                                            </svg>
                                                         </button>
                                                         <button class="delete-icon-btn">
                                                             <svg viewBox="0 0 20 20" fill="none"
@@ -842,17 +861,23 @@
                                                     <td>1</td>
                                                     <td class="action-icons">
                                                         <button class="edit-icon-btn">
-                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
                                                                 <g clip-path="url(#clip0_5995_35024)">
-                                                                <path d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z" fill="#373434" fill-opacity="0.5"/>
-                                                                <path d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z" fill="#373434" fill-opacity="0.5"/>
+                                                                    <path
+                                                                        d="M4.64515 16.845C4.84717 16.845 4.88757 16.825 5.06939 16.785L8.70573 16.065C9.08957 15.965 9.4734 15.785 9.77643 15.485L18.5845 6.765C19.938 5.425 19.938 3.125 18.5845 1.785L17.837 1.005C16.4835 -0.335 14.14 -0.335 12.7865 1.005L3.97848 9.745C3.69566 10.025 3.49364 10.425 3.39263 10.805L2.62496 14.445C2.52395 15.125 2.72597 15.785 3.21081 16.265C3.59465 16.645 4.1603 16.845 4.64515 16.845ZM5.33201 11.185L14.14 2.445C14.7259 1.865 15.7966 1.865 16.3623 2.445L17.1299 3.205C17.8168 3.885 17.8168 4.845 17.1299 5.505L8.3421 14.245L4.60474 14.865L5.33201 11.185Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
+                                                                    <path
+                                                                        d="M18.4783 18.0859H3.5693C2.98345 18.0859 2.59961 18.4659 2.59961 19.0459C2.59961 19.6259 3.08446 20.0059 3.5693 20.0059H18.3975C18.9834 20.0059 19.4682 19.6259 19.4682 19.0459C19.448 18.4659 18.9632 18.0859 18.4783 18.0859Z"
+                                                                        fill="#373434" fill-opacity="0.5" />
                                                                 </g>
                                                                 <defs>
-                                                                <clipPath id="clip0_5995_35024">
-                                                                <rect width="20" height="20" fill="white" transform="translate(0.599609)"/>
-                                                                </clipPath>
+                                                                    <clipPath id="clip0_5995_35024">
+                                                                        <rect width="20" height="20" fill="white"
+                                                                            transform="translate(0.599609)" />
+                                                                    </clipPath>
                                                                 </defs>
-                                                                </svg>
+                                                            </svg>
                                                         </button>
                                                         <button class="delete-icon-btn">
                                                             <svg viewBox="0 0 20 20" fill="none"
@@ -902,7 +927,8 @@
                                 <div class="tab-title-heading">
                                     <a>
                                         <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.674487 5.3517C0.498483 5.52072 0.399609 5.74993 0.399609 5.98892C0.399609 6.22792 0.498483 6.45713 0.674487 6.62615L5.98548 11.7248C6.07208 11.8109 6.17568 11.8796 6.29022 11.9268C6.40476 11.9741 6.52796 11.9989 6.65262 12C6.77727 12.001 6.9009 11.9782 7.01628 11.9329C7.13166 11.8876 7.23648 11.8206 7.32463 11.736C7.41278 11.6514 7.48249 11.5508 7.5297 11.44C7.5769 11.3292 7.60066 11.2105 7.59957 11.0909C7.59849 10.9712 7.57259 10.8529 7.52339 10.743C7.47418 10.633 7.40266 10.5335 7.31299 10.4504L2.66576 5.98892L7.31299 1.52745C7.48401 1.35747 7.57864 1.1298 7.5765 0.893475C7.57436 0.657155 7.47563 0.431096 7.30156 0.263986C7.12749 0.0968765 6.89202 0.00208744 6.64586 3.38971e-05C6.3997 -0.00201965 6.16255 0.0888264 5.98548 0.253007L0.674487 5.3517Z" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.674487 5.3517C0.498483 5.52072 0.399609 5.74993 0.399609 5.98892C0.399609 6.22792 0.498483 6.45713 0.674487 6.62615L5.98548 11.7248C6.07208 11.8109 6.17568 11.8796 6.29022 11.9268C6.40476 11.9741 6.52796 11.9989 6.65262 12C6.77727 12.001 6.9009 11.9782 7.01628 11.9329C7.13166 11.8876 7.23648 11.8206 7.32463 11.736C7.41278 11.6514 7.48249 11.5508 7.5297 11.44C7.5769 11.3292 7.60066 11.2105 7.59957 11.0909C7.59849 10.9712 7.57259 10.8529 7.52339 10.743C7.47418 10.633 7.40266 10.5335 7.31299 10.4504L2.66576 5.98892L7.31299 1.52745C7.48401 1.35747 7.57864 1.1298 7.5765 0.893475C7.57436 0.657155 7.47563 0.431096 7.30156 0.263986C7.12749 0.0968765 6.89202 0.00208744 6.64586 3.38971e-05C6.3997 -0.00201965 6.16255 0.0888264 5.98548 0.253007L0.674487 5.3517Z" />
                                         </svg>
                                         <h3>View Details</h3>
                                     </a>
@@ -936,8 +962,8 @@
 
                                         <h3>Prescription History (05)</h3>
                                         <button class="btn-grey btn-rounded btn-sm" onclick="window.location.href='/';">
-                                                Upload Prescription
-                                              </button>
+                                            Upload Prescription
+                                        </button>
                                     </div>
 
                                     <div class="table-responsive">
@@ -1200,10 +1226,108 @@
 
 
                                 </div>
+                                <!-- Consultation Details section -->
+                                <div class="tab-title-heading">
+                                    <a>
+                                        <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.674487 5.3517C0.498483 5.52072 0.399609 5.74993 0.399609 5.98892C0.399609 6.22792 0.498483 6.45713 0.674487 6.62615L5.98548 11.7248C6.07208 11.8109 6.17568 11.8796 6.29022 11.9268C6.40476 11.9741 6.52796 11.9989 6.65262 12C6.77727 12.001 6.9009 11.9782 7.01628 11.9329C7.13166 11.8876 7.23648 11.8206 7.32463 11.736C7.41278 11.6514 7.48249 11.5508 7.5297 11.44C7.5769 11.3292 7.60066 11.2105 7.59957 11.0909C7.59849 10.9712 7.57259 10.8529 7.52339 10.743C7.47418 10.633 7.40266 10.5335 7.31299 10.4504L2.66576 5.98892L7.31299 1.52745C7.48401 1.35747 7.57864 1.1298 7.5765 0.893475C7.57436 0.657155 7.47563 0.431096 7.30156 0.263986C7.12749 0.0968765 6.89202 0.00208744 6.64586 3.38971e-05C6.3997 -0.00201965 6.16255 0.0888264 5.98548 0.253007L0.674487 5.3517Z" />
+                                        </svg>
+                                        <h3>View Details</h3>
+                                    </a>
+                                </div>
+
+                                <div class="beneficiary-detail-heading mb-2 mb-xl-3">
+                                    <h3 class="section-title">Consultation summary</h3>
+                                    <div class="details-grid">
+                                        <div class="detail-item">
+                                            <span class="label">Name:</span>
+                                            <span class="value">Gilbert J</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="label">Phone Number:</span>
+                                            <span class="value">(+977) 0123456789</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="label">Date of Birth:</span>
+                                            <span class="value">05 Feb, 2000</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="label">Gender:</span>
+                                            <span class="value">Male</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="border-container">
+                                    <div class="tab-title-heading d-flex justify-content-between align-items-center px-3 px-xl-4 my-3 my-xl-4">
+
+                                        <h3>Prescription History (05)</h3>
+                                        <button class="btn-grey btn-rounded btn-sm" onclick="window.location.href='/';">
+                                            Upload Prescription
+                                        </button>
+                                    </div>
+
+                                    <div class="table-responsive">
+
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order ID</th>
+                                                    <th>Date</th>
+                                                    <th>Total (KES)</th>
+                                                    <th>Order Status</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#3933</td>
+                                                    <td>21 Feb, 2025</td>
+                                                    <td>134</td>
+                                                    <td><span class="badge badge-green">Completed</span></td>
+                                                    <td><a class="dotted-link blue-dotted" href="#">Re-Order</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#3933</td>
+                                                    <td>21 Feb, 2025</td>
+                                                    <td>134</td>
+                                                    <td><span class="badge badge-green">Completed</span></td>
+                                                    <td><a class="dotted-link blue-dotted" href="#">Re-Order</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#3933</td>
+                                                    <td>21 Feb, 2025</td>
+                                                    <td>134</td>
+                                                    <td><span class="badge badge-blue">Completed</span></td>
+                                                    <td><a class="dotted-link blue-dotted" href="#">Re-Order</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#3933</td>
+                                                    <td>21 Feb, 2025</td>
+                                                    <td>134</td>
+                                                    <td><span class="badge badge-red">Completed</span></td>
+                                                    <td><a class="dotted-link blue-dotted" href="#">Re-Order</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Loyalty Points  -->
                             <div class="tab-pane loyalty-tab fade" id="loyalty" role="tabpanel">
-                                <p>Loyalty Points Content</p>
+                                <div class="d-flex justify-content-lg-between align-items-center mb-3">
+                                    <div class="available-points-heading d-flex flex-column">
+                                        <h3 class="mb-1 mb-xl-2">Available Balance:<strong class="ms-2 ms-xl-3">KES 400
+                                            </strong></h3>
+                                        <p>You can use your available balance to complete the payment.</p>
+                                    </div>
+
+                                    <button class="btn-grey btn-rounded btn-sm btn-transfer-points">
+                                        Transfer Points
+                                    </button>
+                                </div>
                                 <div class="accordion" id="loyaltyAccordion">
                                     <!-- loyalty Details -->
                                     <div class="accordion-item mb-2 mb-xl-3">
@@ -1327,7 +1451,12 @@
                             </div>
                             <!-- Manage Address -->
                             <div class="tab-pane fade" id="address" role="tabpanel">
-
+                                <div class="d-flex justify-content-lg-between align-items-center mb-3">
+                                    <h3 class="tab-title-heading">Manage Adress</h3>
+                                    <button class="btn-grey btn-rounded btn-sm btn-add-address">
+                                        Add New Address
+                                    </button>
+                                </div>
                                 <div class="manage-address">
                                     <div class="address-option">
                                         <div class="content">
@@ -1336,23 +1465,91 @@
                                             <span>Phone: <strong>+1-202-555-0118</strong></span>
                                             <span>Email: <strong>kevin.gilbert@gmail.com</strong></span>
                                         </div>
-                                        <span class="edit-btn btn-edit-delivery">
-                                            <img src="../assets/images/icons/edit-pink-icon.png" alt="Edit">
-                                        </span>
+                                        <div class="d-flex flex-column">
+                                            <button class="btn-edit-address">
+
+                                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_5995_36023)">
+                                                        <path
+                                                            d="M4.04554 16.845C4.24756 16.845 4.28796 16.825 4.46978 16.785L8.10612 16.065C8.48996 15.965 8.87379 15.785 9.17682 15.485L17.9849 6.765C19.3384 5.425 19.3384 3.125 17.9849 1.785L17.2374 1.005C15.8839 -0.335 13.5404 -0.335 12.1869 1.005L3.37887 9.745C3.09605 10.025 2.89403 10.425 2.79302 10.805L2.02535 14.445C1.92434 15.125 2.12636 15.785 2.6112 16.265C2.99504 16.645 3.56069 16.845 4.04554 16.845ZM4.7324 11.185L13.5404 2.445C14.1263 1.865 15.197 1.865 15.7626 2.445L16.5303 3.205C17.2172 3.885 17.2172 4.845 16.5303 5.505L7.74249 14.245L4.00513 14.865L4.7324 11.185Z"
+                                                            fill="#E61B77" />
+                                                        <path
+                                                            d="M17.8787 18.0859H2.96969C2.38384 18.0859 2 18.4659 2 19.0459C2 19.6259 2.48485 20.0059 2.96969 20.0059H17.7979C18.3837 20.0059 18.8686 19.6259 18.8686 19.0459C18.8484 18.4659 18.3635 18.0859 17.8787 18.0859Z"
+                                                            fill="#E61B77" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_5995_36023">
+                                                            <rect width="20" height="20" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                            <button class="btn-delete-address">
+
+                                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.5013 4.16732H15.0013V3.33398C15.0013 2.67094 14.7379 2.03506 14.2691 1.56622C13.8002 1.09738 13.1643 0.833984 12.5013 0.833984H7.5013C6.83826 0.833984 6.20238 1.09738 5.73354 1.56622C5.26469 2.03506 5.0013 2.67094 5.0013 3.33398V4.16732H2.5013C2.28029 4.16732 2.06833 4.25512 1.91205 4.4114C1.75577 4.56768 1.66797 4.77964 1.66797 5.00065C1.66797 5.22167 1.75577 5.43363 1.91205 5.58991C2.06833 5.74619 2.28029 5.83398 2.5013 5.83398H2.5513L3.14297 15.259C3.20879 16.3187 3.67667 17.3133 4.45106 18.0396C5.22544 18.766 6.2479 19.1694 7.30964 19.1673H12.7096C13.7714 19.1694 14.7938 18.766 15.5682 18.0396C16.3426 17.3133 16.8105 16.3187 16.8763 15.259L17.4513 5.83398H17.5013C17.7223 5.83398 17.9343 5.74619 18.0906 5.58991C18.2468 5.43363 18.3346 5.22167 18.3346 5.00065C18.3346 4.77964 18.2468 4.56768 18.0906 4.4114C17.9343 4.25512 17.7223 4.16732 17.5013 4.16732ZM6.66797 3.33398C6.66797 3.11297 6.75577 2.90101 6.91205 2.74473C7.06833 2.58845 7.28029 2.50065 7.5013 2.50065H12.5013C12.7223 2.50065 12.9343 2.58845 13.0906 2.74473C13.2468 2.90101 13.3346 3.11297 13.3346 3.33398V4.16732H6.66797V3.33398ZM15.2013 15.159C15.161 15.7942 14.8799 16.3901 14.4154 16.8253C13.9508 17.2604 13.3378 17.5019 12.7013 17.5007H7.3013C6.6648 17.5019 6.05178 17.2604 5.58724 16.8253C5.1227 16.3901 4.84161 15.7942 4.8013 15.159L4.21797 5.83398H15.7846L15.2013 15.159Z"
+                                                        fill="#E61B77" />
+                                                    <path
+                                                        d="M8.33333 8.33398C8.11232 8.33398 7.90036 8.42178 7.74408 8.57806C7.5878 8.73434 7.5 8.9463 7.5 9.16732V14.1673C7.5 14.3883 7.5878 14.6003 7.74408 14.7566C7.90036 14.9129 8.11232 15.0007 8.33333 15.0007C8.55435 15.0007 8.76631 14.9129 8.92259 14.7566C9.07887 14.6003 9.16667 14.3883 9.16667 14.1673V9.16732C9.16667 8.9463 9.07887 8.73434 8.92259 8.57806C8.76631 8.42178 8.55435 8.33398 8.33333 8.33398Z"
+                                                        fill="#E61B77" />
+                                                    <path
+                                                        d="M11.6693 8.33398C11.4483 8.33398 11.2363 8.42178 11.08 8.57806C10.9237 8.73434 10.8359 8.9463 10.8359 9.16732V14.1673C10.8359 14.3883 10.9237 14.6003 11.08 14.7566C11.2363 14.9129 11.4483 15.0007 11.6693 15.0007C11.8903 15.0007 12.1022 14.9129 12.2585 14.7566C12.4148 14.6003 12.5026 14.3883 12.5026 14.1673V9.16732C12.5026 8.9463 12.4148 8.73434 12.2585 8.57806C12.1022 8.42178 11.8903 8.33398 11.6693 8.33398Z"
+                                                        fill="#E61B77" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+
                                     </div>
                                     <div class="address-option">
                                         <div class="content">
                                             <h3>Kevin Gilbert</h3>
                                             <p>East Tejturi Bazar, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D, 1200, Kenya</p>
-                                            <p>(+977) 123456789</p>
-                                            <p>1234 Innovation Drive, Nairobi, Kenya, Apartment Number 343</p>
+                                            <span>Phone: <strong>+1-202-555-0118</strong></span>
+                                            <span>Email: <strong>kevin.gilbert@gmail.com</strong></span>
                                         </div>
-                                        <span class="edit-btn btn-edit-delivery">
-                                            <img src="../assets/images/icons/edit-pink-icon.png" alt="Edit">
-                                        </span>
+                                        <div class="d-flex flex-column">
+                                            <button class="btn-edit-address">
+
+                                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_5995_36023)">
+                                                        <path
+                                                            d="M4.04554 16.845C4.24756 16.845 4.28796 16.825 4.46978 16.785L8.10612 16.065C8.48996 15.965 8.87379 15.785 9.17682 15.485L17.9849 6.765C19.3384 5.425 19.3384 3.125 17.9849 1.785L17.2374 1.005C15.8839 -0.335 13.5404 -0.335 12.1869 1.005L3.37887 9.745C3.09605 10.025 2.89403 10.425 2.79302 10.805L2.02535 14.445C1.92434 15.125 2.12636 15.785 2.6112 16.265C2.99504 16.645 3.56069 16.845 4.04554 16.845ZM4.7324 11.185L13.5404 2.445C14.1263 1.865 15.197 1.865 15.7626 2.445L16.5303 3.205C17.2172 3.885 17.2172 4.845 16.5303 5.505L7.74249 14.245L4.00513 14.865L4.7324 11.185Z"
+                                                            fill="#E61B77" />
+                                                        <path
+                                                            d="M17.8787 18.0859H2.96969C2.38384 18.0859 2 18.4659 2 19.0459C2 19.6259 2.48485 20.0059 2.96969 20.0059H17.7979C18.3837 20.0059 18.8686 19.6259 18.8686 19.0459C18.8484 18.4659 18.3635 18.0859 17.8787 18.0859Z"
+                                                            fill="#E61B77" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_5995_36023">
+                                                            <rect width="20" height="20" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                            <button class="btn-delete-address">
+
+                                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.5013 4.16732H15.0013V3.33398C15.0013 2.67094 14.7379 2.03506 14.2691 1.56622C13.8002 1.09738 13.1643 0.833984 12.5013 0.833984H7.5013C6.83826 0.833984 6.20238 1.09738 5.73354 1.56622C5.26469 2.03506 5.0013 2.67094 5.0013 3.33398V4.16732H2.5013C2.28029 4.16732 2.06833 4.25512 1.91205 4.4114C1.75577 4.56768 1.66797 4.77964 1.66797 5.00065C1.66797 5.22167 1.75577 5.43363 1.91205 5.58991C2.06833 5.74619 2.28029 5.83398 2.5013 5.83398H2.5513L3.14297 15.259C3.20879 16.3187 3.67667 17.3133 4.45106 18.0396C5.22544 18.766 6.2479 19.1694 7.30964 19.1673H12.7096C13.7714 19.1694 14.7938 18.766 15.5682 18.0396C16.3426 17.3133 16.8105 16.3187 16.8763 15.259L17.4513 5.83398H17.5013C17.7223 5.83398 17.9343 5.74619 18.0906 5.58991C18.2468 5.43363 18.3346 5.22167 18.3346 5.00065C18.3346 4.77964 18.2468 4.56768 18.0906 4.4114C17.9343 4.25512 17.7223 4.16732 17.5013 4.16732ZM6.66797 3.33398C6.66797 3.11297 6.75577 2.90101 6.91205 2.74473C7.06833 2.58845 7.28029 2.50065 7.5013 2.50065H12.5013C12.7223 2.50065 12.9343 2.58845 13.0906 2.74473C13.2468 2.90101 13.3346 3.11297 13.3346 3.33398V4.16732H6.66797V3.33398ZM15.2013 15.159C15.161 15.7942 14.8799 16.3901 14.4154 16.8253C13.9508 17.2604 13.3378 17.5019 12.7013 17.5007H7.3013C6.6648 17.5019 6.05178 17.2604 5.58724 16.8253C5.1227 16.3901 4.84161 15.7942 4.8013 15.159L4.21797 5.83398H15.7846L15.2013 15.159Z"
+                                                        fill="#E61B77" />
+                                                    <path
+                                                        d="M8.33333 8.33398C8.11232 8.33398 7.90036 8.42178 7.74408 8.57806C7.5878 8.73434 7.5 8.9463 7.5 9.16732V14.1673C7.5 14.3883 7.5878 14.6003 7.74408 14.7566C7.90036 14.9129 8.11232 15.0007 8.33333 15.0007C8.55435 15.0007 8.76631 14.9129 8.92259 14.7566C9.07887 14.6003 9.16667 14.3883 9.16667 14.1673V9.16732C9.16667 8.9463 9.07887 8.73434 8.92259 8.57806C8.76631 8.42178 8.55435 8.33398 8.33333 8.33398Z"
+                                                        fill="#E61B77" />
+                                                    <path
+                                                        d="M11.6693 8.33398C11.4483 8.33398 11.2363 8.42178 11.08 8.57806C10.9237 8.73434 10.8359 8.9463 10.8359 9.16732V14.1673C10.8359 14.3883 10.9237 14.6003 11.08 14.7566C11.2363 14.9129 11.4483 15.0007 11.6693 15.0007C11.8903 15.0007 12.1022 14.9129 12.2585 14.7566C12.4148 14.6003 12.5026 14.3883 12.5026 14.1673V9.16732C12.5026 8.9463 12.4148 8.73434 12.2585 8.57806C12.1022 8.42178 11.8903 8.33398 11.6693 8.33398Z"
+                                                        fill="#E61B77" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+
                                     </div>
                                 </div>
-
+                                <a href="#" class="add-new-address btn-add-address">+<span>Add New Address</span> </a>
                             </div>
 
                         </div>
@@ -1363,12 +1560,169 @@
 
 
         </main>
-        <div id="footer"></div>
+
     </div>
 
     <!-- Overlay -->
     <div id="modalOverlay"></div>
+    <!-- Delete Account Modal -->
+    <div id="deleteAccountModal" class="dawa-modal modal-sm" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="d-flex flex-column">
+                <div class="popup-header mb-2 d-flex flex-column justify-content-start align-items-start">
+                    <img src="../assets/images/icons/warning-sign.png" alt="Success Icon" class="popup-icon mb-3 mb-lg-4">
+                    <h2>Deleting account is a permanent action.</h2>
+                </div>
+                <p>Deleting your MyDawa account is permanent. Once deleted, all your data, including order history, will be lost and cannot be recovered.</p>
+                <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                    <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                    <button class="btn-lightred btn-rounded btn-lg">Delete Account</button>
+                </div>
+            </div>
 
+
+
+        </div>
+    </div>
+    <!-- Return Product Modal -->
+    <div id="returnProductModal" class="dawa-modal modal-lg" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="d-flex flex-column">
+                <div class="popup-header mb-3 mb-xl-4 d-flex flex-column justify-content-start align-items-start">
+                    <h3>Return Product</h3>
+                </div>
+                <div class="d-flex justify-content-start align-items-start">
+                    <img class="product-img-popup" src="../assets/images/product-images/product3.jpg" alt="Product 1">
+                    <div class="d-flex flex-column ms-2 ms-xl-3">
+                        <h5 class="product-title-popup">Naara Chocolate Cookies 250gms</h5>
+                        <p class="product-cat-popup">Snacks</p>
+                    </div>
+
+                </div>
+
+
+                <div class="input-row mb-2 mb-xl-3">
+                    <div class="input-group">
+                        <label for="relationship">Reason for Return <span class="required">*</span></label>
+                        <select id="relationship">
+                            <option value="reason">Select specific reason</option>
+                            <option value="damaged" selected="">damaged</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-disclose">Prefer not to
+                                disclose</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Additional Details -->
+                <div class="input-group mb-2 mb-xl-3">
+                    <label for="additionalDetails">Add Additional Details</label>
+                    <textarea id="additionalDetails" placeholder="e.g. buzzer for gate access,"></textarea>
+                </div>
+                <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                    <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                    <button class="btn-green btn-rounded btn-lg btn-return-success">Return Item</button>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- Return Product Success -->
+    <div id="returnSuccessModal" class="dawa-modal modal-sm" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img class="success-img" src="../assets/images/icons/returnsuccess.png" alt="Icon">
+            <div class="popup-header mb-2 d-flex flex-column justify-content-center align-items-center">
+                <h2>Successfull Order !</h2>
+                <p class="text-center">Your order has been successfully placed and is now being processed. You will receive a confirmation email shortly with your order details.</p>
+            </div>
+            <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2 justify-content-center">
+                <button class="btn-white-border btn-rounded btn-lg">Done</button>
+                <button class="btn-green btn-rounded btn-lg">Shop More</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Beneficiary Modal -->
+    <div id="addBeneficiaryModal" class="dawa-modal modal-lg" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="d-flex flex-column">
+                <div class="popup-header mb-3 mb-xl-4 d-flex flex-column justify-content-start align-items-start">
+                    <h3>Add Beneficiary Details</h3>
+                </div>
+                <form>
+                    <div class="input-row mb-2 mb-xl-3">
+                        <!-- First Name -->
+                        <div class="input-group mb-4">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" placeholder="Enter Your First Name" required="">
+                        </div>
+                        <!-- Last Name -->
+                        <div class="input-group mb-4">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" placeholder="Enter Your last Name" required="">
+                        </div>
+                    </div>
+                    <div class="input-group mb-2 mb-xl-3">
+                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="../assets/images/icons/form-call-icon.png" alt="Phone">
+                            <input class="with-icon" type="text" id="phoneNumber" placeholder="+977 0123456789">
+                        </div>
+                    </div>
+                    <div class="input-group mb-2 mb-xl-3">
+                        <label for="emailid">Email Address <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="../assets/images/icons/form-mail-icon.png" alt="Phone">
+                            <input class="with-icon" type="email" id="emailid" placeholder="rbrow@mailnator.com">
+                        </div>
+                    </div>
+                    <div class="input-row mb-2 mb-xl-3">
+                        <div class="input-group">
+                            <label for="gender">Gender <span class="required">*</span></label>
+                            <select id="gender">
+                                <option value="male">Male</option>
+                                <option value="female" selected="">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-disclose">Prefer not to
+                                    disclose</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="dob">Date of Birth <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <input type="text" id="dob" placeholder="mm/dd/yyyy">
+                                <img class="right-icon" src="../assets/images/icons//calendar-icon.png" alt="Phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-row mb-2 mb-xl-3">
+                        <div class="input-group">
+                            <label for="relationship">Relationship <span class="required">*</span></label>
+                            <select id="relationship">
+                                <option value="uncle">Uncle</option>
+                                <option value="father" selected="">Father</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-disclose">Prefer not to
+                                    disclose</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                            <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                            <button class="btn-green btn-rounded btn-lg">Add Details</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Edit Beneficiary Modal -->
     <div id="editBeneficiaryModal" class="dawa-modal modal-lg" style="display: none;">
         <div class="modal-content">
@@ -1406,8 +1760,7 @@
                     </div>
                     <div class="input-row mb-2 mb-xl-3">
                         <div class="input-group">
-                            <label for="gender">Gender <span
-                                    class="required">*</span></label>
+                            <label for="gender">Gender <span class="required">*</span></label>
                             <select id="gender">
                                 <option value="male">Male</option>
                                 <option value="female" selected="">Female</option>
@@ -1417,8 +1770,7 @@
                             </select>
                         </div>
                         <div class="input-group">
-                            <label for="dob">Date of Birth <span
-                                    class="required">*</span></label>
+                            <label for="dob">Date of Birth <span class="required">*</span></label>
                             <div class="input-icon">
                                 <input type="text" id="dob" placeholder="mm/dd/yyyy">
                                 <img class="right-icon" src="../assets/images/icons//calendar-icon.png" alt="Phone">
@@ -1427,8 +1779,7 @@
                     </div>
                     <div class="input-row mb-2 mb-xl-3">
                         <div class="input-group">
-                            <label for="relationship">Relationship <span
-                                    class="required">*</span></label>
+                            <label for="relationship">Relationship <span class="required">*</span></label>
                             <select id="relationship">
                                 <option value="uncle">Uncle</option>
                                 <option value="father" selected="">Father</option>
@@ -1450,35 +1801,306 @@
             </div>
         </div>
     </div>
+    <!-- Transfer Points Modal -->
+    <div id="transferPointsModal" class="dawa-modal modal-lg" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="d-flex flex-column">
+                <div class="popup-header mb-3 mb-xl-4 d-flex flex-column justify-content-start align-items-start">
+                    <h3>Transfer Points</h3>
+                </div>
+                <div class="available-points-heading on-popup">
+                    <h3>Available Points:<strong>24,000 (KES 2,400)</strong></h3>
+                </div>
+                <form>
+                    <!-- Name & Phone Number -->
 
+
+                    <div class="input-group mb-3 mb-xl-4">
+                        <label for="intlphoneNumber">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="intlphoneNumber">
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="fullName">How much you want to transfer <span class="required">*</span></label>
+                            <input class="" type="text" placeholder="KES 500">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mb-3 my-xl-4">
+                        <img class="exchange-icon" src="../assets/images/icons/transfer-icon.png">
+                    </div>
+
+
+                    <div class="input-row mb-3 mb-xl-4">
+                        <div class="input-group">
+                            <input class="readonly" type="text" placeholder="KES 500" readonly>
+                        </div>
+                    </div>
+                    <div class="alert alert-red">
+                        <img src="../assets/images/icons/info-icon-red.png">Once transferred, you cannot revert back your loyalty points.
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                        <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                        <button class="btn-green btn-rounded btn-lg btn-success-transfer">Transfer</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- Transfer points Success -->
+    <div id="successTransferModal" class="dawa-modal modal-sm" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img class="success-img" src="../assets/images/icons/order-success.png" alt="Icon">
+            <div class="popup-header mb-2 d-flex flex-column justify-content-center align-items-center">
+                <h2>Points Transfer Successful !</h2>
+                <p class="text-center">5000 points (KES 50) successfully transferred to (+977) 9876543210.</p>
+            </div>
+            <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2 justify-content-center mx-5">
+                <button class="btn-green btn-rounded btn-lg w-100">Done</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Address Modal -->
+    <div id="addAddressModal" class="dawa-modal modal-lg" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="d-flex flex-column">
+                <div class="popup-header mb-3 mb-xl-4 d-flex flex-column justify-content-start align-items-start">
+                    <h3>Add Delivery Details</h3>
+                </div>
+                <form>
+                    <div class="input-row mb-3 mb-xl-4">
+                        <div class="input-group">
+                            <label for="fullName">Name <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <input class="readonly" type="text" id="fullName" placeholder="Tabrez Shaikh" readonly="">
+                                <img class="right-icon" src="../assets/images/icons/form-edit-pencil.png" alt="Phone">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <img src="../assets/images/icons/form-call-icon.png" alt="Phone">
+                                <input class="with-icon readonly" type="text" id="phoneNumber" placeholder="+977 0123456789" readonly="">
+
+                                <img class="right-icon" src="../assets/images/icons/form-edit-pencil.png" alt="Phone">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Search Address -->
+
+                    <div class="input-group mb-3 mb-xl-4 position-relative">
+                        <label for="searchAddress" class="form-label">Search Address <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="searchAddress" class="" placeholder="1234 Innovation Drive, Nairobi, Kenya">
+                        <ul id="suggestions" class="dropdown-menu custom-address-dropdown"></ul>
+                    </div>
+                    <!-- Apartment/Building/House Number -->
+                    <div class="input-group mb-3 mb-xl-4">
+                        <label for="houseNumber">Apartment/Building/House Number <span class="required">*</span></label>
+                        <input type="text" id="houseNumber" placeholder="Apartment Number 343">
+                    </div>
+
+                    <!-- Region & Area/Street -->
+                    <div class="input-row mb-3 mb-xl-4">
+                        <div class="input-group">
+                            <label for="region">Region <span class="required">*</span></label>
+                            <select id="region">
+                                <option>Nairobi</option>
+                                <option>Mombasa</option>
+                                <option>Kisumu</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="street">Area/Street <span class="required">*</span></label>
+                            <input type="text" id="street" placeholder="Innovation Drive">
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                        <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                        <button class="btn-green btn-rounded btn-lg">Update Address</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Address Modal -->
+    <div id="editDeliveryModal" class="dawa-modal modal-lg" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="d-flex flex-column">
+                <div class="popup-header mb-3 mb-xl-4 d-flex flex-column justify-content-start align-items-start">
+                    <h3>Edit Delivery Details</h3>
+                </div>
+                <form>
+                    <div class="input-row mb-3 mb-xl-4">
+                        <div class="input-group">
+                            <label for="fullName">Name <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <input class="readonly" type="text" id="fullName" placeholder="Tabrez Shaikh" readonly="">
+                                <img class="right-icon" src="../assets/images/icons/form-edit-pencil.png" alt="Phone">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <img src="../assets/images/icons/form-call-icon.png" alt="Phone">
+                                <input class="with-icon readonly" type="text" id="phoneNumber" placeholder="+977 0123456789" readonly="">
+
+                                <img class="right-icon" src="../assets/images/icons/form-edit-pencil.png" alt="Phone">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Search Address -->
+
+                    <div class="input-group mb-3 mb-xl-4 position-relative">
+                        <label for="searchAddress" class="form-label">Search Address <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="searchAddress" class="" placeholder="1234 Innovation Drive, Nairobi, Kenya">
+                        <ul id="suggestions" class="dropdown-menu custom-address-dropdown"></ul>
+                    </div>
+                    <!-- Apartment/Building/House Number -->
+                    <div class="input-group mb-3 mb-xl-4">
+                        <label for="houseNumber">Apartment/Building/House Number <span class="required">*</span></label>
+                        <input type="text" id="houseNumber" placeholder="Apartment Number 343">
+                    </div>
+
+                    <!-- Region & Area/Street -->
+                    <div class="input-row mb-3 mb-xl-4">
+                        <div class="input-group">
+                            <label for="region">Region <span class="required">*</span></label>
+                            <select id="region">
+                                <option>Nairobi</option>
+                                <option>Mombasa</option>
+                                <option>Kisumu</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="street">Area/Street <span class="required">*</span></label>
+                            <input type="text" id="street" placeholder="Innovation Drive">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                        <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                        <button class="btn-green btn-rounded btn-lg">Update Address</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
     <script src="../assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="../assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/owl.carousel.min.js"></script>
+
     <script src="../assets/js/themescripts.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const openModalBtn = document.querySelector(".btn-edit-beneficiary");
-            const modal = document.getElementById("editBeneficiaryModal");
             const overlay = document.getElementById("modalOverlay");
-            const closeModalBtn = document.querySelector(".close-btn");
 
             // Function to open modal
-            openModalBtn.addEventListener("click", function() {
-                modal.style.display = "block";
-                overlay.style.display = "block";
-            });
+            function openModal(modal) {
+                if (modal) {
+                    modal.style.display = "block";
+                    overlay.style.display = "block"; // Display overlay when modal is open
+                }
+            }
 
             // Function to close modal
-            closeModalBtn.addEventListener("click", function() {
-                modal.style.display = "none";
-                overlay.style.display = "none";
+            function closeModal(modal) {
+                if (modal) {
+                    modal.style.display = "none"; // Hide modal
+                }
+
+                // Check if any modal is still open; if not, hide the overlay
+                const openModals = document.querySelectorAll(".dawa-modal[style*='display: block']");
+                if (openModals.length === 0) {
+                    overlay.style.display = "none"; // Hide overlay if no modals are open
+                }
+            }
+
+            // List of modal buttons and their corresponding modals
+            const modalMappings = [{
+                buttonClass: "btn-delete-account",
+                modalId: "deleteAccountModal"
+            }, {
+                buttonClass: "btn-add-beneficiary",
+                modalId: "addBeneficiaryModal"
+            }, {
+                buttonClass: "btn-edit-beneficiary",
+                modalId: "editBeneficiaryModal"
+            }, {
+                buttonClass: "btn-return-product",
+                modalId: "returnProductModal"
+            }, {
+                buttonClass: "btn-return-success",
+                modalId: "returnSuccessModal"
+            }, {
+                buttonClass: "btn-add-address",
+                modalId: "addAddressModal"
+            }, {
+                buttonClass: "btn-edit-address",
+                modalId: "editDeliveryModal"
+            }, {
+                buttonClass: "btn-transfer-points",
+                modalId: "transferPointsModal"
+            }, {
+                buttonClass: "btn-success-transfer",
+                modalId: "successTransferModal"
+            }];
+
+            // Attach event listeners for each button
+            modalMappings.forEach(({
+                buttonClass,
+                modalId
+            }) => {
+                const button = document.querySelector(`.${buttonClass}`);
+                const modal = document.getElementById(modalId);
+
+                if (button && modal) { // Ensure button and modal exist
+                    button.addEventListener("click", function() {
+                        openModal(modal);
+                    });
+                }
             });
 
-            // Close modal when clicking outside modal content
-            overlay.addEventListener("click", function() {
-                modal.style.display = "none";
-                overlay.style.display = "none";
+            // Attach event listeners for close buttons inside each modal
+            document.querySelectorAll(".close-btn").forEach(closeBtn => {
+                closeBtn.addEventListener("click", function() {
+                    const modal = this.closest(".dawa-modal");
+                    closeModal(modal);
+                });
             });
+
+            // Close modal when clicking the overlay
+            overlay.addEventListener("click", function() {
+                document.querySelectorAll(".dawa-modal").forEach(modal => {
+                    closeModal(modal);
+                });
+            });
+            // Intl phone number
+            // Ensure modal exists before showing
+            if ($("#transferPointsModal").length) {
+                const phoneInput = document.querySelector("#intlphoneNumber");
+
+                if (phoneInput) {
+                    window.intlTelInput(phoneInput, {
+                        initialCountry: "np", // Set default to Nepal
+                        separateDialCode: true, // Show country code separately
+                        preferredCountries: ["np", "in", "us", "gb"], // Top preferred countries
+                        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+                    });
+                } else {
+                    console.error("❌ Phone input element not found! Ensure the input exists in the DOM.");
+                }
+            }
         });
     </script>
 </body>
