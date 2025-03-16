@@ -173,7 +173,6 @@
 
 .btn-sm {
     padding: 5px 15px;
-    font-size: 12px;
     @include respond-to(xxl) {
         padding: 8px 20px;
         font-size: 100%;

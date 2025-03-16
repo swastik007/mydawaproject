@@ -79,6 +79,7 @@
     font-family: $figtreeSemiBold;
     @include responsive-font(20px, 20px, 30px);
     line-height: 1.2;
+    margin-bottom: 0;
 }
 
 #orders {}
