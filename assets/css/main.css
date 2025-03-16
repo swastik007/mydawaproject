@@ -12198,11 +12198,21 @@ body {
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 15px;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .btn-sm, .btn-group-sm > .btn {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .btn-sm, .btn-group-sm > .btn {
+    font-size: 20px;
+  }
 }
 @media (min-width: 1800px) {
   .btn-sm, .btn-group-sm > .btn {
     padding: 8px 20px;
-    font-size: 100%;
   }
 }
 
