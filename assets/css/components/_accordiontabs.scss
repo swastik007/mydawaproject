@@ -76,18 +76,29 @@
 #profileAccordion {}
 
 .tab-title-heading {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     @include respond-to(xxl) {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+    }
+    a {
+        &:hover,
+        &:focus {
+            color: $grey9;
+            svg {
+                path {
+                    fill: $grey9;
+                }
+            }
+        }
     }
     svg {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         object-fit: contain;
         margin-right: 10px;
         @include respond-to(xxl) {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             margin-right: 16px;
         }
         path {
@@ -103,6 +114,13 @@
     a {
         display: flex;
         align-items: center;
+    }
+    h5 {
+        font-family: $figtree;
+        @include responsive-font(16px, 16px, 24px);
+        strong {
+            font-family: $figtreeSemiBold;
+        }
     }
 }
 

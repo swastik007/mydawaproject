@@ -5,6 +5,15 @@
   &.bg-blue {
     background-color: #5187eb;
   }
+  &.bg-pink {
+    background-color: #eb5187;
+  }
+  &.bg-green {
+    background-color: #2eb178;
+  }
+  &.bg-green1 {
+    background-color: #2eb19f;
+  }
   p {
     font-size: 22px;
     font-family: $figtreeLight;
@@ -185,4 +194,42 @@
   font-size: 16px;
   padding: 16px 20px !important;
   line-height: 1 !important;
+}
+
+.prep-section {
+  background-color: #fff9f9;
+  padding: 64px 0;
+}
+.accordion-prep {
+  .accordion-item {
+    margin-bottom: 10px;
+    border-left: 2px solid #dbd2d6;
+    border-bottom: none;
+    background: transparent;
+    &:has(.show) {
+      border-left: 2px solid #e61b77;
+    }
+    .accordion-body {
+      padding-top: 0;
+    }
+    .accordion-header {
+      border: none;
+      button {
+        background: transparent;
+        font-size: 18px;
+        font-family: $figtreeBold;
+        width: auto;
+        box-shadow: none;
+        color: #373434 !important;
+        &:focus {
+          box-shadow: none !important;
+        }
+        &:after {
+          opacity: 0.5;
+          margin-left: 10px !important;
+          color: #b1b1c3 !important;
+        }
+      }
+    }
+  }
 }

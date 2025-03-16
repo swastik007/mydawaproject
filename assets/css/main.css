@@ -14487,23 +14487,29 @@ ol.form-list {
 }
 
 .tab-title-heading {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 @media (min-width: 1800px) {
   .tab-title-heading {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 }
+.tab-title-heading a:hover, .tab-title-heading a:focus {
+  color: rgb(113, 113, 112);
+}
+.tab-title-heading a:hover svg path, .tab-title-heading a:focus svg path {
+  fill: rgb(113, 113, 112);
+}
 .tab-title-heading svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
   margin-right: 10px;
 }
 @media (min-width: 1800px) {
   .tab-title-heading svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     margin-right: 16px;
   }
 }
@@ -14529,6 +14535,23 @@ ol.form-list {
 .tab-title-heading a {
   display: flex;
   align-items: center;
+}
+.tab-title-heading h5, .tab-title-heading .h5 {
+  font-family: "Figtree";
+  font-size: 16px;
+}
+@media (min-width: 1200px) {
+  .tab-title-heading h5, .tab-title-heading .h5 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .tab-title-heading h5, .tab-title-heading .h5 {
+    font-size: 24px;
+  }
+}
+.tab-title-heading h5 strong, .tab-title-heading .h5 strong {
+  font-family: "Figtree-SemiBold";
 }
 
 .table {
@@ -23381,6 +23404,25 @@ header {
   /* order tracking */
   /* manage address */
 }
+.dashboard-content .accordion-button::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #F1F1F5;
+  right: 35px;
+  width: 45px;
+  height: 45px;
+}
+@media (min-width: 1800px) {
+  .dashboard-content .accordion-button::before {
+    right: 50px;
+  }
+}
+.dashboard-content .accordion-button::after {
+  z-index: 9;
+  margin-right: 16px;
+}
 .dashboard-content .accordion-button:focus {
   box-shadow: none;
 }
@@ -23444,6 +23486,14 @@ header {
 @media (min-width: 1800px) {
   .dashboard-content .loyalty-tab .accordion-button {
     padding: 25px 35px;
+  }
+}
+.dashboard-content .loyalty-tab .accordion-button::before {
+  right: 25px;
+}
+@media (min-width: 1800px) {
+  .dashboard-content .loyalty-tab .accordion-button::before {
+    right: 40px;
   }
 }
 .dashboard-content .loyalty-tab .accordion-body {
@@ -23850,6 +23900,24 @@ header {
   }
 }
 
+.total-order-heading {
+  font-family: "Figtree";
+  font-size: 16px;
+}
+@media (min-width: 1200px) {
+  .total-order-heading {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .total-order-heading {
+    font-size: 24px;
+  }
+}
+.total-order-heading strong {
+  font-family: "Figtree-Bold";
+}
+
 .header-section {
   border-radius: 12px;
   background-image: url("../../assets/images/hero-section.png");
@@ -23857,6 +23925,15 @@ header {
 }
 .header-section.bg-blue {
   background-color: #5187eb;
+}
+.header-section.bg-pink {
+  background-color: #eb5187;
+}
+.header-section.bg-green {
+  background-color: #2eb178;
+}
+.header-section.bg-green1 {
+  background-color: #2eb19f;
 }
 .header-section p {
   font-size: 22px;
@@ -24031,4 +24108,41 @@ header {
   font-size: 16px;
   padding: 16px 20px !important;
   line-height: 1 !important;
+}
+
+.prep-section {
+  background-color: #fff9f9;
+  padding: 64px 0;
+}
+
+.accordion-prep .accordion-item {
+  margin-bottom: 10px;
+  border-left: 2px solid #dbd2d6;
+  border-bottom: none;
+  background: transparent;
+}
+.accordion-prep .accordion-item:has(.show) {
+  border-left: 2px solid #e61b77;
+}
+.accordion-prep .accordion-item .accordion-body {
+  padding-top: 0;
+}
+.accordion-prep .accordion-item .accordion-header {
+  border: none;
+}
+.accordion-prep .accordion-item .accordion-header button {
+  background: transparent;
+  font-size: 18px;
+  font-family: "Figtree-Bold";
+  width: auto;
+  box-shadow: none;
+  color: #373434 !important;
+}
+.accordion-prep .accordion-item .accordion-header button:focus {
+  box-shadow: none !important;
+}
+.accordion-prep .accordion-item .accordion-header button:after {
+  opacity: 0.5;
+  margin-left: 10px !important;
+  color: #b1b1c3 !important;
 }/*# sourceMappingURL=main.css.map */

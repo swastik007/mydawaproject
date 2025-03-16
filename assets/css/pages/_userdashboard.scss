@@ -94,6 +94,23 @@
 }
 
 .dashboard-content {
+    .accordion-button::before {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        padding: 10px;
+        background-color: #F1F1F5;
+        right: 35px;
+        width: 45px;
+        height: 45px;
+        @include respond-to(xxl) {
+            right: 50px;
+        }
+    }
+    .accordion-button::after {
+        z-index: 9;
+        margin-right: 16px;
+    }
     .accordion-button:focus {
         box-shadow: none;
     }
@@ -143,6 +160,13 @@
             padding: 15px 20px;
             @include respond-to(xxl) {
                 padding: 25px 35px;
+            }
+            &::before {
+                right: 25px;
+                @include respond-to(xxl) {
+                    right: 40px;
+                }
+                
             }
         }
         .accordion-body {
@@ -443,4 +467,12 @@
     //         }
     //     }
     // }
+}
+
+.total-order-heading {
+    font-family: $figtree;
+    @include responsive-font(16px, 16px, 24px);
+    strong {
+        font-family: $figtreeBold;
+    }
 }
