@@ -24037,4 +24037,41 @@ header {
   font-size: 16px;
   padding: 16px 20px !important;
   line-height: 1 !important;
+}
+
+.prep-section {
+  background-color: #fff9f9;
+  padding: 64px 0;
+}
+
+.accordion-prep .accordion-item {
+  margin-bottom: 10px;
+  border-left: 2px solid #dbd2d6;
+  border-bottom: none;
+  background: transparent;
+}
+.accordion-prep .accordion-item:has(.show) {
+  border-left: 2px solid #e61b77;
+}
+.accordion-prep .accordion-item .accordion-body {
+  padding-top: 0;
+}
+.accordion-prep .accordion-item .accordion-header {
+  border: none;
+}
+.accordion-prep .accordion-item .accordion-header button {
+  background: transparent;
+  font-size: 18px;
+  font-family: "Figtree-Bold";
+  width: auto;
+  box-shadow: none;
+  color: #373434 !important;
+}
+.accordion-prep .accordion-item .accordion-header button:focus {
+  box-shadow: none !important;
+}
+.accordion-prep .accordion-item .accordion-header button:after {
+  opacity: 0.5;
+  margin-left: 10px !important;
+  color: #b1b1c3 !important;
 }/*# sourceMappingURL=main.css.map */
