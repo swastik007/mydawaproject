@@ -8,6 +8,26 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         initializeCarousels();
     }, 100);
+    // Initialize Datepicker
+    $('.datepicker_input').datepicker({
+        format: 'mm/dd/yyyy',
+        autoclose: true,
+        todayHighlight: true,
+        container: 'body',  // Attach datepicker to body
+        orientation: 'bottom auto' // Ensures it opens below the input
+    });
+
+    // Open datepicker when clicking on the calendar icon
+    $('.right-icon').click(function () {
+        $('.datepicker_input').datepicker('show');
+    });
+    $('.datepicker_input').datepicker().on('show', function(e) {
+        var picker = $('.datepicker-dropdown');
+        picker.css({
+            top: $(this).offset().top + $(this).outerHeight(),
+            left: $(this).offset().left
+        });
+    });
 });
 
 // Function to load HTML components dynamically

@@ -3,6 +3,8 @@
     padding: 20px;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.03) 0px 7px 20px 0px, rgba(0, 0, 0, 0.001) 0px 0px 0px 1px;
+    flex-wrap: nowrap;
+    overflow-x:auto;
 }
 
 .border-container {
@@ -205,6 +207,7 @@
                 font-family: $figtree;
                 padding: 5px 0;
                 margin-right: 15px;
+                white-space: nowrap;
                 @include respond-to(xxl) {
                     margin-right: 25px;
                 }

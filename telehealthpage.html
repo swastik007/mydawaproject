@@ -1,256 +1,421 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Dawa</title>
-    <link rel="shortcut icon" href="assets/images/favicon.png">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="mydawa">
-    <meta name="keywords" content="mydawa">
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="mydawa" />
+    <meta name="keywords" content="mydawa" />
 
-    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <div class="container-main">
-        <div id="header"></div>
-        <main class="dawamain">
-            <div class="page-content">
-                <!-- Breadcrumb section -->
-                <nav class="breadcrumb-container mydawa-container">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><span class="divider">/</span></li>
-                        <li><a href="#">My Health Center</a></li>
-                        <li><span class="divider">/</span></li>
-                        <li><a href="#" class="active">Tele Health</a></li>
-                    </ul>
-                </nav>
+      <div id="header"></div>
+      <main class="dawamain">
+        <div class="page-content">
+          <!-- Breadcrumb section -->
+          <nav class="breadcrumb-container mydawa-container">
+            <ul class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><span class="divider">/</span></li>
+              <li><a href="#">Services</a></li>
+              <li><span class="divider">/</span></li>
+              <li><a href="#" class="active">Submit a Prescription</a></li>
+            </ul>
+          </nav>
 
-                <div class="health-center telehealth-page">
-                    <!-- Hero Section -->
-                    <div class="banner-section health-banner mydawa-container">
-                        <picture>
-                            <!-- Image for larger screens -->
-                            <source srcset="assets/images/health-img/telehealth-lg.png" media="(min-width: 1200px)" />
-                            <!-- Image for smaller screens -->
-                            <source srcset="assets/images/health-img/telehealth.png" media="(max-width: 767px)" />
-                            <!-- Fallback image -->
-                            <img src="assets/images/health-img/telehealth.png" alt="MyDawa Telehealth" />
-                        </picture>
-                        <div class="banner-content-wrap">
-                            <div class="text-content">
-                                <p>My Health Center</p>
-                                <h2>MyDawa Telehealth </h2>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Intro Section -->
-                    <section class="healthintro-section">
-                        <div class="mydawa-container">
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <img class="healthintro-img" src="assets/images/health-img/telehealth-img1.png" alt="Family">
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="healthintro-heading">
-                                        <h3>Your Health, One Click Away</h3>
-                                        <p>
-                                            Get expert healthcare guidance anytime, anywhere with MYDAWA Telehealth.
-                                        </p>
-                                    </div>
-
-                                    <div class="healthintro-content">
-                                        <ul class="features-list owl-carousel">
-                                            <li>
-                                                <div class="list-icon">
-                                                    <img src="assets/images/icons/feature1.png" alt="Confidentiality Icon" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Confidentiality</span> Secure and private consultations.
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="list-icon">
-                                                    <img src="assets/images/icons/feature2.png" alt="Convenience Icon" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Convenience</span> Access care from your home or office.
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="list-icon">
-                                                    <img src="assets/images/icons/feature3.png" alt="Expert Care Icon" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Expert Care</span> Professional healthcare providers you can trust.
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="list-icon">
-                                                    <img src="assets/images/icons/feature1.png" alt="Fast Delivery Icon" />
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Fast Delivery</span> Fast and reliable healthcare services.
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <button class="btn-grey btn-rounded">Book A Consultation 
-                                            <svg class="ms-2" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_50_592)">
-                                                <path d="M0.75 5.625H11.2461" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M6.00391 0.75L11.252 5.625L6.00391 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_50_592">
-                                                <rect width="12" height="12" fill="white"></rect>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </section>
-
-                    <!-- Steps Section -->
-                    <div class="healthsteps-section">
-                        <div class="mydawa-container">
-                            <h2 class="section-heading healthsteps-heading d-none d-lg-block">
-                                Telehealth Simplified In Three Steps
-                            </h2>
-                            <h2 class="section-heading healthsteps-heading d-block d-lg-none">
-                                How to Get PrEP: A Step-by-Step Guide to HIV Prevention
-                            </h2>
-                            <div class="healthsteps-container owl-carousel">
-                                <div class="healthstep-card step-1">
-                                    <h3 class="healthstep-title">Book</h3>
-                                    <p class="healthstep-subtitle">A Consultation</p>
-                                    <p class="healthstep-description">
-                                        Once you’ve explored different contraceptive options, connect with a Family Planning Specialist for personalized advice. Get tailored recommendations that suit your body and lifestyle.
-                                    </p>
-                                    <a href="#" class="healthstep-button">Explore Products →</a>
-                                </div>
-                                <div class="healthstep-card step-2">
-                                    <h3 class="healthstep-title">Speak</h3>
-                                    <p class="healthstep-subtitle">With Our Experts</p>
-                                    <p class="healthstep-description">
-                                        Connect with a certified healthcare professional at your scheduled time.
-                                    </p>
-                                    <a href="#" class="healthstep-button">Book Consultation →</a>
-                                </div>
-                                <div class="healthstep-card step-3">
-                                    <h3 class="healthstep-title">Receive</h3>
-                                    <p class="healthstep-subtitle">Treatment</p>
-                                    <p class="healthstep-description">
-                                        Receive the treatment you need at your convenience.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Health Journey Section -->
-                    <!-- Health Journey Section -->
-                    <section class="healthjourney-section">
-                        <div class="mydawa-container">
-                            <h3 class="healthjourney-heading">We Understand That Every Health Journey Is Unique</h3>
-                            <p class="healthjourney-subheading">Our expert providers offer convenient, confidential, and effective care, guiding you every step of the way.</p>
-                            <div class="healthjourney-container owl-carousel">
-                                <div class="healthjourney-card">
-                                    <img src="assets/images/health-img/healthjourney1.png" alt="Respiratory Infections" />
-                                    <h4>Respiratory Infections</h4>
-                                    <p>Timely treatment for colds, flu, and other respiratory issues.</p>
-                                    <a href="#" class="arrow-link">Learn More</a>
-                                </div>
-                                <div class="healthjourney-card">
-                                    <img src="assets/images/health-img/healthjourney2.png" alt="Primary Healthcare Services" />
-                                    <h4>Primary Healthcare Services</h4>
-                                    <p>Effortless access to care and prescription delivery.</p>
-                                    <a href="#" class="arrow-link">Learn More</a>
-                                </div>
-                                <div class="healthjourney-card">
-                                    <img src="assets/images/health-img/healthjourney3.png" alt="Sexual Wellness (STD/STI/UTI)" />
-                                    <h4>Sexual Wellness (STD/STI/UTI)</h4>
-                                    <p>Confidential consultations and treatments to safeguard health.</p>
-                                    <a href="#" class="arrow-link">Learn More</a>
-                                </div>
-                                <div class="healthjourney-card">
-                                    <img src="assets/images/health-img/healthjourney4.png" alt="Chronic Disease Management" />
-                                    <h4>Chronic Disease Management</h4>
-                                    <p>Ongoing support for conditions like hypertension, diabetes, and more.</p>
-                                    <a href="#" class="arrow-link">Learn More</a>
-                                </div>
-                                <div class="healthjourney-card">
-                                    <img src="assets/images/health-img/healthjourney5.png" alt="Dermatological Care (Acne)" />
-                                    <h4>Dermatological Care (Acne)</h4>
-                                    <p>Expert advice for clearer, healthier skin.</p>
-                                    <a href="#" class="arrow-link">Learn More</a>
-                                </div>
-                                <div class="healthjourney-card">
-                                    <img src="assets/images/health-img/healthjourney6.png" alt="Gastroenteritis" />
-                                    <h4>Gastroenteritis</h4>
-                                    <p>Quick recovery plans for stomach flu and related conditions.</p>
-                                    <a href="#" class="arrow-link">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </section>
-
-
-                    <!-- Footer Hero Section -->
-                    <div class="banner-section health-banner mydawa-container">
-                        <picture>
-                            <!-- Image for larger screens -->
-                            <source srcset="assets/images/health-img/telehealth-lg2.png" media="(min-width: 1200px)" />
-                            <!-- Image for smaller screens -->
-                            <source srcset="assets/images/health-img/telehealth2.png" media="(max-width: 767px)" />
-                            <!-- Fallback image -->
-                            <img src="assets/images/health-img/telehealth-img2.png" alt="MyDawa Telehealth" />
-                        </picture>
-                        <div class="banner-content-wrap">
-                            <div class="text-content">
-                                <p>MYDAWA Introduces</p>
-                                <h2>MZIMA Package for Diabetes and Hypertension </h2>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+          <div class="mydawa-container">
+            <div
+              class="header-section bg-pink d-flex align-items-center justify-content-between"
+            >
+              <div class="">
+                <p>My Health Center</p>
+                <h1>Sexual Wellness</h1>
+              </div>
+              <img src="./assets/images/wellness-header.png" />
             </div>
 
+            <section class="intro-section d-flex align-items-center gap-6 mt-4">
+              <img src="./assets/images/wellness.png" alt="Family Planning" />
+              <div class="text-section">
+                <h3>
+                  Sexual wellness is about feeling good in your body and
+                  connected with your partner
+                </h3>
+                <p>
+                  It goes beyond physical health-having a clean bill of health
+                  doesn't guarantee sexual wellness, and having an STI doesn't
+                  mean you can't be sexually healthy.
+                </p>
+                <ul>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/w1.png" />
+                    </span>
+                    <p>Access to Information</p>
+                  </li>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/w2.png" />
+                    </span>
+                    <p>Safe Sex Practices</p>
+                  </li>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/w3.png" />
+                    </span>
+                    <p>Sexual Rights & Communication</p>
+                  </li>
+                  <li>
+                    <span class="f-icon">
+                      <img src="./assets/images/icons/w4.png" />
+                    </span>
+                    <p>Pleasure & Intimacy</p>
+                  </li>
+                </ul>
+              </div>
+            </section>
 
-        </main>
-        <div id="footer"></div>
+            <section class="getting-started">
+              <h2 class="section-heading mb-3 mt-6">
+                Getting Started with Sexual Wellness
+              </h2>
+              <div class="stepper-steps">
+                <div class="stepper-step">
+                  <h4>Educate</h4>
+                  <span>Yourself</span>
+                  <img src="./assets/images/1-bg.png" />
+                  <div class="overlay">
+                    <h4>Educate</h4>
+                    <span>Yourself</span>
+                    <p>
+                      Once you’ve explored different contraceptive options,
+                      connect with a Family Planning Specialist for personalized
+                      advice. Get tailored recommendations that suit your body
+                      and lifestyle.
+                    </p>
+                    <a href="#" class="p-3 btn-grey btn-rounded"
+                      >Book Appointment
+                      <svg
+                        class="ms-2"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_50_592)">
+                          <path
+                            d="M0.75 5.625H11.2461"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_50_592">
+                            <rect width="12" height="12" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="stepper-step">
+                  <h4>Educate</h4>
+                  <span>Yourself</span>
+                  <img src="./assets/images/1-bg.png" />
+                  <div class="overlay">
+                    <h4>Educate</h4>
+                    <span>Yourself</span>
+                    <p>
+                      Once you’ve explored different contraceptive options,
+                      connect with a Family Planning Specialist for personalized
+                      advice. Get tailored recommendations that suit your body
+                      and lifestyle.
+                    </p>
+                    <a href="#" class="p-3 btn-grey btn-rounded"
+                      >Book Appointment
+                      <svg
+                        class="ms-2"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_50_592)">
+                          <path
+                            d="M0.75 5.625H11.2461"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_50_592">
+                            <rect width="12" height="12" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="stepper-step">
+                  <h4>Educate</h4>
+                  <span>Yourself</span>
+                  <img src="./assets/images/3-bg.png" />
+                  <div class="overlay">
+                    <h4>Educate</h4>
+                    <span>Yourself</span>
+                    <p>
+                      Once you’ve explored different contraceptive options,
+                      connect with a Family Planning Specialist for personalized
+                      advice. Get tailored recommendations that suit your body
+                      and lifestyle.
+                    </p>
+                    <a href="#" class="p-3 btn-grey btn-rounded"
+                      >Book Appointment
+                      <svg
+                        class="ms-2"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_50_592)">
+                          <path
+                            d="M0.75 5.625H11.2461"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_50_592">
+                            <rect width="12" height="12" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="stepper-step">
+                  <h4>Educate</h4>
+                  <span>Yourself</span>
+                  <img src="./assets/images/4-bg.png" />
+                  <div class="overlay">
+                    <h4>Educate</h4>
+                    <span>Yourself</span>
+                    <p>
+                      Once you’ve explored different contraceptive options,
+                      connect with a Family Planning Specialist for personalized
+                      advice. Get tailored recommendations that suit your body
+                      and lifestyle.
+                    </p>
+                    <a href="#" class="p-3 btn-grey btn-rounded"
+                      >Book Appointment
+                      <svg
+                        class="ms-2"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_50_592)">
+                          <path
+                            d="M0.75 5.625H11.2461"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_50_592">
+                            <rect width="12" height="12" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="symptoms-section">
+              <div class="">
+                <div class="symptoms-wrap p-relative pb-5">
+                  <div class="symptoms-badge">Sexual Health Practice</div>
+                  <div class="row">
+                    <!-- Left Section -->
+                    <div class="col-lg-4 mb-4">
+                      <div class="steps mt-4">
+                        <img src="./assets/images/wellness-1.png" />
+                      </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-lg-8">
+                      <div class="intro-section ms-5">
+                        <div class="text-section">
+                          <h3>Protect Your Health with Safe Sex Practices</h3>
+                          <p>
+                            Prioritizing safe sex is essential for maintaining
+                            your sexual health and preventing STIs and unplanned
+                            pregnancies. Safe sex is not just about protection;
+                            it's about mutual respect and care for you and your
+                            partner.
+                          </p>
+                          <ul>
+                            <li>
+                              <span class="f-icon">
+                                <img src="./assets/images/icons/w2.png" />
+                              </span>
+                              <p>Use condoms correctly and consistently</p>
+                            </li>
+                            <li>
+                              <span class="f-icon">
+                                <img src="./assets/images/icons/w5.png" />
+                              </span>
+                              <p>Get tested regularly for STIs</p>
+                            </li>
+                            <li>
+                              <span class="f-icon">
+                                <img src="./assets/images/icons/w4.png" />
+                              </span>
+                              <p>
+                                Discuss and respect consent with your partner
+                              </p>
+                            </li>
+                            <li>
+                              <span class="f-icon">
+                                <img src="./assets/images/icons/w6.png" />
+                              </span>
+                              <p>
+                                Take preventive measures like PrEP and PEP for
+                                HIV
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="banner-section homebanner-section">
+              <picture>
+                <!-- Image for larger screens -->
+                <source
+                  srcset="assets/images/cto.png"
+                  media="(min-width: 1200px)"
+                />
+                <!-- Image for smaller screens -->
+                <source
+                  srcset="assets/images/cto.png"
+                  media="(max-width: 767px)"
+                />
+                <!-- Fallback image -->
+                <img src="assets/images/cto.png" alt="MyDawa Telehealth" />
+              </picture>
+              <div class="banner-content-wrap">
+                <div class="text-content">
+                  <h4 class="text-dark">Want to talk to an expert?</h4>
+                  <p class="text-dark w-50">
+                    Connect with our qualified doctors for personalized support
+                    with your sexual wellness needs.
+                  </p>
+                </div>
+                <div class="button-wrap">
+                  <button class="btn-primary btn-rounded">
+                    Book an Appointment
+                    <svg
+                      class="ms-2"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_50_592)">
+                        <path
+                          d="M0.75 5.625H11.2461"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M6.00391 0.75L11.252 5.625L6.00391 10.5"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_50_592">
+                          <rect width="12" height="12" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="footer"></div>
     </div>
-
 
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
     <script src="assets/js/themescripts.js"></script>
-</body>
-
+  </body>
 </html>

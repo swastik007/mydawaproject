@@ -9,266 +9,188 @@
             max-width: 600px;
         }
     }
-    .faq-container {
-        display: flex;
-        gap: 20px;
-        flex-direction: column;
-        @include respond-to(lg) {
-            flex-direction: row;
-        }
-    }
-    /* Sidebar Navigation */
-    .faq-sidebar {
-        flex: 1;
-        @include respond-to(lg) {
-            max-width: 288px;
-            margin-right: 20px;
-        }
-        @include respond-to(xxl) {
-            max-width: 450px;
-            margin-right: 32px;
-        }
-        .faq-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: row;
-            border-bottom: 2px solid #F8F8F8;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            scrollbar-width: none;
-            /* Firefox */
-            -ms-overflow-style: none;
-            /* Internet Explorer 10+ */
-            @include respond-to(lg) {
-                flex-direction: column;
-            }
-            .faq-menu-item {
-                cursor: pointer;
-                background: #fff;
-                font-size: 18px;
-                color: #808080;
-                font-weight: 500;
-                padding: 7px 10px;
-                text-wrap: nowrap;
-                @include respond-to(lg) {
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 8px;
-                    font-size: 16px;
-                }
-                @include respond-to(xxl) {
-                    padding: 16px 32px;
-                    font-size: 22px;
-                }
-                &.active {
-                    background-color: transparent;
-                    color: $black;
-                    border-bottom: 2px solid $black;
-                    font-weight: 700;
-                    @include respond-to(lg) {
-                        background-color: #F9F9F9;
-                        border-bottom: transparent;
-                    }
-                }
-                &:hover {
-                    border-bottom: 1px solid $black;
-                    color: $black;
-                    font-weight: 700;
-                    @include respond-to(lg) {
-                        background-color: #F9F9F9;
-                        border-bottom: transparent;
-                    }
-                }
-            }
-            &::-webkit-scrollbar {
-                width: 0;
-                height: 0;
-            }
-            /* Optional: show position indicator in red */
-        }
-    }
-    /* FAQ Content */
-    .faq-content {
-        flex: 3;
-        border: 1px solid #f1f1f1;
-        padding: 10px 20px;
-        border-radius: 8px;
-        height: fit-content;
-        @include respond-to(lg) {
-            padding: 10px 20px;
-        }
-        .faq-section {
-            margin-bottom: 20px;
-            .faq-heading {
-                font-size: 18px;
-                font-weight: 700;
-                color: $black;
-                line-height: 28px;
-                @include respond-to(lg) {
-                    font-size: 16px;
-                    line-height: 25px;
-                }
-                @include respond-to(xxl) {
-                    font-size: 22px;
-                    line-height: 25px;
-                }
-            }
-        }
-        .faq-section.hidden {
-            display: none;
-        }
-    }
 }
 
-.faq-item {
-    padding: 20px 0;
-    border-top: 1px solid #F8F8F8;
+.faq-sidebar{
+    display: flex;
+    flex-direction: row;
     @include respond-to(lg) {
-        padding: 22px 0;
+        flex-direction: column;
     }
-    @include respond-to(xxl) {
-        padding: 30px 0;
-    }
-    &:first-of-type {
-        border-top: none;
-    }
-    .faq-question {
-        background: transparent;
-        cursor: pointer;
-        color: $black;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1em;
-        font-weight: 500;
-        line-height: 1.2;
-        @include respond-to(xxl) {
-            font-size: 1.275em;
-            line-height: 25px;
+    .accordion-item{
+        border:none;
+        h2{
+            @include responsive-font(16px, 16px, 24px);
+            font-family: $figtreeMedium;
         }
-        .faq-arrow {
-            transition: transform 0.3s ease;
-            font-size: 1em;
-            color: #868686;
-            @include respond-to(xxl) {
-                font-size: 1.3em;
+    }
+    .accordion-button{    
+        cursor: pointer;
+        background: #f9f9f9;        
+        color: #808080;
+        padding: 7px 10px;
+        text-wrap: nowrap;
+        border: none;
+        box-shadow: none;
+        @include responsive-font(16px, 16px, 24px);
+        
+        @include respond-to(lg) {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        @include respond-to(xxl) {
+            padding: 16px 32px;
+        }
+        &.collapsed{
+            background-color: #FFF;
+            color: $black;
+        }
+        &.active {
+            background-color: transparent;
+            color: $black;
+            border-bottom: 2px solid $black;
+            font-family: $figtreeBold;
+            @include respond-to(lg) {
+                background-color: #F9F9F9;
+                border-bottom: transparent;
             }
         }
         &:hover {
-            color: $primary;
-            .faq-arrow {
-                color: $primary;
-            }
-        }
-    }
-    .faq-answer {
-        background: #fff;
-        padding: 15px 0;
-        display: block;
-        color: #8D8D92;
-        font-size: 1em;
-        font-weight: 500;
-        line-height: 1.5;
-        @include respond-to(lg) {
-            font-size: 0.875em;
-        }
-        @include respond-to(xxl) {
-            font-size: 1.2em;
-        }
-        &.hidden {
-            display: none;
-        }
-    }
-}
-
-.shipping-policy-page {
-    .policy-item {
-        .policy-question {
-            font-size: 18px;
-            font-weight: 700;
-            color: #373434;
-            line-height: 1.5;
-            @include respond-to(lg) {
-                font-size: 14px;
-            }
-            @include respond-to(xxl) {
-                font-size: 18px;
-            }
-        }
-        .policy-answer {
-            padding: 15px 0;
-            display: block;
-            font-size: 16px;
-            color: #8D8D92;
-            @include respond-to(lg) {
-                font-size: 14px;
-            }
-            @include respond-to(xxl) {
-                font-size: 22px;
-            }
-            p {
-                margin-bottom: 10px;
-                font-weight: 500;
-                font-size: 16px;
-                @include respond-to(lg) {
-                    font-size: 14px;
-                }
-                @include respond-to(xxl) {
-                    font-size: 18px;
-                }
-            }
-            ul {
-                li {
-                    padding: 3px 0;
-                    font-size: 15px;
-                    @include respond-to(lg) {
-                        font-size: 14px;
-                    }
-                    @include respond-to(xxl) {
-                        font-size: 22px;
-                    }
-                }
-            }
-        }
-        .note {
-            background-color: #F6F6F8;
+            border-bottom: 1px solid $black;
             color: $black;
-            padding: 10px 20px;
-            display: flex;
+            font-family: $figtreeBold;
+            @include respond-to(lg) {
+                background-color: #F9F9F9;
+                border-bottom: transparent;
+            }
+        }
+        &.no-arrow{
+            background-color: transparent;
+            &:before, &:after{
+                display: none;
+            }
+            &.active {
+                background-color: transparent;
+                color: $black;
+                border-bottom: 2px solid $black;
+                font-family: $figtreeBold;
+                @include respond-to(lg) {
+                    background-color: #F9F9F9;
+                    border-bottom: transparent;
+                }
+            }
+            &:hover {
+                border-bottom: 1px solid $black;
+                color: $black;
+                font-family: $figtreeBold;
+                @include respond-to(lg) {
+                    background-color: #F9F9F9;
+                    border-bottom: transparent;
+                }
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    .nav {
+        .nav-link {
+            border-radius: 8px;
+            color: rgb(113, 113, 112);
+            display: flex ;
             justify-content: flex-start;
             align-items: center;
-            span {
-                font-size: 14px;
-                font-weight: 500;
-                margin-left: 7px;
-                display: block;
-                @include respond-to(lg) {
-                    font-size: 12px;
-                }
-                @include respond-to(xxl) {
-                    font-size: 22px;
-                }
+            font-family: $figtreeMedium;
+            white-space: nowrap;
+            @include responsive-font(14x, 14x, 20x);        
+            padding: 10px 18px 10px 30px;
+            background-color: transparent;
+            position: relative;
+            &:hover, &:focus, &.active{
+                background-color: transparent;
+                color: $black;
             }
-        }
-        strong {
-            color: $black;
-            font-size: 16px;
-            line-height: 1.5;
-            font-weight: 500;
-            @include respond-to(lg) {
-                font-size: 14px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -50px;
+                height: 100%;
+                width: 2px;
+                background: #ddd; // Light grey pipe line
             }
-            @include respond-to(xxl) {
-                font-size: 22px;
+        
+            &:first-child::before {
+                height: 50%;
+                top: 50%;
+            }
+        
+            &:last-child::before {
+                height: 170%;
+                bottom: 50%;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 20px;
+                height:2px;
+                width: 15px;
+                background: #ddd;
             }
         }
     }
+    .accordion-body{
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
 }
-
+/* FAQ Content */
+.faq-content {
+    flex: 3;
+    border: 1px solid #f1f1f1;
+    padding: 14px;
+    border-radius: 8px;
+    height: fit-content;
+    @include respond-to(xxl) {
+        padding: 20px;
+    }
+    h3{
+        font-family: $figtreeBold;
+        color: $black;
+        @include responsive-font(18x, 18x, 26px);  
+        line-height: 1.5;
+        margin-left: 14px;
+        @include respond-to(xxl) {
+            margin-left: 18px;
+        }
+    }
+    .accordion-item{
+        border: none;
+        box-shadow: none;
+        border-bottom: 1px solid #f9f9f9;
+    }
+    .accordion-button:not(.collapsed){
+        box-shadow: none;
+    }
+    .accordion-button{
+        font-family: $figtreeMedium;
+        color: $black;
+        @include responsive-font(14x, 14x, 20x);
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .accordion-body{
+        font-family: $figtree;
+        color: #8D8D92;
+        @include responsive-font(14x, 14x, 20x);
+        padding-top: 0;
+    }
+}
 .refine-search {
     background-color: #F1F3FB;
     border-radius: 12px;
@@ -414,3 +336,274 @@
         }
     }
 }
+// .faq-page {
+//     .section-heading {
+//         max-width: 221px;
+//         line-height: 1.2;
+//         @include respond-to(lg) {
+//             max-width: 336px;
+//         }
+//         @include respond-to(xxl) {
+//             max-width: 600px;
+//         }
+//     }
+//     .faq-container {
+//         display: flex;
+//         gap: 20px;
+//         flex-direction: column;
+//         @include respond-to(lg) {
+//             flex-direction: row;
+//         }
+//     }
+//     /* Sidebar Navigation */
+//     .faq-sidebar {
+//         flex: 1;
+//         @include respond-to(lg) {
+//             max-width: 288px;
+//             margin-right: 20px;
+//         }
+//         @include respond-to(xxl) {
+//             max-width: 450px;
+//             margin-right: 32px;
+//         }
+//         .faq-menu {
+//             list-style: none;
+//             padding: 0;
+//             margin: 0;
+//             display: flex;
+//             flex-direction: row;
+//             border-bottom: 2px solid #F8F8F8;
+//             flex-wrap: nowrap;
+//             overflow-x: auto;
+//             scrollbar-width: none;
+//             /* Firefox */
+//             -ms-overflow-style: none;
+//             /* Internet Explorer 10+ */
+//             @include respond-to(lg) {
+//                 flex-direction: column;
+//             }
+//             .faq-menu-item {
+//                 cursor: pointer;
+//                 background: #fff;
+//                 font-size: 18px;
+//                 color: #808080;
+//                 font-weight: 500;
+//                 padding: 7px 10px;
+//                 text-wrap: nowrap;
+//                 @include respond-to(lg) {
+//                     padding: 10px 20px;
+//                     border: none;
+//                     border-radius: 8px;
+//                     font-size: 16px;
+//                 }
+//                 @include respond-to(xxl) {
+//                     padding: 16px 32px;
+//                     font-size: 22px;
+//                 }
+//                 &.active {
+//                     background-color: transparent;
+//                     color: $black;
+//                     border-bottom: 2px solid $black;
+//                     font-family: $figtreeBold;
+//                     @include respond-to(lg) {
+//                         background-color: #F9F9F9;
+//                         border-bottom: transparent;
+//                     }
+//                 }
+//                 &:hover {
+//                     border-bottom: 1px solid $black;
+//                     color: $black;
+//                     font-family: $figtreeBold;
+//                     @include respond-to(lg) {
+//                         background-color: #F9F9F9;
+//                         border-bottom: transparent;
+//                     }
+//                 }
+//             }
+//             &::-webkit-scrollbar {
+//                 width: 0;
+//                 height: 0;
+//             }
+//             /* Optional: show position indicator in red */
+//         }
+//     }
+//     /* FAQ Content */
+//     .faq-content {
+//         flex: 3;
+//         border: 1px solid #f1f1f1;
+//         padding: 10px 20px;
+//         border-radius: 8px;
+//         height: fit-content;
+//         @include respond-to(lg) {
+//             padding: 10px 20px;
+//         }
+//         .faq-section {
+//             margin-bottom: 20px;
+//             .faq-heading {
+//                 font-size: 18px;
+//                 font-family: $figtreeBold;
+//                 color: $black;
+//                 line-height: 28px;
+//                 @include respond-to(lg) {
+//                     font-size: 16px;
+//                     line-height: 25px;
+//                 }
+//                 @include respond-to(xxl) {
+//                     font-size: 22px;
+//                     line-height: 25px;
+//                 }
+//             }
+//         }
+//         .faq-section.hidden {
+//             display: none;
+//         }
+//     }
+// }
+
+// .faq-item {
+//     padding: 20px 0;
+//     border-top: 1px solid #F8F8F8;
+//     @include respond-to(lg) {
+//         padding: 22px 0;
+//     }
+//     @include respond-to(xxl) {
+//         padding: 30px 0;
+//     }
+//     &:first-of-type {
+//         border-top: none;
+//     }
+//     .faq-question {
+//         background: transparent;
+//         cursor: pointer;
+//         color: $black;
+//         width: 100%;
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;
+//         font-size: 1em;
+//         font-weight: 500;
+//         line-height: 1.2;
+//         @include respond-to(xxl) {
+//             font-size: 1.275em;
+//             line-height: 25px;
+//         }
+//         .faq-arrow {
+//             transition: transform 0.3s ease;
+//             font-size: 1em;
+//             color: #868686;
+//             @include respond-to(xxl) {
+//                 font-size: 1.3em;
+//             }
+//         }
+//         &:hover {
+//             color: $primary;
+//             .faq-arrow {
+//                 color: $primary;
+//             }
+//         }
+//     }
+//     .faq-answer {
+//         background: #fff;
+//         padding: 15px 0;
+//         display: block;
+//         color: #8D8D92;
+//         font-size: 1em;
+//         font-weight: 500;
+//         line-height: 1.5;
+//         @include respond-to(lg) {
+//             font-size: 0.875em;
+//         }
+//         @include respond-to(xxl) {
+//             font-size: 1.2em;
+//         }
+//         &.hidden {
+//             display: none;
+//         }
+//     }
+// }
+
+// .shipping-policy-page {
+//     .policy-item {
+//         .policy-question {
+//             font-size: 18px;
+//             font-family: $figtreeBold;
+//             color: #373434;
+//             line-height: 1.5;
+//             @include respond-to(lg) {
+//                 font-size: 14px;
+//             }
+//             @include respond-to(xxl) {
+//                 font-size: 18px;
+//             }
+//         }
+//         .policy-answer {
+//             padding: 15px 0;
+//             display: block;
+//             font-size: 16px;
+//             color: #8D8D92;
+//             @include respond-to(lg) {
+//                 font-size: 14px;
+//             }
+//             @include respond-to(xxl) {
+//                 font-size: 22px;
+//             }
+//             p {
+//                 margin-bottom: 10px;
+//                 font-weight: 500;
+//                 font-size: 16px;
+//                 @include respond-to(lg) {
+//                     font-size: 14px;
+//                 }
+//                 @include respond-to(xxl) {
+//                     font-size: 18px;
+//                 }
+//             }
+//             ul {
+//                 li {
+//                     padding: 3px 0;
+//                     font-size: 15px;
+//                     @include respond-to(lg) {
+//                         font-size: 14px;
+//                     }
+//                     @include respond-to(xxl) {
+//                         font-size: 22px;
+//                     }
+//                 }
+//             }
+//         }
+//         .note {
+//             background-color: #F6F6F8;
+//             color: $black;
+//             padding: 10px 20px;
+//             display: flex;
+//             justify-content: flex-start;
+//             align-items: center;
+//             span {
+//                 font-size: 14px;
+//                 font-weight: 500;
+//                 margin-left: 7px;
+//                 display: block;
+//                 @include respond-to(lg) {
+//                     font-size: 12px;
+//                 }
+//                 @include respond-to(xxl) {
+//                     font-size: 22px;
+//                 }
+//             }
+//         }
+//         strong {
+//             color: $black;
+//             font-size: 16px;
+//             line-height: 1.5;
+//             font-weight: 500;
+//             @include respond-to(lg) {
+//                 font-size: 14px;
+//             }
+//             @include respond-to(xxl) {
+//                 font-size: 22px;
+//             }
+//         }
+//     }
+// }
+

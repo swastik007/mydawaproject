@@ -1150,3 +1150,22 @@ ol.form-list {
         background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/img/flags@2x.png");
     }
 }
+
+/* datepicker */
+.datepicker-dropdown {
+    z-index: 9999 !important;
+    max-width: fit-content;
+    font-family: $inter;
+    padding: 10px;
+}
+.datepicker {
+    position: absolute !important;
+    td, th{
+        width: 25px;
+        height: 25px;
+        @include respond-to(xxl) {
+            width: 38px;
+            height: 38px;
+        }
+    }
+}

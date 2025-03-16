@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="../assets/vendor/itl.css">
     <link rel="stylesheet" href="../assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="../assets/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="../assets/vendor/owl.theme.default.min.css">
     <link rel="stylesheet" href="../assets/css/main.css?v=1.1">
@@ -36,7 +37,7 @@
                 <div class="row">
                     <!-- Sidebar Navigation with Tabs -->
                     <div class="col-md-3">
-                        <div class="nav flex-column nav-pills dashboard-sidebar me-md-2 me-lg-3 me-xl-4" id="dashboard-tabs" role="tablist">
+                        <div class="nav flex-row flex-md-column nav-pills dashboard-sidebar me-md-2 me-lg-3 me-xl-4 mb-3" id="dashboard-tabs" role="tablist">
                             <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
 
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -271,8 +272,9 @@
                                                             <label for="dob">Date of Birth <span
                                                                     class="required">*</span></label>
                                                             <div class="input-icon">
-                                                                <input type="text" id="dob" placeholder="mm/dd/yyyy">
-                                                                <img class="right-icon" src="../assets/images/icons//calendar-icon.png" alt="Phone">
+                                                                <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
+                                                                                                                               
+                                                                <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1848,7 +1850,8 @@
                         <div class="input-group">
                             <label for="dob">Date of Birth <span class="required">*</span></label>
                             <div class="input-icon">
-                                <input type="text" id="dob" placeholder="mm/dd/yyyy">
+                                <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
+                                                                
                                 <img class="right-icon" src="../assets/images/icons//calendar-icon.png " alt="Phone">
                             </div>
                         </div>
@@ -1925,7 +1928,7 @@
                         <div class="input-group">
                             <label for="dob">Date of Birth <span class="required">*</span></label>
                             <div class="input-icon">
-                                <input type="text" id="dob " placeholder="mm/dd/yyyy">
+                                <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>                                                                
                                 <img class="right-icon " src="../assets/images/icons//calendar-icon.png " alt="Phone">
                             </div>
                         </div>
@@ -2152,7 +2155,7 @@
     <script src="../assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="../assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/owl.carousel.min.js"></script>
-
+    <script src="../assets/vendor/bootstrap-datepicker.min.js"></script>
     <script src="../assets/js/themescripts.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {

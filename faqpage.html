@@ -39,7 +39,13 @@
                     <div class="row">
                         <!-- Sidebar with Accordion Navigation -->
                         <div class="col-md-3">
-                            <div class="nav flex-column nav-pills faq-sidebar me-md-2 me-lg-3 me-xl-4" id="faqSidebar">
+                            <div class="nav nav-pills accordion faq-sidebar me-md-2 me-lg-3 me-xl-4" id="faqSidebar">
+                                <button class="accordion-button no-arrow" data-bs-toggle="collapse" data-bs-target="#">
+                                    Account
+                                </button>
+                                <button class="accordion-button no-arrow" data-bs-toggle="collapse" data-bs-target="#">
+                                    Link 2
+                                </button>
                                 <!-- Products Section -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
@@ -98,30 +104,32 @@
 
                                 <!-- General Section -->
                                 <div class="tab-pane fade show active" id="general">
-                                    <h3>General</h3>
-                                    <div class="accordion" id="generalFAQ">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                                    How do I know if a product is genuine?
-                                                </button>
-                                            </h2>
-                                            <div id="faq1" class="accordion-collapse collapse show">
-                                                <div class="accordion-body">
-                                                    Our products are procured from world-class manufacturers and comply with WHO-GMP standards.
+                                    <div class="faq-content">
+                                        <h3>General</h3>
+                                        <div class="accordion" id="generalFAQ">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                                        How do I know if a product is genuine?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq1" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        The medications that you purchase at our online store are of the highest quality. The prescription as well as over the counter medications we provide are procured from world-class and well-recognized pharmaceutical manufacturers. They are manufactured in facilities that comply to WHO-GMP Standards and packaged in factory-sealed blister packs
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                                    Are prescriptions required for all medicines?
-                                                </button>
-                                            </h2>
-                                            <div id="faq2" class="accordion-collapse collapse">
-                                                <div class="accordion-body">
-                                                    Some medicines require a valid prescription while others are available over-the-counter.
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                                        Are prescriptions required for all medicines?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq2" class="accordion-collapse collapse">
+                                                    <div class="accordion-body">
+                                                        Some medicines require a valid prescription while others are available over-the-counter.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -130,17 +138,43 @@
 
                                 <!-- Sexual Wellness -->
                                 <div class="tab-pane fade" id="sexualWellness">
-                                    <h3>Sexual Wellness</h3>
-                                    <div class="accordion" id="sexualWellnessFAQ">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                                    Do you offer discreet packaging?
-                                                </button>
-                                            </h2>
-                                            <div id="faq3" class="accordion-collapse collapse show">
-                                                <div class="accordion-body">
-                                                    Yes, all sexual wellness products are shipped in discreet packaging.
+                                    <div class="faq-content">
+                                        <h3>Sexual Wellness</h3>
+                                        <div class="accordion" id="sexualWellnessFAQ">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                                        Do you offer discreet packaging for sexual wellness products?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq3" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Yes, all sexual wellness products are shipped in discreet packaging.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                                        How do I choose the right emergency contraceptive?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq3" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Yes, all sexual wellness products are shipped in discreet packaging.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                                        Are condoms and lubricants safe for sensitive skin?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq3" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Yes, all sexual wellness products are shipped in discreet packaging.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,17 +183,43 @@
 
                                 <!-- Vitamins & Supplements -->
                                 <div class="tab-pane fade" id="vitamins">
-                                    <h3>Vitamins & Supplements</h3>
-                                    <div class="accordion" id="vitaminsFAQ">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                                    Are your supplements approved by regulatory authorities?
-                                                </button>
-                                            </h2>
-                                            <div id="faq4" class="accordion-collapse collapse show">
-                                                <div class="accordion-body">
-                                                    Yes, our vitamins and supplements meet all necessary regulations.
+                                    <div class="faq-content">
+                                        <h3>Vitamins & Supplements</h3>
+                                        <div class="accordion" id="vitaminsFAQ">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                                        Are your vitamins and supplements approved by regulatory authorities?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq4" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Yes, our vitamins and supplements meet all necessary regulations.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                                        Can I take multiple supplements at the same time?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq4" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Yes, our vitamins and supplements meet all necessary regulations.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                                        How should I store my vitamins to keep them effective?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq4" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Yes, our vitamins and supplements meet all necessary regulations.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,17 +228,163 @@
 
                                 <!-- Beauty & Personal Care -->
                                 <div class="tab-pane fade" id="beauty">
-                                    <h3>Beauty & Personal Care</h3>
-                                    <div class="accordion" id="beautyFAQ">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                                    How do I find the right product for my skin?
-                                                </button>
-                                            </h2>
-                                            <div id="faq5" class="accordion-collapse collapse show">
-                                                <div class="accordion-body">
-                                                    Our dermatologists can help you choose the right skincare products.
+                                    <div class="faq-content">
+                                        <h3>Beauty & Personal Care</h3>
+                                        <div class="accordion" id="beautyFAQ">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        How do I find the right product for my skin type?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Can I return a beauty product if it doesn’t suit me?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Do you offer cruelty-free and vegan beauty products?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- Mothe & Baby Care -->
+                                 <div class="tab-pane fade" id="mother">
+                                    <div class="faq-content">
+                                        <h3>Mother & Baby Care</h3>
+                                        <div class="accordion" id="beautyFAQ">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Which baby formula is best for newborns?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Do you offer lactation-friendly products for mothers?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        How do I choose the right diaper size?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- Medical Devices -->
+                                 <div class="tab-pane fade" id="medical">
+                                    <div class="faq-content">
+                                        <h3>Medical Devices</h3>
+                                        <div class="accordion" id="beautyFAQ">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Are medical devices covered under warranty?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Do you offer training or guides for using medical devices?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- Snacks -->
+                                 <div class="tab-pane fade" id="snacks">
+                                    <div class="faq-content">
+                                        <h3>Snacks & Drinks</h3>
+                                        <div class="accordion" id="beautyFAQ">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Do you sell sugar-free or diabetic-friendly snacks?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Are the snacks and drinks locally sourced??
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                                        Are there options for people with food allergies?
+                                                    </button>
+                                                </h2>
+                                                <div id="faq5" class="accordion-collapse collapse show">
+                                                    <div class="accordion-body">
+                                                        Our dermatologists can help you choose the right skincare products.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,83 +395,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="faq-container mb-7 mb-xl-8">
-                        <!-- Sidebar Navigation -->
-                        <aside class="faq-sidebar">
-                            <ul class="faq-menu" id="faqMenu">
-                                <li class="faq-menu-item active" data-target="account">Account</li>
-                                <li class="faq-menu-item" data-target="products">Products</li>
-                                <li class="faq-menu-item" data-target="payment-methods">Payment Methods</li>
-                                <li class="faq-menu-item" data-target="shipping">Shipping</li>
-                                <li class="faq-menu-item" data-target="returns">Returns</li>
-                            </ul>
-                        </aside>
-
-                        <!-- FAQ Content -->
-                        <main class="faq-content">
-                            <section class="faq-section" id="account">
-                                <h2 class="faq-heading">Account</h2>
-                                <div class="faq-item">
-                                    <div class="faq-question" data-toggle="answer-1">How do I create a MYDAWA account?<i class="bi bi-chevron-down faq-arrow"></i></div>
-                                    <div class="faq-answer hidden" id="answer-1">
-                                        Creating a MyDawa account is simple and quick. Start by visiting the MyDawa website or app on your preferred device and clicking on the “Sign Up” or “Create Account” button. You’ll be prompted to enter your name, email address, phone number, and create
-                                        a secure password. After entering these details, you’ll need to verify your information by checking your email or SMS for a verification code and entering it on the platform. Once verified, complete your profile
-                                        by adding additional details like your delivery address for a seamless shopping experience. With your account set up, you can start exploring and purchasing items right away. If you face any issues during the process,
-                                        our customer support team is ready to assist you.
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-question" data-toggle="answer-2">Can I update my personal information?<i class="bi bi-chevron-down faq-arrow"></i></div>
-                                    <div class="faq-answer hidden" id="answer-2">
-                                        Yes, you can update your personal information by visiting your account settings. This includes changing your name, phone number, and email address.
-                                    </div>
-                                </div>
-
-                            </section>
-
-                            <section class="faq-section hidden" id="products">
-                                <h2 class="faq-heading">Products</h2>
-                                <div class="faq-item">
-                                    <div class="faq-question" data-toggle="answer-3">Can I update my personal information?<i class="bi bi-chevron-down faq-arrow"></i></div>
-                                    <div class="faq-answer hidden" id="answer-3">
-                                        Yes, you can update your personal information by visiting your account settings. This includes changing your name, phone number, and email address.
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-question" data-toggle="answer-4">Are MYDAWA products authentic and safe?<i class="bi bi-chevron-down faq-arrow"></i></div>
-                                    <div class="faq-answer hidden" id="answer-4">
-                                        Yes, all MYDAWA products are authentic and undergo strict quality checks to ensure your safety and satisfaction.
-                                    </div>
-                                </div>
-
-                                <div class="faq-item">
-                                    <div class="faq-question" data-toggle="answer-5">Can I return or exchange a product?<i class="bi bi-chevron-down faq-arrow"></i></div>
-                                    <div class="faq-answer hidden" id="answer-5">
-                                        Yes, you can return or exchange a product within the specified return period. Please refer to our return policy for more details.
-                                    </div>
-
-                                </div>
-                            </section>
-
-                            <section class="faq-section hidden" id="payment-methods">
-                                <h2 class="faq-heading">Payment Methods</h2>
-                                <div class="faq-item">
-                                    <div class="faq-question" data-toggle="answer-6">What payment methods are accepted?<i class="bi bi-chevron-down faq-arrow"></i></div>
-                                    <div class="faq-answer hidden" id="answer-6">
-                                        We accept various payment methods, including credit/debit cards, mobile money, and online banking.
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-question" data-toggle="answer-7">Is my payment information secure?<i class="bi bi-chevron-down faq-arrow"></i></div>
-                                    <div class="faq-answer hidden" id="answer-7">
-                                        Yes, we use secure encryption technology to ensure your payment information is protected.
-                                    </div>
-                                </div>
-
-                            </section>
-
-                        </main>
-                    </div>
+                    
 
                     <div class="refine-search my-5 my-xl-6">
                         <img class="search-bg-icon" src="assets/images/icons/searchbg-cant-find.png" alt="Search BG" />
