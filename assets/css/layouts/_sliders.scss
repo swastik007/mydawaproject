@@ -1,12 +1,15 @@
 .home-slider {
     position: relative;
+    .owl-carousel{
+        position: relative;
+    }
     .banner-content-wrap {
         display: flex;
         flex-direction: column;
         position: absolute;
         align-items: flex-start;
-        top: 10px; // Align to top
-        bottom: 10px; // Allow flexibility for bottom alignment
+        top: 30px; // Align to top
+        
         transform: none; // Remove centering for small screens
         justify-content: flex-start;
         @include respond-to(lg) {
@@ -30,28 +33,23 @@
             margin-left: 60px;
         }
         h5 {
-            font-size: 1.25em;
             font-family: $figtreeLight;
             margin-bottom: 0px;
-            @include respond-to(xxl) {
-                font-size: 2em;
-            }
+            @include responsive-font(20px, 22px, 30px);
+            
         }
         h2 {
-            font-size: 2em;
             font-family: $figtreeExtraBold;
-            line-height: 1.1;
+            line-height: 1.2;
             max-width: 300px;
+            @include responsive-font(36px, 52px, 72px);
             @include respond-to(sm) {
-                font-size: 3.2em;
-                max-width: 600px;
+                 max-width: 600px;
             }
             @include respond-to(lg) {
-                font-size: 3.2em;
                 max-width: 700px;
             }
             @include respond-to(xxl) {
-                font-size: 4em;
                 max-width: 850px;
             }
         }
@@ -100,6 +98,52 @@
             /* Ensure it spans full height */
             object-fit: cover;
             /* Maintain aspect ratio and cover the entire container */
+        }
+    }
+    .custom-dots-container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        
+        z-index: 8;
+        bottom: 20px;
+        top: auto;
+        left: auto;
+        right: auto;
+        
+        @include respond-to(lg) {
+            justify-content: flex-start;
+            bottom: auto;
+            top: 100px;
+            left: 50px;
+            bottom: auto;
+            right: auto;
+        }
+        
+        @include respond-to(xxl) {
+            top: 120px;
+            left: 6%;
+        }
+        .owl-dot {
+            width: 20px;
+            height: 4px;
+            margin: 0 5px;
+            background-color: rgba(250, 250, 250, 0.4);
+            border-radius: 12px;
+            transition: background 0.3s ease;
+            outline: 0;
+            border: none;
+            @include respond-to(xxl) {
+                width: 35px;
+                height: 6px;
+            }
+            &.active {
+                background-color: white;
+                width: 44px;
+                @include respond-to(xxl) {
+                    width: 75px;
+                }
+            }
         }
     }
 }

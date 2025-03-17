@@ -17,6 +17,16 @@
             max-width: 750px;
         }
     }
+    &.wishlist-modal{
+        max-width: fit-content;
+        @include respond-to(lg) {
+            max-width: 420px;
+        }
+        
+        @include respond-to(xxl) {
+            max-width: 600px;
+        }
+    }
     &.modal-lg {
         max-width: 600px;
         @include respond-to(xxl) {
@@ -298,49 +308,46 @@
 }
 
 .wishlist-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 30px;
-    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    z-index: 1000;
-    border: 1px solid #E7ECF4;
-    @include respond-to(xxl) {
-        padding: 45px;
-    }
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // background: white;
+    // padding: 30px;
+    // box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.05);
+    // border-radius: 8px;
+    // z-index: 1000;
+    // border: 1px solid #E7ECF4;
+    // @include respond-to(xxl) {
+    //     padding: 45px;
+    // }
     .modal-content {
-        max-width: 452px;
-        text-align: center;
-        position: relative;
-        @include respond-to(lg) {
-            min-width: 452px;
-        }
+        padding: 20px;
+        overflow-y: auto;
         @include respond-to(xxl) {
-            min-width: 674px;
+            padding: 30px;
         }
     }
     .product-info {
         display: flex;
         align-items: center;
         gap: 10px;
+        margin-right: 10px;
+        
+        margin-top: 15px;
+        @include respond-to(xxl) {           
+           
+            margin-top: 25px;
+        }
         h4 {
-            font-size: 1em;
-            font-weight: bold;
+            font-family: $figtreeBold;
             margin-bottom: 0;
-            @include respond-to(xxl) {
-                font-size: 1.2em;
-            }
+            @include responsive-font(16px, 16px, 22px);
         }
         p {
-            font-weight: 500;
-            font-size: 0.875em;
+            font-family: $figtreeMedium;
             margin-bottom: 0;
-            @include respond-to(xxl) {
-                font-size: 1.075em;
-            }
+            @include responsive-font(14px, 14px, 20px);
         }
     }
     .product-info img {
@@ -352,39 +359,81 @@
         }
     }
     h5 {
-        font-size: 1em;
-        font-weight: bold;
+        font-family: $figtreeBold;
+        margin-bottom: 0;
+        @include responsive-font(15px, 15px, 20px);
         margin-bottom: 0;
         text-align: left;
         margin-top: 12px;
-        margin-bottom: 7px;
+        margin-bottom: 5px;
         line-height: 1.4;
-        max-width: 205px;
-        @include respond-to(xxl) {
-            max-width: 310px;
-            font-size: 1.2em;
-            margin-bottom: 20px;
+        @include respond-to(xxl) {           
+            margin-bottom: 8px;
             margin-top: 10px;
         }
     }
-    .btn-create {
-        margin-right: 10px;
-        @include respond-to(xxl) {
-            margin-right: 16px;
-        }
-        &:hover,
-        &:focus {
-            svg {
-                fill: $primary;
+    hr{
+        border-color: #ccc;
+    }
+    .form-options {
+        .form-check{
+            margin-bottom: 10px;
+            @include respond-to(xxl) {           
+                margin-bottom: 15px;
+            }
+            .form-check-input{
+                margin-bottom: 5px;
+                margin-right: 8px;
+                @include respond-to(xxl) {
+                    margin-right: 15px;
+                }
+            }
+            .form-check-label{
+                font-family: $figtree;
+                @include responsive-font(14px, 14px, 20px);
             }
         }
     }
+    .btn-create {
+        border: 1px solid $black;
+        background-color: white;
+        padding: 10px 15px 10px 35px;
+        @include responsive-font(15px, 15px, 24px);   
+        background-image: url('../images/icons/create-plus-icon.png'); // Default background image
+        background-repeat: no-repeat;
+        background-position: 14px center;
+        background-size: 14px;
+        margin-right: 10px;
+        @include respond-to(xxl) {
+           
+            padding: 14px 25px 14px 50px;
+            background-position: 18px center;
+            background-size: 20px;
+            margin-right: 15px;
+        }
+        &:hover, &:focus{
+            background-color: $white;
+            color: $green;
+            border-color: $green;
+            background-image: url('../images/icons/add-to-cart-plus-green.png'); // plug green background image            
+        }
+    }
     .btn-save {
-        &:hover,
-        &:focus {
-            svg {
-                fill: $black;
-            }
+        padding: 10px 15px 10px 35px;
+        @include responsive-font(15px, 15px, 24px);   
+        background-image: url('../images/icons/wishlist-save-icon-white.png'); // Default background image
+        background-repeat: no-repeat;
+        background-position: 14px center;
+        background-size: 14px;
+        @include respond-to(xxl) {
+            padding: 14px 25px 14px 50px;
+            background-position: 18px center;
+            background-size: 20px;
+        }
+        &:hover, &:focus{
+            color: white;
+            background-color: $grey2;
+            background-image: url('../images/icons/wishlist-save-icon-black.png'); // plug green background image            
         }
     }
     .pin-inputs {
