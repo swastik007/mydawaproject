@@ -19352,6 +19352,7 @@ header {
 
 .menu-item {
   display: flex;
+  flex-grow: 1;
   align-items: center;
   padding: 16px;
   cursor: pointer;
@@ -19372,6 +19373,47 @@ header {
   opacity: 0;
   color: #b1b1c3;
   font-size: 20px;
+}
+
+.mega-wrap {
+  width: 870px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 28px 8px;
+}
+
+.mega-navigation {
+  position: relative;
+  flex-direction: column;
+}
+.mega-navigation:before {
+  content: "";
+  position: absolute;
+  left: 300px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #ccc;
+}
+.mega-navigation:after {
+  content: "";
+  position: absolute;
+  left: 610px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #ccc;
+}
+.mega-navigation .dropdown-menu {
+  transform: translate(310px, 0px) !important;
+  border: none;
+}
+.mega-navigation .mega-column {
+  width: 290px;
 }
 
 /* SCSS for Cart Page */
