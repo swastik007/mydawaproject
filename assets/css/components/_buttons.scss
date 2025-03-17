@@ -209,15 +209,40 @@
     font-size: 15px;
     border-radius: 25px;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 15px 10px 35px;
     height: fit-content;
-    @include respond-to(lg) {
-        font-size: 20px;
-    }
+    border: 1px solid $green;
+    @include responsive-font(16px, 20px, 24px);   
+    background-image: url('../images/icons/add-to-cart-plus-white.png'); // Default background image
+    background-repeat: no-repeat;
+    background-position: 14px center;
+    background-size: 14px;
     @include respond-to(xxl) {
-        font-size: 24px;
-        padding: 14px 20px;
+        padding: 14px 25px 14px 50px;
+        background-position: 18px center;
         border-radius: 32px;
+        background-size: 20px;
+    }
+    &:hover, &:focus{
+        background-image: url('../images/icons/add-to-cart-plus-green.png'); // plug green background image
+        background-color: white;
+        border: 1px solid $green;
+        color: $green;
+    }
+    &.btn-added{
+        background-color: white;
+        border: 1px solid $green;
+        color: $green;
+        background-image: url('../images/icons/added-dots-icon.png'); // Default background image
+        background-repeat: no-repeat;
+        background-position: 14px center;
+        background-size: 14px;
+        &:hover, &:focus{
+            background-image: url('../images/icons/added-dots-icon-white.png'); // plug green background image
+            background-color: $green;
+            border: 1px solid $green;
+            color: white;
+        }
     }
 }
 

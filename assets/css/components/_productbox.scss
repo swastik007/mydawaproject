@@ -11,7 +11,7 @@
     &:focus {
         text-decoration: none;
         border: 1px solid $primary;
-        color: $primary;
+        
         .product-title {
             color: $primary;
         }
@@ -22,13 +22,12 @@
         position: absolute;
         top: 0;
         left: 20px;
-        font-size: 14px;
         font-family: $figtreeSemiBold;
-        line-height: 20px;
+        line-height: 1.4;
         padding: 3px 8px;
         border-radius: 0 0 7px 7px;
+        @include responsive-font(14px, 14px, 20px);   
         @include respond-to(xxl) {
-            font-size: 20px;
             padding: 5px 12px;
             left: 30px;
         }
@@ -105,16 +104,16 @@
         padding: 5px 20px;
         rotate: -90deg;
         z-index: 9;
-        font-size: 0.875em;
+        @include responsive-font(14px, 16px, 20px);  
         @include respond-to(lg) {
             right: -18px;
             top: 80px;
-            font-size: 1em;
+            
         }
         @include respond-to(xxl) {
             padding: 8px 32px;
             top: 120px;
-            font-size: 1.1em;
+            
             right: -22px;
         }
     }
@@ -150,16 +149,10 @@
     .product-category {
         color: #8A8A8A;
         font-family: $figtreeLight;
-        font-size: 14px;
         text-align: left;
         margin-bottom: 2px;
         line-height: 1.5;
-        @include respond-to(lg) {
-            font-size: 16px;
-        }
-        @include respond-to(xl) {
-            font-size: 25px;
-        }
+        @include responsive-font(14px, 16px, 24px); 
     }
     .product-title {
         color: $black;
@@ -168,31 +161,34 @@
         font-family: $figtreeBold;
         font-size: 15px;
         line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; // Restricts text to 2 lines
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 45px; // Ensures same height for all titles  
+        @include responsive-font(15px, 18px, 24px);
         @include respond-to(lg) {
             font-family: $figtreeExtraBold;
-            font-size: 18px;
+            max-width: 100%;
+            height: calc(20px * 2);
         }
         @include respond-to(xxl) {
-            font-size: 24px;
+            height: calc(20px * 2);
         }
     }
     .product-price-old {
         color: #b2b2b2;
         text-decoration: line-through;
-        font-size: 15px;
         font-family: $figtreeMedium;
         margin-bottom: 0;
-        @include respond-to(xxl) {
-            font-size: 24px;
-        }
+        @include responsive-font(15px, 15px, 24px);
     }
     .product-price {
         font-size: 16px;
         color: $black;
         font-family: $figtreeMedium;
         margin-bottom: 0;
-        @include respond-to(xxl) {
-            font-size: 24px;
-        }
+        @include responsive-font(16px, 16px, 24px);
     }
 }

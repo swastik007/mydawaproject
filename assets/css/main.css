@@ -12231,8 +12231,14 @@ body {
   font-size: 15px;
   border-radius: 25px;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 15px 10px 35px;
   height: fit-content;
+  border: 1px solid rgb(111, 183, 76);
+  font-size: 16px;
+  background-image: url("../images/icons/add-to-cart-plus-white.png");
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  background-size: 14px;
 }
 @media (min-width: 1200px) {
   .btn-cart {
@@ -12242,9 +12248,36 @@ body {
 @media (min-width: 1800px) {
   .btn-cart {
     font-size: 24px;
-    padding: 14px 20px;
-    border-radius: 32px;
   }
+}
+@media (min-width: 1800px) {
+  .btn-cart {
+    padding: 14px 25px 14px 50px;
+    background-position: 18px center;
+    border-radius: 32px;
+    background-size: 20px;
+  }
+}
+.btn-cart:hover, .btn-cart:focus {
+  background-image: url("../images/icons/add-to-cart-plus-green.png");
+  background-color: white;
+  border: 1px solid rgb(111, 183, 76);
+  color: rgb(111, 183, 76);
+}
+.btn-cart.btn-added {
+  background-color: white;
+  border: 1px solid rgb(111, 183, 76);
+  color: rgb(111, 183, 76);
+  background-image: url("../images/icons/added-dots-icon.png");
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  background-size: 14px;
+}
+.btn-cart.btn-added:hover, .btn-cart.btn-added:focus {
+  background-image: url("../images/icons/added-dots-icon-white.png");
+  background-color: rgb(111, 183, 76);
+  border: 1px solid rgb(111, 183, 76);
+  color: white;
 }
 
 .select-button {
@@ -14791,7 +14824,6 @@ ol.form-list {
 .product-card:hover, .product-card:focus {
   text-decoration: none;
   border: 1px solid rgb(230, 27, 119);
-  color: rgb(230, 27, 119);
 }
 .product-card:hover .product-title, .product-card:focus .product-title {
   color: rgb(230, 27, 119);
@@ -14802,15 +14834,24 @@ ol.form-list {
   position: absolute;
   top: 0;
   left: 20px;
-  font-size: 14px;
   font-family: "Figtree-SemiBold";
-  line-height: 20px;
+  line-height: 1.4;
   padding: 3px 8px;
   border-radius: 0 0 7px 7px;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .product-card .sale-badge {
+    font-size: 14px;
+  }
 }
 @media (min-width: 1800px) {
   .product-card .sale-badge {
     font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .product-card .sale-badge {
     padding: 5px 12px;
     left: 30px;
   }
@@ -14893,20 +14934,28 @@ ol.form-list {
   padding: 5px 20px;
   rotate: -90deg;
   z-index: 9;
-  font-size: 0.875em;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .product-card .product-weight {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .product-card .product-weight {
+    font-size: 20px;
+  }
 }
 @media (min-width: 1200px) {
   .product-card .product-weight {
     right: -18px;
     top: 80px;
-    font-size: 1em;
   }
 }
 @media (min-width: 1800px) {
   .product-card .product-weight {
     padding: 8px 32px;
     top: 120px;
-    font-size: 1.1em;
     right: -22px;
   }
 }
@@ -14951,19 +15000,19 @@ ol.form-list {
 .product-card .product-category {
   color: #8A8A8A;
   font-family: "Figtree-Light";
-  font-size: 14px;
   text-align: left;
   margin-bottom: 2px;
   line-height: 1.5;
+  font-size: 14px;
 }
 @media (min-width: 1200px) {
   .product-card .product-category {
     font-size: 16px;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .product-card .product-category {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 .product-card .product-title {
@@ -14973,10 +15022,16 @@ ol.form-list {
   font-family: "Figtree-Bold";
   font-size: 15px;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 45px;
+  font-size: 15px;
 }
 @media (min-width: 1200px) {
   .product-card .product-title {
-    font-family: "Figtree-ExtraBold";
     font-size: 18px;
   }
 }
@@ -14985,12 +15040,29 @@ ol.form-list {
     font-size: 24px;
   }
 }
+@media (min-width: 1200px) {
+  .product-card .product-title {
+    font-family: "Figtree-ExtraBold";
+    max-width: 100%;
+    height: 40px;
+  }
+}
+@media (min-width: 1800px) {
+  .product-card .product-title {
+    height: 40px;
+  }
+}
 .product-card .product-price-old {
   color: #b2b2b2;
   text-decoration: line-through;
-  font-size: 15px;
   font-family: "Figtree-Medium";
   margin-bottom: 0;
+  font-size: 15px;
+}
+@media (min-width: 1200px) {
+  .product-card .product-price-old {
+    font-size: 15px;
+  }
 }
 @media (min-width: 1800px) {
   .product-card .product-price-old {
@@ -15002,6 +15074,12 @@ ol.form-list {
   color: rgb(55, 52, 52);
   font-family: "Figtree-Medium";
   margin-bottom: 0;
+  font-size: 16px;
+}
+@media (min-width: 1200px) {
+  .product-card .product-price {
+    font-size: 16px;
+  }
 }
 @media (min-width: 1800px) {
   .product-card .product-price {
