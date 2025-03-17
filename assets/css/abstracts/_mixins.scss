@@ -1,6 +1,9 @@
 // Define a mixin for responsive font sizes
-@mixin responsive-font($base-size, $lg-size, $xxl-size) {
+@mixin responsive-font($base-size, $md-size, $lg-size, $xxl-size) {
     font-size: $base-size;
+    @include respond-to(md) {
+        font-size: $md-size;
+    }
     @include respond-to(lg) {
         font-size: $lg-size;
     }

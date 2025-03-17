@@ -2,7 +2,7 @@
     font-family: $figtreeExtraBold;
     line-height: 1.3;
     color: $black;
-    @include responsive-font(1.9em, 2.5em, 4em);
+    @include responsive-font(30px, 52px, 40px, 52px);
     @include respond-to(lg) {
         font-family: $figtreeBlack;
     }

@@ -19,17 +19,17 @@
     .auth-title {
         text-align: left;
         font-family: $figtreeExtraBold;
-        @include responsive-font(1.75em, 1.75em, 2.8em);
+        @include responsive-font(28px, 36px, 28px, 36px);
     }
     .auth-subtitle {
         text-align: left;
         margin-bottom: 1.5rem;
         color: #A7A7A7;
         font-family: $figtree;
-        @include responsive-font(1em, 1em, 1.6em);
+       @include responsive-font(16px, 22px, 16px, 22px);
         .auth-link {
             margin-left: 12px;
-            @include responsive-font(0.875em, 0.875em, 1.1em);
+            @include responsive-font(14px, 20px, 14px, 20px);
         }
     }
     .auth-link {
@@ -37,7 +37,7 @@
         text-decoration: none;
         font-family: $figtreeBold;
         border-bottom: 1px dashed $green;
-        @include responsive-font(1em, 1em, 1.6em);
+       @include responsive-font(16px, 22px, 16px, 22px);
         &:hover,
         &:focus {
             color: $greendark;
@@ -45,7 +45,7 @@
     }
     .form-check-label {
         margin-bottom: 0;
-        @include responsive-font(0.875em, 0.875em, 1.4em);
+        @include responsive-font(14px, 20px, 14px, 20px);
     }
     .view-pass {
         position: absolute;
@@ -59,7 +59,7 @@
         }
         .auth-link {
             font-family: $figtreeMedium;
-            @include responsive-font(0.875em, 0.875em, 1.4em);
+            @include responsive-font(14px, 20px, 14px, 20px);
         }
     }
     .auth-btn {
@@ -105,7 +105,7 @@
         font-family: $figtreeSemiBold;
         margin: 1rem 0;
         position: relative;
-        @include responsive-font(0.875em, 0.875em, 1.4em);
+        @include responsive-font(14px, 20px, 14px, 20px);
         @include respond-to(xxl) {
             margin: 1.6em 0;
         }
@@ -222,7 +222,7 @@
 
 .form-bottom-info {
     font-family: $figtreeLight;
-    @include responsive-font(13px, 13px, 20px);
+    @include responsive-font(13px,  20px, 13px, 20px);
     line-height: 1.5;
     margin-top: 5px;
     @include respond-to(xxl) {

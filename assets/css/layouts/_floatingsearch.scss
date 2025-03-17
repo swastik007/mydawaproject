@@ -3,6 +3,7 @@
     display: none;
     @include respond-to(lg) {
         display: block;
+        height: 70px;
     }
     .float-box {
         background: #FFFFFF;
@@ -17,12 +18,12 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: -160px;
+        top: -120px;
         z-index: 1;
         @include respond-to(xxl) {
             padding: 45px;
             max-width: 1140px;
-            top: -220px;
+            top: -175px;
         }
     }
     .search-header {

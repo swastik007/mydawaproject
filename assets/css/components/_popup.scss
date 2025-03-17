@@ -44,7 +44,7 @@
         position: absolute;
         right: 10px;
         top: 0;
-        @include responsive-font(2em, 2em, 3em);
+        @include responsive-font(32px, 60px, 32px, 60px);
         @include respond-to(xxl) {
             top: 50x;
             right: 30px;
@@ -64,14 +64,14 @@
     }
     h2 {
         font-family: $figtreeBold;
-        @include responsive-font(24px, 24px, 36px);
+        @include responsive-font(24px, 36px, 24px, 36px);
     }
     h3 {
         font-family: $figtreeSemiBold;
-        @include responsive-font(20px, 20px, 32px);
+        @include responsive-font(20px, 32px, 20px, 32px);
     }
     p {
-        @include responsive-font(14px, 14px, 22px);
+        @include responsive-font(14px, 22px, 14px, 22px);
     }
     .date,
     .time {
@@ -90,7 +90,7 @@
             }
         }
         span {
-            @include responsive-font(1em, 1em, 1.6em);
+            @include responsive-font(16px, 22px, 16px, 22px);
             font-family: $figtreeSemiBold;
             margin-right: 7px;
             @include respond-to(xxl) {
@@ -98,7 +98,7 @@
             }
         }
         p {
-            @include responsive-font(1em, 1em, 1.6em);
+            @include responsive-font(16px, 22px, 16px, 22px);
             color: $primary;
             font-family: $figtreeSemiBold;
             margin-bottom: 0;
@@ -200,7 +200,7 @@
                 }
                 .new-price {
                     font-size: 18px;
-                    font-weight: bold;
+                    font-family: $figtreeBold;
                     color: #ff5733;
                 }
             }
@@ -266,7 +266,7 @@
                         justify-content: space-between;
                         margin-bottom: 5px;
                         &.cart-total {
-                            font-weight: bold;
+                            font-family: $figtreeBold;
                             font-size: 18px;
                         }
                     }
@@ -277,7 +277,7 @@
                     background: #28a745;
                     color: white;
                     font-size: 18px;
-                    font-weight: bold;
+                    font-family: $figtreeBold;
                     border: none;
                     border-radius: 5px;
                     cursor: pointer;
@@ -342,12 +342,12 @@
         h4 {
             font-family: $figtreeBold;
             margin-bottom: 0;
-            @include responsive-font(16px, 16px, 22px);
+            @include responsive-font(16px, 22px, 16px, 22px);
         }
         p {
             font-family: $figtreeMedium;
             margin-bottom: 0;
-            @include responsive-font(14px, 14px, 20px);
+            @include responsive-font(14px, 20px, 14px, 20px);
         }
     }
     .product-info img {
@@ -361,7 +361,7 @@
     h5 {
         font-family: $figtreeBold;
         margin-bottom: 0;
-        @include responsive-font(15px, 15px, 20px);
+        @include responsive-font(15px, 20px, 15px, 20px);
         margin-bottom: 0;
         text-align: left;
         margin-top: 12px;
@@ -390,7 +390,7 @@
             }
             .form-check-label{
                 font-family: $figtree;
-                @include responsive-font(14px, 14px, 20px);
+                @include responsive-font(14px, 20px, 14px, 20px);
             }
         }
     }
@@ -398,7 +398,7 @@
         border: 1px solid $black;
         background-color: white;
         padding: 10px 15px 10px 35px;
-        @include responsive-font(15px, 15px, 24px);   
+        @include responsive-font(15px, 24px, 15px, 24px);   
         background-image: url('../images/icons/create-plus-icon.png'); // Default background image
         background-repeat: no-repeat;
         background-position: 14px center;
@@ -420,7 +420,7 @@
     }
     .btn-save {
         padding: 10px 15px 10px 35px;
-        @include responsive-font(15px, 15px, 24px);   
+        @include responsive-font(15px, 24px, 15px, 24px);   
         background-image: url('../images/icons/wishlist-save-icon-white.png'); // Default background image
         background-repeat: no-repeat;
         background-position: 14px center;

@@ -38,7 +38,7 @@
   }
   .item-details {
     h3 {
-      @include responsive-font(0.875em, 0.875em, 1.2em);
+      @include responsive-font(14px, 20px, 14px, 20px);
       line-height: 1.2;
       font-family: $figtreeSemiBold;
       margin-bottom: 3px;

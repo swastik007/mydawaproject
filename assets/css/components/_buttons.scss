@@ -6,7 +6,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
     cursor: pointer;
     &:hover,
     &:focus {
@@ -23,7 +23,8 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
+
     &:hover,
     &:focus {
         background-color: $grey2;
@@ -44,7 +45,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
     &:hover,
     &:focus {
         background-color: $grey3;
@@ -62,7 +63,7 @@
     outline: none;
     font-size: 1em;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
     &:hover,
     &:focus {
         background-color: $grey8;
@@ -90,7 +91,7 @@
     outline: none;
     font-size: 1em;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
     &:hover,
     &:focus {
         background-color: $black;
@@ -129,7 +130,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
     &:hover,
     &:focus {
         background-color: $greendark;
@@ -142,7 +143,7 @@
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    @include responsive-font(16px, 16px, 28px);
+    @include responsive-font(16px, 22px, 16px, 22px);
     color: white;
     &:hover,
     &:focus {
@@ -172,7 +173,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
     &:hover,
     &:focus {
         background-color: $red;
@@ -190,16 +191,16 @@
 
 .btn-sm {
     padding: 5px 15px;
-    @include responsive-font(14px, 14px, 20px);
+    @include responsive-font(14px, 20px, 14px, 20px);
     @include respond-to(xxl) {
         padding: 8px 20px;
     }
 }
 
 .btn-lg {
-    padding: 14px 20px;
+    padding: 12px 20px;
     @include respond-to(xxl) {
-        padding: 20px 32px;
+        padding: 16px 28px;
     }
 }
 
@@ -211,7 +212,7 @@
     padding: 10px 15px 10px 35px;
     height: fit-content;
     border: 1px solid $green;
-    @include responsive-font(15px, 20px, 24px);   
+    @include responsive-font(15px, 24px, 20px, 24px);   
     background-image: url('../images/icons/add-to-cart-plus-white.png'); // Default background image
     background-repeat: no-repeat;
     background-position: 14px center;
@@ -236,7 +237,7 @@
         background-repeat: no-repeat;
         background-position: 14px center;
         background-size: 14px;
-        @include responsive-font(15px, 20px, 24px);   
+        @include responsive-font(15px, 24px, 20px, 24px);   
    
         &:hover, &:focus{
             background-image: url('../images/icons/added-dots-icon-white.png'); // plug green background image
@@ -260,7 +261,7 @@
     font-family: $figtree;
     padding: 14px 25px;
     border-radius: 12px;
-    @include responsive-font(1em, 1em, 1.6em);
+    @include responsive-font(16px, 22px, 16px, 22px);
     @include respond-to(xxl) {
         padding: 16px 40px;
     }
@@ -286,7 +287,7 @@
     color: $black;
     text-decoration: none;
     cursor: pointer;
-    @include responsive-font(14px, 14px, 22px);
+    @include responsive-font(14px, 22px, 14px, 22px);
     &:hover,
     &:focus {
         transition: ease-in 0.3s;
@@ -331,7 +332,7 @@
     border-radius: 25px;
     font-weight: unset;
     font-family: $figtreeMedium!important;
-    @include responsive-font(12px, 12px, 20px);
+    @include responsive-font(12px, 16px, 12px, 16px);
     @include respond-to(xxl) {
         padding: 10px 18px;
     }

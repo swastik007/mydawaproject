@@ -1,52 +1,50 @@
-.category-slider {
-    margin: 20px auto;
-    @include respond-to(lg) {
-        margin: 40px auto;
-    }
-    @include respond-to(xxl) {
-        margin: 70px auto;
-    }
-    a.card {
-        text-decoration: none;
-    }
-    .card img {
-        border-radius: 12px;
-        height: 150px;
-        object-fit: cover;
-        @include respond-to(lg) {
-            height: 280px;
-        }
-    }
-    .card-body {
-        padding-top: 10px;
-    }
-    .card-text {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        color: $black;
-        padding: 5px 0;
-        @include respond-to(lg) {
-            font-size: 20px;
-            line-height: 28px;
-            padding: 5px 15px;
-        }
-    }
-    .sale-badge {
-        background-color: $primary;
-        color: white;
-        position: absolute;
-        top: 8px;
-        left: 20px;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 20px;
-        padding: 3px 8px;
-        border-radius: 0 0 7px 7px;
-        @include respond-to(xxl) {
-            font-size: 20px;
-            padding: 5px 12px;
-            left: 30px;
-        }
-    }
-}
+// .category-slider {
+//     margin: 20px auto;
+//     @include respond-to(lg) {
+//         margin: 40px auto;
+//     }
+//     @include respond-to(xxl) {
+//         margin: 70px auto;
+//     }
+//     a.card {
+//         text-decoration: none;
+//     }
+//     .card img {
+//         border-radius: 12px;
+//         height: 150px;
+//         object-fit: cover;
+//         @include respond-to(lg) {
+//             height: 280px;
+//         }
+//     }
+//     .card-body {
+//         padding-top: 10px;
+//     }
+//     .card-text {
+//         font-family: $figtreeMedium;
+//         line-height: 1.4;
+//         color: $black;
+//         padding: 5px 0;
+//         @include responsive-font(16px, 22px, 16px, 22px);
+//         @include respond-to(lg) {
+//             padding: 5px 15px;
+//         }
+//     }
+//     .sale-badge {
+//         background-color: $primary;
+//         color: white;
+//         position: absolute;
+//         top: 8px;
+//         left: 20px;
+//         font-size: 14px;
+//         font-weight: 600;
+//         line-height: 20px;
+//         padding: 3px 8px;
+//         border-radius: 0 0 7px 7px;
+//         @include respond-to(xxl) {
+//             font-size: 20px;
+//             padding: 5px 12px;
+//             left: 30px;
+//         }
+//     }
+// }

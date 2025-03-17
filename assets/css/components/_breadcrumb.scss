@@ -24,13 +24,13 @@
                 color: $black;
                 font-family: $figtreeMedium;
                 transition: color 0.3s ease;
-                @include responsive-font(0.875em, 0.875em, 1.2em);
+                @include responsive-font(14px, 20px, 14px, 20px);
                 &:hover {
                     color: $primary;
                 }
                 &.active {
                     font-family: $figtreeBold;
-                    @include responsive-font(0.875em, 0.875em, 1.2em);
+                    @include responsive-font(14px, 20px, 14px, 20px);
                     color: $black;
                 }
             }

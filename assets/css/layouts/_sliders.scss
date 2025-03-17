@@ -12,6 +12,10 @@
         
         transform: none; // Remove centering for small screens
         justify-content: flex-start;
+        @include respond-to(sm) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
         @include respond-to(lg) {
             // On large screens
             align-items: flex-start; // Center-align content inside
@@ -35,14 +39,14 @@
         h5 {
             font-family: $figtreeLight;
             margin-bottom: 0px;
-            @include responsive-font(20px, 22px, 30px);
+            @include responsive-font(20px, 32px, 22px, 30px);
             
         }
         h2 {
             font-family: $figtreeExtraBold;
             line-height: 1.2;
             max-width: 300px;
-            @include responsive-font(36px, 52px, 72px);
+            @include responsive-font(36px, 52px, 52px, 72px);
             @include respond-to(sm) {
                  max-width: 600px;
             }
@@ -61,8 +65,9 @@
         flex-direction: column;
         justify-content: flex-start;
         margin-left: 20px;
-        @include respond-to(md) {
+        @include respond-to(sm) {
             flex-direction: row;
+
         }
         @include respond-to(xxl) {
             gap: 16px;
@@ -98,6 +103,7 @@
             /* Ensure it spans full height */
             object-fit: cover;
             /* Maintain aspect ratio and cover the entire container */
+            object-position: bottom right;
         }
     }
     .custom-dots-container {
@@ -106,23 +112,26 @@
         position: absolute;
         
         z-index: 8;
-        bottom: 20px;
+        bottom: 60px;
         top: auto;
-        left: auto;
-        right: auto;
+        left: 50%;
+        transform: translateX(-50%); // Ensures perfect centering
+       
         
         @include respond-to(lg) {
             justify-content: flex-start;
             bottom: auto;
             top: 100px;
-            left: 50px;
+            left: auto;
             bottom: auto;
             right: auto;
+            margin-left: 70px;
         }
         
         @include respond-to(xxl) {
             top: 120px;
-            left: 6%;
+            left: auto;
+            margin-left: 130px;
         }
         .owl-dot {
             width: 20px;
@@ -188,13 +197,13 @@
         h5 {
             font-family: $figtreeLight;
             margin-bottom: 0px;
-            @include responsive-font(1em, 1em, 1.6em);
+            @include responsive-font(16px, 22px, 16px, 22px);
         }
         h2 {
             font-family: $figtreeExtraBold;
             line-height: 1.5;
             max-width: 300px;
-            @include responsive-font(2em, 2em, 3.2em);
+            @include responsive-font(32px, 50px, 32px, 50px);
             @include respond-to(sm) {
                 max-width: 400px;
             }
@@ -347,10 +356,19 @@
     }
     .card img {
         border-radius: 12px;
-        height: 150px;
+        height: 160px;
         object-fit: cover;
+        @include respond-to(sm) {
+            height: 280px;
+        }
+        @include respond-to(md) {
+            height: 360px;
+        }
         @include respond-to(lg) {
             height: 280px;
+        }
+        @include respond-to(xxl) {
+            height: 320px;
         }
     }
     .card-body {
