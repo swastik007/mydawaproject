@@ -124,9 +124,163 @@
 
 
                 <div class="category-page mydawa-container">
-                    <!-- Filter Sidebar -->
+                    
+                    
                     <!-- Filter Sidebar -->
                     <aside class="category-sidebar">
+                        <!-- Filter Sidebar -->
+                    <div class="accordion" id="filterAccordion">
+                        <!-- Category Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingCategory">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="true" aria-controls="collapseCategory">
+                                    Category
+                                </button>
+                            </h2>
+                            <div id="collapseCategory" class="accordion-collapse collapse show" aria-labelledby="headingCategory" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-options">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="condoms" checked>
+                                            <label class="form-check-label" for="condoms"> Condoms </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="lubricants" checked>
+                                            <label class="form-check-label" for="lubricants"> Lubricants </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="contraceptives">
+                                            <label class="form-check-label" for="contraceptives"> Contraceptives </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="adulttoys">
+                                            <label class="form-check-label" for="adulttoys"> Adult Toys </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="performanceenhancers">
+                                            <label class="form-check-label" for="performanceenhancers"> Performance Enhancers </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sexsupplements">
+                                            <label class="form-check-label" for="sexsupplements"> Sexual Health Supplements </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Brand Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingBrand">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBrand" aria-expanded="false" aria-controls="collapseBrand">
+                                    Brand
+                                </button>
+                            </h2>
+                            <div id="collapseBrand" class="accordion-collapse collapse" aria-labelledby="headingBrand" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-options">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="loreal" checked>
+                                            <label class="form-check-label" for="loreal"> L'oreal </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="huggies" checked>
+                                            <label class="form-check-label" for="huggies"> Huggies </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="durex">
+                                            <label class="form-check-label" for="durex"> Durex </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="palmolive">
+                                            <label class="form-check-label" for="palmolive"> Palmolive </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="lifeguard">
+                                            <label class="form-check-label" for="lifeguard"> Life Guard </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="skinking">
+                                            <label class="form-check-label" for="skinking"> Skin Kings </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Price Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingPrice">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice" aria-expanded="false" aria-controls="collapsePrice">
+                                    Price
+                                </button>
+                            </h2>
+                            <div id="collapsePrice" class="accordion-collapse collapse" aria-labelledby="headingPrice" data-bs-parent="#filterAccordion">
+                                <div class="container mt-4">
+                                    <div class="row">
+                                      <div class="col-sm-12">
+                                        <div id="slider-range"></div>
+                                      </div>
+                                    </div>
+                                    <div class="row slider-labels">
+                                      <div class="col-xs-6 caption">
+                                        <strong>Min:</strong> <span id="slider-range-value1"></span>
+                                      </div>
+                                      <div class="col-xs-6 text-right caption">
+                                        <strong>Max:</strong> <span id="slider-range-value2"></span>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-sm-12">
+                                        <form>
+                                          <input type="hidden" name="min-value" value="">
+                                          <input type="hidden" name="max-value" value="">
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Discounts Section -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingDiscounts">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiscounts" aria-expanded="false" aria-controls="collapseDiscounts">
+                                    Discounts
+                                </button>
+                            </h2>
+                            <div id="collapseDiscounts" class="accordion-collapse collapse" aria-labelledby="headingDiscounts" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-options">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="10-above" checked>
+                                            <label class="form-check-label" for="10-above"> 10% and above </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="20-above" checked>
+                                            <label class="form-check-label" for="20-above"> 20% and above </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="30-above">
+                                            <label class="form-check-label" for="30-above"> 30% and above </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="40-above">
+                                            <label class="form-check-label" for="40-above"> 40% and above </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="50-above">
+                                            <label class="form-check-label" for="50-above"> 50% and above </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="60-above">
+                                            <label class="form-check-label" for="60-above"> 60% and above </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         <div class="filter-section">
                             <div class="filter-header" data-toggle="filter-category">
                                 <h4>Category</h4>
@@ -241,7 +395,6 @@
 
                         </div>
 
-
                         <div class="filter-section">
                             <div class="filter-header" data-toggle="filter-price">
                                 <h4>Price</h4>
@@ -255,29 +408,7 @@
                                     <span>KES 200</span> <span>KES 4000</span>
                                 </div>
                             </div>
-                            <div class="container">
-                                <div class="row">
-                                  <div class="col-sm-12">
-                                    <div id="slider-range"></div>
-                                  </div>
-                                </div>
-                                <div class="row slider-labels">
-                                  <div class="col-xs-6 caption">
-                                    <strong>Min:</strong> <span id="slider-range-value1"></span>
-                                  </div>
-                                  <div class="col-xs-6 text-right caption">
-                                    <strong>Max:</strong> <span id="slider-range-value2"></span>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-12">
-                                    <form>
-                                      <input type="hidden" name="min-value" value="">
-                                      <input type="hidden" name="max-value" value="">
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
+                           
                         </div>
 
                         <div class="filter-section">
