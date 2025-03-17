@@ -10,10 +10,14 @@
     <meta name="description" content="mydawa">
     <meta name="keywords" content="mydawa">
 
+   
+    <link rel="stylesheet" href="assets/vendor/itl.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.1">
+
 
 
 </head>
@@ -95,11 +99,13 @@
 
                             <div class="input-row">
                                 <div class="input-group">
-                                    <label for="dob">Date of Birth <span class="required">*</span></label>
-                                    <input type="text" id="dob" placeholder="mm/dd/yyyy">
-                                    <span class="calendar-icon">
-                                        <img src="assets/images/icons/calendar-icon.png" />
-                                    </span>
+                                    <label for="dob">Date of Birth <span
+                                            class="required">*</span></label>
+                                    <div class="input-icon">
+                                        <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
+                                                                                                       
+                                        <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
+                                    </div>
                                 </div>
                                 <div class="input-group">
                                     <label for="gender">Gender <span class="required">*</span></label>
@@ -164,11 +170,13 @@
 
                             <div class="input-row">
                                 <div class="input-group">
-                                    <label for="dependent-dob">Date of Birth <span class="required">*</span></label>
-                                    <input type="date" id="dependent-dob" placeholder="mm/dd/yyyy">
-                                    <span class="calendar-icon">
-                                        <img src="assets/images/icons/calendar-icon.png" />
-                                    </span>
+                                    <label for="dob">Date of Birth <span
+                                            class="required">*</span></label>
+                                    <div class="input-icon">
+                                        <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
+                                                                                                       
+                                        <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
+                                    </div>
                                 </div>
                                 <div class="input-group">
                                     <label for="dependent-gender">Gender <span class="required">*</span></label>
@@ -220,11 +228,13 @@
 
                             <div class="input-row">
                                 <div class="input-group">
-                                    <label for="dependent-dob">Date of Birth <span class="required">*</span></label>
-                                    <input class="filled" type="text" id="dependent-dob" placeholder="21 July 2022">
-                                    <span class="calendar-icon">
-                                        <img src="assets/images/icons/calendar-icon.png" />
-                                    </span>
+                                    <label for="dob">Date of Birth <span
+                                            class="required">*</span></label>
+                                    <div class="input-icon">
+                                        <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
+                                                                                                       
+                                        <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
+                                    </div>
                                 </div>
 
                                 <div class="input-group">
@@ -277,9 +287,12 @@
 
     <!-- prescription Modal -->
     <div id="speaktodoctormodal"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/themescripts.js"></script>
 </body>
 
