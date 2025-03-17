@@ -171,10 +171,10 @@
         @include respond-to(lg) {
             font-family: $figtreeExtraBold;
             max-width: 100%;
-            height: calc(20px * 2);
+            height: 66px;
         }
         @include respond-to(xxl) {
-            height: calc(20px * 2);
+            height: 90px;
         }
     }
     .product-price-old {

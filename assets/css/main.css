@@ -15062,12 +15062,12 @@ ol.form-list {
   .product-card .product-title {
     font-family: "Figtree-ExtraBold";
     max-width: 100%;
-    height: 40px;
+    height: 66px;
   }
 }
 @media (min-width: 1800px) {
   .product-card .product-title {
-    height: 40px;
+    height: 90px;
   }
 }
 .product-card .product-price-old {
