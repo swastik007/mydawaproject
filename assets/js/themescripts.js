@@ -104,6 +104,7 @@ function initializeCarousels() {
     // List of carousels and their options
     const carousels = [
         { id: "#homepage-carousel", options: { loop: true, margin: 10, nav: false, items: 1, autoplay: true, autoplayTimeout: 50000, smartSpeed: 600, dots: true, dotsContainer: ".custom-dots-container" } },
+        { id: "#homebanner-carousel", options: { loop: true, margin: 10, nav: false, items: 1, autoplay: true, autoplayTimeout: 50000, smartSpeed: 600, dots: true, dotsContainer: ".custom-dots-container" } },
         { id: "#category-carousel", options: { loop: true, margin: 10, nav: false, dots: false, responsive: { 0: { items: 2 }, 400: { items: 2.8 }, 960: { items: 3.8 }, 1200: { items: 6 }, 1920: { items: 7 } } } },
         { id: "#blog-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 768: { items: 2 }, 1200: { items: 3.9 } } } },
         { id: "#offer-carousel", options: { loop: true, margin: 15, nav: true, dots: false, navText: getNavText(), responsive: { 0: { items: 1 }, 400: { items: 2 }, 768: { items: 2.5 }, 960: { items: 2.8 }, 1200: { items: 3.9 } } } },
