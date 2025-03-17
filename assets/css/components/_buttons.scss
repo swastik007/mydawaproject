@@ -206,13 +206,12 @@
 .btn-cart {
     font-family: $outfit;
     background-color: $green;
-    font-size: 15px;
     border-radius: 25px;
     color: white;
     padding: 10px 15px 10px 35px;
     height: fit-content;
     border: 1px solid $green;
-    @include responsive-font(16px, 20px, 24px);   
+    @include responsive-font(15px, 20px, 24px);   
     background-image: url('../images/icons/add-to-cart-plus-white.png'); // Default background image
     background-repeat: no-repeat;
     background-position: 14px center;
@@ -237,11 +236,19 @@
         background-repeat: no-repeat;
         background-position: 14px center;
         background-size: 14px;
+        @include responsive-font(15px, 20px, 24px);   
+   
         &:hover, &:focus{
             background-image: url('../images/icons/added-dots-icon-white.png'); // plug green background image
-            background-color: $green;
-            border: 1px solid $green;
+            background-color: $black;
+            border: 1px solid $black;
             color: white;
+        }
+        @include respond-to(xxl) {
+            padding: 14px 25px 14px 50px;
+            background-position: 18px center;
+            border-radius: 32px;
+            background-size: 20px;
         }
     }
 }

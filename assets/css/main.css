@@ -12228,13 +12228,12 @@ body {
 .btn-cart {
   font-family: "Outfit";
   background-color: rgb(111, 183, 76);
-  font-size: 15px;
   border-radius: 25px;
   color: white;
   padding: 10px 15px 10px 35px;
   height: fit-content;
   border: 1px solid rgb(111, 183, 76);
-  font-size: 16px;
+  font-size: 15px;
   background-image: url("../images/icons/add-to-cart-plus-white.png");
   background-repeat: no-repeat;
   background-position: 14px center;
@@ -12272,12 +12271,31 @@ body {
   background-repeat: no-repeat;
   background-position: 14px center;
   background-size: 14px;
+  font-size: 15px;
+}
+@media (min-width: 1200px) {
+  .btn-cart.btn-added {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .btn-cart.btn-added {
+    font-size: 24px;
+  }
 }
 .btn-cart.btn-added:hover, .btn-cart.btn-added:focus {
   background-image: url("../images/icons/added-dots-icon-white.png");
-  background-color: rgb(111, 183, 76);
-  border: 1px solid rgb(111, 183, 76);
+  background-color: rgb(55, 52, 52);
+  border: 1px solid rgb(55, 52, 52);
   color: white;
+}
+@media (min-width: 1800px) {
+  .btn-cart.btn-added {
+    padding: 14px 25px 14px 50px;
+    background-position: 18px center;
+    border-radius: 32px;
+    background-size: 20px;
+  }
 }
 
 .select-button {
