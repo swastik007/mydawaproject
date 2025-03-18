@@ -20093,6 +20093,12 @@ header {
   width: 290px;
 }
 
+.scroll-menu {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 /* SCSS for Cart Page */
 .cart-container .cart-header {
   display: flex;

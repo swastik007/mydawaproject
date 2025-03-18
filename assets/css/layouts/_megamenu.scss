@@ -139,3 +139,8 @@
     width: calc(870px / 3);
   }
 }
+.scroll-menu {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
