@@ -39,56 +39,64 @@
     flex-direction: column;
     position: absolute;
     align-items: flex-start;
-    top: 10%; // Align to top
-    bottom: 10px; // Allow flexibility for bottom alignment
-    transform: none; // Remove centering for small screens
+    top: 50%;
+        transform: translateY(-50%);
     justify-content: flex-start;
-    left: 50px;
+    @include respond-to(sm) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
     @include respond-to(lg) {
-      // On large screens
-      align-items: flex-start; // Center-align content inside
-      left: 40px;
-      top: 50%; // Move it to the vertical center
-      transform: translateY(-50%); // Adjust centering
+        // On large screens
+        align-items: flex-start; // Center-align content inside
+        left: 10px;
+        top: 50%; // Move it to the vertical center
+        transform: translateY(-50%); // Adjust centering
+    }
+}
+.text-content {
+    text-align: left;
+    color: white;
+    line-height: 1.5;
+    margin-left: 20px;
+    margin-top: 20px;
+    @include respond-to(lg) {
+        margin-top: 0;
     }
     @include respond-to(xxl) {
-      left: 120px;
-      top: 50%;
-    }
-    h4 {
-      font-family: $figtreeExtraBold;
-      font-size: 2em;
-      line-height: 1;
-      margin-bottom: 7px;
-      color: white;
-      max-width: 340px;
-      text-transform: capitalize;
-      @include respond-to(lg) {
-        font-size: 2.8em;
-        max-width: 400px;
-      }
-      @include respond-to(xxl) {
-        font-size: 4em;
-        margin-bottom: 16px;
-        max-width: 700px;
-      }
+        margin-left: 60px;
     }
     p {
-      font-family: $figtreeLight;
-      font-size: 0.875em;
-      line-height: 1.7;
-      color: white;
-      max-width: 280px;
-      @include respond-to(lg) {
-        font-size: 1em;
-        max-width: 800px;
-        font-family: $figtree;
-      }
-      @include respond-to(xxl) {
-        font-size: 1.5em;
-      }
+        font-family: $figtreeLight;
+        margin-bottom: 0px;
+        @include responsive-font(18px, 25px, 18px, 25px);
+        @include respond-to(sm) {
+            max-width: 600px;
+       }
+       @include respond-to(lg) {
+           max-width: 700px;
+       }
+       @include respond-to(xxl) {
+           max-width: 850px;
+       }
+        
     }
-  }
+    h4 {
+        font-family: $figtreeExtraBold;
+        line-height: 1.2;
+        max-width: 300px;
+        
+        @include responsive-font(32px, 40px, 40px, 52px);
+        @include respond-to(lg) {
+            max-width: 400px;
+        }
+        @include respond-to(xxl) {
+            max-width: 500px;
+           
+        }
+       
+    }
+}
   .banner-text {
     // position: absolute;
     // top: 50%;
@@ -158,13 +166,16 @@
     margin-bottom: 30px;
     margin-bottom: 5px;
     @include respond-to(xs) {
-      height: 425px;
+      height: 400px;
+    }
+    @include respond-to(sm) {
+      height: 680px;
     }
     @include respond-to(lg) {
-      height: 440px;
+      height: 220px;
     }
     @include respond-to(xxl) {
-      height: 520px;
+      height:300px;
       margin-bottom: 7px;
     }
     picture {
