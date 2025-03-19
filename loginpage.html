@@ -91,7 +91,7 @@
 
 
                                     <!-- Password Input -->
-                                    <div class="input-group password-group">
+                                    <div class="input-group password-group mb-3 mb-xl-4">
                                         <label for="InputPassword" class="form-label">Password<span class="required">*</span></label>
                                         <div class="position-relative w-100">
                                             <input type="password" id="InputPassword" placeholder="Password" />
@@ -101,6 +101,14 @@
                                         </div>
                                     </div>
 
+                                    <!-- Password Input -->
+                                    <div class="input-group password-group">
+                                        <span class="form-label form_error">Username or Password incorrect</span>
+                                        <div class="position-relative w-100">
+                                            <input class="form-control is-invalid" type="password" id="InputPassword" placeholder="Password" />
+                                           
+                                        </div>
+                                    </div>
                                     <div class="form-options d-flex justify-content-between align-items-center mt-2 mt-xl-3 mb-3 mb-xl-4">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="keep-signed-in">
@@ -116,6 +124,16 @@
                                         <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                                       </svg>
                                       </button>
+                                      <button type="button" onclick="window.location.href='/profilepage.html';" class="mt-2 mt-xl-3 btn btn-primary btn-lg btn-rounded auth-btn">Sign In
+                                        <div class="spinner-border text-light ms-2 ms-xl-3" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </button>
+                                    <button type="button" onclick="window.location.href='/profilepage.html';" class="mt-2 mt-xl-3 btn btn-outline-light btn-lg btn-rounded auth-btn">Button Light
+                                        <div class="spinner-border text-dark ms-2 ms-xl-3" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </button>
 
                                     <div class="divider">OR</div>
 

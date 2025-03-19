@@ -211,6 +211,7 @@ input[type="radio"]:checked::before {
         @include responsive-font(13px, 20px, 13px, 20px);
         margin-bottom: 0;
     }
+   
     .form-check-input {
         width: 15px;
         height: 15px;
@@ -1110,4 +1111,19 @@ ol.form-list {
             height: 38px;
         }
     }
+}
+
+.form-control:focus{
+    box-shadow: none;
+}
+
+.form_error{
+    font-family: $figtreeLight;
+    color: $red;
+    margin-bottom: 7px;
+     @include responsive-font(14px, 20px, 14px, 20px);
+    @include respond-to(xxl) {
+        margin-bottom: 12px;
+    }
+   
 }

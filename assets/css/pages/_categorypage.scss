@@ -1,3 +1,113 @@
+.category-sidebar {
+    display: none;
+
+    @include respond-to(lg) {
+        display: block;
+        width: 22%;
+        padding-right: 15px;
+    }
+
+    @include respond-to(xxl) {
+        padding-right: 25px;
+
+    }
+    .accordion-item{
+        background-color: #F9F9FD;
+        padding: 15px;
+        border:none;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        @include respond-to(lg) {
+            margin-bottom: 15px;
+            
+        }
+        @include respond-to(xxl) {
+            padding: 20px;
+        }
+        
+    }
+    .accordion-item{        
+        .accordion-header{
+            @include responsive-font(16px, 22px, 16px, 22px);
+            font-family: $figtreeSemiBold;
+        }
+    }
+    .accordion-button{    
+        cursor: pointer;
+        background: #F9F9FD;        
+        color: #808080;
+        padding: 7px 10px;
+        text-wrap: nowrap;
+        border: none;
+        box-shadow: none;
+        @include responsive-font(16px, 22px, 16px, 22px);
+        
+        @include respond-to(lg) {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        @include respond-to(xxl) {
+            padding: 16px 32px;
+        }
+        &.collapsed{
+            background-color: #F9F9FD;
+            color: $black;
+        }
+        &.active {
+            background-color: transparent;
+            color: $black;
+            border-bottom: 2px solid $black;
+            font-family: $figtreeBold;
+            @include respond-to(lg) {
+                background-color: #F9F9FD;
+                border-bottom: transparent;
+            }
+        }
+        &:hover {
+            border-bottom: 1px solid $black;
+            color: $black;
+            font-family: $figtreeBold;
+            @include respond-to(lg) {
+                background-color: #F9F9FD;
+                border-bottom: transparent;
+            }
+        }
+        &.no-arrow{
+            background-color: transparent;
+            &:before, &:after{
+                display: none;
+            }
+            &.active {
+                background-color: transparent;
+                color: $black;
+                border-bottom: 2px solid $black;
+                font-family: $figtreeBold;
+                @include respond-to(lg) {
+                    background-color: #F9F9FD;
+                    border-bottom: transparent;
+                }
+            }
+            &:hover {
+                border-bottom: 1px solid $black;
+                color: $black;
+                font-family: $figtreeBold;
+                @include respond-to(lg) {
+                    background-color: #F9F9FD;
+                    border-bottom: transparent;
+                }
+            }
+        }
+    }
+}
+
+.category-section {
+    @include respond-to(lg) {
+        width: 78%;
+    }
+}
+
 .refine-search {
     background-color: #F1F3FB;
     border-radius: 12px;
@@ -392,26 +502,7 @@
         margin: 50px auto;
     }
 
-    .category-sidebar {
-        display: none;
-
-        @include respond-to(lg) {
-            display: block;
-            width: 22%;
-            padding-right: 15px;
-        }
-
-        @include respond-to(xxl) {
-            padding-right: 25px;
-
-        }
-    }
-
-    .category-section {
-        @include respond-to(lg) {
-            width: 78%;
-        }
-    }
+   
 }
 
 .product-listing-header {

@@ -14,29 +14,36 @@
     }
     .feature-item {
         display: flex;
-        margin: 0 30px;
+        gap: 30px;
         @include respond-to(lg) {
-            margin: 0 20px;
+            // margin: 0 20px;
+        }
+        @include respond-to(xxl) {
+           gap: 50px;
         }
         .icon {
             background-color: #fff;
             padding: 10px;
             border-radius: 50%;
-            margin-right: 20px;
-            height: fit-content;
-            @include respond-to(lg) {
+            width: 80px;
+            height: 80px;     
+            @include respond-to(md) {
                 padding: 20px;
+                width: 120px;
+                height: 120px;
+            }          
+            @include respond-to(lg) {
+                padding: 15px;
+                width: 80px;
+                height: 80px;
             }
             @include respond-to(xxl) {
-                padding: 25px;
+                padding: 20px;
+                width: 100px;
+                height: 100px;
             }
             img {
-                width: 40px;
-                height: 40px;
-                @include respond-to(xxl) {
-                    width: 60px;
-                    height: 60px;
-                }
+                object-fit: contain;
             }
         }
         h5 {
