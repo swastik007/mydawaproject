@@ -158,7 +158,7 @@
       }
     }
   }
-  &.listingbanner-section {
+  &.searchpage-banner {
     position: relative;
     width: 100%;
     /* Ensure full width */
@@ -172,10 +172,10 @@
       height: 680px;
     }
     @include respond-to(lg) {
-      height: 220px;
+      height: 240px;
     }
     @include respond-to(xxl) {
-      height:300px;
+      height:320px;
       margin-bottom: 7px;
     }
     picture {
@@ -184,6 +184,41 @@
     h4,
     p {
       color: $black;
+    }
+    .banner-button{
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      text-decoration: none;
+      color: $black;
+      cursor: pointer;
+      font-family: $figtreeSemiBold;
+      @include responsive-font(16px, 22px, 16px, 22px);
+      @include respond-to(md) {
+        top: 28px;
+        right: 28px;
+       }
+      @include respond-to(xxl) {
+       top: 40px;
+       right: 40px;
+      }
+      &:hover, &:focus{
+         svg{
+          path{
+            fill: $grey9;
+          }
+        }
+      }
+      svg{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        @include respond-to(xxl) {
+          width: 28px;
+          height: 28px;
+          margin-right: 8px;
+        }
+      }
     }
     .listingbutton-wrap {
       display: flex;

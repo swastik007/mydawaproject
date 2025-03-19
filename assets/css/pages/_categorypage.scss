@@ -13,7 +13,7 @@
     }
     .accordion-item{
         background-color: #F9F9FD;
-        padding: 15px;
+        padding: 7px 10px 0 10px;
         border:none;
         border-radius: 8px;
         margin-bottom: 10px;
@@ -22,34 +22,33 @@
             
         }
         @include respond-to(xxl) {
-            padding: 20px;
+            padding: 10px 20px 2px 20px;
         }
-        
-    }
-    .accordion-item{        
         .accordion-header{
             @include responsive-font(16px, 22px, 16px, 22px);
             font-family: $figtreeSemiBold;
         }
+        
     }
+   
     .accordion-button{    
         cursor: pointer;
         background: #F9F9FD;        
         color: #808080;
-        padding: 7px 10px;
+        
         text-wrap: nowrap;
         border: none;
         box-shadow: none;
         @include responsive-font(16px, 22px, 16px, 22px);
         
         @include respond-to(lg) {
-            padding: 10px 20px;
+           
             border: none;
             border-radius: 8px;
             margin-bottom: 10px;
         }
         @include respond-to(xxl) {
-            padding: 16px 32px;
+            
         }
         &.collapsed{
             background-color: #F9F9FD;
@@ -100,6 +99,20 @@
             }
         }
     }
+    .accordion-body{
+        border-top: 1px solid #E7E7F4;
+    }
+    .form-options{
+        .form-check{
+            margin-bottom: 10px;
+            @include respond-to(xxl) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .modify-search{
+
+    }
 }
 
 .category-section {
@@ -120,11 +133,11 @@
     overflow: hidden;
 
     @include respond-to(lg) {
-        padding: 42px 34px;
+        padding: 35px;
     }
 
     @include respond-to(xxl) {
-        padding: 64px 48px;
+        padding: 45px;
     }
 
     .find-container {
@@ -155,6 +168,9 @@
                 align-items: center;
                 max-width: 100%;
             }
+            @include respond-to(xxl) {
+                min-width: 425px;
+            }
 
             .find-icon {
                 position: absolute;
@@ -168,12 +184,18 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 25px;
+                    padding: 5px;
+                    width: 65px;
+                    height: 65px;
+                }
+                @include respond-to(xxl) {
+                    padding: 8px;
+                    width: 90px;
+                    height: 90px;
                 }
 
                 img.search-icon {
-                    width: 50px;
-                    height: 50px;
+                    
                     object-fit: contain;
                     display: none;
 
@@ -187,8 +209,7 @@
                 font-family: $figtreeBlack;
                 color: $black;
                 margin: 0;
-                @include responsive-font(24px, 32px, 24px, 32px);
-
+                @include responsive-font(18px, 24px, 18px, 24px);
                 @include respond-to(lg) {
                     font-family: $figtree;
                 }
@@ -197,7 +218,7 @@
             h3 {
                 color: $black;
                 font-family: $figtreeBlack;
-                @include responsive-font(24px, 24px, 32px, 44px);
+                @include responsive-font(32px, 44px, 32px, 44px);
             }
         }
 
@@ -205,15 +226,9 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-
-            @include respond-to(lg) {
-                margin-left: 70px;
-                max-width: 400px;
-            }
-
+          
             @include respond-to(xxl) {
-                margin-left: 90px;
-                max-width: 760px;
+                gap: 25px;
             }
 
             .find-button {
@@ -222,33 +237,36 @@
                 gap: 10px;
                 background-color: #fff;
                 border: 1px solid #e1e1e5;
-                border-radius: 8px;
-                padding: 10px 15px;
-                font-size: 16px;
-                font-weight: 500;
-                color: #2e2e2e;
+                border-radius: 12px;
+                padding: 6px 8px;
+                font-family: $figtreeMedium;
+                color: $black;
                 text-decoration: none;
                 transition: all 0.3s ease;
-
+                @include responsive-font(12px, 22px, 16px, 22px);
                 @include respond-to(xxl) {
-                    font-size: 24px;
-                    padding: 16px 24px;
+                    padding: 10px 14px;
                 }
 
-                img {
-                    width: 20px;
-                    height: 20px;
+                svg {
+                    width: 10px;
+                    height: 10px;
 
                     @include respond-to(xxl) {
-                        width: 32px;
-                        height: 32px;
+                        width: 16px;
+                        height: 16px;
                     }
                 }
 
                 &:hover {
-                    background-color: #e5f0ff;
-                    border-color: #bcd4fc;
-                    color: #1a73e8;
+                    background-color: #f7f7f7;
+                    border-color: $grey9;
+                    color: $grey9;
+                    svg{
+                        path{
+                            fill: $black;
+                        }
+                    }
                 }
             }
         }
@@ -308,6 +326,230 @@
     }
 
 }
+
+// shop by brands section
+.brand-section {
+    background-color: #FAFBFF;
+    padding: 40px 0;
+    @include respond-to(xxl) {
+        padding: 52px 0;
+    }
+    .brand-title {
+        display: flex;
+        flex-direction: column;
+        @include responsive-font(40px, 52px, 40px, 52px);
+        font-family: $figtree;
+        span{
+            font-family: $figtreeExtraBold;
+            @include responsive-font(40px, 52px, 40px, 52px);
+        }
+    }
+  
+    .owl-carousel {
+      display: flex;
+      align-items: center;
+  
+      .brand-item {
+        
+        .brand-img{
+            background: #FAFBFF;
+            border-radius: 10px;
+            padding: 40px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: none;
+            border: 1px solid #D4DEE5;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 15px;
+            @include respond-to(xxl) {
+                padding: 60px 22px;
+                margin-bottom: 20px;
+            }
+            img {
+                max-width: 120px;
+                height: 30px;
+                object-fit: contain;
+                @include respond-to(xxl) {
+                    height: 45px;
+                }
+              }
+              &:hover {
+                background-color: white;
+                img{
+                    
+                transform: scale(1.08);
+                }
+              }
+        }
+        
+  
+        
+      }
+    }
+  }
+  
+.category-buttons-slider{
+   
+  padding: 10px;
+  background: #F1F3FB;
+  border-radius: 12px;
+  position: relative;
+    .buttons-row{
+        display: flex;
+        flex-direction: column;
+        @include respond-to(md) {
+            flex-direction: row;
+        }
+        .left-title{
+            margin: 0 20px;
+            width: 90px;
+            // @include respond-to(md) {
+            //     width: 300px;
+            // }
+            
+            // @include respond-to(md) {
+            //     width: 300px;
+            // }
+        }
+        .right-slide{
+            width: calc(100% - 90px);
+        }
+    }
+  .category-title {
+        display: flex;
+        flex-direction: column;
+        @include responsive-font(16px, 22px, 16px, 22px);
+        font-family: $figtree;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            font-family: $figtreeExtraBold;
+            @include responsive-font(18px, 24px, 18px, 24px);
+        }
+  }
+
+  .category-slider-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0 30px;
+    @include respond-to(xxl) {
+        padding: 0 42px;
+    }
+  }
+
+  .category-track {
+    display: flex;
+    margin: 0 20px;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in-out;
+    @include respond-to(xxl) {
+        margin: 0 40px;
+    }
+  }
+  .category-slider {
+    margin: 5px 20px;
+    overflow: hidden;
+    @include respond-to(xxl) {
+        margin: 5px 28px;
+    }
+}
+//   .category-item {
+//     background: #fff;
+//     padding: 10px 20px;
+//     border-radius: 20px;
+//     font-size: 14px;
+//     font-weight: 500;
+//     display: inline-block;
+//     white-space: nowrap;
+//     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+//     cursor: pointer;
+//     transition: 0.3s;
+//     margin-right: 10px;
+
+//     &:hover {
+//       background: #e0e0e0;
+//     }
+//   }
+.category-item {
+   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 6px 8px;
+    font-family: $figtreeMedium;
+    color: $black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-right: 12px;
+    @include responsive-font(12px, 22px, 16px, 22px);
+    @include respond-to(xxl) {
+        padding: 10px 14px;
+        margin-right: 18px;
+    }
+
+    svg {
+        width: 10px;
+        height: 10px;
+
+        @include respond-to(xxl) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &:hover {
+        background-color: #f7f7f7;
+        border-color: $grey9;
+        color: $grey9;
+        svg{
+            path{
+                fill: $black;
+            }
+        }
+    }
+
+}
+  button {
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    &:hover {
+      background: #ddd;
+    }
+    &.prev-btn {
+        left: 5px;
+      }
+    
+      &.next-btn {
+        right: 5px;
+      }
+  }
+
+  
+
+}
+
+
 
 .wellness-banner-section {
     background-color: #ffe6ec;
