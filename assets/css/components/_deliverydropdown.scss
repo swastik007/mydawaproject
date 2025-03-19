@@ -14,6 +14,7 @@
   /* Ensure parent has a high z-index */
   .delivery-dropdown {
     /* Hidden by default */
+    margin-top: 3px;
     position: absolute;
     top: 100%;
     left: 10px;
