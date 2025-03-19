@@ -13957,6 +13957,73 @@ input[type=radio]:checked::before {
   color: #e61b1b;
 }
 
+.form-notice {
+  background-color: #f6f6f8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid #f6f6f8;
+}
+@media (min-width: 1800px) {
+  .form-notice {
+    margin-top: 16px;
+    padding: 16px;
+  }
+}
+.form-notice svg {
+  margin-right: 7px;
+  width: 14px;
+  height: 14px;
+}
+@media (min-width: 1800px) {
+  .form-notice svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+.form-notice span {
+  color: rgb(55, 52, 52);
+  font-family: "Figtree-Medium";
+  display: block;
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .form-notice span {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-notice span {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .form-notice span {
+    font-size: 20px;
+  }
+}
+.form-notice.warning {
+  border: 1px solid rgb(230, 27, 74);
+}
+.form-notice.warning svg path {
+  stroke: rgb(230, 27, 74);
+}
+.form-notice.warning span {
+  color: rgb(230, 27, 74);
+}
+.form-notice.success {
+  border: 1px solid rgb(111, 183, 76);
+}
+.form-notice.success svg path {
+  stroke: rgb(111, 183, 76);
+}
+.form-notice.success span {
+  color: rgb(111, 183, 76);
+}
+
 /* Uploaded File Section */
 .uploaded-file-section {
   margin: 20px auto;

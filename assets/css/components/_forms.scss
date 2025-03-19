@@ -478,7 +478,57 @@ input[type="radio"]:checked::before {
     }
 }
 
-
+.form-notice {
+    background-color: #f6f6f8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 1px solid #f6f6f8;
+    @include respond-to(xxl) {
+        margin-top: 16px;
+        padding: 16px;
+    }
+    svg {
+        margin-right: 7px;
+        width: 14px;
+        height: 14px;
+        @include respond-to(xxl) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    span {
+        color: $black;
+        font-family: $figtreeMedium;
+        display: block;
+        @include responsive-font(14px, 20px, 14px, 20px);
+    }
+    &.warning {
+        border: 1px solid $red;
+        svg {
+            path {
+                stroke: $red;
+            }
+        }
+        span {
+            color: $red;
+        }
+    }
+    &.success {
+        border: 1px solid $green;
+        svg {
+            path {
+                stroke: $green;
+            }
+        }
+        span {
+            color: $green;
+        }
+    }
+}
 /* Uploaded File Section */
 
 .uploaded-file-section {
@@ -1121,7 +1171,7 @@ ol.form-list {
     font-family: $figtreeLight;
     color: $red;
     margin-bottom: 7px;
-     @include responsive-font(14px, 20px, 14px, 20px);
+    @include responsive-font(14px, 20px, 14px, 20px);
     @include respond-to(xxl) {
         margin-bottom: 12px;
     }
