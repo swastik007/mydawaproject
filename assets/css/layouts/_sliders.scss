@@ -314,6 +314,10 @@
 
 .login-slider {
     position: relative;
+    display: none;
+    @include respond-to(md) {
+        display: block;
+    }
     .banner-content-wrap {
         display: flex;
         flex-direction: column;
