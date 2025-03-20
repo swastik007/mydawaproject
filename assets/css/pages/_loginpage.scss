@@ -13,8 +13,14 @@
     .auth-container {
         width: 100%;
         background: #fff;
-        padding: 2rem;
+       padding: 10px;
         border-radius: 10px;
+        @include respond-to(lg) {
+            padding: 2rem;
+        }
+        @include respond-to(xxl) {
+            padding: 50px;
+        }
     }
     .auth-title {
         text-align: left;

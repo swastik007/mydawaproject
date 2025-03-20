@@ -11936,12 +11936,14 @@ body {
 }
 @media (min-width: 1200px) {
   .dawamain {
-    margin-top: 200px;
+    margin-top: 175px;
+    padding-top: 25px;
   }
 }
 @media (min-width: 1800px) {
   .dawamain {
-    margin-top: 300px;
+    margin-top: 256px;
+    padding-top: 35px;
   }
 }
 
@@ -18885,6 +18887,12 @@ header {
 /* Login slider */
 .login-slider {
   position: relative;
+  display: none;
+}
+@media (min-width: 992px) {
+  .login-slider {
+    display: block;
+  }
 }
 .login-slider .banner-content-wrap {
   display: flex;
@@ -21797,6 +21805,38 @@ header {
     margin-bottom: 15px;
   }
 }
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+}
+.slider-labels .caption {
+  background-color: white;
+  color: rgb(55, 52, 52);
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-family: "Figtree-SemiBold";
+  font-size: 13px;
+  border: 1px solid #F3F3F3;
+}
+@media (min-width: 992px) {
+  .slider-labels .caption {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .slider-labels .caption {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1800px) {
+  .slider-labels .caption {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 1200px) {
   .category-section {
     width: 78%;
@@ -24105,8 +24145,18 @@ header {
 .login-form .auth-container {
   width: 100%;
   background: #fff;
-  padding: 2rem;
+  padding: 10px;
   border-radius: 10px;
+}
+@media (min-width: 1200px) {
+  .login-form .auth-container {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1800px) {
+  .login-form .auth-container {
+    padding: 50px;
+  }
 }
 .login-form .auth-title {
   text-align: left;
