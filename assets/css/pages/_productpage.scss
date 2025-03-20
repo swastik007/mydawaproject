@@ -34,9 +34,9 @@
         border-radius: 12px;
       }
       .thumbnails {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 10px;
-        flex-wrap: nowrap;
         img {
           padding: 15px;
           object-fit: cover;

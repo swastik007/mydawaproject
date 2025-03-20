@@ -52,6 +52,8 @@
       flex-wrap: wrap;
       list-style: none;
       padding-left: 0;
+      height: 98px;
+      overflow-y: scroll;
       li {
         margin: 0 7px 7px 0;
       }
@@ -80,6 +82,8 @@
       flex-wrap: wrap;
       list-style: none;
       padding-left: 0;
+      height: 98px;
+      overflow-y: scroll;
     }
     li {
       display: flex;
@@ -111,6 +115,8 @@
   }
   .featured-search {
     .product-list {
+      height: 160px;
+      overflow-y: scroll;
       .product-item {
         display: flex;
         flex-direction: row;
