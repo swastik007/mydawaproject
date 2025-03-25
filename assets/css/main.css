@@ -16431,6 +16431,9 @@ ol.form-list {
   z-index: 111;
   cursor: pointer;
 }
+.cart-dropdown-wrap .cart-dropdown {
+  display: none;
+}
 .cart-dropdown-wrap:hover .cart-dropdown, .cart-dropdown-wrap:focus .cart-dropdown {
   display: block;
 }
@@ -16511,39 +16514,39 @@ ol.form-list {
   }
 }
 .cart-dropdown-wrap .cart-item .item-price .product-price {
-  font-size: 11px;
+  font-size: 13px;
 }
 @media (min-width: 992px) {
   .cart-dropdown-wrap .cart-item .item-price .product-price {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .cart-dropdown-wrap .cart-item .item-price .product-price {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1800px) {
   .cart-dropdown-wrap .cart-item .item-price .product-price {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 .cart-dropdown-wrap .cart-item .item-price .product-price-old {
-  font-size: 11px;
+  font-size: 13px;
 }
 @media (min-width: 992px) {
   .cart-dropdown-wrap .cart-item .item-price .product-price-old {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .cart-dropdown-wrap .cart-item .item-price .product-price-old {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1800px) {
   .cart-dropdown-wrap .cart-item .item-price .product-price-old {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 .cart-dropdown-wrap .cart-total {
@@ -20769,7 +20772,7 @@ header {
   .cart-item .item-quantity .cart-delete {
     font-size: 16px;
     padding: 20px;
-    border-radius: 40px;
+    border-radius: 50%;
   }
   .cart-item .item-quantity .cart-delete img {
     width: 30px;

@@ -2,9 +2,9 @@
   position: relative;
   z-index: 111;
   cursor: pointer;
-  // .cart-dropdown {
-  //   display: none;
-  // }
+  .cart-dropdown {
+    display: none;
+  }
   &:hover,
   &:focus {
     .cart-dropdown {
@@ -70,11 +70,11 @@
           flex-direction: row;
       }
       .product-price {        
-          @include responsive-font(11px, 15px, 11px, 15px);
+          @include responsive-font(13px, 16px, 13px, 16px);
          
       }
       .product-price-old {
-        @include responsive-font(11px, 15px, 11px, 15px);
+        @include responsive-font(13px, 16px, 13px, 16px);
       }
   }
   }
