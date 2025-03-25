@@ -16431,9 +16431,6 @@ ol.form-list {
   z-index: 111;
   cursor: pointer;
 }
-.cart-dropdown-wrap .cart-dropdown {
-  display: none;
-}
 .cart-dropdown-wrap:hover .cart-dropdown, .cart-dropdown-wrap:focus .cart-dropdown {
   display: block;
 }
@@ -16465,36 +16462,89 @@ ol.form-list {
     top: 60px;
   }
 }
-.cart-dropdown-wrap .item-details h3, .cart-dropdown-wrap .item-details .h3 {
+.cart-dropdown-wrap .cart-item {
+  padding: 10px;
+}
+@media (min-width: 1800px) {
+  .cart-dropdown-wrap .cart-item {
+    padding: 16px;
+  }
+}
+.cart-dropdown-wrap .cart-item .product-info .item-details h3, .cart-dropdown-wrap .cart-item .product-info .item-details .h3 {
   font-size: 14px;
   line-height: 1.2;
   font-family: "Figtree-SemiBold";
   margin-bottom: 3px;
 }
 @media (min-width: 992px) {
-  .cart-dropdown-wrap .item-details h3, .cart-dropdown-wrap .item-details .h3 {
-    font-size: 20px;
+  .cart-dropdown-wrap .cart-item .product-info .item-details h3, .cart-dropdown-wrap .cart-item .product-info .item-details .h3 {
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
-  .cart-dropdown-wrap .item-details h3, .cart-dropdown-wrap .item-details .h3 {
+  .cart-dropdown-wrap .cart-item .product-info .item-details h3, .cart-dropdown-wrap .cart-item .product-info .item-details .h3 {
     font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
-  .cart-dropdown-wrap .item-details h3, .cart-dropdown-wrap .item-details .h3 {
-    font-size: 20px;
+  .cart-dropdown-wrap .cart-item .product-info .item-details h3, .cart-dropdown-wrap .cart-item .product-info .item-details .h3 {
+    font-size: 18px;
   }
 }
-.cart-dropdown-wrap .item-details h3 a, .cart-dropdown-wrap .item-details .h3 a {
+.cart-dropdown-wrap .cart-item .product-info .item-details h3 a, .cart-dropdown-wrap .cart-item .product-info .item-details .h3 a {
   text-decoration: none;
   color: rgb(55, 52, 52);
 }
-.cart-dropdown-wrap .item-details h3 a:hover, .cart-dropdown-wrap .item-details .h3 a:hover, .cart-dropdown-wrap .item-details h3 a:focus, .cart-dropdown-wrap .item-details .h3 a:focus {
+.cart-dropdown-wrap .cart-item .product-info .item-details h3 a:hover, .cart-dropdown-wrap .cart-item .product-info .item-details .h3 a:hover, .cart-dropdown-wrap .cart-item .product-info .item-details h3 a:focus, .cart-dropdown-wrap .cart-item .product-info .item-details .h3 a:focus {
   color: rgb(230, 27, 119);
 }
-.cart-dropdown-wrap .item-details p {
+.cart-dropdown-wrap .cart-item .product-info .item-details p {
   margin-bottom: 0;
+}
+.cart-dropdown-wrap .cart-item .item-price {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .cart-dropdown-wrap .cart-item .item-price {
+    flex-direction: row;
+  }
+}
+.cart-dropdown-wrap .cart-item .item-price .product-price {
+  font-size: 11px;
+}
+@media (min-width: 992px) {
+  .cart-dropdown-wrap .cart-item .item-price .product-price {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .cart-dropdown-wrap .cart-item .item-price .product-price {
+    font-size: 11px;
+  }
+}
+@media (min-width: 1800px) {
+  .cart-dropdown-wrap .cart-item .item-price .product-price {
+    font-size: 15px;
+  }
+}
+.cart-dropdown-wrap .cart-item .item-price .product-price-old {
+  font-size: 11px;
+}
+@media (min-width: 992px) {
+  .cart-dropdown-wrap .cart-item .item-price .product-price-old {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .cart-dropdown-wrap .cart-item .item-price .product-price-old {
+    font-size: 11px;
+  }
+}
+@media (min-width: 1800px) {
+  .cart-dropdown-wrap .cart-item .item-price .product-price-old {
+    font-size: 15px;
+  }
 }
 .cart-dropdown-wrap .cart-total {
   margin: 7px 0;
@@ -20706,7 +20756,7 @@ header {
   border: 1px solid #D4DEE5;
   background-color: #fff;
   margin-left: 10px;
-  border-radius: 12px;
+  border-radius: 25px;
   padding: 7px 10px;
   min-width: 80px;
 }
@@ -24237,7 +24287,7 @@ header {
 .input-icon img {
   position: absolute;
   left: 7px;
-  top: 7px;
+  top: 16px;
   width: 20px;
   height: 20px;
 }
@@ -24260,8 +24310,8 @@ header {
 .input-icon img.right-icon {
   position: absolute;
   left: auto;
-  right: 7px;
-  top: 7px;
+  right: 12px;
+  top: 16px;
   width: 20px;
   height: 20px;
 }
