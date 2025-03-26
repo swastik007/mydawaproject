@@ -47,6 +47,8 @@ function loadComponents() {
         { id: "symptomsection", file: "components/homepage/symptoms.html" },
         { id: "footer", file: "components/footer.html" },
         { id: "wishlistmodal", file: "components/pages/wishlistpopup.html" },
+        { id: "wishlistmodaladdlist", file: "components/pages/wishlistpopup-addlist.html" },
+        { id: "wishlistmodalsuccess", file: "components/pages/wishlistpopup-success.html" },
         { id: "speaktodoctormodal", file: "components/pages/speaktodoctormodal.html" },
         { id: "submitprescriptionmodal", file: "components/pages/submitprescriptionmodal.html" },
         { id: "wishlistpinmodal", file: "components/pages/wishlistpinpopup.html" },
@@ -208,6 +210,8 @@ function setupEventListeners() {
 
     setTimeout(() => {
         setupWishlistPopup(); // Ensure modal exists before setting up listeners
+        setupWishlistPopupCreate();
+        setupWishlistPopupSuccess();
         setupWishlistPinPopup();
         setupPopup();
         setupPaymentPopup();
@@ -334,6 +338,67 @@ function setupWishlistPopup() {
             $("#modalOverlay").fadeOut(); // Hide overlay
         }
     });
+}
+// Wishlist Popup Create New
+function setupWishlistPopupCreate() {
+  $(document).on("click", ".btn-wishlist-addlist", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      // Close any other open modals
+      $(".dawa-modal").fadeOut();
+      $("#modalOverlay").fadeOut();
+
+      // Ensure modal exists before showing
+      if ($("#wishlistModal").length) {
+          $("#wishlistModal").fadeIn();
+          $("#modalOverlay").fadeIn(); // Show overlay
+      } else {
+          console.error("❌ Wishlist modal not found in the DOM!");
+      }
+  });
+
+  $(document).on("click", ".close-btn, #modalOverlay", function () {
+      $("#wishlistModal").fadeOut();
+      $("#modalOverlay").fadeOut(); // Hide overlay
+  });
+
+  $(window).on("click", function (e) {
+      if ($(e.target).is("#wishlistModal")) {
+          $("#wishlistModal").fadeOut();
+          $("#modalOverlay").fadeOut(); // Hide overlay
+      }
+  });
+}
+
+
+// Wishlist Popup Success
+function setupWishlistPopupSuccess() {
+  $(document).on("click", ".btn-wishlist-save", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      console.log("✅ Wishlist button clicked!");
+
+      // Ensure modal exists before showing
+      if ($("#wishlistModal").length) {
+          $("#wishlistModal").fadeIn();
+          $("#modalOverlay").fadeIn(); // Show overlay
+      } else {
+          console.error("❌ Wishlist modal not found in the DOM!");
+      }
+  });
+
+  $(document).on("click", ".close-btn, #modalOverlay", function () {
+      $("#wishlistModal").fadeOut();
+      $("#modalOverlay").fadeOut(); // Hide overlay
+  });
+
+  $(window).on("click", function (e) {
+      if ($(e.target).is("#wishlistModal")) {
+          $("#wishlistModal").fadeOut();
+          $("#modalOverlay").fadeOut(); // Hide overlay
+      }
+  });
 }
 
 // Wishlist PIN Popup

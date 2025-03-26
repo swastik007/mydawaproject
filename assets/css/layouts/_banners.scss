@@ -53,80 +53,51 @@
         top: 50%; // Move it to the vertical center
         transform: translateY(-50%); // Adjust centering
     }
-}
-.text-content {
-    text-align: left;
-    color: white;
-    line-height: 1.5;
-    margin-left: 20px;
-    margin-top: 20px;
-    @include respond-to(lg) {
-        margin-top: 0;
-    }
-    @include respond-to(xxl) {
-        margin-left: 60px;
-    }
-    p {
-        font-family: $figtreeLight;
-        margin-bottom: 0px;
-        @include responsive-font(18px, 25px, 18px, 25px);
-        @include respond-to(sm) {
-            max-width: 600px;
-       }
-       @include respond-to(lg) {
-           max-width: 700px;
-       }
-       @include respond-to(xxl) {
-           max-width: 850px;
-       }
-        
-    }
-    h4 {
-        font-family: $figtreeExtraBold;
-        line-height: 1.2;
-        max-width: 300px;
-        
-        @include responsive-font(32px, 40px, 40px, 52px);
+  }
+  .text-content {
+      text-align: left;
+      color: white;
+      line-height: 1.5;
+      margin-left: 20px;
+      margin-top: 20px;
+      @include respond-to(lg) {
+          margin-top: 0;
+      }
+      @include respond-to(xxl) {
+          margin-left: 60px;
+      }
+      p {
+          font-family: $figtreeLight;
+          margin-bottom: 0px;
+          @include responsive-font(18px, 25px, 18px, 25px);
+          @include respond-to(sm) {
+              max-width: 600px;
+        }
         @include respond-to(lg) {
-            max-width: 400px;
+            max-width: 700px;
         }
         @include respond-to(xxl) {
-            max-width: 500px;
-           
+            max-width: 850px;
         }
-       
-    }
-}
-  .banner-text {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // text-align: center;
-    // color: white;
-    // z-index: 2;
-    // @include respond-to(sm) {
-    //     top: 50px;
-    //     /* Move to the top */
-    //     left: 50px;
-    //     /* Align to the left */
-    //     transform: none;
-    //     /* No centering transformation */
-    //     text-align: left;
-    //     /* Left-align the text */
-    // }
-    // @include respond-to(md) {
-    //     top: 50%;
-    //     left: 80px;
-    //     /* Align to the left */
-    //     transform: translate(0, -50%);
-    //     /* Vertically centered, horizontally left */
-    //     text-align: left;
-    // }
-    // @include respond-to(xxl) {
-    //     left: 130px;
-    // }
+          
+      }
+      h4 {
+          font-family: $figtreeExtraBold;
+          line-height: 1.2;
+          max-width: 300px;
+          
+          @include responsive-font(32px, 40px, 40px, 52px);
+          @include respond-to(lg) {
+              max-width: 400px;
+          }
+          @include respond-to(xxl) {
+              max-width: 500px;
+            
+          }
+        
+      }
   }
+   
   &.homebanner-section {
     .banner-content-wrap {
       top: 20px;
@@ -289,6 +260,67 @@
         }
       }
     }
+  }
+  &.cto-section{
+    height: 640px;
+  @include respond-to(sm) {
+    height: 990px;
+  }
+  @include respond-to(lg) {
+    height: 540px;
+    margin-bottom: 50px;
+  }
+  @include respond-to(xxl) {
+    height: 580px;
+    margin-bottom: 90px;
+  }
+  picture,
+  img {
+    object-position: top;
+    @include respond-to(lg) {
+      object-position: center;
+    }
+  }
+    .banner-content-wrap {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      align-items: flex-start;
+      bottom: 0;
+      top: auto;
+      left: 20px;
+      transform: translateY(-20%);
+      justify-content: flex-start;
+      @include respond-to(md) {
+        transform: translateY(-30%);
+      }
+      @include respond-to(lg) {
+          // On large screens
+          align-items: flex-start; // Center-align content inside
+          left: 10px;
+          top: 50%; // Move it to the vertical center
+          transform: translateY(-50%); // Adjust centering
+      }
+    }
+    .text-content, .button-wrap {
+      margin-left: 20px;
+      @include respond-to(xxl) {
+          margin-left: 60px;
+      }
+     
+    }
+    .text-content{
+      p{
+        height: fit-content;
+        display: block;
+        @include respond-to(lg) {
+          width: 300px;
+        }
+        @include respond-to(xxl) {
+          width: 480px;
+        }
+      }
+     }
   }
 }
 

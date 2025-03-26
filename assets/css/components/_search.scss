@@ -159,18 +159,21 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 430px;
-  height: 52px;
+  
   background: #fff;
   border-radius: 25px;
   padding: 10px 16px;
   border: 1px solid #d4dee5;
-  @media screen and (max-width: 1100px) {
-    width: 100%;
+  width: 100%;
     position: absolute;
     left: 0;
     right: 0;
     top: 84px;
+  
+  @include respond-to(lg) {
+    position: static;
+    width: 430px;
+    height: 52px;
   }
   input {
     width: calc(100% - 20px);

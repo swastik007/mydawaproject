@@ -11,6 +11,8 @@
     z-index: 1000;
     border: 1px solid #E7ECF4;
     width: 100%;
+    max-height: 98vh;
+    overflow-y: scroll;
     &.modal-sm {
         max-width: 600px;
         @include respond-to(xxl) {

@@ -67,7 +67,6 @@
         margin-left: 20px;
         @include respond-to(sm) {
             flex-direction: row;
-
         }
         @include respond-to(xxl) {
             gap: 16px;
@@ -109,15 +108,13 @@
     .custom-dots-container {
         display: flex;
         justify-content: center;
-        position: absolute;
-        
+        position: absolute;        
         z-index: 8;
         bottom: 60px;
         top: auto;
         left: 50%;
         transform: translateX(-50%); // Ensures perfect centering
-       
-        
+               
         @include respond-to(lg) {
             justify-content: flex-start;
             bottom: auto;
@@ -153,7 +150,33 @@
                     width: 75px;
                 }
             }
+           
         }
+        &.dots-dark{
+            .owl-dot{
+                background-color: $grey7;
+                &.active {
+                    background-color: $black;
+                }
+            }                
+        }
+    }
+    &.dots-bottom-slider{   
+        .custom-dots-container{            
+            @include respond-to(lg) {
+                bottom: 80px;
+                top: auto;
+                left: 50%;
+                transform: translateX(-50%); // Ensures perfect centering
+                margin-left: 0;
+            }            
+            @include respond-to(xxl) {
+                bottom: 140px;
+                top: auto;
+                left: 50%;
+                transform: translateX(-50%); // Ensures perfect centering
+            }        
+        }        
     }
 }
 .themesliderone{

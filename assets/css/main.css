@@ -11798,13 +11798,13 @@ body {
 }
 @media (min-width: 1200px) {
   .dawamain {
-    margin-top: 175px;
+    margin-top: 150px;
     padding-top: 25px;
   }
 }
 @media (min-width: 1800px) {
   .dawamain {
-    margin-top: 256px;
+    margin-top: 220px;
     padding-top: 35px;
   }
 }
@@ -12190,17 +12190,49 @@ body {
   background-color: rgb(113, 113, 112);
   color: #fff;
 }
+.btn-dark svg {
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 1800px) {
+  .btn-dark svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+.btn-dark svg path {
+  fill: white;
+}
 
 .btn-white {
   background-color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  color: rgb(230, 27, 119);
+  color: rgb(55, 52, 52);
+  font-family: "Figtree-Medium";
+  border: 1px solid white;
+  box-shadow: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+@media (min-width: 992px) {
+  .btn-white {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .btn-white {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .btn-white {
+    font-size: 22px;
+  }
 }
 .btn-white:hover, .btn-white:focus {
-  background-color: #f2f2f2;
-  color: #444;
+  background-color: rgb(55, 52, 52);
+  border-color: rgb(55, 52, 52);
+  color: white;
 }
 
 .btn-lightred {
@@ -12525,6 +12557,8 @@ body {
   z-index: 1000;
   border: 1px solid #E7ECF4;
   width: 100%;
+  max-height: 98vh;
+  overflow-y: scroll;
 }
 .dawa-modal.modal-sm {
   max-width: 600px;
@@ -16395,20 +16429,21 @@ ol.form-list {
   position: relative;
   display: flex;
   align-items: center;
-  width: 430px;
-  height: 52px;
   background: #fff;
   border-radius: 25px;
   padding: 10px 16px;
   border: 1px solid #d4dee5;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 84px;
 }
-@media screen and (max-width: 1100px) {
+@media (min-width: 1200px) {
   .search-container {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 84px;
+    position: static;
+    width: 430px;
+    height: 52px;
   }
 }
 .search-container input {
@@ -18161,6 +18196,82 @@ header {
     max-width: 500px;
   }
 }
+.banner-section.cto-section {
+  height: 640px;
+}
+@media (min-width: 768px) {
+  .banner-section.cto-section {
+    height: 990px;
+  }
+}
+@media (min-width: 1200px) {
+  .banner-section.cto-section {
+    height: 540px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1800px) {
+  .banner-section.cto-section {
+    height: 580px;
+    margin-bottom: 90px;
+  }
+}
+.banner-section.cto-section picture,
+.banner-section.cto-section img {
+  object-position: top;
+}
+@media (min-width: 1200px) {
+  .banner-section.cto-section picture,
+  .banner-section.cto-section img {
+    object-position: center;
+  }
+}
+.banner-section.cto-section .banner-content-wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: flex-start;
+  bottom: 0;
+  top: auto;
+  left: 20px;
+  transform: translateY(-20%);
+  justify-content: flex-start;
+}
+@media (min-width: 992px) {
+  .banner-section.cto-section .banner-content-wrap {
+    transform: translateY(-30%);
+  }
+}
+@media (min-width: 1200px) {
+  .banner-section.cto-section .banner-content-wrap {
+    align-items: flex-start;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.banner-section.cto-section .text-content, .banner-section.cto-section .button-wrap {
+  margin-left: 20px;
+}
+@media (min-width: 1800px) {
+  .banner-section.cto-section .text-content, .banner-section.cto-section .button-wrap {
+    margin-left: 60px;
+  }
+}
+.banner-section.cto-section .text-content p {
+  height: fit-content;
+  display: block;
+}
+@media (min-width: 1200px) {
+  .banner-section.cto-section .text-content p {
+    width: 300px;
+  }
+}
+@media (min-width: 1800px) {
+  .banner-section.cto-section .text-content p {
+    width: 480px;
+  }
+}
 
 .banner-bottom-section {
   background-color: #fee2e2;
@@ -18556,6 +18667,29 @@ header {
 @media (min-width: 1800px) {
   .home-slider .custom-dots-container .owl-dot.active {
     width: 75px;
+  }
+}
+.home-slider .custom-dots-container.dots-dark .owl-dot {
+  background-color: rgb(178, 178, 178);
+}
+.home-slider .custom-dots-container.dots-dark .owl-dot.active {
+  background-color: rgb(55, 52, 52);
+}
+@media (min-width: 1200px) {
+  .home-slider.dots-bottom-slider .custom-dots-container {
+    bottom: 80px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+}
+@media (min-width: 1800px) {
+  .home-slider.dots-bottom-slider .custom-dots-container {
+    bottom: 140px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -20011,9 +20145,21 @@ header {
 }
 .product-promotions .promotion-image {
   background-size: contain;
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   background-repeat: no-repeat;
+}
+@media (min-width: 1200px) {
+  .product-promotions .promotion-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (min-width: 1800px) {
+  .product-promotions .promotion-image {
+    width: 380px;
+    height: 380px;
+  }
 }
 .product-promotions .promotion-image .product-image {
   position: absolute;
@@ -20028,21 +20174,42 @@ header {
   z-index: 2;
 }
 .product-promotions .promotion-text .heading {
-  font-size: 20px;
   font-family: "Figtree";
+  font-size: 20px;
+}
+@media (min-width: 992px) {
+  .product-promotions .promotion-text .heading {
+    font-size: 28px;
+  }
 }
 @media (min-width: 1200px) {
   .product-promotions .promotion-text .heading {
     font-size: 24px;
   }
 }
+@media (min-width: 1800px) {
+  .product-promotions .promotion-text .heading {
+    font-size: 32px;
+  }
+}
 .product-promotions .promotion-text .promo-text {
   font-size: 28px;
   font-family: "Figtree-ExtraBold";
+  font-size: 28px;
+}
+@media (min-width: 992px) {
+  .product-promotions .promotion-text .promo-text {
+    font-size: 40px;
+  }
 }
 @media (min-width: 1200px) {
   .product-promotions .promotion-text .promo-text {
     font-size: 32px;
+  }
+}
+@media (min-width: 1800px) {
+  .product-promotions .promotion-text .promo-text {
+    font-size: 48px;
   }
 }
 .product-promotions .promotion-text .btn-grey {

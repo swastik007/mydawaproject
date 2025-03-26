@@ -31,9 +31,17 @@
     }
     .promotion-image {
         background-size: contain;
-        width: 300px;
-        height: 300px;
+        width: 180px;
+        height: 180px;
         background-repeat: no-repeat;
+        @include respond-to(lg) {
+            width: 300px;
+            height: 300px;
+        }
+        @include respond-to(xxl) {
+            width: 380px;
+            height: 380px;
+        }
         .product-image {
             position: absolute;
             top: 50%;
@@ -48,18 +56,13 @@
     .promotion-text {
         z-index: 2;
         .heading {
-            font-size: 20px;
-            font-family: $figtree;
-            @include respond-to(lg) {
-                font-size: 24px;
-            }
+            font-family: $figtree;           
+            @include responsive-font(20px, 28px, 24px, 32px);
         }
         .promo-text {
             font-size: 28px;
             font-family: $figtreeExtraBold;
-            @include respond-to(lg) {
-                font-size: 32px;
-            }
+            @include responsive-font(28px, 40px, 32px, 48px);           
         }
         .btn-grey {
             margin-top: 20px;
