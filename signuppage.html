@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendor/intlTel/intlTelInput.css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
@@ -91,7 +92,10 @@
                                     </div>
 
                                     <!-- Phone Number -->
-                                   
+                                    <div class="input-group mb-3 mb-xl-4">
+                                        <label for="intlphoneNumber">Phone Number <span class="required">*</span></label>
+                                        <input type="tel" id="intlphoneNumber">
+                                    </div>
                                     <div class="input-group mb-2 mb-xl-3">
                                         <label for="phoneNumber">Phone Number <span class="required">*</span></label>
                                         <div class="input-icon">
@@ -175,6 +179,7 @@
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
+    <script src="assets/vendor/intlTel/intlTelInput.js"></script>
     <script src="assets/js/themescripts.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -193,7 +198,57 @@
                     toggleIcon.src = "./assets/images/icons/login-eye.svg";
                 }
             });
-        });
+
+            // PHone INTl example
+            // const phoneInput = document.querySelector("#intlphoneNumber");
+
+            // if (phoneInput) {
+            //     window.intlTelInput(phoneInput, {
+            //         initialCountry: "np", // Set default to Nepal
+            //         separateDialCode: true, // Show country code separately
+            //         preferredCountries: ["np", "kn", "us"], // Top preferred countries
+            //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.2/js/utils.js"
+            //     });
+            // } else {
+            //     console.error("❌ Phone input element not found! Ensure the input exists in the DOM.");
+            // }
+            const input = document.querySelector("#intlphoneNumber");
+            const iti = window.intlTelInput(input, {
+                // allowDropdown: false,
+                // autoPlaceholder: "off",
+                // containerClass: "test",
+                // countryOrder: ["jp", "kr"],
+                // countrySearch: false,
+                // customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+                //   return "e.g. " + selectedCountryPlaceholder;
+                // },
+                // dropdownContainer: document.querySelector('#custom-container'),
+                // excludeCountries: ["us"],
+                // fixDropdownWidth: false,
+                // formatAsYouType: false,
+                // formatOnDisplay: false,
+                // geoIpLookup: function(callback) {
+                //   fetch("https://ipapi.co/json")
+                //     .then(function(res) { return res.json(); })
+                //     .then(function(data) { callback(data.country_code); })
+                //     .catch(function() { callback(); });
+                // },
+                // hiddenInput: () => ({ phone: "phone_full", country: "country_code" }),
+                // i18n: { 'de': 'Deutschland' },
+                initialCountry: "np",
+                separateDialCode: true, // ✅ Show country code next to the flag
+                // loadUtils: () => import("/build/js/utils.js"), // leading slash (and http-server) required for this to work in chrome
+                // nationalMode: false,
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                // placeholderNumberType: "MOBILE",
+                // showFlags: false,
+                // separateDialCode: true,
+                // strictMode: true,
+                // useFullscreenPopup: true,
+                // validationNumberTypes: null,
+            });
+            window.iti = iti; // useful for testing
+                });
     </script>
     </body>
 

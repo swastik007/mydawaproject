@@ -608,18 +608,18 @@ function setuptransferBalancePopup() {
             console.log("✅ Top-up modal found, opening...");
             $("#transferBalanceModal").fadeIn();
             $("#modalOverlay").fadeIn(); // Show overlay
-            const phoneInput = document.querySelector("#phoneNumber");
+            // const phoneInput = document.querySelector("#phoneNumber");
 
-            if (phoneInput) {
-                window.intlTelInput(phoneInput, {
-                    initialCountry: "np", // Set default to Nepal
-                    separateDialCode: true, // Show country code separately
-                    preferredCountries: ["np", "in", "us", "gb"], // Top preferred countries
-                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
-                });
-            } else {
-                console.error("❌ Phone input element not found! Ensure the input exists in the DOM.");
-            }
+            // if (phoneInput) {
+            //     window.intlTelInput(phoneInput, {
+            //         initialCountry: "np", // Set default to Nepal
+            //         separateDialCode: true, // Show country code separately
+            //         preferredCountries: ["np", "in", "us", "gb"], // Top preferred countries
+            //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+            //     });
+            // } else {
+            //     console.error("❌ Phone input element not found! Ensure the input exists in the DOM.");
+            // }
 
         } else {
             console.error("❌ Top-up modal not found in the DOM!");
