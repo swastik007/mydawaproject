@@ -8,7 +8,7 @@
   box-shadow: none; // No shadow initially
   transition: all 0.3s ease-in-out; // Smooth transition
   &.sticky {
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     background: white;
     .header-promo {
       display: none; // Hide the promo section when sticky
