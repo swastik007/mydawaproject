@@ -193,10 +193,11 @@
     position: relative;
     img {
         position: absolute;
-        left: 7px;
+        left: 12px;
         top: 16px;
         width: 20px;
         height: 20px;
+        z-index: 9;
         @include respond-to(xxl) {
             width: 30px;
             height: 30px;
@@ -204,10 +205,15 @@
             top: 20px;
         }
     }
-    input.with-icon {
-        padding-left: 30px;
-        @include respond-to(xxl) {
-            padding-left: 70px;
+    input{
+        &.with-icon {
+            padding-left: 45px;
+            @include respond-to(xxl) {
+                padding-left: 70px;
+            }
+        }
+        &.editable{
+            background-color: #F1F1F5;
         }
     }
     img.right-icon {
@@ -224,8 +230,55 @@
             top: 18px;
         }
     }
+    .right-check-icon,
+    .right-check-icon-success {
+        display: none;
+    }
+    .right-check-icon,
+    .right-check-icon-success{
+        position: absolute;
+        left: auto;
+        right: 12px;
+        top: 16px;
+        width: 20px;
+        height: 20px;
+        @include respond-to(xxl) {
+            width: 32px;
+            height: 32px;
+            right: 18px;
+            top: 18px;
+        }
+    }
 }
 
+input{
+    position: relative;
+    &.form-icon-left{}
+    &.form-icon-right{}
+    &.form-icon-edit{
+        &:after{
+            content: '';
+            background-image: url('../images/icons/form-edit-pencit.png');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+        
+    }
+    &.form-icon-mail{
+        &:before{
+            content: '';
+            background-image: url('../images/icons/form-mail-icon.png');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+    }
+}
 .form-bottom-info {
     font-family: $figtreeLight;
     @include responsive-font(13px,  20px, 13px, 20px);

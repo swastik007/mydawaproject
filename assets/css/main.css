@@ -13325,14 +13325,6 @@ select.filled,
 textarea.filled {
   pointer-events: none;
 }
-input[type=text].readonly,
-input[type=number].readonly,
-input[type=email].readonly,
-input[type=password].readonly,
-select.readonly,
-textarea.readonly {
-  background-color: #F1F1F5;
-}
 
 textarea {
   min-height: 160px;
@@ -21497,15 +21489,15 @@ header {
 .switch {
   position: relative;
   display: flex;
-  width: 34px;
-  height: 20px;
-  flex-basis: 34px;
+  width: 50px;
+  height: 25px;
+  flex-basis: 50px;
 }
 @media (min-width: 1800px) {
   .switch {
-    width: 72px;
-    height: 32px;
-    flex-basis: 72px;
+    width: 100px;
+    height: 40px;
+    flex-basis: 100px;
   }
 }
 .switch input {
@@ -21539,8 +21531,8 @@ header {
   .switch .slider:before {
     width: 22px;
     height: 22px;
-    left: 5px;
-    bottom: 5px;
+    left: 9px;
+    bottom: 9px;
   }
 }
 .switch input:checked + .slider {
@@ -24615,10 +24607,11 @@ header {
 }
 .input-icon img {
   position: absolute;
-  left: 7px;
+  left: 12px;
   top: 16px;
   width: 20px;
   height: 20px;
+  z-index: 9;
 }
 @media (min-width: 1800px) {
   .input-icon img {
@@ -24629,12 +24622,15 @@ header {
   }
 }
 .input-icon input.with-icon {
-  padding-left: 30px;
+  padding-left: 45px;
 }
 @media (min-width: 1800px) {
   .input-icon input.with-icon {
     padding-left: 70px;
   }
+}
+.input-icon input.editable {
+  background-color: #F1F1F5;
 }
 .input-icon img.right-icon {
   position: absolute;
@@ -24651,6 +24647,50 @@ header {
     right: 18px;
     top: 18px;
   }
+}
+.input-icon .right-check-icon,
+.input-icon .right-check-icon-success {
+  display: none;
+}
+.input-icon .right-check-icon,
+.input-icon .right-check-icon-success {
+  position: absolute;
+  left: auto;
+  right: 12px;
+  top: 16px;
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1800px) {
+  .input-icon .right-check-icon,
+  .input-icon .right-check-icon-success {
+    width: 32px;
+    height: 32px;
+    right: 18px;
+    top: 18px;
+  }
+}
+
+input {
+  position: relative;
+}
+input.form-icon-edit:after {
+  content: "";
+  background-image: url("../images/icons/form-edit-pencit.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+input.form-icon-mail:before {
+  content: "";
+  background-image: url("../images/icons/form-mail-icon.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 .form-bottom-info {
