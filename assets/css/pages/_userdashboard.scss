@@ -110,8 +110,11 @@
         }
     }
     .accordion-button::after {
-        z-index: 9;
-        margin-right: 16px;
+        position: absolute;
+        right: 46px;
+        @include respond-to(xxl) {
+            right: 61px;
+        }
     }
     .accordion-button:focus {
         box-shadow: none;

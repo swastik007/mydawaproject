@@ -25906,8 +25906,13 @@ header {
   }
 }
 .dashboard-content .accordion-button::after {
-  z-index: 9;
-  margin-right: 16px;
+  position: absolute;
+  right: 46px;
+}
+@media (min-width: 1800px) {
+  .dashboard-content .accordion-button::after {
+    right: 61px;
+  }
 }
 .dashboard-content .accordion-button:focus {
   box-shadow: none;
