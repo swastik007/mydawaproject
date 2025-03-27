@@ -20692,7 +20692,9 @@ header {
   background-color: #ccc;
 }
 .mega-navigation .dropdown-menu {
-  transform: translate(310px, 0px) !important;
+  transform: none !important;
+  left: 310px !important;
+  top: 0 !important;
   border: none;
 }
 .mega-navigation .mega-column {
@@ -26509,4 +26511,26 @@ header {
   opacity: 0.5;
   margin-left: 10px !important;
   color: #b1b1c3 !important;
+}
+
+.modal-quick-view .btn-close {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  z-index: 999;
+  font-size: 12px;
+}
+.modal-quick-view .modal-body {
+  padding: 28px;
+}
+.modal-quick-view .off-card h2 span, .modal-quick-view .off-card .h2 span {
+  color: #faa138;
+  font-family: "Figtree-Bold";
+  font-size: 14px;
+}
+.modal-quick-view .brand-name {
+  color: #005aa1;
+}
+.modal-quick-view .product-title {
+  font-family: "Figtree-Bold";
 }/*# sourceMappingURL=main.css.map */

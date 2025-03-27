@@ -1,0 +1,27 @@
+.modal-quick-view {
+  .btn-close {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    z-index: 999;
+    font-size: 12px;
+  }
+  .modal-body {
+    padding: 28px;
+  }
+  .off-card {
+    h2 {
+      span {
+        color: #faa138;
+        font-family: $figtreeBold;
+        font-size: 14px;
+      }
+    }
+  }
+  .brand-name {
+    color: #005aa1;
+  }
+  .product-title {
+    font-family: $figtreeBold;
+  }
+}

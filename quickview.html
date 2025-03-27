@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Dawa</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="mydawa" />
+    <meta name="keywords" content="mydawa" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal-quick-view modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <div class="product-page">
+                        <div class="product-detail-wrap">
+                            <!-- Left Column -->
+                            <div class="product-details">
+                                <!-- Left Section: Product Images -->
+                                <div class="product-images">
+                                    <div class="large-image">
+                                        <img id="main-image" class="main-image"
+                                            src="assets/images/product-images/product1.jpg" alt="Product" />
+                                    </div>
+                                    <div class="thumbnails">
+                                        <img src="assets/images/product-images/product2.jpg" alt="Thumb 1"
+                                            class="thumbnail active" />
+                                        <img src="assets/images/product-images/product3.jpg" alt="Thumb 2"
+                                            class="thumbnail" />
+                                        <img src="assets/images/product-images/product4.jpg" alt="Thumb 3"
+                                            class="thumbnail" />
+                                        <img src="assets/images/product-images/product5.jpg" alt="Thumb 4"
+                                            class="thumbnail" />
+                                    </div>
+                                </div>
+
+                                <!-- Right Section: Product Details & Cart -->
+
+                                <div class="product-info">
+                                    <h2 class="product-title m-0">
+                                        Durex Invisible Packet Of 3 Condoms
+                                    </h2>
+                                    <a href="#" class="brand-name">Visit Durex Store</a>
+                                    <div class="ratings">
+                                        <span class="stars">
+                                            <span>⭐</span>
+                                            <span>⭐</span>
+                                            <span>⭐</span>
+                                            <span>⭐</span>
+                                            <span>⭐</span>
+                                            <span class="rating">4.5</span>
+                                        </span>
+                                        <span>|</span>
+                                        <span class="rating-text">58 Ratings</span>
+                                        <span>|</span>
+                                        <span class="rating-text">17 Reviews</span>
+                                    </div>
+                                    <!-- Product At a Glance Section -->
+                                    <div class="product-glance">
+                                        <h4>At a glance</h4>
+                                        <ul>
+                                            <li>
+                                                <i class="icon-box"></i>
+                                                <strong>Features:</strong> Ultra-Thin, Lubricated
+                                                Quality-Tested
+                                            </li>
+                                            <li>
+                                                <i class="icon-factory"></i>
+                                                <strong>Manufacturer:</strong> Reckitt Benckiser
+                                                India Pvt. Ltd.
+                                            </li>
+                                            <li>
+                                                <i class="icon-return"></i>
+                                                <strong>Return Policy:</strong> Non-refundable
+                                            </li>
+                                            <li>
+                                                <i class="icon-calendar"></i>
+                                                <strong>Expiry:</strong> On or After 30/01/2029
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="off-card mt-4">
+                                        <div class="off-ribbon rounded position-static d-inline-block">Flat
+                                            5%
+                                            Off
+                                        </div>
+                                        <h2 class="mt-2 mb-1">KES 150 <del>KES 250</del> <span>Multiple pack size
+                                                available</span></h2>
+                                        <small><strong>Delivery withing 4 hours</strong> on all orders
+                                            placed between
+                                            <strong class="text-success">8:00 AM & 8:00</strong>
+                                            PM</small>
+                                        <div class="d-flex gap-2 mt-3">
+                                            <button class="mt-2 w-100 rounded-pill btn-green">
+                                                Add To Cart
+                                            </button>
+                                            <button class="mt-2 w-100 rounded-pill btn btn-outline-dark">
+                                                Add To Wish List
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/vendor/jquery-3.6.4.min.js"></script>
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/owl.carousel.min.js"></script>
+    <script src="assets/js/themescripts.js"></script>
+    <script type="text/javascript">
+        window.onload = () => {
+            const myModal = new bootstrap.Modal('#exampleModal');
+            myModal.show();
+        }
+    </script>
+
+</body>
+
+</html>
