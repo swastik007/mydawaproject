@@ -13540,6 +13540,7 @@ input[type=radio]:checked::before {
 .form-check {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .form-check input {
   margin-right: 10px;
@@ -13579,6 +13580,25 @@ input[type=radio]:checked::before {
 }
 .form-check .form-check-input:focus {
   box-shadow: none;
+}
+.form-check.form-check-warning {
+  padding-bottom: 15px;
+}
+@media (min-width: 1800px) {
+  .form-check.form-check-warning {
+    padding-bottom: 20px;
+  }
+}
+.form-check.form-check-warning .form-warning {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+@media (min-width: 1800px) {
+  .form-check.form-check-warning .form-warning {
+    left: 28px;
+    top: 20px;
+  }
 }
 
 .custom-checkbox-list {
@@ -15008,6 +15028,36 @@ ol.form-list {
 @media (min-width: 1800px) {
   .form_error {
     margin-bottom: 12px;
+  }
+}
+
+.form-warning {
+  font-family: "Figtree-Light";
+  color: rgb(230, 27, 74);
+  margin-top: 5px;
+  margin-left: 5px !important;
+  display: block;
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .form-warning {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-warning {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .form-warning {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .form-warning {
+    margin-left: 7px !important;
+    margin-top: 7px;
   }
 }
 

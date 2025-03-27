@@ -204,6 +204,7 @@ input[type="radio"]:checked::before {
 .form-check {
     display: flex;
     align-items: center;
+    position: relative;
     input {
         margin-right: 10px;
     }
@@ -227,6 +228,23 @@ input[type="radio"]:checked::before {
     .form-check-input:focus {
         box-shadow: none;
     }
+    &.form-check-warning{
+        padding-bottom: 15px;
+        @include respond-to(xxl) {
+            padding-bottom: 20px;
+        }
+       
+        .form-warning{
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            @include respond-to(xxl) {
+                left: 28px;
+                top: 20px;
+            }
+        }
+    }
+    
 }
 
 .custom-checkbox-list {
@@ -1215,4 +1233,17 @@ ol.form-list {
         margin-bottom: 12px;
     }
    
+}
+
+.form-warning{
+    font-family: $figtreeLight;
+    color: $red;
+    margin-top: 5px;
+    margin-left: 5px!important;
+    display: block;
+    @include responsive-font(14px, 20px, 14px, 20px);
+    @include respond-to(xxl) {
+        margin-left: 7px!important;
+        margin-top: 7px;
+    }
 }

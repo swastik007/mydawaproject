@@ -104,6 +104,7 @@
                                             <img src="assets/images/icons/form-icon-mail.png" alt="Phone">
                                             <input class="with-icon" type="text" id="email" placeholder="Enter Your Email" required>
                                         </div>
+                                        <span class="form-label form-warning">Email already exists</span>
                                     </div>
 
                                     <!-- Password -->
@@ -112,11 +113,10 @@
                                         <div class="input-group password-group  mb-4">
                                             <label for="InputPassword" class="form-label">Password<span class="required">*</span></label>
                                             <div class="position-relative w-100">
-                                                <input type="password" id="InputPassword" placeholder="Password" />
-                                                <a href="#" class="view-pass" id="ViewPass">
-                                                    <img src="./assets/images/icons/login-eye.svg" alt="Show Password Icon" />
-                                                </a>
+                                                <input type="password"  class="form-control is-invalid" id="InputPassword" placeholder="Password" />
+                                               
                                             </div>
+                                            <span class="form-warning">Email already exists</span>
                                         </div>
 
                                         <!-- Confirm Password -->
@@ -135,12 +135,15 @@
 
                                     <!-- Terms & Conditions -->
                                     <div class="form-options mt-3 mt-xl-4">
-                                        <div class="form-check mb-3">
+                                        <div class="form-check mb-3 form-check-warning">
                                             <input class="form-check-input" type="checkbox" id="updates">
                                             <label class="form-check-label" for="updates">
                                                 Get the latest updates on new products and offers from Mydawa
+                                               
                                             </label>
+                                            <span class="form-warning">You need to select this checkbox</span>
                                         </div>
+                                        
 
                                         <div class="form-check mb-3">
                                             <input class="form-check-input" type="checkbox" id="terms" required>
@@ -148,6 +151,7 @@
                                                 I accept the <a href="#">Terms and conditions</a> and <a href="#">Privacy Policy</a> <span class="required">*</span>
                                             </label>
                                         </div>
+                                        
 
                                         <div class="form-check mb-3">
                                             <input class="form-check-input" type="checkbox" id="ageConfirm" required>
@@ -171,6 +175,7 @@
         </div>
     </main>
     
+
     </div>
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
