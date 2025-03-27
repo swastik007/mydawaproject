@@ -340,7 +340,22 @@
     display: none;
     @include respond-to(md) {
         display: block;
+        height: 100%; 
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
+     .owl-carousel,
+ .slide-item {
+  height: 100%;
+}
+
+ picture,
+ img {
+  height: 100%;
+  object-fit: cover;
+}
     .banner-content-wrap {
         display: flex;
         flex-direction: column;
@@ -397,15 +412,28 @@
     // Styling for Owl Carousel Dots on Top of the Image
     .custom-dots-container {
         display: flex;
-        justify-content: flex-start;
-        position: absolute;
-        right: 0;
+        justify-content: center;
+        position: absolute;        
         z-index: 8;
-        top: 50px;
-        left: 78px;
+        bottom: 60px;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%); // Ensures perfect centering
+               
+        @include respond-to(lg) {
+            justify-content: flex-start;
+            bottom: auto;
+            top: 140px;
+            left: auto;
+            bottom: auto;
+            right: auto;
+            margin-left: 85px;
+        }
+        
         @include respond-to(xxl) {
-            top: 120px;
-            left: 80px;
+            top: 135px;
+            left: auto;
+            margin-left: 155px;
         }
         .owl-dot {
             width: 20px;
@@ -427,8 +455,18 @@
                     width: 75px;
                 }
             }
+           
+        }
+        &.dots-dark{
+            .owl-dot{
+                background-color: $grey7;
+                &.active {
+                    background-color: $black;
+                }
+            }                
         }
     }
+    
 }
 
 .offer-section,
