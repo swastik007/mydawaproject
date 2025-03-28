@@ -129,10 +129,9 @@
     background-color: #ccc;
   }
   .dropdown-menu {
-    transform: translate(310px, 0px) !important;
-    // .dropdown-menu {
-    //   transform: translate(230px, 0px) !important;
-    // }
+    transform: none !important;
+    left: 310px !important;
+    top: 0 !important;
     border: none;
   }
   .mega-column {
