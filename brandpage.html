@@ -33,277 +33,220 @@
                         <li><a href="#" class="active">Sexual Wellness</a></li>
                     </ul>
                 </nav>
+                
                 <!-- banner section -->
-                <div class="banner-section brand-section mydawa-container">
-                    <picture>
-                        <!-- Image for larger screens -->
-                        <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 1200px)" />
-                        <!-- Image for smaller screens -->
-                        <source srcset="assets/images/banners/durex-banner.png" media="(max-width: 767px)" />
-                        <!-- Fallback image -->
-                        <img src="assets/images/banners/durex-banner.png" alt="MyDawa Telehealth" />
-                    </picture>
-                    <div class="banner-content-wrap">
-                        <div class="text-content">
-                            <h4>Durex</h4>
-                            <p>Sexual wellness is about feeling good in your body and being connected with your partner(s). </p>
-
+                <div class="home-slider mydawa-container dots-bottom-slider">
+                    <div class="p-relative">
+                        <div id="homepage-carousel" class="owl-carousel owl-theme">
+                            <div class="slide-item position-relative text-white">
+                                <picture>
+                                    <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 1800px)">
+                                    <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 1200px)">
+                                    <source srcset="assets/images/banners/durex-banner.png" media="(min-width: 768px)">
+                                    <img src="assets/images/banners/durex-banner.png" alt="Home Slider" class="img-fluid w-100">
+                                </picture>
+                    
+                                <div class="banner-content-wrap">
+                                    <div class="text-content">
+                                        <h5 class="text-dark">Sexual Wellness</h5>
+                                        <h2 class="text-dark">Upto 50% off on all Sexual Wellness Products</h2>
+                                    </div>
+                                    <div class="button-wrap">
+                                        <button class="btn-primary btn-rounded btn-lg">Shop Now</button>
+                                        <button class="btn-white btn-rounded btn-lg text-dark">Speak to an expert</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item position-relative text-white">
+                                <picture>
+                                    <source srcset="assets/images/banners/homeslider2xl.png" media="(min-width: 1800px)">
+                                    <source srcset="assets/images/banners/homeslider2lg.png" media="(min-width: 1200px)">
+                                    <source srcset="assets/images/banners/homeslider2md.png" media="(min-width: 768px)">
+                                    <img src="assets/images/banners/homeslider2sm.png" alt="Home Slider" class="img-fluid w-100">
+                                </picture>
+                                <div class="banner-content-wrap">
+                                    <div class="text-content">
+                                        <h5>Get you health in balance</h5>
+                                        <h2>Wide range of products <br> to choose from.</h2>
+                                    </div>
+                                    <div class="button-wrap">
+                                        <button class="btn-primary btn-rounded btn-lg">Browse Products</button>
+                                        <button class="btn-outline-light btn-rounded btn-lg">See Offers</button>
+                                    </div>
+                                </div>
+                    
+                            </div>
                         </div>
-
+                    
+                        <!-- Custom Dots Container (Ensure it exists inside the home-slider) -->
+                        <div class="custom-dots-container dots-dark"></div>
                     </div>
-
+                    
                 </div>
 
                 <div id="popular-by-durex-section"></div>
 
 
+               
                 <div class="category-page mydawa-container">
-                    <!-- Filter Sidebar -->
+                    
+                    
                     <!-- Filter Sidebar -->
                     <aside class="category-sidebar">
-                        <div class="filter-section">
-                            <div class="filter-header" data-toggle="filter-category">
-                                <h4>Category</h4>
-                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
-                                </svg>
+                        <!-- Filter Sidebar -->
+                        <div class="accordion" id="filterAccordion">
+                            <!-- Category Section -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCategory">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="true" aria-controls="collapseCategory">
+                                        Category
+                                    </button>
+                                </h2>
+                                <div id="collapseCategory" class="accordion-collapse collapse show" aria-labelledby="headingCategory" data-bs-parent="#filterAccordion">
+                                    <div class="accordion-body">
+                                        <div class="form-options">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="condoms" checked>
+                                                <label class="form-check-label" for="condoms"> Condoms </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lubricants" checked>
+                                                <label class="form-check-label" for="lubricants"> Lubricants </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="contraceptives">
+                                                <label class="form-check-label" for="contraceptives"> Contraceptives </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="adulttoys">
+                                                <label class="form-check-label" for="adulttoys"> Adult Toys </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="performanceenhancers">
+                                                <label class="form-check-label" for="performanceenhancers"> Performance Enhancers </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="sexsupplements">
+                                                <label class="form-check-label" for="sexsupplements"> Sexual Health Supplements </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="filter-content" id="filter-category" style="display: block;">
-                                <ul class="custom-checkbox-list">
-                                    <li>
-                                        <input type="checkbox" id="condoms" class="custom-checkbox" checked>
-                                        <label for="condoms">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Condoms
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="lubricants" class="custom-checkbox" checked>
-                                        <label for="lubricants">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Lubricants
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="contraceptives" class="custom-checkbox">
-                                        <label for="contraceptives">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Contraceptives
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="adulttoys" class="custom-checkbox">
-                                        <label for="adulttoys">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Adult Toys
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="performanceenhancers" class="custom-checkbox">
-                                        <label for="performanceenhancers">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Performance Enhancers
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="sexsupplements" class="custom-checkbox">
-                                        <label for="sexsupplements">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Sexual Health Supplements
-                                            </label>
-                                    </li>
-
-                                </ul>
+                        
+                            <!-- Brand Section -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBrand">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBrand" aria-expanded="false" aria-controls="collapseBrand">
+                                        Brand
+                                    </button>
+                                </h2>
+                                <div id="collapseBrand" class="accordion-collapse collapse" aria-labelledby="headingBrand" data-bs-parent="#filterAccordion">
+                                    <div class="accordion-body">
+                                        <div class="form-options">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="loreal" checked>
+                                                <label class="form-check-label" for="loreal"> L'oreal </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="huggies" checked>
+                                                <label class="form-check-label" for="huggies"> Huggies </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="durex">
+                                                <label class="form-check-label" for="durex"> Durex </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="palmolive">
+                                                <label class="form-check-label" for="palmolive"> Palmolive </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="lifeguard">
+                                                <label class="form-check-label" for="lifeguard"> Life Guard </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="skinking">
+                                                <label class="form-check-label" for="skinking"> Skin Kings </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                        </div>
-
-                        <div class="filter-section">
-                            <div class="filter-header" data-toggle="filter-category">
-                                <h4>Brand</h4>
-                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
-                                </svg>
+                        
+                            <!-- Price Section -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingPrice">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice" aria-expanded="false" aria-controls="collapsePrice">
+                                        Price
+                                    </button>
+                                </h2>
+                                <div id="collapsePrice" class="accordion-collapse collapse" aria-labelledby="headingPrice" data-bs-parent="#filterAccordion">
+                                    <div class="container mt-4">
+                                        <div class="row">
+                                        <div class="col-sm-12">
+                                            <div id="slider-range"></div>
+                                        </div>
+                                        </div>
+                                        <div class="slider-labels">
+                                        <div class="caption">
+                                            <strong>KES</strong> <span id="slider-range-value1"></span>
+                                        </div>
+                                        <div class="caption caption-right">
+                                            <strong>KES</strong> <span id="slider-range-value2"></span>
+                                        </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-12">
+                                            <form>
+                                            <input type="hidden" name="min-value" value="">
+                                            <input type="hidden" name="max-value" value="">
+                                            </form>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="filter-content" id="filter-category" style="display: block;">
-                                <ul class="custom-checkbox-list">
-                                    <li>
-                                        <input type="checkbox" id="loreal" class="custom-checkbox" checked>
-                                        <label for="loreal">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                L'oreal
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="huggies" class="custom-checkbox" checked>
-                                        <label for="huggies">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Huggies
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="durex" class="custom-checkbox">
-                                        <label for="durex">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Durex
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="palmolive" class="custom-checkbox">
-                                        <label for="palmolive">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Palmolive
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="lifeguard" class="custom-checkbox">
-                                        <label for="lifeguard">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Life Guard
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="skinking" class="custom-checkbox">
-                                        <label for="skinking">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                Skin Kings
-                                            </label>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-
-
-                        <div class="filter-section">
-                            <div class="filter-header" data-toggle="filter-price">
-                                <h4>Price</h4>
-                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
-                                </svg>
-                            </div>
-                            <div class="filter-content" id="filter-price">
-                                <input type="range" min="200" max="4000" value="2000" class="price-range">
-                                <div class="price-values">
-                                    <span>KES 200</span> <span>KES 4000</span>
+                        
+                            <!-- Discounts Section -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingDiscounts">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiscounts" aria-expanded="false" aria-controls="collapseDiscounts">
+                                        Discounts
+                                    </button>
+                                </h2>
+                                <div id="collapseDiscounts" class="accordion-collapse collapse" aria-labelledby="headingDiscounts" data-bs-parent="#filterAccordion">
+                                    <div class="accordion-body">
+                                        <div class="form-options">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="10-above" checked>
+                                                <label class="form-check-label" for="10-above"> 10% and above </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="20-above" checked>
+                                                <label class="form-check-label" for="20-above"> 20% and above </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="30-above">
+                                                <label class="form-check-label" for="30-above"> 30% and above </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="40-above">
+                                                <label class="form-check-label" for="40-above"> 40% and above </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="50-above">
+                                                <label class="form-check-label" for="50-above"> 50% and above </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="60-above">
+                                                <label class="form-check-label" for="60-above"> 60% and above </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="filter-section">
-                            <div class="filter-header" data-toggle="filter-category">
-                                <h4>Discounts</h4>
-                                <svg class="filter-arrow" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z" fill="#B1B1C3"/>
-                                </svg>
-                            </div>
-
-                            <div class="filter-content" id="filter-category" style="display: block;">
-                                <ul class="custom-checkbox-list">
-                                    <li>
-                                        <input type="checkbox" id="10-above" class="custom-checkbox" checked>
-                                        <label for="10-above">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                10% and above
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="20-above" class="custom-checkbox" checked>
-                                        <label for="20-above">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                20% and above
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="30-above" class="custom-checkbox">
-                                        <label for="30-above">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                30% and above
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="40-above" class="custom-checkbox">
-                                        <label for="40-above">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                40% and above
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="50-above" class="custom-checkbox">
-                                        <label for="50-above">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                50% and above
-                                            </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="60-above" class="custom-checkbox">
-                                        <label for="60-above">
-                                                <svg class="checkbox-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#B1B1C3" stroke-width="2" fill="none" />
-                                                    <path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkmark" />
-                                                </svg>
-                                                60% and above
-                                            </label>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </div>
+                       
                     </aside>
 
 
@@ -564,17 +507,43 @@
                                     </div>
                                     <div class="find-actions">
                                         <a href="#" class="find-button">
-                                            <img src="assets/images/icons/chat-icon.png" alt="Chat Icon" /> Chat With Us
+                                            Family Planning
+                                            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77093 5.54025C5.9176 5.3994 6 5.20839 6 5.00923C6 4.81007 5.9176 4.61906 5.77093 4.47821L1.34511 0.229299C1.27294 0.157562 1.18661 0.100342 1.09116 0.0609786C0.995705 0.0216148 0.893043 0.000895016 0.789161 2.83929e-05C0.68528 -0.00083823 0.582259 0.0181658 0.486109 0.0559312C0.38996 0.0936966 0.302607 0.149467 0.229149 0.219989C0.15569 0.290511 0.0975976 0.374371 0.0582597 0.466677C0.0189218 0.558983 -0.000873192 0.657887 2.95066e-05 0.757616C0.000932205 0.857345 0.0225147 0.955903 0.0635175 1.04754C0.10452 1.13917 0.164122 1.22205 0.238846 1.29134L4.11154 5.00923L0.238846 8.72712C0.0963318 8.86878 0.0174741 9.0585 0.0192566 9.25544C0.0210392 9.45237 0.103319 9.64075 0.248376 9.78001C0.393432 9.91927 0.589659 9.99826 0.794792 9.99997C0.999925 10.0017 1.19755 9.92598 1.34511 9.78916L5.77093 5.54025Z" fill="#B1B1C3"/>
+                                            </svg>
                                         </a>
                                         <a href="#" class="find-button">
-                                            <img src="assets/images/icons/doctor-icon.png" alt="Expert Guidance Icon" /> Get Expert Guidance
+                                            Lubricants
+                                            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77093 5.54025C5.9176 5.3994 6 5.20839 6 5.00923C6 4.81007 5.9176 4.61906 5.77093 4.47821L1.34511 0.229299C1.27294 0.157562 1.18661 0.100342 1.09116 0.0609786C0.995705 0.0216148 0.893043 0.000895016 0.789161 2.83929e-05C0.68528 -0.00083823 0.582259 0.0181658 0.486109 0.0559312C0.38996 0.0936966 0.302607 0.149467 0.229149 0.219989C0.15569 0.290511 0.0975976 0.374371 0.0582597 0.466677C0.0189218 0.558983 -0.000873192 0.657887 2.95066e-05 0.757616C0.000932205 0.857345 0.0225147 0.955903 0.0635175 1.04754C0.10452 1.13917 0.164122 1.22205 0.238846 1.29134L4.11154 5.00923L0.238846 8.72712C0.0963318 8.86878 0.0174741 9.0585 0.0192566 9.25544C0.0210392 9.45237 0.103319 9.64075 0.248376 9.78001C0.393432 9.91927 0.589659 9.99826 0.794792 9.99997C0.999925 10.0017 1.19755 9.92598 1.34511 9.78916L5.77093 5.54025Z" fill="#B1B1C3"/>
+                                            </svg>
+                                        </a>
+                                        
+                                        <a href="#" class="find-button">
+                                            Contraceptives
+                                            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77093 5.54025C5.9176 5.3994 6 5.20839 6 5.00923C6 4.81007 5.9176 4.61906 5.77093 4.47821L1.34511 0.229299C1.27294 0.157562 1.18661 0.100342 1.09116 0.0609786C0.995705 0.0216148 0.893043 0.000895016 0.789161 2.83929e-05C0.68528 -0.00083823 0.582259 0.0181658 0.486109 0.0559312C0.38996 0.0936966 0.302607 0.149467 0.229149 0.219989C0.15569 0.290511 0.0975976 0.374371 0.0582597 0.466677C0.0189218 0.558983 -0.000873192 0.657887 2.95066e-05 0.757616C0.000932205 0.857345 0.0225147 0.955903 0.0635175 1.04754C0.10452 1.13917 0.164122 1.22205 0.238846 1.29134L4.11154 5.00923L0.238846 8.72712C0.0963318 8.86878 0.0174741 9.0585 0.0192566 9.25544C0.0210392 9.45237 0.103319 9.64075 0.248376 9.78001C0.393432 9.91927 0.589659 9.99826 0.794792 9.99997C0.999925 10.0017 1.19755 9.92598 1.34511 9.78916L5.77093 5.54025Z" fill="#B1B1C3"/>
+                                            </svg>
                                         </a>
                                         <a href="#" class="find-button">
-                                            <img src="assets/images/icons/mail-icon.png" alt="Email Icon" /> Send Us Email
+                                            Sexual Health Supplements
+                                            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77093 5.54025C5.9176 5.3994 6 5.20839 6 5.00923C6 4.81007 5.9176 4.61906 5.77093 4.47821L1.34511 0.229299C1.27294 0.157562 1.18661 0.100342 1.09116 0.0609786C0.995705 0.0216148 0.893043 0.000895016 0.789161 2.83929e-05C0.68528 -0.00083823 0.582259 0.0181658 0.486109 0.0559312C0.38996 0.0936966 0.302607 0.149467 0.229149 0.219989C0.15569 0.290511 0.0975976 0.374371 0.0582597 0.466677C0.0189218 0.558983 -0.000873192 0.657887 2.95066e-05 0.757616C0.000932205 0.857345 0.0225147 0.955903 0.0635175 1.04754C0.10452 1.13917 0.164122 1.22205 0.238846 1.29134L4.11154 5.00923L0.238846 8.72712C0.0963318 8.86878 0.0174741 9.0585 0.0192566 9.25544C0.0210392 9.45237 0.103319 9.64075 0.248376 9.78001C0.393432 9.91927 0.589659 9.99826 0.794792 9.99997C0.999925 10.0017 1.19755 9.92598 1.34511 9.78916L5.77093 5.54025Z" fill="#B1B1C3"/>
+                                            </svg>
                                         </a>
                                         <a href="#" class="find-button">
-                                            <img src="assets/images/icons/call-icon.png" alt="Call Icon" /> Call Us
+                                            Adult Toys
+                                            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77093 5.54025C5.9176 5.3994 6 5.20839 6 5.00923C6 4.81007 5.9176 4.61906 5.77093 4.47821L1.34511 0.229299C1.27294 0.157562 1.18661 0.100342 1.09116 0.0609786C0.995705 0.0216148 0.893043 0.000895016 0.789161 2.83929e-05C0.68528 -0.00083823 0.582259 0.0181658 0.486109 0.0559312C0.38996 0.0936966 0.302607 0.149467 0.229149 0.219989C0.15569 0.290511 0.0975976 0.374371 0.0582597 0.466677C0.0189218 0.558983 -0.000873192 0.657887 2.95066e-05 0.757616C0.000932205 0.857345 0.0225147 0.955903 0.0635175 1.04754C0.10452 1.13917 0.164122 1.22205 0.238846 1.29134L4.11154 5.00923L0.238846 8.72712C0.0963318 8.86878 0.0174741 9.0585 0.0192566 9.25544C0.0210392 9.45237 0.103319 9.64075 0.248376 9.78001C0.393432 9.91927 0.589659 9.99826 0.794792 9.99997C0.999925 10.0017 1.19755 9.92598 1.34511 9.78916L5.77093 5.54025Z" fill="#B1B1C3"/>
+                                            </svg>
                                         </a>
+                                        <a href="#" class="find-button">
+                                            Performance Enhancers
+                                            <svg viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77093 5.54025C5.9176 5.3994 6 5.20839 6 5.00923C6 4.81007 5.9176 4.61906 5.77093 4.47821L1.34511 0.229299C1.27294 0.157562 1.18661 0.100342 1.09116 0.0609786C0.995705 0.0216148 0.893043 0.000895016 0.789161 2.83929e-05C0.68528 -0.00083823 0.582259 0.0181658 0.486109 0.0559312C0.38996 0.0936966 0.302607 0.149467 0.229149 0.219989C0.15569 0.290511 0.0975976 0.374371 0.0582597 0.466677C0.0189218 0.558983 -0.000873192 0.657887 2.95066e-05 0.757616C0.000932205 0.857345 0.0225147 0.955903 0.0635175 1.04754C0.10452 1.13917 0.164122 1.22205 0.238846 1.29134L4.11154 5.00923L0.238846 8.72712C0.0963318 8.86878 0.0174741 9.0585 0.0192566 9.25544C0.0210392 9.45237 0.103319 9.64075 0.248376 9.78001C0.393432 9.91927 0.589659 9.99826 0.794792 9.99997C0.999925 10.0017 1.19755 9.92598 1.34511 9.78916L5.77093 5.54025Z" fill="#B1B1C3"/>
+                                            </svg>
+                                        </a>
+                                        
                                     </div>
                                 </div>
                             </div>
