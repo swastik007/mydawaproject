@@ -8,7 +8,8 @@
   box-shadow: none; // No shadow initially
   transition: all 0.3s ease-in-out; // Smooth transition
   &.sticky {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     background: white;
     .header-promo {
       display: none; // Hide the promo section when sticky
@@ -66,6 +67,20 @@
           height: 28px;
         }
       }
+      .badge {
+        background-color: #60617f;
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+        font-family: $figtreeExtraBold !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       &:hover {
         background: #e3e3e9;
       }
@@ -74,9 +89,9 @@
 
   .notification-icon {
     display: block;
-    @include respond-to(lg) {
-      display: none;
-    }
+    // @include respond-to(lg) {
+    //   display: none;
+    // }
   }
   .icons-top {
     display: none;
