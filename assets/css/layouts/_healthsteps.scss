@@ -2,6 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  .healthjourney-card {
+    width: 100% !important; // Ensure full width inside grid
+  }
+  @include media-breakpoint-up(md) {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); // Show 3 items per row
+    gap: 20px;
+  }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr); // Show 3 items per row
+  }
   @media (min-width: 1024px) {
     // Apply styles for larger screens
     display: grid;
@@ -108,7 +119,7 @@
 
       position: absolute;
       right: 0;
-      bottom: 0;
+      top: 0;
       object-fit: cover;
       width: 100%;
       z-index: -9;

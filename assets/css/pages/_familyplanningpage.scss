@@ -2,6 +2,12 @@
   border-radius: 12px;
   background-image: url("../../assets/images/hero-section.png");
   padding: 0 84px;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+  @include media-breakpoint-down(lg) {
+    padding: 20px 20px 60px 20px;
+  }
   &.bg-blue {
     background-color: #5187eb;
   }
@@ -26,8 +32,19 @@
     line-height: 56px;
     color: #fff;
   }
+  img {
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      right: -170px;
+      bottom: 0;
+      z-index: -9;
+    }
+  }
 }
 .intro-section {
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+  }
   .text-section {
     h3 {
       font-size: 40px;
@@ -73,6 +90,9 @@
 .stepper-steps {
   display: flex;
   gap: 12px;
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+  }
 
   .stepper-step {
     flex-grow: 1;
@@ -83,6 +103,12 @@
     overflow: hidden;
     padding: 40px;
     color: #fff;
+    @include media-breakpoint-down(lg) {
+      width: calc(50% - 12px);
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
     .overlay {
       position: absolute;
       color: #373434;

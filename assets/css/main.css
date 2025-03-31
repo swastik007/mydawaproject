@@ -19735,6 +19735,21 @@ header {
   flex-wrap: wrap;
   gap: 16px;
 }
+.healthjourney-container .healthjourney-card {
+  width: 100% !important;
+}
+@media (min-width: 768px) {
+  .healthjourney-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .healthjourney-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (min-width: 1024px) {
   .healthjourney-container {
     display: grid;
@@ -19852,7 +19867,7 @@ header {
 .healthjourney-section .healthjourney-card img {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -26758,6 +26773,14 @@ input.form-icon-mail:before {
   border-radius: 12px;
   background-image: url("../../assets/images/hero-section.png");
   padding: 0 84px;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+}
+@media (max-width: 991.98px) {
+  .header-section {
+    padding: 20px 20px 60px 20px;
+  }
 }
 .header-section.bg-blue {
   background-color: #5187eb;
@@ -26783,7 +26806,20 @@ input.form-icon-mail:before {
   line-height: 56px;
   color: #fff;
 }
+@media (max-width: 991.98px) {
+  .header-section img {
+    position: absolute;
+    right: -170px;
+    bottom: 0;
+    z-index: -9;
+  }
+}
 
+@media (max-width: 991.98px) {
+  .intro-section {
+    flex-wrap: wrap;
+  }
+}
 .intro-section .text-section h3, .intro-section .text-section .h3 {
   font-size: 40px;
   font-family: "Figtree-ExtraBold";
@@ -26827,6 +26863,11 @@ input.form-icon-mail:before {
   display: flex;
   gap: 12px;
 }
+@media (max-width: 991.98px) {
+  .stepper-steps {
+    flex-wrap: wrap;
+  }
+}
 .stepper-steps .stepper-step {
   flex-grow: 1;
   height: 416px;
@@ -26836,6 +26877,16 @@ input.form-icon-mail:before {
   overflow: hidden;
   padding: 40px;
   color: #fff;
+}
+@media (max-width: 991.98px) {
+  .stepper-steps .stepper-step {
+    width: calc(50% - 12px);
+  }
+}
+@media (max-width: 767.98px) {
+  .stepper-steps .stepper-step {
+    width: 100%;
+  }
 }
 .stepper-steps .stepper-step .overlay {
   position: absolute;
