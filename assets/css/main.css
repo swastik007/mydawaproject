@@ -25220,6 +25220,20 @@ input.form-icon-mail:before {
     margin-bottom: 20px;
   }
 }
+.addressSelection .shipping-selection .delivery-section {
+  background-color: #FCFCFC;
+  border: 1px solid #D4DEE5;
+  padding: 17px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+@media (min-width: 1800px) {
+  .addressSelection .shipping-selection .delivery-section {
+    margin-top: 15px;
+    padding: 25px;
+    border-radius: 12px;
+  }
+}
 .addressSelection .shipping-options {
   display: flex;
   flex-wrap: wrap;

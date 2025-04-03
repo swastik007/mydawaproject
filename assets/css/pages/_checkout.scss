@@ -220,6 +220,18 @@
                 margin-bottom: 20px;
             }
         }
+        .delivery-section{
+            background-color: #FCFCFC;
+            border: 1px solid #D4DEE5;
+            padding: 17px;
+            border-radius: 12px;
+            margin-top: 10px;
+            @include respond-to(xxl) {
+                margin-top: 15px;
+                padding: 25px;
+                border-radius: 12px;
+            }
+        }
     }
     .shipping-options {
         display: flex;
