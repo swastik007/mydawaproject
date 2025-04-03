@@ -195,7 +195,7 @@
     img {
         position: absolute;
         left: 12px;
-        top: 16px;
+        top: 10px;
         width: 20px;
         height: 20px;
         z-index: 9;
@@ -203,7 +203,7 @@
             width: 30px;
             height: 30px;
             left: 20px;
-            top: 20px;
+            top: 15px;
         }
     }
     input{
@@ -221,14 +221,14 @@
         position: absolute;
         left: auto;
         right: 12px;
-        top: 16px;
+        top: 10px;
         width: 20px;
         height: 20px;
         @include respond-to(xxl) {
             width: 32px;
             height: 32px;
             right: 18px;
-            top: 18px;
+            top: 15px;
         }
     }
     .right-check-icon,
