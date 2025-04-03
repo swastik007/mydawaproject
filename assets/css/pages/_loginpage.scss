@@ -5,10 +5,10 @@
     background-color: #fff;
     padding: 10px;
     @include respond-to(lg) {
-        padding: 40px;
+        padding: 0 20px;
     }
     @include respond-to(xxl) {
-        padding: 60px;
+        padding: 0 25px;
     }
     .auth-container {
         width: 100%;
@@ -19,40 +19,35 @@
             padding: 2rem;
         }
         @include respond-to(xxl) {
-            padding: 50px;
+            padding: 20px 50px;
         }
     }
     .auth-title {
         text-align: left;
         font-family: $figtreeExtraBold;
-        @include responsive-font(28px, 36px, 28px, 36px);
+        @include responsive-font(20px, 30x, 20px, 30px);
     }
     .auth-subtitle {
         text-align: left;
         margin-bottom: 1.5rem;
         color: #A7A7A7;
         font-family: $figtree;
-       @include responsive-font(16px, 22px, 16px, 22px);
-        .auth-link {
-            margin-left: 12px;
-            @include responsive-font(14px, 20px, 14px, 20px);
-        }
+        display: flex;
+        flex-direction: row;
+        @include responsive-font(16px, 22px, 16px, 22px);
     }
     .auth-link {
-        color: $green;
+        color: $blue;
         text-decoration: none;
         font-family: $figtreeBold;
-        border-bottom: 1px dashed $green;
+        border-bottom: 1px dashed $blue;
        @include responsive-font(16px, 22px, 16px, 22px);
         &:hover,
         &:focus {
-            color: $greendark;
+            color: $darkblue;
         }
     }
-    .form-check-label {
-        margin-bottom: 0;
-        @include responsive-font(14px, 20px, 14px, 20px);
-    }
+    
     .view-pass {
         position: absolute;
         right: 18px;
@@ -161,20 +156,26 @@
     }
     .otp-inputs {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
         margin-bottom: 1.5rem;
         .otp-box {
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
+            
             text-align: center;
             border: 1px solid #ced4da;
             border-radius: 5px;
             outline: none;
             transition: border-color 0.3s;
+            @include responsive-font(20px, 30px, 20px, 30px);
+            font-family: $figtreeExtraBold;
+            @include respond-to(xxl) {
+                width: 60px;
+                height: 60px;
+            }
             &:focus {
-                border-color: #007bff;
+                border-color: $blue;
                 box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
             }
         }
