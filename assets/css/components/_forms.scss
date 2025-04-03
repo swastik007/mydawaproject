@@ -560,6 +560,7 @@ input[type="radio"]:checked::before {
     @include respond-to(xxl) {
         margin: 15px auto;
     }
+    
     > .file-item {
         display: flex;
         align-items: center;
@@ -569,6 +570,12 @@ input[type="radio"]:checked::before {
         background-color: #fff;
         gap: 15px;
         flex: 1 1 100%;
+        &.error{
+            background-color: #FFF6F6;
+            .file-name, .file-details {
+                color: $red;
+            }
+        }
         @include respond-to(xxl) {
             border-radius: 18px;
         }       

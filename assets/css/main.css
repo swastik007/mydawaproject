@@ -14101,6 +14101,12 @@ input[type=radio]:checked::before {
   gap: 15px;
   flex: 1 1 100%;
 }
+.uploaded-file-section > .file-item.error {
+  background-color: #FFF6F6;
+}
+.uploaded-file-section > .file-item.error .file-name, .uploaded-file-section > .file-item.error .file-details {
+  color: rgb(230, 27, 74);
+}
 @media (min-width: 1800px) {
   .uploaded-file-section > .file-item {
     border-radius: 18px;
