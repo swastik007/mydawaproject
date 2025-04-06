@@ -12,7 +12,6 @@
     border: 1px solid #E7ECF4;
     width: 100%;
     max-height: 90vh;
-    overflow-y: scroll;
     @include respond-to(xxl) {
         top: 100px;
         max-width: 600px;
@@ -109,6 +108,13 @@
             color: $primary;
             font-family: $figtreeSemiBold;
             margin-bottom: 0;
+        }
+    }
+    .popup-container{
+        max-height: 80vh;
+        overflow-y: auto;
+        @include respond-to(xxl) {
+            max-height: 90vh;
         }
     }
 }

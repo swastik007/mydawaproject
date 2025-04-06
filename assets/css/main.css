@@ -12553,7 +12553,6 @@ body {
   border: 1px solid #E7ECF4;
   width: 100%;
   max-height: 90vh;
-  overflow-y: scroll;
 }
 @media (min-width: 1800px) {
   .dawa-modal {
@@ -12770,6 +12769,15 @@ body {
   .dawa-modal .date p,
   .dawa-modal .time p {
     font-size: 22px;
+  }
+}
+.dawa-modal .popup-container {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+@media (min-width: 1800px) {
+  .dawa-modal .popup-container {
+    max-height: 90vh;
   }
 }
 
@@ -13562,11 +13570,12 @@ input[type=radio]:checked::before {
 .form-check .form-check-input {
   width: 16px;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 7px;
+  margin-bottom: 7px;
 }
 @media (min-width: 1800px) {
   .form-check .form-check-input {
-    margin-right: 16px;
+    margin-right: 12px;
     width: 22px;
     height: 22px;
   }
@@ -26346,7 +26355,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .dashboard-content .manage-address .address-option {
-    padding: 35px;
+    padding: 25px;
   }
 }
 .dashboard-content .manage-address .address-option .content {
@@ -26355,42 +26364,42 @@ input.form-icon-mail:before {
 }
 .dashboard-content .manage-address .address-option h3, .dashboard-content .manage-address .address-option .h3 {
   font-family: "Inter-SemiBold";
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 @media (min-width: 992px) {
   .dashboard-content .manage-address .address-option h3, .dashboard-content .manage-address .address-option .h3 {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
   .dashboard-content .manage-address .address-option h3, .dashboard-content .manage-address .address-option .h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
   .dashboard-content .manage-address .address-option h3, .dashboard-content .manage-address .address-option .h3 {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 .dashboard-content .manage-address .address-option p {
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 5px;
 }
 @media (min-width: 992px) {
   .dashboard-content .manage-address .address-option p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .dashboard-content .manage-address .address-option p {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1800px) {
   .dashboard-content .manage-address .address-option p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
@@ -26400,22 +26409,22 @@ input.form-icon-mail:before {
 }
 .dashboard-content .manage-address .address-option span {
   font-family: "Inter";
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 5px;
 }
 @media (min-width: 992px) {
   .dashboard-content .manage-address .address-option span {
-    font-size: 22px;
+    font-size: 15px;
   }
 }
 @media (min-width: 1200px) {
   .dashboard-content .manage-address .address-option span {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 @media (min-width: 1800px) {
   .dashboard-content .manage-address .address-option span {
-    font-size: 22px;
+    font-size: 15px;
   }
 }
 @media (min-width: 1800px) {
@@ -26435,13 +26444,13 @@ input.form-icon-mail:before {
   }
 }
 .dashboard-content .manage-address .address-option button svg {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 @media (min-width: 1800px) {
   .dashboard-content .manage-address .address-option button svg {
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
   }
 }
 .dashboard-content .manage-address .address-option button:hover svg path, .dashboard-content .manage-address .address-option button:focus svg path {
