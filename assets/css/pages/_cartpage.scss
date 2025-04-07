@@ -472,10 +472,10 @@
         &:before {
             position: absolute;
             content: "";
-            height: 14px;
-            width: 14px;
-            left: 3px;
-            bottom: 3px;
+            height: 15px;
+            width: 15px;
+            left: 4px;
+            bottom: 6px;
             background-color: white;
             transition: 0.3s;
             border-radius: 50%;
@@ -491,7 +491,10 @@
         background-color: #6c63ff;
     }
     input:checked+.slider:before {
-        transform: translateX(14px);
+        transform: translateX(9px);
+        @include respond-to(xxl) {
+            transform: translateX(14px);
+        }
     }
 }
 
