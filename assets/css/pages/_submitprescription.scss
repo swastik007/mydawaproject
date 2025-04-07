@@ -11,72 +11,105 @@
 
 .recipient-card {
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
     overflow: hidden;
+    padding: 20px;
+    border: 1px solid #D4DEE5;    
     @include respond-to(lg) {
-        margin-right: 50px;
+        margin-right: 25px;
     }
     @include respond-to(xxl) {
-        margin-bottom: 80px;
+        margin-right: 40px;
+        padding: 28px;
     }
+    svg{
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        @include respond-to(xxl) {
+            width: 26px;
+            height: 26px;
+            margin-right: 7px;
+        }
+    }
+    h3{
+        font-family: $figtreeMedium;
+        line-height: 1.5;
+        @include responsive-font(14px, 18px, 14px, 18px);
+    }
+    a{
+        text-decoration: none;
+        font-family: $figtreeSemiBold;
+        @include responsive-font(14px, 18px, 14px, 18px);
+    }
+    span{
+        color: #878585;
+        @include responsive-font(14px, 18px, 14px, 18px);
+    }
+
     .recipient-card-header {
         position: relative;
-        .recipient-image {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
-            @include respond-to(lg) {
-                height: 160px;
-            }
-            @include respond-to(xxl) {
-                height: 220px;
-            }
+        border-bottom: 1px solid #E7ECF4;
+        padding-bottom: 15px;
+        @include respond-to(xxl) {
+            padding-bottom: 20px;
         }
-        .prescription-edit {
-            position: absolute;
-            top: 0;
-            bottom: auto;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.25);
-            color: #fff;
-            padding: 10px;
-            font-size: 14px;
-            @include respond-to(lg) {
-                font-size: 16px;
-            }
-            @include respond-to(xxl) {
-                font-size: 20px;
-                padding: 10px 25px;
-            }
-            .prescription-label {
-                font-weight: 500;
-                flex-grow: 1;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            .edit-btn {
-                background: none;
-                border: none;
-                color: #fff;
-                cursor: pointer;
-                font-size: 14px;
-            }
-        }
+        // .recipient-image {
+        //     width: 100%;
+        //     height: 120px;
+        //     object-fit: cover;
+        //     border-bottom: 1px solid #ddd;
+        //     @include respond-to(lg) {
+        //         height: 160px;
+        //     }
+        //     @include respond-to(xxl) {
+        //         height: 220px;
+        //     }
+        // }
+        // .prescription-edit {
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: auto;
+        //     width: 100%;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        //     background: rgba(0, 0, 0, 0.25);
+        //     color: #fff;
+        //     padding: 10px;
+        //     font-size: 14px;
+        //     @include respond-to(lg) {
+        //         font-size: 16px;
+        //     }
+        //     @include respond-to(xxl) {
+        //         font-size: 20px;
+        //         padding: 10px 25px;
+        //     }
+        //     .prescription-label {
+        //         font-weight: 500;
+        //         flex-grow: 1;
+        //         white-space: nowrap;
+        //         overflow: hidden;
+        //         text-overflow: ellipsis;
+        //     }
+        //     .edit-btn {
+        //         background: none;
+        //         border: none;
+        //         color: #fff;
+        //         cursor: pointer;
+        //         font-size: 14px;
+        //     }
+        // }
     }
     .recipient-card-body {
         text-align: left;
         background: #fff;
+        margin-top: 15px;
+        @include respond-to(xxl) {
+            margin-top: 20px;
+        }
         .recipient-details {
-            padding: 12px;
-            @include respond-to(xxl) {
-                padding: 28px;
-            }
+           
             h4 {
                 display: flex;
                 justify-content: space-between;
@@ -107,11 +140,16 @@
                     margin: 14px 0;
                 }
                 .title {
-                    font-weight: 300;
-                    color: $black;
+                    font-family: $figtreeMedium;
+                    color: #878585;
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        margin-bottom: 3px;
+                    }
                 }
                 .text {
-                    font-weight: 600;
+                    font-family: $figtreeSemiBold;
                     color: $black;
                 }
             }

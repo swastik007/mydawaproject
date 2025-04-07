@@ -28,11 +28,12 @@
                 background: #e7ecf4;
                 color: $black;
                 margin-right: 10px;
-                @include responsive-font(14px, 20px, 14px, 20px);
+                @include responsive-font(14px, 18px, 14px, 18px);
+                line-height: 1;
                 font-family: $figtreeSemiBold;
                 @include respond-to(xxl) {
-                    width: 35px;
-                    height: 35px;
+                    width: 30px;
+                    height: 30px;
                     margin-right: 16px;
                 }
                 &.complete {
