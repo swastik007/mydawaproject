@@ -130,11 +130,11 @@
                                     <label for="selfpay">Self Pay</label>
                                 </div>
                                 <div class="radio-item">
-                                    <input type="radio" name="payment" id="smart" value="smart" checked>
+                                    <input type="radio" name="payment" id="smart" value="smart">
                                     <label for="smart">Smart</label>
                                 </div>
                                 <div class="radio-item">
-                                    <input type="radio" name="payment" id="mtiba" value="mtiba">
+                                    <input type="radio" name="payment" id="mtiba" value="mtiba"  checked>
                                     <label for="smart">MTIBA</label>
                                 </div>
                                 <div class="radio-item">
@@ -147,59 +147,26 @@
                                 </div>
                             </div>
                            
-                             <!-- Insurance Selection -->
-                             <h3 class="form-heading mt-3 mt-xl-4">We accept the following Insurance Providers.</h3>
-                             <div class="image-select-grid">
-                                 <button class="image-option active" data-provider="britam">
-                                             <img src="assets/images/logos/insurance-logo1.png" alt="Britam">
-                                         </button>
-                                 <button class="image-option" data-provider="aar">
-                                             <img src="assets/images/logos/insurance-logo2.png" alt="AAR Insurance">
-                                         </button>
-                                 <button class="image-option" data-provider="uap">
-                                             <img src="assets/images/logos/insurance-logo3.png" alt="UAP Insurance">
-                                         </button>
-                                 <button class="image-option active" data-provider="britam">
-                                             <img src="assets/images/logos/insurance-logo4.png" alt="Britam">
-                                         </button>
-                                 <button class="image-option" data-provider="aar">
-                                             <img src="assets/images/logos/insurance-logo5.png" alt="AAR Insurance">
-                                         </button>
-                                 <button class="image-option" data-provider="uap">
-                                             <img src="assets/images/logos/insurance-logo6.png" alt="UAP Insurance">
-                                         </button>
-                                 <button class="image-option active" data-provider="britam">
-                                             <img src="assets/images/logos/insurance-logo7.png" alt="Britam">
-                                         </button>
-                                 <button class="image-option" data-provider="aar">
-                                             <img src="assets/images/logos/insurance-logo3.png" alt="AAR Insurance">
-                                         </button>
-                                 <button class="image-option" data-provider="uap">
-                                             <img src="assets/images/logos/white-bg.png" alt="UAP Insurance">
-                                         </button>
-                                 <button class="image-option active" data-provider="britam">
-                                             <img src="assets/images/logos/insurance-logo2.png" alt="Britam">
-                                         </button>
-                                 <button class="image-option" data-provider="aar">
-                                             <img src="assets/images/logos/insurance-logo1.png" alt="AAR Insurance">
-                                         </button>
-                                 <button class="image-option" data-provider="uap">
-                                             <img src="assets/images/logos/insurance-logo1.png" alt="UAP Insurance">
-                                         </button>
-                                 
-                                 <!-- Add more insurance options -->
-                             </div>
+                              <!-- MTIBA Payment Instructions -->
 
-                             <!-- Enter Visit Code -->
-                             <h3 class="form-heading mt-4 mt-xl-5">Provide Your visit code to verify your insurange provider</h3>
-                             <div class="row">
-                                 <div class="col-lg-7 col-xl-9">
-                                     <div class="input-row">
-                                         <input class="long-field" type="text" placeholder="Enter Your Visit Code">
-                                         <a href="#" class="link-blue">Send OTP</a>
-                                     </div>
-                                 </div>
-                             </div>
+                              <h3 class="form-heading mt-3 mt-xl-4">Select Insurance Provider</h3>
+                              <ol class="form-list">
+                                  <li>Dial *255#</li>
+                                  <li>Enter your MTIBA PIN</li>
+                                  <li>Select "Initiate Treatment"</li>
+                                  <li>Select "Recent Clinic (Mydawa)"</li>
+                                  <li>Select the patient</li>
+                                  <li>Select cover</li>
+                                  <li>Authorize with 1</li>
+                              </ol>
+
+                              <!-- MTIBA Payment Instructions -->
+                              <div class="d-flex flex-column justify-content-start items-start mt-3 mt-xl-4">
+                                  <h3 class="form-heading mb-3">MTIBA Treatment Code</h3>
+                                  <div class="input-group">
+                                      <input class="long-field" type="text" placeholder="Enter Treatment Code">
+                                  </div>
+                              </div>
                             
                             <!-- Actions Section -->
                             <div class="d-flex align-items-center justify-content-end mt-3 mt-xl-4">

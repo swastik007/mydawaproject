@@ -622,10 +622,10 @@ input[type="radio"]:checked::before {
 
 input.long-field {
     @include respond-to(lg) {
-        min-width: 350px;
+        max-width: 350px;
     }
     @media (min-width: 1800px) {
-        min-width: 550px;
+        max-width: 500px;
     }
 }
 
@@ -665,7 +665,7 @@ input.long-field {
     grid-template-columns: repeat(3, 1fr);
     @include respond-to(sm) {
         // Tablets (Medium Screens)
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4 , 1fr);
     }
     @include respond-to(md) {
         // Tablets (Medium Screens)
@@ -750,10 +750,14 @@ input.long-field {
         border: 1px solid #d4dee5;
         border-radius: 5px;
         width: 50px;
+        height: 50px;
         font-family: $figtreeExtraBold;
         @include responsive-font(20px, 24px, 20px, 24px); 
         padding: 5px 10px;       
-        
+        @include respond-to(xxl) {
+            width: 60px;
+            height: 60px;
+        }
     }
 }
 
@@ -1002,7 +1006,7 @@ ol.form-list {
     }
     .dropdown-item {
         padding: 7px 15px;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(14px, 18px, 14px, 18px);
         @include respond-to(xxl) {
             padding: 12px 24px;
         }
@@ -1041,6 +1045,28 @@ ol.form-list {
     }
 }
 
+.link-blue{
+    color: $blue;
+    font-family: $figtreeSemiBold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    text-decoration: none;
+     @include responsive-font(14px, 18px, 14px, 18px);
+    @include respond-to(xxl) {
+        margin-top: 16px;
+        margin-bottom: 20px;
+    }
+    &:hover, &:focus{
+        color: $darkblue;
+    }
+}
+
+.otp-row{
+    display: flex;
+    width: fit-content;
+    justify-content: flex-start;
+}
 .form-search-container {
     display: flex;
     align-items: center;

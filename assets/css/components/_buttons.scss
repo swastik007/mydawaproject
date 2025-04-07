@@ -341,6 +341,16 @@
             border-bottom: 1px dashed $greendark;
         }
     }
+    &.pink-dotted {
+        border-bottom: 1px dashed $primary;
+        color: $primary;
+        &:hover,
+        &:focus {
+            transition: ease-in 0.3s;
+            color: $primarydark;
+            border-bottom: 1px dashed $primarydark;
+        }
+    }
 }
 
 // Status badge styles

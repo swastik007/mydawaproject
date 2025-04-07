@@ -57,10 +57,27 @@
                     </div>
 
                     <div class="form-page-wrap small-wrap">
-                        
+                         <!-- Right notice box -->
+                         <div class="prescribe-info-box">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M8.08553 5.33362H8.09092M8.08553 10.667V7.33362M14.8241 8.00028C14.8241 11.6823 11.8073 14.667 8.08553 14.667C4.3638 14.667 1.34692 11.6823 1.34692 8.00028C1.34692 4.31828 4.3638 1.33362 8.08553 1.33362C11.8073 1.33362 14.8241 4.31828 14.8241 8.00028Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                </svg>
+                                <h4>Important Information</h4>
+                            </div>
+                            <div class="info-content">
+
+                                <ol>
+                                    <li>Please make sure you have included all the pages of the prescription, as well as the Claim Form.</li>
+                                    <li>For Cigna Insurance users, please attach a copy of your Card and National ID or Allen ID or Passport Copy.</li>
+                                </ol>
+                            </div>
+                        </div>
                         <!-- Title Section -->
                         <div class="forms-heading">
-                            <h3>Upload Your Prescription</h3>
+                            <h3>Upload Your Claim Form</h3>
                         </div>
                         <!-- Upload Section -->
                         <div class="upload-section">
@@ -74,28 +91,30 @@
                         
                         <!-- Uploaded File Section -->
                         <div class="uploaded-file-section">
-                            <div class="file-item error">
+                            <div class="file-item">
                                 <div class="file-info">
-                                    <p class="file-name">Prescription_File_Name</p>
+                                    <p class="file-name">Claim Form</p>
                                     <small class="file-details">JPEG . 12 MB</small>
                                 </div>
                                 <button class="delete-button">
                                    
-                                      Retry
+                                      <svg xmlns="http://www.w3.org/2000/svg"  class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                      </svg>
                                  </button>
                             </div>
                         </div>
                         <!-- Payment Section -->
                         <div class="d-flex flex-column">
-                            <h3 class="form-title border-t">Payment Method</h3>
+                            <h3 class="form-title border-t">Are you a CIGNA User?</h3>
                             <div class="d-flex flex-row justify-content-start">
                                 <div class="radio-item">
-                                    <input type="radio" name="paymentMethod" id="selfPaymentRadio" checked>
-                                    <label for="selfPayment">Cash</label>
+                                    <input type="radio" name="cigna-user" id="cignauserRadio">
+                                    <label for="cignauser">Yes</label>
                                 </div>
-                                <div class="radio-item">
-                                    <input type="radio" name="paymentMethod" id="insuranceRadio">
-                                    <label for="insurance">Insurance</label>
+                                <div class="radio-item" checked>
+                                    <input type="radio" name="cigna-user" id="notcignauserRadio" checked>
+                                    <label for="notcignauser">No</label>
                                 </div>
                             </div>
 
