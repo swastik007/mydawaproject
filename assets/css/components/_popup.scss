@@ -73,6 +73,36 @@
             width: 70px;
         }
     }
+    .popup-img{
+        width: 120px;
+        height: auto;
+        margin: 0 auto 15px auto;
+        @include respond-to(xxl) {
+            width: 160px;
+            margin: 0 auto 25px auto;
+        }
+    }
+    .popup-img-lg{
+        width: 200px;
+        height: auto;
+        margin: 0 auto 15px auto;
+        @include respond-to(xxl) {
+            width: 240px;
+            margin: 0 auto 25px auto;
+        }
+    }
+    .text-heading{
+        font-family: $figtreeSemiBold;
+        @include responsive-font(20px, 26px, 20px, 26px);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .text-content{
+        font-family: $figtree;
+        @include responsive-font(16px, 20px, 16px, 20px);
+        text-align: center;
+    }
+
 }
 
 .dawa-modal {
