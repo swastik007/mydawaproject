@@ -44,15 +44,21 @@
 /* Cart Items - Align with Grid */
 
 .cart-item {
-    display: flex;
+    
     background: #fff;
     padding: 15px 12px;
     border-radius: 10px;
     margin-bottom: 10px;
     border: 1px solid #f0f0f0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include respond-to(xs) {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
     @include respond-to(lg) {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
@@ -123,6 +129,7 @@
             padding: 8px;
             justify-content: space-around;
             gap: 8px;
+            height: fit-content;
             @include respond-to(xxl) {
                 gap: 15px;
                 padding: 8px 16px;
@@ -157,6 +164,7 @@
             padding: 7px 10px;
             border-radius: 40px;
             width: 70px;
+            height: fit-content;
             img {
                 width: 20px;
                 height: 20px;
@@ -291,7 +299,7 @@
     }
     h3 {
         font-family: $interBold;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(16px, 16px, 16px, 20px);
         line-height: 1.6;
         color: $black;
         margin-bottom: 10px;
@@ -310,7 +318,7 @@
             border: 1px solid #D4DEE5;
             margin-right: 10px;
             border-radius: 35px!important;
-            @include responsive-font(14px, 20px, 14px, 20px);
+            @include responsive-font(14px, 14px, 14px, 20px);
             @include respond-to(xxl) {
                 padding: 14px 20px;
                 margin-right: 16px;
@@ -360,13 +368,13 @@
     .sub-price {
         display: flex;
         justify-content: space-between;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(16px, 16px, 16px, 20px);
     }
     .cart-total {
         display: flex;
         justify-content: space-between;
         font-family: $figtreeBold;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(16px, 16px, 16px, 20px);
         margin-bottom: 15px;
         @include respond-to(xxl) {
             margin-bottom: 25px;
@@ -386,7 +394,7 @@
         }
         span {
             margin-left: 10px;
-            @include responsive-font(13px, 20px, 13px, 20px);
+            @include responsive-font(13px, 13px, 13px, 18px);
             @include respond-to(xxl) {
                 margin-left: 16px;
             }
@@ -403,9 +411,8 @@
 }
 
 .loyalty-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
     background: #F9F9FD;
     padding: 15px;
     border-radius: 12px;
@@ -427,7 +434,7 @@
             }
         }
         h4 {
-            @include responsive-font(16px, 22px, 16px, 22px);
+            @include responsive-font(16px, 16px, 16px, 20px);
             font-family: $interSemiBold;
             margin-bottom: 10px;
             @include respond-to(xxl) {
@@ -435,7 +442,7 @@
             }
         }
         p {
-            @include responsive-font(13px, 20px, 13px, 20px);
+            @include responsive-font(13px, 13px, 13px, 18px);
             color: $grey9;
             margin: 0;
         }
@@ -446,13 +453,11 @@
 .switch {
     position: relative;
     display: flex;
-    width: 50px;
+    width: 38px;
     height: 25px;
-    flex-basis: 50px;
     @include respond-to(xxl) {
-        width: 100px;
-        height: 40px;
-        flex-basis: 100px;
+        width: 52px;
+        height: 35px;
     }
     input {
         opacity: 0;
@@ -474,7 +479,7 @@
             content: "";
             height: 15px;
             width: 15px;
-            left: 4px;
+            left: 10px;
             bottom: 6px;
             background-color: white;
             transition: 0.3s;
@@ -483,7 +488,7 @@
                 width: 22px;
                 height: 22px;
                 left: 9px;
-                bottom: 9px;
+                bottom: 7px;
             }
         }
     }

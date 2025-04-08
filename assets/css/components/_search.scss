@@ -187,7 +187,7 @@
     border: none;
     background: transparent;
     outline: none;
-    @include responsive-font(14px, 20px, 14px, 20px);
+    @include responsive-font(14px, 14px, 14px, 20px);
     padding-left: 10px;
   }
   img {

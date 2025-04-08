@@ -12263,7 +12263,7 @@ body {
 }
 @media (min-width: 992px) {
   .btn-sm, .btn-group-sm > .btn {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -12612,12 +12612,12 @@ body {
   }
 }
 .modal .modal-body {
-  max-height: 50vh;
+  max-height: 70vh;
   overflow-y: auto;
 }
 @media (min-width: 1800px) {
   .modal .modal-body {
-    max-height: 60vh;
+    max-height: 72vh;
   }
 }
 .modal .modal-footer {
@@ -12912,7 +12912,7 @@ body {
 @media (min-width: 992px) {
   .dawa-modal .date span,
   .dawa-modal .time span {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -12924,7 +12924,7 @@ body {
 @media (min-width: 1800px) {
   .dawa-modal .date span,
   .dawa-modal .time span {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -12943,7 +12943,7 @@ body {
 @media (min-width: 992px) {
   .dawa-modal .date p,
   .dawa-modal .time p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -12955,7 +12955,7 @@ body {
 @media (min-width: 1800px) {
   .dawa-modal .date p,
   .dawa-modal .time p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .dawa-modal .popup-container {
@@ -13204,7 +13204,7 @@ body {
 }
 @media (min-width: 992px) {
   .wishlist-modal .product-info h4, .wishlist-modal .product-info .h4 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -13214,7 +13214,7 @@ body {
 }
 @media (min-width: 1800px) {
   .wishlist-modal .product-info h4, .wishlist-modal .product-info .h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .wishlist-modal .product-info p {
@@ -13224,7 +13224,7 @@ body {
 }
 @media (min-width: 992px) {
   .wishlist-modal .product-info p {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -13304,7 +13304,7 @@ body {
 }
 @media (min-width: 992px) {
   .wishlist-modal .form-options .form-check .form-check-label {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -13466,7 +13466,7 @@ textarea {
   input[type=password],
   select,
   textarea {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -13597,7 +13597,7 @@ select {
 }
 @media (min-width: 992px) {
   .textarea-label {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -13607,7 +13607,7 @@ select {
 }
 @media (min-width: 1800px) {
   .textarea-label {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -13706,7 +13706,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .radio-item label {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -13716,7 +13716,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 1800px) {
   .radio-item label {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -13823,7 +13823,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .custom-checkbox + label {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -13833,7 +13833,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 1800px) {
   .custom-checkbox + label {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -13871,7 +13871,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .custom-checkbox:checked + label::before {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -13952,7 +13952,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .forms-heading h3, .forms-heading .h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -13962,7 +13962,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 1800px) {
   .forms-heading h3, .forms-heading .h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .forms-heading p {
@@ -13972,7 +13972,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .forms-heading p {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -13995,7 +13995,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .form-title {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -14005,7 +14005,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 1800px) {
   .form-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -14032,7 +14032,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .form-subtitle {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -14059,7 +14059,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .form-heading {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -14069,7 +14069,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 1800px) {
   .form-heading {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -14236,7 +14236,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 992px) {
   .form-notice span {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -14582,7 +14582,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   ol.form-list {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -14592,7 +14592,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   ol.form-list {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -14621,7 +14621,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .consent-box h2, .consent-box .h2 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -14631,7 +14631,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .consent-box h2, .consent-box .h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -14647,7 +14647,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .consent-box p {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -14671,7 +14671,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .consent-box ol {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -14728,12 +14728,15 @@ ol.form-list {
     padding: 35px;
   }
 }
+.radio-option-full.selected {
+  border: 2px solid rgb(81, 107, 241);
+}
 .radio-option-full input[type=radio] {
   display: none;
 }
 .radio-option-full .radio {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 2px solid #C7D0E4;
   border-radius: 50% !important;
   display: flex;
@@ -14741,27 +14744,27 @@ ol.form-list {
   justify-content: center;
   flex-shrink: 0;
   transition: all 0.3s;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 @media (min-width: 1800px) {
   .radio-option-full .radio {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
   }
 }
 .radio-option-full .radio::before {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background: #C7D0E4;
   border-radius: 50%;
   transition: all 0.3s;
 }
 @media (min-width: 1800px) {
   .radio-option-full .radio::before {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
   }
 }
 .radio-option-full input[type=radio]:checked + .radio {
@@ -14782,7 +14785,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .radio-option-full .content h3, .radio-option-full .content .h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -14792,7 +14795,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .radio-option-full .content h3, .radio-option-full .content .h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .radio-option-full .content p {
@@ -14803,7 +14806,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .radio-option-full .content p {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -14854,7 +14857,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .radio-option-full.radio-option-vertical .content h3, .radio-option-full.radio-option-vertical .content .h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -14864,7 +14867,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .radio-option-full.radio-option-vertical .content h3, .radio-option-full.radio-option-vertical .content .h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .radio-option-full.radio-option-vertical .content img {
@@ -14973,7 +14976,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .custom-dropdown-select .dropdown-item.create-new {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -14983,7 +14986,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .custom-dropdown-select .dropdown-item.create-new {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .custom-dropdown-select .dropdown-item.create-new:hover {
@@ -15000,7 +15003,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .create-new-link {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -15010,7 +15013,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .create-new-link {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -15089,7 +15092,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .form-search-container .search-input {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -15123,12 +15126,12 @@ ol.form-list {
   box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
   max-height: 200px;
   overflow-y: auto;
-  top: 90px;
+  top: 70px;
   padding: 20px;
 }
 @media (min-width: 1800px) {
   .custom-address-dropdown {
-    top: 125px;
+    top: 90px;
   }
 }
 .custom-address-dropdown .custom-dropdown-item {
@@ -15288,7 +15291,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .form_error {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -15317,7 +15320,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .form-warning {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -15337,6 +15340,138 @@ ol.form-list {
   }
 }
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group input {
+  width: 100%;
+}
+
+.input-icon {
+  position: relative;
+}
+.input-icon img {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 9;
+}
+@media (min-width: 1800px) {
+  .input-icon img {
+    width: 30px;
+    height: 30px;
+    left: 20px;
+    top: 15px;
+  }
+}
+.input-icon input.with-icon {
+  padding-left: 45px;
+}
+@media (min-width: 1800px) {
+  .input-icon input.with-icon {
+    padding-left: 70px;
+  }
+}
+.input-icon input.editable {
+  background-color: #F1F1F5;
+}
+.input-icon img.right-icon {
+  position: absolute;
+  left: auto;
+  right: 12px;
+  top: 11px;
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1200px) {
+  .input-icon img.right-icon {
+    top: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .input-icon img.right-icon {
+    width: 32px;
+    height: 32px;
+    right: 18px;
+    top: 15px;
+  }
+}
+.input-icon .right-check-icon,
+.input-icon .right-check-icon-success {
+  display: none;
+}
+.input-icon .right-check-icon,
+.input-icon .right-check-icon-success {
+  position: absolute;
+  left: auto;
+  right: 12px;
+  top: 16px;
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1800px) {
+  .input-icon .right-check-icon,
+  .input-icon .right-check-icon-success {
+    width: 32px;
+    height: 32px;
+    right: 18px;
+    top: 14px;
+  }
+}
+
+input {
+  position: relative;
+}
+input.form-icon-edit:after {
+  content: "";
+  background-image: url("../images/icons/form-edit-pencit.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+input.form-icon-mail:before {
+  content: "";
+  background-image: url("../images/icons/form-mail-icon.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.form-bottom-info {
+  display: block;
+  font-family: "Figtree-Light";
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+@media (min-width: 992px) {
+  .form-bottom-info {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-bottom-info {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1800px) {
+  .form-bottom-info {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .form-bottom-info {
+    margin-top: 8px;
+  }
+}
+
 .tab-content .accordion-button:not(.collapsed) {
   background-color: white;
 }
@@ -15345,7 +15480,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .tab-content .accordion-button h4, .tab-content .accordion-button .h4 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -15355,7 +15490,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .tab-content .accordion-button h4, .tab-content .accordion-button .h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -15366,7 +15501,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .accordion-heading1 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -15376,7 +15511,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .accordion-heading1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .accordion-heading1 p {
@@ -15387,7 +15522,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .accordion-heading1 p {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -15419,7 +15554,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .nav .nav-link {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -15528,7 +15663,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .tab-title-heading h5, .tab-title-heading .h5 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -15538,7 +15673,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .tab-title-heading h5, .tab-title-heading .h5 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .tab-title-heading h5 strong, .tab-title-heading .h5 strong {
@@ -15570,7 +15705,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .table thead th {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -15603,7 +15738,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .table tbody tr td {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -15717,7 +15852,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .custom-pagination .page-item .page-link {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -15727,7 +15862,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .custom-pagination .page-item .page-link {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -15782,7 +15917,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .product-card .sale-badge {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -16048,7 +16183,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .product-card .product-price {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -16058,7 +16193,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .product-card .product-price {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -16094,7 +16229,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .breadcrumb-container .breadcrumb li a {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -16117,7 +16252,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .breadcrumb-container .breadcrumb li a.active {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -16224,7 +16359,7 @@ ol.form-list {
   gap: 15px;
   flex-direction: column;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .step-navigation .steps {
     flex-direction: row;
   }
@@ -16296,7 +16431,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .step-navigation .steps .step .step-text {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -16319,7 +16454,7 @@ ol.form-list {
   left: 10px;
   top: 24px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .step-navigation .steps .step:not(:last-child)::after {
     position: static;
     width: 40px;
@@ -16808,7 +16943,7 @@ ol.form-list {
 }
 @media (min-width: 992px) {
   .search-container input {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -17377,7 +17512,7 @@ p.preloader-text {
 }
 @media (min-width: 992px) {
   p.preloader-text {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -17387,7 +17522,7 @@ p.preloader-text {
 }
 @media (min-width: 1800px) {
   p.preloader-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -18042,7 +18177,7 @@ header {
 }
 @media (min-width: 992px) {
   .header-navigation ul li {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -18118,7 +18253,7 @@ header {
 }
 @media (min-width: 992px) {
   .header-navigation .right-nav-section .btn-sm, .header-navigation .right-nav-section .btn-group-sm > .btn {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -18571,7 +18706,7 @@ header {
 }
 @media (min-width: 992px) {
   .banner-section.searchpage-banner .banner-button {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -18581,7 +18716,7 @@ header {
 }
 @media (min-width: 1800px) {
   .banner-section.searchpage-banner .banner-button {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -19468,7 +19603,7 @@ header {
 }
 @media (min-width: 992px) {
   .login-slider .text-content h5, .login-slider .text-content .h5 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -19478,7 +19613,7 @@ header {
 }
 @media (min-width: 1800px) {
   .login-slider .text-content h5, .login-slider .text-content .h5 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .login-slider .text-content h2, .login-slider .text-content .h2 {
@@ -21319,15 +21454,18 @@ header {
 
 /* Cart Items - Align with Grid */
 .cart-item {
-  display: flex;
   background: #fff;
   padding: 15px 12px;
   border-radius: 10px;
   margin-bottom: 10px;
   border: 1px solid #f0f0f0;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 440px) {
+  .cart-item {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
 }
 @media (min-width: 1200px) {
   .cart-item {
@@ -21443,6 +21581,7 @@ header {
   padding: 8px;
   justify-content: space-around;
   gap: 8px;
+  height: fit-content;
 }
 @media (min-width: 1800px) {
   .cart-item .item-quantity .change-quantity {
@@ -21496,6 +21635,7 @@ header {
   padding: 7px 10px;
   border-radius: 40px;
   width: 70px;
+  height: fit-content;
 }
 .cart-item .item-quantity .cart-delete img {
   width: 20px;
@@ -21674,7 +21814,7 @@ header {
 }
 @media (min-width: 992px) {
   .coupon-box h3, .coupon-box .h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -21684,7 +21824,7 @@ header {
 }
 @media (min-width: 1800px) {
   .coupon-box h3, .coupon-box .h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -21708,7 +21848,7 @@ header {
 }
 @media (min-width: 992px) {
   .coupon-box .coupon-input input {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -21767,7 +21907,7 @@ header {
 }
 @media (min-width: 992px) {
   .price-details .sub-price {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -21777,7 +21917,7 @@ header {
 }
 @media (min-width: 1800px) {
   .price-details .sub-price {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .price-details .cart-total {
@@ -21789,7 +21929,7 @@ header {
 }
 @media (min-width: 992px) {
   .price-details .cart-total {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -21799,7 +21939,7 @@ header {
 }
 @media (min-width: 1800px) {
   .price-details .cart-total {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -21828,7 +21968,7 @@ header {
 }
 @media (min-width: 992px) {
   .price-details .info span {
-    font-size: 20px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1200px) {
@@ -21838,7 +21978,7 @@ header {
 }
 @media (min-width: 1800px) {
   .price-details .info span {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1800px) {
@@ -21858,9 +21998,8 @@ header {
 }
 
 .loyalty-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
   background: #F9F9FD;
   padding: 15px;
   border-radius: 12px;
@@ -21894,7 +22033,7 @@ header {
 }
 @media (min-width: 992px) {
   .loyalty-card .icon-text h4, .loyalty-card .icon-text .h4 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -21904,7 +22043,7 @@ header {
 }
 @media (min-width: 1800px) {
   .loyalty-card .icon-text h4, .loyalty-card .icon-text .h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -21919,7 +22058,7 @@ header {
 }
 @media (min-width: 992px) {
   .loyalty-card .icon-text p {
-    font-size: 20px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1200px) {
@@ -21929,22 +22068,20 @@ header {
 }
 @media (min-width: 1800px) {
   .loyalty-card .icon-text p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 .switch {
   position: relative;
   display: flex;
-  width: 50px;
+  width: 38px;
   height: 25px;
-  flex-basis: 50px;
 }
 @media (min-width: 1800px) {
   .switch {
-    width: 100px;
-    height: 40px;
-    flex-basis: 100px;
+    width: 52px;
+    height: 35px;
   }
 }
 .switch input {
@@ -21968,7 +22105,7 @@ header {
   content: "";
   height: 15px;
   width: 15px;
-  left: 4px;
+  left: 10px;
   bottom: 6px;
   background-color: white;
   transition: 0.3s;
@@ -21979,7 +22116,7 @@ header {
     width: 22px;
     height: 22px;
     left: 9px;
-    bottom: 9px;
+    bottom: 7px;
   }
 }
 .switch input:checked + .slider {
@@ -22379,7 +22516,7 @@ header {
 }
 @media (min-width: 992px) {
   .category-sidebar .accordion-item .accordion-header {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -22389,7 +22526,7 @@ header {
 }
 @media (min-width: 1800px) {
   .category-sidebar .accordion-item .accordion-header {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .category-sidebar .accordion-button {
@@ -22403,7 +22540,7 @@ header {
 }
 @media (min-width: 992px) {
   .category-sidebar .accordion-button {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -22413,7 +22550,7 @@ header {
 }
 @media (min-width: 1800px) {
   .category-sidebar .accordion-button {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -22906,7 +23043,7 @@ header {
 }
 @media (min-width: 992px) {
   .category-buttons-slider .category-title {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -22916,7 +23053,7 @@ header {
 }
 @media (min-width: 1800px) {
   .category-buttons-slider .category-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .category-buttons-slider .category-title span {
@@ -23258,7 +23395,7 @@ header {
 }
 @media (min-width: 992px) {
   .listing-info p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -23268,7 +23405,7 @@ header {
 }
 @media (min-width: 1800px) {
   .listing-info p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -23278,7 +23415,7 @@ header {
 }
 @media (min-width: 992px) {
   .desktop-text {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -23288,7 +23425,7 @@ header {
 }
 @media (min-width: 1800px) {
   .desktop-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -23303,7 +23440,7 @@ header {
 }
 @media (min-width: 992px) {
   .mobile-text {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -23313,7 +23450,7 @@ header {
 }
 @media (min-width: 1800px) {
   .mobile-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -23381,7 +23518,7 @@ header {
 }
 @media (min-width: 992px) {
   .filter-options .dropdown-menu .dropdown-item {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -24115,7 +24252,7 @@ header {
 }
 @media (min-width: 992px) {
   .faq-sidebar .accordion-item h2, .faq-sidebar .accordion-item .h2 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -24125,7 +24262,7 @@ header {
 }
 @media (min-width: 1800px) {
   .faq-sidebar .accordion-item h2, .faq-sidebar .accordion-item .h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .faq-sidebar .accordion-button {
@@ -24140,7 +24277,7 @@ header {
 }
 @media (min-width: 992px) {
   .faq-sidebar .accordion-button {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -24150,7 +24287,7 @@ header {
 }
 @media (min-width: 1800px) {
   .faq-sidebar .accordion-button {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -24241,7 +24378,7 @@ header {
 }
 @media (min-width: 992px) {
   .faq-sidebar .nav .nav-link {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -24344,7 +24481,7 @@ header {
 }
 @media (min-width: 992px) {
   .faq-content .accordion-button {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -24368,7 +24505,7 @@ header {
 }
 @media (min-width: 992px) {
   .faq-content .accordion-body {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -24405,7 +24542,7 @@ header {
 }
 @media (min-width: 992px) {
   .wishlist-actions button {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -24415,7 +24552,7 @@ header {
 }
 @media (min-width: 1800px) {
   .wishlist-actions button {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .wishlist-actions button:hover, .wishlist-actions button:focus {
@@ -24497,7 +24634,7 @@ header {
 }
 @media (min-width: 992px) {
   .wishlist-card .wishlist-name {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -24507,7 +24644,7 @@ header {
 }
 @media (min-width: 1800px) {
   .wishlist-card .wishlist-name {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .wishlist-card .wishlist-items {
@@ -24517,7 +24654,7 @@ header {
 }
 @media (min-width: 992px) {
   .wishlist-card .wishlist-items {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -24527,7 +24664,7 @@ header {
 }
 @media (min-width: 1800px) {
   .wishlist-card .wishlist-items {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -24928,7 +25065,7 @@ header {
 }
 @media (min-width: 992px) {
   .login-form .auth-link {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -24938,7 +25075,7 @@ header {
 }
 @media (min-width: 1800px) {
   .login-form .auth-link {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .login-form .auth-link:hover, .login-form .auth-link:focus {
@@ -24959,7 +25096,7 @@ header {
 }
 @media (min-width: 992px) {
   .login-form .form-options .auth-link {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -25012,7 +25149,7 @@ header {
 }
 @media (min-width: 992px) {
   .login-form .divider {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -25115,132 +25252,6 @@ header {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-}
-.input-group input {
-  width: 100%;
-}
-
-.input-icon {
-  position: relative;
-}
-.input-icon img {
-  position: absolute;
-  left: 12px;
-  top: 10px;
-  width: 20px;
-  height: 20px;
-  z-index: 9;
-}
-@media (min-width: 1800px) {
-  .input-icon img {
-    width: 30px;
-    height: 30px;
-    left: 20px;
-    top: 15px;
-  }
-}
-.input-icon input.with-icon {
-  padding-left: 45px;
-}
-@media (min-width: 1800px) {
-  .input-icon input.with-icon {
-    padding-left: 70px;
-  }
-}
-.input-icon input.editable {
-  background-color: #F1F1F5;
-}
-.input-icon img.right-icon {
-  position: absolute;
-  left: auto;
-  right: 12px;
-  top: 10px;
-  width: 20px;
-  height: 20px;
-}
-@media (min-width: 1800px) {
-  .input-icon img.right-icon {
-    width: 32px;
-    height: 32px;
-    right: 18px;
-    top: 15px;
-  }
-}
-.input-icon .right-check-icon,
-.input-icon .right-check-icon-success {
-  display: none;
-}
-.input-icon .right-check-icon,
-.input-icon .right-check-icon-success {
-  position: absolute;
-  left: auto;
-  right: 12px;
-  top: 16px;
-  width: 20px;
-  height: 20px;
-}
-@media (min-width: 1800px) {
-  .input-icon .right-check-icon,
-  .input-icon .right-check-icon-success {
-    width: 32px;
-    height: 32px;
-    right: 18px;
-    top: 18px;
-  }
-}
-
-input {
-  position: relative;
-}
-input.form-icon-edit:after {
-  content: "";
-  background-image: url("../images/icons/form-edit-pencit.png");
-  background-size: 20px;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 5px;
-  top: 5px;
-}
-input.form-icon-mail:before {
-  content: "";
-  background-image: url("../images/icons/form-mail-icon.png");
-  background-size: 20px;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-}
-
-.form-bottom-info {
-  font-family: "Figtree-Light";
-  font-size: 13px;
-  line-height: 1.5;
-  margin-top: 5px;
-}
-@media (min-width: 992px) {
-  .form-bottom-info {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .form-bottom-info {
-    font-size: 13px;
-  }
-}
-@media (min-width: 1800px) {
-  .form-bottom-info {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1800px) {
-  .form-bottom-info {
-    margin-top: 8px;
-  }
-}
-
 .toggle-buttons {
   display: flex;
 }
@@ -25259,7 +25270,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .toggle-buttons .toggle-btn {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -25269,11 +25280,15 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .toggle-buttons .toggle-btn {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .toggle-buttons .toggle-btn.active {
   background-color: rgb(230, 27, 119);
+  color: white;
+}
+.toggle-buttons .toggle-btn:hover, .toggle-buttons .toggle-btn:focus {
+  background-color: rgb(55, 52, 52);
   color: white;
 }
 
@@ -25282,12 +25297,6 @@ input.form-icon-mail:before {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 20px;
-}
-@media (min-width: 1800px) {
-  .location-header {
-    padding-bottom: 32px;
-  }
 }
 .location-header.has-border {
   border-bottom: 1px solid #e0e0e0;
@@ -25306,7 +25315,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .location-header h3, .location-header .h3 {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 @media (min-width: 1200px) {
@@ -25316,7 +25325,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .location-header h3, .location-header .h3 {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 .location-header p {
@@ -25328,7 +25337,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .location-header p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
@@ -25338,13 +25347,13 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .location-header p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 .location-box {
   border-radius: 12px;
-  padding: 40px;
+  padding: 30px;
   margin-top: 20px;
   text-align: center;
   background: #fff;
@@ -25369,7 +25378,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .location-box {
-    padding: 80px 60px;
+    padding: 50px 40px;
   }
 }
 .location-box .location-icon {
@@ -25412,7 +25421,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .location-box p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -25422,7 +25431,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .location-box p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -25451,7 +25460,6 @@ input.form-icon-mail:before {
   /* Default: Full width */
   max-width: 100%;
   /* Prevents shrinking below container width */
-  border: 1px solid #ddd;
 }
 @media (min-width: 1200px) {
   .addressSelection .radio-option-full {
@@ -25474,13 +25482,13 @@ input.form-icon-mail:before {
   }
 }
 .addressSelection .radio-option-full h3, .addressSelection .radio-option-full .h3 {
-  font-family: "Inter-SemiBold";
+  font-family: "Figtree-SemiBold";
   font-size: 16px;
   margin-bottom: 10px;
 }
 @media (min-width: 992px) {
   .addressSelection .radio-option-full h3, .addressSelection .radio-option-full .h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -25490,37 +25498,43 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .addressSelection .radio-option-full h3, .addressSelection .radio-option-full .h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
-.addressSelection .radio-option-full p {
-  font-family: "Inter";
-  font-size: 15px;
+.addressSelection .radio-option-full p, .addressSelection .radio-option-full span {
+  font-family: "Figtree";
+  font-size: 14px;
   margin-bottom: 5px;
+  color: #5F6C72;
 }
 @media (min-width: 992px) {
-  .addressSelection .radio-option-full p {
-    font-size: 22px;
+  .addressSelection .radio-option-full p, .addressSelection .radio-option-full span {
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
-  .addressSelection .radio-option-full p {
-    font-size: 15px;
+  .addressSelection .radio-option-full p, .addressSelection .radio-option-full span {
+    font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
-  .addressSelection .radio-option-full p {
-    font-size: 22px;
+  .addressSelection .radio-option-full p, .addressSelection .radio-option-full span {
+    font-size: 18px;
   }
 }
+.addressSelection .radio-option-full p strong, .addressSelection .radio-option-full span strong {
+  font-family: "Figtree-Medium";
+  color: #373737;
+  margin-right: 10px;
+}
 .addressSelection .edit-btn img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 @media (min-width: 1800px) {
   .addressSelection .edit-btn img {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
   }
 }
 .addressSelection .address-item {
@@ -25584,7 +25598,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .addressSelection .shipping-selection h3, .addressSelection .shipping-selection .h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -25594,7 +25608,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .addressSelection .shipping-selection h3, .addressSelection .shipping-selection .h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -25627,13 +25641,13 @@ input.form-icon-mail:before {
   }
 }
 .addressSelection .shipping-options .radio-option-full h3, .addressSelection .shipping-options .radio-option-full .h3 {
-  font-family: "Inter-SemiBold";
+  font-family: "Figtree-SemiBold";
   font-size: 16px;
   margin-bottom: 5px;
 }
 @media (min-width: 992px) {
   .addressSelection .shipping-options .radio-option-full h3, .addressSelection .shipping-options .radio-option-full .h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -25643,7 +25657,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .addressSelection .shipping-options .radio-option-full h3, .addressSelection .shipping-options .radio-option-full .h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -25652,23 +25666,23 @@ input.form-icon-mail:before {
   }
 }
 .addressSelection .shipping-options .radio-option-full p {
-  font-family: "Inter-Light";
-  font-size: 15px;
+  font-family: "Figtree-Light";
+  font-size: 14px;
   margin-bottom: 5px;
 }
 @media (min-width: 992px) {
   .addressSelection .shipping-options .radio-option-full p {
-    font-size: 22px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
   .addressSelection .shipping-options .radio-option-full p {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
   .addressSelection .shipping-options .radio-option-full p {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -25680,21 +25694,21 @@ input.form-icon-mail:before {
   margin: 15px 0;
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (min-width: 992px) {
   .add-new-address {
-    font-size: 24px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .add-new-address {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
   .add-new-address {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 .add-new-address span {
@@ -25707,7 +25721,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .add-new-address span {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -25765,7 +25779,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .instructions-box h4, .instructions-box .h4 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -25775,7 +25789,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .instructions-box h4, .instructions-box .h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -25790,7 +25804,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .instructions-box ol {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -25800,7 +25814,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .instructions-box ol {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -25817,7 +25831,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .alert {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -25900,7 +25914,7 @@ input.form-icon-mail:before {
 @media (min-width: 992px) {
   .payment-header p,
   .balance-section p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -25912,7 +25926,7 @@ input.form-icon-mail:before {
 @media (min-width: 1800px) {
   .payment-header p,
   .balance-section p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -26017,7 +26031,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .tracking-card .tracking-header .sub-text {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -26040,7 +26054,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .tracking-card .tracking-header .status {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -26309,7 +26323,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .order-detail-heading .badge {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -26370,7 +26384,7 @@ input.form-icon-mail:before {
   .order-info .delivery-address h4, .order-info .delivery-address .h4,
   .order-info .order-additional-details h4,
   .order-info .order-additional-details .h4 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -26384,7 +26398,7 @@ input.form-icon-mail:before {
   .order-info .delivery-address h4, .order-info .delivery-address .h4,
   .order-info .order-additional-details h4,
   .order-info .order-additional-details .h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
@@ -26403,7 +26417,7 @@ input.form-icon-mail:before {
 @media (min-width: 992px) {
   .order-info .delivery-address p,
   .order-info .order-additional-details p {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -26415,7 +26429,7 @@ input.form-icon-mail:before {
 @media (min-width: 1800px) {
   .order-info .delivery-address p,
   .order-info .order-additional-details p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .order-info .delivery-address span,
@@ -26429,7 +26443,7 @@ input.form-icon-mail:before {
 @media (min-width: 992px) {
   .order-info .delivery-address span,
   .order-info .order-additional-details span {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -26603,7 +26617,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .dashboard-content .nav-tabs .nav-item .nav-link {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -26658,7 +26672,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .dashboard-content tbody tr td {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -26668,7 +26682,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .dashboard-content tbody tr td {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .dashboard-content .form-search-container {
@@ -26865,7 +26879,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .dashboard-content .beneficiary-detail-heading .details-grid .detail-item .label {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -26885,7 +26899,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .dashboard-content .beneficiary-detail-heading .details-grid .detail-item .value {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -26937,7 +26951,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .product-title-popup {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -26947,7 +26961,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .product-title-popup {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -27013,7 +27027,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .available-points-heading p {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -27033,7 +27047,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .total-order-heading {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -27043,7 +27057,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .total-order-heading {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .total-order-heading strong {
@@ -27367,7 +27381,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .notice-page .card-text {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -27377,7 +27391,7 @@ input.form-icon-mail:before {
 }
 @media (min-width: 1800px) {
   .notice-page .card-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1800px) {

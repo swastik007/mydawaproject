@@ -15,7 +15,7 @@
             font-family: $interLight;
             color: $grey8;
             padding: 12px 14px;
-            @include responsive-font(14px, 20px, 14px, 20px);
+            @include responsive-font(14px, 14px, 14px, 20px);
             @include respond-to(xxl) {
                 padding: 16px 22px;
             }
@@ -31,7 +31,7 @@
                 border: none;
                 color: $black;
                 font-family: $interMedium;
-                @include responsive-font(14px, 20px, 14px, 20px);
+                @include responsive-font(14px, 14px, 14px, 20px);
                 padding: 12px 14px;
                 @include respond-to(xxl) {
                     padding: 16px 22px;

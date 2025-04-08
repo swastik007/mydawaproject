@@ -208,7 +208,7 @@
 
 .btn-sm {
     padding: 5px 15px;
-    @include responsive-font(14px, 20px, 14px, 20px);
+    @include responsive-font(14px, 14px, 14px, 20px);
     @include respond-to(xxl) {
         padding: 8px 20px;
     }
