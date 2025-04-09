@@ -5,7 +5,19 @@
         @include respond-to(xxl) {
             min-width: 550px;
         }
-        
+        &.dialog-lg{
+            @include respond-to(xxl) {
+                min-width: 650px;
+            }
+        }
+        &.dialog-xl{
+            @include respond-to(lg) {
+                min-width: 635px;
+            }
+            @include respond-to(xxl) {
+                min-width: 820px;
+            }
+        }
     }
     @include respond-to(xxl) {
         border-radius: 16px;
@@ -41,11 +53,11 @@
         }
     }
     .modal-body{
-        max-height: 70vh;
-        overflow-y: auto;
-        @include respond-to(xxl) {
-            max-height: 72vh;
-        }
+        // max-height: 70vh;
+        // overflow-y: auto;
+        // @include respond-to(xxl) {
+        //     max-height: 72vh;
+        // }
     } 
     .modal-footer{
         border-top: none;
@@ -93,7 +105,7 @@
     }
     .text-heading{
         font-family: $figtreeSemiBold;
-        @include responsive-font(20px, 26px, 20px, 26px);
+        @include responsive-font(20px, 20px, 20px, 26px);
         text-align: center;
         margin-bottom: 10px;
     }
@@ -102,7 +114,34 @@
         @include responsive-font(16px, 20px, 16px, 20px);
         text-align: center;
     }
-
+    .shipping-options{
+        display: flex;
+        gap: 0 10px;
+        .radio-option-full{
+            @include respond-to(xxl) {
+                padding: 20px;
+            }
+            .content p{
+                @include responsive-font(14px, 14px, 14px, 18px);
+                line-height: 1.1;
+            }
+        }
+    }
+    .instructions-box{
+        ul{
+            margin-left: 10px;
+            margin-top: 10px;
+            @include respond-to(xxl) {
+                margin-left: 15px;
+            margin-top: 15px;
+            }
+        }
+        li{
+            font-family: $figtreeLight;
+            @include responsive-font(14px, 14px, 14px, 18px);
+            margin-bottom: 7px;
+        }
+    }
 }
 
 .dawa-modal {

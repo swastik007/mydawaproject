@@ -46,36 +46,88 @@
   color: #fff;
   background-color: #007bff;
 }
-
+.link-grid{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.column h6{
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  width: fit-content;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
   </style>
 </head>
 <body>
     <div class="allpagelist">
         <h1>List of Pages</h1>
+        <h2>Redesigned Pages (Ready for dev)</h2>
+        <div class="link-grid">
+          <div class="column">
+            <h6>Login Pages</h6>
+            <ul>
+              <li><a href="loginpage.html">Login Page</a></li>
+              <li><a href="forgotpassword.html">Forgot Password</a></li>
+              <li><a href="forgotpasswordotp.html">Forgot Password OTP</a></li>
+              <li><a href="setpassword.html">Set Password</a></li>
+              <li><a href="signuppage.html">Sign Up </a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h6>Submit Prescriptions</h6>
+            <ul>
+              <li><a href="submitpresciption-step1.html">Submit Prescription 1.1</a></li>
+              <li><a href="submitpresciption-step1_2.html">Submit Prescription 1.2</a></li>
+              <li><a href="submitpresciption-step1_3.html">Submit Prescription 1.3</a></li>
+              <li><a href="submitpresciption-step1_4.html">Submit Prescription 1.4</a></li>
+              <li><a href="submitpresciption-step1_5.html">Submit Prescription 1.5</a></li>
+              <li><a href="submitpresciption-step1_6.html">Submit Prescription 1.6</a></li>
+              <li><a href="submitpresciption-step2_1.html">Submit Prescription 2.1</a></li>
+              <li><a href="submitpresciption-step2_2.html">Submit Prescription 2.2</a></li>
+              <li><a href="submitpresciption-step3_1.html">Submit Prescription 3.1</a></li>
+              <li><a href="submitpresciption-step3_2.html">Submit Prescription 3.2</a></li>
+              <li><a href="submitpresciption-step3_3.html">Submit Prescription 3.3</a></li>
+              <li><a href="submitpresciption-step3_4.html">Submit Prescription 3.4</a></li>
+              <li><a href="submitpresciption-step3_5.html">Submit Prescription 3.5</a></li>
+              <li><a href="submitpresciption-step3_6.html">Submit Prescription 3.6</a></li>
+              <li><a href="submitpresciption-step3_7.html">Submit Prescription 3.7</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h6>Checkout Pages</h6>
+            <ul>
+              <li><a href="checkoutpage1_1.html">Checkout 1.1</a></li>
+              <li><a href="checkoutpage1_2.html">Checkout 1.2</a></li>
+              <li><a href="checkoutpage1_3.html">Checkout 1.3</a></li>
+              <li><a href="checkoutpage1_4.html">Checkout 1.4</a></li>
+              <li><a href="checkoutpage1_5.html">Checkout 1.5</a></li>
+              <li><a href="checkoutpage1_6.html">Checkout 1.6</a></li>
+              <li><a href="checkoutpage1_7.html">Checkout 1.7</a></li>
+              <li><a href="checkoutpage1_8.html">Checkout 1.8</a></li>
+              <li><a href="checkoutpage1_9.html">Checkout 1.9</a></li>
+              <li><a href="checkoutpage1_10.html">Checkout 1.10</a></li>
+              <li><a href="checkoutpage1_11.html">Checkout 1.11</a></li>
+            </ul>
+          </div>
+         
+        </div>
         <ul>
           <h5>Redesigned Pages (Ready for dev)</h5>
-          <li><a href="loginpage.html">Login Page</a></li>
-          <li><a href="forgotpassword.html">Forgot Password</a></li>
-          <li><a href="forgotpasswordotp.html">Forgot Password OTP</a></li>
-          <li><a href="setpassword.html">Set Password</a></li>
-          <li><a href="signuppage.html">Sign Up </a></li>
-          <li><a href="submitpresciption-step1.html">Submit Prescription 1.1</a></li>
-          <li><a href="submitpresciption-step1_2.html">Submit Prescription 1.2</a></li>
-          <li><a href="submitpresciption-step1_3.html">Submit Prescription 1.3</a></li>
-          <li><a href="submitpresciption-step1_4.html">Submit Prescription 1.4</a></li>
-          <li><a href="submitpresciption-step1_5.html">Submit Prescription 1.5</a></li>
-          <li><a href="submitpresciption-step1_6.html">Submit Prescription 1.6</a></li>
-          <li><a href="submitpresciption-step2_1.html">Submit Prescription 2.1</a></li>
-          <li><a href="submitpresciption-step2_2.html">Submit Prescription 2.2</a></li>
-          <li><a href="submitpresciption-step3_1.html">Submit Prescription 3.1</a></li>
-          <li><a href="submitpresciption-step3_2.html">Submit Prescription 3.2</a></li>
-          <li><a href="submitpresciption-step3_3.html">Submit Prescription 3.3</a></li>
-          <li><a href="submitpresciption-step3_4.html">Submit Prescription 3.4</a></li>
-          <li><a href="submitpresciption-step3_5.html">Submit Prescription 3.5</a></li>
-          <li><a href="submitpresciption-step3_6.html">Submit Prescription 3.6</a></li>
-          <li><a href="submitpresciption-step3_7.html">Submit Prescription 3.7</a></li>
           <li><a href="checkoutpage1_1.html">Checkout 1.1</a></li>
           <li><a href="checkoutpage1_2.html">Checkout 1.2</a></li>
+          <li><a href="checkoutpage1_3.html">Checkout 1.3</a></li>
+          <li><a href="checkoutpage1_4.html">Checkout 1.4</a></li>
+          <li><a href="checkoutpage1_5.html">Checkout 1.5</a></li>
+          <li><a href="checkoutpage1_6.html">Checkout 1.6</a></li>
+          <li><a href="checkoutpage1_7.html">Checkout 1.7</a></li>
+          <li><a href="checkoutpage1_8.html">Checkout 1.8</a></li>
 
 
 

@@ -62,115 +62,78 @@
                         <div class="row">
                             <!-- Cart Items -->
                             <div class="col-lg-8">
-                                <div class="location-header">
-                                    <div class="d-flex flex-column">
-                                        <h3>Choose your delivery</h3>
-                                        <p>Delivery options and speeds may differ depending on your location</p>
-                                    </div>
-
-                                    <div class="toggle-buttons">
-                                        <button class="toggle-btn active">Delivery</button>
-                                        <button class="toggle-btn">Pickup</button>
-                                    </div>
-                                </div>
-
-                                <div class="addressSelection">
-                                    <div class="address-list">
-                                       
-                                        <label class="radio-option-full selected">
-                                            <input type="radio" name="address-radio" value="address-radio" checked>
-                                            <span class="radio"></span>
-                                            <div class="content">
-                                                <h3>Raja Swarnakaar</h3>
-                                                <p>(+977) 123456789</p>
-                                                <p>1234 Innovation Drive, Nairobi, Kenya, Apartment Number 343</p>
-                                                <span>Phone: <strong>+1-202-555-0118</strong></span>
-                                                <span>Email: <strong>kevin.gilbert@gmail.com</strong></span>
-                                            </div>
-                                            <span class="edit-btn btn-edit-delivery">
-                                                <img src="assets/images/icons/edit-pink-icon.png" alt="Edit"> 
-                                            </span>
-                                        </label>
-                                        <label class="radio-option-full">
-                                            <input type="radio" name="address-radio" value="address-radio">
-                                            <span class="radio"></span>
-                                            <div class="content">
-                                                <h3>Raja Swarnakaar</h3>
-                                                <p>(+977) 123456789</p>
-                                                <p>1234 Innovation Drive, Nairobi, Kenya, Apartment Number 343</p>
-                                                <span>Phone: <strong>+1-202-555-0118</strong></span>
-                                                <span>Email: <strong>kevin.gilbert@gmail.com</strong></span>
-                                            </div>
-                                            <span class="edit-btn btn-edit-delivery">
-                                                <img src="assets/images/icons/edit-pink-icon.png" alt="Edit"> 
-                                            </span>
-                                        </label>
-    
-                                    </div>
-    
-                                    <a href="#" class="add-new-address btn-add-delivery">+<span>Add New Address</span> </a>
-    
-                                    <div class="shipping-selection">
-                                        <h3>Choose Shipping Type</h3>
-                                        <div class="shipping-options">
-                                            <label class="radio-option-full">
-                                                <input type="radio" name="shippingtype" value="shippingtype">
-                                                <span class="radio"></span>
-                                                <div class="content">
-                                                    <h3>On Demand</h3>
-                                                    <p>Text to be provided by Nicky Nyamasyo.</p>
-                                                </div>
-                                                
-                                            </label>
-                                            <label class="radio-option-full">
-                                                <input type="radio" name="shippingtype" value="shippingtype">
-                                                <span class="radio"></span>
-                                                <div class="content">
-                                                    <h3>Scheduled</h3>
-                                                    <p>Text to be provided by Nicky Nyamasyo.</p>
-                                                </div>
-                                                
-                                            </label>
-    
-    
-    
+                                
+                                <div id="paymentSelection">
+                                    <div class="payment-header has-border">
+                                        <div class="d-flex flex-column">
+                                            <h3>Select Payment</h3>
+                                            <p>Complete this last step to get your order placed.</p>
                                         </div>
-                                        <div class="delivery-section">
+                                    </div>
+                                    <div class="payment-options-grid">
+                                        <label class="radio-option-full radio-option-vertical">
+    
+                                            <div class="content">
+                                                <img src="assets/images/icons/mobile-banking-icon.png" alt="Mobile Money">
+                                                <h3>Mobile Money</h3>
+                                            </div>
+                                                <input type="radio" name="mobile-money" value="mobile-money">
+                                                <span class="radio"></span>
+                                           
+                                        </label>
+                                        <label class="radio-option-full radio-option-vertical">
+    
+                                            <div class="content">
+                                                <img src="assets/images/icons/credit-card-icon.png" alt="Credit Card">
+                                                <h3>Debit/Credit Card</h3>
+                                            </div>
+                                                <input type="radio" name="credit-debit" value="credit-debit">
+                                                <span class="radio"></span>
                                             
-                                            <div class="input-row">
+                                        </label>
+                                        <label class="radio-option-full radio-option-vertical selected">
+    
+                                            <div class="content">
+                                                <img src="assets/images/icons/wallet-icon.png" alt="Mobile Money">
+                                                <h3>Account Balance</h3>
+                                            </div>
+                                            <input type="radio" name="account-balance" value="account-balance" checked>
+                                            <span class="radio"></span>
+                                        </label>
+                                        <label class="radio-option-full radio-option-vertical">
+    
+                                            <div class="content">
+                                                <img src="assets/images/icons/loyalty-card-icon.png" alt="Mobile Money">
+                                                <h3>Loyalty Points</h3>
+                                            </div>
+                                            <input type="radio" name="radio-loyalty" value="radio-loyalty">
+                                            <span class="radio"></span>
+                                        </label>
+                                    </div>
                                     
-                                                <div class="input-group">
-                                                    <label for="dob">Date of Birth <span
-                                                            class="required">*</span></label>
-                                                    <div class="input-icon">
-                                                        <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
-                                                                                                                       
-                                                        <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
-                                                    </div>
-                                                </div>
-                                                
+                                    <div class="balance-section" id="accountBalanceSection">
+                                        <div class="location-header d-flex justify-content-between align-items-start">
+                                            <div class="d-flex flex-column">
+                                                <h3 class="mb-1 mb-xl-2">Available Balance:<strong class="ms-2 ms-xl-3">KES 400 </strong></h3>
+                                                <p>You can use your available balance to complete the payment. If your balance is less than your total cart value, please top it up.</p>
                                             </div>
-                                          
-                                            <div class="form-group">
-                                              <label>Select Available Slots</label>
-                                              <div class="time-slots">
-                                                <button class="slot times__link">11:00 AM</button>
-                                                <button class="slot times__link disabled">11:30 AM</button>
-                                                <button class="slot times__link selected">12:00 PM</button>
-                                                <button class="slot times__link" disabled>12:30 PM</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          
+    
+                                            <a href="#" class="dotted-link blue-dotted  btn-topup">Top up Balance</a>
+                                        </div>
+    
+                                        <div class="alert alert-red">
+                                            <img src="assets/images/icons/info-icon-red.png">Oops! Your available balance is less than your total cart value. Please top up to complete the payment and ensure you have enough balance for future transactions.
+                                        </div>
                                     </div>
                                     <div class="d-block w-100 mx-auto">
-                                        <button type="button" class="mt-4 btn btn-primary" data-bs-toggle="modal" data-bs-target="#editDeliveryModal">
-                                         Edit Delivery Address
+                                        <button type="button" class="mt-4 btn btn-primary" data-bs-toggle="modal" data-bs-target="#mpesaModal">
+                                         Top Up M-Pesa
                                         </button>
-                                        <button type="button" class="mt-4 btn btn-green" data-bs-toggle="modal" data-bs-target="#addDeliveryModal">
-                                         Add New Address
+                                        <button type="button" class="mt-4 btn btn-green" data-bs-toggle="modal" data-bs-target="#airtelModal">
+                                         Top Up Airtel
                                         </button>
                                       </div>
+                                    
                                 </div>
 
                             </div>
@@ -228,84 +191,71 @@
         <div id="footer"></div>
     </div>
 
-<!-- ON board Modal -->
-<div class="modal fade" id="editDeliveryModal" tabindex="-1" aria-labelledby="editDeliveryLabel" aria-hidden="true">
-    <div class="modal-dialog dialog-lg">
+<!--Mpesa option Modal -->
+<div class="modal fade" id="mpesaModal" tabindex="-1" aria-labelledby="mpesaLabel" aria-hidden="true">
+    <div class="modal-dialog dialog-xl">
       <div class="modal-content">
         <div class="modal-header">  
-            <h5>Edit Delivery Address</h5>                
+            <h5>Top up Balance</h5>                
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
          
           <div class="modal-body d-flex justify-content-center align-items-center flex-column">  
-            <form>
-                <div class="input-row ">
-                    <div class="input-group">
-                        <label for="fullName">Name <span class="required">*</span></label>
-                        <div class="input-icon">
-                            <img src="assets/images/icons/form-icon-mail.png" alt="Phone">
-                            <input class="with-icon editable" type="text" id="fullName" placeholder="Tabrez Shaikh" >
-                            <img class="right-icon" src="assets/images/icons/form-edit-pencil.png" alt="Phone">
-                            <img class="right-check-icon" src="assets/images/icons/form-checked-circle.png" alt="Phone">
-                            <img class="right-check-icon-success" src="assets/images/icons/form-checked-circle-success.png" alt="Phone">
+            <div class="shipping-selection">
+                <div class="shipping-options">
+                    <label class="radio-option-full selected">
+                        <input type="radio" name="option-mpesa" value="option-mpesa" checked>
+                        <span class="radio"></span>
+                        <div class="content">
+                            <h3>M-PESA Paybill</h3>
+                            <p>follow the steps to make payment</p>
                         </div>
                         
-                    </div>
-                    <div class="input-group">
-                        <label  for="phoneNumber">Phone Number<span class="required">*</span></label>
-                        <div class="input-icon">
-                            <img src="assets/images/icons/form-call-icon.png" alt="Phone">
-                            <input class="with-icon editable" type="text" id="fullName" placeholder="9875896589" >
-                            <img class="right-icon" src="assets/images/icons/form-edit-pencil.png" alt="Phone">
-                            <img class="right-check-icon" src="assets/images/icons/form-checked-circle.png" alt="Phone">
-                            <img class="right-check-icon-success" src="assets/images/icons/form-checked-circle-success.png" alt="Phone">
+                    </label>
+                    <label class="radio-option-full">
+                        <input type="radio" name="option-airtel" value="option-airtel">
+                        <span class="radio"></span>
+                        <div class="content">
+                            <h3>Airtel Paybill</h3>
+                            <p>follow the steps to make payment</p>
                         </div>
-                        
+                    </label>
+                </div>
+            </div>
+            <div class="mPesaSection w-100" id="mPesaSection">
+                <div class="instructions-box">
+                   <ul>
+                    <li>1. Go to M-PESA menu</li>
+                    <li>2. Select “Lipa na MPESA”</li>
+                    <li>3. Select Pay bill number</li>
+                    <li>
+                      4. Business Number                     
+                    
+                    </li>
+                    <li> <input class="w-100 d-block" type="text" id="business-number" placeholder="Enter Business Number">                    
+                    </li>
+                    <li>5. Account Number</li>
+                    <li>
+                     
+                      <input type="text" placeholder="Enter Account Number"
+                      class="w-100 d-block" />
+                    </li>
+                    <li>
+                      6. Enter Amount
+                      </li>
+                    <li> <input type="number" placeholder="Enter Amount"
+                        class="w-100 d-block" />
+              </li>
+                    <li>7. Enter your Pin.</li>
+                    <li>8. Payment Request will come from “ION Kenya limited”</li>
+            </ul>
+                    <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                        <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                        <button class="btn-green btn-rounded btn-lg btn-ordersuccess">Done</button>
                     </div>
-                   
                 </div>
-                <span class="form-bottom-info mb-3 mb-xl-4">Not the receiver? Change name & phone number</span>
-                 <!-- Search Address -->
-                 <div class="input-row mb-3 mb-xl-4">
-                    <div class="input-group position-relative">
-                        <label for="searchAddress" class="form-label">Search Address <span class="text-danger">*</span></label>
-                        <input type="text" id="searchAddress" class="" placeholder="1234 Innovation Drive, Nairobi, Kenya">
-                        <ul id="suggestions" class="dropdown-menu custom-address-dropdown"></ul>
-                    </div>
-                </div>
-                 <!-- Apartment/Building/House Number -->
-            <div class="input-group mb-3 mb-xl-4">
-                <label for="houseNumber">Apartment/Building/House Number <span class="required">*</span></label>
-                <input type="text" id="houseNumber" placeholder="Apartment Number 343">
+               
             </div>
-
-            <!-- Region & Area/Street -->
-            <div class="input-row mb-3 mb-xl-4">
-                <div class="input-group">
-                    <label for="region">Region <span class="required">*</span></label>
-                    <select id="region">
-                        <option>Nairobi</option>
-                        <option>Mombasa</option>
-                        <option>Kisumu</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="street">Area/Street <span class="required">*</span></label>
-                    <input type="text" id="street" placeholder="Innovation Drive">
-                </div>
-            </div>
-
-            <!-- Additional Details -->
-            <div class="input-group mb-3 mb-xl-4">
-                <label for="additionalDetails">Add Additional Details</label>
-                <textarea id="additionalDetails" placeholder="e.g. buzzer for gate access,"></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <button onclick="window.location.href='/checkoutdeliveryaddress.html';" type="button" class="d-block ms-auto me-0 mt-4 mt-xl-5 btn-dark btn-rounded btn-lg">Add Address</button>
-       
-            
-            </form>
           </div>
           
         
@@ -315,7 +265,7 @@
   </div>
   
   <!-- Order Failed Message -->
-  <div class="modal fade" id="addDeliveryModal" tabindex="-1" aria-labelledby="addDeliveryLabel" aria-hidden="true">
+  <div class="modal fade" id="airtelModal" tabindex="-1" aria-labelledby="airtelLabel" aria-hidden="true">
     <div class="modal-dialog dialog-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -466,7 +416,7 @@
 });
 
     </script>
-    
+     
 </body>
 
 </html>

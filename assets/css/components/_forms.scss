@@ -1319,8 +1319,8 @@ ol.form-list {
         height: 20px;
         z-index: 9;
         @include respond-to(xxl) {
-            width: 30px;
-            height: 30px;
+            width: 26px;
+            height: 26px;
             left: 20px;
             top: 15px;
         }
@@ -1343,12 +1343,10 @@ ol.form-list {
         top: 11px;
         width: 20px;
         height: 20px;
-        @include respond-to(lg) {
-            top: 16px;
-        }
+       
         @include respond-to(xxl) {
-            width: 32px;
-            height: 32px;
+            width: 26px;
+            height: 26px;
             right: 18px;
             top: 15px;
         }
@@ -1362,12 +1360,12 @@ ol.form-list {
         position: absolute;
         left: auto;
         right: 12px;
-        top: 16px;
+        top: 10px;
         width: 20px;
         height: 20px;
         @include respond-to(xxl) {
-            width: 32px;
-            height: 32px;
+            width: 26px;
+            height: 26px;
             right: 18px;
             top: 14px;
         }
@@ -1387,6 +1385,9 @@ input{
             position: absolute;
             left: 5px;
             top: 5px;
+            @include respond-to(xxl) {
+                background-size: 26px;
+            }
         }
         
     }
@@ -1394,11 +1395,14 @@ input{
         &:before{
             content: '';
             background-image: url('../images/icons/form-mail-icon.png');
-            background-size: 20px;
+            background-size: 14px;
             background-repeat: no-repeat;
             position: absolute;
             right: 5px;
             top: 5px;
+            @include respond-to(xxl) {
+                background-size: 20px;
+            }
         }
     }
 }

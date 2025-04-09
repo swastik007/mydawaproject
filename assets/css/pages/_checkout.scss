@@ -296,26 +296,17 @@
     /* Adjust spacing between grid items */
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 1px solid #E7ECF4;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     /* Default: 2 columns */
-    @include respond-to(xxl) {
+    @include respond-to(lg) {
         grid-template-columns: repeat(4, 1fr);
-        padding-bottom: 48px;
-        margin-bottom: 48px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 }
 
-.instructions-box {
-    background-color: #FCFCFC;
-    border: 1px solid #D4DEE5;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 12px;
-    @include respond-to(xxl) {
-        padding: 35px;
-        margin-top: 32px;
-    }
+.instructions-box {    
     h4 {
         font-family: $figtreeSemiBold;
         @include responsive-font(16px, 16px, 16px, 20px);

@@ -12545,6 +12545,21 @@ body {
   }
 }
 @media (min-width: 1800px) {
+  .modal .modal-dialog.dialog-lg {
+    min-width: 650px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal .modal-dialog.dialog-xl {
+    min-width: 635px;
+  }
+}
+@media (min-width: 1800px) {
+  .modal .modal-dialog.dialog-xl {
+    min-width: 820px;
+  }
+}
+@media (min-width: 1800px) {
   .modal {
     border-radius: 16px;
   }
@@ -12609,15 +12624,6 @@ body {
 @media (min-width: 1800px) {
   .modal .modal-content {
     padding: 20px;
-  }
-}
-.modal .modal-body {
-  max-height: 70vh;
-  overflow-y: auto;
-}
-@media (min-width: 1800px) {
-  .modal .modal-body {
-    max-height: 72vh;
   }
 }
 .modal .modal-footer {
@@ -12694,7 +12700,7 @@ body {
 }
 @media (min-width: 992px) {
   .modal .text-heading {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -12725,6 +12731,64 @@ body {
 @media (min-width: 1800px) {
   .modal .text-content {
     font-size: 20px;
+  }
+}
+.modal .shipping-options {
+  display: flex;
+  gap: 0 10px;
+}
+@media (min-width: 1800px) {
+  .modal .shipping-options .radio-option-full {
+    padding: 20px;
+  }
+}
+.modal .shipping-options .radio-option-full .content p {
+  font-size: 14px;
+  line-height: 1.1;
+}
+@media (min-width: 992px) {
+  .modal .shipping-options .radio-option-full .content p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal .shipping-options .radio-option-full .content p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .modal .shipping-options .radio-option-full .content p {
+    font-size: 18px;
+  }
+}
+.modal .instructions-box ul {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+@media (min-width: 1800px) {
+  .modal .instructions-box ul {
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+}
+.modal .instructions-box li {
+  font-family: "Figtree-Light";
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+@media (min-width: 992px) {
+  .modal .instructions-box li {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal .instructions-box li {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1800px) {
+  .modal .instructions-box li {
+    font-size: 18px;
   }
 }
 
@@ -15361,8 +15425,8 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .input-icon img {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     left: 20px;
     top: 15px;
   }
@@ -15386,15 +15450,10 @@ ol.form-list {
   width: 20px;
   height: 20px;
 }
-@media (min-width: 1200px) {
-  .input-icon img.right-icon {
-    top: 16px;
-  }
-}
 @media (min-width: 1800px) {
   .input-icon img.right-icon {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
     right: 18px;
     top: 15px;
   }
@@ -15408,15 +15467,15 @@ ol.form-list {
   position: absolute;
   left: auto;
   right: 12px;
-  top: 16px;
+  top: 10px;
   width: 20px;
   height: 20px;
 }
 @media (min-width: 1800px) {
   .input-icon .right-check-icon,
   .input-icon .right-check-icon-success {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
     right: 18px;
     top: 14px;
   }
@@ -15434,14 +15493,24 @@ input.form-icon-edit:after {
   left: 5px;
   top: 5px;
 }
+@media (min-width: 1800px) {
+  input.form-icon-edit:after {
+    background-size: 26px;
+  }
+}
 input.form-icon-mail:before {
   content: "";
   background-image: url("../images/icons/form-mail-icon.png");
-  background-size: 20px;
+  background-size: 14px;
   background-repeat: no-repeat;
   position: absolute;
   right: 5px;
   top: 5px;
+}
+@media (min-width: 1800px) {
+  input.form-icon-mail:before {
+    background-size: 20px;
+  }
 }
 
 .form-bottom-info {
@@ -20194,14 +20263,8 @@ header {
 .healthjourney-section .healthjourney-card img {
   position: absolute;
   right: 0;
-<<<<<<< HEAD
   top: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-=======
-  bottom: 0;
   object-fit: cover;
->>>>>>> c58f14a542e1f981c961e3fe46b508dc1a7b452f
   width: 100%;
   z-index: -9;
 }
@@ -25768,31 +25831,18 @@ header {
   /* Adjust spacing between grid items */
   grid-template-columns: repeat(2, 1fr);
   border-bottom: 1px solid #E7ECF4;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   /* Default: 2 columns */
 }
-@media (min-width: 1800px) {
+@media (min-width: 1200px) {
   .payment-options-grid {
     grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 48px;
-    margin-bottom: 48px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 
-.instructions-box {
-  background-color: #FCFCFC;
-  border: 1px solid #D4DEE5;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 12px;
-}
-@media (min-width: 1800px) {
-  .instructions-box {
-    padding: 35px;
-    margin-top: 32px;
-  }
-}
 .instructions-box h4, .instructions-box .h4 {
   font-family: "Figtree-SemiBold";
   font-size: 16px;
