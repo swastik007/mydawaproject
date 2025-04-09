@@ -23,7 +23,7 @@
     <div class="container-main">
         <div id="header"></div>
         <main class="dawamain">
-            <div class="page-content">
+            <div class="page-content container-fluid mt-2 mt-xl-4">
                 <!-- Breadcrumb section -->
                 <nav class="breadcrumb-container mydawa-container">
                     <ul class="breadcrumb">
@@ -33,29 +33,40 @@
                     </ul>
                 </nav>
                 <div class="cart-container mydawa-container">
-                    <!-- Cart Title and Steps -->
-                    <div class="cart-header">
-                        <h2 class="section-heading">My Cart</h2>
-                        <div class="cart-steps">
-                            <span class="step active">
-                                <span class="step-circle">1</span> Cart Summary</span>
-                            <span class="step"><span class="step-circle">2</span> Delivery Details</span>
-                            <span class="step"><span class="step-circle">3</span> Payment</span>
+                    <!-- Step Navigation -->
+                    <div class="step-navigation mb-4">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between">
+                            <h4 class="section-heading">My Cart</h4>
+                            <ul class="steps">
+                                <li class="step">
+                                    <span class="step-circle active"> 
+                                       1</span>
+                                    <span class="step-text">Cart Summary</span>
+
+                                </li>
+                                <li class="step">
+                                    <span class="step-circle">2</span>
+                                    <span class="step-text">Delivery Details</span>
+                                </li>
+                                <li class="step">
+                                    <span class="step-circle">3</span>
+                                    <span class="step-text">Payment</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="cart-content mb-6 mb-xl-7">
+                    <div class="cart-content mb-3 mb-xl-4">
                         <div class="empty-cart">
                             <img src="assets/images/icons/cart-bag.png" alt="Shopping Bag" class="cart-icon">
                             <h2>Your Cart Is Empty</h2>
                             <p>Looks like you haven’t added anything yet. Start exploring our products and fill your cart with everything you need!</p>
                             <a href="#" class="btn-grey">Start Shopping !</a>
                         </div>
-
-
-
                     </div>
                 </div>
+                <!-- Popular Product section -->
+                <div id="popularproducts"></div>
             </div>
         </main>
         <div id="footer"></div>

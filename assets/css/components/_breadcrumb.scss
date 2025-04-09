@@ -3,13 +3,11 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: 60px;
-    @include respond-to(lg) {
-        margin-top: 20px;
-    }
+    margin-top: 0px;
+   
     @include respond-to(xxl) {
-        margin-top: 36px;
-        margin-bottom: 50px;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
     .breadcrumb {
         display: flex;
@@ -24,13 +22,13 @@
                 color: $black;
                 font-family: $figtreeMedium;
                 transition: color 0.3s ease;
-                @include responsive-font(14px, 20px, 14px, 20px);
+                @include responsive-font(14px, 14px, 14px, 20px);
                 &:hover {
                     color: $primary;
                 }
                 &.active {
                     font-family: $figtreeBold;
-                    @include responsive-font(14px, 20px, 14px, 20px);
+                    @include responsive-font(14px, 14px, 14px, 20px);
                     color: $black;
                 }
             }

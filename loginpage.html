@@ -12,32 +12,1005 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/vendor/intlTel/intlTelInput.css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
+    <div class="help-container">
+      <div class="help-menu" id="helpMenu">
+        <a href="/speaktodoctor.html" class="help-menu__item">
+          <div class="help-menu__text">Speak To A Doctor</div>
+          <div class="help-menu__icon">
+            <img src="./assets/images/icons/float-1.svg" />
+          </div>
+        </a>
+        <a href="/helppage1.html" class="help-menu__item">
+          <div class="help-menu__text">Buying & Payment Issues</div>
+          <div class="help-menu__icon">
+            <img src="./assets/images/icons/float-2.svg" />
+          </div>
+        </a>
+        <a href="/helppage2.html" class="help-menu__item">
+          <div class="help-menu__text">Issue With An Order</div>
+          <div class="help-menu__icon">
+            <img src="./assets/images/icons/float-3.svg" />
+          </div>
+        </a>
+        <a href="/helppage1.html" class="help-menu__item">
+          <div class="help-menu__text">Product Information</div>
+          <div class="help-menu__icon">
+            <img src="./assets/images/icons/float-4.svg" />
+          </div>
+        </a>
+      </div>
+      <button class="help-button" id="helpButton">
+        <span class="help-button__text">Need Help?</span>
+        <span class="help-button__icon">
+          <img class="help-button__icon--normal" src="./assets/images/icons/need-help.png" />
+          <img class="help-button__icon--active" src="./assets/images/icons/help-close.png" />
+        </span>
+      </button>
+    </div>
+  <div class="container-main">
+    <header class="site-header">
+      <div class="header-promo d-none">
+        <div class="mydawa-container">
+          <p>
+            Introducing the UltraBlend Pro! Enjoy up to 30% off for a limited
+            time
+          </p>
+        </div>
+      </div>
+      <div class="mydawa-container">
+        <div class="top-header">
+          <div class="top-left">
+            <div class="top-left-box">
+              <div class="ham">
+                <img src="assets/images/icon-ham.svg" alt="Ham" />
+              </div>
+              <a href="/" class="logo">
+                <img src="assets/images/logo.png" alt="Mydawa Logo" />
+              </a>
+            </div>
+            <div class="search-wrap">
+              <div class="search-container">
+                <input type="search" placeholder="Search For Medicines & Health Products" />
+                <img src="assets/images/icon-search.svg" alt="Search" />
+              </div>
+              <!-- Search Results -->
+              <div class="search-results">
+                <!-- Recent Search -->
+                <div class="recent-search">
+                  <h5>Recent Search</h5>
+                  <ul class="recent-list">
+                    <li>
+                      <a href="/searchresults.html"><i class="bx bx-history"></i>Femiplan pills</a>
+                    </li>
+                    <li>
+                      <a href="/searchresults.html"><i class="bx bx-history"></i>family planning set</a>
+                    </li>
+                    <li>
+                      <a href="/searchresults.html"><i class="bx bx-history"></i>contraceptives</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Search Trending -->
+                <div class="trending-search">
+                  <h5>Trending Search</h5>
+                  <ul class="trending-list">
+                    <li>
+                      <a href="/searchresults.html"><i class="bx bx-up-arrow-alt"></i>Oral
+                        Contraceptive</a>
+                      <span>100+ people searched</span>
+                    </li>
+                    <li>
+                      <a href="/searchresults.html"><i class="bx bx-up-arrow-alt"></i>Cough Syrup</a>
+                    </li>
+                    <li>
+                      <a href="/searchresults.html"><i class="bx bx-up-arrow-alt"></i>Face Wash For
+                        Men</a>
+                    </li>
+                  </ul>
+                </div>
 
-<div class="container-main">
-    <div id="header"></div>
-    <main class="dawamain pt-0">
-        <div class="page-content">
+                <!-- Products Section -->
+                <div class="featured-search">
+                  <h5>Products</h5>
+                  <div class="product-list">
+                    <!-- Product Item -->
+                    <div class="product-item">
+                      <img src="assets/images/product-images/product4.jpg" alt="Durex Condoms Featherlite 12's"
+                        class="product-image" />
+                      <div class="product-info">
+                        <p class="product-name">
+                          Durex Condoms Featherlite 12's
+                        </p>
+                        <p class="product-price">KES 1375</p>
+                        <small class="product-note">200+ people bought today</small>
+                      </div>
+                    </div>
+                    <!-- Other Product Items -->
+                    <div class="product-item">
+                      <img src="assets/images/product-images/product2.jpg" alt="Durex Condoms Extra Safe 3's"
+                        class="product-image" />
+                      <div class="product-info">
+                        <p class="product-name">
+                          Durex Condoms Extra Safe 3's
+                        </p>
+                        <p class="product-price">KES 475</p>
+                      </div>
+                    </div>
+                    <div class="product-item">
+                      <img src="assets/images/product-images/product6.jpg"
+                        alt="Durex Extra Thin Wild Strawberry Flavored" class="product-image" />
+                      <div class="product-info">
+                        <p class="product-name">
+                          Durex Extra Thin Wild Strawberry Flavored
+                        </p>
+                        <p class="product-price">KES 2235</p>
+                      </div>
+                    </div>
+                    <div class="product-item">
+                      <img src="assets/images/product-images/product1.jpg" alt="Durex Condoms Pleasure Me 3's"
+                        class="product-image" />
+                      <div class="product-info">
+                        <p class="product-name">
+                          Durex Condoms Pleasure Me 3's
+                        </p>
+                        <p class="product-price">KES 525</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="top-right">
+            <div class="delivery-wrap">
+              <div class="delivery-info">
+                <span class="icon">
+                  <img src="assets/images/icon-flash.svg" alt="Icon" />
+                </span>
+                <div class="icon-text">
+                  Express delivery to <br /><span class="text-bold">80100, Mombasa</span>
+                </div>
+                <span class="icon-down">
+                  <img src="assets/images/caret-down-orange.svg" alt="Icon" />
+                </span>
+              </div>
+              <div class="delivery-dropdown">
+                <div class="dropdown-wrap">
+                  <div class="dropdown-header">
+                    <h4>Choose Your Location</h4>
+                    <p class="text-muted">
+                      Delivery options and speeds may differ depending on your
+                      location
+                    </p>
+                  </div>
+                  <button class="btn-primary btn-rounded">
+                    Sign in to see your address
+                    <i class="bx bx-right-arrow-alt"></i>
+                  </button>
+                  <div class="dropdown-body">
+                    <div class="delivery-options my-2">
+                      <button class="btn-primary">Delivery</button>
+                      <button class="btn-outline-light">Pickup</button>
+                    </div>
+                    <div class="address-list">
+                      <label class="radio-container">
+                        <input type="radio" name="address" checked />
+                        <div class="d-flex flex-column ms-1">
+                          <span class="name">John Doe</span>
+                          <span class="address">House no. 14, Links Road, 80100, Mombasa,
+                            Kenya</span>
+                        </div>
+                      </label>
+                      <label class="radio-container">
+                        <input type="radio" name="address" />
+                        <div class="d-flex flex-column ms-2">
+                          <span class="name">John Doe</span>
+                          <span class="address">House no. 14, Links Road, 80100, Mombasa,
+                            Kenya</span>
+                        </div>
+                      </label>
+                      <a href="/searchresults.html" class="manage-link">Manage Addresses</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="zip-code d-flex gap-2 mt-2">
+                  <input type="text" placeholder="Enter Your Zip Code" class="form-control" />
+                  <button class="btn-grey btn-rounded">Check</button>
+                </div>
+              </div>
+            </div>
+
+            <ul class="btn-circle-wrap">
+              <li class="notification-icon">
+                <a href="" class="btn-circle position-relative">
+                  <span class="badge rounded-pill">
+                    1
+                  </span>
+
+                  <img src="assets/images/icons/header-1.svg" alt="notification" />
+                </a>
+              </li>
+              <li class="icons-top">
+                <a href="" class="btn-circle"><img src="assets/images/icons/header-2.svg" alt="percent" /></a>
+              </li>
+              <li class="icons-top user-wrap">
+                <a href="/loginpage.html" class="btn-circle"><img src="assets/images/icons/header-3.svg"
+                    alt="user" /></a>
+                <div class="delivery-dropdown">
+                  <div class="dropdown-wrap">
+                    <div class="dropdown-header d-flex justify-content-between">
+                      <p>New Customer</p>
+                      <a href="/searchresults.html" class="manage-link">Sign Up</a>
+                    </div>
+                    <button class="btn-primary btn-rounded">
+                      Sign in
+                      <i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                  </div>
+                  <div class="user-menu active">
+                    <a href="/dashboard/profilepage.html" class="user-menu__item">
+                      <div class="user-menu__icon">
+                        <img src="./assets/images/icons/user-1.svg" />
+                      </div>
+                      <div class="user-menu__text">My Orders</div>
+                    </a>
+                    <a href="/dashboard/profilepage.html" class="user-menu__item">
+                      <div class="user-menu__icon">
+                        <img src="./assets/images/icons/user-2.svg" />
+                      </div>
+                      <div class="user-menu__text">My Account</div>
+                    </a>
+                    <a href="/helppage2.html" class="user-menu__item">
+                      <div class="user-menu__icon">
+                        <img src="./assets/images/icons/user-3.svg" />
+                      </div>
+                      <div class="user-menu__text">Wishlist</div>
+                    </a>
+                    <a href="/helppage1.html" class="user-menu__item">
+                      <div class="user-menu__icon">
+                        <img src="./assets/images/icons/user-4.svg" />
+                      </div>
+                      <div class="user-menu__text">Beneficiaries</div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="icons-top cart-dropdown-wrap">
+                <a href="/cartpage.html" class="btn-circle position-relative">
+                  <span class=" badge rounded-pill">
+                    3
+                  </span>
+                  <img src="assets/images/icons/header-4.svg" alt="cart" />
+                </a>
+
+                <div class="cart-dropdown">
+                  <div class="cart-item">
+                    <div class="product-info">
+                      <img src="assets/images/product-images/product11.jpg" alt="Pampers" class="item-image" />
+                      <div class="item-details">
+                        <h3>
+                          <a href="/cartpage.html">Pampers Swaddlers 360 Pull-On Diapers, Size 5</a>
+                        </h3>
+                        <p>By Pampers</p>
+                      </div>
+                    </div>
+                    <div class="item-quantity">
+                      <div class="d-flex justify-start">
+                        <div class="change-quantity">
+                          <button class="minus">-</button>
+                          <span>1</span>
+                          <button class="plus">+</button>
+                        </div>
+                        <button class="cart-delete">
+                          <img src="assets/images/icons/delete-icon.png" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item-price">
+                      <p class="product-price-old">KES 400</p>
+                      <p class="product-price">KES 380</p>
+                    </div>
+                  </div>
+                  <div class="cart-item">
+                    <div class="product-info">
+                      <img src="assets/images/product-images/product11.jpg" alt="Pampers" class="item-image" />
+                      <div class="item-details">
+                        <h3>
+                          <a href="/cartpage.html">Pampers Swaddlers 360 Pull-On Diapers, Size 5</a>
+                        </h3>
+                        <p>By Pampers</p>
+                      </div>
+                    </div>
+                    <div class="item-quantity">
+                      <div class="d-flex justify-start">
+                        <div class="change-quantity">
+                          <button class="minus">-</button>
+                          <span>1</span>
+                          <button class="plus">+</button>
+                        </div>
+                        <button class="cart-delete">
+                          <img src="assets/images/icons/delete-icon.png" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item-price">
+                      <p class="product-price-old">KES 400</p>
+                      <p class="product-price">KES 380</p>
+                    </div>
+                  </div>
+                  <div class="cart-item">
+                    <div class="product-info">
+                      <img src="assets/images/product-images/product11.jpg" alt="Pampers" class="item-image" />
+                      <div class="item-details">
+                        <h3>
+                          <a href="/cartpage.html">Pampers Swaddlers 360 Pull-On Diapers, Size 5</a>
+                        </h3>
+                        <p>By Pampers</p>
+                      </div>
+                    </div>
+                    <div class="item-quantity">
+                      <div class="d-flex justify-start">
+                        <div class="change-quantity">
+                          <button class="minus">-</button>
+                          <span>1</span>
+                          <button class="plus">+</button>
+                        </div>
+                        <button class="cart-delete">
+                          <img src="assets/images/icons/delete-icon.png" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item-price">
+                      <p class="product-price-old">KES 400</p>
+                      <p class="product-price">KES 380</p>
+                    </div>
+                  </div>
+                  <div class="cart-total d-flex justify-content-between items-center my-1 my-xl-2">
+                    <span>Cart Total</span>
+                    <span>KES 385</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-end my-3 my-xl-4">
+                    <button class="btn-white-border btn-rounded btn-sm me-2"
+                      onclick="window.location.href='/cartpage.html';">
+                      View Cart
+                    </button>
+                    <button class="btn-green btn-rounded btn-sm" onclick="window.location.href='/checkout.html';">
+                      Go To Checkout
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="navigation-wrap">
+        <div class="mydawa-container">
+          <div class="header-navigation">
+            <ul>
+              <!-- Parent Category -->
+              <li class="position-relative main-dropdown">
+                <a href="/searchresults.html" class="category-toggle">
+                  Shop by Category
+                  <img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
+                </a>
+
+                <!-- Dropdown Menu -->
+                <div class="shadow-lg dropdown-list">
+                  <div class="mega-wrap">
+                    <div class="mega-navigation">
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care1</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care11</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care11</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care11</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care111</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care1111</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care1111</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care1111</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mega-column">
+                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside" aria-expanded="false">
+                          <div class="menu-item">
+                            <div class="d-flex align-items-center flex-grow-1">
+                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                              <div class="text-info">
+                                <p>Beauty & Personal Care</p>
+                                <span class="text-muted">Upto 25% Off</span>
+                              </div>
+                            </div>
+                            <i class="menu-item-arrow bx bx-chevron-right"></i>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mega-column">
+                          <div class="">
+                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                              data-bs-auto-close="true" aria-expanded="false">
+                              <span>Body Care</span>
+                              <i class="menu-item-arrow bx bx-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu mega-column">
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                              <div>
+                                <a class="menu-item" href="#">
+                                  <span>Body Care</span>
+                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="position-relative main-dropdown">
+                <a href="">
+                  Shop by Condition<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="shadow-lg dropdown-list list-menu">
+                  <ul class="flex-column">
+                    <li>
+                      <a href="/telehealthpage.html">
+                        <span>Special Offers<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="position-relative main-dropdown">
+                <a href="">
+                  Shop by Brand
+                  <img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="shadow-lg dropdown-list list-menu scroll-menu">
+                  <ul class="flex-column">
+                    <li>
+                      <a href="/brandpage.html">
+                        <img src="assets/images/product-category/cat2.png" alt="" class="card-img-top" />
+                        <div class="text-info">
+                          <p>Durex</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/brandpage.html">
+                        <img src="assets/images/product-category/cat3.png" alt="" class="card-img-top" />
+                        <div class="text-info">
+                          <p>Nivea</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="position-relative main-dropdown ms-lg-4 border-l">
+                <a href="">
+                  Services<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="shadow-lg dropdown-list list-menu">
+                  <ul class="flex-column">
+                    <li>
+                      <a href="/submitpresciption.html">
+                        <span>Submit a prescription<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/searchresults.html">
+                        <span>Upload a HIV Test Results<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/searchresults.html">
+                        <span>Book A Consultation<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="position-relative main-dropdown">
+                <a href="">
+                  My Health Center<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="shadow-lg dropdown-list list-menu">
+                  <ul class="flex-column">
+                    <li>
+                      <a href="/telehealthpage.html">
+                        <span>Telehealth<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/peppage.html">
+                        <span>Pep <i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/preppage.html">
+                        <span>Prep<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/familyplanningpage.html">
+                        <span>Family Planning<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/sexualwellnesspage.html">
+                        <span>Sexual Health<i class="bx bx-chevron-right"></i></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="right-nav-section">
+              <button class="btn-grey btn-rounded btn-sm" onclick="window.location.href='/speaktodoctor.html';">
+                Speak to a doctor
+              </button>
+              <button class="btn-green btn-rounded btn-sm" onclick="window.location.href='/submitpresciption.html';">
+                Upload a prescription
+              </button>
+              <button class="btn-rounded btn-sm border-0 px-1 rounded">
+                <img src="assets/images/icons/header-dots.svg" alt="Ham" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>   
+    <main class="dawamain"> 
+        <div class="page-content container-fluid mt-2 mt-xl-4">
             <div class="d-block w-100 mx-auto">
                 <div class="row justify-content-center">                    
                     <div class="col-lg-6">
                         <div class="login-form">
                             <div class="auth-container">
-                                <h2 class="auth-title">Sign in</h2>
-                                <p class="auth-subtitle">
-                                    Don’t have an account? <a href="/signuppage.html" class="auth-link">Signup</a>
-                                </p>
-
+                                <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
+                                    <h2 class="auth-title">Log In</h2>
+                                    <p class="auth-subtitle">
+                                        Don’t have an account? <a href="/signuppage.html" class="ms-2 dotted-link blue-dotted">Create Account</a>
+                                    </p>
+                                </div>
                                 <form>
-                                    
                                     <div class="input-group mb-3 mb-xl-4">
                                         <label for="email-phone">Email/Phone <span class="required">*</span></label>
                                         <input class="w-full" type="text" id="email-phone" placeholder="Enter Your Email/Phone Number">
                                     </div>
-
-
                                     <!-- Password Input -->
                                     <div class="input-group password-group mb-3 mb-xl-4">
                                         <label for="InputPassword" class="form-label">Password<span class="required">*</span></label>
@@ -56,29 +1029,31 @@
                                                 Keep me signed in
                                             </label>
                                         </div>
-                                        <a href="#" class="auth-link">Forgot Password?</a>
+                                        <a href="#" class="dotted-link green-dotted">Forgot Password?</a>
                                     </div>
 
-                                    <button type="button" onclick="window.location.href='/profilepage.html';" class="btn btn-primary btn-lg btn-rounded auth-btn">Sign In
+                                    <button type="button" onclick="window.location.href='/profilepage.html';" class="btn btn-primary btn-lg btn-rounded auth-btn">Log In
                                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                                       </svg>
                                       </button>
-                                      
 
                                     <div class="divider">OR</div>
+                                    <div class="d-flex flex-column flex-lg-row justify-content-between gap-2 gap-xl-3">
+                                        <button class="btn-outline btn-rounded btn-lg btn-social">
+                                            <img src="assets/images/icons/google-icon.png" alt="Google">
+                                            <span>  Google</span>                                    
+                                        </button>
+                                        <button class="btn-outline btn-rounded btn-lg btn-social">
+                                            <img src="assets/images/icons/facebook-icon.png" alt="Facebook">
+                                            <span>Facebook</span>                                        
+                                        </button>
+                                    </div>
+                                    <!-- Buttons -->
+                                  <button type="button" class="mt-4 btn btn-primary" data-bs-toggle="modal" data-bs-target="#onBoardModal">
+                                    ON board POPUP
+                                  </button>
 
-                                    <button class="btn-outline btn-rounded btn-lg btn-social">
-                                    <img src="assets/images/icons/google-icon.png" alt="Google">
-                                    <span> Continue with Google</span>
-                                   
-                                </button>
-
-                                    <button class="btn-outline btn-rounded btn-lg btn-social mt-3 mt-xl-4">
-                                    <img src="assets/images/icons/facebook-icon.png" alt="Facebook">
-                                    <span>Continue with Facebook</span>
-                                    
-                                </button>
                                 </form>
                             </div>
                         </div>
@@ -87,12 +1062,92 @@
                 </div>
             </div>
     </main>
-    <div id="footer"></div>
-
+    
     </div>
+    <!-- ON board Modal -->
+    <div class="modal fade" id="onBoardModal" tabindex="-1" aria-labelledby="onBoardModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="onBoardModalLabel">Confirm to Onboard.
+              <p>Your Gender and Date of birth Information is mandatory for us to serve you better. </p>
+            </h5>        
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column">  
+              <div class="input-row">
+                <!-- Phone Number -->
+                <div class="input-group">
+                <label for="intlphoneNumber">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="intlphoneNumber">
+              </div>
+
+          </div>        
+          <div class="d-flex flex-column mb-2 mb-xl-3">
+            <div class="d-flex flex-column">      
+              <label for="otp">Enter OTP <span class="required">*</span></label>        
+              <div class="input-group input-group-otp pe-3 pe-xl-4">                                
+                <input class="otp-input" type="text" maxlength="1">
+                <input class="otp-input" type="text" maxlength="1">
+                <input class="otp-input" type="text" maxlength="1">
+                <input class="otp-input" type="text" maxlength="1">
+                <input class="otp-input" type="text" maxlength="1">
+                <input class="otp-input" type="text" maxlength="1">
+              </div>
+            </div>
+            
+            <a href="/signuppage.html" class="dotted-link green-dotted text-sm mt-1 mt-xl-2">Resend OTP</a>
+          </div>
+              <div class="input-row">
+                  <div class="input-group">
+                      <label for="gender">Gender <span class="required">*</span></label>
+                      <select id="gender">
+                          <option value="male">Male</option>
+                          <option value="female" selected>Female</option>
+                          <option value="other">Other</option>
+                          <option value="prefer-not-to-disclose">Prefer not to disclose</option>
+                      </select>
+                  </div>
+              </div>
+              
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="dob">Date of Birth <span
+                          class="required">*</span></label>
+                  <div class="input-icon">
+                      <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
+                                                                                    
+                      <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
+                  </div>
+              </div>
+              </div>
+              <div class="form-options d-flex justify-content-start align-items-center ">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="keep-signed-in">
+                      <label class="form-check-label" for="keep-signed-in">
+                          I am over 18 years old.<span class="required">*</span>
+                      </label>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-white-border btn-rounded btn-lg" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn-green btn-rounded btn-lg">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
+    
+    <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="assets/vendor/intlTel/intlTelInput.js"></script>
     <script src="assets/js/themescripts.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -113,6 +1168,68 @@
             });
         });
     </script>
+    <script>
+      // Manually trigger modals (optional)
+      const onboardModal = new bootstrap.Modal(document.getElementById('onBoardModal'));
+      const onboardPinModal = new bootstrap.Modal(document.getElementById('onBoardPinModal'));
+    
+      // Use onboardModal.show() or onboardPinModal.show() if needed
+    </script>
+     <script>
+      document.addEventListener("DOMContentLoaded", function() {
+         
+          // PHone INTl example
+          // const phoneInput = document.querySelector("#intlphoneNumber");
+
+          // if (phoneInput) {
+          //     window.intlTelInput(phoneInput, {
+          //         initialCountry: "np", // Set default to Nepal
+          //         separateDialCode: true, // Show country code separately
+          //         preferredCountries: ["np", "kn", "us"], // Top preferred countries
+          //         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.2/js/utils.js"
+          //     });
+          // } else {
+          //     console.error("❌ Phone input element not found! Ensure the input exists in the DOM.");
+          // }
+          const input = document.querySelector("#intlphoneNumber");
+          const iti = window.intlTelInput(input, {
+              // allowDropdown: false,
+              // autoPlaceholder: "off",
+              // containerClass: "test",
+              // countryOrder: ["jp", "kr"],
+              // countrySearch: false,
+              // customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+              //   return "e.g. " + selectedCountryPlaceholder;
+              // },
+              // dropdownContainer: document.querySelector('#custom-container'),
+              // excludeCountries: ["us"],
+              // fixDropdownWidth: false,
+              // formatAsYouType: false,
+              // formatOnDisplay: false,
+              // geoIpLookup: function(callback) {
+              //   fetch("https://ipapi.co/json")
+              //     .then(function(res) { return res.json(); })
+              //     .then(function(data) { callback(data.country_code); })
+              //     .catch(function() { callback(); });
+              // },
+              // hiddenInput: () => ({ phone: "phone_full", country: "country_code" }),
+              // i18n: { 'de': 'Deutschland' },
+              initialCountry: "np",
+              separateDialCode: true, // ✅ Show country code next to the flag
+              // loadUtils: () => import("/build/js/utils.js"), // leading slash (and http-server) required for this to work in chrome
+              // nationalMode: false,
+              // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+              // placeholderNumberType: "MOBILE",
+              // showFlags: false,
+              // separateDialCode: true,
+              // strictMode: true,
+              // useFullscreenPopup: true,
+              // validationNumberTypes: null,
+          });
+          window.iti = iti; // useful for testing
+              });
+  </script>
+    
     </body>
 
 </html>

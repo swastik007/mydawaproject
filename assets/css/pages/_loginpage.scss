@@ -5,10 +5,10 @@
     background-color: #fff;
     padding: 10px;
     @include respond-to(lg) {
-        padding: 40px;
+        padding: 0 20px;
     }
     @include respond-to(xxl) {
-        padding: 60px;
+        padding: 0 25px;
     }
     .auth-container {
         width: 100%;
@@ -19,40 +19,35 @@
             padding: 2rem;
         }
         @include respond-to(xxl) {
-            padding: 50px;
+            padding: 20px 50px;
         }
     }
     .auth-title {
         text-align: left;
         font-family: $figtreeExtraBold;
-        @include responsive-font(28px, 36px, 28px, 36px);
+        @include responsive-font(20px, 30x, 20px, 30px);
     }
     .auth-subtitle {
         text-align: left;
         margin-bottom: 1.5rem;
         color: #A7A7A7;
         font-family: $figtree;
-       @include responsive-font(16px, 22px, 16px, 22px);
-        .auth-link {
-            margin-left: 12px;
-            @include responsive-font(14px, 20px, 14px, 20px);
-        }
+        display: flex;
+        flex-direction: row;
+        @include responsive-font(14px, 18px, 14px, 18px);
     }
     .auth-link {
-        color: $green;
+        color: $blue;
         text-decoration: none;
         font-family: $figtreeBold;
-        border-bottom: 1px dashed $green;
-       @include responsive-font(16px, 22px, 16px, 22px);
+        border-bottom: 1px dashed $blue;
+       @include responsive-font(16px, 16px, 16px, 20px);
         &:hover,
         &:focus {
-            color: $greendark;
+            color: $darkblue;
         }
     }
-    .form-check-label {
-        margin-bottom: 0;
-        @include responsive-font(14px, 20px, 14px, 20px);
-    }
+    
     .view-pass {
         position: absolute;
         right: 18px;
@@ -65,7 +60,7 @@
         }
         .auth-link {
             font-family: $figtreeMedium;
-            @include responsive-font(14px, 20px, 14px, 20px);
+            @include responsive-font(14px, 14px, 14px, 20px);
         }
     }
     .auth-btn {
@@ -111,7 +106,7 @@
         font-family: $figtreeSemiBold;
         margin: 1rem 0;
         position: relative;
-        @include responsive-font(14px, 20px, 14px, 20px);
+        @include responsive-font(14px, 14px, 14px, 20px);
         @include respond-to(xxl) {
             margin: 1.6em 0;
         }
@@ -161,133 +156,31 @@
     }
     .otp-inputs {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
         margin-bottom: 1.5rem;
         .otp-box {
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;            
             text-align: center;
             border: 1px solid #ced4da;
             border-radius: 5px;
             outline: none;
             transition: border-color 0.3s;
+            @include responsive-font(20px, 30px, 20px, 30px);
+            font-family: $figtreeExtraBold;
+            @include respond-to(xxl) {
+                width: 60px;
+                height: 60px;
+            }
             &:focus {
-                border-color: #007bff;
+                border-color: $blue;
                 box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
             }
         }
     }
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    input {
-        width: 100%;
-    }
-}
-
-.input-icon {
-    position: relative;
-    img {
-        position: absolute;
-        left: 12px;
-        top: 16px;
-        width: 20px;
-        height: 20px;
-        z-index: 9;
-        @include respond-to(xxl) {
-            width: 30px;
-            height: 30px;
-            left: 20px;
-            top: 20px;
-        }
-    }
-    input{
-        &.with-icon {
-            padding-left: 45px;
-            @include respond-to(xxl) {
-                padding-left: 70px;
-            }
-        }
-        &.editable{
-            background-color: #F1F1F5;
-        }
-    }
-    img.right-icon {
-        position: absolute;
-        left: auto;
-        right: 12px;
-        top: 16px;
-        width: 20px;
-        height: 20px;
-        @include respond-to(xxl) {
-            width: 32px;
-            height: 32px;
-            right: 18px;
-            top: 18px;
-        }
-    }
-    .right-check-icon,
-    .right-check-icon-success {
-        display: none;
-    }
-    .right-check-icon,
-    .right-check-icon-success{
-        position: absolute;
-        left: auto;
-        right: 12px;
-        top: 16px;
-        width: 20px;
-        height: 20px;
-        @include respond-to(xxl) {
-            width: 32px;
-            height: 32px;
-            right: 18px;
-            top: 18px;
-        }
-    }
-}
-
-input{
-    position: relative;
-    &.form-icon-left{}
-    &.form-icon-right{}
-    &.form-icon-edit{
-        &:after{
-            content: '';
-            background-image: url('../images/icons/form-edit-pencit.png');
-            background-size: 20px;
-            background-repeat: no-repeat;
-            position: absolute;
-            left: 5px;
-            top: 5px;
-        }
-        
-    }
-    &.form-icon-mail{
-        &:before{
-            content: '';
-            background-image: url('../images/icons/form-mail-icon.png');
-            background-size: 20px;
-            background-repeat: no-repeat;
-            position: absolute;
-            right: 5px;
-            top: 5px;
-        }
-    }
-}
-.form-bottom-info {
-    font-family: $figtreeLight;
-    @include responsive-font(13px,  20px, 13px, 20px);
-    line-height: 1.5;
-    margin-top: 5px;
-    @include respond-to(xxl) {
-        margin-top: 8px;
-    }
-}
 
 // .login {
 //     padding: 60px;

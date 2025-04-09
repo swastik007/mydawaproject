@@ -12,6 +12,8 @@
     <meta name="keywords" content="mydawa">
 
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -139,23 +141,28 @@
 
                                     </div>
                                     <div class="delivery-section">
-                                        <div class="form-group">
-                                          <label for="delivery-date">Select Delivery Date <span class="required">*</span></label>
-                                          <div class="date-picker">
-                                            <input type="text" id="delivery-date" placeholder="DD/MM/YYYY" />
-                                            <button class="calendar-icon">
-                                              📅
-                                            </button>
-                                          </div>
+                                        
+                                        <div class="input-row">
+                                
+                                            <div class="input-group">
+                                                <label for="dob">Date of Birth <span
+                                                        class="required">*</span></label>
+                                                <div class="input-icon">
+                                                    <input class="datepicker_input" type="text"  placeholder="mm/dd/yyyy"/>
+                                                                                                                   
+                                                    <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
+                                                </div>
+                                            </div>
+                                            
                                         </div>
                                       
                                         <div class="form-group">
                                           <label>Select Available Slots</label>
                                           <div class="time-slots">
-                                            <button class="slot">11:00 AM</button>
-                                            <button class="slot active">11:30 AM</button>
-                                            <button class="slot">12:00 PM</button>
-                                            <button class="slot disabled" disabled>12:30 PM</button>
+                                            <button class="slot times__link">11:00 AM</button>
+                                            <button class="slot times__link disabled">11:30 AM</button>
+                                            <button class="slot times__link selected">12:00 PM</button>
+                                            <button class="slot times__link" disabled>12:30 PM</button>
                                           </div>
                                         </div>
                                       </div>
@@ -230,6 +237,7 @@
     <div id="paymentmodalsection"></div>
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
     <script src="assets/js/themescripts.js"></script>
 </body>

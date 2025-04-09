@@ -3,7 +3,7 @@
         display: flex;
         gap: 15px;
         flex-direction: column; // Mobile default
-        @include respond-to(lg) {
+        @include respond-to(md) {
             flex-direction: row; // Horizontal layout for larger screens
         }
         .step {
@@ -28,11 +28,12 @@
                 background: #e7ecf4;
                 color: $black;
                 margin-right: 10px;
-                @include responsive-font(14px, 20px, 14px, 20px);
+                @include responsive-font(14px, 18px, 14px, 18px);
+                line-height: 1;
                 font-family: $figtreeSemiBold;
                 @include respond-to(xxl) {
-                    width: 35px;
-                    height: 35px;
+                    width: 30px;
+                    height: 30px;
                     margin-right: 16px;
                 }
                 &.complete {
@@ -47,7 +48,7 @@
             .step-text {
                 white-space: nowrap;
                 font-family: $figtreeMedium;
-                @include responsive-font(16px, 22px, 16px, 22px);
+                @include responsive-font(14px, 14px, 14px, 20px);
                 text-transform: capitalize;
             }
             &:not(:last-child)::after {
@@ -59,7 +60,7 @@
                 position: absolute;
                 left: 10px;
                 top: 24px;
-                @include respond-to(lg) {
+                @include respond-to(md) {
                     position: static;
                     width: 40px;
                     margin-left: 18px;

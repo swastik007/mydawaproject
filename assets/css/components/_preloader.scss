@@ -4,7 +4,7 @@
 
 p.preloader-text {
     color: $black;
-    @include responsive-font(16px, 22px, 16px, 22px);
+    @include responsive-font(16px, 16px, 16px, 20px);
     font-family: $figtreeMedium;
     text-align: center;
     line-height: 1.2;

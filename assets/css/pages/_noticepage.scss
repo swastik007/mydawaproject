@@ -1,0 +1,59 @@
+.notice-page{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    .circle{
+        border-radius: 50%;
+        padding: 20px;
+        border: 1.5px solid $primary;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        @include respond-to(xxl) {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .mail-icon{
+        fill: $primary;
+        width: 80px;
+        height: 80px;
+        @include respond-to(xxl) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .card-title {
+        font-family: $figtreeBold;
+            color: rgba($black, 1);
+            @include responsive-font(24px, 40px, 24px, 40px);
+            margin-bottom: 12px;
+            @include respond-to(xxl) {
+                margin-bottom: 18px;
+            }
+    }
+    .card-text{
+        font-family: $figtree;
+        color: rgba($black, 0.7);
+        @include responsive-font(16px, 16px, 16px, 20px);
+        margin-bottom: 12px;
+        @include respond-to(xxl) {
+            margin-bottom: 18px;
+        }
+    }
+}
+.circle {
+    width: 120px;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+    @include respond-to(xxl) {
+        margin-bottom: 150px;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }

@@ -1,5 +1,16 @@
 console.log("🚀 jQuery script is running!");
-
+window.addEventListener('DOMContentLoaded', () => {
+  function adjustMainPadding() {
+    const header = document.querySelector('.site-header');
+    const main = document.querySelector('.dawamain');
+    if (header && main) {
+      main.style.paddingTop = `${header.offsetHeight}px`;
+    }
+  }
+  
+  window.addEventListener('load', adjustMainPadding);
+  window.addEventListener('resize', adjustMainPadding);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     loadComponents();

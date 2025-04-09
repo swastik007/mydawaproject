@@ -58,28 +58,17 @@ body {
 .dawamain {
     margin: 0 auto;
     width: 100%;
-    margin-top: 200px;
-    @include respond-to(lg) {
-        margin-top: 150px;
-        padding-top: 25px;
-    }
-    @include respond-to(xxl) {
-        margin-top: 220px;
-        padding-top: 35px;
-    }
+    
 }
 
 .mydawa-container {
     margin: 0 auto;
     padding: 0 15px;
     @include respond-to(lg) {
-        padding: 0 20px;
+        padding: 0 50px;
     }
     @include respond-to(xxl) {
-        padding: 0 30px;
-    }
-    @include respond-to(xxxl) {
-        padding: 0 50px;
+        padding: 0 80px;
     }
 }
 

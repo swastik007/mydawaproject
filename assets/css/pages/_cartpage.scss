@@ -44,15 +44,21 @@
 /* Cart Items - Align with Grid */
 
 .cart-item {
-    display: flex;
+    
     background: #fff;
-    padding: 15px;
+    padding: 15px 12px;
     border-radius: 10px;
     margin-bottom: 10px;
     border: 1px solid #f0f0f0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include respond-to(xs) {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
     @include respond-to(lg) {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
@@ -65,7 +71,7 @@
         border-radius: 0;
     }
     @include respond-to(xxl) {
-        padding: 32px 15px;
+        padding: 20px 15px;
     }
     .product-info {
         display: flex;
@@ -75,12 +81,12 @@
             height: 50px;
             object-fit: contain;
             @include respond-to(lg) {
-                width: 64px;
-                height: 64px;
+                width: 70px;
+                height: 70px;
             }
             @include respond-to(xxl) {
-                width: 102px;
-                height: 102px;
+                width: 90px;
+                height: 90px;
             }
         }
         .item-details {
@@ -89,26 +95,23 @@
             text-align: left;
             margin-left: 10px;
             @include respond-to(xxl) {
-                margin-left: 20px;
+                margin-left: 15px;
             }
             h3 {
-                font-size: 16px;
                 line-height: 1.2;
-                font-weight: 600;
                 margin-bottom: 3px;
+                @include responsive-font(16px, 20px, 16px, 20px);
+                font-family: $figtreeSemiBold;
                 @include respond-to(xxl) {
-                    font-size: 24px;
                     margin-bottom: 5px;
                 }
             }
             p {
-                font-size: 12px;
                 line-height: 1.2;
-                font-weight: 500;
                 color: #BABABA;
-                @include respond-to(xxl) {
-                    font-size: 18px;
-                }
+                @include responsive-font(13px, 16px, 13px, 16px);
+                font-family: $figtreeMedium;
+                
             }
         }
     }
@@ -125,9 +128,10 @@
             border: 1px solid #D4DEE5;
             padding: 8px;
             justify-content: space-around;
-            gap: 5px 8px;
+            gap: 8px;
+            height: fit-content;
             @include respond-to(xxl) {
-                gap: 8px 30px;
+                gap: 15px;
                 padding: 8px 16px;
             }
             button {
@@ -142,39 +146,36 @@
                 justify-content: center;
                 align-items: center;
                 @include respond-to(xxl) {
-                    width: 35px;
-                    height: 35px;
+                    width: 24px;
+                    height: 24px;
                 }
             }
             span {
-                font-size: 14px;
-                font-weight: 500;
                 color: $black;
                 line-height: 1.4;
-                @include respond-to(xxl) {
-                    font-size: 22px;
-                }
+                font-family: $figtreeMedium;
+                @include responsive-font(14px, 18px, 14px, 18px);
             }
         }
         .cart-delete {
             border: 1px solid #D4DEE5;
             background-color: #fff;
             margin-left: 10px;
-            border-radius: 25px;
             padding: 7px 10px;
-            min-width: 80px;
+            border-radius: 40px;
+            width: 70px;
+            height: fit-content;
             img {
                 width: 20px;
                 height: 20px;
                 object-fit: contain;
             }
             @include respond-to(xxl) {
-                font-size: 16px;
-                padding: 20px;
-                border-radius: 50%;
+                padding: 10px 15px;
+                width: 80px;
                 img {
-                    width: 30px;
-                    height: 30px;
+                    width: 25px;
+                    height: 25px;
                 }
             }
         }
@@ -221,14 +222,20 @@
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
-            color: $primary;
-            font-size: 10px;
-            line-height: 12px;
-            font-weight: 500;
+            color: $primary;           
+            @include responsive-font(11px, 14px, 11px, 14px);
+            line-height: 1.2;
+            font-family: $figtreeMedium;
             @include respond-to(xxl) {
-                font-size: 16px;
-                line-height: 22px;
                 top: 14px;
+            }
+            svg{
+                width: 20px;
+                height: 20px;
+                @include respond-to(xxl) {
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
     }
@@ -252,14 +259,22 @@
     span {
         display: flex;
         justify-content: flex-start;
-        i {
-            font-size: 20px;
-            margin-right: 8px;
+        
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+        @include respond-to(xxl) {
+            width: 26px;
+            height: 26px;
+            margin-right: 10px;
         }
     }
     a {
         color: $black;
         text-decoration: 1px dotter $black;
+        text-decoration: none;
     }
 }
 
@@ -284,7 +299,7 @@
     }
     h3 {
         font-family: $interBold;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(16px, 16px, 16px, 20px);
         line-height: 1.6;
         color: $black;
         margin-bottom: 10px;
@@ -303,7 +318,7 @@
             border: 1px solid #D4DEE5;
             margin-right: 10px;
             border-radius: 35px!important;
-            @include responsive-font(14px, 20px, 14px, 20px);
+            @include responsive-font(14px, 14px, 14px, 20px);
             @include respond-to(xxl) {
                 padding: 14px 20px;
                 margin-right: 16px;
@@ -353,13 +368,13 @@
     .sub-price {
         display: flex;
         justify-content: space-between;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(16px, 16px, 16px, 20px);
     }
     .cart-total {
         display: flex;
         justify-content: space-between;
         font-family: $figtreeBold;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(16px, 16px, 16px, 20px);
         margin-bottom: 15px;
         @include respond-to(xxl) {
             margin-bottom: 25px;
@@ -379,7 +394,7 @@
         }
         span {
             margin-left: 10px;
-            @include responsive-font(13px, 20px, 13px, 20px);
+            @include responsive-font(13px, 13px, 13px, 18px);
             @include respond-to(xxl) {
                 margin-left: 16px;
             }
@@ -396,9 +411,8 @@
 }
 
 .loyalty-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
     background: #F9F9FD;
     padding: 15px;
     border-radius: 12px;
@@ -420,7 +434,7 @@
             }
         }
         h4 {
-            @include responsive-font(16px, 22px, 16px, 22px);
+            @include responsive-font(16px, 16px, 16px, 20px);
             font-family: $interSemiBold;
             margin-bottom: 10px;
             @include respond-to(xxl) {
@@ -428,7 +442,7 @@
             }
         }
         p {
-            @include responsive-font(13px, 20px, 13px, 20px);
+            @include responsive-font(13px, 13px, 13px, 18px);
             color: $grey9;
             margin: 0;
         }
@@ -439,13 +453,11 @@
 .switch {
     position: relative;
     display: flex;
-    width: 50px;
+    width: 38px;
     height: 25px;
-    flex-basis: 50px;
     @include respond-to(xxl) {
-        width: 100px;
-        height: 40px;
-        flex-basis: 100px;
+        width: 52px;
+        height: 35px;
     }
     input {
         opacity: 0;
@@ -465,10 +477,10 @@
         &:before {
             position: absolute;
             content: "";
-            height: 14px;
-            width: 14px;
-            left: 3px;
-            bottom: 3px;
+            height: 15px;
+            width: 15px;
+            left: 10px;
+            bottom: 6px;
             background-color: white;
             transition: 0.3s;
             border-radius: 50%;
@@ -476,7 +488,7 @@
                 width: 22px;
                 height: 22px;
                 left: 9px;
-                bottom: 9px;
+                bottom: 7px;
             }
         }
     }
@@ -484,7 +496,10 @@
         background-color: #6c63ff;
     }
     input:checked+.slider:before {
-        transform: translateX(14px);
+        transform: translateX(9px);
+        @include respond-to(xxl) {
+            transform: translateX(14px);
+        }
     }
 }
 

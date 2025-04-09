@@ -26,7 +26,7 @@
         line-height: 1.4;
         padding: 3px 8px;
         border-radius: 0 0 7px 7px;
-        @include responsive-font(14px, 20px, 14px, 20px);   
+        @include responsive-font(14px, 14px, 14px, 20px);   
         @include respond-to(xxl) {
             padding: 5px 12px;
             left: 30px;
@@ -192,6 +192,6 @@
         color: $black;
         font-family: $figtreeMedium;
         margin-bottom: 0;
-        @include responsive-font(16px, 22px, 16px, 22px);
+        @include responsive-font(16px, 16px, 16px, 20px);
     }
 }

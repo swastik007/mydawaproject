@@ -1,6 +1,113 @@
+.modal{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background: rgba(255, 255, 255, 0.40);
+    .modal-dialog{       
+        @include respond-to(xxl) {
+            min-width: 550px;
+        }
+        
+    }
+    @include respond-to(xxl) {
+        border-radius: 16px;
+    }
+    .modal-header{
+        border-bottom: none;
+        align-items: flex-start;
+        padding-bottom: 0;
+       
+        h5{
+            font-family: $figtreeSemiBold;
+            line-height: 1;
+            @include responsive-font(22px, 28px, 22px, 28px);
+            @include respond-to(xxl) {
+                margin-right: 30px;
+            }
+            p{
+                font-family: $figtree;
+                @include responsive-font(13px, 16px, 13px, 16px);
+                margin-top: 12px;
+                line-height: 1.5;
+            }
+        }
+       
+    }
+    .modal-content{
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid #E7ECF4;
+        width: 100%;
+        @include respond-to(xxl) {
+            padding: 20px;
+        }
+    }
+    .modal-body{
+        max-height: 70vh;
+        overflow-y: auto;
+        @include respond-to(xxl) {
+            max-height: 72vh;
+        }
+    } 
+    .modal-footer{
+        border-top: none;
+        padding-top: 0;
+    }
+    .btn-close{
+        @include responsive-font(13px, 16px, 13px, 16px);
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: $red;
+            box-shadow: none;
+        } 
+    }
+    .btn-lg {
+        padding: 8px 15px;
+        @include respond-to(xxl) {
+            padding: 12px 20px;
+        }
+    }
+    .popup-icon {
+        width: 50px;
+        height: auto;
+        @include respond-to(xxl) {
+            width: 70px;
+        }
+    }
+    .popup-img{
+        width: 120px;
+        height: auto;
+        margin: 0 auto 15px auto;
+        @include respond-to(xxl) {
+            width: 160px;
+            margin: 0 auto 25px auto;
+        }
+    }
+    .popup-img-lg{
+        width: 200px;
+        height: auto;
+        margin: 0 auto 15px auto;
+        @include respond-to(xxl) {
+            width: 240px;
+            margin: 0 auto 25px auto;
+        }
+    }
+    .text-heading{
+        font-family: $figtreeSemiBold;
+        @include responsive-font(20px, 26px, 20px, 26px);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .text-content{
+        font-family: $figtree;
+        @include responsive-font(16px, 20px, 16px, 20px);
+        text-align: center;
+    }
+
+}
+
 .dawa-modal {
     position: fixed;
-    top: 100px;
+    top: 50px;
     /* Keep it 100px from the top */
     left: 50%;
     transform: translateX(-50%);
@@ -11,8 +118,10 @@
     z-index: 1000;
     border: 1px solid #E7ECF4;
     width: 100%;
-    max-height: 98vh;
-    overflow-y: scroll;
+    @include respond-to(xxl) {
+        top: 100px;
+        max-width: 600px;
+    }
     &.modal-sm {
         max-width: 600px;
         @include respond-to(xxl) {
@@ -36,10 +145,10 @@
         }
     }
     .modal-content {
-        padding: 20px 35px 50px 35px;
+        padding: 20px 20px 25px 20px;
         overflow-y: auto;
         @include respond-to(xxl) {
-            padding: 30px 50px;
+            padding: 25px 25px;
         }
     }
     .close-btn {
@@ -92,7 +201,7 @@
             }
         }
         span {
-            @include responsive-font(16px, 22px, 16px, 22px);
+            @include responsive-font(16px, 16px, 16px, 20px);
             font-family: $figtreeSemiBold;
             margin-right: 7px;
             @include respond-to(xxl) {
@@ -100,10 +209,32 @@
             }
         }
         p {
-            @include responsive-font(16px, 22px, 16px, 22px);
+            @include responsive-font(16px, 16px, 16px, 20px);
             color: $primary;
             font-family: $figtreeSemiBold;
             margin-bottom: 0;
+        }
+    }
+    .popup-container{
+        max-height: 50vh;
+        overflow-y: auto;
+        padding: 0 10px 0 10px; // create breathing room to the right
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            margin-right: -5px; // doesn't work, but for understanding
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 6px;
+            border: 2px solid transparent;
+            background-clip: content-box;
+            margin-right: -5px; // same as above, not applied
         }
     }
 }
@@ -344,12 +475,12 @@
         h4 {
             font-family: $figtreeBold;
             margin-bottom: 0;
-            @include responsive-font(16px, 22px, 16px, 22px);
+            @include responsive-font(16px, 16px, 16px, 20px);
         }
         p {
             font-family: $figtreeMedium;
             margin-bottom: 0;
-            @include responsive-font(14px, 20px, 14px, 20px);
+            @include responsive-font(14px, 14px, 14px, 20px);
         }
     }
     .product-info img {
@@ -392,7 +523,7 @@
             }
             .form-check-label{
                 font-family: $figtree;
-                @include responsive-font(14px, 20px, 14px, 20px);
+                @include responsive-font(14px, 14px, 14px, 20px);
             }
         }
     }

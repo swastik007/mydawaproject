@@ -6,7 +6,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     cursor: pointer;
     &:hover,
     &:focus {
@@ -23,7 +23,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
 
     &:hover,
     &:focus {
@@ -45,7 +45,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     &:hover,
     &:focus {
         background-color: $grey3;
@@ -63,7 +63,7 @@
     outline: none;
     font-size: 1em;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     &:hover,
     &:focus {
         background-color: $grey8;
@@ -91,7 +91,7 @@
     outline: none;
     font-size: 1em;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     &:hover,
     &:focus {
         background-color: $black;
@@ -130,7 +130,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+    @include responsive-font(14px, 18px, 14px, 18px);
     &:hover,
     &:focus {
         background-color: $greendark;
@@ -143,7 +143,7 @@
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     color: white;
     &:hover,
     &:focus {
@@ -173,7 +173,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     &:hover,
     &:focus {
         background-color: $black;
@@ -190,7 +190,7 @@
     box-shadow: none;
     outline: none;
     border-radius: 10px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     &:hover,
     &:focus {
         background-color: $red;
@@ -208,16 +208,16 @@
 
 .btn-sm {
     padding: 5px 15px;
-    @include responsive-font(14px, 20px, 14px, 20px);
+    @include responsive-font(14px, 14px, 14px, 20px);
     @include respond-to(xxl) {
         padding: 8px 20px;
     }
 }
 
 .btn-lg {
-    padding: 12px 20px;
+    padding: 10px 18px;
     @include respond-to(xxl) {
-        padding: 16px 28px;
+        padding: 15px 25px;
     }
 }
 
@@ -278,7 +278,7 @@
     font-family: $figtree;
     padding: 14px 25px;
     border-radius: 12px;
-    @include responsive-font(16px, 22px, 16px, 22px);
+     @include responsive-font(14px, 18px, 14px, 18px);
     @include respond-to(xxl) {
         padding: 16px 40px;
     }
@@ -304,7 +304,7 @@
     color: $black;
     text-decoration: none;
     cursor: pointer;
-    @include responsive-font(14px, 22px, 14px, 22px);
+    @include responsive-font(14px, 18px, 14px, 18px);
     &:hover,
     &:focus {
         transition: ease-in 0.3s;
@@ -339,6 +339,16 @@
             transition: ease-in 0.3s;
             color: $greendark;
             border-bottom: 1px dashed $greendark;
+        }
+    }
+    &.pink-dotted {
+        border-bottom: 1px dashed $primary;
+        color: $primary;
+        &:hover,
+        &:focus {
+            transition: ease-in 0.3s;
+            color: $primarydark;
+            border-bottom: 1px dashed $primarydark;
         }
     }
 }

@@ -391,7 +391,7 @@
         h5 {
             font-family: $figtreeLight;
             margin-bottom: 0px;
-            @include responsive-font(16px, 22px, 16px, 22px);
+            @include responsive-font(16px, 16px, 16px, 20px);
         }
         h2 {
             font-family: $figtreeExtraBold;
