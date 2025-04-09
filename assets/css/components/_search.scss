@@ -16,13 +16,13 @@
   &:hover,
   &:focus {
     .search-results {
-      display: block;
+      // display: block;
     }
   }
   .search-results {
     /* Hidden by default */
     position: absolute;
-    top: 50px;
+    top: 65px;
     left: 10px;
     // transform: translateX(-50%);
     /* Centers the dropdown */
@@ -159,17 +159,17 @@
   position: relative;
   display: flex;
   align-items: center;
-  
+
   background: #fff;
   border-radius: 25px;
   padding: 10px 16px;
   border: 1px solid #d4dee5;
   width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 84px;
-  
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 84px;
+
   @include respond-to(lg) {
     position: static;
     width: 430px;

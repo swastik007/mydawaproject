@@ -1,3 +1,8 @@
+.home-page {
+  .search-wrap {
+    // display: none;
+  }
+}
 .site-header {
   position: fixed;
   top: 0;
@@ -16,7 +21,7 @@
       display: none; // Hide the promo section when sticky
     }
     .search-wrap {
-      display: none;
+      // display: none;
     }
     .navigation-wrap {
       display: none;
