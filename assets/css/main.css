@@ -16931,13 +16931,10 @@ input.form-icon-mail:before {
 .search-wrap .search-results {
   display: none;
 }
-.search-wrap:hover .search-results, .search-wrap:focus .search-results {
-  display: block;
-}
 .search-wrap .search-results {
   /* Hidden by default */
   position: absolute;
-  top: 50px;
+  top: 65px;
   left: 10px;
   /* Centers the dropdown */
   width: 432px;
@@ -17261,9 +17258,6 @@ input.form-icon-mail:before {
 }
 .delivery-wrap .delivery-dropdown {
   display: none;
-}
-.delivery-wrap:hover .delivery-dropdown, .delivery-wrap:focus .delivery-dropdown {
-  display: block;
 }
 .delivery-wrap .delivery-dropdown {
   /* Hidden by default */
@@ -17768,10 +17762,6 @@ p.preloader-text {
 }
 
 /* Optional fade-out effect */
-.home-page .search-wrap {
-  display: none;
-}
-
 .site-header {
   position: fixed;
   top: 0;

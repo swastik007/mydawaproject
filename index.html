@@ -1425,6 +1425,32 @@
     window.addEventListener('resize', toggleHeaderSearch);
     document.addEventListener('DOMContentLoaded', toggleHeaderSearch);
   </script>
+  <script>
+    const searchInput = document.querySelector(".search-container input");
+    const searchResult = document.querySelector(".search-results");
+    searchInput.addEventListener("focus", () => {
+      searchResult.style.display = "block";
+    })
+    searchInput.addEventListener("blur", () => {
+      searchResult.style.display = "none";
+    })
+  </script>
+  <script>
+    const deliveryLink = document.querySelector(".delivery-info");
+    const deliveryShow = document.querySelector(".delivery-dropdown");
+    deliveryLink.addEventListener("click", () => {
+      if (deliveryShow.style.display === "block") {
+        deliveryShow.style.display = "none";
+      } else {
+        deliveryShow.style.display = "block";
+      }
+    })
+    document.addEventListener("click", (e) => {
+      if (!deliveryLink.contains(e.target) && !deliveryShow.contains(e.target)) {
+        deliveryShow.style.display = "none";
+      }
+    })
+  </script>
 </body>
 
 </html>

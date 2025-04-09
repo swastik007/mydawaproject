@@ -8,7 +8,7 @@
   &:hover,
   &:focus {
     .delivery-dropdown {
-      display: block;
+      // display: block;
     }
   }
   /* Ensure parent has a high z-index */
@@ -178,7 +178,7 @@
     @include respond-to(xs) {
       display: block;
     }
-   
+
     .text-bold {
       font-family: $figtreeSemiBold;
       @include responsive-font(14px, 18px, 14px, 18px);
