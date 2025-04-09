@@ -168,7 +168,7 @@
                                         <p class="sub-price">Total MRP <span>KES 750</span></p>
                                         <hr>
                                         <p class="cart-total">Cart Total <span>KES 450</span></p>
-                                        <button class="btn-green btn-rounded btn-lg w-100" onclick="window.location.href='/checkoutdelivery.html';">Proceed</button>
+                                        <button class="btn-green btn-rounded btn-lg w-100" onclick="window.location.href='/checkoutdelivery.html';">Pay</button>
                                         <p class="info">
                                             <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.1108 6.66797H10.1175M10.1108 13.3346V9.16797M18.534 10.0013C18.534 14.6038 14.7629 18.3346 10.1108 18.3346C5.45859 18.3346 1.6875 14.6038 1.6875 10.0013C1.6875 5.3988 5.45859 1.66797 10.1108 1.66797C14.7629 1.66797 18.534 5.3988 18.534 10.0013Z" stroke="#373434" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -264,60 +264,61 @@
     </div>
   </div>
   
-  <!-- Order Failed Message -->
+  <!-- Airtel Modal Box -->
   <div class="modal fade" id="airtelModal" tabindex="-1" aria-labelledby="airtelLabel" aria-hidden="true">
-    <div class="modal-dialog dialog-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h5>Add New Address</h5>  
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body d-flex justify-content-center align-items-center flex-column">  
-            <form>
-                <div class="input-row ">
-                    <div class="input-group">
-                        <label for="fullName">Name <span class="required">*</span></label>
-                        <div class="input-icon">
-                            <img src="assets/images/icons/form-icon-mail.png" alt="Phone">
-                            <input class="with-icon editable" type="text" id="fullName" placeholder="Tabrez Shaikh" >
-                            <img class="right-icon" src="assets/images/icons/form-edit-pencil.png" alt="Phone">
-                            <img class="right-check-icon" src="assets/images/icons/form-checked-circle.png" alt="Phone">
-                            <img class="right-check-icon-success" src="assets/images/icons/form-checked-circle-success.png" alt="Phone">
-                        </div>
-                        
-                    </div>
-                    <div class="input-group">
-                        <label  for="phoneNumber">Phone Number<span class="required">*</span></label>
-                        <div class="input-icon">
-                            <img src="assets/images/icons/form-call-icon.png" alt="Phone">
-                            <input class="with-icon editable" type="text" id="fullName" placeholder="9875896589" >
-                            <img class="right-icon" src="assets/images/icons/form-edit-pencil.png" alt="Phone">
-                            <img class="right-check-icon" src="assets/images/icons/form-checked-circle.png" alt="Phone">
-                            <img class="right-check-icon-success" src="assets/images/icons/form-checked-circle-success.png" alt="Phone">
-                        </div>
-                        
-                    </div>
-                   
-                </div>
-                <span class="form-bottom-info mb-3 mb-xl-4">Not the receiver? Change name & phone number</span>
-                 <!-- Search Address -->
-                 <div class="input-row mb-3 mb-xl-4">
-                    <div class="input-group position-relative">
-                        <label for="searchAddress" class="form-label">Search Address <span class="text-danger">*</span></label>
-                        <input type="text" id="searchAddress" class="" placeholder="1234 Innovation Drive, Nairobi, Kenya">
-                        <ul id="suggestions" class="dropdown-menu custom-address-dropdown"></ul>
-                    </div>
-                </div>
-            
-            <!-- Submit Button -->
-            <button onclick="window.location.href='/checkoutdeliveryaddress.html';" type="button" class="d-block ms-auto me-0 mt-4 mt-xl-5 btn-dark btn-rounded btn-lg">Add Address</button>
-       
-            
-            </form>
+    <div class="modal-dialog dialog-xl">
+        <div class="modal-content">
+          <div class="modal-header">  
+              <h5>Top up Balance</h5>                
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+           
+            <div class="modal-body d-flex justify-content-center align-items-center flex-column">  
+              <div class="shipping-selection">
+                  <div class="shipping-options">
+                      <label class="radio-option-full selected">
+                          <input type="radio" name="option-mpesa" value="option-mpesa" checked>
+                          <span class="radio"></span>
+                          <div class="content">
+                              <h3>M-PESA Paybill</h3>
+                              <p>follow the steps to make payment</p>
+                          </div>
+                          
+                      </label>
+                      <label class="radio-option-full">
+                          <input type="radio" name="option-airtel" value="option-airtel">
+                          <span class="radio"></span>
+                          <div class="content">
+                              <h3>Airtel Paybill</h3>
+                              <p>follow the steps to make payment</p>
+                          </div>
+                      </label>
+                  </div>
+              </div>
+              <div class="mPesaSection w-100" id="mPesaSection">
+                  <div class="instructions-box">
+                     <ul>
+                      <li>1. Go to the Airtel Mobile Money</li>
+                      <li>2. Select Make Payment</li>
+                      <li>3. Select Pay bill then other</li>
+                      <li> 4. Under Pay bill name enter 770700  </li>                     
+                      <li>5. Enter Amount</li>                     
+                      <li>6. Enter your airtel money pin</li>
+                      <li>7. Under reference enter your account number.</li>
+              </ul>
+                      <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                          <button class="btn-white-border btn-rounded btn-lg">Cancel</button>
+                          <button class="btn-green btn-rounded btn-lg btn-ordersuccess">Done</button>
+                      </div>
+                  </div>
+                 
+              </div>
+            </div>
+            
+          
+        </div>
+         
       </div>
-       
-    </div>
   </div>
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
