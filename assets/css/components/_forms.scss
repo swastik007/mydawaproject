@@ -321,11 +321,21 @@ input[type="radio"]:checked::before {
     }
     &.small-wrap {
         @include respond-to(lg) {
-            max-width: 600px;
+            max-width: 700px;
             margin: 20px auto;
         }
         @include respond-to(xxl) {
-            max-width: 960px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+    }
+    &.large-wrap {
+        @include respond-to(lg) {
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        @include respond-to(xxl) {
+            max-width: 900px;
             margin: 30px auto;
         }
     }
@@ -800,26 +810,26 @@ ol.form-list {
     }
     p {
         font-family: $figtree;
-        @include responsive-font(14px, 14px, 14px, 20px);
+        @include responsive-font(14px, 14px, 14px, 18px);
         color: #8D8D92;
         line-height: 1.5;
     }
     ol {
         padding-left: 15px;
-        @include responsive-font(14px, 14px, 14px, 20px);
+        @include responsive-font(14px, 14px, 14px, 18px);
         font-family: $figtreeMedium;
-        color: #8D8D92;
+        color: $black;
         border-top: 1px solid #F8F8F8;
-        padding-top: 20px;
+        padding-top: 10px;
         margin-top: 12px;
         @include respond-to(xxl) {
             padding-left: 20px;
-            padding-top: 25px;
-            margin-top: 20px;
+            padding-top: 15px;
+            margin-top: 10px;
         }
         li {
             margin-bottom: 14px;
-            line-height: 1.2;
+            line-height: 1.3;
             @include respond-to(xxl) {
                 margin-bottom: 20px;
             }
@@ -836,7 +846,7 @@ ol.form-list {
     gap: 10px;
     background: white;
     border: 2px solid #D4DEE5;
-    padding: 15px;
+    padding: 18px;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s;
@@ -845,7 +855,7 @@ ol.form-list {
         border: 2px solid $blue;
     }
     @include respond-to(xxl) {
-        padding: 35px;
+        padding: 25px;
     }
     &.selected{
         border: 2px solid $blue;
@@ -902,8 +912,9 @@ ol.form-list {
             color: $black;
             font-family: $figtreeMedium;
         }
-        p {
-             @include responsive-font(14px, 14px, 14px, 20px);
+        p {            
+            @include responsive-font(14px, 14px, 14px, 18px);
+            line-height: 1.25;
             margin: 5px 0 0;
             color: $black;
             font-family: $figtreeLight;

@@ -11884,21 +11884,21 @@ body {
   font-family: "Figtree-ExtraBold";
   line-height: 1.3;
   color: rgb(55, 52, 52);
-  font-size: 30px;
+  font-size: 28px;
 }
 @media (min-width: 992px) {
   .section-heading {
-    font-size: 52px;
+    font-size: 28px;
   }
 }
 @media (min-width: 1200px) {
   .section-heading {
-    font-size: 40px;
+    font-size: 28px;
   }
 }
 @media (min-width: 1800px) {
   .section-heading {
-    font-size: 52px;
+    font-size: 44px;
   }
 }
 @media (min-width: 1200px) {
@@ -13968,13 +13968,25 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 1200px) {
   .form-page-wrap.small-wrap {
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px auto;
   }
 }
 @media (min-width: 1800px) {
   .form-page-wrap.small-wrap {
-    max-width: 960px;
+    max-width: 900px;
+    margin: 30px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .form-page-wrap.large-wrap {
+    max-width: 700px;
+    margin: 20px auto;
+  }
+}
+@media (min-width: 1800px) {
+  .form-page-wrap.large-wrap {
+    max-width: 900px;
     margin: 30px auto;
   }
 }
@@ -14721,16 +14733,16 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .consent-box p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .consent-box ol {
   padding-left: 15px;
   font-size: 14px;
   font-family: "Figtree-Medium";
-  color: #8D8D92;
+  color: rgb(55, 52, 52);
   border-top: 1px solid #F8F8F8;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-top: 12px;
 }
 @media (min-width: 992px) {
@@ -14745,19 +14757,19 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .consent-box ol {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1800px) {
   .consent-box ol {
     padding-left: 20px;
-    padding-top: 25px;
-    margin-top: 20px;
+    padding-top: 15px;
+    margin-top: 10px;
   }
 }
 .consent-box ol li {
   margin-bottom: 14px;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 @media (min-width: 1800px) {
   .consent-box ol li {
@@ -14772,7 +14784,7 @@ ol.form-list {
   gap: 10px;
   background: white;
   border: 2px solid #D4DEE5;
-  padding: 15px;
+  padding: 18px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s;
@@ -14789,7 +14801,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .radio-option-full {
-    padding: 35px;
+    padding: 25px;
   }
 }
 .radio-option-full.selected {
@@ -14864,6 +14876,7 @@ ol.form-list {
 }
 .radio-option-full .content p {
   font-size: 14px;
+  line-height: 1.25;
   margin: 5px 0 0;
   color: rgb(55, 52, 52);
   font-family: "Figtree-Light";
@@ -14880,7 +14893,7 @@ ol.form-list {
 }
 @media (min-width: 1800px) {
   .radio-option-full .content p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .radio-option-full input[type=radio]:checked ~ .content {
