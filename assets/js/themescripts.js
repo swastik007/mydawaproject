@@ -1,16 +1,73 @@
-console.log("🚀 jQuery script is running!");
-window.addEventListener('DOMContentLoaded', () => {
-  function adjustMainPadding() {
+console.log("🚀 Padding adjuster script is running!");
+
+function adjustMainPadding() {
+  const header = document.querySelector('.site-header');
+  const main = document.querySelector('.dawamain');
+
+  if (header && main) {
+    window.requestAnimationFrame(() => {
+      const height = header.offsetHeight;
+      main.style.paddingTop = `${height}px`;
+      console.log(`✅ Padding set to ${height}px`);
+    });
+  } else {
+    console.warn("⚠️ Header or main not found");
+  }
+}
+
+function initPaddingAdjustment() {
+  // Initial attempts
+  adjustMainPadding();
+  setTimeout(adjustMainPadding, 100);   // Recheck shortly
+  setTimeout(adjustMainPadding, 500);   // Recheck after other layout stuff
+
+  // Resize event
+  window.addEventListener('resize', adjustMainPadding);
+
+  // Load event (after everything including fonts/images)
+  window.addEventListener('load', () => {
+    adjustMainPadding();
+
     const header = document.querySelector('.site-header');
-    const main = document.querySelector('.dawamain');
-    if (header && main) {
-      main.style.paddingTop = `${header.offsetHeight}px`;
+    if (header) {
+      // Image load watchers inside header
+      const imgs = header.querySelectorAll('img');
+      imgs.forEach(img => {
+        if (!img.complete) {
+          img.addEventListener('load', adjustMainPadding);
+        }
+      });
     }
+  });
+
+  // Watch for changes in the header itself
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const observer = new MutationObserver(adjustMainPadding);
+    observer.observe(header, {
+      attributes: true,
+      childList: true,
+      subtree: true,
+    });
   }
 
-  window.addEventListener('load', adjustMainPadding);
-  window.addEventListener('resize', adjustMainPadding);
-});
+  // Fallback: in case header appears later (e.g. SPA or dynamic load)
+  const bodyObserver = new MutationObserver(() => {
+    if (document.querySelector('.site-header') && document.querySelector('.dawamain')) {
+      console.log("🛠️ Header/main dynamically appeared. Init adjustments.");
+      adjustMainPadding();
+    }
+  });
+
+  bodyObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+}
+
+window.addEventListener('DOMContentLoaded', initPaddingAdjustment);
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   loadComponents();

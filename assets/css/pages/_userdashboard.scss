@@ -1,11 +1,4 @@
-.dashboard-sidebar {
-    border: 1px solid #E7ECF4;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.03) 0px 7px 20px 0px, rgba(0, 0, 0, 0.001) 0px 0px 0px 1px;
-    flex-wrap: nowrap;
-    overflow-x:auto;
-}
+
 
 .border-container {
     border: 1px solid #E7ECF4;
@@ -139,15 +132,15 @@
     /* profile tabs */
     .profile-tab {
         .accordion-button {
-            padding: 30px;
+            padding: 20px;
             @include respond-to(xxl) {
-                padding: 48px;
+                padding: 30px;
             }
         }
         .accordion-body {
-            padding: 0px 30px 30px 30px;
+            padding: 0px 20px 20px 20px;
             @include respond-to(xxl) {
-                padding: 0 48px 48px 48px;
+                padding: 0 30px 30px 30px;
             }
         }
         .input-row {
@@ -425,7 +418,24 @@
         }
     }
 }
+.profile-card{
+    border-radius: 12px;
+    border: 1px solid #E7ECF4;
+    padding: 20px;
+    @include respond-to(xxl) {
+        padding: 30px;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        @include respond-to(xxl) {
+            width: 150px;
+        height: 150px;
+        }
+    }
 
+}
 .product-title-popup {
     color: $black;
     text-align: left;

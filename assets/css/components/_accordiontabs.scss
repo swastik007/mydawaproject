@@ -72,6 +72,26 @@
             }
         }
     }
+    &.dashboard-sidebar {
+        border: 1px solid #E7ECF4;
+        padding: 20px;
+        border-radius: 12px;
+        flex-wrap: nowrap;
+        overflow-x:auto;
+        .nav-link {
+            
+            &.active,
+            &.show>.nav-link {
+                background-color: #F6FFF1;
+                color: $green;
+                svg {
+                    path {
+                        stroke: $green;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .tab-title-heading {

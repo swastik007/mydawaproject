@@ -55,10 +55,32 @@ body {
     }
 }
 
+// Quick Fix Fix this later
+// #header{
+//     height: 150px;
+//     @include respond-to(lg) {
+//         height: 140px;
+//     }
+//     @include respond-to(xxl) {
+//         height: 200px;
+//     }
+// }
+// .site-header{
+//     height: 150px;
+//     @include respond-to(lg) {
+//         height: 140px;
+//     }
+//     @include respond-to(xxl) {
+//         height: 200px;
+//     }
+// }
+// Quick Fix Fix this later
 .dawamain {
+    @media only screen and (max-width: 1199px){
+        margin-top: 50px!important;
+    }
     margin: 0 auto;
     width: 100%;
-    
 }
 
 .mydawa-container {

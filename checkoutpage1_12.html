@@ -124,17 +124,17 @@
                                         </div>
                                     </div>
                                     <div class="d-block w-100 mx-auto">
-                                        <button type="button" class="mt-4 btn btn-primary" data-bs-toggle="modal" data-bs-target="#transferpointsModal">
+                                        <button type="button" class="mt-4 btn-lg btn-rounded btn-primary" data-bs-toggle="modal" data-bs-target="#transferpointsModal">
                                              Transfer Points
                                         </button>
-                                        <button type="button" class="mt-4 btn btn-green" data-bs-toggle="modal" data-bs-target="#transferpoints2Modal">
+                                        <button type="button" class="mt-4 btn-lg btn-rounded btn-green" data-bs-toggle="modal" data-bs-target="#transferpoints2Modal">
                                             Transfer Points 2
                                         </button>
-                                        <button type="button" class="mt-4 btn btn-black" data-bs-toggle="modal" data-bs-target="#successfultransferModal">
-                                            Successfull Transfer
+                                        <button type="button" class="mt-4 btn-lg btn-rounded btn-dark" data-bs-toggle="modal" data-bs-target="#successfultransferModal">
+                                            Successful Transfer
                                         </button>
-                                        <button type="button" class="mt-4 btn btn-red" data-bs-toggle="modal" data-bs-target="#successfulorderModal">
-                                            Successfull Order
+                                        <button type="button" class="mt-4 btn-lg btn-rounded btn-white-border" data-bs-toggle="modal" data-bs-target="#successfulorderModal">
+                                            Successful Order
                                         </button>
                                       </div>
                                      
@@ -283,35 +283,30 @@
             
         </div>
     </div>
-    <!-- Transfer Points Two -->
-    <div class="modal fade" id="successfultransferModal" tabindex="-1" aria-labelledby="successfultransferLabel" aria-hidden="true">
-        <div class="modal-dialog dialog-lg">
+    <!-- Successful Transfer -->
+    <div class="modal fade" id="successfultransferModal" tabindex="-1" aria-labelledby="successfultransferLabel"
+        aria-hidden="true">
+        <div class="modal-dialog dialog-sm">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5>Transfer Points</h5>  
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">  
-                <div class="popup-header mb-2 d-flex flex-column justify-content-center align-items-center">
-                    <h2>Successfull Order !</h2>
-                    <p class="text-center">Your order has been successfully placed and is now being processed. You will receive a confirmation email shortly with your order details.</p>
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-    
-                <div class="date mb-2 mb-lg-3 justify-content-center">
-    
-                    <img src="assets/images/icons/date-icon-grey.png" alt="Icon">
-    
-                    <span class="">Estimate Delivery: </span>
-                    <p>Mar 04, 2025</p>
-                </div>
-    
-                <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2 justify-content-center">
-                    <button class="btn-white-border btn-rounded btn-lg">Track Order</button>
-                    <button class="btn-green btn-rounded btn-lg">Shop More</button>
-                </div>
+                <div class="modal-body">
+                   
+                    <div class="popup-header mb-2 d-flex flex-column justify-content-center align-items-center">
+                        <img src="assets/images/icons/order-success.png" alt="Icon" class="popup-icon-lg mb-2 mb-lg-3">
+                        <h2>Successful Transfer !</h2>
+                        <p class="text-center mx-5">5000 points (KES 50) successfully transferred to (+977) 9876543210.</p>
+                    </div>
+                    
+
+                    <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2 justify-content-center">
+                       
+                        <button class="btn-green btn-rounded btn-lg w-100">Done</button>
+                    </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <!-- Transfer Points Two -->
@@ -319,13 +314,13 @@
         <div class="modal-dialog dialog-lg">
             <div class="modal-content">
             <div class="modal-header">
-                <h5>Transfer Points</h5>  
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">  
                 <div class="popup-header mb-2 d-flex flex-column justify-content-center align-items-center">
-                    <h2>Successfull Order !</h2>
-                    <p class="text-center">Your order has been successfully placed and is now being processed. You will receive a confirmation email shortly with your order details.</p>
+                    <img src="assets/images/icons/order-success.png" alt="Icon" class="popup-icon-lg mb-2 mb-lg-3">
+                    <h2>Successful Order !</h2>
+                    <p class="text-center mx-5">Your order has been successfully placed and is now being processed. You will receive a confirmation email shortly with your order details.</p>
                 </div>
     
                 <div class="date mb-2 mb-lg-3 justify-content-center">
@@ -337,8 +332,8 @@
                 </div>
     
                 <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2 justify-content-center">
-                    <button class="btn-white-border btn-rounded btn-lg">Track Order</button>
-                    <button class="btn-green btn-rounded btn-lg">Shop More</button>
+                    <button class="btn-white-border btn-rounded btn-lg px-4 px-xl-5">Track Order</button>
+                    <button class="btn-green btn-rounded btn-lg  px-4 px-xl-5">Shop More</button>
                 </div>
                 </div>
             </div>
@@ -349,7 +344,7 @@
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
     <script src="assets/vendor/intlTel/intlTelInput.js"></script>
-    <script src="assets/js/themescripts.js"></script>
+    <script src="assets/js/themescripts.js" defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {            
          

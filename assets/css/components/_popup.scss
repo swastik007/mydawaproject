@@ -72,6 +72,48 @@
             box-shadow: none;
         } 
     }
+    h2 {
+        font-family: $figtreeBold;
+        @include responsive-font(24px, 24px, 24px, 32px);
+    }
+    h3 {
+        font-family: $figtreeSemiBold;
+        @include responsive-font(18px, 18px, 18px, 24px);
+    }
+    p {
+        @include responsive-font(14px, 14px, 14px, 18px);
+    }
+    .date,
+    .time {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            object-fit: contain;
+            @include respond-to(xxl) {
+                width: 28px;
+                height: 28px;
+                margin-right: 8px;
+            }
+        }
+        span {
+            @include responsive-font(16px, 16px, 16px, 20px);
+            font-family: $figtreeSemiBold;
+            margin-right: 7px;
+            @include respond-to(xxl) {
+                margin-right: 10px;
+            }
+        }
+        p {
+            @include responsive-font(16px, 16px, 16px, 20px);
+            color: $primary;
+            font-family: $figtreeSemiBold;
+            margin-bottom: 0;
+        }
+    }
     .btn-lg {
         padding: 8px 15px;
         @include respond-to(xxl) {
@@ -83,6 +125,16 @@
         height: auto;
         @include respond-to(xxl) {
             width: 70px;
+        }
+    }
+    .popup-icon-lg {
+        width: 150px;
+        height: 150px;
+       object-fit: contain;
+        @include respond-to(xxl) {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
         }
     }
     .popup-img{

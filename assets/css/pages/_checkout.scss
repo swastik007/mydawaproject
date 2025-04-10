@@ -427,11 +427,11 @@
         h2 {
             margin: 0;
             font-family: $figtreeSemiBold;
-            @include responsive-font(28px, 44px, 28px, 44px);
+            @include responsive-font(24px, 24px, 24px, 32px);
         }
         .sub-text {
             font-family: $figtreeLight;
-            @include responsive-font(14px, 14px, 14px, 20px);
+            @include responsive-font(14px, 14px, 14px, 18px);
         }
         .status {
             background: #FFFCEC;
@@ -495,18 +495,30 @@
     padding: 0 10px;
     position: relative;
     margin: 40px 20px 30px 20px;
+    flex-direction: column;
+    @include respond-to(sm) {
+        flex-direction: row;
+    }
     @include respond-to(xxl) {
         margin: 50px 35px 30px 35px;
     }
-    &::before {
-        content: "";
+    &::before {       
+        display: none;
+        content: "";        
         position: absolute;
-        top: 14px;
+        top: 11px;
         left: 10%;
         width: 80%;
         height: 2px;
         background: #ddd;
         z-index: 0;
+        @include respond-to(sm) {
+            display: block;
+        }
+        @include respond-to(xxl) {
+            top: 14px;
+        }
+       
     }
     .step {
         display: flex;
@@ -515,25 +527,29 @@
         text-align: center;
         position: relative;
         z-index: 1;
-        .circle {
-            width: 20px;
-            height: 20px;
-            background: #ddd;
+        .step-circle {
+            background: #eee;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-            color: white;
-            @include respond-to(xxl) {
-                width: 32px;
-                height: 32px;
+                    
+            &.completed {
+                background: $green;
             }
+            svg{
+                width: 24px;
+                height: 24px;
+                @include respond-to(xxl) {
+                    width: 35px;
+                    height: 35px;
+                }
+                path{
+                    fill: white;
+                }
+            }   
         }
-        &.completed .circle {
-            background: $green;
-        }
+        
         p {
             font-family: $figtreeBold;
             @include responsive-font(15px, 22px, 15px, 22px);

@@ -38,7 +38,7 @@
                     <!-- Step Navigation -->
                     <div class="step-navigation mb-4">
                         <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between">
-                            <h4 class="section-heading">Step 2</h4>
+                            <h4 class="section-heading">Step 3</h4>
                             <ul class="steps">
                                 <li class="step">
                                     <span class="step-circle complete"> 
@@ -50,11 +50,15 @@
 
                                 </li>
                                 <li class="step">
-                                    <span class="step-circle active">2</span>
+                                    <span class="step-circle complete"> 
+                                        <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.26557 5.96565L0.98099 3.5968L0 4.61397L3.26557 8L10 1.01717L9.01901 0L3.26557 5.96565Z" fill="white"/>
+                                        </svg>
+                                    </span>
                                     <span class="step-text">Consent Form</span>
                                 </li>
                                 <li class="step">
-                                    <span class="step-circle">3</span>
+                                    <span class="step-circle active">3</span>
                                     <span class="step-text">Pick Up A Time & Date</span>
                                 </li>
                                 <li class="step">
@@ -65,39 +69,58 @@
                         </div>
                     </div>
 
-                    <div class="form-page-wrap large-wrap">
-                        <div class="forms-heading">
-                            <h2 class="mb-3 mb-lg-4">Request an online consultation</h2>
-                            <h3>MYDAWA TELEHEALTH PATIENT CONSENT FORM</h3>
-                            <p>By clicking "I agree" you are hereby consenting to:</p>
+                    <div class="form-page-wrap  small-wrap">
+                        <!-- Title Section -->
+                        <div class="prescription-heading">
+                            <h2 class="form-title">Select Consultation date and Time.</h2>
+                            <p class="form-subtitle">
+                                By selecting your convenient date and time, book your consultation.
+                            </p>
                         </div>
-
-
-                        <div class="consent-box">
-                            <h2>Consent</h2>
-                            <p>MYDAWA holding and processing any data (including sensitive data) provided by you to MYDAWA for all purposes relating to your medical consultation including for the purpose of evaluating and diagnosing your medical condition
-                                and any other health complaints, using appropriate telecommunication technologies.</p>
-
-                            <ol>
-                                <li>Authorising MYDAWA to use appropriate telecommust tovemurgius for the purpose of evaluating and diagnosing my medical condition and any other health complaints</li>
-                                <li>Understanding that the laws that protect the confidentiality of your medical information also applies to telemedicine and therefore, the information disclosed by you during your treatment is confidential.</li>
-                                <li>Understanding that your personal data will be disclosed in the event that this information is requested or required by any law, regulatory authority and rule or regulation of any governmental agency.</li>
-                                <li>MYDAWA retaining your Personal Data for as long as is necessary for the purposes set out in this Privacy Policy.</li>
-                                <li>Acknowledging and accepting that you require access to a PC, laptop or mobile device and a good internet connection to have an effective telemedicine appointment.</li>
-                                <li>Understanding the risks, benefits, and alternatives to telehealth. Whilst benefits of telemedicine include having access to medical specialists and additional medical information and education without having to travel outside
-                                    of your local health care community, there may be circumstances whereby due to your specific medical condition, or due aing to travel outsid, of due to technical problems, a face-to-face consultation still may be necessary
-                                    after the telemedicine appointment.</li>
-                                <li>Understanding that whilst security of your personal data is of utmost importance to us, in rare circumstances, security protocols could fail causing a breach of patient privacy.</li>
-                                <li>Understanding that telemedicine involves the use of audio, video, or other electronic communications upon interactions with yourself during your consultation with your healthcare provider and/or review your medical information
-                                    for the purpose of diagnosis, therapy, follow-up and/or education. Upon the telemedicine consultation,</li>
-                            </ol>
+                        <!-- Payment Section -->
+                        <div class="date-time">
+                            <div class="date-time__box">
+                                <h2 class="date-time__title">Select Time</h2>
+                                <div class="time-box">
+                                    <div class="time-box__wrap">
+                                        <h4>
+                                            <img src="./assets/images/icons/time1.svg" /> Duration:
+                                        </h4>
+                                        <span>30 Min</span>
+                                    </div>
+                                    <div class="time-box__wrap">
+                                        <h4>
+                                            <img src="./assets/images/icons/call1.svg" /> Medium:
+                                        </h4>
+                                        <span>Phone Call</span>
+                                    </div>
+                                </div>
+                                <div class="times">
+                                    <a href="#" class="times__link">11:00 AM</a>
+                                    <a href="#" class="times__link selected">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link disabled">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                    <a href="#" class="times__link">11:30 AM</a>
+                                </div>
+                            </div>
+                            <div class="date-time__box">
+                                <h2 class="date-time__title">Select Date</h2>
+                                <div id="foo" data-date="01/25/2020"></div>
+                                <span class="time-note">
+                                    <img src="./assets/images/icons/info.svg" /> 
+                                    Central European Time (08:11 PM)
+                                </span>
+                            </div>
                         </div>
-
-
                         <!-- Actions Section -->
                         <div class="d-flex align-items-center justify-content-end mt-3 mt-lg-4 mt-xl-5">
                             <button class="btn-white-border btn-rounded btn-lg me-2">Talk to a doctor</button>
-                            <button class="btn-green btn-rounded btn-lg" onclick="window.location.href='/speaktodoctor3.html';">Continue</button>
+                            <button class="btn-green btn-rounded btn-lg" onclick="window.location.href='/speaktodoctor4.html';">Continue</button>
                         </div>
 
                     </div>
