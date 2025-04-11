@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    padding: 20px;
-    background-color: white;
+    padding: 16px 19px;
+    background-color: #faa138;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -25,7 +25,7 @@
     &__text {
       font-size: 16px;
       font-family: $figtreeSemiBold;
-      color: #373434;
+      color: #ffffff;
     }
 
     &__icon {
@@ -37,7 +37,7 @@
 
   .help-menu {
     display: flex;
-    gap: 8px;
+    gap: 2px;
     flex-direction: column;
     position: absolute;
     bottom: 80px;
@@ -46,7 +46,7 @@
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     width: 255px;
-    padding: 16px;
+    padding: 16px 10px;
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     visibility: hidden;
@@ -72,8 +72,11 @@
       transition: 400ms ease;
 
       &:hover {
-        background-color: #f8f8fc;
-        color: #373434;
+        background-color: #faa138;
+        color: #ffffff;
+        .help-menu__icon img {
+          filter: invert(1) brightness(500%) saturate(0%);
+        }
       }
 
       &:nth-child(1) {
@@ -96,6 +99,7 @@
     &__text {
       font-size: 14px;
       font-family: $figtreeSemiBold;
+      line-height: 20px;
     }
   }
 }

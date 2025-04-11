@@ -17001,8 +17001,8 @@ input.form-icon-mail:before {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 20px;
-  background-color: white;
+  padding: 16px 19px;
+  background-color: #faa138;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -17016,14 +17016,14 @@ input.form-icon-mail:before {
 .help-container .help-button__text {
   font-size: 16px;
   font-family: "Figtree-SemiBold";
-  color: #373434;
+  color: #ffffff;
 }
 .help-container .help-button__icon--active {
   display: none;
 }
 .help-container .help-menu {
   display: flex;
-  gap: 8px;
+  gap: 2px;
   flex-direction: column;
   position: absolute;
   bottom: 80px;
@@ -17032,7 +17032,7 @@ input.form-icon-mail:before {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   width: 255px;
-  padding: 16px;
+  padding: 16px 10px;
   opacity: 0;
   transform: translateY(20px) scale(0.95);
   visibility: hidden;
@@ -17057,8 +17057,11 @@ input.form-icon-mail:before {
   transition: 400ms ease;
 }
 .help-container .help-menu__item:hover {
-  background-color: #f8f8fc;
-  color: #373434;
+  background-color: #faa138;
+  color: #ffffff;
+}
+.help-container .help-menu__item:hover .help-menu__icon img {
+  filter: invert(1) brightness(500%) saturate(0%);
 }
 .help-container .help-menu__item:nth-child(1) {
   animation-delay: 0.05s;
@@ -17075,6 +17078,7 @@ input.form-icon-mail:before {
 .help-container .help-menu__text {
   font-size: 14px;
   font-family: "Figtree-SemiBold";
+  line-height: 20px;
 }
 
 /* Animation for menu appearing */
