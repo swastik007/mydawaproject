@@ -8,7 +8,7 @@
   &:hover,
   &:focus {
     .delivery-dropdown {
-      display: block;
+      // display: block;
     }
   }
   /* Ensure parent has a high z-index */
@@ -28,6 +28,7 @@
     border-radius: 12px;
     border: 1px solid #e7ecf4;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
     .dropdown-header {
       color: $black;
       h4 {

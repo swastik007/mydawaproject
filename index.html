@@ -167,6 +167,11 @@
             </div>
           </div>
           <div class="top-right">
+            <a href="#" class="download-app">
+              <img src="assets/images/icons/phone.svg" alt="Icon" />
+              <span>Download App</span>
+            </a>
+
             <div class="delivery-wrap">
               <div class="delivery-info">
                 <span class="icon">
@@ -1436,8 +1441,9 @@
     })
   </script>
   <script>
+    // Delivery Dropdown
     const deliveryLink = document.querySelector(".delivery-info");
-    const deliveryShow = document.querySelector(".delivery-dropdown");
+    const deliveryShow = document.querySelector(".delivery-wrap .delivery-dropdown");
     deliveryLink.addEventListener("click", () => {
       if (deliveryShow.style.display === "block") {
         deliveryShow.style.display = "none";
@@ -1448,6 +1454,38 @@
     document.addEventListener("click", (e) => {
       if (!deliveryLink.contains(e.target) && !deliveryShow.contains(e.target)) {
         deliveryShow.style.display = "none";
+      }
+    })
+    // User Dropdown
+    const userLink = document.querySelector(".user-wrap a");
+    const userShow = document.querySelector(".user-wrap .delivery-dropdown");
+    userLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (userShow.style.display === "block") {
+        userShow.style.display = "none";
+      } else {
+        userShow.style.display = "block";
+      }
+    })
+    document.addEventListener("click", (e) => {
+      if (!userLink.contains(e.target) && !userShow.contains(e.target)) {
+        userShow.style.display = "none";
+      }
+    })
+    // Cart Dropdown
+    const cartLink = document.querySelector(".cart-dropdown-wrap a");
+    const cartShow = document.querySelector(".cart-dropdown");
+    cartLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (cartShow.style.display === "block") {
+        cartShow.style.display = "none";
+      } else {
+        cartShow.style.display = "block";
+      }
+    })
+    document.addEventListener("click", (e) => {
+      if (!cartLink.contains(e.target) && !cartShow.contains(e.target)) {
+        cartShow.style.display = "none";
       }
     })
   </script>

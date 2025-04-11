@@ -8,13 +8,13 @@
   &:hover,
   &:focus {
     .cart-dropdown {
-      display: block;
+      // display: block;
     }
   }
   .cart-dropdown {
     /* Hidden by default */
     position: absolute;
-    top: 40px;
+    top: 100%;
     right: 10px;
     // transform: translateX(-50%);
     /* Centers the dropdown */
@@ -28,6 +28,7 @@
     border: 1px solid #e7ecf4;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 5px;
+    margin-top: 8px;
     @include respond-to(lg) {
       width: 700px;
     }
@@ -36,12 +37,12 @@
       top: 60px;
     }
   }
-  .cart-item{
+  .cart-item {
     padding: 10px;
     @include respond-to(xxl) {
       padding: 16px;
     }
-    .product-info{
+    .product-info {
       .item-details {
         h3 {
           @include responsive-font(14px, 16px, 14px, 16px);
@@ -62,23 +63,22 @@
         }
       }
     }
-    
+
     .item-price {
       display: flex;
       flex-direction: column;
       @include respond-to(lg) {
-          flex-direction: row;
+        flex-direction: row;
       }
-      .product-price {        
-          @include responsive-font(13px, 15px, 13px, 15px);
-         
+      .product-price {
+        @include responsive-font(13px, 15px, 13px, 15px);
       }
       .product-price-old {
         @include responsive-font(13px, 15px, 13px, 15px);
       }
+    }
   }
-  }
-  
+
   .cart-total {
     margin: 7px 0;
     background: #f5f5f5;
