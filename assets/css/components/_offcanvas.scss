@@ -269,3 +269,19 @@
     }
   }
 }
+
+.badge-cancel {
+  font-size: 12px;
+  font-family: $figtreeMedium;
+  line-height: 150%;
+  padding: 4px 14px;
+  color: #d40e0e;
+  background-color: #fff6f6;
+  border-radius: 36px;
+}
+.re-order-btn {
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-family: $figtreeSemiBold;
+}
