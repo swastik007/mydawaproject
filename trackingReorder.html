@@ -17,6 +17,43 @@
 </head>
 
 <body>
+    <div class="modal fade reorder-modal" id="reOrder" tabindex="-1" aria-labelledby="reOrderLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title mb-0" id="reOrderLabel">Re-order Your Items</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-3"><small>You can only re-order non-prescription items now. For prescription items, you
+                            have to
+                            upload prescription and consult.</small></p>
+                    <div class="reorder-content">
+                        <div class="reorder-content--list">
+                            <p><b>Non-Prescription Items:</b></p>
+                            <div class="reorder-content--listitem">
+                                <img src="./assets/images/icons/checkmark.svg" />
+                                <span>Durex Condoms Featherlike 40pcs - Qty:1</span>
+                            </div>
+                        </div>
+                        <div class="reorder-content--list">
+                            <p><b>NPrescription Items:</b></p>
+                            <div class="reorder-content--listitem">
+                                <img src="./assets/images/icons/warning.svg" />
+                                <span>Novomox 50mg Capsules - Qty:1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="re-order-btn w-100 rounded-pill btn-green mb-2">Confirm
+                        Re-Order</button>
+                    <button type="button" class="cancel-btn m-0" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <button class="btn tracking-offcanvas--button" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -38,10 +75,14 @@
     <div class="offcanvas offcanvas-end tracking-offcanvas" data-bs-backdrop="static" data-bs-scroll="false"
         tabindex="-1" id="offcanvasExample" aria-labelledby="trackingOffCanvas">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="trackingOffCanvas">Your Order Has Been Received</h5>
+            <h5 class="offcanvas-title" id="trackingOffCanvas">Your Order Has Been Cancelled</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
+            <div class="text-center">
+
+                <img class="mb-3" src="./assets/images/icons/cancelled.png" />
+            </div>
             <div class="order-card bg-white">
 
                 <div class="d-flex justify-content-between align-items-center order-card--info">
@@ -56,64 +97,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="order-card bg-white">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.2777683711!2d85.28493284885911!3d27.70903024206132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1744370464995!5m2!1sen!2snp"
-                    width="100%" height="176" style="border:0; border-radius: 12px 12px 0 0 ;" allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="d-flex justify-content-between align-items-center order-card--info">
-                    <div>
-                        <h6 class="m-0">#GS00134431</h6>
-                        <small class="text-muted">Get Your Order Latest Status Here.</small>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <small class="d-block">
-                                <img src="./assets/images/icons/clock.svg" />
-                                Estimated Delivery
-                            </small>
-                            <small class="fw-bold">Mar 10, 2025, 09:00 AM</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center order-card--user">
-                    <div class="user-info">
-                        <img src="./assets/images/icons/user.png" alt="">
-                        <div class="">
-                            <h6 class="m-0">Jacky Jahn </h6>
-                            <small class="text-muted">MYDAWA Rider</small>
-                        </div>
-                    </div>
-                    <div class="tools">
-                        <a href="#">
-                            <img src="./assets/images/icons/cc.svg" />
-                        </a>
-                        <a href="#">
-                            <img src="./assets/images/icons/mm.svg" />
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center align-items-center order-card--rating">
-                    <p class="m-0">Rate the Driver </p>
-                    <div class="stars">
-                        <img src="./assets/images/icons/star-full.svg" alt="">
-                        <img src="./assets/images/icons/star-full.svg" alt="">
-                        <img src="./assets/images/icons/star-full.svg" alt="">
-                        <img src="./assets/images/icons/star-full.svg" alt="">
-                        <img src="./assets/images/icons/star-half.svg" alt="">
-                    </div>
-                </div>
-                <div class="progresss">
-                    <div class="progresss-labels">
-                        <span class="active">Ordered Placed</span>
-                        <span class="active">Processing</span>
-                        <span>Dispatched</span>
-                        <span>Delivered</span>
-                    </div>
-                </div>
-
-
             </div>
             <div class="order-card order-card--detailtable">
                 <!-- Order Details -->
@@ -175,7 +158,11 @@
                     </table>
                 </div>
             </div>
-            <button class="re-order-btn w-100 rounded-pill btn-green">
+            <div class="text-center mb-3">
+                <small>Re-order Non-Prescription Items Easily! For Prescription Items, Upload a Prescription
+                    First.</small>
+            </div>
+            <button class="re-order-btn w-100 rounded-pill btn-green" data-bs-toggle="modal" data-bs-target="#reOrder">
                 Re-Order
             </button>
             <div class="order-card deliver-card">
@@ -188,9 +175,6 @@
                     <span class="d-block">Email: <b>kevin.gilbert@gmail.com</b></span>
                 </div>
             </div>
-
-
-            <button class="cancel-btn mb-4">Cancel Order</button>
 
             <div class="d-flex justify-content-end help-container mt-4">
                 <button class="help-button">

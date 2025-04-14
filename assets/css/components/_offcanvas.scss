@@ -20,6 +20,7 @@
     }
   }
   .offcanvas-header {
+    padding-bottom: 0;
     .offcanvas-title {
       display: block;
       text-align: center;
@@ -41,6 +42,21 @@
       background-color: #f1f1f5;
       border-radius: 0;
     }
+    .btn-back {
+      display: flex;
+      position: absolute;
+      right: 0;
+      top: -5px;
+      color: #516bf1;
+      font-size: 16px;
+      font-family: $figtreeMedium;
+      gap: 8px;
+      text-decoration: none;
+      align-items: center;
+    }
+  }
+  .offcanvas-body {
+    padding-top: 0;
   }
   .help-container {
     position: static;
@@ -208,15 +224,11 @@
   }
 }
 .product-icon {
-  background-color: #f44336;
-  color: white;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  font-size: 12px;
 }
 
 .cancel-btn {
@@ -279,9 +291,85 @@
   background-color: #fff6f6;
   border-radius: 36px;
 }
+.badge-delivered {
+  font-size: 12px;
+  font-family: $figtreeMedium;
+  line-height: 150%;
+  padding: 4px 14px;
+  color: #08b949;
+  background-color: #ecfff3;
+  border-radius: 36px;
+}
 .re-order-btn {
   padding: 14px 20px;
   margin-bottom: 12px;
   font-size: 16px;
   font-family: $figtreeSemiBold;
+}
+
+.reorder-modal {
+  .modal-header {
+    padding-bottom: 0;
+    .modal-title {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 10px 0 24px;
+      font-size: 20px;
+      font-family: $figtreeSemiBold;
+      line-height: 150%;
+      color: #373434;
+    }
+    .btn-close {
+      width: 44px;
+      height: 44px;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      background-color: transparent;
+      display: flex;
+      padding: 0;
+    }
+    .btn-back {
+      display: flex;
+      position: absolute;
+      right: 0;
+      top: -5px;
+      color: #516bf1;
+      font-size: 16px;
+      font-family: $figtreeMedium;
+      gap: 8px;
+      text-decoration: none;
+      align-items: center;
+    }
+  }
+  .modal-footer {
+    margin-top: 24px;
+    .cancel-btn {
+      color: #373434;
+      border-color: #373434;
+    }
+  }
+}
+.reorder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  p {
+    font-size: 13px;
+    font-family: $figtreeBold;
+    margin: 0;
+    line-height: 150%;
+  }
+  &--list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &item {
+      display: flex;
+      gap: 11px;
+    }
+  }
 }
