@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Dawa</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="mydawa">
+    <meta name="keywords" content="mydawa">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+
+</head>
+
+<body>
+    <div class="container-main">
+        <div id="header"></div>
+        <main class="dawamain">
+            <div class="page-content container-fluid mt-2 mt-xl-4">
+                <!-- Breadcrumb section -->
+                <nav class="breadcrumb-container mydawa-container">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#" class="active">My Profile</a></li>
+                    </ul>
+                </nav>
+                <div class="mydawa-container">
+                    <div class="row">
+                        <!-- Sidebar Navigation with Tabs -->
+                        <div class="col-md-3">
+                            <div class="nav flex-row flex-md-column nav-pills dashboard-sidebar mb-3" id="dashboard-tabs" role="tablist">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
+    
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13 21.9506C12.6711 21.9833 12.3375 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 12.3375 21.9833 12.6711 21.9506 13"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round" />
+                                        <path
+                                            d="M7.5 17C8.90247 15.5311 11.0212 14.9041 13 15.1941M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round" />
+                                        <path
+                                            d="M18.5 22C20.433 22 22 20.433 22 18.5C22 16.567 20.433 15 18.5 15C16.567 15 15 16.567 15 18.5C15 20.433 16.567 22 18.5 22Z"
+                                            stroke="#373434" stroke-width="1.5" />
+                                    </svg>
+                                    My Profile
+                                </button>
+                                <button class="nav-link" id="orders-tab" data-bs-toggle="pill" data-bs-target="#orders" type="button" role="tab">
+    
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 22C11.1818 22 10.4002 21.6698 8.83693 21.0095C4.94564 19.3657 3 18.5438 3 17.1613C3 16.7742 3 10.0645 3 7M12 22C12.8182 22 13.5998 21.6698 15.1631 21.0095C19.0544 19.3657 21 18.5438 21 17.1613V7M12 22L12 11.3548"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M8.32592 9.69138L5.40472 8.27785C3.80157 7.5021 3 7.11423 3 6.5C3 5.88577 3.80157 5.4979 5.40472 4.72215L8.32592 3.30862C10.1288 2.43621 11.0303 2 12 2C12.9697 2 13.8712 2.4362 15.6741 3.30862L18.5953 4.72215C20.1984 5.4979 21 5.88577 21 6.5C21 7.11423 20.1984 7.5021 18.5953 8.27785L15.6741 9.69138C13.8712 10.5638 12.9697 11 12 11C11.0303 11 10.1288 10.5638 8.32592 9.69138Z"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M6 12L8 13" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M17 4L7 9" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    My Orders
+                                </button>
+                                <button class="nav-link active" id="prescriptions-tab" data-bs-toggle="pill" data-bs-target="#prescriptions" type="button" role="tab">
+    
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.9805 7.01562C14.9805 7.01562 15.4805 7.51562 15.9805 8.51562C15.9805 8.51562 17.5687 6.01562 18.9805 5.51562"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M9.99485 2.0214C7.49638 1.91562 5.56612 2.20344 5.56612 2.20344C4.34727 2.29059 2.01146 2.97391 2.01148 6.9646C2.0115 10.9214 1.98564 15.7994 2.01148 17.744C2.01148 18.9321 2.7471 21.7034 5.29326 21.8519C8.3881 22.0325 13.9627 22.0709 16.5204 21.8519C17.2051 21.8133 19.4846 21.2758 19.7731 18.7957C20.072 16.2264 20.0125 14.4408 20.0125 14.0158"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M21.9998 7.01562C21.9998 9.77705 19.7591 12.0157 16.995 12.0157C14.2309 12.0157 11.9902 9.77705 11.9902 7.01562C11.9902 4.2542 14.2309 2.01562 16.995 2.01562C19.7591 2.01562 21.9998 4.2542 21.9998 7.01562Z"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round" />
+                                        <path d="M6.98047 13.0156H10.9804" stroke="#373434" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M6.98047 17.0156H14.9804" stroke="#373434" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    My Prescriptions
+                                </button>
+                                <button class="nav-link" id="wishlist-tab" data-bs-toggle="pill" data-bs-target="#wishlist" type="button" role="tab">
+    
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.1111 3C19.6333 3 22 6.3525 22 9.48C22 15.8138 12.1778 21 12 21C11.8222 21 2 15.8138 2 9.48C2 6.3525 4.36667 3 7.88889 3C9.91111 3 11.2333 4.02375 12 4.92375C12.7667 4.02375 14.0889 3 16.1111 3Z"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Wishlist
+                                </button>
+                                <button class="nav-link" id="beneficieries-tab" data-bs-toggle="pill" data-bs-target="#beneficieries" type="button" role="tab">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6 20.088H8.61029C8.95063 20.088 9.28888 20.1285 9.61881 20.2095L12.3769 20.8798C12.9753 21.0255 13.5988 21.0397 14.2035 20.9223L17.253 20.329C18.0585 20.1721 18.7996 19.7863 19.3803 19.2214L21.5379 17.1226C22.154 16.5242 22.154 15.5533 21.5379 14.9539C20.9832 14.4143 20.1047 14.3536 19.4771 14.8112L16.9626 16.6457C16.6025 16.909 16.1643 17.0507 15.7137 17.0507H13.2855L14.8311 17.0506C15.7022 17.0506 16.4079 16.3642 16.4079 15.5168V15.21C16.4079 14.5064 15.9156 13.8928 15.2141 13.7227L12.8286 13.1426C12.4404 13.0485 12.0428 13.0009 11.6431 13.0009C10.6783 13.0009 8.93189 13.7997 8.93189 13.7997L6 15.0258M2 14.6009L2 20.4009C2 20.9609 2 21.2409 2.10899 21.4549C2.20487 21.643 2.35785 21.796 2.54601 21.8919C2.75992 22.0009 3.03995 22.0009 3.6 22.0009H4.4C4.96005 22.0009 5.24008 22.0009 5.45399 21.8919C5.64215 21.796 5.79513 21.643 5.89101 21.4549C6 21.2409 6 20.9609 6 20.4009V14.6009C6 14.0408 6 13.7608 5.89101 13.5469C5.79513 13.3587 5.64215 13.2057 5.45399 13.1099C5.24008 13.0009 4.96005 13.0009 4.4 13.0009H3.6C3.03995 13.0009 2.75992 13.0009 2.54601 13.1099C2.35785 13.2057 2.20487 13.3587 2.10899 13.5469C2 13.7608 2 14.0408 2 14.6009ZM17.1914 3.59313C16.5946 2.34427 15.2186 1.68266 13.8804 2.32124C12.5423 2.95983 11.9722 4.47425 12.5325 5.8037C12.8787 6.62533 13.8707 8.22087 14.5781 9.3199C14.8394 9.72598 14.9701 9.92902 15.161 10.0478C15.3247 10.1497 15.5297 10.2046 15.7224 10.1982C15.9471 10.1908 16.1618 10.0803 16.5911 9.8593C17.7532 9.26118 19.4101 8.37542 20.1208 7.837C21.2707 6.96579 21.5556 5.36445 20.6947 4.14711C19.8337 2.92978 18.3327 2.80999 17.1914 3.59313Z"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Beneficieries
+                                </button>
+                                <button class="nav-link" id="subscriptions-tab" data-bs-toggle="pill" data-bs-target="#subscriptions" type="button" role="tab">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 15C10.7083 21 4.29167 15 2 21" stroke="#373434" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M15.5 15H17.0013C19.3583 15 20.5368 15 21.2691 14.2678C22.0013 13.5355 22.0013 12.357 22.0013 10V8C22.0013 5.64298 22.0013 4.46447 21.2691 3.73223C20.5368 3 19.3583 3 17.0013 3H13.0013C10.6443 3 9.46576 3 8.73353 3.73223C8.11312 4.35264 8.01838 5.29344 8.00391 7"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M7.5 15C8.88071 15 10 13.8807 10 12.5C10 11.1193 8.88071 10 7.5 10C6.11929 10 5 11.1193 5 12.5C5 13.8807 6.11929 15 7.5 15Z"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 7H18M18 11H15" stroke="#373434" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Subscriptions
+                                </button>
+                                <button class="nav-link" id="consultation-tab" data-bs-toggle="pill" data-bs-target="#consultation" type="button" role="tab">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.5 3.5H4.5C3.94772 3.5 3.5 3.94772 3.5 4.5V8C3.5 11.0376 5.96243 13.5 9 13.5C12.0376 13.5 14.5 11.0376 14.5 8V4.5C14.5 3.94772 14.0523 3.5 13.5 3.5H11.5"
+                                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M18.5 15.5V16.75C18.5 19.3734 16.3734 21.5 13.75 21.5C11.1266 21.5 9 19.3734 9 16.75V13.5"
+                                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M11.5 2.5V4.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.5 2.5V4.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M20.5 13.5C20.5 14.6046 19.6046 15.5 18.5 15.5C17.3954 15.5 16.5 14.6046 16.5 13.5C16.5 12.3954 17.3954 11.5 18.5 11.5C19.6046 11.5 20.5 12.3954 20.5 13.5Z"
+                                            stroke="#141B34" stroke-width="1.5" />
+                                    </svg>
+                                    Consultation
+                                </button>
+                                <button class="nav-link" id="loyalty-tab" data-bs-toggle="pill" data-bs-target="#loyalty" type="button" role="tab">
+    
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 22C16.4183 22 20 18.4183 20 14C20 8 12 2 12 2C11.6117 4.48692 11.2315 5.82158 10 8C8.79908 7.4449 8.5 7 8 5.75C6 8 4 11 4 14C4 18.4183 7.58172 22 12 22Z"
+                                            stroke="#373434" stroke-width="1.5" stroke-linejoin="round" />
+                                        <path d="M10 17L14 13" stroke="#373434" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M10 13H10.009M13.991 17H14" stroke="#373434" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Loyalty Points
+                                </button>
+                                <button class="nav-link" id="address-tab" data-bs-toggle="pill" data-bs-target="#address" type="button" role="tab">
+    
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 9C19.1434 4.9811 14.9912 2 11.0011 2C7.45834 2 4.08963 4.09916 2.68627 7.37966C0.0907623 13.4469 5.41302 17.626 9.38449 21.367C9.81818 21.773 10.3978 22 11.0011 22C11.5513 22 12.0819 21.8112 12.5 21.4699"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round" />
+                                        <path
+                                            d="M14 9.19621C13.3876 8.17979 12.2732 7.5 11 7.5C9.067 7.5 7.5 9.067 7.5 11C7.5 12.3962 8.31753 13.6015 9.5 14.1632"
+                                            stroke="#373434" stroke-width="1.5" stroke-linecap="round" />
+                                        <path d="M17 16H17.009" stroke="#373434" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M17.8981 21.6518C17.6572 21.8752 17.3352 22 17.0001 22C16.665 22 16.343 21.8752 16.1021 21.6518C13.8959 19.5943 10.9394 17.2958 12.3812 13.9588C13.1608 12.1545 15.0321 11 17.0001 11C18.9681 11 20.8394 12.1545 21.619 13.9588C23.059 17.2916 20.1097 19.6014 17.8981 21.6518Z"
+                                            stroke="#373434" stroke-width="1.5" />
+                                    </svg>
+                                    Manage Address
+                                </button>
+                                <button class="nav-link text-danger" id="logout-tab">
+    
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15 17.625C14.9264 19.4769 13.3831 21.0494 11.3156 20.9988C10.8346 20.987 10.2401 20.8194 9.05112 20.484C6.18961 19.6768 3.70555 18.3203 3.10956 15.2815C3 14.723 3 14.0944 3 12.8373V11.1627C3 9.90561 3 9.27705 3.10956 8.71846C3.70555 5.67965 6.18961 4.32316 9.05112 3.51603C10.2401 3.18064 10.8346 3.01295 11.3156 3.00119C13.3831 2.95061 14.9264 4.52307 15 6.37501"
+                                            stroke="#D40E0E" stroke-width="1.5" stroke-linecap="round" />
+                                        <path
+                                            d="M21 12H10M21 12C21 11.2998 19.0057 9.99153 18.5 9.5M21 12C21 12.7002 19.0057 14.0085 18.5 14.5"
+                                            stroke="#D40E0E" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    Log Out
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="tab-content dashboard-content" id="dashboard-content">
+
+                               
+                            <!-- Prescriptions List Tab -->
+                            <div class="tab-pane fade show active" id="wishlist" role="tabpanel">                                
+                                
+                                <div class="tab-title-heading d-flex justify-content-between align-items-center mb-4">
+
+                                    <a class="d-flex justify-content-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                                        <h3>My Allergy Medicines</h3>
+                                    </a>
+                                    <!-- Action Buttons -->
+                                    <div class="wishlist-actions">
+                                        <button class="delete-list">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M5 20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8h2V6h-4V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H3v2h2zM9 4h6v2H9zM8 8h9v12H7V8z"></path><path d="M9 10h2v8H9zm4 0h2v8h-2z"></path>
+                                            </svg>
+                                             Delete List
+                                        </button>
+                                       
+                                    </div>
+                                </div>
+                                <section class="product-listing-header">
+                                    <div class="listing-info">
+                                        <p class="desktop-text">Showing 1-15 of 150 results</p>
+                                        <p class="mobile-text">Showing 150 items</p>
+                                    </div>
+                                    <div class="filter-options d-flex gap-3">
+        
+                                        <!-- Sort By Dropdown -->
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle dropdown-filter" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="desktop-text">Sort by <span class="select" id="selectedSort">Recommended</span></span>
+                                                <span class="mobile-text">Sort</span>
+                                                <svg class="chevron-icon" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Recommended')">Recommended</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Price: Low to High')">Price: Low to High</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Price: High to Low')">Price: High to Low</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Newest Arrivals')">Newest Arrivals</a></li>
+                                            </ul>
+                                        </div>
+        
+                                        <!-- Display Per Page Dropdown -->
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle dropdown-filter" type="button" id="displayDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="desktop-text">Display <span class="select" id="selectedDisplay">15</span> per page</span>
+                                                <span class="mobile-text">Filter</span>
+                                                <svg class="chevron-icon" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="displayDropdown">
+                                                <li><a class="dropdown-item" href="#" onclick="updateDisplay(15)">15 per page</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateDisplay(30)">30 per page</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="category-grid wishlist-grid">
+                                     <!-- Product Card -->
+                        <a class="card product-card" href="/productpage.html">
+                            <span class="sale-badge">Flat 5% Off</span>
+                            <div class="action-btns">
+                                <button class="btn-view">
+                                    <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                    <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                                </button>
+                                <button class="btn-wishlist">
+                                    <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                    <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                                </button>
+                            </div>
+
+                            <div class="img-box">
+                                <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                    class="product-img">
+                            </div>
+
+                            <div class="card-body text-start">
+                                <p class="product-category">Snacks</p>
+                                <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                    <p class="product-price-old">KES 400</p>
+                                    <p class="product-price">KES 380</p>
+                                </div>
+                                <button class="btn btn-cart">
+                                    <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Add To Cart</span>
+                                </button>
+                               
+                            </div>
+                        </a>
+                         <!-- Product Card -->
+                         <a class="card product-card" href="/productpage.html">
+                            <span class="sale-badge">Flat 5% Off</span>
+                            <div class="action-btns">
+                                <button class="btn-view">
+                                    <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                    <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                                </button>
+                                <button class="btn-wishlist">
+                                    <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                    <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                                </button>
+                            </div>
+
+                            <div class="img-box">
+                                <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                    class="product-img">
+                            </div>
+
+                            <div class="card-body text-start">
+                                <p class="product-category">Snacks</p>
+                                <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                    <p class="product-price-old">KES 400</p>
+                                    <p class="product-price">KES 380</p>
+                                </div>
+                                <button class="btn btn-cart">
+                                    <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Add To Cart</span>
+                                </button>
+                               
+                            </div>
+                        </a>
+                         <!-- Product Card -->
+                         <a class="card product-card" href="/productpage.html">
+                            <span class="sale-badge">Flat 5% Off</span>
+                            <div class="action-btns">
+                                <button class="btn-view">
+                                    <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                    <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                                </button>
+                                <button class="btn-wishlist">
+                                    <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                    <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                                </button>
+                            </div>
+
+                            <div class="img-box">
+                                <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                    class="product-img">
+                            </div>
+
+                            <div class="card-body text-start">
+                                <p class="product-category">Snacks</p>
+                                <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                    <p class="product-price-old">KES 400</p>
+                                    <p class="product-price">KES 380</p>
+                                </div>
+                                <button class="btn btn-cart">
+                                    <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Add To Cart</span>
+                                </button>
+                               
+                            </div>
+                        </a>
+                         <!-- Product Card -->
+                         <a class="card product-card" href="/productpage.html">
+                            <span class="sale-badge">Flat 5% Off</span>
+                            <div class="action-btns">
+                                <button class="btn-view">
+                                    <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                    <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                                </button>
+                                <button class="btn-wishlist">
+                                    <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                    <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                                </button>
+                            </div>
+
+                            <div class="img-box">
+                                <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                    class="product-img">
+                            </div>
+
+                            <div class="card-body text-start">
+                                <p class="product-category">Snacks</p>
+                                <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                    <p class="product-price-old">KES 400</p>
+                                    <p class="product-price">KES 380</p>
+                                </div>
+                                <button class="btn btn-cart">
+                                    <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Add To Cart</span>
+                                </button>
+                               
+                            </div>
+                        </a>
+                         <!-- Product Card -->
+                         <a class="card product-card" href="/productpage.html">
+                            <span class="sale-badge">Flat 5% Off</span>
+                            <div class="action-btns">
+                                <button class="btn-view">
+                                    <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                    <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                                </button>
+                                <button class="btn-wishlist">
+                                    <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                    <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                                </button>
+                            </div>
+
+                            <div class="img-box">
+                                <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                    class="product-img">
+                            </div>
+
+                            <div class="card-body text-start">
+                                <p class="product-category">Snacks</p>
+                                <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                                <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                    <p class="product-price-old">KES 400</p>
+                                    <p class="product-price">KES 380</p>
+                                </div>
+                                <button class="btn btn-cart">
+                                    <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Add To Cart</span>
+                                </button>
+                               
+                            </div>
+                        </a>
+                                    
+                                </div>
+
+                                <nav class="mt-5 mb-xl-6 d-flex justify-content-center" aria-label="Page navigation">
+                                    <ul class="pagination custom-pagination">
+                                        <li class="page-item">
+                                            <a class="page-link prev" href="#" aria-label="Previous">
+                                                <span>&lt; Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item disabled"><span class="page-link">...</span></li>
+                                        <li class="page-item"><a class="page-link" href="#">12</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link next" href="#" aria-label="Next">
+                                                <span>Next &gt;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Popular Product section -->
+                <div id="popularproducts"></div>
+            </div>
+        </main>
+        <div id="footer"></div>
+    </div>
+   
+    <script src="assets/vendor/jquery-3.6.4.min.js"></script>
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/owl.carousel.min.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/themescripts.js" defer></script>
+</body>
+
+</html>

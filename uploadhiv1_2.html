@@ -44,40 +44,36 @@
                                             <path d="M3.26557 5.96565L0.98099 3.5968L0 4.61397L3.26557 8L10 1.01717L9.01901 0L3.26557 5.96565Z" fill="white"/>
                                         </svg>
                                     </span>
-                                    <span class="step-text">Select A Service</span>
+                                    <span class="step-text">Consent Agreement</span>
 
                                 </li>
                                 <li class="step">
                                     <span class="step-circle active">2</span>
-                                    <span class="step-text">Consent Form</span>
+                                    <span class="step-text">Take A Test</span>
                                 </li>
                                 <li class="step">
                                     <span class="step-circle">3</span>
-                                    <span class="step-text">Pick Up A Time & Date</span>
+                                    <span class="step-text">Upload Results</span>
                                 </li>
-                                <li class="step">
-                                    <span class="step-circle">4</span>
-                                    <span class="step-text">Add Consultation Details</span>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
 
                     <div class="form-page-wrap large-wrap">
-                        <div class="payment-header has-border">
-                            <div class="d-flex flex-column">
-                                <h3>Select Payment</h3>
-                                <p>Complete this last step to get your order placed.</p>
-                            </div>
+                       
+                        <div class="forms-heading">
+                            <h3>Upload Your Prescription</h3>
+                            <p>Choose on the following to get started</p>
                         </div>
-                        <div class="payment-options-grid">
-                            <label class="radio-option-full radio-option-vertical">
+                        <div class="hiv-option-grid">
+                            <label class="radio-option-full radio-option-vertical selected">
 
                                 <div class="content">
                                     <img src="assets/images/upload-hiv1.jpg" alt="Mobile Money">
                                     <h3>MYLAN</h3>
                                 </div>
-                                    <input type="radio" name="mobile-money" value="mobile-money">
+                                    <input type="radio" name="mobile-money" value="mobile-money" checked>
                                     <span class="radio"></span>
                                
                             </label>
@@ -96,10 +92,19 @@
 
 
                         <!-- Actions Section -->
-                        <div class="d-flex align-items-center justify-content-end mt-3 mt-lg-4 mt-xl-5">
-                            <button class="btn-white-border btn-rounded btn-lg me-2">Talk to a doctor</button>
-                            <button class="btn-green btn-rounded btn-lg" onclick="window.location.href='/speaktodoctor3.html';">Continue</button>
-                        </div>
+                         <div class="d-flex flex-column flex-lg-row justify-content-start justify-content-lg-between">
+                            <a href="#" class="dotted-link red-dotted">Cancel Test</a>
+                            <div class="d-flex align-items-center justify-content-end mt-3 mt-lg-4 mt-xl-5">
+                                <button class="btn-white-border btn-rounded btn-lg me-2" onclick="window.location.href='/submitpresciption.html';">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.25 6.375L0.753899 6.375" stroke="#373434" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.99609 11.25L0.748043 6.375L5.99609 1.5" stroke="#373434" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Back</button>
+                                <button class="btn-green btn-rounded btn-lg">Continue</button>
+                            </div>
+                         </div>
+                        
 
                     </div>
                 </div>

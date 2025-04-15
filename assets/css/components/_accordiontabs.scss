@@ -100,25 +100,27 @@
         margin-bottom: 25px;
     }
     a {
+        text-decoration: none;
+        color: $black;
         &:hover,
         &:focus {
-            color: $grey9;
+            color: $green;
             svg {
                 path {
-                    fill: $grey9;
+                    fill: $green;
                 }
             }
         }
     }
     svg {
-        width: 16px;
-        height: 16px;
+        width: 24px;
+        height: 24px;
         object-fit: contain;
-        margin-right: 10px;
+        margin-right: 5px;
         @include respond-to(xxl) {
-            width: 24px;
-            height: 24px;
-            margin-right: 16px;
+            width: 30px;
+            height: 30px;
+            margin-right: 7px;
         }
         path {
             fill: $black;
@@ -126,7 +128,7 @@
     }
     h3 {
         font-family: $figtreeSemiBold;
-        @include responsive-font(20px, 30px, 20px, 30px);
+        @include responsive-font(18px, 18px, 18px, 24px);
         line-height: 1.2;
         margin-bottom: 0;
     }

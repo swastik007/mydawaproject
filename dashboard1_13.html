@@ -39,7 +39,7 @@
                         <!-- Sidebar Navigation with Tabs -->
                         <div class="col-md-3">
                             <div class="nav flex-row flex-md-column nav-pills dashboard-sidebar mb-3" id="dashboard-tabs" role="tablist">
-                                <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
     
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -70,7 +70,7 @@
                                     </svg>
                                     My Orders
                                 </button>
-                                <button class="nav-link" id="prescriptions-tab" data-bs-toggle="pill" data-bs-target="#prescriptions" type="button" role="tab">
+                                <button class="nav-link active" id="prescriptions-tab" data-bs-toggle="pill" data-bs-target="#prescriptions" type="button" role="tab">
     
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -195,26 +195,42 @@
                         <div class="col-md-9">
                             <div class="tab-content dashboard-content" id="dashboard-content">
 
-                                <!-- Profile Tab with Accordion -->
-                                <div class="tab-pane profile-tab fade show active" id="profile" role="tabpanel">
-                                    <div class="tab-title-heading">
-                                        <a class="d-flex justify-content-start">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                                            <h3>Back</h3>
-                                        </a>
-                                        
+                               
+                            <!-- Prescriptions List Tab -->
+                            <div class="tab-pane fade show active" id="wishlist" role="tabpanel">                                
+                                
+                                <div class="tab-title-heading d-flex justify-content-between align-items-center mb-4">
+
+                                    <h3>My Wishlist</h3>
+                                    <!-- Action Buttons -->
+                                    <div class="wishlist-actions">
+                                        <button class="new-list">
+                                            <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                             New List
+                                        </button>
+                                        <button class="private-wishlist">
+                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"></path></svg>
+    
+                                             Private Wishlist
+                                    </button>
                                     </div>
-                                    <div class="card profile-card">
-                                        <img src="../assets/images/icons/warning-sign.png " alt="warning-delete" class="img-fluid mb-3 mb-lg-4">
-                                        <h2>Deleting account is a permanent action.</h2>
-                                        <p>Deleting your MyDawa account is permanent. Once deleted, all your data, including order history, will be lost and cannot be recovered.</p>
-                                        <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
-                                            <button class="btn-white-border btn-rounded btn-lg" id="uploadAnother">Cancel</button>
-                                            <button class="btn-lightred btn-rounded btn-lg" id="startShopping">Delete Account</button>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
+                                <div class="wishlist-page">
+
+                                    <div class="empty-cart">
+                                        <img src="assets/images/icons/cart-bag.png" alt="Shopping Bag" class="cart-icon">
+                                        <h2>Save Your Favorite Products</h2>
+                                        <p>Love something and want to save it for later? Simply click the heart icon
+                                            next to the product, and it will be added to your wishlist here!</p>
+                                        <a href="#" class="btn-grey btn-rounded btn-lg">Start Shopping</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
                             </div>
                         </div>
                     </div>

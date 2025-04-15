@@ -11,10 +11,9 @@
     <meta name="description" content="mydawa">
     <meta name="keywords" content="mydawa">
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.1">
 
 
 </head>
@@ -39,7 +38,7 @@
                         <!-- Sidebar Navigation with Tabs -->
                         <div class="col-md-3">
                             <div class="nav flex-row flex-md-column nav-pills dashboard-sidebar mb-3" id="dashboard-tabs" role="tablist">
-                                <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
     
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -54,7 +53,7 @@
                                     </svg>
                                     My Profile
                                 </button>
-                                <button class="nav-link" id="orders-tab" data-bs-toggle="pill" data-bs-target="#orders" type="button" role="tab">
+                                <button class="nav-link active" id="orders-tab" data-bs-toggle="pill" data-bs-target="#orders" type="button" role="tab">
     
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -195,26 +194,140 @@
                         <div class="col-md-9">
                             <div class="tab-content dashboard-content" id="dashboard-content">
 
-                                <!-- Profile Tab with Accordion -->
-                                <div class="tab-pane profile-tab fade show active" id="profile" role="tabpanel">
-                                    <div class="tab-title-heading">
-                                        <a class="d-flex justify-content-start">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                                            <h3>Back</h3>
-                                        </a>
-                                        
+                               
+                            <!-- Orders Tab -->
+                            <div class="tab-pane fade show active" id="orders" role="tabpanel">
+                                <!-- View Details section -->
+                                <div class="tab-title-heading d-flex justify-content-lg-between align-items-center">
+                                    <a class="d-flex justify-content-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                                        <h3>Back</h3>
+                                    </a>
+                                    <h5 class="mb-0">Available Balance:<strong class="ms-1 ms-xl-2">KES 400
+                                    </strong></h5>
+                                </div>
+                                
+                                <div class="border-container">
+                                    <div class="order-detail-heading">
+                                        <div class="flex flex-column">
+                                            <div class="d-flex justify-content-start align-items-center gap-3">
+                                                <h2>#012345-8794</h2>
+                                                <a href="#" class="dotted-link pink-dotted">Track Order</a>
+                                            </div>
+                                            <div class="d-flex justify-content-start align-items-center mt-2">
+                                                <p class="mb-0">4 Products</p>
+                                            <svg width="6" height="6" class="mb-1 mx-2" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="3" cy="3" r="2" fill="#343434" />
+                                              </svg>
+                                              
+                                            <p class="mb-0">Order Placed in 17 Jan, 2021 at 7:32 PM</p>
+                                            </div>
+                                            
+                                        </div>
+
+
+                                        <span class="badge badge-brown">Processing</span>
                                     </div>
-                                    <div class="card profile-card">
-                                        <img src="../assets/images/icons/warning-sign.png " alt="warning-delete" class="img-fluid mb-3 mb-lg-4">
-                                        <h2>Deleting account is a permanent action.</h2>
-                                        <p>Deleting your MyDawa account is permanent. Once deleted, all your data, including order history, will be lost and cannot be recovered.</p>
-                                        <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
-                                            <button class="btn-white-border btn-rounded btn-lg" id="uploadAnother">Cancel</button>
-                                            <button class="btn-lightred btn-rounded btn-lg" id="startShopping">Delete Account</button>
+                                    <div class="tracking-progress">
+                                        <div class="step completed">
+                                            <div class="step-circle completed">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+                                            </div>
+                                            <p>Ordered Placed</p>
+                                            <span>Mar 07, 2025 07:45 PM</span>
+                                        </div>
+                                        <div class="step completed">
+                                            <div class="step-circle completed">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+                                            </div>
+                                            <p>Order Shipped</p>
+                                            <span>Mar 08, 2025 10:30 AM</span>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-circle completed">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+                                            </div>
+                                            <p>Out for delivery</p>
+                                            <span>Mar 09, 2025 01:15 PM</span>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-circle">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+                                            </div>
+                                            <p>Order delivered</p>
+                                            <span>Mar 10, 2025 09:00 AM</span>
                                         </div>
                                     </div>
-                                    
+                                    <div class="table-responsive">
+
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product Name</th>
+                                                    <th>Order ID</th>
+                                                    <th>Order Date</th>
+                                                    <th>Quantity</th>
+                                                    <th>Price</th>
+                                                    <th>Sub Total</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img class="table-thumb" src="../assets/images/product-images/product10.jpg" />Feather Condoms Featherl...</td>
+                                                    <td>#3933</td>
+                                                    <td>21 Feb, 2025</td>
+                                                    <td>1</td>
+                                                    <td>KES 2040</td>
+                                                    <td>KES 5000</td>
+                                                    <td><a href="#" class="dotted-link blue-dotted btn-return-product">Cancel Order</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="table-thumb" src="../assets/images/product-images/product11.jpg" />Trojan Super Thin Condoms</td>
+                                                    <td>#3934</td>
+                                                    <td>15 Mar, 2025</td>
+                                                    <td>2</td>
+                                                    <td>KES 2200</td>
+                                                    <td>KES 5000</td>
+                                                    <td><a href="#" class="dotted-link blue-dotted btn-return-product">Cancel Order</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="table-thumb" src="../assets/images/product-images/product9.jpg" />Lifestyles SKYN Original</td>
+                                                    <td>#3935</td>
+                                                    <td>10 Apr, 2025</td>
+                                                    <td>3</td>
+                                                    <td>KES 2500</td>
+                                                    <td>KES 5000</td>
+                                                    <td><a href="#" class="dotted-link blue-dotted btn-return-product">Cancel Order</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img class="table-thumb" src="../assets/images/product-images/product2.jpg" />Kimono MicroThin Condoms</td>
+                                                    <td>#3936</td>
+                                                    <td>5 May, 2025</td>
+                                                    <td>5</td>
+                                                    <td>KES 2300</td>
+                                                    <td>KES 5000</td>
+                                                    <td><a href="#" class="dotted-link blue-dotted btn-return-product">Cancel Order</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
+                                <div class="order-info">
+                                    <div class="delivery-address">
+                                        <h4>Delivery Address</h4>
+                                        <p>Kevin Gilbert</p>
+                                        <span>East Tejturi Bazar, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No.
+                                            5D, 1200, Kenya</span>
+                                        <span>Phone: <strong>+1-202-555-0118</strong></span>
+                                        <span>Email: <strong>kevin.gilbert@gmail.com</strong></span>
+                                    </div>
+                                    <div class="order-additional-details">
+                                        <h4>Order Additional Details</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>

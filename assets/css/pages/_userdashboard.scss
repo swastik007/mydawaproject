@@ -20,8 +20,9 @@
     }
     h2 {
         font-family: $figtreeSemiBold;
-        line-height: 1.2;
-        @include responsive-font(28px, 44px, 28px, 44px);
+        line-height: 1;
+        @include responsive-font(26px, 26px, 26px, 32px);
+        margin-bottom: 0;
     }
     .badge {
         border-radius: 20px;
@@ -256,12 +257,12 @@
         .search-input {}
     }
     /* order tracking */
-    .tracking-progress {
-        margin: 20px 20px 30px 20px;
-        @include respond-to(xxl) {
-            margin: 30px 35px 40px 35px;
-        }
-    }
+    // .tracking-progress {
+    //     margin: 20px 20px 30px 20px;
+    //     @include respond-to(xxl) {
+    //         margin: 30px 35px 40px 35px;
+    //     }
+    // }
     /* manage address */
     .manage-address {
         display: flex;
@@ -434,7 +435,19 @@
         height: 150px;
         }
     }
-
+    h2{
+        font-family: $figtreeBold;
+        @include responsive-font(24px, 24px, 24px, 30px);
+    }
+    p{
+        font-family: $figtree;
+        @include responsive-font(16px, 16px, 16px, 20px);
+        max-width: 550px;
+        line-height: 1.6;
+        @include respond-to(xxl) {
+            max-width: 700px;
+        }
+    }
 }
 .product-title-popup {
     color: $black;

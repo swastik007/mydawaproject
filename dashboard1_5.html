@@ -39,7 +39,7 @@
                         <!-- Sidebar Navigation with Tabs -->
                         <div class="col-md-3">
                             <div class="nav flex-row flex-md-column nav-pills dashboard-sidebar mb-3" id="dashboard-tabs" role="tablist">
-                                <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
     
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -54,7 +54,7 @@
                                     </svg>
                                     My Profile
                                 </button>
-                                <button class="nav-link" id="orders-tab" data-bs-toggle="pill" data-bs-target="#orders" type="button" role="tab">
+                                <button class="nav-link active" id="orders-tab" data-bs-toggle="pill" data-bs-target="#orders" type="button" role="tab">
     
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -195,26 +195,135 @@
                         <div class="col-md-9">
                             <div class="tab-content dashboard-content" id="dashboard-content">
 
-                                <!-- Profile Tab with Accordion -->
-                                <div class="tab-pane profile-tab fade show active" id="profile" role="tabpanel">
-                                    <div class="tab-title-heading">
-                                        <a class="d-flex justify-content-start">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                                            <h3>Back</h3>
-                                        </a>
-                                        
-                                    </div>
-                                    <div class="card profile-card">
-                                        <img src="../assets/images/icons/warning-sign.png " alt="warning-delete" class="img-fluid mb-3 mb-lg-4">
-                                        <h2>Deleting account is a permanent action.</h2>
-                                        <p>Deleting your MyDawa account is permanent. Once deleted, all your data, including order history, will be lost and cannot be recovered.</p>
-                                        <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
-                                            <button class="btn-white-border btn-rounded btn-lg" id="uploadAnother">Cancel</button>
-                                            <button class="btn-lightred btn-rounded btn-lg" id="startShopping">Delete Account</button>
+                               
+                            <!-- Orders Tab -->
+                            <div class="tab-pane fade show active" id="orders" role="tabpanel">
+                                <div class="tab-title-heading">
+                                    <h3>Order History</h3>
+                                </div>
+                                <div class="border-container">
+                                    <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center px-3 pt-3 pt-xl-4 pb-1 pb-xl-2 px-xl-4">
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#all-orders">All
+                                                    Orders (40)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#ongoing-orders">Ongoing
+                                                    (20)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#ongoing-orders">Completed (10)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#ongoing-orders">Returns
+                                                    (10)</a>
+                                            </li>
+                                        </ul>
+                                        <div class="form-search-container mt-3 mt-xl-0">
+                                            <input type="text" class="search-input" placeholder="Search By Order Number">
+                                            <button class="search-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M21.71 20.29l-4.4-4.39a8 8 0 10-1.42 1.42l4.39 4.4a1 1 0 001.42-1.42zM11 18a7 7 0 117-7 7 7 0 01-7 7z">
+                                                    </path>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
-                                    
+
+
+                                    <div class="tab-content mt-3">
+                                        <div class="tab-pane fade show active" id="ongoing-orders">
+                                            <div class="table-responsive">
+
+
+                                                <table class="table align-middle">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Order ID</th>
+                                                            <th>Order Date</th>
+                                                            <th>Total (KES)</th>
+                                                            <th>Delivery Address</th>
+                                                            <th>Order Status</th>
+                                                            <th>Action</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>#3933</td>
+                                                            <td>21 Feb, 2025</td>
+                                                            <td>135 (5 Products)</td>
+                                                            <td>John Mwangi, 123 Moi Avenue</td>
+                                                            <td><span class="badge badge-brown">Processing</span></td>
+                                                            <td><a href="#" class="dotted-link pink-dotted">Track Live</a></td>
+                                                            <td><a href="#" class="dotted-link blue-dotted">View
+                                                                    Details</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>#3934</td>
+                                                            <td>22 Feb, 2025</td>
+                                                            <td>150 (6 Products)</td>
+                                                            <td>Jane Doe, 456 High Street</td>
+                                                            <td><span class="badge badge-brown">Processing</span></td>
+                                                            <td><a href="#" class="dotted-link pink-dotted disabled">Track Live</a></td>
+                                                            <td><a href="#" class="dotted-link blue-dotted">View
+                                                                    Details</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>#3934</td>
+                                                            <td>22 Feb, 2025</td>
+                                                            <td>150 (6 Products)</td>
+                                                            <td>Jane Doe, 456 High Street</td>
+                                                            <td><span class="badge badge-purple">On The Way</span></td>
+                                                            <td><a href="#" class="dotted-link pink-dotted">Track Live</a></td>
+                                                            <td><a href="#" class="dotted-link blue-dotted">View
+                                                                    Details</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>#3934</td>
+                                                            <td>22 Feb, 2025</td>
+                                                            <td>150 (6 Products)</td>
+                                                            <td>Jane Doe, 456 High Street</td>
+                                                            <td><span class="badge badge-purple">On The Way</span></td>
+                                                            <td><a href="#" class="dotted-link pink-dotted">Track Live</a></td>
+                                                            <td><a href="#" class="dotted-link blue-dotted">View
+                                                                    Details</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <nav class="mt-5 mb-xl-6 d-flex justify-content-center" aria-label="Page navigation">
+                                    <ul class="pagination custom-pagination">
+                                        <li class="page-item">
+                                            <a class="page-link prev" href="#" aria-label="Previous">
+                                                <span>&lt; Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item disabled"><span class="page-link">...</span></li>
+                                        <li class="page-item"><a class="page-link" href="#">12</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link next" href="#" aria-label="Next">
+                                                <span>Next &gt;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                
+                            </div>
                             </div>
                         </div>
                     </div>

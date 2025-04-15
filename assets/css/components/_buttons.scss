@@ -222,29 +222,51 @@
 }
 
 .btn-cart {
-    font-family: $outfit;
-    background-color: $green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $figtreeSemiBold;
+    background-color: #F6F6FF;
     border-radius: 25px;
-    color: white;
+    color: $black;
     padding: 10px 15px 10px 35px;
     height: fit-content;
-    border: 1px solid $green;
-    @include responsive-font(15px, 24px, 20px, 24px);   
-    background-image: url('../images/icons/add-to-cart-plus-white.png'); // Default background image
-    background-repeat: no-repeat;
-    background-position: 14px center;
-    background-size: 14px;
+    border: 1px solid #F6F6FF;
+    @include responsive-font(14px, 14px, 14px, 18px);   
+    // background-image: url('../images/icons/add-to-cart-plus-white.png'); // Default background image
+    // background-repeat: no-repeat;
+    // background-position: 14px center;
+    // background-size: 14px;
+    width: 100%;
     @include respond-to(xxl) {
         padding: 14px 25px 14px 50px;
-        background-position: 18px center;
+        // background-position: 18px center;
+        
+        // background-size: 20px;
         border-radius: 32px;
-        background-size: 20px;
+    }
+    svg{
+        width: 12px;
+        height: 12px;
+        margin-right: 6px;
+        @include respond-to(xxl) {
+            width: 15px;
+            height: 15px;
+        }
+        path{
+            stroke: $black;
+        }
     }
     &:hover, &:focus{
-        background-image: url('../images/icons/add-to-cart-plus-green.png'); // plug green background image
-        background-color: white;
+        // background-image: url('../images/icons/add-to-cart-plus-green.png'); // plug green background image
+        background-color: $green;
         border: 1px solid $green;
-        color: $green;
+        color: white;
+        svg{           
+            path{
+                stroke: white;
+            }
+        }
     }
     &.btn-added{
         background-color: white;
@@ -269,6 +291,7 @@
             background-size: 20px;
         }
     }
+
 }
 
 .select-button {
@@ -305,6 +328,11 @@
     text-decoration: none;
     cursor: pointer;
     @include responsive-font(14px, 18px, 14px, 18px);
+    line-height: 1.2;
+    &.disabled{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
     &:hover,
     &:focus {
         transition: ease-in 0.3s;

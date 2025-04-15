@@ -1,11 +1,24 @@
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; /* adjust gap as needed */
+    @include respond-to(lg) {
+        grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+        gap: 15px; /* adjust gap as needed */
+    }
+    @include respond-to(xxl) {
+       gap: 20px;
+    }
+}
+
 .product-card {
     padding: 7px;
     border: 1px solid #D4DEE5;
     border-radius: 12px;
     position: relative;
     text-decoration: none;
-    @include respond-to(lg) {
-        padding: 15px;
+    @include respond-to(xxl) {
+        padding: 10px;
     }
     &:hover,
     &:focus {
@@ -26,7 +39,7 @@
         line-height: 1.4;
         padding: 3px 8px;
         border-radius: 0 0 7px 7px;
-        @include responsive-font(14px, 14px, 14px, 20px);   
+        @include responsive-font(12px, 12px, 12px, 15px);   
         @include respond-to(xxl) {
             padding: 5px 12px;
             left: 30px;
@@ -35,7 +48,7 @@
     .action-btns {
         display: flex;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column;
         position: absolute;
         right: 20px;
         top: 10px;
@@ -118,28 +131,24 @@
         }
     }
     .img-box {
-        // margin: 50px 30px;
         position: relative;
-        padding: 30px 30px 0 30px;
-        @include respond-to(lg) {
-            padding: 30px;
-        }
+        margin: 20px auto 0 auto;
         @include respond-to(xxl) {
-            padding: 40px;
+            margin: 25px auto 0 auto;
         }
         .product-img {
             object-fit: contain;
             width: auto;
-            height: 180px;
+            height: 150px;
             margin: 0 auto;
             @include respond-to(md) {
-                height: 370px;
+                height: 170px;
             }
             @include respond-to(lg) {
-                height: 220px;
+                height: 150px;
             }
             @include respond-to(xxl) {
-                height: 370px;
+                height: 170px;
             }
         }
     }
@@ -155,29 +164,28 @@
         text-align: left;
         margin-bottom: 2px;
         line-height: 1.5;
-        @include responsive-font(14px, 24px, 16px, 24px); 
+        @include responsive-font(14px, 18px, 14px, 18px); 
     }
     .product-title {
         color: $black;
         text-align: left;
         max-width: 220px;
         font-family: $figtreeBold;
-        font-size: 15px;
-        line-height: 1.6;
+        line-height: 1.4;
         display: -webkit-box;
         -webkit-line-clamp: 2; // Restricts text to 2 lines
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
         height: 45px; // Ensures same height for all titles  
-        @include responsive-font(15px, 24px, 18px, 24px);
+        margin-bottom: 0;
+        @include responsive-font(16px, 16px, 16px, 20px);
         @include respond-to(lg) {
-            font-family: $figtreeExtraBold;
             max-width: 100%;
-            height: 66px;
+            height: 45px;
         }
         @include respond-to(xxl) {
-            height: 90px;
+            height: 60px;
         }
     }
     .product-price-old {

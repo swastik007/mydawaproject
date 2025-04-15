@@ -1,0 +1,120 @@
+.card{
+    &.hiv-card{
+        border: 2px solid #D4DEE5;
+        border-radius: 12px;
+    }
+}
+
+.hiv-custom-margin{
+    @include respond-to(lg) {
+        margin-bottom: 300px!important;
+    }
+    
+}
+.hiv-option-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border: 2px solid #D4DEE5;
+    border-radius: 8px;
+    .radio-option-full {      
+        border: none;
+        margin-bottom: 0;
+        &.selected, &:hover{
+            border: 2px solid $blue;
+            border-radius: 8px;
+        }  
+        &:last-child {
+            border-left: none;
+            &.selected{
+                border: 2px solid $blue;
+                border-radius: 8px;
+            } 
+          }
+        &.radio-option-vertical {            
+            .content {               
+                img {
+                    width: 142px;
+                    height: 75px;
+                    object-fit: contain;
+                    @include respond-to(xxl) {
+                        width: 160px;
+                        height: 85px;
+                    }
+                }
+            }
+           
+        }
+    }
+}
+
+.video-section {
+    position: relative;
+
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background: url(../images/bg-projects.jpg) repeat;
+        background-size: 800px;
+        z-index: 0;
+    }
+
+    
+}
+.video-box {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .youtube-thumb{
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+        @include respond-to(xxl) {
+            height: 440px;
+        }
+    }
+    .youtube-icon {
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 45px;
+        object-fit: contain;
+        @include respond-to(xxl) {
+            width: 70px;
+            height: 55px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .youtube-icon {
+            filter: contrast(85%);
+        }
+    }
+}

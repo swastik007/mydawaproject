@@ -39,7 +39,7 @@
                         <!-- Sidebar Navigation with Tabs -->
                         <div class="col-md-3">
                             <div class="nav flex-row flex-md-column nav-pills dashboard-sidebar mb-3" id="dashboard-tabs" role="tablist">
-                                <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab">
     
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -101,7 +101,7 @@
                                     </svg>
                                     Wishlist
                                 </button>
-                                <button class="nav-link" id="beneficieries-tab" data-bs-toggle="pill" data-bs-target="#beneficieries" type="button" role="tab">
+                                <button class="nav-link active" id="beneficieries-tab" data-bs-toggle="pill" data-bs-target="#beneficieries" type="button" role="tab">
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M6 20.088H8.61029C8.95063 20.088 9.28888 20.1285 9.61881 20.2095L12.3769 20.8798C12.9753 21.0255 13.5988 21.0397 14.2035 20.9223L17.253 20.329C18.0585 20.1721 18.7996 19.7863 19.3803 19.2214L21.5379 17.1226C22.154 16.5242 22.154 15.5533 21.5379 14.9539C20.9832 14.4143 20.1047 14.3536 19.4771 14.8112L16.9626 16.6457C16.6025 16.909 16.1643 17.0507 15.7137 17.0507H13.2855L14.8311 17.0506C15.7022 17.0506 16.4079 16.3642 16.4079 15.5168V15.21C16.4079 14.5064 15.9156 13.8928 15.2141 13.7227L12.8286 13.1426C12.4404 13.0485 12.0428 13.0009 11.6431 13.0009C10.6783 13.0009 8.93189 13.7997 8.93189 13.7997L6 15.0258M2 14.6009L2 20.4009C2 20.9609 2 21.2409 2.10899 21.4549C2.20487 21.643 2.35785 21.796 2.54601 21.8919C2.75992 22.0009 3.03995 22.0009 3.6 22.0009H4.4C4.96005 22.0009 5.24008 22.0009 5.45399 21.8919C5.64215 21.796 5.79513 21.643 5.89101 21.4549C6 21.2409 6 20.9609 6 20.4009V14.6009C6 14.0408 6 13.7608 5.89101 13.5469C5.79513 13.3587 5.64215 13.2057 5.45399 13.1099C5.24008 13.0009 4.96005 13.0009 4.4 13.0009H3.6C3.03995 13.0009 2.75992 13.0009 2.54601 13.1099C2.35785 13.2057 2.20487 13.3587 2.10899 13.5469C2 13.7608 2 14.0408 2 14.6009ZM17.1914 3.59313C16.5946 2.34427 15.2186 1.68266 13.8804 2.32124C12.5423 2.95983 11.9722 4.47425 12.5325 5.8037C12.8787 6.62533 13.8707 8.22087 14.5781 9.3199C14.8394 9.72598 14.9701 9.92902 15.161 10.0478C15.3247 10.1497 15.5297 10.2046 15.7224 10.1982C15.9471 10.1908 16.1618 10.0803 16.5911 9.8593C17.7532 9.26118 19.4101 8.37542 20.1208 7.837C21.2707 6.96579 21.5556 5.36445 20.6947 4.14711C19.8337 2.92978 18.3327 2.80999 17.1914 3.59313Z"
@@ -195,26 +195,80 @@
                         <div class="col-md-9">
                             <div class="tab-content dashboard-content" id="dashboard-content">
 
-                                <!-- Profile Tab with Accordion -->
-                                <div class="tab-pane profile-tab fade show active" id="profile" role="tabpanel">
-                                    <div class="tab-title-heading">
-                                        <a class="d-flex justify-content-start">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
-                                            <h3>Back</h3>
-                                        </a>
-                                        
+                               
+                            <!-- Prescriptions List Tab -->
+                            <div class="tab-pane fade show active" id="beneficieries" role="tabpanel">                                
+                                
+                                <div class="tab-title-heading d-flex justify-content-between align-items-center mb-4">
+
+                                    <h3>My Wishlist</h3>
+                                    <!-- Action Buttons -->
+                                    <div class="wishlist-actions">
+                                        <button class="new-list">
+                                            <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                             New List
+                                        </button>
+                                        <button class="private-wishlist">
+                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"></path></svg>
+    
+                                             Private Wishlist
+                                    </button>
                                     </div>
-                                    <div class="card profile-card">
-                                        <img src="../assets/images/icons/warning-sign.png " alt="warning-delete" class="img-fluid mb-3 mb-lg-4">
-                                        <h2>Deleting account is a permanent action.</h2>
-                                        <p>Deleting your MyDawa account is permanent. Once deleted, all your data, including order history, will be lost and cannot be recovered.</p>
-                                        <div class="d-flex align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
-                                            <button class="btn-white-border btn-rounded btn-lg" id="uploadAnother">Cancel</button>
-                                            <button class="btn-lightred btn-rounded btn-lg" id="startShopping">Delete Account</button>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
+                                <div class="container py-4">
+                                    <h6 class="text-muted mb-4">My Subscription Packages</h6>
+                                    <div class="row g-4">
+                                      <!-- Package 1 -->
+                                      <div class="col-md-6">
+                                        <div class="card package-card recommended">
+                                          <div class="card-body">
+                                            <span class="badge bg-pink recommended-badge">Recommended</span>
+                                            <h5 class="card-title">Mzima Package1</h5>
+                                            <p class="card-text text-muted mb-3">Features in this Packages Included:</p>
+                                            <ul class="list-unstyled mb-4">
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 1</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 2</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 3</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 4</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 5</li>
+                                            </ul>
+                                            <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                                              <button class="btn btn-success px-4">Click To Unsubscribe</button>
+                                              <a href="#" class="text-primary text-decoration-underline small">View Details</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  
+                                      <!-- Package 2 -->
+                                      <div class="col-md-6">
+                                        <div class="card package-card">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Mzima Package2</h5>
+                                            <p class="card-text text-muted mb-3">Features in this Packages Included:</p>
+                                            <ul class="list-unstyled mb-4">
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 1</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 2</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 3</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 4</li>
+                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 5</li>
+                                            </ul>
+                                            <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                                              <button class="btn btn-success px-4">Click To Subscribe</button>
+                                              <a href="#" class="text-primary text-decoration-underline small">View Details</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+
+
+                            </div>
                             </div>
                         </div>
                     </div>

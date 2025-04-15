@@ -11804,6 +11804,7 @@ body {
 .mydawa-container {
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 @media (min-width: 1200px) {
   .mydawa-container {
@@ -12297,47 +12298,61 @@ body {
 }
 
 .btn-cart {
-  font-family: "Outfit";
-  background-color: rgb(111, 183, 76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Figtree-SemiBold";
+  background-color: #F6F6FF;
   border-radius: 25px;
-  color: white;
+  color: rgb(55, 52, 52);
   padding: 10px 15px 10px 35px;
   height: fit-content;
-  border: 1px solid rgb(111, 183, 76);
-  font-size: 15px;
-  background-image: url("../images/icons/add-to-cart-plus-white.png");
-  background-repeat: no-repeat;
-  background-position: 14px center;
-  background-size: 14px;
+  border: 1px solid #F6F6FF;
+  font-size: 14px;
+  width: 100%;
 }
 @media (min-width: 992px) {
   .btn-cart {
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
   .btn-cart {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
   .btn-cart {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1800px) {
   .btn-cart {
     padding: 14px 25px 14px 50px;
-    background-position: 18px center;
     border-radius: 32px;
-    background-size: 20px;
   }
 }
+.btn-cart svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+@media (min-width: 1800px) {
+  .btn-cart svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+.btn-cart svg path {
+  stroke: rgb(55, 52, 52);
+}
 .btn-cart:hover, .btn-cart:focus {
-  background-image: url("../images/icons/add-to-cart-plus-green.png");
-  background-color: white;
+  background-color: rgb(111, 183, 76);
   border: 1px solid rgb(111, 183, 76);
-  color: rgb(111, 183, 76);
+  color: white;
+}
+.btn-cart:hover svg path, .btn-cart:focus svg path {
+  stroke: white;
 }
 .btn-cart.btn-added {
   background-color: white;
@@ -12430,6 +12445,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   font-size: 14px;
+  line-height: 1.2;
 }
 @media (min-width: 992px) {
   .dotted-link {
@@ -12445,6 +12461,10 @@ body {
   .dotted-link {
     font-size: 18px;
   }
+}
+.dotted-link.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 .dotted-link:hover, .dotted-link:focus {
   transition: ease-in 0.3s;
@@ -14207,7 +14227,7 @@ input[type=radio]:checked::before {
 }
 @media (min-width: 1800px) {
   .forms-heading p {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -15855,23 +15875,27 @@ input.form-icon-mail:before {
     margin-bottom: 25px;
   }
 }
+.tab-title-heading a {
+  text-decoration: none;
+  color: rgb(55, 52, 52);
+}
 .tab-title-heading a:hover, .tab-title-heading a:focus {
-  color: rgb(113, 113, 112);
+  color: rgb(111, 183, 76);
 }
 .tab-title-heading a:hover svg path, .tab-title-heading a:focus svg path {
-  fill: rgb(113, 113, 112);
+  fill: rgb(111, 183, 76);
 }
 .tab-title-heading svg {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 @media (min-width: 1800px) {
   .tab-title-heading svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 16px;
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
   }
 }
 .tab-title-heading svg path {
@@ -15879,23 +15903,23 @@ input.form-icon-mail:before {
 }
 .tab-title-heading h3, .tab-title-heading .h3 {
   font-family: "Figtree-SemiBold";
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   margin-bottom: 0;
 }
 @media (min-width: 992px) {
   .tab-title-heading h3, .tab-title-heading .h3 {
-    font-size: 30px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
   .tab-title-heading h3, .tab-title-heading .h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1800px) {
   .tab-title-heading h3, .tab-title-heading .h3 {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 .tab-title-heading a {
@@ -16129,6 +16153,23 @@ input.form-icon-mail:before {
   font-size: 14px;
 }
 
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* adjust gap as needed */
+}
+@media (min-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 15px; /* adjust gap as needed */
+  }
+}
+@media (min-width: 1800px) {
+  .product-grid {
+    gap: 20px;
+  }
+}
+
 .product-card {
   padding: 7px;
   border: 1px solid #D4DEE5;
@@ -16136,9 +16177,9 @@ input.form-icon-mail:before {
   position: relative;
   text-decoration: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1800px) {
   .product-card {
-    padding: 15px;
+    padding: 10px;
   }
 }
 .product-card:hover, .product-card:focus {
@@ -16158,21 +16199,21 @@ input.form-icon-mail:before {
   line-height: 1.4;
   padding: 3px 8px;
   border-radius: 0 0 7px 7px;
-  font-size: 14px;
+  font-size: 12px;
 }
 @media (min-width: 992px) {
   .product-card .sale-badge {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (min-width: 1200px) {
   .product-card .sale-badge {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (min-width: 1800px) {
   .product-card .sale-badge {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 @media (min-width: 1800px) {
@@ -16184,7 +16225,7 @@ input.form-icon-mail:before {
 .product-card .action-btns {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute;
   right: 20px;
   top: 10px;
@@ -16291,37 +16332,32 @@ input.form-icon-mail:before {
 }
 .product-card .img-box {
   position: relative;
-  padding: 30px 30px 0 30px;
-}
-@media (min-width: 1200px) {
-  .product-card .img-box {
-    padding: 30px;
-  }
+  margin: 20px auto 0 auto;
 }
 @media (min-width: 1800px) {
   .product-card .img-box {
-    padding: 40px;
+    margin: 25px auto 0 auto;
   }
 }
 .product-card .img-box .product-img {
   object-fit: contain;
   width: auto;
-  height: 180px;
+  height: 150px;
   margin: 0 auto;
 }
 @media (min-width: 992px) {
   .product-card .img-box .product-img {
-    height: 370px;
+    height: 170px;
   }
 }
 @media (min-width: 1200px) {
   .product-card .img-box .product-img {
-    height: 220px;
+    height: 150px;
   }
 }
 @media (min-width: 1800px) {
   .product-card .img-box .product-img {
-    height: 370px;
+    height: 170px;
   }
 }
 .product-card .card-body {
@@ -16342,17 +16378,17 @@ input.form-icon-mail:before {
 }
 @media (min-width: 992px) {
   .product-card .product-category {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
   .product-card .product-category {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1800px) {
   .product-card .product-category {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 .product-card .product-title {
@@ -16360,41 +16396,40 @@ input.form-icon-mail:before {
   text-align: left;
   max-width: 220px;
   font-family: "Figtree-Bold";
-  font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 45px;
-  font-size: 15px;
+  margin-bottom: 0;
+  font-size: 16px;
 }
 @media (min-width: 992px) {
   .product-card .product-title {
-    font-size: 24px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .product-card .product-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
   .product-card .product-title {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
   .product-card .product-title {
-    font-family: "Figtree-ExtraBold";
     max-width: 100%;
-    height: 66px;
+    height: 45px;
   }
 }
 @media (min-width: 1800px) {
   .product-card .product-title {
-    height: 90px;
+    height: 60px;
   }
 }
 .product-card .product-price-old {
@@ -23591,7 +23626,7 @@ header {
 }
 @media (min-width: 1200px) {
   .category-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .category-grid .product-card {
@@ -26985,22 +27020,23 @@ header {
 }
 .order-detail-heading h2, .order-detail-heading .h2 {
   font-family: "Figtree-SemiBold";
-  line-height: 1.2;
-  font-size: 28px;
+  line-height: 1;
+  font-size: 26px;
+  margin-bottom: 0;
 }
 @media (min-width: 992px) {
   .order-detail-heading h2, .order-detail-heading .h2 {
-    font-size: 44px;
+    font-size: 26px;
   }
 }
 @media (min-width: 1200px) {
   .order-detail-heading h2, .order-detail-heading .h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 @media (min-width: 1800px) {
   .order-detail-heading h2, .order-detail-heading .h2 {
-    font-size: 44px;
+    font-size: 32px;
   }
 }
 .order-detail-heading .badge {
@@ -27376,14 +27412,6 @@ header {
 .dashboard-content .form-search-container {
   background-color: white;
 }
-.dashboard-content .tracking-progress {
-  margin: 20px 20px 30px 20px;
-}
-@media (min-width: 1800px) {
-  .dashboard-content .tracking-progress {
-    margin: 30px 35px 40px 35px;
-  }
-}
 .dashboard-content .manage-address {
   display: flex;
   flex-wrap: wrap;
@@ -27647,6 +27675,51 @@ header {
   .profile-card img {
     width: 150px;
     height: 150px;
+  }
+}
+.profile-card h2, .profile-card .h2 {
+  font-family: "Figtree-Bold";
+  font-size: 24px;
+}
+@media (min-width: 992px) {
+  .profile-card h2, .profile-card .h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .profile-card h2, .profile-card .h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1800px) {
+  .profile-card h2, .profile-card .h2 {
+    font-size: 30px;
+  }
+}
+.profile-card p {
+  font-family: "Figtree";
+  font-size: 16px;
+  max-width: 550px;
+  line-height: 1.6;
+}
+@media (min-width: 992px) {
+  .profile-card p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .profile-card p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .profile-card p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .profile-card p {
+    max-width: 700px;
   }
 }
 
@@ -28164,4 +28237,116 @@ header {
   50% {
     transform: translateY(-10px);
   }
+}
+.card.hiv-card {
+  border: 2px solid #D4DEE5;
+  border-radius: 12px;
+}
+
+@media (min-width: 1200px) {
+  .hiv-custom-margin {
+    margin-bottom: 300px !important;
+  }
+}
+
+.hiv-option-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border: 2px solid #D4DEE5;
+  border-radius: 8px;
+}
+.hiv-option-grid .radio-option-full {
+  border: none;
+  margin-bottom: 0;
+}
+.hiv-option-grid .radio-option-full.selected, .hiv-option-grid .radio-option-full:hover {
+  border: 2px solid rgb(81, 107, 241);
+  border-radius: 8px;
+}
+.hiv-option-grid .radio-option-full:last-child {
+  border-left: none;
+}
+.hiv-option-grid .radio-option-full:last-child.selected {
+  border: 2px solid rgb(81, 107, 241);
+  border-radius: 8px;
+}
+.hiv-option-grid .radio-option-full.radio-option-vertical .content img {
+  width: 142px;
+  height: 75px;
+  object-fit: contain;
+}
+@media (min-width: 1800px) {
+  .hiv-option-grid .radio-option-full.radio-option-vertical .content img {
+    width: 160px;
+    height: 85px;
+  }
+}
+
+.video-section {
+  position: relative;
+}
+.video-section:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: url(../images/bg-projects.jpg) repeat;
+  background-size: 800px;
+  z-index: 0;
+}
+
+.video-box {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+}
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.video-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.video-box .youtube-thumb {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+@media (min-width: 1800px) {
+  .video-box .youtube-thumb {
+    height: 440px;
+  }
+}
+.video-box .youtube-icon {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 45px;
+  object-fit: contain;
+}
+@media (min-width: 1800px) {
+  .video-box .youtube-icon {
+    width: 70px;
+    height: 55px;
+  }
+}
+.video-box:hover .youtube-icon, .video-box:focus .youtube-icon {
+  filter: contrast(85%);
 }/*# sourceMappingURL=main.css.map */

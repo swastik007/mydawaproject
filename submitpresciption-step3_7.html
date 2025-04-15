@@ -209,13 +209,13 @@
                             
                             <!-- Actions Section -->
                             <div class="d-flex align-items-center justify-content-end mt-3 mt-xl-4">
-                                <button class="btn-white-border btn-rounded me-2 btn-lg" onclick="window.location.href='/submitpresciption2.html';">
+                                <button class="btn-white-border btn-rounded me-2 btn-lg" >
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11.25 6.375L0.753899 6.375" stroke="#373434" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M5.99609 11.25L0.748043 6.375L5.99609 1.5" stroke="#373434" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                         Back</button>
-                                <button class="btn-green btn-rounded btn-lg btn-popup">Submit</button>
+                                        <button class="btn-green btn-rounded btn-lg" data-bs-toggle="modal" data-bs-target="#uploadSuccess">Success Modal</button>
                             </div>
 
 
@@ -233,6 +233,29 @@
         <div id="footer"></div>
     </div>
  
+ <!-- Success Modal -->
+ <div class="modal fade" id="uploadSuccess" tabindex="-1" aria-labelledby="uploadSuccessLabel" aria-hidden="true">
+    
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+           
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column">  
+            <img src="assets/images/icons/icon-complete.png" alt="Success Icon" class="popup-icon mb-3 mb-lg-4">
+            <h3>Prescription Complete</h3>
+            <p>We are now processing your prescription. Expect a call from a doctor to confirm it soon.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-white-border btn-rounded btn-lg" data-bs-dismiss="modal">Upload Another Prescription</button>
+          <button type="button" class="btn-green btn-rounded btn-lg">Start Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
    
 
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
