@@ -194,81 +194,16 @@
                         </div>
                         <div class="col-md-9">
                             <div class="tab-content dashboard-content" id="dashboard-content">
-
-                               
-                            <!-- Prescriptions List Tab -->
-                            <div class="tab-pane fade show active" id="beneficieries" role="tabpanel">                                
+                                <div class="tab-pane fade show active" id="beneficieries" role="tabpanel">                                
+                                    <button class="btn-grey btn-rounded btn-sm"  data-bs-toggle="modal" data-bs-target="#addBeneficiaryModal">
+                                       Add Beneficiary
+                                      </button>
+                                      <button class="btn-grey btn-rounded btn-sm"  data-bs-toggle="modal" data-bs-target="#editBeneficiaryModal">
+                                        Edit Beneficiary
+                                       </button>
                                 
-                                <div class="tab-title-heading d-flex justify-content-between align-items-center mb-4">
 
-                                    <h3>My Wishlist</h3>
-                                    <!-- Action Buttons -->
-                                    <div class="wishlist-actions">
-                                        <button class="new-list">
-                                            <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                             New List
-                                        </button>
-                                        <button class="private-wishlist">
-                                            
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"></path></svg>
-    
-                                             Private Wishlist
-                                    </button>
-                                    </div>
                                 </div>
-                                <div class="container py-4">
-                                    <h6 class="text-muted mb-4">My Subscription Packages</h6>
-                                    <div class="row g-4">
-                                      <!-- Package 1 -->
-                                      <div class="col-md-6">
-                                        <div class="card package-card recommended">
-                                          <div class="card-body">
-                                            <span class="badge bg-pink recommended-badge">Recommended</span>
-                                            <h5 class="card-title">Mzima Package1</h5>
-                                            <p class="card-text text-muted mb-3">Features in this Packages Included:</p>
-                                            <ul class="list-unstyled mb-4">
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 1</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 2</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 3</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 4</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 5</li>
-                                            </ul>
-                                            <div class="d-flex justify-content-between align-items-center border-top pt-3">
-                                              <button class="btn btn-success px-4">Click To Unsubscribe</button>
-                                              <a href="#" class="text-primary text-decoration-underline small">View Details</a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                  
-                                      <!-- Package 2 -->
-                                      <div class="col-md-6">
-                                        <div class="card package-card">
-                                          <div class="card-body">
-                                            <h5 class="card-title">Mzima Package2</h5>
-                                            <p class="card-text text-muted mb-3">Features in this Packages Included:</p>
-                                            <ul class="list-unstyled mb-4">
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 1</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 2</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 3</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 4</li>
-                                              <li><i class="bi bi-check-circle-fill me-2 text-secondary"></i>Feature listing 5</li>
-                                            </ul>
-                                            <div class="d-flex justify-content-between align-items-center border-top pt-3">
-                                              <button class="btn btn-success px-4">Click To Subscribe</button>
-                                              <a href="#" class="text-primary text-decoration-underline small">View Details</a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  
-
-
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -279,7 +214,176 @@
         </main>
         <div id="footer"></div>
     </div>
-   
+   <!--addBeneficiary PIN Modal -->
+   <div class="modal fade" id="addBeneficiaryModal" tabindex="-1" aria-labelledby="addBeneficiaryModalLabel" aria-hidden="true">
+    <div class="modal-dialog dialog-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addBeneficiaryModalLabel">Add Beneficiary Details
+          </h5>        
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex flex-column mt-4">      
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="first-name">First Name <span class="required">*</span></label>
+                        <input type="text" id="first-name" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">Last Name <span class="required">*</span></label>
+                        <input type="text" id="last-name" placeholder="Enter Your Last Name">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="email">E-mail ID<span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="../assets/images/icons/form-icon-mail.png" alt="Phone">
+                            <input class="with-icon" type="email" id="email" placeholder="raymonds342@gmail.com" readonly="">
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="../assets/images/icons/form-call-icon.png" alt="Phone">
+                            <input class="with-icon" type="text" id="phoneNumber" placeholder="+977 0123456789" readonly="">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female" selected="">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-disclose">Prefer not to disclose</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <input class="datepicker_input" type="text" placeholder="mm/dd/yyyy">
+                                                                                           
+                            <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="relationship">Relationship <span class="required">*</span></label>
+                        <select id="relationship">
+                            <option value="uncle">Uncle</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="child">Child</option>
+                            <option value="parent">Parent</option>
+                        </select>
+                    </div>
+                </div>
+                
+              </div>
+
+        </div>
+        <div class="modal-footer">
+            <div class="w-100 d-flex justify-content-between align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                <button class="btn-white-border btn-rounded btn-lg btn-ordersuccess">Cancel</button>
+                <button class="btn-green btn-rounded btn-lg btn-ordersuccess">Confirm</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--edit Beneficiary PIN Modal -->
+  <div class="modal fade" id="editBeneficiaryModal" tabindex="-1" aria-labelledby="editBeneficiaryModalLabel" aria-hidden="true">
+    <div class="modal-dialog dialog-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editBeneficiaryModalLabel">Edit Beneficiary Details
+          </h5>        
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex flex-column mt-4">      
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="first-name">First Name <span class="required">*</span></label>
+                        <input type="text" id="first-name" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">Last Name <span class="required">*</span></label>
+                        <input type="text" id="last-name" placeholder="Enter Your Last Name">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="email">E-mail ID<span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="../assets/images/icons/form-icon-mail.png" alt="Phone">
+                            <input class="with-icon" type="email" id="email" placeholder="raymonds342@gmail.com" readonly="">
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <img src="../assets/images/icons/form-call-icon.png" alt="Phone">
+                            <input class="with-icon" type="text" id="phoneNumber" placeholder="+977 0123456789" readonly="">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female" selected="">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-disclose">Prefer not to disclose</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <div class="input-icon">
+                            <input class="datepicker_input" type="text" placeholder="mm/dd/yyyy">
+                                                                                           
+                            <img class="right-icon" src="../assets/images/icons/calendar-icon.png" alt="Phone">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="relationship">Relationship <span class="required">*</span></label>
+                        <select id="relationship">
+                            <option value="uncle">Uncle</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="child">Child</option>
+                            <option value="parent">Parent</option>
+                        </select>
+                    </div>
+                </div>
+                
+              </div>
+
+        </div>
+        <div class="modal-footer">
+            <div class="w-100 d-flex justify-content-between align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                <a href="" class="dotted-link red-dotted">Delete Beneficiary</a>
+                <div class="d-flex justify-content-end align-items-center mt-3 mt-lg-4 flex-wrap gap-2">
+                    <button class="btn-white-border btn-rounded btn-lg btn-ordersuccess">Cancel</button>
+                    <button class="btn-primary btn-rounded btn-lg btn-ordersuccess">Update Details</button>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="assets/vendor/jquery-3.6.4.min.js"></script>
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>

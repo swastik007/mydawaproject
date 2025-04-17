@@ -505,3 +505,56 @@
         font-family: $figtreeBold;
     }
 }
+
+
+.subscription-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    .package-card{
+        position: relative;
+        border-radius: 12px;
+        border: 1px solid #E7ECF4;
+        padding: 0;
+        .card-title{
+            font-family: $figtreeSemiBold;
+            @include responsive-font(20px, 20px, 20px, 26px);
+            margin-bottom: 18px;
+        }
+        .card-text{
+            @include responsive-font(16px, 16px, 16px, 20px);
+        }
+        &.recommended{
+            border-color: #516BF1;
+        }
+        .badge{
+            background-color: #FFF1F7;
+            color: rgb(230, 27, 119);
+            position: absolute;
+            top: 0;
+            right: 20px;
+            font-family: "Figtree-SemiBold";
+            line-height: 1.4;
+            padding: 3px 8px;
+            border-radius: 0 0 7px 7px;
+        }
+        ul{
+            margin-bottom: 0;
+            li{
+                font-family: $figtreeMedium;
+                margin-bottom: 7px;
+                @include responsive-font(16px, 16px, 16px, 20px);
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .icon-check{
+        width: 20px;
+        height: 20px;
+        fill: rgba(55, 52, 52, 0.5);
+        margin-right: 7px;
+    }
+}

@@ -27847,6 +27847,103 @@ header {
   font-family: "Figtree-Bold";
 }
 
+.subscription-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.subscription-grid .package-card {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid #E7ECF4;
+  padding: 0;
+}
+.subscription-grid .package-card .card-title {
+  font-family: "Figtree-SemiBold";
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+@media (min-width: 992px) {
+  .subscription-grid .package-card .card-title {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscription-grid .package-card .card-title {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .subscription-grid .package-card .card-title {
+    font-size: 26px;
+  }
+}
+.subscription-grid .package-card .card-text {
+  font-size: 16px;
+}
+@media (min-width: 992px) {
+  .subscription-grid .package-card .card-text {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscription-grid .package-card .card-text {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .subscription-grid .package-card .card-text {
+    font-size: 20px;
+  }
+}
+.subscription-grid .package-card.recommended {
+  border-color: #516BF1;
+}
+.subscription-grid .package-card .badge {
+  background-color: #FFF1F7;
+  color: rgb(230, 27, 119);
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-family: "Figtree-SemiBold";
+  line-height: 1.4;
+  padding: 3px 8px;
+  border-radius: 0 0 7px 7px;
+}
+.subscription-grid .package-card ul {
+  margin-bottom: 0;
+}
+.subscription-grid .package-card ul li {
+  font-family: "Figtree-Medium";
+  margin-bottom: 7px;
+  font-size: 16px;
+}
+@media (min-width: 992px) {
+  .subscription-grid .package-card ul li {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscription-grid .package-card ul li {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1800px) {
+  .subscription-grid .package-card ul li {
+    font-size: 20px;
+  }
+}
+.subscription-grid .package-card ul li:last-child {
+  margin-bottom: 0;
+}
+.subscription-grid .icon-check {
+  width: 20px;
+  height: 20px;
+  fill: rgba(55, 52, 52, 0.5);
+  margin-right: 7px;
+}
+
 .header-section {
   border-radius: 12px;
   background-image: url("../../assets/images/hero-section.png");
