@@ -1,4 +1,4 @@
-.home-slider {
+.full-banner-slider {
     position: relative;
     .owl-carousel{
         position: relative;
@@ -80,11 +80,11 @@
             height: 624px;
         }
         @include respond-to(lg) {
-            height: 500px;
+            height: 450px;
             margin-bottom: 50px;
         }
         @include respond-to(xxl) {
-            height: 620px;
+            height: 520px;
             margin-bottom: 90px;
         }
         picture {
@@ -118,7 +118,7 @@
         @include respond-to(lg) {
             justify-content: flex-start;
             bottom: auto;
-            top: 100px;
+            top: 80px;
             left: auto;
             bottom: auto;
             right: auto;
@@ -126,7 +126,7 @@
         }
         
         @include respond-to(xxl) {
-            top: 120px;
+            top: 90px;
             left: auto;
             margin-left: 130px;
         }
@@ -265,38 +265,38 @@
             margin-top: 35px;
         }
     }
-    .slide-item {
-        height: 412px;
-        margin-bottom: 30px;
-        @include respond-to(sm) {
-            height: 624px;
-        }
-        @include respond-to(lg) {
-            height: 500px;
-            margin-bottom: 50px;
-        }
-        @include respond-to(xxl) {
-            height: 620px;
-            margin-bottom: 90px;
-        }
-        picture {
-            overflow: hidden;
-            /* Prevent overflow from the image */
-            border-radius: 12px;
-        }
-        picture,
-        img {
-            display: block;
-            /* Remove default inline behavior of images */
-            width: 100%;
-            /* Ensure full width of the viewport */
-            height: 100%;
-            /* Ensure it spans full height */
-            object-fit: cover;
-            /* Maintain aspect ratio and cover the entire container */
-            object-position: bottom right;
-        }
-    }
+    // .slide-item {
+    //     height: 412px;
+    //     margin-bottom: 30px;
+    //     @include respond-to(sm) {
+    //         height: 624px;
+    //     }
+    //     @include respond-to(lg) {
+    //         height: 500px;
+    //         margin-bottom: 50px;
+    //     }
+    //     @include respond-to(xxl) {
+    //         height: 620px;
+    //         margin-bottom: 90px;
+    //     }
+    //     picture {
+    //         overflow: hidden;
+    //         /* Prevent overflow from the image */
+    //         border-radius: 12px;
+    //     }
+    //     picture,
+    //     img {
+    //         display: block;
+    //         /* Remove default inline behavior of images */
+    //         width: 100%;
+    //         /* Ensure full width of the viewport */
+    //         height: 100%;
+    //         /* Ensure it spans full height */
+    //         object-fit: cover;
+    //         /* Maintain aspect ratio and cover the entire container */
+    //         object-position: bottom right;
+    //     }
+    // }
     .custom-dots-bottom {
         display: flex;
         justify-content: center;
@@ -582,10 +582,10 @@
             height: 360px;
         }
         @include respond-to(lg) {
-            height: 280px;
+            height: 250px;
         }
         @include respond-to(xxl) {
-            height: 320px;
+            height: 240px;
         }
     }
     .card-body {

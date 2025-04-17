@@ -245,12 +245,12 @@
         // background-size: 20px;
         border-radius: 32px;
     }
-    svg{
-        width: 12px;
+    img{
+        width: 12px!important;
         height: 12px;
         margin-right: 6px;
         @include respond-to(xxl) {
-            width: 15px;
+            width: 15px!important;
             height: 15px;
         }
         path{
