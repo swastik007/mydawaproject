@@ -1,10 +1,17 @@
 .main-dropdown {
   position: relative;
+  &:first-child {
+    .dropdown-list {
+      overflow-x: scroll;
+    }
+  }
   .dropdown-list {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
   }
   &:hover {
     .dropdown-list {
@@ -106,6 +113,9 @@
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 28px 8px;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
 }
 .mega-navigation {
   position: relative;
@@ -136,6 +146,19 @@
   }
   .mega-column {
     width: calc(870px / 3);
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      .mega-column {
+        background: #f5f5f5;
+        border: 1px solid #ccc;
+
+        .mega-column {
+          width: calc(100% - 10px);
+          margin-left: 5px;
+          background: #fff;
+        }
+      }
+    }
   }
 }
 .scroll-menu {

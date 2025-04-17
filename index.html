@@ -17,6 +17,30 @@
 </head>
 
 <body>
+
+  <div class="mobile-navigation d-xl-none d-flex">
+    <a class="mobile-navigation--link" href="#">
+      <img src="./assets/images/icons/ico-1.svg" />
+      <span>Home</span>
+    </a>
+    <a class="mobile-navigation--link" href="#">
+      <img src="./assets/images/icons/ico-2.svg" />
+      <span>Wishlist</span>
+    </a>
+    <a class="mobile-navigation--link" href="#">
+      <img src="./assets/images/icons/ico-3.svg" />
+      <span>Search</span>
+    </a>
+    <a class="mobile-navigation--link" href="#">
+      <img src="./assets/images/icons/ico-4.svg" />
+      <span>Cart</span>
+    </a>
+    <a class="mobile-navigation--link" href="#" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <img src="./assets/images/icons/ico-5.svg" />
+      <span>Menu</span>
+    </a>
+  </div>
   <div class="help-container">
     <div class="help-menu" id="helpMenu">
       <a href="/speaktodoctor.html" class="help-menu__item">
@@ -66,9 +90,9 @@
         <div class="top-header">
           <div class="top-left">
             <div class="top-left-box">
-              <div class="ham">
+              <!-- <div class="ham">
                 <img src="assets/images/icon-ham.svg" alt="Ham" />
-              </div>
+              </div> -->
               <a href="/" class="logo">
                 <img src="assets/images/logo.png" alt="Mydawa Logo" />
               </a>
@@ -169,7 +193,7 @@
           <div class="top-right">
             <a href="#" class="download-app">
               <img src="assets/images/icons/phone.svg" alt="Icon" />
-              <span>Download App</span>
+              <span class="d-none d-sm-block">Download App</span>
             </a>
 
             <div class="delivery-wrap">
@@ -394,609 +418,624 @@
           </div>
         </div>
       </div>
-      <div class="navigation-wrap">
-        <div class="mydawa-container">
-          <div class="header-navigation">
-            <ul>
-              <!-- Parent Category -->
-              <li class="position-relative main-dropdown">
-                <a href="/searchresults.html" class="category-toggle">
-                  Shop by Category
-                  <img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
-                </a>
+      <nav class="navbar navbar-expand-xl">
+        <div class="container-fluid p-md-0">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="navigation-wrap w-100">
+                <div class="mydawa-container">
+                  <div class="header-navigation">
+                    <ul class="navbar-nav">
+                      <!-- Parent Category -->
+                      <li class="position-relative main-dropdown">
+                        <a href="/searchresults.html" class="category-toggle">
+                          Shop by Category
+                          <img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
+                        </a>
 
-                <!-- Dropdown Menu -->
-                <div class="shadow-lg dropdown-list">
-                  <div class="mega-wrap">
-                    <div class="mega-navigation">
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
-                        </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care1</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care11</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                        <!-- Dropdown Menu -->
+                        <div class="shadow-lg dropdown-list">
+                          <div class="mega-wrap">
+                            <div class="mega-navigation">
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
                                 </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care1</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care11</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care11</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care11</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care111</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care1111</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care1111</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care1111</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care11</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
                                 </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care11</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
                                 </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care111</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care1111</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
                                 </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care1111</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
                                 </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care1111</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
                                 </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
+                                </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
+                                </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
+                                </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-column">
+                                <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
+                                  data-bs-auto-close="outside" aria-expanded="false">
+                                  <div class="menu-item">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                      <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
+                                      <div class="text-info">
+                                        <p>Beauty & Personal Care</p>
+                                        <span class="text-muted">Upto 25% Off</span>
+                                      </div>
+                                    </div>
+                                    <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                  </div>
+                                </a>
+                                <div class="dropdown-menu mega-column">
+                                  <div class="">
+                                    <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="true" aria-expanded="false">
+                                      <span>Body Care</span>
+                                      <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-column">
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                      <div>
+                                        <a class="menu-item" href="#">
+                                          <span>Body Care</span>
+                                          <i class="menu-item-arrow bx bx-chevron-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
+                      </li>
+                      <li class="position-relative main-dropdown">
+                        <a href="javascript:void(0)">
+                          Shop by Condition<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
                         </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
+                        <!-- Dropdown Menu -->
+                        <div class="shadow-lg dropdown-list list-menu">
+                          <ul class="flex-column">
+                            <li>
+                              <a href="/telehealthpage.html">
+                                <span>Special Offers<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
+                      </li>
+                      <li class="position-relative main-dropdown">
+                        <a href="javascript:void(0)">
+                          Shop by Brand
+                          <img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
                         </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
+                        <!-- Dropdown Menu -->
+                        <div class="shadow-lg dropdown-list list-menu scroll-menu">
+                          <ul class="flex-column">
+                            <li>
+                              <a href="/brandpage.html">
+                                <img src="assets/images/product-category/cat2.png" alt="" class="card-img-top" />
+                                <div class="text-info">
+                                  <p>Durex</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/brandpage.html">
+                                <img src="assets/images/product-category/cat3.png" alt="" class="card-img-top" />
+                                <div class="text-info">
+                                  <p>Nivea</p>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
+                      </li>
+                      <li class="position-relative main-dropdown">
+                        <a href="javascript:void(0)">
+                          Services<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
                         </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
+                        <!-- Dropdown Menu -->
+                        <div class="shadow-lg dropdown-list list-menu">
+                          <ul class="flex-column">
+                            <li>
+                              <a href="/submitpresciption.html">
+                                <span>Submit a prescription<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/searchresults.html">
+                                <span>Upload a HIV Test Results<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/searchresults.html">
+                                <span>Book A Consultation<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
+                      </li>
+                      <li class="position-relative main-dropdown">
+                        <a href="javascript:void(0)">
+                          My Health Center<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
                         </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
+                        <!-- Dropdown Menu -->
+                        <div class="shadow-lg dropdown-list list-menu">
+                          <ul class="flex-column">
+                            <li>
+                              <a href="/telehealthpage.html">
+                                <span>Telehealth<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/peppage.html">
+                                <span>Pep <i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/preppage.html">
+                                <span>Prep<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/familyplanningpage.html">
+                                <span>Family Planning<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/sexualwellnesspage.html">
+                                <span>Sexual Health<i class="bx bx-chevron-right"></i></span>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
-                        </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
-                        </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
-                        </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
-                        </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mega-column">
-                        <a class="nav-link dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside" aria-expanded="false">
-                          <div class="menu-item">
-                            <div class="d-flex align-items-center flex-grow-1">
-                              <img src="assets/images/product-category/cat1.png" alt="" class="card-img-top" />
-                              <div class="text-info">
-                                <p>Beauty & Personal Care</p>
-                                <span class="text-muted">Upto 25% Off</span>
-                              </div>
-                            </div>
-                            <i class="menu-item-arrow bx bx-chevron-right"></i>
-                          </div>
-                        </a>
-                        <div class="dropdown-menu mega-column">
-                          <div class="">
-                            <a class="dropdown-item menu-item" href="#" role="button" data-bs-toggle="dropdown"
-                              data-bs-auto-close="true" aria-expanded="false">
-                              <span>Body Care</span>
-                              <i class="menu-item-arrow bx bx-chevron-right"></i>
-                            </a>
-                            <div class="dropdown-menu mega-column">
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                              <div>
-                                <a class="menu-item" href="#">
-                                  <span>Body Care</span>
-                                  <i class="menu-item-arrow bx bx-chevron-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      </li>
+                    </ul>
+                    <div class="right-nav-section">
+                      <button class="btn-grey btn-rounded btn-sm" onclick="window.location.href='/speaktodoctor.html';">
+                        Speak to a doctor
+                      </button>
+                      <button class="btn-green btn-rounded btn-sm"
+                        onclick="window.location.href='/submitpresciption.html';">
+                        Upload a prescription
+                      </button>
+                      <button class="btn-rounded btn-sm border-0 px-1 rounded">
+                        <img src="assets/images/icons/header-dots.svg" alt="Ham" />
+                      </button>
                     </div>
                   </div>
                 </div>
-              </li>
-              <li class="position-relative main-dropdown">
-                <a href="">
-                  Shop by Condition<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
-                </a>
-                <!-- Dropdown Menu -->
-                <div class="shadow-lg dropdown-list list-menu">
-                  <ul class="flex-column">
-                    <li>
-                      <a href="/telehealthpage.html">
-                        <span>Special Offers<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="position-relative main-dropdown">
-                <a href="">
-                  Shop by Brand
-                  <img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
-                </a>
-                <!-- Dropdown Menu -->
-                <div class="shadow-lg dropdown-list list-menu scroll-menu">
-                  <ul class="flex-column">
-                    <li>
-                      <a href="/brandpage.html">
-                        <img src="assets/images/product-category/cat2.png" alt="" class="card-img-top" />
-                        <div class="text-info">
-                          <p>Durex</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/brandpage.html">
-                        <img src="assets/images/product-category/cat3.png" alt="" class="card-img-top" />
-                        <div class="text-info">
-                          <p>Nivea</p>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="position-relative main-dropdown">
-                <a href="">
-                  Services<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
-                </a>
-                <!-- Dropdown Menu -->
-                <div class="shadow-lg dropdown-list list-menu">
-                  <ul class="flex-column">
-                    <li>
-                      <a href="/submitpresciption.html">
-                        <span>Submit a prescription<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/searchresults.html">
-                        <span>Upload a HIV Test Results<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/searchresults.html">
-                        <span>Book A Consultation<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="position-relative main-dropdown">
-                <a href="">
-                  My Health Center<img src="assets/images/caret-down.svg" alt="Icon" class="icon-caret" />
-                </a>
-                <!-- Dropdown Menu -->
-                <div class="shadow-lg dropdown-list list-menu">
-                  <ul class="flex-column">
-                    <li>
-                      <a href="/telehealthpage.html">
-                        <span>Telehealth<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/peppage.html">
-                        <span>Pep <i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/preppage.html">
-                        <span>Prep<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/familyplanningpage.html">
-                        <span>Family Planning<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/sexualwellnesspage.html">
-                        <span>Sexual Health<i class="bx bx-chevron-right"></i></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <div class="right-nav-section">
-              <button class="btn-grey btn-rounded btn-sm" onclick="window.location.href='/speaktodoctor.html';">
-                Speak to a doctor
-              </button>
-              <button class="btn-green btn-rounded btn-sm" onclick="window.location.href='/submitpresciption.html';">
-                Upload a prescription
-              </button>
-              <button class="btn-rounded btn-sm border-0 px-1 rounded">
-                <img src="assets/images/icons/header-dots.svg" alt="Ham" />
-              </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </nav>
+
     </header>
 
     <main class="dawamain">
