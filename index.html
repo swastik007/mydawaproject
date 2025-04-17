@@ -1435,9 +1435,11 @@
     const searchResult = document.querySelector(".search-results");
     searchInput.addEventListener("focus", () => {
       searchResult.style.display = "block";
+      document.body.style.overflow = "hidden";
     })
     searchInput.addEventListener("blur", () => {
       searchResult.style.display = "none";
+      document.body.style.overflow = "visible";
     })
   </script>
   <script>
