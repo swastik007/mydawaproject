@@ -29,6 +29,12 @@
     border-radius: 12px;
     border: 1px solid #e7ecf4;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    @include media-breakpoint-down(md) {
+      position: fixed;
+      top: 70px;
+      right: 10px;
+      width: calc(100% - 20px);
+    }
     .dropdown-header {
       color: $black;
       h4 {

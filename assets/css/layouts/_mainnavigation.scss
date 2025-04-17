@@ -1,13 +1,5 @@
 .navigation-wrap {
-  display: none;
   background: #f9f9fd;
-  // margin-bottom: 20px;
-  @include respond-to(lg) {
-    display: block;
-  }
-  // @include respond-to(xxl) {
-  //   margin-bottom: 35px;
-  // }
 }
 
 .header-navigation {
@@ -16,6 +8,14 @@
   align-items: center;
   @include respond-to(xxl) {
     padding: 7px 0;
+  }
+  @include media-breakpoint-down(xl) {
+    flex-direction: column;
+  }
+  .navbar-nav {
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+    }
   }
   ul {
     display: flex;
@@ -75,6 +75,11 @@
     @include respond-to(lg) {
       justify-content: flex-end;
     }
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
+    }
     .btn-sm {
       padding: 4px 14px;
       @include responsive-font(14px, 14px, 14px, 20px);
@@ -115,6 +120,10 @@
   border: 1px solid #e7ecf4;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
   li {
     width: 100%;
     padding: 0 !important;

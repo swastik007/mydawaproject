@@ -24,7 +24,9 @@
       // display: none;
     }
     .navigation-wrap {
-      display: none;
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
     }
     .top-header {
       padding: 10px 0;
@@ -94,13 +96,16 @@
   }
 
   .notification-icon {
-    display: block;
-    // @include respond-to(lg) {
-    //   display: none;
-    // }
+    display: none;
+    @include respond-to(lg) {
+      display: block;
+    }
   }
   .icons-top {
     display: none;
+    &.user-wrap {
+      display: block;
+    }
     @include respond-to(lg) {
       display: block;
     }
