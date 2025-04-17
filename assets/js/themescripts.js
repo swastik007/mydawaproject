@@ -3088,35 +3088,33 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
   const helpButton = document.getElementById("helpButton");
   const helpMenu = document.getElementById("helpMenu");
+  const helpButtonInner = document.getElementById("helpButtonInner");
 
-  // Only run this script if helpButton exists
   if (!helpButton || !helpMenu) return;
 
-  helpButton.addEventListener("click", function () {
+  function toggleHelpMenu() {
     helpMenu.classList.toggle("active");
 
-    // Toggle button icon between plus and times
-    if (helpMenu.classList.contains("active")) {
-      helpButton.querySelector(
-        ".help-button__icon--active"
-      ).style.display = "block";
-      helpButton.querySelector(
-        ".help-button__icon--normal"
-      ).style.display = "none";
-    } else {
-      helpButton.querySelector(
-        ".help-button__icon--active"
-      ).style.display = "none";
-      helpButton.querySelector(
-        ".help-button__icon--normal"
-      ).style.display = "block";
-    }
+    const isActive = helpMenu.classList.contains("active");
+    helpButton.querySelector(".help-button__icon--active").style.display = isActive ? "block" : "none";
+    helpButton.querySelector(".help-button__icon--normal").style.display = isActive ? "none" : "block";
 
-    // Add bounce effect to button
     helpButton.style.animation = "none";
     setTimeout(() => {
       helpButton.style.animation = "bounce 0.5s ease";
     }, 5);
+  }
+
+  helpButton.addEventListener("click", toggleHelpMenu);
+  helpButtonInner.addEventListener("click", function () {
+    const myOffcanvas = document.getElementById('trackingCanvasOff');
+    const bsOffcanvas = bootstrap.Offcanvas.getInstance(myOffcanvas);
+    if (bsOffcanvas) {
+      bsOffcanvas.hide();
+    }
+    setTimeout(() => {
+      toggleHelpMenu();
+    }, 400);
   });
 
   // Close menu when clicking outside

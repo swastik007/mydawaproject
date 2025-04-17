@@ -17,9 +17,43 @@
 </head>
 
 <body>
-
+    <div class="help-container">
+        <div class="help-menu" id="helpMenu">
+            <a href="/speaktodoctor.html" class="help-menu__item">
+                <div class="help-menu__text">Speak To A Doctor</div>
+                <div class="help-menu__icon">
+                    <img src="./assets/images/icons/float-1.svg" />
+                </div>
+            </a>
+            <a href="/helppage1.html" class="help-menu__item">
+                <div class="help-menu__text">Buying & Payment Issues</div>
+                <div class="help-menu__icon">
+                    <img src="./assets/images/icons/float-2.svg" />
+                </div>
+            </a>
+            <a href="/helppage2.html" class="help-menu__item">
+                <div class="help-menu__text">Issue With An Order</div>
+                <div class="help-menu__icon">
+                    <img src="./assets/images/icons/float-3.svg" />
+                </div>
+            </a>
+            <a href="/helppage1.html" class="help-menu__item">
+                <div class="help-menu__text">Product Information</div>
+                <div class="help-menu__icon">
+                    <img src="./assets/images/icons/float-4.svg" />
+                </div>
+            </a>
+        </div>
+        <button class="help-button" id="helpButton">
+            <span class="help-button__text">Need Help?</span>
+            <span class="help-button__icon">
+                <img class="help-button__icon--normal" src="./assets/images/icons/need-help.svg" />
+                <img class="help-button__icon--active" src="./assets/images/icons/help-close.svg" />
+            </span>
+        </button>
+    </div>
     <button class="btn tracking-offcanvas--button" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        data-bs-target="#trackingCanvasOff" aria-controls="trackingCanvasOff">
         <svg width="44" height="40" viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="44" height="40" fill="url(#pattern0_7482_44846)" />
@@ -36,7 +70,7 @@
     </button>
 
     <div class="offcanvas offcanvas-end tracking-offcanvas" data-bs-backdrop="static" data-bs-scroll="false"
-        tabindex="-1" id="offcanvasExample" aria-labelledby="trackingOffCanvas">
+        tabindex="-1" id="trackingCanvasOff" aria-labelledby="trackingOffCanvas">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="trackingOffCanvas">Your Order Has Been Received</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -193,7 +227,7 @@
             <button class="cancel-btn mb-4">Cancel Order</button>
 
             <div class="d-flex justify-content-end help-container mt-4">
-                <button class="help-button">
+                <button class="help-button" id="helpButtonInner">
                     <span class="help-button__text">Need Help?</span>
                     <span class="help-button__icon">
                         <img class="help-button__icon--normal" src="./assets/images/icons/help-dark.svg" />
@@ -206,6 +240,9 @@
     <script src="assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/owl.carousel.min.js"></script>
     <script src="assets/js/themescripts.js" defer></script>
+    <script>
+
+    </script>
 </body>
 
 </html>
