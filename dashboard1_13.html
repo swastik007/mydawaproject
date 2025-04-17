@@ -201,34 +201,190 @@
                                 
                                 <div class="tab-title-heading d-flex justify-content-between align-items-center mb-4">
 
-                                    <h3>My Wishlist</h3>
+                                    <a class="d-flex justify-content-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                                        <h3>Private Wishlist</h3>
+                                    </a>
                                     <!-- Action Buttons -->
                                     <div class="wishlist-actions">
-                                        <button class="new-list">
-                                            <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <button class="delete-list">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M5 20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8h2V6h-4V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H3v2h2zM9 4h6v2H9zM8 8h9v12H7V8z"></path><path d="M9 10h2v8H9zm4 0h2v8h-2z"></path>
                                             </svg>
-                                             New List
+                                             Delete List
                                         </button>
-                                        <button class="private-wishlist">
-                                            
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z"></path></svg>
-    
-                                             Private Wishlist
-                                    </button>
+                                       
                                     </div>
                                 </div>
-                                <div class="wishlist-page">
-
-                                    <div class="empty-cart">
-                                        <img src="assets/images/icons/cart-bag.png" alt="Shopping Bag" class="cart-icon">
-                                        <h2>Save Your Favorite Products</h2>
-                                        <p>Love something and want to save it for later? Simply click the heart icon
-                                            next to the product, and it will be added to your wishlist here!</p>
-                                        <a href="#" class="btn-grey btn-rounded btn-lg">Start Shopping</a>
+                                <section class="product-listing-header">
+                                    <div class="listing-info">
+                                        <p class="desktop-text">Showing 1-15 of 150 results</p>
+                                        <p class="mobile-text">Showing 150 items</p>
                                     </div>
+                                    <div class="filter-options d-flex gap-3">
+        
+                                        <!-- Sort By Dropdown -->
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle dropdown-filter" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="desktop-text">Sort by <span class="select" id="selectedSort">Recommended</span></span>
+                                                <span class="mobile-text">Sort</span>
+                                                <svg class="chevron-icon" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Recommended')">Recommended</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Price: Low to High')">Price: Low to High</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Price: High to Low')">Price: High to Low</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateSort('Newest Arrivals')">Newest Arrivals</a></li>
+                                            </ul>
+                                        </div>
+        
+                                        <!-- Display Per Page Dropdown -->
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle dropdown-filter" type="button" id="displayDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="desktop-text">Display <span class="select" id="selectedDisplay">15</span> per page</span>
+                                                <span class="mobile-text">Filter</span>
+                                                <svg class="chevron-icon" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75635 0.80542C7.55916 0.60986 7.29175 0.5 7.01292 0.5C6.7341 0.5 6.46668 0.60986 6.26949 0.80542L0.321018 6.70652C0.220587 6.80275 0.140479 6.91786 0.08537 7.04513C0.0302606 7.17239 0.00125297 7.30928 3.97018e-05 7.44778C-0.00117356 7.58629 0.0254321 7.72365 0.0783037 7.85185C0.131175 7.98005 0.209254 8.09652 0.307985 8.19447C0.406715 8.29241 0.52412 8.36987 0.653348 8.42232C0.782577 8.47477 0.921041 8.50116 1.06066 8.49996C1.20028 8.49876 1.33826 8.46998 1.46655 8.41531C1.59484 8.36064 1.71087 8.28117 1.80787 8.18154L7.01292 3.01794L12.218 8.18154C12.4163 8.37156 12.6819 8.4767 12.9576 8.47432C13.2333 8.47195 13.4971 8.36224 13.692 8.16883C13.887 7.97542 13.9976 7.71379 14 7.44028C14.0024 7.16677 13.8964 6.90326 13.7048 6.70652L7.75635 0.80542Z"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="displayDropdown">
+                                                <li><a class="dropdown-item" href="#" onclick="updateDisplay(15)">15 per page</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateDisplay(30)">30 per page</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="category-grid wishlist-grid">
+                                    <!-- Product Card -->
+                       <a class="card product-card" href="/productpage.html">
+                           <span class="sale-badge">Flat 5% Off</span>
+                           <div class="action-btns">
+                               <button class="btn-view">
+                                   <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                   <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                               </button>
+                               <button class="btn-wishlist">
+                                   <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                   <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                               </button>
+                           </div>
+
+                           <div class="img-box">
+                               <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                   class="product-img">
+                           </div>
+
+                           <div class="card-body text-start">
+                               <p class="product-category">Snacks</p>
+                               <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                               <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                   <p class="product-price-old">KES 400</p>
+                                   <p class="product-price">KES 380</p>
+                               </div>
+                               <button class="btn btn-cart">
+                                   <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                   </svg>
+                                   <span>Add To Cart</span>
+                               </button>
+                              
+                           </div>
+                       </a>
+                        <!-- Product Card -->
+                        <a class="card product-card" href="/productpage.html">
+                           <span class="sale-badge">Flat 5% Off</span>
+                           <div class="action-btns">
+                               <button class="btn-view">
+                                   <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                   <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                               </button>
+                               <button class="btn-wishlist">
+                                   <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                   <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                               </button>
+                           </div>
+
+                           <div class="img-box">
+                               <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                   class="product-img">
+                           </div>
+
+                           <div class="card-body text-start">
+                               <p class="product-category">Snacks</p>
+                               <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                               <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                   <p class="product-price-old">KES 400</p>
+                                   <p class="product-price">KES 380</p>
+                               </div>
+                               <button class="btn btn-cart">
+                                   <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                   </svg>
+                                   <span>Add To Cart</span>
+                               </button>
+                              
+                           </div>
+                       </a>
+                        <!-- Product Card -->
+                        <a class="card product-card" href="/productpage.html">
+                           <span class="sale-badge">Flat 5% Off</span>
+                           <div class="action-btns">
+                               <button class="btn-view">
+                                   <img src="assets/images/icons/show-icon-white.png" class="img-active">
+                                   <img src="assets/images/icons/show-icon.png" class="img-inactive">
+                               </button>
+                               <button class="btn-wishlist">
+                                   <img src="assets/images/icons/heart-fill.png" class="img-active">
+                                   <img src="assets/images/icons/heart-outline.png" class="img-inactive">
+                               </button>
+                           </div>
+
+                           <div class="img-box">
+                               <img src="assets/images/product-images/product13.jpg" alt="Product 1"
+                                   class="product-img">
+                           </div>
+
+                           <div class="card-body text-start">
+                               <p class="product-category">Snacks</p>
+                               <h5 class="product-title">Naara Chocolate Cookies 250gms</h5>
+                               <div class="d-flex flex-row gap-2 align-items-center mb-2">
+                                   <p class="product-price-old">KES 400</p>
+                                   <p class="product-price">KES 380</p>
+                               </div>
+                               <button class="btn btn-cart">
+                                   <svg viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M1.5 6H5.5M5.5 6H9.5M5.5 6V2M5.5 6V10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                   </svg>
+                                   <span>Add To Cart</span>
+                               </button>
+                              
+                           </div>
+                       </a>
                                 </div>
 
+                                <nav class="mt-5 mb-xl-6 d-flex justify-content-center" aria-label="Page navigation">
+                                    <ul class="pagination custom-pagination">
+                                        <li class="page-item">
+                                            <a class="page-link prev" href="#" aria-label="Previous">
+                                                <span>&lt; Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item disabled"><span class="page-link">...</span></li>
+                                        <li class="page-item"><a class="page-link" href="#">12</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link next" href="#" aria-label="Next">
+                                                <span>Next &gt;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
 
                             </div>
                             </div>
