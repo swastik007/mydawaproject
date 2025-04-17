@@ -27460,7 +27460,7 @@ header {
   flex-direction: column;
 }
 .dashboard-content .manage-address .address-option h3, .dashboard-content .manage-address .address-option .h3 {
-  font-family: "Inter-SemiBold";
+  font-family: "Figtree-SemiBold";
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -27480,7 +27480,7 @@ header {
   }
 }
 .dashboard-content .manage-address .address-option p {
-  font-family: "Inter";
+  font-family: "Figtree";
   font-size: 13px;
   margin-bottom: 5px;
 }
@@ -27505,7 +27505,7 @@ header {
   }
 }
 .dashboard-content .manage-address .address-option span {
-  font-family: "Inter";
+  font-family: "Figtree";
   font-size: 12px;
   margin-bottom: 5px;
 }
