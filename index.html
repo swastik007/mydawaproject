@@ -1282,12 +1282,60 @@
     </main>
     <div id="footer"></div>
   </div>
+<!-- ON board Modal -->
+<div class="modal fade" id="addwishlistModal" tabindex="-1" aria-labelledby="addwishlistModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="product-info">
+          <img src="assets/images/product-images/product1.jpg" alt="Static Product Image">
+          <div class="d-flex justify-content-start flex-column align-items-start">
+              <h4>Durex Condoms Featherlite 12’s</h4>
+              <p>KES 1375</p>
+          </div>
+      </div>     
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column">  
+          <h5>Add To Wishlist</h5>
+            
+          <div class="form-options mt-1 mt-xl-2">
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="myallergymedicines">
+                  <label class="form-check-label" for="myallergymedicines">
+                      Saved For Later
+                  </label>
+              </div>
 
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="dadsmedicines">
+                  <label class="form-check-label" for="dadsmedicines">
+                      Dad’s Medicines
+                  </label>
+              </div>
+
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="privatewishlist" required="">
+                  <label class="form-check-label" for="privatewishlist">
+                      Private Wishlist
+                  </label>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-white-border btn-rounded btn-lg" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn-green btn-rounded btn-lg">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Overlay -->
-  <div id="modalOverlay"></div>
+  <!-- <div id="modalOverlay"></div> -->
 
   <!-- Wishlist Modal -->
-  <div id="wishlistmodal"></div>
+  <!-- <div id="wishlistmodal"></div> -->
   <script src="assets/vendor/jquery-3.6.4.min.js"></script>
   <script src="assets/vendor/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/owl.carousel.min.js"></script>

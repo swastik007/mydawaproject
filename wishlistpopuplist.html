@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Dawa</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="mydawa">
+    <meta name="keywords" content="mydawa">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+
+</head>
+
+<body>
+    <div class="container-main">
+        <div id="header"></div>
+        <main class="dawamain">
+            <div class="page-content container-fluid mt-2 mt-xl-4">
+                <!-- Breadcrumb section -->
+                <nav class="breadcrumb-container mydawa-container">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><span class="divider">/</span></li>
+                        <li><a href="#" class="active">My Profile</a></li>
+                    </ul>
+                </nav>
+                <div class="mydawa-container my-6">
+                    <button class="btn-primary btn-rounded btn-sm"  data-bs-toggle="modal" data-bs-target="#addwishlistModal">
+                        Wishlist Create Popup
+                    </button>
+                    <button class="btn-green btn-rounded btn-sm"  data-bs-toggle="modal" data-bs-target="#addwishlistnameModal">
+                        Add New Wishlist Name Popup
+                    </button>
+                    <button class="btn-grey btn-rounded btn-sm"  data-bs-toggle="modal" data-bs-target="#addwishlistsuccessModal">
+                        Wishlist Success Popup
+                    </button>
+                   
+                </div>
+        </main>
+        <div id="footer"></div>
+    </div>
+<!--addwishlist Modal -->
+<div class="modal fade" id="addwishlistModal" tabindex="-1" aria-labelledby="addwishlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog dialog-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="product-info">
+                <img src="assets/images/product-images/product1.jpg" alt="Static Product Image">
+                <div class="d-flex justify-content-start flex-column align-items-start">
+                    <h4>Durex Condoms Featherlite 12’s</h4>
+                    <p>KES 1375</p>
+                </div>
+            </div>      
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body  has-border">    
+            <div class="d-flex flex-column">  
+                <h4>Add To Wishlist</h4>
+                    
+                <div class="form-options mt-1 mt-xl-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="myallergymedicines">
+                        <label class="form-check-label" for="myallergymedicines">
+                            Saved For Later
+                        </label>
+                    </div>
+        
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dadsmedicines">
+                        <label class="form-check-label" for="dadsmedicines">
+                            Dad’s Medicines
+                        </label>
+                    </div>
+        
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="privatewishlist" required="">
+                        <label class="form-check-label" for="privatewishlist">
+                            Private Wishlist
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+               
+                <div class="d-flex justify-content-end align-items-center gap-2">
+                    <button class="btn-white-border btn-rounded btn-lg"><span>Create New List</span></button>
+                    <button class="btn-green btn-rounded btn-lg"> <span>Save</span></button>
+                </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--add wishlist name Modal -->
+  <div class="modal fade" id="addwishlistnameModal" tabindex="-1" aria-labelledby="addwishlistnameModalLabel" aria-hidden="true">
+    <div class="modal-dialog dialog-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+              <div class="product-info">
+                  <img src="assets/images/product-images/product1.jpg" alt="Static Product Image">
+                  <div class="d-flex justify-content-start flex-column align-items-start">
+                      <h4>Durex Condoms Featherlite 12’s</h4>
+                      <p>KES 1375</p>
+                  </div>
+              </div>      
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body  has-border">    
+              <div class="d-flex flex-column">  
+                  <h4>Create New List</h4>
+                      
+                  <div class="input-row">
+                    <div class="input-group">
+                        <label for="list-name">List Name <span class="required">*</span></label>
+                        <input type="text" id="list-name" placeholder="Enter Your Wishlist Name">
+                    </div>
+                    
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+                 
+                  <div class="d-flex justify-content-end align-items-center gap-2">
+                      <button class="btn-white-border btn-rounded btn-lg"><span>Back</span></button>
+                      <button class="btn-green btn-rounded btn-lg"> <span>Save</span></button>
+                  </div>
+              
+          </div>
+        </div>
+      </div>
+  </div>
+    <!--add wishlist name Modal -->
+  <div class="modal fade" id="addwishlistsuccessModal" tabindex="-1" aria-labelledby="addwishlistsuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog dialog-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+               
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex flex-column">            
+                <img class="success-img" src="assets/images/icons/order-success.png" alt="Icon">
+                <div class="popup-header mb-2 d-flex flex-column justify-content-center align-items-center">
+                    <h2>List Successfully Added</h2>
+                </div>
+    
+            </div>
+
+        </div>
+       
+      </div>
+    </div>
+  </div>
+    <script src="assets/vendor/jquery-3.6.4.min.js"></script>
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/owl.carousel.min.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/themescripts.js" defer></script>
+</body>
+
+</html>
