@@ -327,7 +327,7 @@
     color: $black;
     text-decoration: none;
     cursor: pointer;
-    @include responsive-font(14px, 18px, 14px, 18px);
+    @include responsive-font(14px, 14px, 14px, 18px);
     line-height: 1.2;
     &.disabled{
         opacity: 0.6;
@@ -380,7 +380,16 @@
         }
     }
 }
-
+.blue-link{
+    font-family: $figtreeSemiBold;
+    color: $blue;
+    @include responsive-font(14px, 14px, 14px, 18px);
+    text-decoration: none;
+    cursor: pointer;
+    &:hover, &:focus{
+        color: $darkblue;
+    }
+}
 // Status badge styles
 .badge {
     padding: 6px 12px;
